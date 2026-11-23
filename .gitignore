@@ -3,3 +3,6 @@ build/
 _tmp/
 _opam/
 .DS_Store
+
+# Unfinished trees: not published, not committed. Move a file into trees/ when it is ready.
+drafts/
