@@ -1,0 +1,18 @@
+# Project settings for the Helix editor (https://helix-editor.com).
+# Opening any .tree file in this folder starts Forester's language server, which gives
+# error messages, completion of tree addresses, and a live preview at http://localhost:8080.
+
+[language-server.forester]
+command = "forester"
+args = ["lsp"]
+
+[[language]]
+name = "forester"
+scope = "source.forester"
+file-types = ["tree"]
+roots = ["forest.toml"]
+comment-token = "%"
+language-servers = ["forester"]
+indent = { tab-width = 2, unit = "  " }
+soft-wrap.enable = true
+auto-pairs = { "{" = "}", "[" = "]", "(" = ")" }

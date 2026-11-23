@@ -1,0 +1,17 @@
+[forest]
+# Folders that hold your .tree files (one tree = one page / one note).
+trees = ["trees"]
+
+# Folders whose files (images, PDFs, ...) are copied to the site as-is.
+assets = ["assets"]
+
+# The tree shown as the home page.
+home = "index"
+
+# Language of the site.
+lang = "en"
+
+# The public address of the site. `scripts/personalize.sh` fills this in.
+# For a repository named <username>.github.io this is https://<username>.github.io/
+# For any other repository name it is https://<username>.github.io/<repository>/
+url = "https://JBirns.github.io/"

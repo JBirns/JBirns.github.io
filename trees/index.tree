@@ -1,0 +1,15 @@
+\title{Joshua Birns}
+\author{joshuabirns}
+\import{macros}
+
+\p{
+Welcome! I am [Joshua Birns](joshuabirns), and this is my personal website.
+Replace this paragraph with a few sentences about yourself and your work.
+}
+
+\ul{
+  \li{[About me](joshuabirns): background, contact details and CV.}
+  \li{[Notes](notes): things I am thinking about, with plenty of mathematics, such as #{\R^n} and #{\int_0^1 f(x)\,dx}.}
+}
+
+\transclude{notes}

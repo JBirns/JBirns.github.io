@@ -1,0 +1,34 @@
+\title{Macros}
+\tag{macro}
+
+\p{
+Shared LaTeX-style macros. Any tree that contains the line \code{\startverb\import{macros}\stopverb}
+can use them, inside or outside of math.
+}
+
+% --- Use inside math, e.g. #{\R^n} or #{f \colon \C \to \C} ---
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\id{\mathrm{id}}
+\def\Hom[a][b]{\mathrm{Hom}(\a, \b)}
+\def\set[x]{\lbrace \x \rbrace}
+\def\abs[x]{\lvert \x \rvert}
+\def\norm[x]{\lVert \x \rVert}
+
+% --- Use in ordinary text, e.g. "every \Cat is ..." ---
+\def\Cat{#{\mathcal{C}}}
+
+% --- Blocks ---
+% A proof, shown as a foldable block labelled "Proof":  \proof{ \p{...} }
+\def\proof[body]{
+  \scope{
+    \put\transclude/toc{false}
+    \subtree{
+      \taxon{Proof}
+      \body
+    }
+  }
+}

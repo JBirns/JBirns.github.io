@@ -1,0 +1,10 @@
+\title{Notes}
+\author{joshuabirns}
+
+\p{
+Each note below is its own page. Add a new one with \code{make new TITLE="My note"},
+then list it here with a line such as \code{\startverb\transclude{note-0003}\stopverb}.
+}
+
+\transclude{note-0001}
+\transclude{note-0002}

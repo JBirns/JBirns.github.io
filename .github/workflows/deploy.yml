@@ -1,0 +1,101 @@
+# Builds the forest with Forester and publishes it on GitHub Pages every time you push to `main`.
+# The first run compiles Forester itself (about 10-15 minutes); later runs reuse it and take ~1 minute.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # lets you re-run it by hand from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  FORESTER_VERSION: "6.0"
+  OCAML_VERSION: "5.4"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v6
+
+      # Forester is cached in ./_opam, so it is only compiled once per Forester version.
+      - name: Restore cached Forester
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: _opam
+          key: forester-${{ env.FORESTER_VERSION }}-ocaml-${{ env.OCAML_VERSION }}-${{ runner.os }}-v1
+
+      - name: Check cached Forester
+        id: check
+        run: |
+          if [ -x _opam/bin/forester ] && _opam/bin/forester --version; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up OCaml (first run only)
+        if: steps.check.outputs.ok != 'true'
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: ${{ env.OCAML_VERSION }}
+
+      - name: Install Forester (first run only)
+        if: steps.check.outputs.ok != 'true'
+        run: opam install --yes "forester.${FORESTER_VERSION}"
+
+      # Only needed for diagrams written with \tex{...}{...}; skipped otherwise.
+      - name: Install LaTeX (only if a tree uses \tex)
+        run: |
+          if grep -rqE '^[^%]*\\tex\{' trees; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends \
+              texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+              texlive-pictures texlive-science texlive-fonts-recommended dvisvgm
+          else
+            echo "No \\tex diagrams found; skipping LaTeX."
+          fi
+
+      - name: Build the site
+        run: |
+          if [ -x _opam/bin/forester ]; then FORESTER=_opam/bin/forester; else FORESTER="opam exec -- forester"; fi
+          $FORESTER --version
+          $FORESTER build
+
+      # Forester writes the site to output/, or to output/<path>/ when the url in forest.toml has a path.
+      - name: Locate the built site
+        id: site
+        run: |
+          SUB=$(python3 -c 'import tomllib, urllib.parse; print(urllib.parse.urlparse(tomllib.load(open("forest.toml","rb"))["forest"]["url"]).path.strip("/"))')
+          if [ -n "$SUB" ] && [ -f "output/$SUB/index.html" ]; then DIR="output/$SUB"; else DIR="output"; fi
+          echo "Publishing $DIR:"; ls "$DIR"
+          test -f "$DIR/index.html" || { echo "::error::No index.html in $DIR"; exit 1; }
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/configure-pages@v5
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ steps.site.outputs.dir }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,5 @@
+output/
+build/
+_tmp/
+_opam/
+.DS_Store

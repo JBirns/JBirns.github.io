@@ -1,0 +1,69 @@
+\title{How to write on this site}
+\date{2026-11-22}
+\author{joshuabirns}
+\import{macros}
+
+\p{
+This page is a cheat sheet: open \code{trees/note-0001.tree} next to the rendered page
+to see how each thing is written. Delete or edit it whenever you like.
+}
+
+\subtree{
+\title{Text}
+\p{Paragraphs go in \code{\startverb\p{...}\stopverb}. Inside them you can write \em{emphasis},
+\strong{bold}, \code{inline code}, and links: [to another page](joshuabirns),
+[to the web](https://www.forester-notes.org), or just [[notes]] (shows the page title).}
+
+\ul{
+  \li{Bulleted lists use \code{\startverb\ul{ \li{...} }\stopverb}.}
+  \li{Numbered lists use \code{\startverb\ol{ \li{...} }\stopverb}.}
+}
+
+\blockquote{Quotations use \code{\startverb\blockquote{...}\stopverb}.}
+}
+
+\subtree{
+\title{Mathematics}
+\p{
+Inline maths goes in \code{\startverb#{...}\stopverb}: the function #{f(x) = e^{-x^2}} satisfies
+#{\int_{\R} f(x)\,dx = \sqrt{\pi}}. Display maths goes in \code{\startverb##{...}\stopverb}:
+}
+##{
+  \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+}
+\p{Any LaTeX environment that works in display maths works here too:}
+##{
+\begin{aligned}
+  (a+b)^2 &= a^2 + 2ab + b^2 \\
+  \abs{\langle u, v \rangle} &\le \norm{u}\,\norm{v}
+\end{aligned}
+}
+\p{
+The macros #{\R}, #{\abs{x}}, #{\norm{v}}, #{\Hom{A}{B}} come from [[macros]];
+add your own there with \code{\startverb\def\name{...}\stopverb}.
+}
+}
+
+\subtree{
+\title{Code blocks}
+\pre{\startverb
+def fib(n):
+    return n if n < 2 else fib(n - 1) + fib(n - 2)
+\stopverb}
+}
+
+\subtree{
+\title{Diagrams drawn with LaTeX (optional)}
+\p{
+Commutative diagrams and TikZ pictures are compiled with a real LaTeX installation
+into SVG images. To use them, install LaTeX on your computer (the website builder
+installs it automatically when it sees one), then delete the percent signs at the
+start of the lines below in the source file.
+}
+% \figure{\tex{\usepackage{tikz-cd}}{
+%   \begin{tikzcd}
+%     A \arrow[r, "f"] \arrow[d, "g"'] & B \arrow[d, "h"] \\
+%     C \arrow[r, "k"'] & D
+%   \end{tikzcd}
+% }}
+}

@@ -1,0 +1,39 @@
+\title{An example: Definitions, theorems and proofs}
+\date{2026-11-22}
+\author{joshuabirns}
+\import{macros}
+
+\p{
+Forester shines at mathematics written as small, linked pieces. Each \code{subtree} below gets its
+own label and could equally live in its own file and be reused on many pages with
+\code{transclude}.
+}
+
+\subtree{
+\taxon{Definition}
+\title{Metric space}
+\p{
+A \em{metric space} is a set #{X} with a function #{d \colon X \times X \to \R} such that for all
+#{x, y, z \in X}:
+}
+\ol{
+  \li{#{d(x, y) \ge 0}, with equality if and only if #{x = y};}
+  \li{#{d(x, y) = d(y, x)};}
+  \li{#{d(x, z) \le d(x, y) + d(y, z)}.}
+}
+}
+
+\subtree{
+\taxon{Theorem}
+\title{Reverse triangle inequality}
+\p{In a metric space, for all #{x, y, z}:}
+##{ \abs{d(x, z) - d(y, z)} \le d(x, y). }
+
+\proof{
+\p{
+By the triangle inequality, #{d(x, z) \le d(x, y) + d(y, z)}, so
+#{d(x, z) - d(y, z) \le d(x, y)}. Exchanging the roles of #{x} and #{y} gives
+#{d(y, z) - d(x, z) \le d(x, y)}. Together these give the claim.
+}
+}
+}
