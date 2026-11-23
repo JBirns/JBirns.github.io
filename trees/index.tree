@@ -1,13 +1,18 @@
 \title{Joshua Birns}
-\author{joshuabirns}
+\author{JB00}
 \import{macros}
+\import{names}
 
 \p{
-I am a PhD student in mathematics.
+I am a PhD student in mathematics at the [[WH6R]] working with [[EGR0]]. Prior to that I was an undergraduate at the [University of Cambridge](0001).
 }
 
-\ul{
-  \li{[About me](joshuabirns): background, contact details and CV.}
-}
+\p{I am broadly interested in combinatorics and algebra and how one may be levered to solve problems of the other in strange ways.}
 
-\transclude{notes}
+\transclude{\aboutsite}
+
+%\transclude{\research}
+
+\transclude{\teaching}
+
+%\transclude{\blog}

@@ -1,15 +1,15 @@
 \title{An example: Definitions, theorems and proofs}
 \date{2026-11-22}
-\author{joshuabirns}
+\author{JB00}
 \import{macros}
 
 \p{
-Forester shines at mathematics written as small, linked pieces. Each \code{subtree} below gets its
+Forester excels at mathematics written as small, linked pieces. Each \code{subtree} below gets its
 own label and could equally live in its own file and be reused on many pages with
 \code{transclude}.
 }
 
-\subtree{
+\subtree[metric-space]{
 \taxon{Definition}
 \title{Metric space}
 \p{

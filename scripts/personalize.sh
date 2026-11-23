@@ -18,7 +18,7 @@ REPO="${3:-$GH_USER.github.io}"
 # Address of your "person" tree, e.g. "Ada Lovelace" -> adalovelace
 SLUG="$(printf '%s' "$NAME" | tr '[:upper:]' '[:lower:]' | LC_ALL=C tr -cd 'a-z0-9')"
 # Prefix for new note addresses, e.g. "Ada Lovelace" -> al  (notes become al-0001, al-0002, ...)
-PREFIX="$(printf '%s' "$NAME" | awk '{for (i = 1; i <= NF; i++) printf "%s", tolower(substr($i, 1, 1))}' | LC_ALL=C tr -cd 'a-z0-9')"
+PREFIX=""
 [ -n "$SLUG" ] || SLUG="me"
 [ -n "$PREFIX" ] || PREFIX="note"
 

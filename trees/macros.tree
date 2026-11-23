@@ -13,22 +13,19 @@ can use them, inside or outside of math.
 \def\R{\mathbb{R}}
 \def\C{\mathbb{C}}
 \def\id{\mathrm{id}}
-\def\Hom[a][b]{\mathrm{Hom}(\a, \b)}
 \def\set[x]{\lbrace \x \rbrace}
-\def\abs[x]{\lvert \x \rvert}
-\def\norm[x]{\lVert \x \rVert}
 
-% --- Use in ordinary text, e.g. "every \Cat is ..." ---
-\def\Cat{#{\mathcal{C}}}
+% End-of-proof box, right-aligned. Also usable on its own: \qed
+\def\qed{\<html:div>[style]{text-align: right;}{#{\blacksquare}}}
 
-% --- Blocks ---
-% A proof, shown as a foldable block labelled "Proof":  \proof{ \p{...} }
+% A proof, shown as a foldable block labelled "Proof", ending with a box:  \proof{ \p{...} }
 \def\proof[body]{
   \scope{
     \put\transclude/toc{false}
     \subtree{
       \taxon{Proof}
       \body
+      \qed
     }
   }
 }

@@ -1,3 +1,4 @@
 # Written by personalize.sh; used by scripts/new.sh
-AUTHOR="joshuabirns"
-PREFIX="jb"
+AUTHOR="JB00"
+PREFIX=""
+MODE="random"

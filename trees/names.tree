@@ -1,0 +1,8 @@
+\title{Names}
+
+%Allows for naming of pages for eassy calling.
+
+\def\blog{0004}
+\def\research{0003}
+\def\aboutsite{0002}
+\def\teaching{OHL8}

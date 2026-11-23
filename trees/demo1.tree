@@ -1,6 +1,6 @@
 \title{How to write on this site}
 \date{2026-11-22}
-\author{joshuabirns}
+\author{JB00}
 \import{macros}
 
 \p{
@@ -11,8 +11,8 @@ to see how each thing is written.
 \subtree{
 \title{Text}
 \p{Paragraphs go in \code{\startverb\p{...}\stopverb}. Inside them you can write \em{emphasis},
-\strong{bold}, \code{inline code}, and links: [to another page](joshuabirns),
-[to the web](https://www.forester-notes.org), or just [[notes]] (shows the page title).}
+\strong{bold}, \code{inline code}, and links: [to another page](JB00),
+[to the web](https://www.forester-notes.org), or just [[demo1]] (shows the page title).}
 
 \ul{
   \li{Bulleted lists use \code{\startverb\ul{ \li{...} }\stopverb}.}

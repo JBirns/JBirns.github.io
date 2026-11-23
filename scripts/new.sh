@@ -13,28 +13,42 @@ PREFIX="note"
 TITLE="${1:-Untitled}"
 TAXON="${2:-}"
 
-# Find the largest existing PREFIX-XXXX number (addresses are base 36, like Forester's own).
-max=0
-for f in trees/"$PREFIX"-*.tree; do
-  [ -e "$f" ] || continue
-  id="$(basename "$f" .tree)"
-  id="${id#"$PREFIX"-}"
-  case "$id" in *[!0-9A-Za-z]*|"") continue ;; esac
-  n=$((36#$id))
-  [ "$n" -gt "$max" ] && max=$n
-done
-
-# Format max+1 as 4 base-36 digits.
-n=$((max + 1))
+if [ -n "$PREFIX" ]; then pat="$PREFIX-"; else pat=""; fi
 digits=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
-id=""
-while [ "$n" -gt 0 ]; do
-  id="${digits:$((n % 36)):1}$id"
-  n=$((n / 36))
-done
-while [ "${#id}" -lt 4 ]; do id="0$id"; done
 
-ADDR="$PREFIX-$id"
+# Format a number as 4 base-36 digits (0000 ... ZZZZ).
+to_base36() {
+  local n=$1 out=""
+  while [ "$n" -gt 0 ]; do
+    out="${digits:$((n % 36)):1}$out"
+    n=$((n / 36))
+  done
+  while [ "${#out}" -lt 4 ]; do out="0$out"; done
+  printf '%s' "$out"
+}
+
+if [ "${MODE:-sequential}" = "random" ]; then
+  # A random unused address among the 36^4 = 1,679,616 possibilities.
+  while :; do
+    n=$(( (RANDOM * 32768 + RANDOM) % 1679616 ))
+    id="$(to_base36 "$n")"
+    [ -e "trees/$pat$id.tree" ] || break
+  done
+else
+  # The next address after the largest existing one.
+  max=0
+  for f in trees/"$pat"????.tree; do
+    [ -e "$f" ] || continue
+    id="$(basename "$f" .tree)"
+    id="${id#"$pat"}"
+    case "$id" in *[!0-9A-Z]*|"") continue ;; esac
+    n=$((36#$id))
+    [ "$n" -gt "$max" ] && max=$n
+  done
+  id="$(to_base36 $((max + 1)))"
+fi
+
+ADDR="$pat$id"
 FILE="trees/$ADDR.tree"
 
 {

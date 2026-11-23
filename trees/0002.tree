@@ -1,0 +1,12 @@
+\title{About this website}
+
+\p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura). You can navigate around it through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.
+By the section headers, you may see a link like “[AB12]”. Clicking that link will take you to that section as its own page without the surrounding content.
+At the bottom of a page, you may see any of the following headings containing links to other pages:
+}
+\ul{
+    \li{“\strong{Context}” links up to any page in which the current page is embedded. For example, the context link of a given section will bring up to the lecture it is contained in.}
+    \li{“\strong{Related}” contains links to pages referred to in the current page.}
+    \li{“\strong{Backlinks}” contains links to pages that refer to the current page.}
+    \li{“\strong{References}” links to external resources and books referred to in the page.}
+    }
