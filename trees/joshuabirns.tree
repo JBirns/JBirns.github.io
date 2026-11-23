@@ -1,12 +1,5 @@
 \title{Joshua Birns}
 \taxon{Person}
-\meta{position}{Your position, e.g. PhD student in Mathematics}
-\meta{institution}{Your institution}
+\meta{position}{PhD student}
 \meta{external}{https://github.com/JBirns}
 
-\p{
-A short biography. You can link to other pages of the site, e.g. my [notes](notes),
-or to the web, e.g. [Forester](https://www.forester-notes.org).
-}
-
-\p{\strong{Contact:} you@example.com}
