@@ -1,0 +1,22 @@
+\title{Multiplexer}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An \em{#{n}-bit multiplexer} is a production system defined as follows:}
+
+\ul{
+\li{\p{\strong{1.} WM elements will always take one of two forms:}
+\ul{
+\li{#{(\text{input}, \text{bit}_1 : b_1, \ldots, \text{bit}_k : b_k)} where #{b_i \in \lbrace 0, 1\rbrace } and #{k = n + 2^n}, or}
+\li{#{(\text{output}, \text{value} : b)} where #{b \in \lbrace 0, 1\rbrace }.}
+}}
+\li{\p{\strong{2.} The rules of this system all look like}
+##{\begin{aligned}
+&\text{If } (\text{input}, \text{bit}_1 : b_1, \ldots, \text{bit}_n : b_n, \text{bit}_i : b_i) \\
+&\text{Then remove } 1 \\
+&\qquad\; \text{Add } (\text{output}, \text{value} : b_i).
+\end{aligned}}}
+\li{\strong{3.} There are exactly #{2^n} rules of the type (2) corresponding to the #{2^n} possible “starter strings”, and all of these must reference a distinct #{i}th bit.}
+}

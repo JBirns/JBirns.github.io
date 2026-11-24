@@ -1,0 +1,30 @@
+\title{Polynomial-size circuits are not efficiently PAC}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Any class of polynomial sized Boolean circuits cannot be efficiently PAC with any hypothesis class.}
+
+\proof{
+\p{Recall computing the discrete cube root with respect to #{N = pq} amounts to}
+
+\ul{
+\li{\strong{1.} computing #{3d + km = 1};}
+\li{\strong{2.} #{f^{-1} = x^d}.}
+}
+
+\p{Thus computing the discrete cube root amounts to raising things to the #{d}th power and reducing mod #{N}.}
+
+\p{\strong{Fact 1.} There exists a Boolean circuit that inputs #{2} integers (as #{n}-bit binary strings) and outputs the #{i}th bit of their product, which has #{\approx n^2} nodes.}
+
+\p{\strong{Fact 2.} Reducing mod #{N} is also a Boolean circuit.}
+
+\p{Note if multiplying two numbers requires #{\sim n^2} nodes then multiplying #{x^d = x \cdots x} would require #{\sim (d-1)n^2} if done naively. The trouble is that #{d \approx N \approx 2^n}. To fix this,}
+
+##{x^d = (x^2)^{d/2} = \big(((x^2)^2)^{\cdots}\big)^{d/2^k},}
+
+\p{so we only need #{\sim \log d \approx n} multiplications.}
+
+\p{Thus the functions #{f_{N,i}^{-1}} are all in the class of polynomial size Boolean circuits! So we are done by \ref{CLT1T}.}
+}

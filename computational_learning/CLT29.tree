@@ -1,0 +1,16 @@
+\title{EQMQ is sometimes strictly stronger than PAC+MQ}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}}, #{\mathcal{C} = \lbrace \text{finite sets}\rbrace }.}
+
+\p{\em{For EQMQ:}}
+
+\ul{
+\li{\strong{1.} Let #{h = \emptyset}.}
+\li{\strong{2.} Perform EQ on #{h}. If #{h = c} we are done, else add the counterexample to #{h} and repeat (2).}
+}
+
+\p{\em{For PAC+MQ:} MQs are not useful, while PAC will fail because #{\mathrm{VC}(\mathcal{C}) = \infty}.}

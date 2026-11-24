@@ -1,0 +1,33 @@
+\title{Active Learning}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Today we introduce two models that give the learner more active power, and compare them.}
+
+\transclude{CLT23}
+
+\transclude{CLT24}
+
+\transclude{CLT25}
+
+\transclude{CLT26}
+
+\transclude{CLT27}
+
+\transclude{CLT28}
+
+\p{How does EQMQ learning fit into this? It doesn’t.}
+
+\transclude{CLT29}
+
+\transclude{CLT2A}
+
+\transclude{CLT2B}
+
+\p{\strong{To clarify:}}
+
+\ul{
+\li{PAC: we assume there exists a “magical” #{O(1)} oracle.}
+\li{EQMQ: we assume EQs take polynomial time. Note, if this is an impossible thing to do (i.e. if you can prove any EQ would have to take more than polynomial time) then the concept class is just ruled \em{not} EQMQ learnable.}
+}

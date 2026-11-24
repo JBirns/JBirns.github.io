@@ -1,0 +1,11 @@
+\title{Risk of a class}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We define the \em{risk of a class of functions} by}
+
+##{\mathcal{R}(\mathcal{F}) = \inf_{h \in \mathcal{F}} \mathcal{R}(h)}
+
+\p{(with respect to the same distribution #{\mu} on #{X \times \mathbb{R}}).}

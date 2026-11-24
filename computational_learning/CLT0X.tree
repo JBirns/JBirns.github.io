@@ -1,0 +1,37 @@
+\title{Occam’s Learning}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Now we move to a different learning problem. Imagine you are given many labelled samples #{S = \lbrace (x_i, c(x_i))\rbrace }. What I want is a hypothesis #{h} which:}
+
+\ul{
+\li{\strong{(i)} perfectly matches the labelled samples: #{h(x_i) = c(x_i)} for all #{i};}
+\li{\strong{(ii)} is as “small” as possible.}
+}
+
+\transclude{CLT0Y}
+
+\p{\strong{Convention.} In this lecture, #{X_n = \lbrace 0, 1\rbrace ^n} or #{\mathbb{R}^n}.}
+
+\transclude{CLT0Z}
+
+\transclude{CLT10}
+
+\transclude{CLT11}
+
+\transclude{CLT12}
+
+\p{What does #{\operatorname{size}(h) \leq (n \cdot \operatorname{size}(c))^\alpha \cdot m^\beta} mean (where #{m = |S|})? Firstly, you need to think #{m \gg n}, so #{(n \cdot \operatorname{size}(c))^\alpha} is a constant as #{m \gg n}, and so we have approximately #{\operatorname{size}(h) \leq m^\beta}.}
+
+\p{Recall #{0 < \beta < 1}, so #{m^\beta < m}. Notice the cheap solution of #{h} perfectly encoding the pairs #{(x_i, c(x_i))} for all #{1 \leq i \leq m} is therefore not allowed.}
+
+\transclude{CLT13}
+
+\transclude{CLT14}
+
+\transclude{CLT15}
+
+\transclude{CLT16}
+
+\transclude{CLT17}

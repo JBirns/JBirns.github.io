@@ -1,0 +1,14 @@
+\title{Loss function and risk}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{loss function} is some function #{\ell \colon \mathbb{R} \times \mathbb{R} \to \mathbb{R}_{\geq 0}}. Most of the time #{\ell(x, y) = (x - y)^2}.}
+
+\p{Given a loss function #{\ell}, a distribution #{\mu} on #{X_n \times \mathbb{R}}, and a collection of functions #{\mathcal{F} = \lbrace X_n \to \mathbb{R}\rbrace }, the \em{risk functional} is the map}
+
+##{\begin{aligned}
+\mathcal{R} \colon \mathcal{F} &\to \mathbb{R} \\
+\mathcal{R}(h) &= \mathbb{E}_\mu[\ell(h(\bar{x}), y)].
+\end{aligned}}

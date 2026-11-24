@@ -1,0 +1,48 @@
+\title{Symmetrisation}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{G}, \mu} be as above. Then #{\mathbb{E}_{S \sim \mu^m}[\Phi(S)] \leq 2\,\mathrm{RAD}_m(\mathcal{G})}.}
+
+\proof{
+\p{From the definition,}
+
+##{\mathbb{E}_S[\Phi(S)] = \mathbb{E}_S\Big[ \sup_{h_g \in \mathcal{G}^*} \big\lbrace  \mathbb{E}_\mu[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \Big].}
+
+\p{\strong{Claim.} #{\mathbb{E}_\mu[h_g] = \mathbb{E}_{S' \sim \mu^m}[\widehat{\mathbb{E}}_{S'}[h_g] ]}.}
+
+\p{\em{Proof of claim.}}
+
+##{\begin{aligned}
+\mathbb{E}_{S'}[\widehat{\mathbb{E}}_{S'}[h_g] ] &= \sum_{S' = \lbrace (z_i, w_i)\rbrace } \mathbb{P}(S') \cdot \frac{1}{m}\sum_i h_g(z_i, w_i) \\
+&= \frac{1}{m}\sum_{(z_1, w_1)}\sum_{(z_2, w_2)} \cdots \sum_{(z_m, w_m)} \Big[ \prod_i \mathbb{P}(z_i, w_i) \Big] \sum_i h_g(z_i, w_i) \\
+&= \frac{1}{m}\sum_i \Big[ \sum_{(z_1, w_1)} \mathbb{P}(z_1, w_1) \cdots \sum_{(z_{i-1}, w_{i-1})} \mathbb{P}(z_{i-1}, w_{i-1}) \\
+&\qquad\qquad \cdot \sum_{(z_i, w_i)} \mathbb{P}(z_i, w_i) h_g(z_i, w_i) \\
+&\qquad\qquad \cdot \sum_{(z_{i+1}, w_{i+1})} \mathbb{P}(z_{i+1}, w_{i+1}) \cdots \sum_{(z_m, w_m)} \mathbb{P}(z_m, w_m) \Big].
+\end{aligned}}
+
+\p{But #{\sum_{(z_i, w_i)} \mathbb{P}(z_i, w_i) h_g(z_i, w_i) = \mathbb{E}[h_g]}, and each of the other sums (skipping the #{i}th) is #{1}. So}
+
+##{\mathbb{E}_{S'}[\widehat{\mathbb{E}}_{S'}[h_g] ] = \frac{1}{m}\sum_i \mathbb{E}[h_g] = \mathbb{E}[h_g].}
+
+\p{Thus}
+
+##{\begin{aligned}
+\mathbb{E}[\Phi(S)] &= \mathbb{E}_S\Big[ \sup_{h_g \in \mathcal{G}^*} \big\lbrace  \mathbb{E}_\mu[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \Big] \\
+&= \mathbb{E}_S\Big[ \sup_{h_g \in \mathcal{G}^*} \big\lbrace  \mathbb{E}_{S'}[\widehat{\mathbb{E}}_{S'}[h_g] ] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \Big] \\
+&\leq \mathbb{E}_{S, S'}\Big[ \sup_{h_g \in \mathcal{G}^*} \big\lbrace  \widehat{\mathbb{E}}_{S'}[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \Big]
+\end{aligned}}
+
+\p{as the biggest average value #{\leq} the average biggest value.}
+
+\p{Next, drawing #{2} #{m}-element samples independently is equivalent to drawing #{2m} samples and using a coin flip to decide “who” gets what portion of the samples. Therefore}
+
+##{\begin{aligned}
+&\mathbb{E}_{S, S'}\Big[ \sup_{h_g \in \mathcal{G}^*} \big\lbrace  \widehat{\mathbb{E}}_{S'}[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \Big] \\
+&\quad = \mathbb{E}_{S, S', \sigma}\Big[ \sup_{h_g \in \mathcal{G}^*} \Big\lbrace  \frac{1}{m}\sum_{i=1}^m \sigma_i\big(h_g(z_i, w_i) - h_g(x_i, y_i)\big) \Big\rbrace  \Big] \\
+&\quad \leq \mathbb{E}_{S', \sigma}\Big[ \sup \Big\lbrace  \frac{1}{m}\sum_i \sigma_i h_g(z_i, w_i) \Big\rbrace  \Big] + \mathbb{E}_{S, \sigma}\Big[ \sup \Big\lbrace  \frac{1}{m}\sum_i \sigma_i h_g(x_i, y_i) \Big\rbrace  \Big] \\
+&\quad \leq 2\,\mathrm{RAD}_m(\mathcal{G}).
+\end{aligned}}
+}

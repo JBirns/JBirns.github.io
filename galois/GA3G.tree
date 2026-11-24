@@ -23,7 +23,7 @@
 
 \p{\strong{#{n = 3}:} The transitive subgroups of #{S_3} are #{S_3} and #{A_3 \cong C_3}.}
 
-\p{So if #{f} is an irreducible cubic, then #{\operatorname{Gal}(f/K) = A_3} or #{S_3}. (We can determine which using \ref{GA3J}: #{\operatorname{Gal}(f/K) = A_3 \iff \operatorname{Disc}(f)} is a square in #{K}.) Taking #{n = 3} on Example Sheet 2 Q3 gives}
+\p{So if #{f} is an irreducible cubic, then #{\operatorname{Gal}(f/K) = A_3} or #{S_3}. (We can determine which using \ref{GA3J}: #{\operatorname{Gal}(f/K) = A_3 \iff \operatorname{Disc}(f)} is a square in #{K}.) Taking #{n = 3} on [Example Sheet 2 Q3](https://www.dpmms.cam.ac.uk/study/II/Galois/2023-2024/) gives}
 
 ##{\operatorname{Disc}(X^3 + aX + b) = -4a^3 - 27b^2 \qquad \text{(learn this!)}.}
 

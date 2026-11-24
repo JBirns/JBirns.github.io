@@ -1,0 +1,11 @@
+\title{The class #{\mathcal{NP}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say a problem #{\Pi} is #{\mathcal{NP}} if there exist some other problem #{\Pi'} in #{\mathcal{P}} and a polynomial #{p(x)} such that}
+
+##{w \in \Pi \iff \exists \text{ word } v \text{ such that } (w, v) \in \Pi' \text{ and } \operatorname{size}(v) \leq p(\operatorname{size}(w)).}
+
+\p{I.e. an #{\mathcal{NP}} problem is one that seems very hard to solve from the ground up. However, given a potential solution, it is polynomial to verify whether it is actually a solution.}

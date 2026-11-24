@@ -1,0 +1,7 @@
+\title{EQMQ learns exactly}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{No oracle access; it needs to learn perfectly.}

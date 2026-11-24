@@ -1,0 +1,9 @@
+\title{Learning algorithm}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mu} be a distribution on #{X_n \times \mathbb{R}}, #{\mathcal{F}} a collection of #{\mathbb{R}}-valued functions. Then a \em{learning algorithm} for #{\mu} using #{\mathcal{F}} is an algorithm such that for all #{\varepsilon, \delta > 0}, if #{L} is given access to #{\delta}, #{\varepsilon} and a sample oracle #{\mathrm{Ex}(\mu)}, then #{L} will output a hypothesis #{h \in \mathcal{F}} such that with probability #{\geq 1 - \delta},}
+
+##{\mathcal{R}(h) \leq \mathcal{R}(\mathcal{F}) + \varepsilon.}

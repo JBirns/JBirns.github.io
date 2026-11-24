@@ -1,0 +1,7 @@
+\title{Discrete Cube Root Assumption}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{discrete cube root assumption} (DCRA) says: for all polynomials #{P}, there is no algorithm that inputs #{N = pq} and #{f_N(x) = x^3 \bmod N} and outputs #{x} in time #{P(\log N)} with probability of correctness #{\geq \frac{1}{P(\log N)}}.}

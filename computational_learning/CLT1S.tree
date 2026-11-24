@@ -1,0 +1,11 @@
+\title{Bit functions #{f_{N,i}^{-1}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For any #{f_N^{-1} \in \mathcal{F}_n} and any #{1 \leq i \leq n}, write #{f_{N,i}^{-1}} for the function}
+
+##{f_{N,i}^{-1} \colon \mathbb{Z}_N^* \to \lbrace 0, 1\rbrace}
+
+\p{that associates to each input #{x} the #{i}th bit of #{f_N^{-1}(x)}.}

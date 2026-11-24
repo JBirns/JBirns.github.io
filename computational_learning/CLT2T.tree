@@ -1,0 +1,19 @@
+\title{Rademacher complexity of bounded linear functions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathcal{G} = \lbrace g_w \mid g_w(x) = w \cdot x\rbrace } and #{\Vert w\Vert _2 \leq W}, and moreover #{\mu} is such that the marginal distribution on #{X_n = \mathbb{R}^n} is only supported on the disc of radius #{B}. Then}
+
+##{\begin{aligned}
+\widehat{\mathrm{RAD}}_S(\mathcal{G}) &\leq 2\,\mathbb{E}\Big[ \sup_{w \in B_W} \Big\lbrace  \frac{1}{m}\sum_{i=1}^m \sigma_i w \cdot x_i \Big\rbrace  \Big] \\
+&= 2\,\mathbb{E}_\sigma\Big[ \sup_w \Big\lbrace  \frac{w}{m} \cdot \sum \sigma_i x_i \Big\rbrace  \Big] \\
+&= 2\,\mathbb{E}_\sigma\Big[ \frac{W}{m}\Big\Vert  \sum \sigma_i x_i \Big\Vert _2 \Big] \quad \text{by Cauchy--Schwarz} \\
+&= 2W\,\mathbb{E}_\sigma\Big[ \Big\Vert  \frac{1}{m}\sum \sigma_i x_i \Big\Vert _2 \Big] \\
+&\leq 2W\Big( \mathbb{E}_\sigma\Big\Vert  \frac{1}{m}\sum \sigma_i x_i \Big\Vert _2^2 \Big)^{1/2} \quad \text{by Jensen's inequality} \\
+&= 2W\Big( \mathbb{E}_\sigma\Big[ \frac{1}{m^2}\sum \Vert x_i\Vert ^2 + \underbrace{\frac{2}{m^2}\sum_{i<j} \sigma_i\sigma_j (x_i \cdot x_j)}_{= 0 \text{ in expectation}} \Big] \Big)^{1/2} \\
+&= 2W\Big( \frac{1}{m^2}\sum \Vert x_i\Vert ^2 \Big)^{1/2} \\
+&\leq 2W\Big( \frac{1}{m^2}\sum B^2 \Big)^{1/2} \\
+&= \frac{2WB}{\sqrt{m}}.
+\end{aligned}}

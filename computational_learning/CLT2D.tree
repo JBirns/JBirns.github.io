@@ -1,0 +1,7 @@
+\title{Real-valued learning}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}^n}, #{\mathcal{F} = \lbrace f \colon X \to \mathbb{R}\rbrace } some collection, #{f^* = } “target function”.}

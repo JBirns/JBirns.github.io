@@ -1,0 +1,11 @@
+\title{#{\Pi_{\mathcal{C}}(m)}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class over #{X}. We define}
+
+##{\Pi_{\mathcal{C}}(m) := \max_{S \subseteq X,\, |S| = m} |\Pi_{\mathcal{C}}(S)|,}
+
+\p{the maximum number of legal classifications (with respect to #{\mathcal{C}}) given #{m} samples.}

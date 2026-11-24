@@ -1,6 +1,6 @@
 [forest]
 # Folders that hold your .tree files (one tree = one page / one note).
-trees = ["trees", "galois"]
+trees = ["trees", "galois", "computational_learning"]
 
 # Folders whose files (images, PDFs, ...) are copied to the site as-is.
 assets = ["assets"]

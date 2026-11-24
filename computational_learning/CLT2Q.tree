@@ -1,0 +1,17 @@
+\title{McDiarmid’s Inequality}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be a set, and #{f \colon X^m \to \mathbb{R}} be some function such that for all #{i} there exists a constant #{c_i \in \mathbb{R}} such that for all #{x_1, \ldots, x_m, \tilde{x}_i \in X},}
+
+##{|f(x_1, \ldots, x_m) - f(x_1, \ldots, x_{i-1}, \tilde{x}_i, x_{i+1}, \ldots, x_m)| < c_i.}
+
+\p{If #{Z_1, \ldots, Z_m} are random variables on #{X}, then for all #{\varepsilon > 0},}
+
+##{\mathbb{P}\big(f(Z_1, \ldots, Z_m) \geq \mathbb{E}[f] + \varepsilon\big) \leq e^{-2\varepsilon^2/\sum c_i^2}.}
+
+\proof{
+\p{Omitted.}
+}

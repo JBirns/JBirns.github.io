@@ -1,0 +1,47 @@
+\title{Convergence of gradient descent}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be bounded closed convex, contained in a ball of diameter #{B}, and assume #{F} is a convex function for which #{\Vert \nabla F\Vert  \leq L}. Then Average Iterate Gradient Descent with #{\eta = \frac{B}{L\sqrt{T}}} will always output a point #{w_{\mathrm{fin}}} such that}
+
+##{F(w_{\mathrm{fin}}) \leq \inf(F) + \frac{BL}{\sqrt{T}}.}
+
+\proof{
+\p{Fix #{w^* \in K}. Then for all #{i},}
+
+##{F(w_i) \leq \nabla F(w_i) \cdot (w_i - w^*) + F(w^*)}
+
+\p{by convexity. We also know #{\nabla F(w_i) = \frac{1}{\eta}(w_i - w'_{i+1})}. Therefore, completing the square,}
+
+##{\begin{aligned}
+F(w_i) &\leq \frac{1}{\eta}(w_i - w'_{i+1}) \cdot (w_i - w^*) + F(w^*) \\
+&= \frac{1}{2\eta}\big( \Vert w_i - w^*\Vert ^2 + \Vert w_i - w'_{i+1}\Vert ^2 - \Vert w'_{i+1} - w^*\Vert ^2 \big) + F(w^*) \\
+&= \frac{1}{2\eta}\big( \Vert w_i - w^*\Vert ^2 - \Vert w'_{i+1} - w^*\Vert ^2 \big) + \frac{\eta}{2}\Vert \nabla F(w_i)\Vert ^2 + F(w^*).
+\end{aligned}}
+
+\p{Recall #{w_{i+1}} is the point in #{K} nearest to #{w'_{i+1}}. Thus #{\Vert w'_{i+1} - w^*\Vert  \geq \Vert w_{i+1} - w^*\Vert }. Therefore}
+
+##{\begin{aligned}
+F(w_i) &\leq \frac{1}{2\eta}\big( \Vert w_i - w^*\Vert ^2 - \Vert w_{i+1} - w^*\Vert ^2 \big) + \frac{\eta}{2}\Vert \nabla F(w_i)\Vert ^2 + F(w^*) \\
+&\leq \frac{1}{2\eta}\big( \Vert w_i - w^*\Vert ^2 - \Vert w_{i+1} - w^*\Vert ^2 \big) + \frac{\eta L^2}{2} + F(w^*).
+\end{aligned}}
+
+\p{On the other hand,}
+
+##{\begin{aligned}
+F(w_{\mathrm{fin}}) &= F\Big(\frac{1}{T}\sum w_i\Big) \\
+&\leq \frac{1}{T}\sum F(w_i) \quad \text{by convexity} \\
+&\leq \frac{1}{T}\sum_{i=1}^T \Big[ \frac{1}{2\eta}\big( \Vert w_i - w^*\Vert ^2 - \Vert w_{i+1} - w^*\Vert ^2 \big) + \frac{\eta}{2}L^2 + F(w^*) \Big] \\
+&= \frac{1}{2\eta T}\big( \Vert w_1 - w^*\Vert ^2 - \Vert w_{T+1} - w^*\Vert ^2 \big) + \frac{\eta L^2}{2} + F(w^*) \\
+&\leq \frac{1}{2\eta T}\Vert w_1 - w^*\Vert ^2 + \frac{\eta L^2}{2} + F(w^*) \\
+&\leq \frac{B^2}{2\eta T} + \frac{\eta}{2}L^2 + F(w^*).
+\end{aligned}}
+
+\p{Therefore}
+
+##{F(w_{\mathrm{fin}}) - F(w^*) \leq \frac{B^2}{2\eta T} + \frac{\eta L^2}{2}.}
+
+\p{Plugging in #{\eta = \frac{B}{L\sqrt{T}}} gives #{F(w_{\mathrm{fin}}) - F(w^*) \leq \frac{BL}{\sqrt{T}}}. Therefore #{F(w_{\mathrm{fin}}) \leq \inf(F) + BL/\sqrt{T}}.}
+}

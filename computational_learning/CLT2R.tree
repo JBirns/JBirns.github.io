@@ -1,0 +1,30 @@
+\title{Generalisation bound via Rademacher complexity}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{S = \lbrace (x_1, y_1), \ldots, (x_m, y_m)\rbrace } be a collection drawn from #{\mu}. Then with probability #{\geq 1 - \delta},}
+
+##{\Phi(S) \leq 2\,\mathrm{RAD}_m(\mathcal{G}) + (b - a)\sqrt{\frac{\log\frac{1}{\delta}}{2m}}.}
+
+\proof{
+\p{Fix some index #{i} and let #{S'} be the collection obtained from #{S} by only changing #{(x_i, y_i)} to #{(z_i, w_i)} and nothing else. Then}
+
+##{\begin{aligned}
+\Phi(S) - \Phi(S') &= \sup\big\lbrace  \mathbb{E}[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  - \sup\big\lbrace  \mathbb{E}[h_g] - \widehat{\mathbb{E}}_{S'}[h_g] \big\rbrace  \\
+&\leq \sup\big\lbrace  (\mathbb{E}[h_g] - \widehat{\mathbb{E}}_S[h_g]) - (\mathbb{E}[h_g] - \widehat{\mathbb{E}}_{S'}[h_g]) \big\rbrace  \\
+&= \sup\big\lbrace  \widehat{\mathbb{E}}_{S'}[h_g] - \widehat{\mathbb{E}}_S[h_g] \big\rbrace  \\
+&= \sup\Big\lbrace  \frac{1}{m}\big(h_g(z_i, w_i) - h_g(x_i, y_i)\big) \Big\rbrace  \\
+&\leq \frac{1}{m}(b - a).
+\end{aligned}}
+
+\p{So in particular the function #{\Phi \colon (X_n \times \mathbb{R})^m \to \mathbb{R}} satisfies the conditions of McDiarmid’s inequality with #{c_i = \frac{b-a}{m}}. Thus for all #{\varepsilon > 0},}
+
+##{\begin{aligned}
+\mathbb{P}\big[\Phi(S) \geq 2\,\mathrm{RAD}_m(\mathcal{G}) + \varepsilon\big] &\leq \mathbb{P}\big(\Phi(S) \geq \mathbb{E}[\Phi(S)] + \varepsilon\big) \\
+&\leq \exp\Big( \frac{-2m\varepsilon^2}{(b-a)^2} \Big).
+\end{aligned}}
+
+\p{Set #{\varepsilon = (b - a)\sqrt{\frac{\log(1/\delta)}{2m}}}.}
+}

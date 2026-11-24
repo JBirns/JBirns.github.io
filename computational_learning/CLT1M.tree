@@ -1,0 +1,9 @@
+\title{Where the VC dimension was used}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The only place we used VC dimension was in the bound #{|\Pi_{\mathcal{C}}(S)| \leq \Phi_d(2m)}.}
+
+\p{This exact proof can be adapted so our consistent learner is allowed to produce hypotheses from some hypothesis class #{\mathcal{H} \supseteq \mathcal{C}}, so long as #{\mathrm{VC}(\mathcal{H}) = d}.}

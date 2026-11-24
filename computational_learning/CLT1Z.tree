@@ -1,0 +1,28 @@
+\title{Reductions preserve efficient PAC}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\mathcal{C}} reduces to #{\mathcal{C}'} and that #{\mathcal{C}'} is efficiently PAC. Then #{\mathcal{C}} is efficiently PAC.}
+
+\proof{
+\p{We will prove this by outlining a standard modification of the efficiently PAC algorithm #{L'} for #{\mathcal{C}'}.}
+
+\p{Define a new algorithm #{L} as follows:}
+
+\ul{
+\li{\strong{1.} Take some number of samples (TBD) from #{\mathrm{Ex}(c, \mathcal{D})}.}
+\li{\strong{2.} Translate each sample #{(x, c(x))} to #{(G(x), c(x)) = (G(x), c'(G(x)))}.}
+\li{\strong{3.} Feed the samples to #{L'} to produce a hypothesis #{h'} for learning #{c'}.}
+\li{\strong{4.} Set the output to be the hypothesis #{h} defined by #{h(x) = h'(G(x))}.}
+}
+
+\p{#{L} is clearly polynomial, so we must show it is PAC. Note #{h(x) = h'(G(x))} and #{c(x) = c'(G(x))}, so}
+
+##{h(x) \neq c(x) \iff h'(G(x)) \neq c'(G(x)).}
+
+\p{Therefore #{E(h) = E(h')}, since #{\mathcal{D}'} is induced by #{G}. So}
+
+##{\mathbb{P}(E(h) < \varepsilon) = \mathbb{P}(E(h') < \varepsilon) \geq 1 - \delta.}
+}

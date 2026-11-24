@@ -1,0 +1,7 @@
+\title{Three collinear points and rectangles}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}^2}, #{\mathcal{C} = } rectangles, #{S = \lbrace (0,1), (0,2), (0,3)\rbrace }. Then #{(0,0,0) \in \Pi_{\mathcal{C}}(S)}, but #{(1,0,1) \notin \Pi_{\mathcal{C}}(S)}.}

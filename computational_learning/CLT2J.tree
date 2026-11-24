@@ -1,0 +1,9 @@
+\title{Empirical risk}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mu} be a distribution, #{h \in \mathcal{F}}. Then the \em{empirical risk} with respect to some finite collection of samples #{\lbrace (x, y)\rbrace  = S} sampled from #{\mu} is defined by}
+
+##{\widehat{\mathcal{R}}_S(h) = \frac{1}{|S|}\sum_{(x,y) \in S} \ell(h(x), y).}

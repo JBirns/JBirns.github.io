@@ -1,0 +1,13 @@
+\title{Generalised Occam’s Razor}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}_n} be a concept class, #{\mathcal{C}_n \subseteq \mathcal{H}_n}, and let #{L} be an algorithm such that for all #{c \in \mathcal{C}_n}, #{L} runs in #{\operatorname{poly}(n, m, \operatorname{size}(c))} and outputs some #{h \in \mathcal{H}_{n,m}} that is consistent with #{c}.}
+
+\p{Then for any distribution #{\mathcal{D}}, there exists a constant #{\gamma > 0} such that given #{m} random samples from #{\mathrm{Ex}(\mathcal{D}, c)} where}
+
+##{m \geq \gamma \cdot \frac{1}{\varepsilon}\Big( \log(|\mathcal{H}_{n,m}|) + \log\frac{1}{\delta} \Big),}
+
+\p{then with probability #{\geq 1 - \delta}, #{L} produces a hypothesis with error #{< \varepsilon}.}

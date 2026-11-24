@@ -1,0 +1,7 @@
+\title{Reduction}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given two problems #{\Pi, \Pi'} we say #{\Pi} \em{reduces} to #{\Pi'} if there exists a polynomial algorithm #{\mathcal{A}} such that for any sequence of successors according to #{\mathcal{A}} which starts at #{v} and terminates at #{w}, #{v \in \Pi \iff w \in \Pi'}.}

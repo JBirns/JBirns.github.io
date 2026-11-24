@@ -1,0 +1,13 @@
+\title{Finite hypothesis classes are PAC}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{|\mathcal{H}| < \infty} then #{\mathcal{C}} is PAC using #{\mathcal{H}}.}
+
+\proof{
+\p{By Generalised Occam’s Razor it suffices to show there exists a consistent learner for #{\mathcal{C}} using #{\mathcal{H}}.}
+
+\p{By assumption #{\mathcal{C} \subseteq \mathcal{H}}, thus for all #{c \in \mathcal{C}} there must exist a consistent #{h \in \mathcal{H}}. So for any collection of samples, iterate through all of #{\mathcal{H}} to find a consistent #{h}.}
+}

@@ -1,0 +1,13 @@
+\title{#{\mathcal{G}^*} and #{\Phi(S)}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{G}} be a class of functions #{g \colon X_n \to [a, b]}. Then we write #{\mathcal{G}^*} for the collection}
+
+##{\mathcal{G}^* = \lbrace h_g \colon X_n \times [a, b] \to \mathbb{R} : h_g(x, y) = (g(x) - y)^2,\; g \in \mathcal{G}\rbrace .}
+
+\p{In addition, if #{S = \lbrace (x_1, y_1), \ldots, (x_m, y_m)\rbrace } is a collection sampled from #{\mu}, we set}
+
+##{\Phi(S) = \sup_{h_g \in \mathcal{G}^*} \Big\lbrace  \underbrace{\mathbb{E}_\mu[h_g]}_{\mathcal{R}(g)} - \underbrace{\frac{1}{m}\sum_{i=1}^m h_g(x_i, y_i)}_{\widehat{\mathcal{R}}_S(g)} \Big\rbrace .}

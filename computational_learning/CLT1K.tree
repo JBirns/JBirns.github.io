@@ -1,0 +1,13 @@
+\title{#{\varepsilon}-nets give small error}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class, #{c \in \mathcal{C}} a concept, #{h} a hypothesis, #{\mathcal{D}} a distribution and #{S = \lbrace (x_1, c(x_1)), \ldots, (x_m, c(x_m))\rbrace } a collection of labelled samples consistent with #{h}. If #{S} forms an #{\varepsilon}-net then #{E(h) < \varepsilon}.}
+
+\proof{
+\p{#{E(h) := \mathbb{P}_{\mathcal{D}}(h \,\triangle\, c)}. The claim #{E(h) < \varepsilon} is equivalent to #{h \,\triangle\, c \notin \Delta_\varepsilon(c)}.}
+
+\p{Assume for contradiction that #{h \,\triangle\, c \in \Delta_\varepsilon(c)}. Since #{S} is an #{\varepsilon}-net, there exists #{x_i \in S} such that #{x_i \in h \,\triangle\, c}. But our samples were consistent with #{h}. So if #{x_i \notin c}, then #{c(x_i) = 0 = h(x_i)}, so #{x_i \notin h}. If #{x_i \in c} then #{x_i \in h}. Either way #{x_i \notin h \,\triangle\, c}, a contradiction.}
+}

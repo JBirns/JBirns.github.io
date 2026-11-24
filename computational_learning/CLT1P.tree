@@ -1,0 +1,7 @@
+\title{Discrete cube root moduli}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{N \in \mathbb{N}} be such that it can be written as #{pq}, #{p} and #{q} prime, such that #{(p-1)(q-1) \not\equiv 0 \bmod 3}.}

@@ -1,0 +1,11 @@
+\title{A 2-bit multiplexer}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{n = 2}, so our multiplexer reads in strings of length #{6}. One possible way to do this is via the table}
+
+##{\begin{array}{c|c} \text{address} & \text{reference} \\ \hline 00 & 0 \\ 01 & 2 \\ 10 & 1 \\ 11 & 3 \end{array}}
+
+\p{Then #{110111 \rightsquigarrow 1} and #{101011 \rightsquigarrow 0}.}

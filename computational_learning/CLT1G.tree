@@ -1,0 +1,48 @@
+\title{VC dimension of half-planes}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}^2}, #{\mathcal{C} = \lbrace \text{linear half-spaces}\rbrace }. Any line has a well defined left and right side; a linear half-space is the left hand side of some line #{y = mx + b}.}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.6]
+\draw (-2,0) -- (2.5,0);
+\draw (0,-1.5) -- (0,1.8);
+\draw[->] (-1,-1.5) -- (1.6,1.6) node[right] {$y = mx + b$};
+\fill[gray, opacity=0.25] (-2,1.6) -- (1.6,1.6) -- (-1,-1.5) -- (-2,-1.5) -- cycle;
+\end{tikzpicture}}
+
+\p{\strong{Claim.} #{\mathrm{VC}(\mathcal{C}) = 3}.}
+
+\p{\em{Proof of claim.} Firstly, the following set of three points shatters:}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.55]
+\draw (-1.5,0) -- (1.5,0); \draw (0,-1) -- (0,1.5);
+\fill (0,1) circle (3pt); \fill (-0.8,0) circle (3pt); \fill (0.8,0) circle (3pt);
+\end{tikzpicture}}
+
+\p{Secondly, every collection of #{4} points in #{\mathbb{R}^2} can be configured similar to one of the following (labels show impossible evaluations):}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.8]
+\begin{scope}
+\draw (-0.8,0) -- (3.2,0); \draw (0,-1) -- (0,1.2);
+\fill (0.4,0) circle (3pt); \node[gray] at (0.4,-0.5) {$+$}; \fill (1.1,0) circle (3pt); \node[gray] at (1.1,-0.5) {$-$}; \fill (1.9,0) circle (3pt); \node[gray] at (1.9,-0.5) {$-$}; \fill (2.6,0) circle (3pt); \node[gray] at (2.6,-0.5) {$+$};
+\end{scope}
+\begin{scope}[xshift=6cm]
+\draw (-1.6,0) -- (1.6,0); \draw (0,-1.2) -- (0,1.4);
+\fill (0,0.8) circle (3pt); \node[gray] at (0.4,0.9) {$+$};
+\fill (0,-0.8) circle (3pt); \node[gray] at (0.4,-0.9) {$+$};
+\fill (-1,0) circle (3pt); \node[gray] at (-1.2,0.4) {$-$};
+\fill (1,0) circle (3pt); \node[gray] at (1.2,0.4) {$-$};
+\end{scope}
+\begin{scope}[xshift=11cm]
+\draw (-1.6,0) -- (1.6,0); \draw (0,-1.2) -- (0,1.4);
+\fill (0,0.8) circle (3pt); \node[gray] at (0.4,0.9) {$+$};
+\fill (0,0) circle (3pt); \node[gray] at (0.4,0.3) {$-$};
+\fill (-0.9,-0.6) circle (3pt); \node[gray] at (-1.3,-0.6) {$+$};
+\fill (0.9,-0.5) circle (3pt); \node[gray] at (1.3,-0.6) {$+$};
+\end{scope}
+\end{tikzpicture}}
+
+\p{Therefore #{\mathrm{VC}(\mathcal{C}) = 3}. #{\square}}

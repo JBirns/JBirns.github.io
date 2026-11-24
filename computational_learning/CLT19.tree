@@ -1,0 +1,11 @@
+\title{#{\Pi_{\mathcal{C}}(S)}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be an instance space, #{S \subseteq X} any subset, and #{\mathcal{C}} any concept class. Then we define}
+
+##{\Pi_{\mathcal{C}}(S) = \lbrace \text{all vectors of the form } (c(x_1), \ldots, c(x_m))\rbrace}
+
+\p{where #{c \in \mathcal{C}}, and #{S = \lbrace x_1, \ldots, x_m\rbrace }.}

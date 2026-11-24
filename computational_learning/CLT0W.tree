@@ -1,0 +1,9 @@
+\title{Efficiently PAC using #{\mathcal{H}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be an instance space, #{\mathcal{C} \subseteq X} a concept class and #{\mathcal{C} \subseteq \mathcal{H} \subseteq X} another concept class. We say #{\mathcal{C}} is \em{efficiently PAC with #{\mathcal{H}}} if there exists an efficiently PAC algorithm whose output hypothesis is in #{\mathcal{H}}.}
+
+\p{In full: let #{X} be an instance space, #{\mathcal{C}} a concept class, #{\mathcal{C} \subseteq \mathcal{H}} a concept class. Then we say #{\mathcal{C}} is efficiently PAC using #{\mathcal{H}} if there exists an algorithm #{L} such that for all #{c \in \mathcal{C}}, every #{0 < \delta, \varepsilon < \frac{1}{2}}, and every distribution #{\mathcal{D}} on #{X}, if #{L} is given access to an oracle #{\mathrm{Ex}(\mathcal{D}, c)} it will produce an element #{h \in \mathcal{H}} such that #{\mathbb{P}(E(h) < \varepsilon) \geq 1 - \delta}, and #{L} runs in time polynomial in #{1/\varepsilon} and #{1/\delta}.}

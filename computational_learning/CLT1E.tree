@@ -1,0 +1,7 @@
+\title{VC dimension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a concept class #{\mathcal{C}}, the \em{VC dimension} #{\mathrm{VC}(\mathcal{C})} is the largest #{d} such that some collection of #{d} samples is shattered by #{\mathcal{C}}.}

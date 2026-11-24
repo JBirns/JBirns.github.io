@@ -1,0 +1,7 @@
+\title{Algorithm}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An \em{algorithm} is a finite set of pairs #{\mathcal{A} = \lbrace (u_1, u_1'), (u_2, u_2'), \ldots, (u_n, u_n')\rbrace } of words from some alphabet.}

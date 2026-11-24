@@ -1,0 +1,12 @@
+\title{The tightest-fit rectangle algorithm}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{I define an algorithm for solving the rectangle game as follows:}
+
+\ul{
+\li{\strong{1.} Given an input #{m} of the total number of samples, first record the outputs of these samples.}
+\li{\strong{2.} Draw the smallest possible axis-aligned rectangle that contains all the points (labelled as inside).}
+}

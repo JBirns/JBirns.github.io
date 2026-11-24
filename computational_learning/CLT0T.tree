@@ -1,0 +1,13 @@
+\title{3-term DNF}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}_n} be the concept class of #{3}-term disjunctions of arbitrary conjunctions of literals, called \em{#{3}-term DNF}. E.g.}
+
+##{\begin{aligned}
+(x_1 \wedge \overline{x}_3) \vee (\overline{x}_1 \wedge x_2 \wedge x_3) \vee (x_1 \wedge x_2) \in \lbrace 0,1\rbrace ^3 \rightsquigarrow \lbrace (a_1, a_2, a_3) :\; & a_1 = 1, a_3 = 0 \\
+\text{or }& a_1 = 0, a_2 = 1, a_3 = 1 \\
+\text{or }& a_1 = 1, a_2 = 1\rbrace .
+\end{aligned}}

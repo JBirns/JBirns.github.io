@@ -1,0 +1,7 @@
+\title{Efficiently PAC+MQ learnable}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be an instance space, #{\mathcal{C}} a concept class. We say #{\mathcal{C}} is \em{efficiently PAC+MQ learnable} if there exists an algorithm such that for all #{\varepsilon > 0}, #{\delta > 0} and distributions #{\mathcal{D}}, if given access to #{\mathrm{Ex}(\mathcal{D}, c)} and MQ then the algorithm will produce a hypothesis #{h \in \mathcal{C}} in polynomial time (with #{\mathbb{P}(E(h) < \varepsilon) \geq 1 - \delta}).}

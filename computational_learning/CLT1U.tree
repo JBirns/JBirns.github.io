@@ -1,0 +1,15 @@
+\title{Boolean circuit}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{Boolean circuit} is a directed acyclic graph such that:}
+
+\ul{
+\li{\strong{(i)} every vertex has indegree #{0}, #{1} or #{2};}
+\li{\strong{(ii)} every vertex of indegree #{0} is labelled with a variable #{x_i};}
+\li{\strong{(iii)} every vertex of indegree #{1} is labelled with “not”;}
+\li{\strong{(iv)} every vertex of indegree #{2} is labelled with “#{\vee}” or “#{\wedge}”;}
+\li{\strong{(v)} there exists a unique vertex of outdegree #{0}.}
+}

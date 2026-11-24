@@ -1,0 +1,67 @@
+\title{Cryptographic Hardness}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We return to questions of computational complexity. In particular, can we cook up examples #{\mathcal{C}} for which #{\mathcal{C}} is not efficiently PAC regardless of the chosen hypothesis class?}
+
+\transclude{CLT1P}
+
+\p{\strong{Claim.} #{f_N(x) = x^3 \bmod N} is a bijection from #{\mathbb{Z}_N^* = \lbrace i : \gcd(i, N) = 1\rbrace } to itself, in fact a group automorphism under multiplication.}
+
+\p{#{f_N^{-1}} we call a \em{discrete cube root}.}
+
+\p{\em{Proof of claim.} #{|\mathbb{Z}_N^*| = (p-1)(q-1)}. By assumption #{3 \nmid (p-1)(q-1)}, so there exist #{d, k} such that #{3d + k(p-1)(q-1) = 1}. Define #{f_N^{-1}(x) = x^d \bmod N}. Then}
+
+##{\begin{aligned}
+f_N^{-1}(x)^3 &\equiv x^{3d} \bmod N \\
+&\equiv x^{1 - k(p-1)(q-1)} \bmod N \\
+&\equiv x \cdot x^{-k(p-1)(q-1)} \bmod N \\
+&\equiv x \cdot x^{|\mathbb{Z}_N^*|(-k)} \bmod N \\
+&\equiv x
+\end{aligned}}
+
+\p{since #{\mathbb{Z}_N^*} is a group. #{\square}}
+
+\p{So given #{p, q}, solving the discrete cube root problem is easy. However, if you are only given #{N} and #{f_N}, computing the discrete cube root is likely \em{very hard}.}
+
+\transclude{CLT1Q}
+
+\p{\em{Idea.} Can we use DCRA to build PAC problems that are intrinsically hard?}
+
+\p{For each #{n \geq 1}, let #{\mathcal{F}_n} be the set of all discrete cube roots for integers #{N = p \cdot q} such that #{n = \log N = } number of bits of #{N}.}
+
+\transclude{CLT1R}
+
+\p{Some thoughts:}
+
+\ul{
+\li{\strong{1.} If there were a way to encode DCRA into a learning framework, one would expect our samples to look something like #{(x, f_N^{-1}(x))}. Is this a problem? No! The pair #{(x, f_N^{-1}(x))} can be thought of as #{(y^3, y)}.}
+\li{\strong{2.} As stated, computing discrete cube roots is a matter of inputting #{2} integers and outputting an integer. To this point PAC is about inputting labelled samples and outputting yes/no.}
+}
+
+\p{All this being said, we still haven’t encoded the DCRA into a PAC problem.}
+
+\transclude{CLT1S}
+
+\transclude{CLT1T}
+
+\transclude{CLT1U}
+
+\transclude{CLT1V}
+
+\p{Given any Boolean circuit #{\mathcal{B}}, there is an associated Boolean function}
+
+##{\Phi_{\mathcal{B}} \colon \lbrace 0, 1\rbrace ^n \to \lbrace 0, 1\rbrace}
+
+\p{that plugs in #{0}’s and/or #{1}’s based on the input to the various indegree #{0} vertices, and propagates to the sink vertex using the labels.}
+
+\p{For a given polynomial #{P}, we write}
+
+##{\mathcal{C}_n^P = \lbrace \text{Boolean circuits with at most } P(n) \text{ many vertices}\rbrace .}
+
+\p{Usually this polynomial is unimportant, and so we say #{\mathcal{C} = \bigcup_n \mathcal{C}_n^P} is a class of \em{polynomial sized circuits}.}
+
+\transclude{CLT1W}
+
+\p{I.e. we showed learning discrete cube roots “reduces” to learning polynomial Boolean circuits…}

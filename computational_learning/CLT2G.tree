@@ -1,0 +1,9 @@
+\title{#{f^*} minimises risk}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mu} be realisable. Then #{f^*} is the function that minimises risk. In particular, for all #{\varepsilon > 0}, #{f^*} has the property that}
+
+##{\mathcal{R}(f^*) \leq \inf_{h \in \mathcal{F}} \mathcal{R}(h) + \varepsilon.}

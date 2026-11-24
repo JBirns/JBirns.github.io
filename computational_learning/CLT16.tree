@@ -1,0 +1,22 @@
+\title{Occam bound for conjunctions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let’s return to #{X_n = \lbrace 0, 1\rbrace ^n} and #{\mathcal{C}_n = } conjunctions of literals. We proved #{\mathcal{C}_n} was efficiently PAC with the algorithm that starts with #{h = x_1 \wedge \overline{x}_1 \wedge \cdots \wedge x_n \wedge \overline{x}_n} and trims based on true samples (\ref{CLT0Q}).}
+
+\ul{
+\li{\strong{1.} We showed #{L} used #{\frac{2n}{\varepsilon}\big(\log(2n) + \log\frac{1}{\delta}\big)} samples.}
+\li{\strong{2.} By definition #{L} always produced a consistent hypothesis.}
+\li{\strong{3.} The maximum number of steps #{L} takes to run on a given collection of #{m} samples is #{\leq 2nm}.}
+\li{\strong{4.} #{|\mathcal{H}_{n,m}| \leq 3^n}.}
+}
+
+\p{By Generalised Occam (\ref{CLT14}) we only need}
+
+##{m \geq \frac{1}{\gamma\varepsilon}\Big( n\log(3) + \log\frac{1}{\delta} \Big)}
+
+\p{for some #{\gamma} for PAC to kick in.}
+
+\p{#{m \geq \frac{2n}{\varepsilon}\big(\log(2n) + \log\frac{1}{\delta}\big)} was our rough estimate before, and this is \em{worse} than the Occam requirement (#{n\log n > n}). So this has actually \em{improved} our algorithm’s bound.}

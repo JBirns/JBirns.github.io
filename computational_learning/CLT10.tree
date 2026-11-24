@@ -1,0 +1,15 @@
+\title{Representing conjunctions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X_n = \lbrace 0, 1\rbrace ^n}, #{\mathcal{C}_n = } conjunctions of literals,}
+
+##{\Sigma = \lbrace x_1, x_2, \ldots, x_n, \overline{x}_1, \overline{x}_2, \ldots, \overline{x}_n\rbrace .}
+
+##{\begin{aligned}
+\mathcal{R}(w) &= \mathcal{R}(x_{i_1} \ldots x_{i_k}) = x_{i_1} \wedge \cdots \wedge x_{i_k}, \\
+\mathcal{R}(x_1 \overline{x}_2) &= x_1 \wedge \overline{x}_2, \\
+\mathcal{R}(x_1 x_1 x_1 x_2) &= x_1 \wedge x_1 \wedge x_1 \wedge x_2 = x_1 \wedge x_2.
+\end{aligned}}

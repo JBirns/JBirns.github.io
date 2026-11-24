@@ -1,0 +1,11 @@
+\title{Representation and size}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a concept class #{\mathcal{C}_n} of #{X_n}, and an alphabet #{\Sigma}, a \em{representation} of #{\mathcal{C}_n} by #{\Sigma} is a function #{\mathcal{R} \colon \Sigma^* \to \mathcal{C}_n}.}
+
+\p{Given a representation #{\mathcal{R}} and a concept #{c \in \mathcal{C}_n} we define}
+
+##{\operatorname{size}(c) = \operatorname{length}(\text{shortest word } w \text{ for which } \mathcal{R}(w) = c).}

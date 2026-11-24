@@ -1,0 +1,23 @@
+\title{VC dimension is necessary}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class with #{\mathrm{VC}(\mathcal{C}) = d} and let #{L} be an algorithm that is PAC for #{\mathcal{C}}. Then in the worst case #{L} uses #{\geq d} samples.}
+
+\proof{
+\p{Let #{\lbrace x_1, \ldots, x_d\rbrace  = S} be a collection of samples that is shattered by #{\mathcal{C}}. Let #{\mathcal{D}} be the distribution that assigns probability #{1/d} to all #{x_i} and #{0} else. Thus, functionally we can assume #{X = S} and #{\mathcal{C} = \lbrace c \cap S\rbrace }.}
+
+\p{Because #{L} is PAC, I should be able to predict any concept in #{\mathcal{C}} with error #{< \varepsilon} most of the time (i.e. with probability #{> 1 - \delta}).}
+
+\p{Let’s assume #{L} only pulled #{m < d} samples. Let #{m' \leq m} be the number of unique samples. A concept in #{\mathcal{C}} can be thought of as a binary #{d}-tuple. Thus our algorithm must predict a binary #{d}-tuple after seeing #{m' < d} of its coordinates. So #{E(h) = } error of predicting #{d - m'} coin flips, and}
+
+##{\mathbb{E}[E(h)] = \frac{d - m'}{2d}.}
+
+\p{We can use a Chernoff bound to conclude}
+
+##{\mathbb{P}\Big( E(h) \geq \frac{d - m'}{4d} \Big) \geq \frac{1}{2}.}
+
+\p{Choosing #{\varepsilon \ll \frac{d - m'}{4d}} we run into a problem.}
+}

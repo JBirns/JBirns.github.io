@@ -1,0 +1,58 @@
+\title{VC Dimension}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Our next question is the following: rather than concern ourselves with \em{computational efficiency} (e.g. “is this efficiently PAC?”), can we say anything about its \em{information theoretic efficiency}?}
+
+\p{In other words, given a class #{\mathcal{C}}, can we limit the number of samples needed to reach PAC?}
+
+\p{If #{|\mathcal{H}| < \infty} then we just did this with Generalised Occam’s Razor: if #{|\mathcal{H}| < \infty}, then #{\mathcal{C}} is PAC using #{\mathcal{H}}, provided a consistent learner and at least}
+
+##{m \geq O\Big( \frac{1}{\varepsilon}\log\frac{|\mathcal{H}|}{\delta} \Big)}
+
+\p{samples. Recall our first problem of the rectangle game had so many hypotheses.}
+
+\transclude{CLT19}
+
+\transclude{CLT1A}
+
+\transclude{CLT1B}
+
+\transclude{CLT1C}
+
+\transclude{CLT1D}
+
+\transclude{CLT1E}
+
+\transclude{CLT1F}
+
+\transclude{CLT1G}
+
+\transclude{CLT1H}
+
+\p{Note, if #{\mathrm{VC}(\mathcal{C}) = d} and #{m \leq d} then #{\Pi_{\mathcal{C}}(m) = 2^m}.}
+
+\transclude{CLT1I}
+
+\p{\strong{Last time.} Key question: can we get a lower bound on the minimum number of samples needed before PAC can kick in? I.e. what is the information theoretic complexity?}
+
+\p{Intuitively if #{m \leq \mathrm{VC}(\mathcal{C})} then it is possible for a collection of #{m} points to give you any labels paired with them, so our samples do not have enough information-theoretic power to distinguish concepts.}
+
+\transclude{CLT1J}
+
+\transclude{CLT1K}
+
+\p{This lemma now tells us that}
+
+##{\mathbb{P}(E(h) < \varepsilon) \geq \mathbb{P}(\text{our samples form an } \varepsilon\text{-net}).}
+
+\p{Thus, to prove we have sufficient examples for PAC to kick in, it suffices to show that a collection of samples forming an #{\varepsilon}-net is \em{likely}.}
+
+\transclude{CLT1L}
+
+\transclude{CLT1M}
+
+\p{We now wish to show VC dimension is \em{necessary} for PAC.}
+
+\transclude{CLT1N}

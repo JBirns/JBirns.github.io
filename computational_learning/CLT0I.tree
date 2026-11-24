@@ -1,0 +1,102 @@
+\title{PAC Learning}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We begin with the following game. The host has drawn an axis-aligned rectangle in the plane.}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-2,0) -- (2.5,0);
+\draw[->] (0,-2) -- (0,2);
+\draw[red, thick] (-1,0.6) rectangle (2,1.6);
+\end{tikzpicture}}
+
+\p{You cannot see the rectangle; however, there is a machine that, when prompted, will (randomly) select a point and indicate if it is in the rectangle or not.}
+
+\transclude{CLT0J}
+
+\transclude{CLT0K}
+
+\transclude{CLT0L}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-2.5,0) -- (2.5,0);
+\draw[->] (0,-2) -- (0,2.2);
+\draw[red, thick] (-1.5,0.7) rectangle (2,1.9);
+\draw[blue, thick] (-1,0.9) rectangle (1.5,1.6);
+\fill[blue] (-1,0.9) circle (1.5pt); \fill[blue] (0.3,1.6) circle (1.5pt); \fill[blue] (0.8,1.2) circle (1.5pt); \fill[blue] (1.5,1.1) circle (1.5pt);
+\fill[blue] (-1.8,-0.6) circle (1.5pt); \fill[blue] (1.8,-0.3) circle (1.5pt);
+\end{tikzpicture}}
+
+\transclude{CLT0M}
+
+\p{In general we call #{\delta} the \em{confidence parameter} and #{\varepsilon} the \em{accuracy parameter}. We also call #{\mathbb{P}_{\mathcal{D}}(\mathcal{R} \cup \mathcal{R}' - (\mathcal{R} \cap \mathcal{R}'))} the \em{error} of our hypothesis, denoted #{E(\mathcal{R}')}.}
+
+\p{We start with some set #{X} called the \em{instance space}. This is the space where everything lives (e.g. #{\mathbb{R}^2} above). A \em{concept} is a subset of #{X} (e.g. in the rectangle game, any rectangle is a concept). A \em{concept class} is any set of concepts (e.g. all axis-aligned rectangles). We use #{\mathcal{C}} to denote concept classes. The \em{target concept} is some concept #{c \in \mathcal{C}} that you are trying to learn (e.g. #{\mathcal{R}}).}
+
+\p{Frequently we will view concepts as functions #{c \colon X \to \lbrace 0, 1\rbrace } by setting}
+
+##{c(x) = \begin{cases} 1, & x \in c, \\ 0, & \text{else.} \end{cases}}
+
+\transclude{CLT0N}
+
+\p{The \em{oracle} is a procedure #{\mathrm{Ex}(c, \mathcal{D})} that runs in constant time and produces a random sample #{(x, c(x))}.}
+
+\transclude{CLT0O}
+
+\transclude{CLT0P}
+
+\transclude{CLT0Q}
+
+\transclude{CLT0R}
+
+\p{Yes! However, writing down examples is hard to do in non-artificial ways (similar to seeing in Lecture 1 that there exist problems without algorithms to solve them). E.g. #{X = \bigcup_{i=1}^\infty \mathbb{R}^i}, #{\mathcal{C} = } rectangles of some dimension. This is not PAC learnable because you do not know what dimension it is.}
+
+\transclude{CLT0S}
+
+\transclude{CLT0T}
+
+\transclude{CLT0U}
+
+\p{\em{Idea.} Construct an #{\mathcal{NP}}-complete problem #{\Pi} that reduces to the problem of PAC learning #{\mathcal{C}_n}. Specifically, we want to construct a map #{\alpha \mapsto S_\alpha} from strings to sets of examples #{S_\alpha = \lbrace (y_1, b_1), \ldots, (y_m, b_m)\rbrace } where the #{y_i} are #{3}-term disjunctions and the #{b_i} are in #{\lbrace 0, 1\rbrace }. This map will have the property that}
+
+##{\alpha \in \Pi \iff S_\alpha \text{ is \emph{consistent} with some concept in } \mathcal{C}_n.}
+
+\transclude{CLT0V}
+
+\p{What’s the key idea? Say we had a map #{\alpha \mapsto S_\alpha}, and an efficient PAC learning algorithm for #{\mathcal{C}_n}. Then I have an algorithm which in random polynomial time will output a hypothesis with error #{< \varepsilon} for all #{\varepsilon} given.}
+
+\p{Consider the following algorithm:}
+
+\ul{
+\li{\strong{1.} Input word #{\alpha}.}
+\li{\strong{2.} Produce #{S_\alpha}.}
+\li{\strong{3.} Using #{S_\alpha} produce #{h} by our algorithm with error #{< 1/2|S_\alpha|}.}
+\li{\strong{4.} If (3) fails then #{\alpha \notin \Pi}, otherwise #{\alpha \in \Pi}.}
+}
+
+\p{This is because if #{h(y_i) \neq b_i} for any #{i}, then we have #{E(h) \geq 1/|S_\alpha| > \varepsilon}, a contradiction. Therefore #{\Pi} is solvable in random polynomial time. But #{\Pi \in \mathcal{NP} \neq \mathcal{RP}}, a contradiction.}
+
+\p{What we just showed is that #{3}-term DNF is not efficiently PAC. However #{(\bigwedge x_i) \vee (\bigwedge y_j) \vee (\bigwedge z_k)} can be distributed to produce}
+
+##{\bigwedge_{i,j,k} (x_i \vee y_j \vee z_k).}
+
+\p{Call #{x_i \vee y_j \vee z_k = W_{i,j,k}}. But #{\bigwedge W_{i,j,k}} is a conjunction of #{(2n)^3} literals:}
+
+##{3\text{-term DNF in } 2n \text{ literals} \longleftrightarrow \text{conjunction in } (2n)^3 \text{ literals}.}
+
+\p{But we previously showed conjunctions are efficiently PAC (\ref{CLT0Q})!}
+
+\p{This does not contradict \ref{CLT0U} because converting back takes #{\approx 3^n} computations. But it does suggest that how one chooses to represent the concept they are trying to learn matters.}
+
+\p{E.g. trying to learn a secret rectangle in the plane we saw was efficiently PAC. But we could ask the machine to output disjoint circles instead. Circle packing is hard…}
+
+\transclude{CLT0W}
+
+\p{\strong{Summary.}}
+
+\ul{
+\li{Conjunctions are efficiently PAC with conjunctions (\ref{CLT0Q}).}
+\li{#{3}-DNF is not efficiently PAC with #{3}-DNF (\ref{CLT0U}).}
+\li{However #{3}-DNF is efficiently PAC with conjunctions.}
+}

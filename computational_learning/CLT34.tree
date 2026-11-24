@@ -1,0 +1,23 @@
+\title{Genetic representation of multiplexer rules}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We will use a ternary string representation for our possible rules. Any rule of the form}
+
+##{\begin{aligned}
+&\text{If } (\text{input}, \text{bit}_{i_1} : b_{i_1}, \ldots, \text{bit}_{i_k} : b_{i_k}) \\
+&\text{Then remove } 1 \\
+&\qquad\; \text{Add } (\text{output}, \text{value} : b)
+\end{aligned}}
+
+\p{can be summarised by a string on #{\Sigma = \lbrace 0, 1, \#\rbrace }:}
+
+##{\#\#\ldots\# b_{i_1} \#\ldots\# b_{i_2} \#\ldots\# b_{i_k} \#\ldots\# b.}
+
+\p{E.g. #{01\#\#1\#0}.}
+
+\p{To reproduce, e.g.}
+
+##{\left. \begin{array}{l} 01\#1\#11 \\ 0101\#\#1 \end{array} \right\rbrace  \rightsquigarrow 01\#1\#\#1 \xrightarrow{\text{add some random mutations}} 01\#\#\#\#1.}

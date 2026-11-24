@@ -6,8 +6,12 @@
 
 \p{#{L^G = k(s_1, \ldots, s_n)}.}
 
-\proof{
-\p{\em{Proof 1.} Let #{\frac{f}{g} \in L^G}, with #{f, g \in R} coprime. Then}
+
+\scope{
+    \put\transclude/toc{false}
+    \subtree{
+      \taxon{Proof 1}
+      \p{Let #{\frac{f}{g} \in L^G}, with #{f, g \in R} coprime. Then}
 
 ##{\frac{\sigma(f)}{\sigma(g)} = \frac{f}{g} \quad \forall \sigma \in G.}
 
@@ -16,10 +20,16 @@
 \p{But #{G} has finite order, say #{|G| = N} (#{= n!}). Therefore #{f = \sigma^N(f) = c_\sigma^N f \implies c_\sigma^N = 1}. Therefore #{fg^{N-1}} and #{g^N \in R^G = k[s_1, \ldots, s_n]}, so}
 
 ##{\frac{f}{g} = \frac{fg^{N-1}}{g^N} \in k(s_1, \ldots, s_n).}
-}
+      \qed
+    }
+  }
 
-\proof{
-\p{\em{Proof 2.} Let}
+
+\scope{
+    \put\transclude/toc{false}
+    \subtree{
+      \taxon{Proof 2}
+      \p{Let}
 
 ##{f(T) = \prod_{i=1}^n (T - X_i) = T^n - s_1 T^{n-1} + s_2 T^{n-2} - \cdots + (-1)^n s_n.}
 
@@ -27,5 +37,6 @@
 
 ##{\begin{array}{c} L \\ \big| \\ L^G \\ \big| \\ k(s_1, \ldots, s_n) \end{array}}
 
-\p{Example Sheet 1 Q12 #{\implies [L:k(s_1, \ldots, s_n)] \leq n!}, and #{[L:L^G] = \#G = n!} by Artin’s Theorem. The Tower Law #{\implies L^G = k(s_1, \ldots, s_n)}.}
+\p{[Example Sheet 1](https://www.dpmms.cam.ac.uk/study/II/Galois/2023-2024/) Q12 #{\implies [L:k(s_1, \ldots, s_n)] \leq n!}, and #{[L:L^G] = \#G = n!} by Artin’s Theorem. The Tower Law #{\implies L^G = k(s_1, \ldots, s_n)}.}
+  }
 }

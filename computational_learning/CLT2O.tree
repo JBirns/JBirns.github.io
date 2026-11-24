@@ -1,0 +1,15 @@
+\title{Rademacher complexity}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{\mathcal{G}}, #{\mathcal{G}^*}, #{S} as above, we define the \em{empirical Rademacher complexity}}
+
+##{\widehat{\mathrm{RAD}}_S(\mathcal{G}) = \mathbb{E}_{\sigma = (\sigma_1, \ldots, \sigma_m)}\Big[ \sup_{h_g \in \mathcal{G}^*} \Big\lbrace  \frac{1}{m}\sum_{i=1}^m \sigma_i h_g(x_i, y_i) \Big\rbrace  \Big],}
+
+\p{where #{\sigma = (\sigma_1, \ldots, \sigma_m)} is a collection of i.i.d. #{\lbrace 1, -1\rbrace } Bernoulli random variables (“resiliency to noise”).}
+
+\p{The \em{Rademacher complexity} on samples of size #{m} is then set to be}
+
+##{\mathrm{RAD}_m(\mathcal{G}) = \mathbb{E}_S[\widehat{\mathrm{RAD}}_S(\mathcal{G})].}

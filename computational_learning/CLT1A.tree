@@ -1,0 +1,16 @@
+\title{Two points and rectangles}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}^2}, #{S = \lbrace (0, 2), (2, 0)\rbrace }, #{\mathcal{C} = \lbrace \text{rectangles}\rbrace }.}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.5]
+\draw[->] (-2,0) -- (3.5,0);
+\draw[->] (0,-1) -- (0,3);
+\fill (0,2) circle (3pt);
+\fill (2,0) circle (3pt);
+\end{tikzpicture}}
+
+\p{Then #{\Pi_{\mathcal{C}}(S) = \lbrace (0,0), (0,1), (1,0), (1,1)\rbrace }.}

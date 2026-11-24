@@ -1,0 +1,11 @@
+\title{A graph as a word}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\Gamma} be the graph with adjacency matrix}
+
+##{G = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix},}
+
+\p{written as the word #{0010\,0010\,1101\,0010}. If #{\Pi = \lbrace G : G \text{ is a graph which is a tree}\rbrace } then #{0010001011010010 \in \Pi}.}

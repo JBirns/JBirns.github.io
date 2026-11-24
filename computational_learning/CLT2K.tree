@@ -1,0 +1,7 @@
+\title{Convex minimisation}
+\taxon{Question}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a convex differentiable function #{F \colon K \to [a, b]}, can you efficiently find some #{w \in K} such that #{F(w) \leq \inf_K(F) + \varepsilon /3}?}

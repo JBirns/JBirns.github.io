@@ -1,0 +1,7 @@
+\title{Encoding discrete cube roots}
+\taxon{Question}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Can we shape/encode #{\mathcal{F}_n} as a concept class in our PAC framework?}

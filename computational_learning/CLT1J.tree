@@ -1,0 +1,15 @@
+\title{Error regions and #{\varepsilon}-nets}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class, #{c} a concept. Then the \em{error regions} of #{c} is the collection}
+
+##{\Delta(c) = \lbrace c \,\triangle\, c' : c' \in \mathcal{C}\rbrace .}
+
+\p{If you are given #{\varepsilon > 0} and some distribution #{\mathcal{D}} on #{X}, then the \em{#{\varepsilon}-error regions} are}
+
+##{\Delta_\varepsilon(c) = \lbrace c \,\triangle\, c' \mid c' \in \mathcal{C},\; \mathbb{P}_{\mathcal{D}}(c \,\triangle\, c') > \varepsilon\rbrace .}
+
+\p{Given #{S = \lbrace x_1, \ldots, x_m\rbrace } we say #{S} is an \em{#{\varepsilon}-net} if for all #{r \in \Delta_\varepsilon(c)}, #{r \cap S \neq \emptyset}.}

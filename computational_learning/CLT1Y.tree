@@ -1,0 +1,12 @@
+\title{PAC reduction}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be an instance space with representation class #{\mathcal{C} = \bigcup \mathcal{C}_n} and let #{X'} be an instance space with representation class #{\mathcal{C}' = \bigcup \mathcal{C}'_n}. Then we say #{\mathcal{C}} \em{PAC reduces} to #{\mathcal{C}'} if:}
+
+\ul{
+\li{\strong{(i)} there exist a function #{G \colon X \to X'} and a polynomial #{p} such that for all #{x \in X_n}, #{G(x) \in X'_{p(n)}}, and #{G} is computable in polynomial time;}
+\li{\strong{(ii)} there exists a polynomial #{q} such that for all #{c \in \mathcal{C}_n}, there exists #{c' \in \mathcal{C}'_{p(n)}} with #{\operatorname{size}(c') \leq q(\operatorname{size}(c))} and for all #{x \in X_n}, #{c(x) = 1 \iff c'(G(x)) = 1}.}
+}

@@ -1,0 +1,7 @@
+\title{The class #{\mathcal{RP}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say a problem is #{\mathcal{RP}} (\em{random polynomial}) if for all #{\delta > 0}, #{\varepsilon > 0} there exists a polynomial algorithm which with probability #{\geq 1 - \delta} incorrectly identifies a word of the problem at most #{\varepsilon} of the time.}

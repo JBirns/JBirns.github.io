@@ -10,8 +10,8 @@
 
 \p{#{\implies \operatorname{Gal}(f/\mathbb{Q})} contains an element #{\sigma} of cycle type #{(2, 3)} #{\implies \sigma^3} is a transposition.}
 
-\p{Example Sheet 4 Q5 #{\implies \bar f \in \mathbb{F}_5[X]} is irreducible #{\implies \operatorname{Gal}(f/\mathbb{Q})} contains a #{5}-cycle.}
+\p{[Example Sheet 4](https://www.dpmms.cam.ac.uk/study/II/Galois/2023-2024/) Q5 #{\implies \bar f \in \mathbb{F}_5[X]} is irreducible #{\implies \operatorname{Gal}(f/\mathbb{Q})} contains a #{5}-cycle.}
 
-\p{Example Sheet 3 Q7(i): #{p} a prime. If #{G \leq S_p} is a subgroup containing a #{p}-cycle and a transposition, then #{G = S_p}.}
+\p{[Example Sheet 3](https://www.dpmms.cam.ac.uk/study/II/Galois/2023-2024/) Q7(i): #{p} a prime. If #{G \leq S_p} is a subgroup containing a #{p}-cycle and a transposition, then #{G = S_p}.}
 
 \p{Therefore #{\operatorname{Gal}(f/\mathbb{Q}) = S_5} and #{f} is \em{not} soluble by radicals.}

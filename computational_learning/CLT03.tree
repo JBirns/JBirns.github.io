@@ -1,0 +1,7 @@
+\title{Problem}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{problem} is a subset #{\Pi \subseteq \Sigma^*}.}

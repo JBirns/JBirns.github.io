@@ -1,0 +1,7 @@
+\title{Rule}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{rule} is a logical clause of the form #{P \subset Q}: “#{P} implies #{Q}” or “if #{P}, then #{Q}”.}

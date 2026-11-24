@@ -1,0 +1,39 @@
+\title{EQMQ implies PAC+MQ}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be an instance space with #{\mathcal{C}} a concept class of finite VC dimension. Then if #{\mathcal{C}} is EQMQ it is efficiently PAC+MQ.}
+
+\proof{
+\p{Let #{L'} be an EQMQ learner for #{\mathcal{C}}, #{\mathcal{D}} a distribution, #{c \in \mathcal{C}} a target. We define a PAC+MQ algorithm #{L} as follows:}
+
+\ul{
+\li{\strong{1.} Run #{L'} until an EQ is needed.}
+\li{\strong{2.} Draw #{m} (TBD) samples from #{\mathrm{Ex}(\mathcal{D}, c)}.}
+\li{\strong{3.} Compare #{L'}’s current hypothesis to the sample set. If they disagree, return a sample they disagree on.}
+\li{\strong{4.} Continue until #{L'} finishes. The output hypothesis is the output.}
+}
+
+\p{To show #{L} is efficient, we need to show that #{m} can be selected to not be too bad, because #{L} is a consistent learner. This can be done because the VC dimension is finite.}
+
+\p{If we have #{m} randomly chosen samples, and a hypothesis #{h} which is consistent, but bad (#{E(h) > \varepsilon}):}
+
+##{\begin{aligned}
+\mathbb{P}(E(h) > \varepsilon) &\leq \mathbb{P}(\text{some bad } h \text{ is consistent}) \\
+&\leq \sum_{h \text{ bad}} \mathbb{P}(h \text{ is consistent}) \\
+&\leq |\mathcal{C}| \cdot (1 - \varepsilon)^m \\
+&< \delta.
+\end{aligned}}
+
+\p{So we need #{\log(|\mathcal{C}|) + m\log(1 - \varepsilon) < \log\delta}, i.e.}
+
+##{m > \frac{\log\delta - \log|\mathcal{C}|}{\log(1 - \varepsilon)} = \frac{\log(1/\delta) + \log(|\mathcal{C}|)}{\log\big(\frac{1}{1-\varepsilon}\big)}.}
+
+\p{Note #{\frac{1}{1-\varepsilon} = 1 + \frac{\varepsilon}{1-\varepsilon}}, so #{\log\big(\frac{1}{1-\varepsilon}\big) = \log\big(1 + \frac{\varepsilon}{1-\varepsilon}\big) \approx \frac{\varepsilon}{1-\varepsilon}}. Therefore}
+
+##{m > \frac{\log(1/\delta) + \log(|\mathcal{C}|)}{\varepsilon} \times (1 - \varepsilon) \approx \frac{1}{\varepsilon}\Big( \log\frac{1}{\delta} + \log(|\mathcal{C}|) \Big).}
+
+\p{This is Generalised Occam (\ref{CLT14}).}
+}

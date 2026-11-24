@@ -1,0 +1,89 @@
+\title{VC dimension bounds the sample size}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class and let #{L} be any algorithm such that, given #{m} labelled samples, it produces a hypothesis #{h} consistent with #{S}. Then the algorithm that takes #{m} samples from an oracle and feeds them into #{L} to produce a hypothesis is PAC provided}
+
+##{m \geq c_0\Big( \frac{1}{\varepsilon}\log\frac{1}{\delta} + \frac{\mathrm{VC}(\mathcal{C})}{\varepsilon}\log\frac{1}{\varepsilon} \Big)}
+
+\p{where #{c_0} is some constant.}
+
+\proof{
+\p{Our goal is to show any sufficiently large group of labelled samples forms an #{\varepsilon}-net with high probability.}
+
+\p{Let #{S_1} be a random collection of #{m} labelled samples and let #{A} be the event “#{S_1} is not an #{\varepsilon}-net”. If #{A} is true, there exists #{r \in \Delta_\varepsilon(c)} such that #{r \cap S_1 = \emptyset}.}
+
+\p{Now let #{S_2} be another collection; then the random variable “number of times #{S_2} hits #{r}” is binomial with mean}
+
+##{\mathbb{E}(\#\text{hits}) = m \cdot \mathbb{P}(\text{a sample hits } r) \geq m \cdot \varepsilon.}
+
+\p{Now assume #{m \geq 8/\varepsilon}. Then}
+
+##{\begin{aligned}
+\mathbb{P}\Big(S_2 \text{ hits } r \leq \frac{m\varepsilon}{2} \text{ times}\Big) &\leq \mathbb{P}\Big(S_2 \text{ hits } r \leq \frac{\mathbb{E}(\#\text{hits})}{2}\Big) \\
+&\leq \exp\big(-\mathbb{E}[\#\text{hits}]/8\big) \quad \text{by Chernoff bounds} \\
+&\leq e^{-m\varepsilon /8} \\
+&\leq e^{-1} \\
+&< \tfrac{1}{2}.
+\end{aligned}}
+
+\p{In particular, #{\mathbb{P}(S_2 \text{ hits } r \geq \frac{m\varepsilon}{2} \text{ times}) \geq \frac{1}{2}}.}
+
+\p{Let #{B} be the event “some collection #{S} of #{2m} samples can be partitioned into #{2} sets of equal size #{S_1 \cup S_2 = S} such that some vector #{a \in \Pi_{\Delta_\varepsilon(c)}(S)} is zero on all members of #{S_1}, while at least #{m\varepsilon /2} coordinates of #{a} are equal to #{1}.”}
+
+\p{Our above computation shows that #{\mathbb{P}(B \mid A)}, the probability of #{B} given that the first #{m} samples do not form an #{\varepsilon}-net, is at least the probability that some region missed by the first #{m} samples is hit #{\geq m\varepsilon /2} times by the second set, so}
+
+##{\mathbb{P}(B \mid A) \geq \tfrac{1}{2}.}
+
+\p{Therefore}
+
+##{\mathbb{P}(B) \geq \mathbb{P}(B \mid A) \cdot \mathbb{P}(A) \geq \tfrac{1}{2} \cdot \mathbb{P}(A).}
+
+\p{Thus to make #{\mathbb{P}(A)} small it is enough to make #{\mathbb{P}(B)} small. (Discussing #{\mathbb{P}(A)} is hard as you have uncountably many regions to consider. But #{\mathbb{P}(B)} reduces to finite combinatorics!)}
+
+\p{Let’s say you’ve taken #{2m} samples #{S} and let #{a \in \Pi_{\Delta_\varepsilon(c)}(S)} be any vector with at least #{\frac{m\varepsilon}{2}} #{1}’s. What is the probability a randomly selected partition #{S_1 \sqcup S_2} has the property that all members of #{S_1} have coordinate #{0} in #{a}? This will be}
+
+##{\leq \binom{m}{\varepsilon m/2} \Big / \binom{2m}{\varepsilon m/2}.}
+
+\p{But}
+
+##{\binom{m}{i} \Big / \binom{2m}{i} = \frac{\prod_{j=0}^{i-1}(m-j)}{\prod_{j=0}^{i-1}(2m-j)} \leq \Big(\frac{1}{2}\Big)^i.}
+
+\p{Therefore (calling a vector #{a} \em{legal} if it satisfies the conditions for #{B})}
+
+##{\begin{aligned}
+\mathbb{P}(B \mid \text{our samples are } S) &\leq \sum_{a \in \Pi_{\Delta_\varepsilon(c)}(S)} \mathbb{P}(a \text{ is legal}) \\
+&\leq \sum_a 2^{-\varepsilon m/2} \\
+&= |\Pi_{\Delta_\varepsilon(c)}(S)| \cdot 2^{-\varepsilon m/2} \\
+&\leq |\Pi_{\mathcal{C}}(S)| \cdot 2^{-m\varepsilon /2} \\
+&\leq \Phi_d(2m) \cdot 2^{-m\varepsilon /2} \quad (\dagger) \\
+&\leq (\text{polynomial of degree } d \text{ in } 2m) \cdot 2^{-\varepsilon m/2} \\
+&\leq k \cdot (2m)^d \cdot 2^{-\varepsilon m/2}, \quad \text{some } k,
+\end{aligned}}
+
+\p{where (#{\dagger}) is \ref{CLT1I} with #{d = \mathrm{VC}(\mathcal{C})}.
+Therefore}
+
+##{\begin{aligned}
+\mathbb{P}(B) &= \sum_S \mathbb{P}(B \mid S \text{ is your sample})\,\mathbb{P}(S \text{ is your sample}) \\
+&\leq \sum_S \mathbb{P}(S) \cdot k(2m)^d 2^{-\varepsilon m/2} \\
+&= k(2m)^d 2^{-\varepsilon m/2}.
+\end{aligned}}
+
+\p{In particular,}
+
+##{\begin{aligned}
+\mathbb{P}(\text{a collection of } m \text{ samples is not an } \varepsilon\text{-net}) &= \mathbb{P}(A) \\
+&\leq 2\,\mathbb{P}(B) \\
+&\leq 2k(2m)^d \cdot 2^{-\varepsilon m/2} \\
+&\leq \delta. \qquad (*)
+\end{aligned}}
+
+\p{Solve (#{*}) for #{m} to obtain}
+
+##{m \geq c_0\Big( \frac{1}{\varepsilon}\log\frac{1}{\delta} + \frac{d}{\varepsilon}\log\frac{1}{\varepsilon} \Big)}
+
+\p{for some #{c_0}.}
+}

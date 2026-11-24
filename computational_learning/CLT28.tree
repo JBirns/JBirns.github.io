@@ -1,0 +1,24 @@
+\title{PAC+MQ strictly stronger than PAC}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X_n = \lbrace 0, 1\rbrace ^n}, #{\mathcal{C}_n = \lbrace \text{monotone DNF in } n \text{ variables}\rbrace }. Then #{\mathcal{C}_n} is \em{not} efficiently PAC.}
+
+\p{\strong{Claim.} #{\mathcal{C}_n} is efficiently PAC+MQ.}
+
+\p{\em{Proof of claim.} We produce an algorithm as follows:}
+
+\ul{
+\li{\p{\strong{1.} Set #{h = \emptyset} and draw}
+##{m \approx \frac{1}{\varepsilon}\Big( \log\frac{1}{\delta} + n \cdot \operatorname{size}(c)\log(2) \Big)}
+\p{many samples.}}
+\li{\strong{2.} Compare #{h} with our samples to determine if it is consistent. If so, return #{h}. If not, let #{a = (a_1, \ldots, a_n)} be the first sample where #{h(a) \neq c(a)}.}
+\li{\strong{3.} Set #{a' = a}, and let #{I} be the set of indices such that #{a_i = 1}. We loop through #{I}. For all #{j \in I}, set #{a'_j = 0} and do an MQ to see if #{c(a') = 1}. If #{c(a') = 1}, then #{a'_j} remains #{0} and we continue looping through #{I}. Otherwise if #{c(a') = 0}, then reset #{a'_j = 1} and continue through #{I}.}
+\li{\strong{4.} Set #{h = h \vee \big( \bigwedge_{i \text{ is an index where } a'_i = 1} x_i \big)}, and return to (2).}
+}
+
+\p{In the worst case the running time is}
+
+##{\underbrace{m}_{\text{call}} \cdot \underbrace{m}_{\text{read all}} \cdot \underbrace{n}_{\text{counterexample}} \cdot \underbrace{\operatorname{size}(c)}_{\text{gain a term in } h}.}

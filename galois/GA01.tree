@@ -51,7 +51,7 @@
 
 \transclude{GA0J}
 
-\p{Let #{L/K} be a field extension and #{\alpha \in L}. Then there is a unique ring homomorphism #{\phi \colon K[X] \to L} such that #{\phi(c) = c} for all #{c \in K} and #{\phi(X) = \alpha}. Indeed #{\phi\big(\sum c_i X^i\big) = \sum c_i \alpha^i}, #{c_i \in K} (i.e. #{\phi} is ``evaluation at #{\alpha}’’).}
+\p{Let #{L/K} be a field extension and #{\alpha \in L}. Then there is a unique ring homomorphism #{\phi \colon K[X] \to L} such that #{\phi(c) = c} for all #{c \in K} and #{\phi(X) = \alpha}. Indeed #{\phi\big(\sum c_i X^i\big) = \sum c_i \alpha^i}, #{c_i \in K} (i.e. #{\phi} is “evaluation at #{\alpha}”).}
 
 \p{#{K[X]} is a PID #{\implies \ker\phi = (f)} for some #{f \in K[X]}.}
 

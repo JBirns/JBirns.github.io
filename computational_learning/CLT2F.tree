@@ -1,0 +1,9 @@
+\title{Error in the realisable setting}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a target #{f^* \in \mathcal{F}}, and a realisable distribution #{\mu} on #{X_n \times \mathbb{R}} with induced distribution #{\mathcal{D}} on #{X_n}, the \em{error} on a hypothesis #{h \in \mathcal{F}} is given by}
+
+##{E(h) = \mathbb{E}_{\mathcal{D}}[\ell(h(x), f^*(x))] = \mathbb{E}_{\mathcal{D}}[(h(x) - f^*(x))^2].}

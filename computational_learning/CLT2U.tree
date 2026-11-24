@@ -1,0 +1,49 @@
+\title{Reasoning}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{CLT2V}
+
+\transclude{CLT2W}
+
+\p{\strong{Guiding philosophy.} A machine that can reliably solve maths problems of varying difficulty and from various forms of maths can be considered a “reasoning machine”.}
+
+\transclude{CLT2X}
+
+\p{If you are given a collection of rules #{\lbrace P_i \subset Q_i\rbrace } along with a collection of known facts #{\lbrace R_j\rbrace }, then there are two related, yet fundamentally different, ways for you to reason.}
+
+\p{Firstly, say #{X} is some statement that you would like to know whether or not it is true, at least based on your core knowledge. One way to do this is to find #{X} among all consequents (RHS) of your rule set and then look at all associated antecedents (LHS):}
+
+##{X \subset P_n \subset P_{n-1} \subset \cdots}
+
+\p{After recursion you can determine either #{X} is true \em{or} your knowledge is insufficient either way. This form of reasoning is known as \em{backchaining}, a.k.a. \em{goal driven reasoning}.}
+
+\p{On the other hand, if instead one starts by asking “what is true?”, one would look at all antecedents and try to match with the knowledge base #{\lbrace R_j\rbrace }; each time a match is found, add the consequent to the knowledge base. This form of reasoning is called \em{forward-chaining} or \em{data driven reasoning}.}
+
+\p{We will primarily consider building machines that forward chain.}
+
+\transclude{CLT2Y}
+
+\p{We generally express members of the WM as tuples of the form}
+
+##{(\text{type}, \text{attribute}_1 : \text{value}_1, \text{attribute}_2 : \text{value}_2, \ldots, a_n : v_n).}
+
+\transclude{CLT2Z}
+
+\p{Production rule antecedents might look like}
+
+##{A = (\text{type}, \text{attribute}_1 : \text{specification}_1, \ldots, \text{attribute}_n : \text{specification}_n)}
+
+\p{where each specification is one of the following:}
+
+\ul{
+\li{\strong{1.} an atom (e.g. number, name, string, …);}
+\li{\strong{2.} a variable;}
+\li{\strong{3.} an expression, denoted with #{[\; \; ]};}
+\li{\strong{4.} a test, denoted with #{\lbrace \; \; \rbrace }.}
+}
+
+\transclude{CLT30}
+
+\p{(The rest of this lecture is in the scanned notes.)}

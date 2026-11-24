@@ -1,0 +1,21 @@
+\title{Reduction in PAC}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Our idea of reduction should:}
+
+\ul{
+\li{\strong{1.} preserve complexity, in that if #{A} reduces to #{B}, and #{B} is efficiently PAC, then so is #{A};}
+\li{\strong{2.} allow one to reuse algorithms, in that if #{L} is PAC for #{B} then #{L} can be modified in some standard way to be PAC for #{A}.}
+}
+
+\p{In what follows #{X_n = \lbrace 0, 1\rbrace ^n} or #{\mathbb{R}^n}. We also write #{\mathcal{C}_n} for a concept class for #{X_n} and #{\mathcal{C} = \bigcup \mathcal{C}_n} the concept class for #{X = \bigcup X_n}.}
+
+\transclude{CLT1Y}
+
+\transclude{CLT1Z}
+
+\transclude{CLT20}
+
+\transclude{CLT21}

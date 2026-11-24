@@ -1,0 +1,31 @@
+\title{Discrete cube roots are not efficiently PAC}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X_n = \lbrace 0, 1\rbrace ^n} and #{\mathcal{C}_n} be the collection of all possible functions #{f_{N,i}^{-1}}, where we view the domain as #{\lbrace 0, 1\rbrace ^n} by replacing the input by its bit string. Then for any choice of hypothesis class #{\mathcal{H}_n \supseteq \mathcal{C}_n} (that can be evaluated in polynomial time), #{\mathcal{C}_n} is not efficiently PAC using #{\mathcal{H}_n}.}
+
+\proof{
+\p{Assume we have an efficient algorithm #{L}. Consider the following:}
+
+\ul{
+\li{\strong{1.} Input #{N}, #{f_N(x)}.}
+\li{\strong{2.} Generate some number (TBD) of samples of the form #{(y, f_N(y))} by selecting #{y} at random.}
+\li{\strong{3.} Using these samples, call #{L} #{n} times, each time to learn #{f_{N,i}^{-1}}. Assume we have enough samples so the error of each hypothesis is #{\leq 1/n^2}.}
+\li{\strong{4.} Given the resulting hypotheses #{h_1, \ldots, h_n} define #{h(x) = (h_1(x), \ldots, h_n(x))}.}
+\li{\strong{5.} Output the integer with bit string #{h(x)}.}
+}
+
+\p{This algorithm is #{\operatorname{poly}(\log N) = \operatorname{poly}(n)}. Moreover,}
+
+##{\begin{aligned}
+E(h) &= \mathbb{P}(h(f_N(x)) \neq x) \\
+&= \mathbb{P}(h_i(f_N(x)) \neq x_i \text{ for some } i) \\
+&\leq n\,\mathbb{P}(h_1(f_N(x)) \neq x_1) \\
+&\leq n \cdot \frac{1}{n^2} \\
+&\leq \frac{1}{n}.
+\end{aligned}}
+
+\p{In particular, #{\mathbb{P}(h \text{ is correct}) \geq 1 - \frac{1}{n}}, contradicting the DCRA.}
+}

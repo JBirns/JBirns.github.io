@@ -1,0 +1,56 @@
+\title{Polynomial bound on #{\Pi_{\mathcal{C}}(m)}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class with #{\mathrm{VC}(\mathcal{C}) = d}. Then for all #{m \geq d},}
+
+##{\Pi_{\mathcal{C}}(m) \leq \sum_{i=0}^d \binom{m}{i}.}
+
+\p{In particular #{\Pi_{\mathcal{C}}(m) \leq} a polynomial in #{m} of degree #{d}.}
+
+\proof{
+\p{We proceed in #{2} steps.}
+
+\p{(1) Define #{\Phi_d(m)} to be the unique function satisfying the recursion}
+
+##{\Phi_d(m) = \Phi_d(m-1) + \Phi_{d-1}(m-1)}
+
+\p{as well as the initial conditions #{\Phi_0(m) = \Phi_d(0) = 1} for all #{d, m}.}
+
+\p{We prove that #{\Pi_{\mathcal{C}}(m) \leq \Phi_d(m)} for all concept classes #{\mathcal{C}} with #{\mathrm{VC}(\mathcal{C}) = d}. We proceed by induction on both #{m} and #{d}.}
+
+\p{\em{Base cases:} If #{d = 0} then #{\Phi_0(m) = 1}, and #{\mathrm{VC}(\mathcal{C}) = 0 \implies \mathcal{C} = \lbrace X\rbrace } or #{\lbrace \emptyset\rbrace  \implies \Pi_{\mathcal{C}}(m) = 1}. If #{m = 0}, then #{\Phi_d(0) = 1}, whereas #{\Pi_{\mathcal{C}}(0) = 1}.}
+
+\p{Now assume #{\Pi_{\mathcal{C}}(m) \leq \Phi_d(m)} for all #{\mathcal{C}} such that #{\mathrm{VC}(\mathcal{C}) = d}, for some fixed #{d, m \geq 0}. We need to show #{\Pi_{\mathcal{C}'}(m+1) \leq \Phi_{d+1}(m+1)} for all #{\mathcal{C}'} such that #{\mathrm{VC}(\mathcal{C}') = d + 1}.}
+
+\p{Let #{S} be a collection of #{m + 1} samples. If #{x \in S} then #{S - x} is a collection of #{m} samples. Moreover, the vectors of #{\Pi_{\mathcal{C}'}(S)} all take one of two forms:}
+
+\ul{
+\li{\strong{(i)} vectors for which there is only one choice for #{c(x)} given the other values in the vector;}
+\li{\strong{(ii)} vectors for which #{c(x)} can be #{0} or #{1} given the other values in the vector.}
+}
+
+\p{Define}
+
+##{\widetilde{\mathcal{C}} = \lbrace c \in \mathcal{C}' : \text{the classification of } c(S) \text{ falls into the second category, and } c(x) = 0\rbrace .}
+
+\p{Then}
+
+##{|\Pi_{\mathcal{C}'}(S)| = |\Pi_{\mathcal{C}'}(S - x)| + |\Pi_{\widetilde{\mathcal{C}}}(S - x)|.}
+
+\p{Key point: #{\mathrm{VC}(\widetilde{\mathcal{C}}) = d}. Therefore}
+
+##{\begin{aligned}
+|\Pi_{\mathcal{C}'}(S)| &\leq \Pi_{\mathcal{C}'}(m) + \Pi_{\widetilde{\mathcal{C}}}(m) \\
+&\leq \Phi_{d+1}(m) + \Phi_d(m) \quad \text{by the induction hypothesis}
+\end{aligned}}
+
+##{\begin{aligned}
+\implies \Pi_{\mathcal{C}'}(m+1) &\leq \Phi_{d+1}(m) + \Phi_d(m) \\
+&= \Phi_{d+1}(m+1).
+\end{aligned}}
+
+\p{(2) #{\Phi_d(m) = \sum_{i=0}^d \binom{m}{i}}, which can be checked by verifying it satisfies the base cases and the recursion.}
+}

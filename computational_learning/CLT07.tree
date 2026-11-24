@@ -1,0 +1,7 @@
+\title{Accepts}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say #{\mathcal{A}} \em{accepts} a word #{w} if it terminates in finitely many steps.}

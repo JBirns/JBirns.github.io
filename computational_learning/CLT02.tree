@@ -1,0 +1,9 @@
+\title{Alphabet, word}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An \em{alphabet} is a finite set #{\Sigma}. A \em{word} on #{\Sigma} is a (finite) ordered sequence of elements of #{\Sigma}.}
+
+\p{We write #{\Sigma^*} for the set of all words on #{\Sigma}.}

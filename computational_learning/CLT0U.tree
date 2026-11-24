@@ -1,0 +1,28 @@
+\title{3-term DNF is not efficiently PAC}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assuming #{\mathcal{RP} \neq \mathcal{NP}}, #{\mathcal{C}_n} is not efficiently PAC.}
+
+\proof{
+\p{We define our #{\Pi} and #{\phi} (where #{\phi \colon \alpha \mapsto S_\alpha}). Let}
+
+##{\Pi = \lbrace 3\text{-colourable graphs}\rbrace ,}
+
+\p{which is known to be #{\mathcal{NP}}-complete.}
+
+\p{Now we construct #{\phi}. Given a graph #{G} with vertex set #{[n]}, we construct a collection of labelled samples as follows:}
+
+\ul{
+\li{\strong{1.} For all #{i} include the pair #{\big((1, 1, \ldots, 1, \underset{i\text{th}}{0}, 1, \ldots, 1), 1\big)}.}
+\li{\strong{2.} For each edge #{\lbrace i, j\rbrace } include #{\big((1, \ldots, 1, \underset{i\text{th}}{0}, 1, \ldots, 1, \underset{j\text{th}}{0}, 1, \ldots, 1), 0\big)}.}
+}
+
+\p{Let #{G} be a graph and assume #{\phi(G)} is consistent with some #{3}-term disjunction. Say #{\phi(G)} is consistent with #{T_R \vee T_B \vee T_Y = D}. We colour the vertices of #{G} with Red, Blue, Yellow as follows:}
+
+\p{For all vertices #{i}, the sample #{((1\ldots101\ldots1), 1)} is consistent with #{D}, and so at least one of #{T_R, T_B, T_Y} is true when it is applied. So choose the colour of the vertex as whichever of #{T_R}, #{T_B} or #{T_Y} is true, with tiebreaker #{R < B < Y}. In addition, the samples from the edges being consistent (and outputting #{0}) means two adjacent vertices are not coloured the same, as they cannot trigger the same #{T_\bullet}.}
+
+\p{Conversely, if #{\chi(G) \leq 3}, let #{V_R} be the vertices coloured red, and #{V_B, V_Y} similarly. Then #{\phi(G)} is consistent with #{T_R \vee T_B \vee T_Y} where #{T_R} is the conjunction of variables whose index is \em{not} in #{V_R} (#{B}, #{Y} similarly).}
+}

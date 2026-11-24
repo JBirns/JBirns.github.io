@@ -1,0 +1,9 @@
+\title{Composition Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{G}} be a collection of functions, #{S} a collection of samples drawn from #{X_n \times \mathbb{R}} via #{\mu}. Then}
+
+##{\widehat{\mathrm{RAD}}_S(\mathcal{G}) \leq 2\,\mathbb{E}_{\sigma = (\sigma_1, \ldots, \sigma_m)}\Big[ \sup_{g \in \mathcal{G}} \Big\lbrace  \frac{1}{m}\sum_{i=1}^m \sigma_i g(x_i) \Big\rbrace  \Big].}

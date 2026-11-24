@@ -1,0 +1,7 @@
+\title{Shattering}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{S \subseteq X} is such that #{\Pi_{\mathcal{C}}(S) = \lbrace 0, 1\rbrace ^m} then we say #{\mathcal{C}} \em{shatters} #{S}.}

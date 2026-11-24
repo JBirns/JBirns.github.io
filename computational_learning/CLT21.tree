@@ -1,0 +1,26 @@
+\title{Half-spaces reduce to intersections of half-spaces}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X_n = X'_n = \mathbb{R}^n}, #{\mathcal{C}_n = \lbrace \text{linear half-spaces}\rbrace }. Any linear half-space is defined by a unit vector #{u} according to the formula #{c_u = \lbrace x : x \cdot u \geq 0\rbrace }.}
+
+\p{#{\mathcal{C}'_n = \lbrace \text{intersections of two half-spaces}\rbrace }. #{c'} is determined by two unit vectors #{u, v}, where #{c'_{u,v} = \lbrace x : x \cdot u \geq 0,\; x \cdot v \geq 0\rbrace }.}
+
+\p{\strong{Claim.} #{\mathcal{C}} reduces to #{\mathcal{C}'}.}
+
+\p{\em{Proof of claim.} Set #{G(x) = (x, 1)}. Given #{c = c_u}, set #{c' = c'_{(u, 0), (0, \ldots, 0, 1)}}. Note}
+
+##{\begin{aligned}
+c_u(x) = 1 &\iff x \cdot u \geq 0, \\
+c'(y) = 1 &\iff (u, 0) \cdot y \geq 0 \text{ and } (\vec{0}, 1) \cdot y \geq 0.
+\end{aligned}}
+
+\p{Then}
+
+##{\begin{aligned}
+c'(G(x)) = c'(x, 1) = 1 &\iff (u, 0) \cdot (x, 1) \geq 0 \text{ and } (\vec{0}, 1) \cdot (x, 1) \geq 0 \\
+&\iff u \cdot x \geq 0 \\
+&\iff c(x) = 1.
+\end{aligned}}

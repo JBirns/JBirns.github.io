@@ -1,0 +1,25 @@
+\title{Computational Learning Theory}
+\taxon{Lecture notes}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+\import{names}
+
+\p{These notes are based on lectures given by Dr [[EGR0]] for MA-663 at [[\stevensinstitute]].}
+
+\p{We discuss the mathematical theory of learning. Our goal is to define and build models of learning, and prove statements about optimal efficiency.}
+
+\p{We will describe the intuitive notions of “problem” and “algorithm” in a formal way. This is largely to illustrate that we can. In practice, intuition is more important than formality.}
+
+\ol{
+    \li{[[CLT01]]}
+    \li{[[CLT0I]]}
+    \li{[[CLT0X]]}
+    \li{[[CLT18]]}
+    \li{[[CLT1O]]}
+    \li{[[CLT1X]]}
+    \li{[[CLT22]]}
+    \li{[[CLT2C]]}
+    \li{[[CLT2U]]}
+    \li{[[CLT31]]}
+}

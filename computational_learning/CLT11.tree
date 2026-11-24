@@ -1,0 +1,9 @@
+\title{Representing lattice rectangles}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X_2 = \mathbb{R}^2}, #{\mathcal{C}_2 = } axis-aligned lattice rectangles (i.e. vertices in #{\mathbb{Z}^2}), with}
+
+##{\mathcal{R} \colon \lbrace 0, 1, \_, -\rbrace ^* \to \mathcal{C}_2.}

@@ -1,0 +1,16 @@
+\title{PAC learnable}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C}} be a concept class over an instance space #{X}. We say #{\mathcal{C}} is \em{PAC learnable} if there exists an algorithm #{\mathcal{A}} with the following property:}
+
+\ul{
+\li{\p{For every target concept #{c \in \mathcal{C}} and every choice of distribution on #{X} and every #{\varepsilon > 0}, #{\delta > 0}, #{\mathcal{A}} produces a concept #{h \in \mathcal{C}} such that}
+##{\mathbb{P}(E(h) < \varepsilon) \geq 1 - \delta.}}
+}
+
+\p{(With probability #{\geq 1 - \delta}, the error of hypothesis #{h} is no more than #{\varepsilon}.)}
+
+\p{Moreover, we say a concept class is \em{efficiently PAC} if #{\mathcal{A}} can be made to run in time polynomial in #{\delta^{-1}} and #{\varepsilon^{-1}}.}

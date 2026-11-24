@@ -1,0 +1,7 @@
+\title{Cost of queries}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We assume MQs take #{O(1)} time, and EQs take #{|X|} time if #{X} is finite and #{O(1)} if #{|X| = \infty}.}

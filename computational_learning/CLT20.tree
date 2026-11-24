@@ -1,0 +1,15 @@
+\title{DNF reduces to monotone DNF}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X = X' = \lbrace 0, 1\rbrace ^n} and #{\mathcal{C} = \bigcup \mathcal{C}_n} for the class of \em{disjunctive normal form}. That is to say expressions of the form #{c = T_1 \vee T_2 \vee \cdots \vee T_k} where #{T_i = } conjunctions of #{n} literals.}
+
+\p{We also write #{\mathcal{C}'_n} for the class of \em{monotone disjunctive normal form}, that is DNF formulas for which all literals appear in the positive only.}
+
+\p{\strong{Claim.} #{\mathcal{C}} reduces to #{\mathcal{C}'} (and #{\mathcal{C}'} to #{\mathcal{C}} trivially).}
+
+\p{\em{Proof of claim.} Define #{G \colon X \to X'} by sending any #{(a_1, \ldots, a_n)} to the tuple #{(a_1, \ldots, a_n, b_1, \ldots, b_n)} where #{b_i = 1 - a_i}.}
+
+\p{Note #{G \colon X_n \to X'_{2n}} and #{G} is polynomial. Say the variables of #{X_n} are #{x_1, \ldots, x_n} and of #{X'_{2n}} are #{x_1, \ldots, x_n, y_1, \ldots, y_n}. Then any concept #{c = T_1 \vee T_2 \vee \cdots \vee T_k \in \mathcal{C}_n} can be paired with a monotone #{c' \in \mathcal{C}'_{2n}} by replacing every instance of #{\overline{x}_i} in #{c} with #{y_i}. #{\square}}

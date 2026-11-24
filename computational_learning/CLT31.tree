@@ -1,0 +1,47 @@
+\title{Learning Classifier Systems}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Our final lecture will involve incorporating learning into production systems. Such architectures are often called \em{learning production systems} or \em{learning classifier systems} (LCS). We will illustrate this architecture through a running example.}
+
+\transclude{CLT32}
+
+\transclude{CLT33}
+
+\p{Say you are given a multiplexer on #{n} bits but are not told the rule base. To what extent can we learn what the rules are?}
+
+\p{An LCS is a production system which}
+
+\ul{
+\li{\strong{1.} learns its rule base from data;}
+\li{\strong{2.} can well approximate any given production system.}
+}
+
+\p{The LCS has #{4} fundamental parts.}
+
+\p{\strong{I: Environment.} The environment of an LCS is a collection of pairs of WM states along with the resulting WM after an application of the production system.}
+
+\p{In the running example of a multiplexer, your environment might look like}
+
+##{(110110, 0) \quad \text{or} \quad (101101, 1).}
+
+\p{The environment is a kind of database where all training happens.}
+
+\p{\strong{II: Rule/classifier base.} By virtue of being a production system, the LCS has rules. By the dynamic nature of a learning production system, these rules usually come with various real number parameters indicating things like confidence, relevance, etc.:}
+
+##{\text{Rules} + \text{Parameters} = \text{Classifiers}.}
+
+\p{\strong{III: Discovery component.} The discovery mechanism of any LCS is how the system introduces new potential rules. This is almost always done using \em{genetic algorithms}.}
+
+\p{Such algorithms proceed in #{3} steps:}
+
+\ul{
+\li{\strong{(i)} A representation is chosen which stores the general shape of possible rules.}
+\li{\strong{(ii)} A process is performed by which rules are given the right to “reproduce” based on a chosen fitness measure. The least fit rules are also removed from the “gene pool”.}
+\li{\strong{(iii)} Given two sufficiently fit rules, they reproduce to create a new rule which shares features from its parents along with random mutations to distinguish it from its parents.}
+}
+
+\transclude{CLT34}
+
+\p{\strong{IV: Learning component.} This learning is applied to our classifiers, determined during discovery, by tinkering with the attached parameters so as to better fit the data given in the environment.}

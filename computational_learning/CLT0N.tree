@@ -1,0 +1,9 @@
+\title{Error}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a distribution #{\mathcal{D}} on #{X}, a target concept #{c \in \mathcal{C}} and another concept #{h \in \mathcal{C}}, we define the \em{error}}
+
+##{E(h) = \mathbb{P}_{\mathcal{D}}(c(x) \neq h(x)).}

@@ -1,0 +1,61 @@
+\title{Problems and Algorithms}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{CLT02}
+
+\transclude{CLT03}
+
+\p{The way to think about a problem #{\Pi} is the question “does #{w} belong to #{\Pi}?”. E.g. let #{\Sigma = \lbrace 0, 1\rbrace }. The natural language problem of “does this string have a #{1}?” is equivalently thought of as the problem #{\Pi = \Sigma^* \setminus \lbrace 0, 00, 000, \ldots\rbrace }.}
+
+\transclude{CLT04}
+
+\transclude{CLT05}
+
+\p{Given an algorithm #{\mathcal{A}} and a word #{w}, we define the \em{successor} of #{w} according to #{\mathcal{A}} as follows:}
+
+\ul{
+\li{\strong{(i)} Among all of the #{u_1, \ldots, u_n} find the one with the \em{smallest} index which appears as a subword of #{w}.}
+\li{\strong{(ii)} Say #{u_i} is the result of the previous step. Find the first occurrence of #{u_i} in #{w}: #{w = t u_i v} for some words #{t, v}.}
+\li{\strong{(iii)} The successor of #{w} is the word #{t u_i' v}.}
+}
+
+\transclude{CLT06}
+
+\transclude{CLT07}
+
+\transclude{CLT08}
+
+\transclude{CLT09}
+
+\transclude{CLT0A}
+
+\transclude{CLT0B}
+
+\transclude{CLT0C}
+
+\p{\strong{Fact.} It is known that not every solvable problem is in #{\mathcal{P}}.}
+
+\p{Hierarchy:}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}
+\draw (0,0) ellipse (0.5 and 0.4) node {$\mathcal{P}$};
+\draw (0,0.4) ellipse (1.5 and 1.1);
+\node at (0,1.1) {\small $\mathcal{NP}$-complete};
+\draw (0,0.7) ellipse (2.4 and 1.7);
+\node at (0,1.95) {$\mathcal{NP}$};
+\draw (0,0.85) ellipse (3.2 and 2.2);
+\draw (0,1.0) ellipse (4.0 and 2.7);
+\node at (3.3,-0.9) {$\mathrm{Exp}$};
+\end{tikzpicture}}
+
+\transclude{CLT0D}
+
+\transclude{CLT0E}
+
+\transclude{CLT0F}
+
+\transclude{CLT0G}
+
+\transclude{CLT0H}

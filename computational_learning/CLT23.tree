@@ -1,0 +1,7 @@
+\title{Membership and equivalence queries}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given an instance space #{X} and a concept #{c \subseteq X}, a \em{membership query} is a process by which a learner can ask “is #{x} in #{c}?” for any #{x \in X}. An \em{equivalence query} is a process by which a learner provides some concept #{h} and receives back either “#{h = c}” or “#{h \neq c} and #{x} is such that #{h(x) \neq c(x)}”.}

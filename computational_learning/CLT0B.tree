@@ -1,0 +1,14 @@
+\title{Not every problem is solvable}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An algorithm can be thought of as a \em{finite} set of words.}
+
+##{\begin{aligned}
+\lbrace \text{Algorithms}\rbrace  &= \lbrace \text{finite subsets of } \Sigma^*\rbrace , \\
+\lbrace \text{Problems}\rbrace  &= \lbrace \text{all subsets of } \Sigma^*\rbrace ,
+\end{aligned}}
+
+\p{so #{\#\text{Algorithms} \ll \#\text{Problems}}. Thus not every problem is solvable.}

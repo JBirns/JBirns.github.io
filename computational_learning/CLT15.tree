@@ -1,0 +1,13 @@
+\title{Comparing the Occam theorems}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Differences with \ref{CLT13}:}
+
+\ul{
+\li{\strong{(i)} No #{\alpha, \beta} assumptions.}
+\li{\strong{(ii)} Need #{|\mathcal{H}_{n,m}|} finite instead (with this the proof is now identical).}
+\li{\strong{(iii)} We do not get efficiently PAC, as we have dropped the polynomial bound on the number of samples.}
+}

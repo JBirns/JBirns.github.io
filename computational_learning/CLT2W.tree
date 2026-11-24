@@ -1,0 +1,7 @@
+\title{A chain of reasoning}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{“Sky is blue”, “outdoors is visible from my window” #{\implies} “there is something visible from my window that is blue”.}

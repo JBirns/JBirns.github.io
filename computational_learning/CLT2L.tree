@@ -1,0 +1,15 @@
+\title{Average Iterate Gradient Descent}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{\em{Input:} A convex differentiable #{F \colon K \to [a, b]}, #{\eta \in \mathbb{R}}, #{T \in \mathbb{N}}.}
+
+\p{\em{Output:} A point #{w \in K} near the (unique) #{w_{\min} \in K} that minimises #{F}.}
+
+\ul{
+\li{\strong{1.} Choose some starting point #{w_1 \in K}.}
+\li{\strong{2.} Having already computed #{w_1, \ldots, w_i}, define #{w'_{i+1} = w_i - \eta\nabla F(w_i)}, and compute #{w_{i+1} = } point in #{K} closest to #{w'_{i+1}}.}
+\li{\strong{3.} Output #{w_{\mathrm{fin}} = \frac{1}{T}\sum_{i=1}^T w_i}.}
+}

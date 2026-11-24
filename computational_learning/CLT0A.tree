@@ -1,0 +1,24 @@
+\title{An algorithm detecting a 1}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\Sigma = \lbrace 0, 1\rbrace }, #{\Pi = \lbrace \text{all strings with a } 1\rbrace  = \lbrace \text{“does my string have a 1?”}\rbrace }.}
+
+##{\mathcal{A} = \lbrace (01, 1), (10, 1), (0, 00)\rbrace .}
+
+\p{E.g.}
+
+##{\begin{aligned}
+100101101 &\rightsquigarrow 10101101 \\
+&\rightsquigarrow 1101101 \\
+&\rightsquigarrow 111101 \\
+&\rightsquigarrow 11111.
+\end{aligned}}
+
+\p{\strong{Claim.} #{\mathcal{A}} solves #{\Pi}. That is, #{\mathcal{A}} accepts #{w} iff #{w} has a #{1}.}
+
+\p{\em{Proof of claim.} If #{w} does \em{not} have a #{1}, then #{w = 00\ldots0} and #{\mathcal{A}} does not accept.}
+
+\p{Conversely, if #{w} has a #{1} then if #{w = 11\ldots1}, #{\mathcal{A}} terminates. Otherwise there exists #{01} or #{10}, and in either case the successor is strictly smaller with a #{1}. Thus #{\mathcal{A}} accepts by induction on the number of #{0}’s. #{\square}}

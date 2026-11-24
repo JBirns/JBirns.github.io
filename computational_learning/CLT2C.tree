@@ -1,0 +1,152 @@
+\title{Learning Real-Valued Functions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{When we started everything, the idea of PAC was that there is some #{c \subseteq X} which we are trying to identify from randomly chosen samples #{\longleftrightarrow} there is some function #{f \colon X \to \lbrace 0, 1\rbrace } we are trying to learn.}
+
+\p{Today our goal is to formalise the learning of #{f \colon X \to Y} where #{Y \neq \lbrace 0, 1\rbrace }.}
+
+\p{Earlier we looked at #{f_N^{-1} \colon \mathbb{Z}_N^* \to \mathbb{Z}_N^*}, with #{f_N^{-1}(x) = } bit string. So we rephrased learning #{f_N^{-1}} as a PAC problem where you learn each bit independently of each other.}
+
+\p{We now consider #{f \colon X \to \mathbb{R}}.}
+
+\transclude{CLT2D}
+
+\p{To start, what will “data” look like in our model?}
+
+\p{\strong{Idea #1.} To mimic PAC one should start with some distribution #{\mu} on #{X_n \times \mathbb{R}}, with marginal distribution #{\mathcal{D}} on #{X_n}, such that #{\mu} is supported only on pairs #{(x, f^*(x))}. Then our oracle returns a sample from #{\mu}.}
+
+\p{Why is this \em{not} a good model? The majority of reals are not Turing computable, amongst other issues.}
+
+\transclude{CLT2E}
+
+\p{\strong{Idea #2.} Our data will be sampled from a distribution #{\mu} on #{X_n \times \mathbb{R}} with the following assumptions:}
+
+\ul{
+\li{\strong{1.} #{\mathbb{E}_y[Y \mid \bar{x}]} exists for any #{\bar{x} \in X_n};}
+\li{\strong{2.} #{\mathbb{E}[Y \mid \bar{x}] = f^*(\bar{x})} for all #{\bar{x} \in X_n}.}
+}
+
+\p{In other words rather than only allowing #{\mu} to sample from #{(\bar{x}, f^*(\bar{x}))}, we allow #{\mu} to sample from all pairs #{(\bar{x}, y)} provided it is equal to #{(\bar{x}, f^*(\bar{x}))} on average. This is called the \em{realisable setting}.}
+
+\p{To view this another way: define}
+
+##{\begin{aligned}
+\xi \colon X_n \times \mathbb{R} &\to \mathbb{R} \\
+(\bar{x}, y) &\mapsto f^*(\bar{x}) - y.
+\end{aligned}}
+
+\p{Note by linearity of expectation, #{\mathbb{E}_y[\xi \mid \bar{x}] = 0}.}
+
+\p{In particular you can think of the sample oracle as proceeding in steps:}
+
+\ul{
+\li{\strong{1.} Sample #{x \in X_n} using the marginal #{\mathcal{D}}.}
+\li{\strong{2.} Sample #{\xi \in \mathbb{R}} using some distribution such that #{\mathbb{E}[\xi] = 0}.}
+\li{\strong{3.} Return #{(x, f^*(x) + \xi)}.}
+}
+
+\p{Next let’s define some notion of \em{error} in the realisable case that we aim to optimise.}
+
+\transclude{CLT2F}
+
+\p{What is the precise relationship between risk and error?}
+
+##{\begin{aligned}
+\mathcal{R}(h) &= \mathbb{E}_{(x,y) \sim \mu}[(h(x) - y)^2] \\
+&= \mathbb{E}_\mu[(h(x) - f^*(x) + f^*(x) - y)^2] \\
+&= \mathbb{E}_\mu\big[(h(x) - f^*(x))^2 + (f^*(x) - y)^2 + 2(h(x) - f^*(x))(f^*(x) - y)\big] \\
+&= \mathbb{E}_\mu[(h(x) - f^*(x))^2] + \mathbb{E}_\mu[(f^*(x) - y)^2] + 2\underbrace{\mathbb{E}_\mu[(h(x) - f^*(x))(f^*(x) - y)]}_{= \mathbb{E}_x[(h(x) - f^*(x)) \cdot \mathbb{E}_y[f^*(x) - y \mid x] ] = 0} \\
+&= \mathbb{E}_\mu[(h(x) - f^*(x))^2] + \mathbb{E}_\mu[(f^*(x) - y)^2] \\
+&= E(h) + \mathcal{R}(f^*).
+\end{aligned}}
+
+\p{Therefore #{E(h) = \mathcal{R}(h) - \mathcal{R}(f^*)}.}
+
+\p{Note #{E(h) = \mathbb{E}[(f^*(x) - h(x))^2] \geq 0}, so for all #{h \in \mathcal{F}}, #{\mathcal{R}(h) \geq \mathcal{R}(f^*)}. Thus #{f^*} is the function in #{\mathcal{F}} that minimises risk.}
+
+\transclude{CLT2G}
+
+\transclude{CLT2H}
+
+\p{If #{\mu} is realisable, the above shows #{\mathcal{R}(\mathcal{F}) = \mathcal{R}(f^*)}. If not, then there is no reason to believe some #{f^\wedge \in \mathcal{F}} achieves the infimum.}
+
+\transclude{CLT2I}
+
+\transclude{CLT2J}
+
+\p{\strong{New idea for learning:}}
+
+\ul{
+\li{\strong{1.} Formalise the statistical connection between #{\mathcal{R}(h)} and #{\widehat{\mathcal{R}}_S(h)} so that we can use large samples to confidently say #{\mathcal{R}(h)} is small because #{\widehat{\mathcal{R}}_S(h)} is small.}
+\li{\strong{2.} Develop an algorithm to construct #{h \in \mathcal{F}} that makes #{\widehat{\mathcal{R}}_S(h)} as small as possible.}
+}
+
+\p{(1) is considerably harder than (2).}
+
+\p{\strong{Formalising the above:}}
+
+\ul{
+\li{\strong{1.} By expanding #{\mathcal{F}} to some larger class #{\mathcal{G}}, draw a sufficiently large collection of samples #{S} such that #{|\widehat{\mathcal{R}}_S(g) - \mathcal{R}(g)| < \varepsilon /3} with high probability for all #{g \in \mathcal{G}}.}
+\li{\strong{2.} Compute a function #{\hat{g} \in \mathcal{G}} such that #{\widehat{\mathcal{R}}_S(\hat{g}) \leq \inf_{h \in \mathcal{G}} \widehat{\mathcal{R}}_S(h) + \varepsilon /3}.}
+\li{\strong{3.} Return #{\hat{g}}.}
+}
+
+\p{Note for all #{f \in \mathcal{F}},}
+
+##{\begin{aligned}
+|\mathcal{R}(\hat{g}) - \mathcal{R}(f)| &\leq |\mathcal{R}(\hat{g}) - \widehat{\mathcal{R}}_S(\hat{g})| + |\widehat{\mathcal{R}}_S(\hat{g}) - \widehat{\mathcal{R}}_S(f)| + |\widehat{\mathcal{R}}_S(f) - \mathcal{R}(f)| \\
+&< \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon,
+\end{aligned}}
+
+\p{so #{\mathcal{R}(\hat{g}) \leq \inf_{f \in \mathcal{F}} \mathcal{R}(f) + \varepsilon}.}
+
+\p{We shall refer to (1) as the “statistical step” and (2) as the “computational step”.}
+
+\p{We first deal with (2). To do this we impose the following assumptions on #{\mathcal{G}}:}
+
+\ul{
+\li{\strong{(i)} all functions in #{\mathcal{G}} have range #{[a, b]};}
+\li{\p{\strong{(ii)} the functions in #{\mathcal{G}} are within a single family parametrised by some closed and bounded convex set #{K \subseteq \mathbb{R}^N}. E.g.}
+##{\mathcal{G} = \lbrace g_w \colon \mathbb{R}^n \to [-B, B] \mid g_w(x) = \mathbf{1}(\Vert x\Vert  < B)(w \cdot x),\; \Vert w\Vert  \leq W\rbrace ;}}
+\li{\p{\strong{(iii)} under the previous assumptions, for any fixed #{S}, the empirical risk #{\widehat{\mathcal{R}}_S(g) = \frac{1}{m}\sum (g(x_i) - y_i)^2} becomes a function #{\widehat{\mathcal{R}}_S \colon K \to [A, B]}. We assume this function is convex in that}
+##{\widehat{\mathcal{R}}_S(\lambda w + (1-\lambda)w') \leq \lambda\widehat{\mathcal{R}}_S(w) + (1-\lambda)\widehat{\mathcal{R}}_S(w') \quad \forall \lambda \in [0, 1].}
+\p{Also assume #{\widehat{\mathcal{R}}_S} is differentiable.}}
+}
+
+\p{Therefore with all the above, (2) becomes:}
+
+\transclude{CLT2K}
+
+\transclude{CLT2L}
+
+\transclude{CLT2M}
+
+\p{This resolves (2).}
+
+\p{We begin the discussion of (1). What it seems like we need is some kind of analogue of VC dimension.}
+
+\transclude{CLT2N}
+
+\p{Our goal is to find some bound on the number of samples needed to make #{\Phi(S)} \em{likely} very small.}
+
+\transclude{CLT2O}
+
+\p{In particular (1) can be restated as: for #{|S| \gg 0}, with high probability #{\Phi(S) < \varepsilon /3}.}
+
+\transclude{CLT2P}
+
+\transclude{CLT2Q}
+
+\transclude{CLT2R}
+
+\p{Thus we have now shown that for any sample #{S}, the gap between true risk and empirical risk is}
+
+##{\leq 2\,\mathrm{RAD}_m(\mathcal{G}) + (b - a)\sqrt{\frac{\log(1/\delta)}{2m}}.}
+
+\p{Do we have tools for computing #{\mathrm{RAD}_m(\mathcal{G})}? Not really.}
+
+\transclude{CLT2S}
+
+\transclude{CLT2T}

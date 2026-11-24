@@ -1,0 +1,14 @@
+\title{#{(\alpha, \beta)}-Occam algorithm}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \geq 0}, #{0 < \beta < 1}. We say an algorithm #{L} is an \em{#{(\alpha, \beta)}-Occam algorithm} for #{\mathcal{C}_n} using #{\mathcal{C}_n \subseteq \mathcal{H}_n} if, given any labelled sample set #{S = \lbrace (x_i, b_i)\rbrace } with #{b_i \in \lbrace 0, 1\rbrace }, #{x_i \in X_n}, #{L} produces a hypothesis #{h \in \mathcal{H}_n} such that}
+
+\ul{
+\li{\strong{1.} #{h} is consistent with #{S};}
+\li{\strong{2.} #{\operatorname{size}(h) \leq (n \cdot \operatorname{size}(c))^\alpha \cdot |S|^\beta}.}
+}
+
+\p{It is \em{efficient} if it is polynomial in #{n}, #{m}, #{\operatorname{size}(c)}.}

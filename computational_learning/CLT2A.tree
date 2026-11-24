@@ -1,0 +1,23 @@
+\title{PAC+MQ is sometimes strictly stronger than EQMQ}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X_n = \lbrace 0, 1\rbrace ^n}, #{\mathcal{C}_n = \lbrace \text{all Boolean functions in } n \text{ variables that take the value } 1 \text{ exactly once}\rbrace }.}
+
+\p{\em{For PAC+MQ} (we don’t even need the MQ):}
+
+\ul{
+\li{\strong{1.} Take #{\approx \frac{1}{\varepsilon^2}} samples.}
+\li{\strong{2.} If any sample has value #{1}, then output the function that only takes the value #{1} at that sample.}
+\li{\strong{3.} If all samples are negative, return #{h \equiv 0}.}
+}
+
+\p{Notice if #{h \equiv 0},}
+
+##{E_{\mathcal{D}}(h) = \mathbb{P}(h(x) \neq c(x)) = \mathbb{P}_{\mathcal{D}}(x_c) < \varepsilon,}
+
+\p{where #{x_c} is the singular instance where #{c \neq 0}.}
+
+\p{\em{For EQMQ:} this will fail because to hit an element of #{\mathcal{C}} on the nose, you must find a needle in a haystack (i.e. read through the entirety of #{X}).}

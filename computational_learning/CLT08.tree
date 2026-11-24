@@ -1,0 +1,20 @@
+\title{Accepted words}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\Sigma = \lbrace 0, 1\rbrace }, #{\mathcal{A} = \lbrace (1, 11)\rbrace }.}
+
+##{\begin{aligned}
+w &= 101 \rightsquigarrow 1101 \rightsquigarrow 11101 \rightsquigarrow \cdots \\
+w &= 00 \rightsquigarrow 00 \text{ terminates.}
+\end{aligned}}
+
+\p{In fact}
+
+##{\begin{aligned}
+\lbrace w : \mathcal{A} \text{ accepts } w\rbrace  &= \lbrace 0, 00, 000, \ldots\rbrace  \\
+&= \lbrace \text{words without a } 1\rbrace  \\
+&= \lbrace \text{``does my string not have a 1?''}\rbrace .
+\end{aligned}}

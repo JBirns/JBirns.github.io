@@ -1,0 +1,7 @@
+\title{The class #{\mathcal{P}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say a problem #{\Pi} is in #{\mathcal{P}} if there exist an algorithm #{\mathcal{A}} and a polynomial #{p} such that for all accepted #{w}, #{\mathcal{A}} terminates in at most #{p(\operatorname{size}(w))} steps.}

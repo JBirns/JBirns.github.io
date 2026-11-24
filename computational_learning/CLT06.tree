@@ -1,0 +1,14 @@
+\title{An algorithm on English words}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\Sigma = \lbrace a, b, \ldots, z\rbrace }, #{\mathcal{A} = \lbrace (\mathtt{bill}, \mathtt{steve}), (\mathtt{if}, \mathtt{go})\rbrace }.}
+
+##{\begin{aligned}
+w = \mathtt{ifigothenbillstays} &\rightsquigarrow \mathtt{ifigothenstevestays} \\
+&\rightsquigarrow \mathtt{goigothenstevestays}
+\end{aligned}}
+
+\p{At this step (no #{u_i} is a subword), we say the algorithm \em{terminates}.}

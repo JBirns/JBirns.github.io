@@ -1,0 +1,7 @@
+\title{EQMQ learnable}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say #{\mathcal{C}} is \em{EQMQ learnable} if there exists an algorithm such that for all #{c \in \mathcal{C}} the algorithm will return #{c} provided it is given access to MQ and EQ, in polynomial time.}

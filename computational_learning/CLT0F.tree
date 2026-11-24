@@ -1,0 +1,7 @@
+\title{Hamiltonian graphs}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\Sigma = \lbrace 0, 1\rbrace }, #{\Pi = \lbrace G : G \text{ Hamiltonian}\rbrace }. We set #{\Pi' = \lbrace (G, C) : G \text{ is a graph and } C \text{ is a Hamiltonian cycle}\rbrace }.}

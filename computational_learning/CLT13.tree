@@ -1,0 +1,32 @@
+\title{Occam’s Razor}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L} be an efficient #{(\alpha, \beta)}-Occam algorithm for #{\mathcal{C}_n} using #{\mathcal{H}_n} and let #{\mathcal{D}} be any distribution on #{X_n}. Let #{c \in \mathcal{C}_n} be a target concept and #{\frac{1}{2} > \varepsilon, \delta > 0}.}
+
+\p{Then there exists a constant #{\gamma > 0} such that if #{L} is given a list of samples drawn from #{\mathrm{Ex}(\mathcal{D}, c)} where}
+
+##{m \geq \gamma \bigg( \frac{1}{\varepsilon}\log\frac{1}{\delta} + \Big( \frac{(n \cdot \operatorname{size}(c))^\alpha}{\varepsilon} \Big)^{1/(1-\beta)} \bigg),}
+
+\p{then with probability #{\geq 1 - \delta} the output of #{L} will have error #{< \varepsilon}.}
+
+\p{Moreover all of the above will run in #{\operatorname{poly}(m, \frac{1}{\delta}, \frac{1}{\varepsilon}, n, \operatorname{size}(c))}.}
+
+\proof{
+\p{To start, let #{\mathcal{H}_{n,m}} be the collection of all hypotheses #{h \in \mathcal{H}_n} which #{L} can ever produce given #{m} samples. Note because #{L} is #{(\alpha, \beta)}-Occam, the size of any #{h \in \mathcal{H}_{n,m}} is bounded by #{(n \cdot \operatorname{size}(c))^\alpha \cdot m^\beta}. Thus,}
+
+##{|\mathcal{H}_{n,m}| \leq |\Sigma|^{(n \cdot \operatorname{size}(c))^\alpha \cdot m^\beta}.}
+
+\p{Let’s call a hypothesis #{h \in \mathcal{H}_{n,m}} \em{bad} if #{E(h) > \varepsilon}. What is the probability that a bad hypothesis ends up consistent with its samples? It is #{\leq (1 - \varepsilon)^m}.}
+
+\p{Thus}
+
+##{\begin{aligned}
+\mathbb{P}(\text{some element of } \mathcal{H}_{n,m} \text{ is bad and consistent}) &\leq |\mathcal{H}_{n,m}| \cdot (1 - \varepsilon)^m \\
+&\leq |\Sigma|^{(n \cdot \operatorname{size}(c))^\alpha \cdot m^\beta} \cdot (1 - \varepsilon)^m.
+\end{aligned}}
+
+\p{Set #{|\Sigma|^{(n \cdot \operatorname{size}(c))^\alpha \cdot m^\beta} \cdot (1 - \varepsilon)^m < \delta} and solve for #{m}.}
+}

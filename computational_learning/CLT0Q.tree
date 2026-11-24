@@ -1,0 +1,52 @@
+\title{Conjunctions of literals are efficiently PAC}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \lbrace 0, 1\rbrace ^n}, #{\mathcal{C} = \lbrace \text{conjunctions of literals}\rbrace }. (A \em{literal} is one of #{x_i} or #{\neg x_i}; a \em{conjunction} is a string of literals each connected with an “and” #{\wedge}.) E.g. #{x_1 \wedge \neg x_2 \wedge x_3} is a conjunction of literals in #{n \geq 3} variables. We think of this as a concept in #{X} by}
+
+##{\lbrace (x_1, x_2, \ldots, x_n) : x_1 = 1, x_2 = 0, x_3 = 1\rbrace .}
+
+\p{\strong{Claim.} #{\mathcal{C}} is efficiently PAC.}
+
+\p{\em{Proof of claim.} We define #{\mathcal{A}} as follows.}
+
+\ul{
+\li{\strong{1.} Set #{h = x_1 \wedge \neg x_1 \wedge x_2 \wedge \neg x_2 \wedge \cdots \wedge \neg x_n}.}
+\li{\strong{2.} Take #{m} samples from the oracle #{\mathrm{Ex}(c, \mathcal{D})}.}
+\li{\strong{3.} For each sample #{x}, if #{c(x) = 0} ignore.}
+\li{\strong{4.} If #{x = (a_1, a_2, \ldots, a_n) \in c}, for each #{i}, if #{a_i = 1} throw away #{\neg x_i} from #{h}; otherwise if #{a_i = 0} throw away #{x_i}.}
+}
+
+\p{Note #{h} starts with all possible literals and “prunes” itself using the samples. In particular, #{h} will always have at least as many literals as #{c}. Let #{z} be a literal appearing in #{h} but not in #{c} and define #{P(z)} to be the probability that a randomly selected #{x = (a_1, \ldots, a_n)} is in #{c} but the coordinate of #{x} corresponding to #{z} is #{0}.
+Then}
+
+##{E(h) = \mathbb{P}(h(x) \neq c(x)) \leq \sum_z P(z).}
+
+\blockquote{\p{E.g. #{c = x_1 \wedge \neg x_2 \wedge x_3}, #{n = 5}, #{h = x_1 \wedge \neg x_1 \wedge \cdots \wedge \neg x_5}.}
+##{\begin{aligned}
+(1,1,0,0,1) &\notin c \\
+(1,0,1,1,1) &\in c \rightsquigarrow h = x_1 \wedge \neg x_2 \wedge x_3 \wedge x_4 \wedge x_5 \\
+(1,0,1,0,1) &\in c \rightsquigarrow h = x_1 \wedge \neg x_2 \wedge x_3 \wedge x_5
+\end{aligned}}}
+
+\p{Thus if #{P(z) \leq \varepsilon /2n} for all #{z}, our total error is #{< \varepsilon}. So if all literals are controlled, we are done.}
+
+\p{So what does it mean if #{P(z) > \varepsilon /2n}? This means each call to the oracle has at most a #{(1 - \varepsilon /2n)} chance of missing the disagreement with #{z}. So after #{m} calls, we failed to remove #{z} with probability #{\leq (1 - \varepsilon /2n)^m}, which means}
+
+##{\mathbb{P}(\text{at least one of our bad literals fails to be removed}) \leq 2n(1 - \varepsilon /2n)^m.}
+
+\p{Choose #{m} so that #{2n(1 - \varepsilon /2n)^m < \delta}. Then}
+
+##{\begin{aligned}
+\mathbb{P}(E(h) < \varepsilon) &= 1 - \mathbb{P}(E(h) \geq \varepsilon) \\
+&\geq 1 - \mathbb{P}(h \text{ has bad literals}) \\
+&\geq 1 - \delta,
+\end{aligned}}
+
+\p{and so this is PAC. Solving #{2n(1 - \varepsilon /2n)^m < \delta} for #{m} gives that}
+
+##{m \geq \frac{2n}{\varepsilon}\Big[\log(2n) + \log\frac{1}{\delta}\Big]}
+
+\p{works, and so the problem is efficiently PAC. #{\square}}

@@ -1,0 +1,25 @@
+\title{Rectangles shatter 4 points but not 5}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{X = \mathbb{R}^2} and #{\mathcal{C} = } rectangles.}
+
+\p{\strong{Claim.} There exists a collection of #{4} samples #{S} that #{\mathcal{C}} shatters.}
+
+\p{\em{Proof of claim.} #{S = \lbrace (0,1), (1,0), (-1,0), (0,-1)\rbrace }.}
+
+\tex{\usepackage{tikz}}{\begin{tikzpicture}[scale=0.5]
+\draw (-2,0) -- (2,0);
+\draw (0,-2) -- (0,2);
+\fill (0,1) circle (3pt); \fill (1,0) circle (3pt); \fill (-1,0) circle (3pt); \fill (0,-1) circle (3pt);
+\end{tikzpicture}}
+
+\p{Draw out the #{16} rectangle possibilities. #{\square}}
+
+\p{\strong{Claim.} No collection of #{5} samples or more is shattered by #{\mathcal{C}}.}
+
+\p{\em{Proof of claim.} It suffices to prove this for exactly #{5} samples. Let #{S = \lbrace x_1, \ldots, x_5\rbrace } and let #{T} be the collection of points that have the largest/smallest #{x}-values and the largest/smallest #{y}-values.}
+
+\p{It is clear #{|T| \leq 4}, and all rectangles containing #{T} must contain all of #{S}. Therefore any binary vector assigning #{1} to the elements of #{T} and #{0} otherwise is impossible. #{\square}}
