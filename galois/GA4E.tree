@@ -1,0 +1,11 @@
+\title{Soluble group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A finite group #{G} is \em{soluble} if there exist subgroups}
+
+##{\lbrace 1\rbrace  = H_0 \leq H_1 \leq \cdots \leq H_m = G}
+
+\p{such that for all #{1 \leq i \leq m}, #{H_{i-1} \trianglelefteq H_i} and #{H_i/H_{i-1}} is abelian.}

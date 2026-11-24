@@ -1,0 +1,7 @@
+\title{Galois extension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A field extension #{L/K} is \em{Galois} if it is algebraic and #{K = L^{\operatorname{Aut}(L/K)}}.}

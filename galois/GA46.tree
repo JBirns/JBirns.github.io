@@ -1,0 +1,25 @@
+\title{Linear independence of field embeddings}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K, L} be fields and #{\sigma_1, \ldots, \sigma_n \colon K \hookrightarrow L} distinct field embeddings (#{n \geq 1}). If #{\lambda_1, \ldots, \lambda_n \in L} satisfy}
+
+##{\lambda_1 \sigma_1(x) + \cdots + \lambda_n \sigma_n(x) = 0 \quad \forall x \in K}
+
+\p{then #{\lambda_1 = \cdots = \lambda_n = 0}.}
+
+\proof{
+\p{Induction on #{n}. Trivially true for #{n = 1}. Now suppose #{n \geq 2} and}
+
+##{\lambda_1 \sigma_1(x) + \cdots + \lambda_n \sigma_n(x) = 0 \quad \forall x \in K.
+ \qquad (1)}
+
+\p{Pick #{y \in K} such that #{\sigma_1(y) \neq \sigma_2(y)}. Replacing #{x} by #{xy} in (1) gives}
+
+##{\lambda_1 \sigma_1(x)\sigma_1(y) + \cdots + \lambda_n \sigma_n(x)\sigma_n(y) = 0 \quad \forall x \in K.
+ \qquad (2)}
+
+\p{Taking #{\sigma_1(y) \times (1) - (2)} gives a new relation with only #{n - 1} terms. It must be trivial by the induction hypothesis. Therefore #{\sigma_1(y)\lambda_i = \sigma_i(y)\lambda_i} for all #{2 \leq i \leq n}. Since #{\sigma_1(y) \neq \sigma_2(y)} we have #{\lambda_2 = 0}. Therefore (1) has only #{n - 1} terms, and the induction hypothesis #{\implies} all #{\lambda_i = 0}.}
+}

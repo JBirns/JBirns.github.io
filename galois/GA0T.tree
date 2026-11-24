@@ -1,0 +1,11 @@
+\title{Algebraic elements form a subfield}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be any field extension. Then the set #{\lbrace \alpha \in L \mid \alpha \text{ algebraic over } K\rbrace } is a subfield of #{L}.}
+
+\proof{
+\p{If #{\alpha, \beta} are algebraic over #{K} then by \ref{GA0S}, #{[K(\alpha, \beta):K] < \infty}. Let #{\gamma = \alpha \pm \beta} or #{\alpha\beta} or (if #{\alpha \neq 0}) #{1/\alpha}. Then #{\gamma \in K(\alpha, \beta)}. So #{[K(\alpha, \beta, \gamma):K] < \infty}, and by \ref{GA0S}, #{\gamma} is algebraic over #{K}.}
+}

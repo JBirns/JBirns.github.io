@@ -1,0 +1,21 @@
+\title{Splitting fields are normal}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty}. Then #{L/K} is normal #{\iff} #{L} is a splitting field for some #{f \in K[X]}.}
+
+\proof{
+\p{(#{\Rightarrow}) Write #{L = K(\alpha_1, \ldots, \alpha_n)}. Let #{f_i} be the minimal polynomial of #{\alpha_i} over #{K}. #{L/K} normal #{\implies} each #{f_i} splits into linear factors over #{L} #{\implies} #{L} is a splitting field for #{\prod f_i}.}
+
+\p{(#{\Leftarrow}) Let #{L} be a splitting field of #{f \in K[X]} over #{K}. Let #{\alpha \in L} have minimal polynomial #{g} over #{K}. Let #{M/L} be a splitting field for #{g}. We must show that whenever #{\beta \in M} is a root of #{g}, then in fact #{\beta \in L}.}
+
+\p{#{L = L(\alpha)} is a splitting field for #{f} over #{K(\alpha)}, and #{L(\beta)} is a splitting field for #{f} over #{K(\beta)}.}
+
+\p{#{\alpha} and #{\beta} have the same minimal polynomial #{g} over #{K}. Therefore #{K(\alpha)} and #{K(\beta)} are #{K}-isomorphic. Uniqueness of splitting fields #{\implies} #{L(\alpha)} #{(= L)} and #{L(\beta)} are #{K}-isomorphic. Therefore #{[L:K] = [L(\beta):K]}.}
+
+##{\begin{array}{c} L(\beta) \\ \big| \\ L \\ \big| \\ K \end{array}}
+
+\p{The Tower Law #{\implies [L(\beta):L] = 1 \implies L(\beta) = L \implies \beta \in L}.}
+}

@@ -1,0 +1,11 @@
+\title{Expressing a symmetric polynomial}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f = \sum_{i \neq j} X_i^2 X_j}. The leading term (in lexicographic order) is #{X_1^2 X_2 = X_1 (X_1 X_2)}.}
+
+##{s_1 s_2 = \sum_i \sum_{j < k} X_i X_j X_k = \underbrace{\sum_{i \neq j} X_i^2 X_j}_{f} + 3 \underbrace{\sum_{i < j < k} X_i X_j X_k}_{s_3}.}
+
+\p{Therefore #{f = s_1 s_2 - 3 s_3}.}

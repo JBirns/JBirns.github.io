@@ -1,0 +1,11 @@
+\title{Cycle types from factorisations mod #{p}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{With the same assumptions, suppose #{\bar f = g_1 g_2 \cdots g_r} where #{g_i \in \mathbb{F}_p[X]} is irreducible of degree #{n_i}. Then #{\operatorname{Gal}(f/\mathbb{Q}) \leq S_n} contains an element with cycle type #{(n_1, \ldots, n_r)}.}
+
+\proof{
+\p{Combine \ref{GA3Q} and \ref{GA3R}.}
+}

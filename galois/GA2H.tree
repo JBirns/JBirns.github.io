@@ -1,0 +1,7 @@
+\title{#{K}-automorphism}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a field extension. A \em{#{K}-automorphism} of #{L} is an automorphism #{\sigma \in \operatorname{Aut}(L)} whose restriction to #{K} is the identity map. The #{K}-automorphisms of #{L} form a subgroup #{\operatorname{Aut}(L/K) \subset \operatorname{Aut}(L)}.}

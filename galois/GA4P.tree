@@ -1,0 +1,13 @@
+\title{Chains, upper bounds and maximal elements}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{T \subset S}.}
+
+\ul{
+\li{#{T} is a \em{chain} if it is totally ordered by #{\leq}.}
+\li{#{x \in S} is an \em{upper bound} for #{T} if #{t \leq x} for all #{t \in T}.}
+\li{#{x \in S} is \em{maximal} if there is no #{y \in S} with #{x \leq y} and #{x \neq y}.}
+}

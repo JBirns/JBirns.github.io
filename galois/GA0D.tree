@@ -1,0 +1,22 @@
+\title{Frobenius homomorphism}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{R} be a ring of characteristic #{p}, #{p} prime. Then the \em{Frobenius}}
+
+##{\begin{aligned}
+\phi \colon R &\to R \\
+x &\mapsto x^p
+\end{aligned}}
+
+\p{is a ring homomorphism.}
+
+\proof{
+\p{Clearly #{\phi(1) = 1} and #{\phi(xy) = \phi(x)\phi(y)}. Also}
+
+##{(x+y)^p = x^p + y^p + \sum_{r=1}^{p-1} \binom{p}{r} x^{p-r} y^r.}
+
+\p{For #{1 \leq r \leq p-1} the binomial coefficient #{\binom{p}{r} = \frac{p!}{r!(p-r)!}} is divisible by #{p} (since #{p} is prime). Therefore #{\phi(x+y) = (x+y)^p = x^p + y^p = \phi(x) + \phi(y)}.}
+}

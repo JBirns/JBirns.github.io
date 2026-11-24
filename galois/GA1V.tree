@@ -1,0 +1,15 @@
+\title{Discriminant}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f(X) = \prod_{i=1}^n (X - \alpha_i)}, a monic polynomial with roots #{\alpha_1, \ldots, \alpha_n}. The \em{discriminant} of #{f} is}
+
+##{\operatorname{Disc}(f) = \prod_{i < j} (\alpha_i - \alpha_j)^2.}
+
+\p{By the symmetric function theorem, we can write #{\operatorname{Disc}(f)} as a polynomial in the coefficients of #{f}. E.g. if #{n = 2}, #{f(X) = X^2 + bX + c}, then}
+
+##{\operatorname{Disc}(f) = (\alpha_1 - \alpha_2)^2 = (\alpha_1 + \alpha_2)^2 - 4\alpha_1\alpha_2 = b^2 - 4c.}
+
+\p{It is clear from the definition that #{\operatorname{Disc}(f) = 0 \iff f} has repeated roots.}

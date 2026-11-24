@@ -1,0 +1,9 @@
+\title{Cyclotomic polynomial}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\zeta_n = e^{2\pi i/n}}. The \em{#{n}th cyclotomic polynomial} is}
+
+##{\Phi_n(X) = \prod_{a \in (\mathbb{Z}/n\mathbb{Z})^\times} (X - \zeta_n^a).}

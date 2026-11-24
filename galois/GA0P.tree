@@ -1,0 +1,11 @@
+\title{An infinite algebraic extension}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{L = \bigcup_{n=1}^\infty \mathbb{Q}(\sqrt[2^n]{2}) \subset \mathbb{R}}. The union of a nested sequence of fields}
+
+##{\mathbb{Q}(\sqrt{2}) \subset \mathbb{Q}(\sqrt[4]{2}) \subset \mathbb{Q}(\sqrt[8]{2}) \subset \cdots}
+
+\p{and so this is a field. #{[L:K] = \infty} since #{[\mathbb{Q}(\sqrt[2^n]{2}):\mathbb{Q}] = 2^n} is unbounded. But every #{\alpha \in L} belongs to a finite extension of #{\mathbb{Q}} and so is algebraic over #{\mathbb{Q}}. Therefore #{L/\mathbb{Q}} is algebraic.}

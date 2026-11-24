@@ -1,0 +1,11 @@
+\title{Bound on the automorphism group}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite extension. Then #{\#\operatorname{Aut}(L/K) \leq [L:K]}.}
+
+\proof{
+\p{Take #{M = L} in \ref{GA2B}.}
+}

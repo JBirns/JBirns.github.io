@@ -1,0 +1,28 @@
+\title{Kummer extensions have cyclic Galois group}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\mu_n \subset K} and #{a \in K^\times}. There exists an injective group homomorphism}
+
+##{\theta \colon \operatorname{Gal}(K(\sqrt[n]{a})/K) \hookrightarrow \mu_n.}
+
+\p{In particular, #{\operatorname{Gal}(K(\sqrt[n]{a})/K)} is a cyclic group and #{[K(\sqrt[n]{a}):K]} divides #{n}.}
+
+\proof{
+\p{Let #{G = \operatorname{Gal}(K(\sqrt[n]{a})/K)}. If #{\sigma \in G} then #{\sqrt[n]{a}} and hence also #{\sigma(\sqrt[n]{a})} are roots of #{X^n - a}. So #{\sigma(\sqrt[n]{a}) = \zeta_n^r \sqrt[n]{a}} for some #{0 \leq r < n}. We define}
+
+##{\begin{aligned}
+\theta \colon G &\to \mu_n \\
+\sigma &\mapsto \zeta_n^r = \frac{\sigma(\sqrt[n]{a})}{\sqrt[n]{a}}.
+\end{aligned}}
+
+\p{Now let #{\sigma, \tau \in G}, with #{\sigma(\sqrt[n]{a}) = \zeta_n^r \sqrt[n]{a}} and #{\tau(\sqrt[n]{a}) = \zeta_n^s \sqrt[n]{a}}. Then}
+
+##{\sigma\tau(\sqrt[n]{a}) = \sigma(\zeta_n^s \sqrt[n]{a}) = \zeta_n^{r+s} \sqrt[n]{a}.}
+
+\p{So #{\theta(\sigma\tau) = \zeta_n^{r+s} = \zeta_n^r \cdot \zeta_n^s = \theta(\sigma)\theta(\tau)}. Therefore #{\theta} is a group homomorphism.}
+
+\p{Since any #{\sigma \in G} is uniquely determined by #{\sigma(\sqrt[n]{a})}, it is clear that #{\theta} is injective.}
+}

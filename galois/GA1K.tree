@@ -1,0 +1,22 @@
+\title{Characterisations of algebraically closed fields}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a field. The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{K} is algebraically closed.}
+\li{\strong{(ii)} If #{L/K} is a field extension and #{\alpha \in L} is algebraic over #{K}, then #{\alpha \in K}.}
+\li{\strong{(iii)} If #{L/K} is algebraic, then #{L = K}.}
+\li{\strong{(iv)} If #{L/K} is finite then #{L = K}.}
+}
+
+\proof{
+\p{(i) #{\Rightarrow} (ii): The minimal polynomial of #{\alpha} over #{K} is irreducible, hence linear by (i). Therefore #{\alpha \in K}.}
+
+\p{(ii) #{\Rightarrow} (iii) #{\Rightarrow} (iv): Clear.}
+
+\p{(iv) #{\Rightarrow} (i): Let #{f \in K[X]} be an irreducible polynomial. Then #{L = K[X]/(f)} is a finite extension of #{K} with #{[L:K] = \deg f}. By (iv), #{L = K}, so #{\deg f = 1}. Therefore #{f} is linear.}
+}

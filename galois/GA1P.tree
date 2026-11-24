@@ -1,0 +1,59 @@
+\title{Symmetric Polynomials}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose we wish to find the roots of a cubic polynomial}
+
+##{f(X) = X^3 + aX^2 + bX + c \in \mathbb{Q}[X].}
+
+\p{After substituting #{X - a/3} for #{X} we may assume #{a = 0}. Writing #{f(X) = (X - \alpha)(X - \beta)(X - \gamma)} and comparing coefficients gives}
+
+##{\begin{aligned}
+\alpha + \beta + \gamma &= -a = 0, \\
+\alpha\beta + \beta\gamma + \gamma\alpha &= b, \\
+\alpha\beta\gamma &= -c.
+\end{aligned}}
+
+\p{Let #{\omega = e^{2\pi i/3}}. Write}
+
+##{\alpha = \tfrac{1}{3}\big[ \underbrace{(\alpha + \beta + \gamma)}_{=0} + \underbrace{(\alpha + \omega\beta + \omega^2\gamma)}_{=u} + \underbrace{(\alpha + \omega^2\beta + \omega\gamma)}_{=v} \big].}
+
+\p{Then #{u^3 + v^3} and #{uv} are unchanged under permuting #{\alpha, \beta, \gamma}.}
+
+\p{After some calculation we find (remembering #{a = 0})}
+
+##{\begin{aligned}
+u^3 + v^3 &= -27c, \\
+uv &= -3b.
+\end{aligned}}
+
+\p{Therefore #{u^3} and #{v^3} are the roots of #{X^2 + 27cX - 27b^3 = 0}.}
+
+\p{Solving this quadratic and taking cube roots gives a formula for the roots of the cubic, usually called \em{Cardano’s formula}.}
+
+\p{Let #{S_n} be the symmetric group on #{n} letters.}
+
+\transclude{GA1Q}
+
+\p{If #{f} and #{g} are symmetric then so are #{f + g} and #{fg}. Therefore the symmetric polynomials form a subring of #{R[X_1, \ldots, X_n]}.}
+
+\transclude{GA1R}
+
+\transclude{GA1S}
+
+\transclude{GA1T}
+
+\p{We can write any #{f \in R[X_1, \ldots, X_n]} as #{f = \sum_d f_d} where #{f_d} is homogeneous of degree #{d} (i.e. each monomial has total degree #{d}). Clearly #{f} symmetric #{\implies} all #{f_d} symmetric.}
+
+\p{So for the proof of \ref{GA1S}(i) it suffices to consider #{f \in R[X_1, \ldots, X_n]} which is symmetric and homogeneous of degree #{d}.}
+
+\p{Define the \em{lexicographic order} on monomials such that}
+
+##{X_1^{i_1} X_2^{i_2} \cdots X_n^{i_n} > X_1^{j_1} X_2^{j_2} \cdots X_n^{j_n}}
+
+\p{if #{i_1 = j_1, i_2 = j_2, \ldots, i_{r-1} = j_{r-1}, i_r > j_r} for some #{1 \leq r \leq n}. This is a total ordering.}
+
+\transclude{GA1U}
+
+\transclude{GA1V}

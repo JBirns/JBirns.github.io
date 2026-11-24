@@ -1,0 +1,25 @@
+\title{A cyclic quartic extension}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K = \mathbb{Q}(\alpha)} where #{\alpha = \sqrt{2 + \sqrt{2}}}. Then #{(\alpha^2 - 2)^2 = 2}, so #{\alpha} is a root of #{f(X) = X^4 - 4X^2 + 2}. This is irreducible in #{\mathbb{Z}[X]} by Eisenstein’s criterion with #{p = 2}, hence irreducible in #{\mathbb{Q}[X]} by Gauss’ Lemma. Therefore #{[K:\mathbb{Q}] = 4}.}
+
+\p{Now #{(2 + \sqrt{2})(2 - \sqrt{2}) = 2}. Therefore #{f} has roots #{\pm\alpha}, #{\pm\sqrt{2}/\alpha} (N.B. #{\sqrt{2} = \alpha^2 - 2}). Therefore #{K} is a splitting field for #{f} over #{\mathbb{Q}}, so #{K/\mathbb{Q}} is normal, and so #{K/\mathbb{Q}} is Galois (separable since #{\operatorname{char} = 0}).}
+
+\p{If #{\sigma \in \operatorname{Gal}(K/\mathbb{Q})}, then it is uniquely determined by #{\sigma(\alpha)}. But #{\sigma(\alpha) \in \lbrace \pm\alpha, \pm\sqrt{2}/\alpha\rbrace } and #{\#\operatorname{Gal}(K/\mathbb{Q}) = [K:\mathbb{Q}] = 4}, so all possibilities must occur (could see this more directly with \ref{GA18}).}
+
+\p{Fix #{\sigma \in \operatorname{Gal}(K/\mathbb{Q})} with #{\sigma(\alpha) = \sqrt{2}/\alpha}. Then}
+
+##{\sigma(\alpha^2) = \frac{2}{\alpha^2} \implies \sigma(2 + \sqrt{2}) = 2 - \sqrt{2} \implies \sigma(\sqrt{2}) = -\sqrt{2}.}
+
+\p{Therefore}
+
+##{\sigma^2(\alpha) = \sigma\Big(\frac{\sqrt{2}}{\alpha}\Big) = \frac{-\sqrt{2}}{\sqrt{2}/\alpha} = -\alpha,}
+
+\p{so #{\sigma^2 \neq \mathrm{id}} and #{\sigma^4 = \mathrm{id}}. Therefore #{\operatorname{Gal}(K/\mathbb{Q}) \cong C_4}.}
+
+##{\begin{array}{c} \lbrace \mathrm{id}\rbrace  \\ \big| \\ C_2 \cong \langle \sigma^2 \rangle \\ \big| \\ C_4 \end{array}
+\qquad \longleftrightarrow \qquad
+\begin{array}{c} K = \mathbb{Q}(\alpha) \\ \big| \\ \mathbb{Q}(\sqrt{2}) \\ \big| \\ \mathbb{Q} \end{array}}

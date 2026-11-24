@@ -1,0 +1,7 @@
+\title{Degree of a constructible number}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{x \in \mathbb{R}} is constructible then #{x} is algebraic over #{\mathbb{Q}} and #{[\mathbb{Q}(x):\mathbb{Q}]} is a power of #{2}.}

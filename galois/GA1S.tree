@@ -1,0 +1,34 @@
+\title{Symmetric Function Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Every symmetric polynomial over #{R} can be expressed as a polynomial in the elementary symmetric functions, with coefficients in #{R}.}
+\li{\strong{(ii)} There are no nontrivial relations between the #{s_r}.}
+}
+
+\proof{
+\p{\em{Proof of i.} Let #{X_1^{i_1} X_2^{i_2} \cdots X_n^{i_n}} be the largest monomial (with respect to the lexicographic ordering) to appear in #{f} with non-zero coefficient (#{c}, say). Since #{X_{\sigma(1)}^{i_1} X_{\sigma(2)}^{i_2} \cdots X_{\sigma(n)}^{i_n}} also appears in #{f} for all #{\sigma \in S_n}, we must have #{i_1 \geq i_2 \geq i_3 \geq \cdots \geq i_n}.}
+
+\p{Write}
+
+##{X_1^{i_1} X_2^{i_2} \cdots X_n^{i_n} = X_1^{i_1 - i_2} (X_1 X_2)^{i_2 - i_3} \cdots (X_1 X_2 \cdots X_n)^{i_n}.}
+
+\p{Let #{g = s_1^{i_1 - i_2} s_2^{i_2 - i_3} \cdots s_n^{i_n}}. Then #{f, g} are both homogeneous of the same degree and have the same largest monomial.}
+
+\p{So #{f - cg} is either #{0}, or it is a symmetric homogeneous polynomial of degree #{d} whose leading monomial is smaller than that of #{f}. Since there are only finitely many monomials of degree #{d} in #{R[X_1, \ldots, X_n]}, the process stops after finitely many steps. Therefore we can write #{f} as a polynomial in #{s_1, \ldots, s_n}.}
+}
+
+\proof{
+\p{\em{Proof of ii.} Write #{s_{r,n}} instead of #{s_r} to indicate the number of variables involved. Suppose #{G \in R[Y_1, \ldots, Y_n]} with #{G(s_{1,n}, s_{2,n}, \ldots, s_{n,n}) = 0}. We must prove that #{G = 0}. The proof is by induction on #{n}, the case #{n = 1} being clear.}
+
+\p{Write #{G = Y_n^k H} with #{Y_n \nmid H}, #{k \geq 0}. Since #{s_{n,n} = X_1 X_2 \cdots X_n} is not a zero divisor in #{R[X_1, \ldots, X_n]}, we must have #{H(s_{1,n}, s_{2,n}, \ldots, s_{n,n}) = 0}.}
+
+\p{So we may assume that #{G}, if non-zero, is not divisible by #{Y_n}. Replacing #{X_n} by #{0} gives}
+
+##{s_{r,n}(X_1, \ldots, X_{n-1}, 0) = \begin{cases} s_{r,n-1}(X_1, \ldots, X_{n-1}) & \text{if } r < n, \\ 0 & \text{if } r = n. \end{cases}}
+
+\p{Therefore #{G(s_{1,n-1}, s_{2,n-1}, \ldots, s_{n-1,n-1}, 0) = 0}. The induction hypothesis gives #{G(Y_1, \ldots, Y_{n-1}, 0) = 0}, so #{Y_n \mid G}. So by the above #{G} must be #{0}.}
+}

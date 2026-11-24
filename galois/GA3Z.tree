@@ -1,0 +1,7 @@
+\title{Independence of the choice of #{\zeta_n}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\chi(\sigma) = a} then #{\sigma(\zeta) = \zeta^a} for all #{\zeta \in \mu_n}. So the definition of #{\chi} does not depend on the choice of #{\zeta_n}.}

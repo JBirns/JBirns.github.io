@@ -1,0 +1,88 @@
+\title{Fundamental Theorem of Galois Theory}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite Galois extension, #{G = \operatorname{Gal}(L/K)}.}
+
+\ul{
+\li{\strong{(a)} Let #{F} be an intermediate field, i.e. #{K \subset F \subset L}. Then #{L/F} is Galois and #{\operatorname{Gal}(L/F) \leq G = \operatorname{Gal}(L/K)}.}
+\li{\p{\strong{(b)} There is an inclusion-reversing bijection}
+##{\begin{aligned}
+\left\lbrace  \begin{array}{c} \text{intermediate fields} \\ K \subset F \subset L \end{array} \right\rbrace  &\longleftrightarrow \left\lbrace  \begin{array}{c} \text{subgroups} \\ H \leq G \end{array} \right\rbrace  \\
+F &\longmapsto \operatorname{Gal}(L/F) \\
+L^H &\longleftarrow H.
+\end{aligned}}}
+\li{\p{\strong{(c)} Let #{F} be an intermediate field, i.e. #{K \subset F \subset L}. Then}
+##{\begin{aligned}
+F/K \text{ Galois} &\iff \sigma F = F \; \forall \sigma \in G \\
+&\iff H = \operatorname{Gal}(L/F) \text{ is a \emph{normal} subgroup of } G.
+\end{aligned}}
+\p{In this case the restriction map}
+##{\begin{aligned}
+G &\to \operatorname{Gal}(F/K) \\
+\sigma &\mapsto \sigma|_F
+\end{aligned}}
+\p{is surjective with kernel #{H}, and so #{\operatorname{Gal}(F/K) \cong G/H} (a quotient of #{G}).}}
+}
+
+\proof{
+\p{(a) \ref{GA2N} #{\implies L} is the splitting field over #{K} of some separable polynomial #{f \in K[X]}. Then #{L} is the splitting field of #{f} over #{F}. So #{L/F} is Galois.}
+
+\p{#{\operatorname{Gal}(L/F)} is a subgroup of #{\operatorname{Gal}(L/K)} since any automorphism of #{L} acting as the identity on #{F} also acts as the identity on #{K}.}
+
+\p{(b) To show we have a bijection we need to check that both compositions are the identity.}
+
+\ul{
+\li{\strong{(i)} #{F = L^{\operatorname{Gal}(L/F)}}: holds since #{L/F} is Galois.}
+\li{\p{\strong{(ii)} #{\operatorname{Gal}(L/L^H) = H}: we certainly have #{H \leq \operatorname{Gal}(L/L^H)}. It suffices to show #{\#\operatorname{Gal}(L/L^H) \leq \#H}.}
+\p{Let #{F = L^H}. As #{L/F} is finite and separable, the Theorem of the Primitive Element tells us that #{L = F(\alpha)} for some #{\alpha \in L}. Then #{\alpha} is a root of}
+##{g(X) = \prod_{\sigma \in H} (X - \sigma(\alpha)),}
+\p{which has coefficients in #{L^H = F}. Therefore}
+##{\#\operatorname{Gal}(L/L^H) = [L:L^H] = [F(\alpha):F] \leq \deg g = \#H,}
+\p{using \ref{GA2N} for the first equality.}}
+}
+
+\p{If #{F_1 \subset F_2} then clearly #{\operatorname{Gal}(L/F_2) \subset \operatorname{Gal}(L/F_1)}, so the bijection reverses inclusions.}
+
+\p{(c) We first show #{F/K} Galois #{\iff \sigma F = F} for all #{\sigma \in G}.}
+
+\p{(#{\Rightarrow}) Let #{\alpha \in F} have minimal polynomial #{f} over #{K}. For any #{\sigma \in G}, #{\sigma(\alpha)} is a root of #{f}. Since #{F/K} is normal we have #{\sigma(\alpha) \in F}. Therefore #{\sigma F \subset F}. As #{[\sigma F:K] = [F:K]} it follows that #{\sigma F = F}.}
+
+\p{(#{\Leftarrow}) Let #{\alpha \in F}. By \ref{GA2P} its minimal polynomial over #{K} is #{f(X) = \prod_{i=1}^m (X - \alpha_i)} where #{\alpha_1, \ldots, \alpha_m} are the distinct elements of #{\lbrace \sigma(\alpha) : \sigma \in G\rbrace }. The assumption that #{\sigma(F) = F} for all #{\sigma \in G} tells us that #{\alpha_1, \ldots, \alpha_m \in F}. This shows #{F/K} is normal. But also #{L/K} Galois #{\implies L/K} separable #{\implies F/K} separable. Now #{F/K} normal and separable #{\iff F/K} Galois by \ref{GA2N}.}
+
+\p{Suppose #{H \leq G} corresponds to #{F = L^H}. For #{\sigma \in G},}
+
+##{\begin{aligned}
+L^{\sigma H \sigma^{-1}} &= \lbrace x \in L : \sigma\tau\sigma^{-1}(x) = x \; \forall \tau \in H\rbrace  \\
+&= \lbrace x \in L : \tau\sigma^{-1}(x) = \sigma^{-1}(x) \; \forall \tau \in H\rbrace  \\
+&= \lbrace x \in L : \sigma^{-1}(x) \in L^H = F\rbrace  \\
+&= \sigma F.
+\end{aligned}}
+
+\p{So}
+
+##{\begin{aligned}
+\sigma F = F \; \forall \sigma \in G &\iff L^{\sigma H \sigma^{-1}} = L^H \; \forall \sigma \in G \\
+&\iff \sigma H \sigma^{-1} = H \; \forall \sigma \in G \\
+&\iff H \trianglelefteq G.
+\end{aligned}}
+
+\p{Consider the restriction map}
+
+##{\begin{aligned}
+\mathrm{res} \colon G = \operatorname{Gal}(L/K) &\to \operatorname{Gal}(F/K) \\
+\sigma &\mapsto \sigma|_F.
+\end{aligned}}
+
+\p{Then}
+
+##{\ker(\mathrm{res}) = \lbrace \sigma \in \operatorname{Gal}(L/K) : \sigma(x) = x \; \forall x \in F\rbrace  = \operatorname{Gal}(L/F) = H.}
+
+\p{Therefore #{G/H \cong \operatorname{Im}(\mathrm{res}) \leq \operatorname{Gal}(F/K)}. But}
+
+##{\#(G/H) = \frac{\#G}{\#H} = \frac{[L:K]}{[L:F]} = [F:K] = \#\operatorname{Gal}(F/K).}
+
+\p{Therefore #{\mathrm{res}} is surjective and #{\operatorname{Gal}(F/K) \cong G/H}.}
+}

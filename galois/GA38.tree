@@ -1,0 +1,27 @@
+\title{Trace and norm for separable extensions}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite separable extension of degree #{d}. Let #{\sigma_1, \ldots, \sigma_d} be the #{K}-embeddings #{L \hookrightarrow \overline{K}}. Let #{\alpha \in L}. Then}
+
+##{\operatorname{Tr}_{L/K}(\alpha) = \sum_{i=1}^d \sigma_i(\alpha); \qquad N_{L/K}(\alpha) = \prod_{i=1}^d \sigma_i(\alpha).}
+
+\proof{
+\p{Let #{f} be the minimal polynomial of #{\alpha} over #{K}. Let #{\alpha_1, \ldots, \alpha_n} be the roots of #{f} in #{\overline{K}}. By \ref{GA18},}
+
+##{\begin{aligned}
+\operatorname{Hom}_K(K(\alpha), \overline{K}) &\longleftrightarrow \lbrace \alpha_1, \ldots, \alpha_n\rbrace  \\
+\sigma &\longmapsto \sigma(\alpha).
+\end{aligned}}
+
+\p{Since #{L/K(\alpha)} is separable, each #{K}-embedding #{K(\alpha) \hookrightarrow \overline{K}} extends to an embedding #{L \hookrightarrow \overline{K}} in exactly #{m = [L:K(\alpha)]} ways. Therefore}
+
+##{\begin{aligned}
+\operatorname{Tr}_{L/K}(\alpha) &= m \sum_{j=1}^n \alpha_j = \sum_{i=1}^d \sigma_i(\alpha), \\
+N_{L/K}(\alpha) &= \Big( \prod_{j=1}^n \alpha_j \Big)^m = \prod_{i=1}^d \sigma_i(\alpha),
+\end{aligned}}
+
+\p{where the first equalities are by \ref{GA33}, and the second hold since #{\#\lbrace 1 \leq i \leq d \mid \sigma_i(\alpha) = \alpha_j\rbrace  = m}.}
+}

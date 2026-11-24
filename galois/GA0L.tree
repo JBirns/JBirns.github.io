@@ -1,0 +1,21 @@
+\title{Degree of #{\mathbb{Q}(\sqrt[d]{2})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{L = \mathbb{R}}, #{\alpha = \sqrt[d]{2}}. #{\alpha} is a root of #{f(X) = X^d - 2}. #{f} is irreducible in #{\mathbb{Z}[X]} by Eisenstein’s criterion (with #{p = 2}).}
+
+\blockquote{\p{\strong{Eisenstein’s Criterion:} Let #{R} be a UFD and #{f(X) = a_n X^n + \cdots + a_1 X + a_0 \in R[X]} primitive. Suppose there exists #{p \in R} irreducible (#{=} prime) such that}
+\ul{
+\li{#{p \nmid a_n},}
+\li{#{p \mid a_i} for all #{0 \leq i \leq n-1},}
+\li{#{p^2 \nmid a_0}.}
+}
+\p{Then #{f} is irreducible in #{R[X]}.}}
+
+\p{Therefore #{f} is irreducible in #{\mathbb{Q}[X]} by Gauss’ Lemma.}
+
+\blockquote{\p{\strong{Gauss’ Lemma:} Let #{f \in R[X]} be primitive. Then #{f} irreducible in #{R[X] \implies f} irreducible in #{F[X]}.}}
+
+\p{Therefore #{f} is the minimal polynomial of #{\alpha} over #{\mathbb{Q}}, and #{[\mathbb{Q}(\sqrt[d]{2}):\mathbb{Q}] = d}.}

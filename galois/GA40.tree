@@ -1,0 +1,11 @@
+\title{Adjoining #{\zeta_5} to #{\mathbb{F}_p}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime, #{p \equiv 4 \pmod 5}. Let #{K = \mathbb{F}_p}, #{L = \mathbb{F}_{p^2}} and #{n = 5}. Since #{5 \mid (p^2 - 1)} there exists #{\zeta_5 \in L}, a primitive #{5}th root of unity. Since #{5 \nmid (p - 1)} we know #{\zeta_5 \notin K}. Therefore #{L = K(\zeta_5)}. By \ref{GA3Y},}
+
+##{\underbrace{\operatorname{Gal}(L/K)}_{\cong C_2} \hookrightarrow (\mathbb{Z}/5\mathbb{Z})^\times.}
+
+\p{Therefore #{\operatorname{Im}\chi = \lbrace \pm 1\rbrace  \leq (\mathbb{Z}/5\mathbb{Z})^\times}.}

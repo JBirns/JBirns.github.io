@@ -1,0 +1,17 @@
+\title{Irreducible polynomials are usually separable}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} be irreducible. Then #{f} is separable unless #{\operatorname{char}(K) = p > 0} and #{f(X) = g(X^p)} for some #{g \in K[X]}.}
+
+\proof{
+\p{Assume #{f} is monic. Since #{f} is irreducible, #{\gcd(f, f') = 1} or #{f}. If #{f' \neq 0}, then since #{\deg f' < \deg f} we have #{\gcd(f, f') \neq f}. So #{\gcd(f, f') = 1 \iff f} separable.}
+
+\p{Now suppose #{f' = 0}. If #{f = \sum_{i=0}^d c_i X^i} then #{f' = \sum_{i=1}^d i c_i X^{i-1}}, so #{f' = 0 \implies i c_i = 0} for all #{1 \leq i \leq d}.}
+
+\p{If #{\operatorname{char}(K) = 0}, then this implies #{c_i = 0} for all #{1 \leq i \leq d}, so #{f} is constant (hence not irreducible).}
+
+\p{If #{\operatorname{char}(K) = p > 0} we still get #{c_i = 0} for all #{i} with #{p \nmid i}. Therefore #{f(X) = g(X^p)} for some #{g \in K[X]}.}
+}

@@ -1,0 +1,25 @@
+\title{Existence of Splitting Fields}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{0 \neq f \in K[X]}. Then there exists a splitting field for #{f} over #{K}.}
+
+\proof{
+\p{(We adjoin roots of #{f} one at a time.) The proof is by induction on #{\deg f}. If #{\deg f \leq 1} then #{L = K} is the splitting field.}
+
+\p{Now assume every polynomial of degree #{< \deg f} has a splitting field. Let #{g} be an irreducible factor of #{f}. Let}
+
+##{K_1 = \frac{K[X]}{(g)} \quad \text{and} \quad \alpha_1 = X + (g) \in K_1.}
+
+\p{Then #{f(\alpha_1) = 0}. (So #{K_1 = K(\alpha_1)}.) So #{f(X) = (X - \alpha_1) f_1(X)} for some #{f_1 \in K_1[X]} with #{\deg f_1 < \deg f}.}
+
+\p{By the induction hypothesis there exists a splitting field #{L} for #{f_1} over #{K_1}, say #{L = K_1(\alpha_2, \ldots, \alpha_n)} where #{\alpha_2, \ldots, \alpha_n} are the roots of #{f_1} in #{L}.}
+
+\p{We claim that #{L} is a splitting field for #{f} over #{K}. Since #{f_1} splits in #{L}, so does #{f(X) = (X - \alpha_1) f_1(X)}. Moreover,}
+
+##{L = K_1(\alpha_2, \ldots, \alpha_n) = K(\alpha_1, \alpha_2, \ldots, \alpha_n)}
+
+\p{and #{\alpha_1, \ldots, \alpha_n} are roots of #{f}. Therefore #{L} satisfies (i) and (ii).}
+}

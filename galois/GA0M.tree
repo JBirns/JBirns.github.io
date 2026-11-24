@@ -1,0 +1,11 @@
+\title{A method for computing inverses}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \in L} be algebraic over #{K} with minimal polynomial #{f}. Let #{0 \neq \beta \in K(\alpha)}, say #{\beta = g(\alpha)} for some #{g \in K[X]}. Since #{f} is irreducible and #{\beta \neq 0} we see that #{f} and #{g} are coprime. Running Euclid’s algorithm gives #{r, s \in K[X]} such that #{r(X)f(X) + s(X)g(X) = 1}. Then}
+
+##{\underbrace{r(\alpha)f(\alpha)}_{0} + s(\alpha)\underbrace{g(\alpha)}_{\beta} = 1,}
+
+\p{so #{\frac{1}{\beta} = s(\alpha)}.}

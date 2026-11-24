@@ -1,0 +1,11 @@
+\title{Subfields of #{\mathbb{F}_{p^n}}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathbb{F}_{p^n}} has a unique subfield of order #{p^m} for each #{m \mid n}, and no others.}
+
+\proof{
+\p{Apply the Fundamental Theorem of Galois Theory. The subgroups of #{G = \operatorname{Gal}(\mathbb{F}_{p^n}/\mathbb{F}_p) = \langle \phi \rangle \cong C_n} are the subgroups #{H = \langle \phi^m \rangle} for #{m \mid n} (and no others). If #{K = (\mathbb{F}_{p^n})^H} then #{H = \operatorname{Gal}(\mathbb{F}_{p^n}/K)} and #{[K:\mathbb{F}_p] = (G:H) = m} (see (#{*})). Therefore #{\#K = p^m}.}
+}

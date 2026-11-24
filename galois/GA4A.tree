@@ -1,0 +1,7 @@
+\title{#{(K^\times)^n}}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{(K^\times)^n = \lbrace x^n : x \in K^\times\rbrace  \leq K^\times}.}

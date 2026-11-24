@@ -1,0 +1,7 @@
+\title{Composite of fields}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L_1, L_2} be subfields of a field #{M}. The \em{composite} #{L_1 L_2} is the smallest subfield of #{M} to contain #{L_1, L_2} (exists since the intersection of any collection of subfields is a subfield).}

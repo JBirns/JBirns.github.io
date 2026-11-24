@@ -1,0 +1,15 @@
+\title{Uniqueness of algebraic closure}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a field. Let #{L_1} and #{L_2} be algebraic closures of #{K}. Then there exists a #{K}-isomorphism #{\phi \colon L_1 \xrightarrow{\; \sim\; } L_2}.}
+
+\proof{
+\p{Since #{L_1/K} is algebraic and #{L_2/K} is a field extension with #{L_2} algebraically closed, \ref{GA4T} gives a #{K}-embedding #{\phi \colon L_1 \hookrightarrow L_2}.}
+
+##{\begin{array}{c} L_2 \\ \big| \\ \phi(L_1) \\ \big| \\ K \end{array}}
+
+\p{Any #{\alpha \in L_2} is algebraic over #{K}, hence algebraic over #{\phi(L_1)}. But #{\phi(L_1) \cong L_1} is algebraically closed. Therefore #{\alpha \in \phi(L_1)}. This shows #{\phi} is surjective.}
+}

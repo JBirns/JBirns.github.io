@@ -1,0 +1,20 @@
+\title{Trace and norm for Galois extensions}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite Galois extension with #{G = \operatorname{Gal}(L/K)}. Let #{\alpha \in L}. Then}
+
+##{\operatorname{Tr}_{L/K}(\alpha) = \sum_{\sigma \in G} \sigma(\alpha); \qquad N_{L/K}(\alpha) = \prod_{\sigma \in G} \sigma(\alpha).}
+
+\proof{
+\p{By \ref{GA2P} the minimal polynomial of #{\alpha} over #{K} is #{f(X) = \prod_{i=1}^n (X - \alpha_i)} where #{\operatorname{orb}_G(\alpha) = \lbrace \alpha_1, \ldots, \alpha_n\rbrace }. Let #{m = [L:K(\alpha)] = \#\operatorname{Stab}_G(\alpha)}. Then}
+
+##{\begin{aligned}
+\operatorname{Tr}_{L/K}(\alpha) &= m \sum_{i=1}^n \alpha_i = \sum_{\sigma \in G} \sigma(\alpha), \\
+N_{L/K}(\alpha) &= \Big( \prod_{i=1}^n \alpha_i \Big)^m = \prod_{\sigma \in G} \sigma(\alpha),
+\end{aligned}}
+
+\p{where the first equalities are by \ref{GA33}, and the second by the proof of the Orbit–Stabiliser Theorem.}
+}

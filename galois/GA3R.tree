@@ -1,0 +1,38 @@
+\title{Reduction mod #{p}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in \mathbb{Z}[X]} be a monic separable polynomial of degree #{n \geq 1}. Let #{p} be a prime and suppose the reduction of #{f} mod #{p}, say #{\bar f \in \mathbb{F}_p[X]}, is also separable. Then #{\operatorname{Gal}(\bar f/\mathbb{F}_p) \leq \operatorname{Gal}(f/\mathbb{Q})} as subgroups of #{S_n} (up to conjugacy).}
+
+\proof{
+\p{\em{Proof of non-examinable.} Let #{f \in K[X]} be a monic separable polynomial of degree #{n} with splitting field #{L} and roots #{\alpha_1, \ldots, \alpha_n \in L}. Let}
+
+##{F(T_1, \ldots, T_n, X) = \prod_{\sigma \in S_n} \big( X - (\alpha_1 T_{\sigma(1)} + \cdots + \alpha_n T_{\sigma(n)}) \big) \in K[T_1, \ldots, T_n, X].}
+
+\p{Indeed, the coefficients are in #{L} but are also fixed by #{\operatorname{Gal}(L/K)} and so are in #{K}.}
+
+\p{We define an action #{*} of #{S_n} on #{K[T_1, \ldots, T_n, X]} by permuting the #{T_i}, i.e.}
+
+##{(\sigma * h)(T_1, \ldots, T_n, X) = h(T_{\sigma(1)}, \ldots, T_{\sigma(n)}, X).}
+
+\p{We note that #{\sigma * F = F} for all #{\sigma \in S_n}. We need \ref{GA3U}.}
+
+\p{By the symmetric function theorem, the coefficients of #{F} are #{\mathbb{Z}}-coefficient polynomials in the coefficients of #{f}. So if #{f \in \mathbb{Z}[X]} then #{F \in \mathbb{Z}[T_1, \ldots, T_n, X]}. Let #{\bar f \in \mathbb{F}_p[X]}, #{\bar F \in \mathbb{F}_p[T_1, \ldots, T_n, X]} be the polynomials obtained by reducing the coefficients mod #{p}.}
+
+\p{We may equally construct #{\bar F} from #{\bar f} in the same way we constructed #{F} from #{f}. Write}
+
+##{\begin{aligned}
+F &= F_1 F_2 \cdots F_s, \quad F_i \in \mathbb{Z}[T_1, \ldots, T_n, X] \text{ distinct irreducibles} \\
+\\
+\bar F &= \Phi_1 \Phi_2 \cdots \Phi_t, \quad \Phi_i \in \mathbb{F}_p[T_1, \ldots, T_n, X] \text{ distinct irreducibles}.
+\end{aligned}}
+
+\p{(The #{F_i} are also irreducible in #{\mathbb{Q}[T_1, \ldots, T_n, X]} by a variant of Gauss’ Lemma.)
+Without loss of generality #{\Phi_1 \mid \bar F_1} (#{\implies \Phi_1 \nmid \bar F_j} for all #{j > 1}). Then}
+
+##{\lbrace \tau \in S_n \mid \tau * \Phi_1 = \Phi_1\rbrace  \leq \lbrace \tau \in S_n \mid \tau * F_1 = F_1\rbrace .}
+
+\p{\ref{GA3U} shows that, up to conjugacy, #{\operatorname{Gal}(\bar f/\mathbb{F}_p) \leq \operatorname{Gal}(f/\mathbb{Q})}.}
+}

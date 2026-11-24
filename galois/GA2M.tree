@@ -1,0 +1,26 @@
+\title{Galois extensions and a non-example}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\operatorname{Aut}(\mathbb{C}/\mathbb{R}) = \lbrace 1, \tau\rbrace } where #{\tau} is complex conjugation. If #{z \in \mathbb{C}} then #{z \in \mathbb{R} \iff \tau(z) = z}. Therefore #{\mathbb{C}/\mathbb{R}} is Galois.}
+\li{\p{\strong{(ii)} Let #{L = \mathbb{Q}(\sqrt{2})}, #{f(X) = X^2 - 2}. Then #{\operatorname{Aut}(L/\mathbb{Q}) \longleftrightarrow \lbrace \text{roots of } f \text{ in } L\rbrace }. Therefore #{\operatorname{Aut}(L/\mathbb{Q}) = \lbrace 1, \tau\rbrace } where}
+##{\begin{aligned}
+\tau \colon \mathbb{Q}(\sqrt{2}) &\to \mathbb{Q}(\sqrt{2}) \\
+a + b\sqrt{2} &\mapsto a - b\sqrt{2} \qquad (a, b \in \mathbb{Q}).
+\end{aligned}}
+\p{Then}
+##{L^\tau = \lbrace a + b\sqrt{2} : a + b\sqrt{2} = a - b\sqrt{2}\rbrace  = \lbrace a + b\sqrt{2} : b = 0\rbrace  = \mathbb{Q}.}
+\p{Therefore #{L/\mathbb{Q}} is Galois.}}
+\li{\strong{(iii)} (Non-example.) Let #{L = \mathbb{Q}(\sqrt[3]{2})}, #{f(X) = X^3 - 2}. Then #{\operatorname{Aut}(L/\mathbb{Q}) \longleftrightarrow \lbrace \text{roots of } f \text{ in } L\rbrace }. Since #{L \subset \mathbb{R}}, we see that #{\operatorname{Aut}(L/\mathbb{Q}) = 1}. Therefore #{L/\mathbb{Q}} is \em{not} Galois.}
+\li{\p{\strong{(iv)} Let #{K/\mathbb{F}_p} be a finite extension (#{\implies |K| < \infty}). Let}
+##{\begin{aligned}
+\phi \colon K &\to K \\
+x &\mapsto x^p.
+\end{aligned}}
+\p{By \ref{GA0D}, #{\phi \in \operatorname{Aut}(K/\mathbb{F}_p)}. Then}
+##{K^\phi = \lbrace x \in K : \phi(x) = x\rbrace  = \lbrace \text{roots of } X^p - X \text{ in } K\rbrace  \supset \mathbb{F}_p,}
+\p{and this is an equality by \ref{GA04}. Therefore #{K/\mathbb{F}_p} is Galois.}}
+}

@@ -1,0 +1,12 @@
+\title{Splitting field}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a field and #{0 \neq f \in K[X]}. An extension #{L/K} is a \em{splitting field} of #{f} over #{K} if:}
+
+\ul{
+\li{\strong{(i)} #{f} splits into linear factors over #{L};}
+\li{\strong{(ii)} #{L = K(\alpha_1, \ldots, \alpha_n)} where the #{\alpha_i} are the roots of #{f}.}
+}

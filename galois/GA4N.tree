@@ -1,0 +1,7 @@
+\title{Zorn’s Lemma}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{S} be a nonempty partially ordered set. Assume that every chain in #{S} has an upper bound. Then #{S} has a maximal element.}

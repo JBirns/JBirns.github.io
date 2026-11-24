@@ -1,0 +1,27 @@
+\title{The discriminant and #{A_n}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\operatorname{char} K \neq 2}. Let #{\Delta = \operatorname{Disc}(f)}. The fixed field of #{\operatorname{Gal}(f/K) \cap A_n} is #{K(\sqrt{\Delta})}. In particular, #{\operatorname{Gal}(f/K) \leq A_n \iff \Delta} is a square in #{K}.}
+
+\proof{
+\p{The sign of a permutation #{\pi \in S_n} is defined so that (as an identity in #{\mathbb{Z}[X_1, \ldots, X_n]}) we have}
+
+##{\prod_{i < j} (X_{\pi(i)} - X_{\pi(j)}) = \operatorname{sign}(\pi) \prod_{i < j} (X_i - X_j).}
+
+\p{We put #{\delta = \prod_{i<j} (\alpha_i - \alpha_j)} so that #{\delta^2 = \Delta}. So if #{\sigma \in G = \operatorname{Gal}(f/K) = \operatorname{Gal}(L/K)} then #{\sigma(\delta) = \operatorname{sign}(\sigma) \cdot \delta}. As #{f} is separable and #{\operatorname{char} K \neq 2}, #{\delta \neq -\delta}. Therefore}
+
+##{\begin{aligned}
+G \cap A_n &= \lbrace \sigma \in G : \operatorname{sign}(\sigma) = 1\rbrace  \\
+&= \lbrace \sigma \in G : \sigma(\delta) = \delta\rbrace  \\
+&= \operatorname{Gal}(L/K(\delta)).
+\end{aligned}}
+
+\p{Therefore #{L^{G \cap A_n} = K(\delta) = K(\sqrt{\Delta})}.}
+
+\p{In particular}
+
+##{G \leq A_n \iff G \cap A_n = G \iff K(\sqrt{\Delta}) = K \iff \Delta \text{ is a square in } K.}
+}

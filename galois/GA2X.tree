@@ -1,0 +1,7 @@
+\title{Galois closure of #{\mathbb{Q}(\sqrt[3]{2})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathbb{Q}(\sqrt[3]{2})} has Galois closure #{\mathbb{Q}(\omega, \sqrt[3]{2})/\mathbb{Q}}, where #{\omega = e^{2\pi i/3}}.}

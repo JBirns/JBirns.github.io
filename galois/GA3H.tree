@@ -1,0 +1,15 @@
+\title{Irreducible if and only if transitive}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} be a separable polynomial. Then #{f} is irreducible #{\iff \operatorname{Gal}(f/K)} is transitive.}
+
+\p{(Recall #{H \leq S_n} is \em{transitive} if for all #{i, j \in [n]} there exists #{\sigma \in H} such that #{\sigma(i) = j}.)}
+
+\proof{
+\p{(#{\Leftarrow}) If #{f = gh}, #{g, h \in K[X]}, #{\deg g, \deg h > 0}, then #{\operatorname{Gal}(f/K)} sends roots of #{g} to roots of #{g} (and not to roots of #{h}), so cannot act transitively on the roots of #{f}.}
+
+\p{(#{\Rightarrow}) Without loss of generality #{f} is monic. Let #{\alpha \in L} be a root of #{f}. Then #{f} is the minimal polynomial of #{\alpha} over #{K}. By \ref{GA2P}, #{\lbrace \sigma(\alpha) : \sigma \in \operatorname{Gal}(L/K)\rbrace  = \lbrace \text{roots of } f \text{ in } L\rbrace }. Therefore the group #{\operatorname{Gal}(L/K)} acts transitively on #{\alpha_1, \ldots, \alpha_n}, so #{\operatorname{Gal}(f/K) \leq S_n} is a transitive subgroup.}
+}

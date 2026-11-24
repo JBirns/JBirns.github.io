@@ -1,0 +1,13 @@
+\title{Every nonzero ring has a maximal ideal}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{R} be a nonzero ring. Let #{(S, \leq)} be the set of all proper ideals of #{R} ordered by inclusion.}
+
+\p{#{R} non-zero #{\implies \lbrace 0\rbrace  \in S \implies S} non-empty. If #{T \subset S} is a chain, then let #{J = \bigcup_{I \in T} I}.}
+
+\p{If #{x, y \in J} then #{x \in I_1} and #{y \in I_2} for some #{I_1, I_2 \in T}. #{T} totally ordered #{\implies} either #{I_1 \subseteq I_2} or #{I_2 \subseteq I_1} #{\implies x + y \in J}. Also #{r \in R}, #{x \in J \implies rx \in J}. So #{J} is an ideal in #{R}. It is a proper ideal since #{1 \notin J}. Therefore #{J \in S} is an upper bound for #{T}.}
+
+\p{Zorn’s Lemma shows #{S} has a maximal element, hence #{R} has a maximal ideal.}

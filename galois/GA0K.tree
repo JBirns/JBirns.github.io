@@ -1,0 +1,7 @@
+\title{Algebraic elements and minimal polynomials}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say #{\alpha} is \em{algebraic} over #{K} if #{f \neq 0}. In this case, #{f} is irreducible and unique up to multiplication by elements of #{K^\times}. We scale #{f} so that it is monic; #{f} is called the \em{minimal polynomial} of #{\alpha} over #{K}. It is the monic polynomial in #{K[X]} of least degree with #{\alpha} as a root.}

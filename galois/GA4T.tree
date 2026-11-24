@@ -1,0 +1,26 @@
+\title{Embedding into an algebraically closed field}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be an algebraic extension and #{M/K} a field extension with #{M} algebraically closed. Then there exists a #{K}-embedding of #{L \hookrightarrow M}.}
+
+\proof{
+\p{Let}
+
+##{S = \lbrace (F, \sigma) : K \subset F \subset L,\; \sigma \colon F \hookrightarrow M \text{ a } K\text{-embedding}\rbrace}
+
+\p{with partial order #{(F_1, \sigma_1) \leq (F_2, \sigma_2)} if #{F_1 \subset F_2} and #{\sigma_2|_{F_1} = \sigma_1}. Then #{(S, \leq)} is a poset. It is nonempty as #{(K, \mathrm{id}) \in S}.}
+
+\p{Suppose #{T = \lbrace (F_i, \sigma_i) : i \in I\rbrace } is a chain (where #{I} is some indexing set (can be uncountable)). Let #{F = \bigcup_{i \in I} F_i} (a field since #{T} is totally ordered). Define}
+
+##{\begin{aligned}
+\sigma \colon F &\to M \\
+x &\mapsto \sigma_i(x) \quad \text{if } x \in F_i.
+\end{aligned}}
+
+\p{This is well defined since #{\sigma_i} and #{\sigma_j} agree on #{F_i \cap F_j} (again since #{T} is totally ordered). Then #{(F, \sigma) \in S} is an upper bound for #{T}. Zorn’s Lemma #{\implies S} has a maximal element #{(F, \sigma)}.}
+
+\p{Let #{\alpha \in L}. Then #{\alpha} is algebraic over #{K}, hence algebraic over #{F}. By \ref{GA1B} we may extend #{\sigma \colon F \hookrightarrow M} to #{\tau \colon F(\alpha) \hookrightarrow M} (using #{M} is algebraically closed). Then #{(F, \sigma) \leq (F(\alpha), \tau)}. #{(F, \sigma)} maximal #{\implies F(\alpha) = F \implies \alpha \in F}. Therefore #{F = L} and #{\sigma \colon L \hookrightarrow M} is a #{K}-embedding as required.}
+}

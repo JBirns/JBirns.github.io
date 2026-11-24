@@ -1,0 +1,33 @@
+\title{Counting embeddings}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty}. Write #{L = K(\alpha_1, \ldots, \alpha_n)} and #{f_i = } minimal polynomial of #{\alpha_i} over #{K}. Let #{M/K} be any field extension. Then}
+
+##{\#\operatorname{Hom}_K(L, M) \leq [L:K]}
+
+\p{with equality #{\iff} each #{f_i} splits into distinct linear factors over #{M}.}
+
+\proof{
+\p{By induction on #{n}. The case #{n = 1} was proved in \ref{GA2A}. So suppose #{n > 1}. Let #{K_1 = K(\alpha_1)}.}
+
+##{\begin{array}{rcl} K(\alpha_1, \ldots, \alpha_n) = L & \dashrightarrow & M \\ \big| & & \\ K(\alpha_1) = K_1 & \xrightarrow{\sigma} & M \\ \big| & & \\ K & \hookrightarrow & M \end{array}}
+
+\p{\ref{GA2A} #{\implies}}
+
+##{\#\operatorname{Hom}_K(K_1, M) \leq [K_1:K].
+ \qquad (1)}
+
+\p{Let #{\sigma \in \operatorname{Hom}_K(K_1, M)}. By the induction hypothesis,}
+
+##{\#\lbrace \sigma\text{-homomorphisms } L = K_1(\alpha_2, \ldots, \alpha_n) \to M\rbrace  \leq [L:K_1].
+ \qquad (2)}
+
+\p{(1) and (2) #{\implies \#\operatorname{Hom}_K(L, M) \leq [K_1:K][L:K_1] = [L:K]}.}
+
+\p{If equality holds, then equality holds in (1) and (2). Equality in (1) #{\implies f_1} splits into distinct linear factors over #{M}. Reordering the #{\alpha_i} gives the same conclusion for all the #{f_i}.}
+
+\p{Conversely, if each #{f_i} splits into distinct linear factors over #{M}, the lemma gives equality in (1). For #{2 \leq i \leq n}, the minimal polynomial of #{\alpha_i} over #{K_1} divides #{f_i} and so splits into distinct linear factors over #{M}. The induction hypothesis #{\implies} equality holds in (2). Now we have equality in (1) and (2), so it follows that #{\#\operatorname{Hom}_K(L, M) = [L:K]}.}
+}

@@ -1,0 +1,14 @@
+\title{A quartic with Galois group #{S_4}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{f(X) = X^4 - 3X + 1}.}
+
+\ul{
+\li{Mod #{2}: #{\bar f = X^4 + X + 1 \in \mathbb{F}_2[X]} is irreducible (#{\implies} #{f} irreducible in #{\mathbb{Q}}).}
+\li{Mod #{5}: #{\bar f = (X + 1)\underbrace{(X^3 - X^2 + X + 1)}_{\text{irreducible}}}.}
+}
+
+\p{Therefore #{\operatorname{Gal}(f/\mathbb{Q})} contains a #{3}-cycle and a #{4}-cycle (which is odd). Lagrange gives that #{12 \mid |\operatorname{Gal}(f/\mathbb{Q})|}, so it is #{A_4} or #{S_4}. But a #{4}-cycle is odd #{\implies} it is #{S_4}.}

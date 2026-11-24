@@ -1,0 +1,11 @@
+\title{Finite subgroups of #{K^\times} are cyclic}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{K} is a field then any finite subgroup #{G \subset K^\times} is cyclic. In particular, if #{K} is a finite field then #{K^\times} is cyclic.}
+
+\proof{
+\p{The structure theorem for finite abelian groups gives #{G \cong C_{d_1} \times C_{d_2} \times \cdots \times C_{d_t}} where #{1 < d_1 \mid \cdots \mid d_t}. If #{G} is not cyclic then picking a prime #{p} dividing #{d_1} shows #{G} contains a subgroup isomorphic to #{C_p \times C_p}. Hence the polynomial #{X^p - 1} has #{\geq p^2} roots in #{K}, contradicting \ref{GA04}.}
+}

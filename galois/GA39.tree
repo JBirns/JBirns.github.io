@@ -1,0 +1,28 @@
+\title{Finite Fields}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Fix #{p} a prime. Recall #{\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}}. We describe all finite fields of characteristic #{p} and their Galois theory. (These are necessarily finite extensions of #{\mathbb{F}_p}, since we always have #{\mathbb{F}_p} as the prime subfield.)}
+
+\p{We recall:}
+
+\ul{
+\li{\ref{GA0B}: #{\#K = p^n} where #{n = [K:\mathbb{F}_p]}.}
+\li{\ref{GA0C}: #{K^\times} is cyclic of order #{p^n - 1}.}
+\li{\ref{GA0D}: #{\phi \colon K \to K}, #{x \mapsto x^p} is a ring homomorphism (called the \em{Frobenius}).}
+}
+
+\p{N.B. #{\phi} is an automorphism of #{K} (injective since it is a homomorphism of fields, hence surjective since #{|K| < \infty}).}
+
+\transclude{GA3A}
+
+\transclude{GA3B}
+
+\transclude{GA3C}
+
+\transclude{GA3D}
+
+\transclude{GA3E}
+
+\transclude{GA3F}

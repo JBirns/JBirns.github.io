@@ -1,0 +1,7 @@
+\title{Towards Artin's theorem}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K = L^G}. Then #{G \subset \operatorname{Aut}(L/K)} and #{K \subset L^{\operatorname{Aut}(L/K)} \subset L^G = K}. Therefore #{K = L^{\operatorname{Aut}(L/K)}}. If we knew #{L/K} was algebraic then it would follow (by definition) that #{L/K} is Galois. If moreover we knew #{L/K} was finite then #{L^G = L^{\operatorname{Gal}(L/K)} \implies G = \operatorname{Gal}(L/K)} by \ref{GA2Q}.}

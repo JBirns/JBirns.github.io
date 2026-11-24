@@ -1,0 +1,91 @@
+\title{Field Extensions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{GA02}
+
+\transclude{GA03}
+
+\p{Then #{K} contains a smallest subfield (the \em{prime subfield}), which is isomorphic to #{\mathbb{F}_p = \mathbb{Z}/p\mathbb{Z}} if #{K} has characteristic #{p}, and to #{\mathbb{Q}} if it has characteristic #{0}.}
+
+\transclude{GA04}
+
+\transclude{GA05}
+
+\p{We note that #{L} and #{K} necessarily have the same characteristic.}
+
+\transclude{GA06}
+
+\p{Let #{L/K} be a field extension. Then #{+} in #{L} and #{\times} by elements in #{K} make #{L} a vector space over #{K}. (E.g. #{\mathbb{C}} is an #{\mathbb{R}}-vector space.)}
+
+\transclude{GA07}
+
+\transclude{GA08}
+
+\transclude{GA09}
+
+\transclude{GA0A}
+
+\transclude{GA0B}
+
+\p{Later we will show that (up to isomorphism) there is exactly one field of order #{p^n} for each prime power #{p^n}.}
+
+\p{The multiplicative group of a field #{K} is the set #{K^\times = K \setminus \lbrace 0\rbrace }, which is an abelian group under #{\times}.}
+
+\transclude{GA0C}
+
+\transclude{GA0D}
+
+\transclude{GA0E}
+
+\transclude{GA0F}
+
+\transclude{GA0G}
+
+\transclude{GA0H}
+
+\transclude{GA0I}
+
+\p{\strong{Exercise.} Check that #{K(\alpha_1, \ldots, \alpha_n) = K(\alpha_1, \ldots, \alpha_{n-1})(\alpha_n)}.}
+
+\transclude{GA0J}
+
+\p{Let #{L/K} be a field extension and #{\alpha \in L}. Then there is a unique ring homomorphism #{\phi \colon K[X] \to L} such that #{\phi(c) = c} for all #{c \in K} and #{\phi(X) = \alpha}. Indeed #{\phi\big(\sum c_i X^i\big) = \sum c_i \alpha^i}, #{c_i \in K} (i.e. #{\phi} is ``evaluation at #{\alpha}’’).}
+
+\p{#{K[X]} is a PID #{\implies \ker\phi = (f)} for some #{f \in K[X]}.}
+
+\transclude{GA0K}
+
+\p{By the isomorphism theorem for rings,}
+
+##{\underbrace{\frac{K[X]}{(f)}}_{\text{a field}} \cong K[\alpha]}
+
+\p{(the quotient is a field by \ref{GA06}(ii)).
+Therefore #{K(\alpha) = K[\alpha]} (we usually write #{K(\alpha)}).}
+
+\p{Moreover #{[K(\alpha):K] = \deg f}, since if #{\deg f = n} then #{1, \alpha, \alpha^2, \ldots, \alpha^{n-1}} is a #{K}-basis for #{K(\alpha)}.}
+
+\transclude{GA0L}
+
+\transclude{GA0M}
+
+\p{\strong{Summary.} Let #{L/K} be a field extension and #{\alpha \in L}. We saw that if #{\alpha} is algebraic over #{K}, say with minimal polynomial #{f \in K[X]}, then #{K(\alpha) = K[\alpha]} and #{[K(\alpha):K] = \deg f}.}
+
+\transclude{GA0N}
+
+\transclude{GA0O}
+
+\transclude{GA0P}
+
+\transclude{GA0Q}
+
+\transclude{GA0R}
+
+\transclude{GA0S}
+
+\transclude{GA0T}
+
+\transclude{GA0U}
+
+\transclude{GA0V}

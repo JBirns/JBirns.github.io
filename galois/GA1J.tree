@@ -1,0 +1,7 @@
+\title{#{\mathbb{C}} is algebraically closed}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathbb{C}}, by the Fundamental Theorem of Algebra.}

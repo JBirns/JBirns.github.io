@@ -1,0 +1,11 @@
+\title{A criterion for algebraic closure}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be an algebraic extension such that every polynomial in #{K[X]} splits into linear factors over #{L}. Then #{L} is algebraically closed (and hence an algebraic closure of #{K}).}
+
+\proof{
+\p{If #{L} is not algebraically closed, then by \ref{GA1K} there exists an extension #{M/L}, algebraic, with #{[M:L] > 1}. Both #{M/L} and #{L/K} are algebraic, so by \ref{GA0V} #{M/K} is algebraic. Pick #{\alpha \in M}. Let #{f} be the minimal polynomial for #{\alpha} over #{K}. By our assumption #{f} splits over #{L}, so #{\alpha \in L}. Therefore #{M = L}, a contradiction.}
+}

@@ -1,0 +1,11 @@
+\title{Separable polynomial}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An irreducible polynomial #{f \in K[X]} is \em{separable} if it splits into distinct linear factors in a splitting field.}
+
+\p{The convention in this course is that we use the same definition for any #{0 \neq f \in K[X]}.}
+
+\p{Anything which is not separable is called \em{inseparable}.}

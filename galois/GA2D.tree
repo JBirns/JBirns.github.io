@@ -1,0 +1,9 @@
+\title{Remarks on separability}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{(ii) #{\Rightarrow} (i) is the result promised at the start of the lecture.}
+
+\p{(i) #{\iff} (iv) is a useful characterisation of separable extensions.}

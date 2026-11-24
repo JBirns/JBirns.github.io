@@ -1,0 +1,46 @@
+\title{Classification of Finite Galois Extensions}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty} and #{G = \operatorname{Aut}(L/K)}. The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{L/K} is Galois, i.e. #{K = L^G}.}
+\li{\strong{(ii)} #{L/K} is normal and separable.}
+\li{\strong{(iii)} #{L} is a splitting field of a separable polynomial over #{K}.}
+\li{\strong{(iv)} #{\#G = [L:K]} (i.e. equality holds in \ref{GA2J}).}
+}
+
+\proof{
+\p{(i) #{\Rightarrow} (ii): Let #{\alpha \in L} and #{\lbrace \sigma(\alpha) : \sigma \in G\rbrace  = \lbrace \alpha_1, \ldots, \alpha_m\rbrace } with #{\alpha_1, \ldots, \alpha_m} distinct. Let}
+
+##{f(X) = \prod_{i=1}^m (X - \alpha_i).}
+
+\p{We let #{\sigma \in G} act on #{L[X]} via #{\sigma\big(\sum c_i X^i\big) = \sum \sigma(c_i) X^i}. Since #{G} permutes the #{\alpha_i} we have #{\sigma f = f} for all #{\sigma \in G}. #{L/K} Galois #{\implies f \in K[X]} (since all coefficients are fixed by #{G}).}
+
+\p{Let #{g} be the minimal polynomial of #{\alpha} over #{K}. Since #{f(\alpha) = 0} we have #{g \mid f}. Since}
+
+##{g(\sigma(\alpha)) = \sigma(g(\alpha)) = 0 \quad \forall \sigma \in G}
+
+\p{(since all coefficients of #{g} are in #{K}), every root of #{f} is a root of #{g}. By construction #{f} is separable and monic. Therefore #{f = g}. So the minimal polynomial of #{\alpha} over #{K} splits into distinct linear factors over #{L}. Since #{\alpha \in L} was arbitrary, this shows that #{L/K} is normal and separable.}
+
+\p{(ii) #{\Rightarrow} (iii): By \ref{GA1Y}, #{L} is the splitting field of some #{f \in K[X]}. Write #{f = \prod_{i=1}^m f_i^{e_i}} where the #{f_i} are distinct irreducibles in #{K[X]} and #{e_i \geq 1}. #{L/K} separable #{\implies f_i} is separable for all #{i}. Moreover}
+
+##{\gcd(f_i, f_j) = 1 \text{ in } K[X] \implies \gcd(f_i, f_j) = 1 \text{ in } L[X]}
+
+\p{by \ref{GA21}. Therefore #{g = \prod_{i=1}^m f_i} is separable, and #{L} is a splitting field for #{g} over #{K}.}
+
+\p{(iii) #{\Rightarrow} (iv): Let #{L} be the splitting field of a separable polynomial #{f \in K[X]}. Then #{L = K(\alpha_1, \ldots, \alpha_n)} where #{\alpha_1, \ldots, \alpha_n} are the roots of #{f}. The minimal polynomial #{f_i} of each #{\alpha_i} divides #{f}, and so #{f} splits into distinct linear factors over #{L}. Taking #{M = L} in \ref{GA2B} gives #{\#\operatorname{Aut}(L/K) = [L:K]}.}
+
+\p{(iv) #{\Rightarrow} (i):}
+
+##{\begin{array}{c} L \\ \big| \\ L^G \\ \big| \\ K \end{array}}
+
+\p{#{G \subset \operatorname{Aut}(L/L^G) \subset \operatorname{Aut}(L/K) = G}. Therefore #{G = \operatorname{Aut}(L/L^G)}. Then}
+
+##{[L:K] \overset{\text{(iv)}}{=} \#G = \#\operatorname{Aut}(L/L^G) \leq [L:L^G]}
+
+\p{by \ref{GA2J}. Therefore #{[L:L^G][L^G:K] \leq [L:L^G]}, so #{L^G = K}.}
+}

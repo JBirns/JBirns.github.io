@@ -1,0 +1,22 @@
+\title{Characterisations of separable extensions}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty}. Write #{L = K(\alpha_1, \ldots, \alpha_n)} and #{f_i = } minimal polynomial of #{\alpha_i} over #{K}. Let #{M/K} be any field extension in which #{\prod f_i} splits as a product of linear factors (e.g. #{M = \overline{K}}). The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{L/K} is separable.}
+\li{\strong{(ii)} Each #{\alpha_i} is separable over #{K}.}
+\li{\strong{(iii)} Each #{f_i} splits into distinct linear factors over #{M}.}
+\li{\strong{(iv)} #{\#\operatorname{Hom}_K(L, M) = [L:K]}.}
+}
+
+\proof{
+\p{(i) #{\Rightarrow} (ii) #{\Rightarrow} (iii) by definition.}
+
+\p{(iii) #{\Rightarrow} (iv): done by \ref{GA2B}.}
+
+\p{(iv) #{\Rightarrow} (i): Let #{\beta \in L}. Applying \ref{GA2B} to #{L = K(\alpha_1, \ldots, \alpha_n, \beta)} shows #{\beta} is separable over #{K}.}
+}

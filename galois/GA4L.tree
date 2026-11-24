@@ -1,0 +1,17 @@
+\title{A quintic not soluble by radicals}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{f(X) = X^5 - X + a}, #{a \in \mathbb{Z}}, #{\gcd(a, 10) = 1}.}
+
+##{f \equiv X^5 + X + 1 = (X^2 + X + 1)(X^3 + X^2 + 1) \pmod 2}
+
+\p{#{\implies \operatorname{Gal}(f/\mathbb{Q})} contains an element #{\sigma} of cycle type #{(2, 3)} #{\implies \sigma^3} is a transposition.}
+
+\p{Example Sheet 4 Q5 #{\implies \bar f \in \mathbb{F}_5[X]} is irreducible #{\implies \operatorname{Gal}(f/\mathbb{Q})} contains a #{5}-cycle.}
+
+\p{Example Sheet 3 Q7(i): #{p} a prime. If #{G \leq S_p} is a subgroup containing a #{p}-cycle and a transposition, then #{G = S_p}.}
+
+\p{Therefore #{\operatorname{Gal}(f/\mathbb{Q}) = S_5} and #{f} is \em{not} soluble by radicals.}

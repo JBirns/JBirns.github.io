@@ -1,0 +1,7 @@
+\title{Converse of the constructibility theorem}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{It can be shown that #{(x \pm y, 0)}, #{(\frac{x}{y}, 0)} and #{(\sqrt{x}, 0)} are constructible from #{\lbrace (0,0), (1,0), (x,0), (y,0)\rbrace }. So the converse of \ref{GA11} also holds, i.e. #{\mathbb{Q}(x)} constructible #{\implies x} constructible.}

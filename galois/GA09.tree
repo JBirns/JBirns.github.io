@@ -1,0 +1,11 @@
+\title{Field homomorphisms are injective}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K, L} be fields and #{\phi \colon K \to L} a ring homomorphism. Then #{\ker(\phi)} is an ideal in #{K}, and since #{K} is a field, #{\ker(\phi) = \lbrace 0\rbrace } or #{K}. Since #{\phi(1_K) = 1_L} (by definition of ring homomorphism) we must have #{\ker(\phi) = \lbrace 0\rbrace }, i.e. #{\phi} is injective.}
+
+\p{We call #{\phi} an \em{embedding} of #{K} in #{L}.}
+
+\p{We may use #{\phi} to identify #{K} as a subfield of #{L}, i.e. we get a field extension #{L/K}.}

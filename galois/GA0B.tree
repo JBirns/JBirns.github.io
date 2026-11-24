@@ -1,0 +1,11 @@
+\title{Order of a finite field}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a finite field of characteristic #{p} (necessarily #{>0}). Then #{\#K = p^n} where #{n = [K:\mathbb{F}_p]}.}
+
+\proof{
+\p{#{[K:\mathbb{F}_p] = n \implies K \cong \mathbb{F}_p^n} as an #{\mathbb{F}_p}-vector space.}
+}

@@ -1,0 +1,15 @@
+\title{Adjoining radicals to a Galois extension}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite Galois extension, #{\operatorname{Gal}(L/K) = \lbrace \sigma_1, \ldots, \sigma_m\rbrace } (say #{\sigma_1 = \mathrm{id}}). Let #{a \in L^\times} and #{n \geq 1}. Then}
+
+##{M = L\big(\mu_n, \sqrt[n]{\sigma_1(a)}, \ldots, \sqrt[n]{\sigma_m(a)}\big)}
+
+\p{is a Galois extension of #{K}.}
+
+\proof{
+\p{Let #{f(X) = \prod_{i=1}^m (X^n - \sigma_i(a)) \in K[X]}. Then #{M} is the composite of #{L} and the splitting field of #{f} over #{K}. Therefore #{M/K} is Galois by \ref{GA2U}(ii).}
+}

@@ -1,0 +1,9 @@
+\title{#{\mathbb{Q}(\sqrt{2})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathbb{Q}(\sqrt{2}) = \lbrace  a + b\sqrt{2} : a, b \in \mathbb{Q} \rbrace  \subset \mathbb{R}} (normally use that #{\frac{1}{a+b\sqrt{2}} = \frac{a - b\sqrt{2}}{a^2 - 2b^2}}).}
+
+\p{Note that #{\mathbb{Q}(\sqrt{2}) = \mathbb{Q}(1+\sqrt{2}) = \mathbb{Q}\big(\frac{17}{3-\sqrt{2}}\big)}, etc.}

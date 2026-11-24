@@ -1,0 +1,7 @@
+\title{Field extension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L} be a field and #{K \subset L} a subfield. We say #{L} is an \em{extension} of #{K}, written #{L/K}.}

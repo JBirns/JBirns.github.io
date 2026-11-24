@@ -1,0 +1,15 @@
+\title{Trace and norm}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{trace} and \em{norm} of #{\alpha} are}
+
+##{\operatorname{Tr}_{L/K}(\alpha) = \operatorname{tr}(m_\alpha); \qquad N_{L/K}(\alpha) = \det(m_\alpha).}
+
+\p{Concretely, if #{L} has #{K}-basis #{v_1, \ldots, v_n} and #{A = (a_{ij})} is the unique #{n \times n} matrix with entries in #{K} such that}
+
+##{\alpha v_j = \sum_i a_{ij} v_i \quad \forall\, 1 \leq j \leq n,}
+
+\p{then #{\operatorname{Tr}_{L/K}(\alpha) = \operatorname{tr} A} and #{N_{L/K}(\alpha) = \det A}.}

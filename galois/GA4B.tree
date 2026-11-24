@@ -1,0 +1,30 @@
+\title{Degree of a Kummer extension}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\mu_n \subset K} and #{a \in K^\times}. Then #{[K(\sqrt[n]{a}):K] = } order of #{a} in #{K^\times /(K^\times)^n}. In particular, #{X^n - a} is irreducible in #{K[X]} #{\iff} #{a} is not a #{d}th power in #{K} for any #{1 < d \mid n}.}
+
+\proof{
+\p{Let #{\alpha = \sqrt[n]{a}} and #{G = \operatorname{Gal}(K(\alpha)/K)}. Then}
+
+##{\begin{aligned}
+a^m \in (K^\times)^n &\iff \alpha^m \in K^\times \quad (\text{using } \mu_n \subset K) \\
+&\iff \sigma(\alpha^m) = \alpha^m \; \forall \sigma \in G \\
+&\iff \theta(\sigma)^m = 1 \; \forall \sigma \in G \\
+&\iff \operatorname{Im}\theta \subset \mu_m \\
+&\iff [K(\alpha):K] = \#\operatorname{Im}\theta \text{ divides } m.
+\end{aligned}}
+
+\p{Therefore #{[K(\alpha):K] = } least #{m} such that #{a^m \in (K^\times)^n}. Then}
+
+##{\begin{aligned}
+X^n - a \text{ irreducible in } K[X] &\iff [K(\alpha):K] = n \\
+&\iff a \text{ has order } n \text{ in } K^\times /(K^\times)^n \\
+&\iff \nexists\, m \mid n,\; m < n \text{ such that } a^m \in (K^\times)^n \\
+&\iff \nexists\, 1 < d \mid n \text{ with } a \in (K^\times)^d
+\end{aligned}}
+
+\p{(for the last step, put #{n = md} and use that #{\mu_n \subset K}).}
+}

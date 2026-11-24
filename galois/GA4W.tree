@@ -1,0 +1,26 @@
+\title{Artin’s Theorem on invariants}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L} be a field and #{G \leq \operatorname{Aut}(L)} a finite subgroup. Then #{L/L^G} is a finite Galois extension with Galois group #{G}. In particular, #{[L:L^G] = \#G}.}
+
+\proof{
+\p{Let #{K = L^G}. Pick any #{\alpha \in L}. Let #{f(X) = \prod_{i=1}^m (X - \alpha_i)} where #{\alpha_1, \ldots, \alpha_m} are the distinct elements of #{\operatorname{orb}_G(\alpha) = \lbrace \sigma(\alpha) : \sigma \in G\rbrace }. Then #{\sigma f = f} for all #{\sigma \in G \implies f \in K[X]}. Therefore #{\alpha} is algebraic and separable over #{K}. So #{L/K} is algebraic and separable, and}
+
+##{[K(\alpha):K] \leq \#G \quad \forall \alpha \in L.
+ \qquad (*)}
+
+\p{Now pick #{\alpha \in L} with #{[K(\alpha):K]} maximal.}
+
+\p{\strong{Claim.} #{L = K(\alpha)}.}
+
+\p{\em{Proof of claim.} Let #{\beta \in L}. Then #{K(\alpha, \beta)/K} is finite and separable #{\implies} by the Theorem of the Primitive Element, #{K(\alpha, \beta) = K(\theta)} for some #{\theta \in L}. The choice of #{\alpha} #{\implies [K(\theta):K] \leq [K(\alpha):K]}. Since #{K(\alpha) \subset K(\theta)}, this gives #{K(\alpha) = K(\theta)} and hence #{\beta \in K(\alpha)}. This proves the claim. #{\square}}
+
+\p{Now}
+
+##{\#\operatorname{Aut}(L/K) \leq [L:K] = [K(\alpha):K] \leq \#G}
+
+\p{by (#{*}). Since #{G \subset \operatorname{Aut}(L/K)} it follows that #{\#\operatorname{Aut}(L/K) = [L:K]} and #{G = \operatorname{Aut}(L/K)}. Then #{L/K} is Galois by \ref{GA2N}, so #{G = \operatorname{Gal}(L/K)}.}
+}

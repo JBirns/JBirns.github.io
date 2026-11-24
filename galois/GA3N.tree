@@ -1,0 +1,36 @@
+\title{The resolvent cubic and the Galois group}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f, g} be as above.}
+
+\ul{
+\li{\strong{(i)} If #{f \in K[X]}, then #{g \in K[X]}.}
+\li{\strong{(ii)} If #{f} is separable, then #{g} is separable.}
+\li{\strong{(iii)} If (i) and (ii) hold then #{\pi(\operatorname{Gal}(f/K)) = \operatorname{Gal}(g/K)}.}
+}
+
+\p{In particular, if #{f} is irreducible then #{\operatorname{Gal}(g/K)} determines #{\operatorname{Gal}(f/K)} up to ambiguity between #{C_4} and #{D_8} when #{\#\operatorname{Gal}(g/K) = 2}.}
+
+\proof{
+\p{(i) More generally, each coefficient of #{g} is a symmetric polynomial in #{\mathbb{Z}[\beta_1, \beta_2, \beta_3]}, hence a symmetric polynomial in #{\mathbb{Z}[\alpha_1, \ldots, \alpha_4]}, and so, by the symmetric function theorem, is a polynomial with #{\mathbb{Z}}-coefficients in the coefficients of #{f} (which are in #{K}).}
+
+\p{(ii)}
+
+##{\begin{aligned}
+\beta_1 - \beta_2 &= \alpha_1\alpha_3 + \alpha_1\alpha_4 + \alpha_2\alpha_3 + \alpha_2\alpha_4 - \alpha_1\alpha_2 - \alpha_1\alpha_4 - \alpha_2\alpha_3 - \alpha_3\alpha_4 \\
+&= (\alpha_1 - \alpha_4)(\alpha_3 - \alpha_2).
+\end{aligned}}
+
+\p{#{f} separable #{\implies \alpha_1, \ldots, \alpha_4} distinct #{\implies \beta_1 \neq \beta_2}. Similar calculations show #{\beta_1, \beta_2, \beta_3} are distinct. Therefore #{g} is separable.}
+
+\p{(iii) Let #{M} be a splitting field for #{f} over #{K}. Let #{\alpha_1, \ldots, \alpha_4 \in M} be the roots of #{f}. Then #{L := K(\beta_1, \beta_2, \beta_3) \subset M} is a splitting field for #{g} over #{K}.}
+
+\p{If an element of #{\operatorname{Gal}(M/K)} permutes #{\alpha_1, \ldots, \alpha_4} according to #{\sigma \in S_4}, then it restricts to an element of #{\operatorname{Gal}(L/K)} permuting the #{\beta_i} according to #{\pi(\sigma) \in S_3}. In other words there is a commutative diagram}
+
+##{\begin{CD} \operatorname{Gal}(M/K) @>{\mathrm{res}}>> \operatorname{Gal}(L/K) \\ @V{\iota_4}VV @VV{\iota_3}V \\ S_4 @>{\pi}>> S_3 \end{CD}}
+
+\p{By the Fundamental Theorem of Galois Theory (c), the map #{\mathrm{res} \colon \operatorname{Gal}(M/K) \to \operatorname{Gal}(L/K)} is surjective. Therefore #{\pi(\operatorname{Im}\iota_4) = \operatorname{Im}\iota_3}, i.e. #{\pi(\operatorname{Gal}(f/K)) = \operatorname{Gal}(g/K)}.}
+}

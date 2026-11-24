@@ -1,0 +1,7 @@
+\title{Constructible real numbers}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{x \in \mathbb{R}} is \em{constructible} if #{(x, 0)} can be constructed from #{\lbrace (0,0), (1,0)\rbrace }.}

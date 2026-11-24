@@ -1,0 +1,11 @@
+\title{Invariants of the alternating group}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{S_n} act on #{L = k(X_1, \ldots, X_n)} by permuting the #{X_i}. If #{\operatorname{char}(k) \neq 2}, then #{L^{A_n} = k(s_1, \ldots, s_n, \delta)} where #{\delta = \prod_{i<j} (X_i - X_j)}.}
+
+\proof{
+\p{#{(S_n : A_n) = 2 \implies [L^{A_n}:k(s_1, \ldots, s_n)] = 2}. We have #{\sigma(\delta) = \operatorname{sign}(\sigma)\delta} for all #{\sigma \in S_n}. In particular, #{\delta \in L^{A_n}} and #{\delta \notin L^{S_n}}. Therefore #{L^{A_n} = k(s_1, \ldots, s_n, \delta)}.}
+}

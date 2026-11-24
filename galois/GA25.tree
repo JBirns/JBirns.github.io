@@ -1,0 +1,12 @@
+\title{Separable elements and extensions}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a field extension.}
+
+\ul{
+\li{\strong{(i)} #{\alpha \in L} is \em{separable} over #{K} if it is algebraic over #{K} and its minimal polynomial is separable.}
+\li{\strong{(ii)} #{L/K} is \em{separable} if every #{\alpha \in L} is separable over #{K}. (In particular, #{L/K} is algebraic.)}
+}

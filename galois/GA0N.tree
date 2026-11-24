@@ -1,0 +1,13 @@
+\title{Transcendental elements and algebraic extensions}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a field extension.}
+
+\ul{
+\li{\p{\strong{(i)} #{\alpha \in L} is \em{transcendental} over #{K} if it is not algebraic. In this case #{K[\alpha] \cong K[X]} and #{K(\alpha) \cong K(X)} (the field of rational functions).}
+\p{Since #{K[X]} is not a field and #{1, X, X^2, \ldots} are linearly independent over #{K}, #{K(\alpha) \neq K[\alpha]} and #{[K(\alpha):K] = \infty}.}}
+\li{\strong{(ii)} #{L/K} is \em{algebraic} if every #{\alpha \in L} is algebraic over #{K}.}
+}

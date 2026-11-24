@@ -1,0 +1,25 @@
+\title{Cyclotomic extensions of #{\mathbb{Q}}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{K = \mathbb{Q}} then the group homomorphism #{\chi} of \ref{GA3Y} is an isomorphism. In particular, #{[\mathbb{Q}(\zeta_n):\mathbb{Q}] = \phi(n)} and #{\Phi_n \in \mathbb{Q}[X]} is irreducible.}
+
+\proof{
+\p{Let #{p} be a prime with #{p \nmid n}. We show that #{\operatorname{Im}\chi} contains #{p \bmod n}. If this is true then #{\operatorname{Im}\chi} contains #{a \bmod n} for all #{a} coprime to #{n} (by considering the prime factorisation of #{a}). Therefore #{\chi} is surjective as required.}
+
+\p{Let #{f, g \in \mathbb{Q}[X]} be the minimal polynomials of #{\zeta_n} and #{\zeta_n^p} over #{\mathbb{Q}}. If #{f = g}, then by \ref{GA3H} there exists #{\sigma \in \operatorname{Gal}(\mathbb{Q}(\zeta_n)/\mathbb{Q})} with #{\sigma(\zeta_n) = \zeta_n^p}, as required.}
+
+\p{If #{f \neq g} then #{f, g} are distinct irreducibles dividing #{X^n - 1}, so #{f, g \in \mathbb{Z}[X]} (using Gauss’ Lemma) and #{fg \mid (X^n - 1)}.}
+
+\p{Now #{\zeta_n} is a root of #{g(X^p)}, so #{f(X) \mid g(X^p)}. Reducing mod #{p} gives}
+
+##{\bar f(X) \mid \bar g(X^p) = \bar g(X)^p.}
+
+\p{Both #{\bar f} and #{\bar g} divide the separable polynomial #{X^n - 1 \in \mathbb{F}_p[X]} (look at the derivative, and use #{p \nmid n}). So #{\bar f(X) \mid \bar g(X)} by factorisation into irreducibles. Hence}
+
+##{\bar f^2 \mid \bar f(X)\bar g(X) \mid (X^n - 1),}
+
+\p{a contradiction to #{X^n - 1 \in \mathbb{F}_p[X]} being separable.}
+}

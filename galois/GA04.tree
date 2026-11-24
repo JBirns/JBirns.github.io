@@ -1,0 +1,19 @@
+\title{A polynomial has at most #{\deg f} roots}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a field and #{0 \neq f \in K[X]}. Then #{f} has at most #{\deg f} roots in the field.}
+
+\proof{
+\p{By induction on #{n = \deg f}. If #{f} has no roots then there is nothing to prove. Otherwise let #{a \in K} be a root of #{f}. Then #{f(X) = (X-a)g(X)} where #{g \in K[X]} and #{\deg g = n-1}.
+If #{b \in K} is a root of #{f} then either #{b = a} or #{g(b) = 0}, since fields are integral domains. Therefore}
+
+##{\begin{aligned}
+\#\lbrace \text{roots of } f \text{ in } K\rbrace  &\leq 1 + \#\lbrace \text{roots of } g \text{ in } K\rbrace  \\
+&\leq 1 + (n-1) = n
+\end{aligned}}
+
+\p{by the induction hypothesis.}
+}

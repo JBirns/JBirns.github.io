@@ -22,6 +22,7 @@ can use them, inside or outside of math.
 \def\proof[body]{
   \scope{
     \put\transclude/toc{false}
+    \put\transclude/expanded{false}
     \subtree{
       \taxon{Proof}
       \body

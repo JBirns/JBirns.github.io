@@ -1,0 +1,11 @@
+\title{GCDs do not depend on the field}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f, g \in K[X]} and #{L/K} any field extension. Then #{\gcd(f, g)} is the same computed in #{K[X]} and #{L[X]}.}
+
+\proof{
+\p{Running Euclid’s algorithm on #{f, g \in K[X]} gives the same answer whether we work in #{K[X]} or #{L[X]}.}
+}

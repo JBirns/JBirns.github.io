@@ -1,0 +1,9 @@
+\title{Symmetric polynomial}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{R} be a ring. A polynomial #{f \in R[X_1, \ldots, X_n]} is \em{symmetric} if}
+
+##{f(X_{\sigma(1)}, \ldots, X_{\sigma(n)}) = f(X_1, \ldots, X_n) \quad \text{for all } \sigma \in S_n.}

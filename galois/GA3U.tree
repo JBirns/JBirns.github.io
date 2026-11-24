@@ -1,0 +1,25 @@
+\title{The Galois group as a stabiliser}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F_1 \in K[T_1, \ldots, T_n, X]} be an irreducible factor of #{F}. Then #{\operatorname{Gal}(f/K) \leq S_n} is conjugate to}
+
+##{\operatorname{Stab}(F_1) = \lbrace \tau \in S_n : \tau * F_1 = F_1\rbrace .}
+
+\proof{
+\p{Without loss of generality #{F_1} is monic in #{X}. Replacing #{F_1} by #{\tau * F_1} for suitable #{\tau \in S_n} we may suppose it has a factor #{X - (\alpha_1 T_1 + \cdots + \alpha_n T_n)}. Then for each #{\sigma \in G = \operatorname{Gal}(f/K)} it has a factor #{X - (\alpha_{\sigma(1)} T_1 + \cdots + \alpha_{\sigma(n)} T_n)}. Now}
+
+##{\prod_{\sigma \in G} \big( X - (\alpha_{\sigma(1)} T_1 + \cdots + \alpha_{\sigma(n)} T_n) \big)}
+
+\p{has coefficients in #{K}, and divides #{F_1}, hence is equal to #{F_1} (since #{F_1} is irreducible and monic in #{X}). For #{\tau \in S_n}, we have}
+
+##{\begin{aligned}
+\tau * F_1 &= \prod_{\sigma \in G} \big( X - (\alpha_{\sigma(1)} T_{\tau(1)} + \cdots + \alpha_{\sigma(n)} T_{\tau(n)}) \big) \\
+&= \prod_{\sigma \in G} \big( X - (\alpha_{\sigma\tau^{-1}(1)} T_1 + \cdots + \alpha_{\sigma\tau^{-1}(n)} T_n) \big) \\
+&= \prod_{\sigma \in G\tau^{-1}} \big( X - (\alpha_{\sigma(1)} T_1 + \cdots + \alpha_{\sigma(n)} T_n) \big).
+\end{aligned}}
+
+\p{So #{\tau * F_1 = F_1 \iff G = G\tau^{-1} \iff \tau \in G}.}
+}

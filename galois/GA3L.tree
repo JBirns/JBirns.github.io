@@ -1,0 +1,13 @@
+\title{A cyclic cubic}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{(See \ref{GA0W} and Example Sheet 1.)}
+
+\p{#{f(X) = X^3 - 3X + 1}. Then}
+
+##{\operatorname{Disc}(f) = -4(-3)^3 - 27 = 81 = 9^2.}
+
+\p{Therefore #{\operatorname{Gal}(f/\mathbb{Q}) = 1} or #{A_3}. We checked in \ref{GA0W} that #{f} is irreducible over #{\mathbb{Q}}. Therefore #{\operatorname{Gal}(f/\mathbb{Q}) = A_3}.}

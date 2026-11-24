@@ -1,0 +1,9 @@
+\title{Finite extensions and degree}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a field extension. We say #{L/K} is \em{finite} if #{L} is finite dimensional as a #{K}-vector space, in which case we write #{[L:K] = \dim_K L} for its dimension, which we call the \em{degree} of #{L/K}. If not, we say #{L/K} is an \em{infinite extension} and write #{[L:K] = \infty}.}
+
+\p{#{L/K} is a \em{quadratic} (\em{cubic}, \em{quartic}, …) extension if #{[L:K] = 2} (#{3, 4, \ldots}).}

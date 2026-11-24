@@ -1,0 +1,7 @@
+\title{Cyclotomic extension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K(\zeta_n)/K} is called a \em{cyclotomic extension}.}

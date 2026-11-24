@@ -1,0 +1,41 @@
+\title{Discriminant and coefficients of the resolvent cubic}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f} be a monic quartic polynomial with resolvent cubic #{g}. Then}
+
+\ul{
+\li{\strong{(i)} #{\operatorname{Disc}(f) = \operatorname{Disc}(g)};}
+\li{\strong{(ii)} if #{f(X) = X^4 + pX^2 + qX + r}, then #{g(X) = X^3 - 2pX^2 + (p^2 - 4r)X + q^2}.}
+}
+
+\proof{
+\p{(i) Example Sheet 3 (hint: differences of roots in the proof of \ref{GA3N}(ii) above).}
+
+\p{(ii) We need to show}
+
+##{\begin{aligned}
+\beta_1 + \beta_2 + \beta_3 &= 2p, \qquad (1) \\
+\beta_1\beta_2 + \beta_2\beta_3 + \beta_3\beta_1 &= p^2 - 4r, \qquad (2) \\
+\beta_1\beta_2\beta_3 &= -q^2. \qquad (3)
+\end{aligned}}
+
+\p{We have}
+
+##{\beta_1 + \beta_2 + \beta_3 = 2\sum_{i<j} \alpha_i\alpha_j = 2p,}
+
+\p{giving (1). Since #{\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 = 0} we have}
+
+##{\beta_1 = -(\alpha_1 + \alpha_2)^2, \quad \beta_2 = -(\alpha_1 + \alpha_3)^2, \quad \beta_3 = -(\alpha_1 + \alpha_4)^2.
+ \qquad (*)}
+
+\p{Then}
+
+##{(\alpha_1 + \alpha_2)(\alpha_1 + \alpha_3)(\alpha_1 + \alpha_4) = \alpha_1^2 \underbrace{(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4)}_{=0} + \sum_{i<j<k} \alpha_i\alpha_j\alpha_k = -q.}
+
+\p{Therefore #{\beta_1\beta_2\beta_3 = -q^2}, giving (3).}
+
+\p{(2) is a further exercise in the symmetric function theorem.}
+}

@@ -1,0 +1,7 @@
+\title{#{\overline{\mathbb{Q}}} is algebraically closed}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Taking #{K = \mathbb{Q}} in the proof of (i), we see that #{\overline{\mathbb{Q}} = \lbrace \text{algebraic numbers}\rbrace  \subset \mathbb{C}} is algebraically closed.}

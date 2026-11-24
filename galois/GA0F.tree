@@ -1,0 +1,22 @@
+\title{Tower Law}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{M/L} and #{L/K} be field extensions. Then #{M/K} is finite if and only if both #{M/L} and #{L/K} are finite. In this case}
+
+##{[M:K] = [M:L][L:K].}
+
+\proof{
+\p{(#{\Rightarrow}) holds since any #{K}-basis for #{M} still spans #{M} as an #{L}-vector space, and #{L} is a #{K}-vector subspace of #{M}.}
+
+\p{(#{\Leftarrow}) We now suppose that #{M/L} and #{L/K} are finite, say #{v_1, \ldots, v_n} is a #{K}-basis for #{L} and #{w_1, \ldots, w_m} is an #{L}-basis for #{M}. We claim that #{\lbrace v_i w_j\rbrace _{1 \leq i \leq n,\, 1 \leq j \leq m}} is a #{K}-basis for #{M}.}
+
+\ul{
+\li{\strong{(i)} If #{x \in M} then #{x = \sum_j \lambda_j w_j} for some #{\lambda_j \in L}, and #{\lambda_j = \sum_i \mu_{ij} v_i} for some #{\mu_{ij} \in K}. Therefore #{x = \sum_{i,j} \mu_{ij} v_i w_j}, so we have spanning.}
+\li{\p{\strong{(ii)} Suppose #{\sum_{i,j} \mu_{ij} v_i w_j = 0} for some #{\mu_{ij} \in K}. Then}
+##{\sum_j \underbrace{\Big( \sum_i \mu_{ij} v_i \Big)}_{\in L} w_j = 0.}
+\p{Since #{w_1, \ldots, w_m} are linearly independent over #{L}, #{\sum_i \mu_{ij} v_i = 0} for all #{j}. Since #{v_1, \ldots, v_n} are linearly independent over #{K}, #{\mu_{ij} = 0} for all #{i, j}. So the #{v_i w_j} are linearly independent.}}
+}
+}

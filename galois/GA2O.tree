@@ -1,0 +1,7 @@
+\title{Galois group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{L/K} is a Galois extension then we write #{\operatorname{Gal}(L/K)} for #{\operatorname{Aut}(L/K)}, the \em{Galois group} of #{L} over #{K}.}

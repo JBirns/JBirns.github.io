@@ -1,0 +1,17 @@
+\title{Trace and norm in towers}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{M/L/K} be field extensions and #{\alpha \in L}. Then}
+
+##{\operatorname{Tr}_{M/K}(\alpha) = [M:L] \operatorname{Tr}_{L/K}(\alpha) \quad \text{and} \quad N_{M/K}(\alpha) = N_{L/K}(\alpha)^{[M:L]}.}
+
+\proof{
+\p{Suppose #{A} represents #{m_\alpha} with respect to some basis for #{L/K}, and #{B} represents #{m_\alpha} with respect to some basis for #{M/K} picked by following the proof of the Tower Law. Then}
+
+##{B = \begin{pmatrix} A & & 0 \\ & A & \\ 0 & & \ddots \\ & & & A \end{pmatrix} \qquad \begin{array}{l} A \text{ is } [L:K] \times [L:K], \\ B \text{ is } [M:K] \times [M:K]. \end{array}}
+
+\p{Then #{\operatorname{tr}(B) = [M:L]\operatorname{tr}(A)} and #{\det(B) = \det(A)^{[M:L]}}.}
+}

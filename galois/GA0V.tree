@@ -1,0 +1,19 @@
+\title{Algebraic extensions in towers}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{M/L/K} be field extensions. Then}
+
+##{M/K \text{ algebraic} \iff M/L \text{ and } L/K \text{ algebraic}.}
+
+\proof{
+\p{(#{\Rightarrow}) Every element of #{M} is algebraic over #{K}, hence algebraic over #{L}, so #{M/L} is algebraic. Also, as #{L \subset M}, #{L} is algebraic over #{K}.}
+
+\p{(#{\Leftarrow}) Let #{\alpha \in M}. We must show #{\alpha} is algebraic over #{K}. Since #{M/L} is algebraic, #{\alpha} is a root of some}
+
+##{f(X) = c_n X^n + \cdots + c_1 X + c_0 \in L[X].}
+
+\p{Let #{L_0 = K(c_0, c_1, \ldots, c_n)}. Since each #{c_i} is algebraic over #{K}, \ref{GA0S} gives #{[L_0:K] < \infty}. But #{f} has coefficients in #{L_0}, so #{[L_0(\alpha):L_0] \leq \deg f < \infty}. By the Tower Law, #{[L_0(\alpha):K] < \infty}. Therefore #{\alpha} is algebraic over #{K}.}
+}

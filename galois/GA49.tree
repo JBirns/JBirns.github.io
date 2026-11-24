@@ -1,0 +1,9 @@
+\title{Independence of the choice of root}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The definition of #{\theta} doesn’t depend on the choice of #{\sqrt[n]{a}}. Indeed, if #{\alpha^n = \beta^n = a} then #{\big(\frac{\alpha}{\beta}\big)^n = 1 \implies \frac{\alpha}{\beta} \in \mu_n \subset K}. Therefore #{\sigma\big(\frac{\alpha}{\beta}\big) = \frac{\alpha}{\beta}} for all #{\sigma \in G}, so}
+
+##{\frac{\sigma(\alpha)}{\alpha} = \frac{\sigma(\beta)}{\beta} \quad \forall \sigma \in G.}

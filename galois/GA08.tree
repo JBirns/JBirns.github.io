@@ -1,0 +1,12 @@
+\title{Degrees of extensions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{[\mathbb{C}:\mathbb{R}] = 2} (basis #{1, i}).}
+\p{#{[\mathbb{Q}[\sqrt{2}]:\mathbb{Q}] = 2} (basis #{1, \sqrt{2}}).}
+\p{#{[\mathbb{R}:\mathbb{Q}] = \infty} (exercise by countability: #{\mathbb{Q}} countable implies any finite-dimensional #{\mathbb{Q}}-vector space is countable, but #{\mathbb{R}} is uncountable).}}
+\li{\strong{(ii)} If #{L = K[X]/(f)} where #{f \in K[X]} is irreducible, then #{[L:K] = \deg f}. Indeed, if #{\alpha = X + (f) \in L} and #{n = \deg f}, then #{1, \alpha, \alpha^2, \ldots, \alpha^{n-1}} is a #{K}-basis for #{L}.}
+}

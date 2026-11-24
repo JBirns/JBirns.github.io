@@ -1,0 +1,7 @@
+\title{Kummer extension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K(\sqrt[n]{a})/K} is called a \em{Kummer extension}.}

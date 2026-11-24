@@ -1,0 +1,9 @@
+\title{Polynomial invariants of #{A_n}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{It can be shown that if #{R = k[X_1, \ldots, X_n]} then #{R^{A_n} = k[s_1, \ldots, s_n, \delta]}.}
+
+\p{\em{Idea of proof:} Let #{f \in R^{A_n}}. Pick #{\sigma \in S_n \setminus A_n}. Write #{f = \frac{1}{2}(f + \sigma f) + \frac{1}{2}(f - \sigma f)}. Then show #{f - \sigma f} is divisible by #{\delta}.}

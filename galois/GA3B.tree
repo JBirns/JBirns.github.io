@@ -1,0 +1,7 @@
+\title{#{\mathbb{F}_q}}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We write #{\mathbb{F}_q} for any field with #{q} elements (by \ref{GA3A} any two such are isomorphic), although there is no canonical choice of isomorphism.}

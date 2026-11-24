@@ -1,0 +1,12 @@
+\title{Trace and norm in a quadratic field}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{L = \mathbb{Q}(\sqrt{d})}, #{d} not a square. If #{\alpha = x + y\sqrt{d}}, #{x, y \in \mathbb{Q}}, then #{L} has #{K}-basis #{1, \sqrt{d}}, and}
+
+##{\begin{aligned}
+\operatorname{Tr}_{\mathbb{Q}(\sqrt{d})/\mathbb{Q}}(\alpha) &= \operatorname{tr}\begin{pmatrix} x & dy \\ y & x \end{pmatrix} = 2x, \\
+N_{\mathbb{Q}(\sqrt{d})/\mathbb{Q}}(\alpha) &= x^2 - dy^2.
+\end{aligned}}

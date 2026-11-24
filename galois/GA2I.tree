@@ -1,0 +1,10 @@
+\title{Remarks on automorphism groups}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\operatorname{Aut}(\mathbb{Q})} and #{\operatorname{Aut}(\mathbb{F}_p)} are both trivial. Therefore #{\operatorname{Aut}(L) = \operatorname{Aut}(L/K)} where #{K} is the prime subfield of #{L}.}
+\li{\strong{(ii)} If #{[L:K] < \infty} then any #{K}-embedding #{L \hookrightarrow L} is surjective (by rank-nullity), i.e. #{\operatorname{Hom}_K(L, L) = \operatorname{Aut}(L/K)}.}
+}

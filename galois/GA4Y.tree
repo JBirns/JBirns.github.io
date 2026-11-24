@@ -1,0 +1,21 @@
+\title{Invariants of #{D_8} acting on #{\mathbb{C}(X_1, X_2)}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L = \mathbb{C}(X_1, X_2)}. Define #{\sigma, \tau \in \operatorname{Aut}(L)} by}
+
+##{(\sigma f)(X_1, X_2) = f(iX_1, -iX_2), \qquad (\tau f)(X_1, X_2) = f(X_2, X_1).}
+
+\p{Let #{G = \langle \sigma, \tau \rangle \cong D_8}.}
+
+\p{\em{Aim:} compute #{L^G}. We spot that #{X_1 X_2} and #{X_1^4 + X_2^4} are in #{L^G}.}
+
+##{\begin{array}{c} L \\ \big|\;{\scriptstyle 8} \\ L^G \\ \big| \\ \mathbb{C}(X_1 X_2, X_1^4 + X_2^4) \\ \big| \\ \mathbb{C} \end{array}}
+
+\p{Let}
+
+##{f(T) = (T^4 - X_1^4)(T^4 - X_2^4) = T^8 - (X_1^4 + X_2^4)T^4 + (X_1 X_2)^4 \in \mathbb{C}(X_1 X_2, X_1^4 + X_2^4)[T],}
+
+\p{which has #{X_1} as a root. Therefore #{[L:\mathbb{C}(X_1 X_2, X_1^4 + X_2^4)] \leq 8}. Artin’s Theorem #{\implies [L:L^G] = \#G = 8}. Therefore, by the Tower Law, #{L^G = \mathbb{C}(X_1 X_2, X_1^4 + X_2^4)}.}

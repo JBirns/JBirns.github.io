@@ -1,0 +1,24 @@
+\title{Subfields of #{\mathbb{Q}(\sqrt{2}, \sqrt{3})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K = \mathbb{Q}(\sqrt{2}, \sqrt{3})}. #{K/\mathbb{Q}} is the splitting field of the polynomial #{(X^2 - 2)(X^2 - 3)}. Therefore #{K/\mathbb{Q}} is normal (separability is automatic for algebraic extensions when #{\operatorname{char} = 0}). Therefore #{K/\mathbb{Q}} is Galois.}
+
+\p{If #{\sigma \in \operatorname{Gal}(K/\mathbb{Q})} then it is uniquely determined by #{\sigma(\sqrt{2})} and #{\sigma(\sqrt{3})}. Since #{\sigma(\sqrt{2}) = \pm\sqrt{2}} and #{\sigma(\sqrt{3}) = \pm\sqrt{3}} we have #{\#\operatorname{Gal}(K/\mathbb{Q}) \leq 4}. We saw in \ref{GA01} that #{[K:\mathbb{Q}] = 4}. Hence #{\#\operatorname{Gal}(K/\mathbb{Q}) = 4}.}
+
+\p{Let}
+
+##{\begin{aligned}
+\sigma &\colon \sqrt{2} \mapsto \sqrt{2},\; \sqrt{3} \mapsto -\sqrt{3}, \\
+\tau &\colon \sqrt{2} \mapsto -\sqrt{2},\; \sqrt{3} \mapsto \sqrt{3}.
+\end{aligned}}
+
+\p{Then #{\sigma^2 = \tau^2 = \mathrm{id}} and #{\sigma\tau = \tau\sigma}. Therefore #{\operatorname{Gal}(K/\mathbb{Q}) \cong C_2 \times C_2}.}
+
+##{\begin{array}{ccc} & \lbrace 1\rbrace  & \\ \diagup & \big| & \diagdown \\ \langle \sigma \rangle & \langle \tau \rangle & \langle \sigma\tau \rangle \\ \diagdown & \big| & \diagup \\ & C_2 \times C_2 & \end{array}
+\qquad \longleftrightarrow \qquad
+\begin{array}{ccc} & \mathbb{Q}(\sqrt{2}, \sqrt{3}) & \\ \diagup & \big| & \diagdown \\ \mathbb{Q}(\sqrt{2}) & \mathbb{Q}(\sqrt{3}) & \mathbb{Q}(\sqrt{6}) \\ \diagdown & \big| & \diagup \\ & \mathbb{Q} & \end{array}}
+
+\p{I.e. effectively we reduce finding all subfields to a group theory question.}

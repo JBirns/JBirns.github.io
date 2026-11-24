@@ -1,0 +1,47 @@
+\title{#{K}-homomorphisms from a simple extension}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L = K(\alpha)} where #{\alpha} is algebraic over #{K}, with minimal polynomial #{f}. Let #{M/K} be any field extension. Then there is a bijection}
+
+##{\begin{aligned}
+\lbrace K\text{-homomorphisms } L \to M\rbrace  &\longleftrightarrow \lbrace \text{roots of } f \text{ in } M\rbrace  \\
+\tau &\longmapsto \tau(\alpha).
+\end{aligned}}
+
+\p{In particular (by \ref{GA04}), #{\#\lbrace K\text{-homomorphisms } L \to M\rbrace  \leq \deg f}.}
+
+\proof{
+\p{Write #{f = \sum_{i=0}^d c_i X^i}, #{c_i \in K}. Let #{\tau \colon L \to M} be a #{K}-homomorphism. Then}
+
+##{f(\tau(\alpha)) = \sum_i c_i \tau(\alpha)^i = \tau\Big(\sum_i c_i \alpha^i\Big) = \tau(f(\alpha)) = 0.}
+
+\p{Therefore #{\tau(\alpha)} is a root of #{f}.}
+
+\p{\em{Injectivity:} Since #{L = K(\alpha)}, any #{K}-homomorphism #{\tau \colon L \to M} is uniquely determined by #{\tau(\alpha)}.}
+
+\p{\em{Surjectivity:} We saw earlier that evaluation at #{\alpha} gives an isomorphism}
+
+##{\begin{aligned}
+\phi \colon \frac{K[X]}{(f)} &\xrightarrow{\; \sim\; } K(\alpha) = L \\
+X + (f) &\longmapsto \alpha.
+\end{aligned}}
+
+\p{Now let #{\beta \in M} be a root of #{f}. Since #{f} is irreducible, it is the minimal polynomial for #{\beta} over #{K}. Evaluation at #{\beta} gives a ring homomorphism}
+
+##{\begin{aligned}
+K[X] &\to M \\
+g &\mapsto g(\beta)
+\end{aligned}}
+
+\p{with kernel #{(f)}. By the isomorphism theorem we get}
+
+##{\begin{aligned}
+\psi \colon \frac{K[X]}{(f)} &\hookrightarrow M \\
+X + (f) &\longmapsto \beta.
+\end{aligned}}
+
+\p{Since #{\phi, \psi} are #{K}-homomorphisms and #{\phi} is an isomorphism, it follows that #{\tau = \psi \circ \phi^{-1} \colon L \to M} is a #{K}-homomorphism with #{\tau(\alpha) = \beta}.}
+}

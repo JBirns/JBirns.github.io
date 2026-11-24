@@ -1,0 +1,20 @@
+\title{Basic properties of trace and norm}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\operatorname{Tr}_{L/K} \colon L \to K} is a #{K}-linear map.}
+\li{\strong{(ii)} #{N_{L/K} \colon L \to K} is multiplicative, i.e. #{N_{L/K}(\alpha\beta) = N_{L/K}(\alpha) N_{L/K}(\beta)} for all #{\alpha, \beta \in L}.}
+\li{\strong{(iii)} If #{\alpha \in K} then #{\operatorname{Tr}_{L/K}(\alpha) = [L:K]\alpha} and #{N_{L/K}(\alpha) = \alpha^{[L:K]}}.}
+\li{\strong{(iv)} If #{\alpha \in L}, then #{N_{L/K}(\alpha) = 0 \iff \alpha = 0}.}
+}
+
+\proof{
+\p{(i) and (ii) follow from the corresponding statements for traces and determinants of matrices.}
+
+\p{(iii) If #{\alpha \in K} then #{m_\alpha} is represented by #{\begin{pmatrix} \alpha & & 0 \\ & \ddots & \\ 0 & & \alpha \end{pmatrix}}, which has trace and determinant as indicated.}
+
+\p{(iv) #{N_{L/K}(\alpha) \neq 0 \iff m_\alpha} invertible #{\iff \alpha \neq 0}.}
+}

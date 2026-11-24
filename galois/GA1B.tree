@@ -1,0 +1,15 @@
+\title{#{\sigma}-embeddings from a simple extension}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L = K(\alpha)} where #{\alpha} is algebraic over #{K}, with minimal polynomial #{f}. Let #{\sigma \colon K \to K'} be a field embedding, and #{M/K'} any field extension. Then there is a bijection}
+
+##{\begin{aligned}
+\lbrace \sigma\text{-homomorphisms } L \to M\rbrace  &\longleftrightarrow \lbrace \text{roots of } \sigma f \text{ in } M\rbrace  \\
+\tau &\longmapsto \tau(\alpha),
+\end{aligned}}
+
+\p{where #{\sigma f} is the polynomial in #{K'[X]} obtained by applying #{\sigma} to each coefficient of #{f}.
+In particular, #{\#\lbrace \sigma\text{-homomorphisms } L \to M\rbrace  \leq \deg f}.}

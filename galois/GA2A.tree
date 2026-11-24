@@ -1,0 +1,19 @@
+\title{Counting embeddings of a simple extension}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty}. Suppose #{L = K(\alpha)} and #{f = } minimal polynomial of #{\alpha} over #{K}. Let #{M/K} be any field extension. Then}
+
+##{\#\operatorname{Hom}_K(L, M) \leq [L:K]}
+
+\p{with equality #{\iff f} splits into distinct linear factors over #{M}.}
+
+\proof{
+\p{By \ref{GA18},}
+
+##{\#\operatorname{Hom}_K(L, M) = \#\lbrace \text{roots of } f \text{ in } M\rbrace  \leq \deg f = [L:K]}
+
+\p{with equality iff #{f} splits into distinct linear factors over #{M}.}
+}

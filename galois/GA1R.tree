@@ -1,0 +1,21 @@
+\title{Elementary symmetric functions}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{elementary symmetric functions} are the polynomials #{s_1, \ldots, s_n \in \mathbb{Z}[X_1, \ldots, X_n]} such that}
+
+##{\prod_{i=1}^n (T + X_i) = T^n + s_1 T^{n-1} + s_2 T^{n-2} + \cdots + s_{n-1} T + s_n.}
+
+\p{E.g. for #{n = 3}:}
+
+##{\begin{aligned}
+s_1 &= X_1 + X_2 + X_3, \\
+s_2 &= X_1 X_2 + X_1 X_3 + X_2 X_3, \\
+s_3 &= X_1 X_2 X_3.
+\end{aligned}}
+
+\p{In general}
+
+##{s_r = \sum_{1 \leq i_1 < i_2 < \cdots < i_r \leq n} X_{i_1} X_{i_2} \cdots X_{i_r}.}

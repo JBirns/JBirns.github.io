@@ -1,0 +1,32 @@
+\title{Artin’s Theorem and Invariant Theory}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{GA4W}
+
+\transclude{GA4X}
+
+\transclude{GA4Y}
+
+\p{Let #{R} be a ring and #{G \leq \operatorname{Aut}(R)} a subgroup. \em{Invariant theory} seeks to describe the subring}
+
+##{R^G = \lbrace x \in R : \sigma(x) = x \; \forall \sigma \in G\rbrace .}
+
+\p{The topic was studied extensively in the 19th century and was the motivation for Hilbert’s Basis Theorem. It is also important in modern algebraic geometry for describing the quotient of an algebraic variety by a group action.}
+
+\transclude{GA4Z}
+
+\transclude{GA50}
+
+\transclude{GA51}
+
+\p{\strong{Exercise.} Show that for any finite group #{G}, there exists a finite Galois extension #{L/K} with Galois group #{G}.}
+
+\p{This may not be possible if we specify #{K} in advance, e.g. #{K = \mathbb{C}} or #{K = \mathbb{F}_p}, and is a famous open problem when #{K = \mathbb{Q}} (the inverse Galois problem).}
+
+\transclude{GA52}
+
+\transclude{GA53}
+
+\transclude{GA54}

@@ -1,0 +1,11 @@
+\title{#{\sigma}-embeddings of #{\mathbb{Q}(\sqrt{1+\sqrt{2}})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K = \mathbb{Q}(\sqrt{2})} and #{L = \mathbb{Q}(\alpha)} where #{\alpha = \sqrt{1+\sqrt{2}}}. (Exercise: check #{1 + \sqrt{2}} is not a square in #{K}, so #{[L:K] = 2}.)}
+
+\p{There are exactly #{2} #{K}-embeddings #{L \to \mathbb{R}}, given by #{\alpha \mapsto \pm\sqrt{1+\sqrt{2}}}.}
+
+\p{However, if #{\sigma \colon K \to K}, #{a + b\sqrt{2} \mapsto a - b\sqrt{2}}, then there are no #{\sigma}-embeddings #{L \to \mathbb{R}} (since #{1 - \sqrt{2} < 0}).}

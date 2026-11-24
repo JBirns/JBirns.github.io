@@ -1,0 +1,9 @@
+\title{Normal extension}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An extension #{L/K} is \em{normal} if it is algebraic and the minimal polynomial of every #{\alpha \in L} splits into linear factors over #{L}.}
+
+\p{Equivalently, if #{f \in K[X]} is irreducible and has a root in #{L}, then it splits into linear factors over #{L}. (Slogan: “one out, all out”.)}

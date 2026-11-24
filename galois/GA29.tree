@@ -1,0 +1,9 @@
+\title{#{\operatorname{Hom}_K(L, M)}}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} and #{M/K} be field extensions. We write}
+
+##{\operatorname{Hom}_K(L, M) = \lbrace K\text{-embeddings } L \hookrightarrow M\rbrace .}

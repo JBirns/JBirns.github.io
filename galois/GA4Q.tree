@@ -1,0 +1,14 @@
+\title{Every vector space has a basis}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space and #{(S, \leq)} the set of linearly independent subsets of #{V} ordered by inclusion. If #{T \subset S} is a chain then let #{Y = \bigcup_{X \in T} X}. It may be checked that #{Y} is linearly independent, hence an upper bound for #{T}. Zorn’s Lemma shows that #{S} has a maximal element #{B}. Then}
+
+\ul{
+\li{\strong{(i)} #{B} is linearly independent;}
+\li{\strong{(ii)} #{B \cup \lbrace v\rbrace } is not linearly independent for all #{v \in V \setminus B} #{\implies B} spans #{V}.}
+}
+
+\p{Therefore #{B} is a basis for #{V}.}

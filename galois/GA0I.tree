@@ -1,0 +1,7 @@
+\title{Generated subfields as intersections}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{In \ref{GA0G}, another way to see the “smallest” subring/subfield exists is to take the intersection of all such subrings/subfields.}

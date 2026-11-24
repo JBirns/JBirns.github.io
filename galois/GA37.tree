@@ -1,0 +1,12 @@
+\title{Quadratic fields via the Galois group}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{L = \mathbb{Q}(\sqrt{d})}. #{\operatorname{Gal}(L/K) = \lbrace 1, \sigma\rbrace }, #{\sigma(\sqrt{d}) = -\sqrt{d}}. Let #{\alpha = x + y\sqrt{d}}, #{x, y \in \mathbb{Q}}. Then}
+
+##{\begin{aligned}
+\operatorname{Tr}_{L/K}(\alpha) &= (x + y\sqrt{d}) + (x - y\sqrt{d}) = 2x, \\
+N_{L/K}(\alpha) &= (x + y\sqrt{d})(x - y\sqrt{d}) = x^2 - dy^2.
+\end{aligned}}

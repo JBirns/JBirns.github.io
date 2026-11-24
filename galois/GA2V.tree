@@ -1,0 +1,18 @@
+\title{Existence of Galois closures}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a finite and separable extension. Then there exists a finite extension #{M/L} such that}
+
+\ul{
+\li{\strong{(i)} #{M/K} is Galois;}
+\li{\strong{(ii)} if #{L \subset M' \subset M} and #{M'/K} is Galois then #{M' = M}.}
+}
+
+\proof{
+\p{By the Theorem of the Primitive Element, #{L = K(\alpha)} for some #{\alpha \in L}. Let #{f} be the minimal polynomial of #{\alpha} over #{K}. #{L/K} separable #{\implies f} separable. Let #{M} be a splitting field for #{f} over #{L}. Since #{L = K(\alpha)} where #{\alpha} is a root of #{f}, it follows that #{M} is also the splitting field of #{f} over #{K}. \ref{GA2N} #{\implies M/K} is Galois.}
+
+\p{Let #{M'} be as in (ii). As #{\alpha \in M'} and #{M'/K} is normal, #{f} splits into linear factors over #{M'}. Hence #{M' = M} by uniqueness of splitting fields.}
+}

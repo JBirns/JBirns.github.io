@@ -1,0 +1,9 @@
+\title{Formal derivative}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{formal derivative} of #{f = \sum_{i=0}^d c_i X^i \in K[X]} is}
+
+##{f' = \sum_{i=1}^d i c_i X^{i-1}.}

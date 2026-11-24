@@ -1,0 +1,7 @@
+\title{Soluble by radicals}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{f} is \em{soluble by radicals} over #{K} if there exist fields #{K = K_0 \subset K_1 \subset \cdots \subset K_m} such that #{f} has a root in #{K_m} and for each #{1 \leq i \leq m}, #{K_i = K_{i-1}(\alpha_i)} with #{\alpha_i^{d_i} \in K_{i-1}} for some #{d_i \geq 1}.}

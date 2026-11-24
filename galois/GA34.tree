@@ -1,0 +1,9 @@
+\title{Quadratic fields revisited}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \mathbb{Q}}, #{L = \mathbb{Q}(\sqrt{d})}. Then}
+
+##{\alpha = x + y\sqrt{d} \implies (\alpha - x)^2 = dy^2 \implies \alpha \text{ is a root of } T^2 - \underbrace{2x}_{\text{trace}} T + \underbrace{x^2 - dy^2}_{\text{norm}} = 0.}

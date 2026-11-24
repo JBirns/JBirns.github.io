@@ -1,0 +1,19 @@
+\title{Partial order}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A relation #{\leq} on a set #{S} is a \em{partial order} if for all #{x, y, z \in S}:}
+
+\ul{
+\li{\strong{(i)} #{x \leq x};}
+\li{\strong{(ii)} if #{x \leq y}, #{y \leq z} then #{x \leq z};}
+\li{\strong{(iii)} if #{x \leq y}, #{y \leq x} then #{x = y}.}
+}
+
+\p{#{(S, \leq)} is called a \em{partially ordered set} (\em{poset}). The set is \em{totally ordered} if moreover, for all #{x, y \in S}:}
+
+\ul{
+\li{\strong{(iv)} #{x \leq y} or #{y \leq x}.}
+}

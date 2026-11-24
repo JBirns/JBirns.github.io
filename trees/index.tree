@@ -2,6 +2,7 @@
 \author{JB00}
 \import{macros}
 \import{names}
+\put\transclude/expanded{false}
 
 \p{
 I am a PhD student in mathematics at the [[WH6R]] working with [[EGR0]]. Prior to that I was an undergraduate at the [University of Cambridge](0001).
@@ -9,10 +10,13 @@ I am a PhD student in mathematics at the [[WH6R]] working with [[EGR0]]. Prior t
 
 \p{I am broadly interested in combinatorics and algebra and how one may be levered to solve problems of the other in strange ways.}
 
-\transclude{\aboutsite}
+\scope{\put\transclude/toc{false}
+\transclude{\aboutsite}}
 
 %\transclude{\research}
 
 \transclude{\teaching}
+
+\transclude{\lecturenotes}
 
 %\transclude{\blog}

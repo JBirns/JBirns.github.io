@@ -1,0 +1,9 @@
+\title{Minimality of splitting fields}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{(ii) #{\iff} #{f} does not split into linear factors over any proper subfield of #{L} containing #{K}.}
+
+\p{N.B. (ii) #{\implies [L:K] < \infty}.}

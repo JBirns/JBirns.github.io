@@ -1,0 +1,19 @@
+\title{Separability via the GCD}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{0 \neq f \in K[X]}. Then #{f} is separable #{\iff \gcd(f, f') = 1}.}
+
+\proof{
+\p{Let #{L} be the splitting field of #{f}. Then}
+
+##{\begin{aligned}
+f \text{ separable} &\iff f \text{ and } f' \text{ have no common roots in } L \quad (1) \\
+&\iff \gcd(f, f') = 1 \text{ in } L[X] \\
+&\iff \gcd(f, f') = 1 \text{ in } K[X] \quad (2)
+\end{aligned}}
+
+\p{using \ref{GA20} for (1) and \ref{GA21} for (2).}
+}

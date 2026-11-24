@@ -1,0 +1,94 @@
+\title{The Galois Group of a Polynomial}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} be a separable polynomial of degree #{n}. Let #{L} be a splitting field for #{f} over #{K}. The action of #{G = \operatorname{Gal}(L/K)} on the roots #{\alpha_1, \ldots, \alpha_n} of #{f} determines an injective group homomorphism #{\iota \colon G \to S_n}. Its image is the \em{Galois group of #{f} over #{K}}, written #{\operatorname{Gal}(f)} or #{\operatorname{Gal}(f/K)}.}
+
+\transclude{GA3H}
+
+\transclude{GA3I}
+
+\p{Let #{f \in K[X]} be a monic separable polynomial with roots #{\alpha_1, \ldots, \alpha_n} in a splitting field #{L}. Recall from \ref{GA1P} (\ref{GA1V}):}
+
+##{\operatorname{Disc}(f) = \prod_{i < j} (\alpha_i - \alpha_j)^2.}
+
+\transclude{GA3J}
+
+\transclude{GA3K}
+
+\p{What is #{G \hookrightarrow S_n} up to conjugacy?}
+
+\p{\strong{#{n = 2}:} The only transitive subgroup of #{S_2} is #{S_2} itself.}
+
+\p{\strong{#{n = 3}:} The transitive subgroups of #{S_3} are #{S_3} and #{A_3 \cong C_3}.}
+
+\p{So if #{f} is an irreducible cubic, then #{\operatorname{Gal}(f/K) = A_3} or #{S_3}. (We can determine which using \ref{GA3J}: #{\operatorname{Gal}(f/K) = A_3 \iff \operatorname{Disc}(f)} is a square in #{K}.) Taking #{n = 3} on Example Sheet 2 Q3 gives}
+
+##{\operatorname{Disc}(X^3 + aX + b) = -4a^3 - 27b^2 \qquad \text{(learn this!)}.}
+
+\transclude{GA3L}
+
+\p{\strong{#{n = 4}:} The transitive subgroups of #{S_4} are}
+
+##{S_4,\; A_4,\; D_8,\; C_4,\; V \cong C_2 \times C_2.}
+
+\p{#{S_4}, #{A_4} and #{V} are normal subgroups, where}
+
+##{V = \lbrace \mathrm{id}, (12)(34), (13)(24), (14)(23)\rbrace .}
+
+\p{There are #{3} conjugate copies of each of #{C_4} and #{D_8}.}
+
+\p{Let #{S_4} act on #{V \setminus \lbrace \mathrm{id}\rbrace } by conjugation. Since #{g(12)(34)g^{-1} = (g(1)\,g(2))(g(3)\,g(4))}, it is equivalent to let #{S_4} act on the set of ways of partitioning #{\lbrace 1,2,3,4\rbrace } into #{2} subsets of size #{2}.}
+
+\p{The corresponding permutation representation is a group homomorphism #{\pi \colon S_4 \to S_3}. If}
+
+##{H = \lbrace \sigma \in S_4 : \sigma(1) = 1\rbrace  = \langle (234), (23) \rangle \leq S_4,}
+
+\p{then #{\pi|_H \colon H \xrightarrow{\; \sim\; } S_3} is an isomorphism. So #{\pi} is \em{surjective}.}
+
+\p{Also #{\#\ker\pi = 4}, and #{V} abelian #{\implies V \subset \ker\pi}. Therefore #{\boxed{V = \ker\pi.}}}
+
+\p{If #{G \leq S_4} then applying the isomorphism theorem to #{\pi|_G} gives}
+
+##{\frac{G}{G \cap V} \cong \pi(G) \leq S_3.}
+
+##{\begin{array}{c|c} \text{transitive subgroup } G \leq S_4 & \pi(G) \leq S_3 \\ \hline S_4 & S_3 \\ A_4 & A_3 \\ C_4 \text{ or } D_8 & C_2 \\ V & 1 \end{array}}
+
+\p{Let #{f(X) = \prod_{i=1}^4 (X - \alpha_i)} be a monic quartic polynomial. Define}
+
+##{\begin{aligned}
+\beta_1 &= (\alpha_1 + \alpha_2)(\alpha_3 + \alpha_4), \\
+\beta_2 &= (\alpha_1 + \alpha_3)(\alpha_2 + \alpha_4), \\
+\beta_3 &= (\alpha_1 + \alpha_4)(\alpha_2 + \alpha_3).
+\end{aligned}}
+
+\transclude{GA3M}
+
+\transclude{GA3N}
+
+\transclude{GA3O}
+
+\transclude{GA3P}
+
+\p{\strong{A formula for the roots of quartic polynomials}}
+
+\ul{
+\li{\strong{(i)} Replace #{f(X)} by #{f(X + c)} such that #{f} has no #{X^3} term #{\implies \sum \alpha_i = 0}.}
+\li{\strong{(ii)} Find the roots #{\beta_1, \beta_2, \beta_3} of the resolvent cubic using the method of \ref{GA1P}.}
+\li{\p{\strong{(iii)} By (#{*}) (in the proof of \ref{GA3O}) we have}
+##{\alpha_1 = \tfrac{1}{2}\big( \sqrt{-\beta_1} + \sqrt{-\beta_2} + \sqrt{-\beta_3} \big)}
+\p{where we choose square roots such that #{\sqrt{-\beta_1}\sqrt{-\beta_2}\sqrt{-\beta_3} = -q}.}}
+}
+
+\p{\strong{Recall:} #{\sigma \in S_n} has \em{cycle type} #{(n_1, \ldots, n_r)} if, when written as a product of disjoint cycles, these cycles have lengths #{n_1, n_2, \ldots, n_r}.}
+
+\transclude{GA3Q}
+
+\transclude{GA3R}
+
+\transclude{GA3S}
+
+\transclude{GA3T}
+
+\transclude{GA3U}

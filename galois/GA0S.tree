@@ -1,0 +1,17 @@
+\title{Finitely many algebraic elements generate a finite extension}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L/K} be a field extension and #{\alpha_1, \ldots, \alpha_n \in L}. Then}
+
+##{\alpha_1, \ldots, \alpha_n \text{ algebraic over } K \iff [K(\alpha_1, \ldots, \alpha_n):K] < \infty.}
+
+\proof{
+\p{The case #{n = 1} was a remark in the last lecture.}
+
+\p{(#{\Rightarrow}) By induction on #{n}, using the Tower Law.}
+
+\p{(#{\Leftarrow}) Clear since #{K(\alpha_i) \subset K(\alpha_1, \ldots, \alpha_n)}.}
+}

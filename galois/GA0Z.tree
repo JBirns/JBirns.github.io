@@ -1,0 +1,11 @@
+\title{Constructible fields}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K \subset \mathbb{R}} be a subfield. We say that #{K} is \em{constructible} if there exist an integer #{n \geq 0} and a sequence of subfields of #{\mathbb{R}},}
+
+##{\mathbb{Q} = F_0 \subset F_1 \subset \cdots \subset F_n,}
+
+\p{such that #{[F_i:F_{i-1}] = 2} for all #{1 \leq i \leq n}, and #{K \subset F_n}.}

@@ -1,0 +1,42 @@
+\title{Ruler and Compass Constructions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We use our results on field extensions to show that certain classical problems concerning \em{ruler and compass constructions} cannot be solved.}
+
+\p{Let #{S \subset \mathbb{R}^2} be a finite set of points. We may}
+
+\ul{
+\li{\strong{(i)} draw a straight line through any 2 distinct points in #{S};}
+\li{\strong{(ii)} draw a circle with centre any point in #{S} and radius the distance between 2 points in #{S};}
+\li{\strong{(iii)} enlarge #{S} by adjoining any point of intersection of 2 distinct lines/circles (as drawn in (i) and (ii)).}
+}
+
+\transclude{GA0X}
+
+\transclude{GA0Y}
+
+\p{We will relate this definition to the following.}
+
+\transclude{GA0Z}
+
+\transclude{GA10}
+
+\transclude{GA11}
+
+\transclude{GA12}
+
+\transclude{GA13}
+
+\p{\strong{Some classical problems}}
+
+\ul{
+\li{\strong{1.} \em{Squaring the circle.} One is to construct a square whose area is the same as that of a circle with unit radius. This amounts to constructing the real number #{\sqrt{\pi}}. This is impossible by \ref{GA13} and the fact that #{\pi} is transcendental (Lindemann).}
+\li{\strong{2.} \em{Duplicating the cube.} One is to construct a cube whose volume is twice that of a given cube. This amounts to constructing #{\sqrt[3]{2}}. But #{\sqrt[3]{2}} has minimal polynomial #{X^3 - 2}, so #{[\mathbb{Q}(\sqrt[3]{2}):\mathbb{Q}] = 3}, which is not a power of #{2}.}
+\li{\p{\strong{3.} \em{Trisecting the angle.} One is to divide a given angle into #{3} equal angles. Suppose the given angle is #{2\pi /3}. Since this is itself constructible (we can construct an equilateral triangle), if this problem can be solved then the angle #{2\pi /9} is constructible; in other words the real numbers #{\cos\frac{2\pi}{9}}, #{\sin\frac{2\pi}{9}} will be constructible.}
+\p{From the formula #{\cos 3\theta = 4\cos^3\theta - 3\cos\theta}, #{2\cos\frac{2\pi}{9}} is a root of #{f(X) = X^3 - 3X + 1}.}
+\p{#{f(\pm 1) \neq 0 \implies f} is irreducible in #{\mathbb{Z}[X]} (or apply Eisenstein’s criterion to #{f(X-1) = X^3 - 3X^2 + 3}). Therefore #{f} is irreducible in #{\mathbb{Q}[X]} by Gauss’ Lemma. Therefore #{[\mathbb{Q}(\cos\frac{2\pi}{9}):\mathbb{Q}] = 3}, which is not a power of #{2}. So this construction is impossible.}}
+}
+
+\transclude{GA14}

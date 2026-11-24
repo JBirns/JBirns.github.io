@@ -1,0 +1,7 @@
+\title{Primitive root of unity}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\zeta_n \in \mu_n} is a \em{primitive #{n}th root of unity} if it has order exactly #{n} in #{L^\times}. (E.g. if #{K \subset \mathbb{C}} then we can take #{\zeta_n = e^{2\pi i/n}}.)}

@@ -1,11 +1,13 @@
-\title{How to write on this site}
+\title{}
 \date{2026-11-22}
 \author{JB00}
 \import{macros}
 
+\def\abs[body]{\lvert \body \rvert}
+\def\norm[x]{||\x ||}
+
 \p{
-This page is a cheat sheet: open \code{trees/note-0001.tree} next to the rendered page
-to see how each thing is written.
+This page is a cheat sheet.
 }
 
 \subtree{
@@ -38,10 +40,6 @@ Inline maths goes in \code{\startverb#{...}\stopverb}: the function #{f(x) = e^{
   \abs{\langle u, v \rangle} &\le \norm{u}\,\norm{v}
 \end{aligned}
 }
-\p{
-The macros #{\R}, #{\abs{x}}, #{\norm{v}}, #{\Hom{A}{B}} come from [[macros]];
-add your own there with \code{\startverb\def\name{...}\stopverb}.
-}
 }
 
 \subtree{
@@ -66,4 +64,41 @@ start of the lines below in the source file.
 %     C \arrow[r, "k"'] & D
 %   \end{tikzcd}
 % }}
+}
+
+\subtree{
+  \p{
+Forester excels at mathematics written as small, linked pieces. Each \code{subtree} below gets its
+own label and could equally live in its own file and be reused on many pages with
+\code{transclude}.
+}
+
+\subtree[metric-space]{
+\taxon{Definition}
+\title{Metric space}
+\p{
+A \em{metric space} is a set #{X} with a function #{d \colon X \times X \to \R} such that for all
+#{x, y, z \in X}:
+}
+\ol{
+  \li{#{d(x, y) \ge 0}, with equality if and only if #{x = y};}
+  \li{#{d(x, y) = d(y, x)};}
+  \li{#{d(x, z) \le d(x, y) + d(y, z)}.}
+}
+}
+
+\subtree{
+\taxon{Theorem}
+\title{Reverse triangle inequality}
+\p{In a metric space, for all #{x, y, z}:}
+##{ |d(x, z) - d(y, z)| \le d(x, y). }
+
+\proof{
+\p{
+By the triangle inequality, #{d(x, z) \le d(x, y) + d(y, z)}, so
+#{d(x, z) - d(y, z) \le d(x, y)}. Exchanging the roles of #{x} and #{y} gives
+#{d(y, z) - d(x, z) \le d(x, y)}. Together these give the claim.
+}
+}
+}
 }

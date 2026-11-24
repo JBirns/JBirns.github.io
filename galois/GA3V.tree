@@ -1,0 +1,104 @@
+\title{Cyclotomic and Kummer Extensions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K} be a field, and #{n \geq 1} an integer. We assume #{\operatorname{char} K \nmid n} (i.e. #{\operatorname{char} K = 0}, or #{\operatorname{char} K = p > 0} and #{p \nmid n}).}
+
+\p{Let #{L/K} be a splitting field of #{f(X) = X^n - 1}. Since #{f'(X) = nX^{n-1}} and #{n \cdot 1_K \neq 0}, #{\gcd(f, f') = 1}. So #{f} is separable. By \ref{GA2N}, #{L/K} is Galois.}
+
+\p{Let #{\mu_n = \lbrace x \in L : x^n = 1\rbrace } be the group of #{n}th roots of unity. This is a subgroup of #{L^\times} of order #{n} (since #{f} splits into distinct linear factors over #{L}) and is cyclic by \ref{GA0C}.}
+
+\transclude{GA3W}
+
+\p{Then #{\mu_n = \langle \zeta_n \rangle = \lbrace 1, \zeta_n, \zeta_n^2, \ldots, \zeta_n^{n-1}\rbrace } and #{L = K(1, \zeta_n, \ldots, \zeta_n^{n-1}) = K(\zeta_n)}.}
+
+\transclude{GA3X}
+
+\p{Recall that #{(\mathbb{Z}/n\mathbb{Z})^\times = \lbrace a \in \mathbb{Z}/n\mathbb{Z} : \gcd(a, n) = 1\rbrace } is a group under multiplication. It has order #{\phi(n)} (Euler’s totient function).}
+
+\p{Let #{K} be a field with #{\operatorname{char} K \nmid n}. Let #{\zeta_n} be a primitive #{n}th root of unity (in some field extension).}
+
+\transclude{GA3Y}
+
+\transclude{GA3Z}
+
+\transclude{GA40}
+
+\transclude{GA41}
+
+\transclude{GA42}
+
+\p{Its roots are the primitive #{n}th roots of unity. As #{\operatorname{Gal}(\mathbb{Q}(\zeta_n)/\mathbb{Q})} permutes these, we have #{\Phi_n \in \mathbb{Q}[X]}. Clearly we have #{\zeta^n = 1 \iff \zeta} is a primitive #{d}th root of unity for some #{d \mid n}. Therefore}
+
+##{X^n - 1 = \prod_{d \mid n} \Phi_d(X).}
+
+\p{It follows by induction on #{n} that #{\Phi_n \in \mathbb{Z}[X]}. E.g.}
+
+##{\begin{aligned}
+\Phi_1 &= X - 1, \\
+\Phi_p &= \frac{X^p - 1}{X - 1} = X^{p-1} + X^{p-2} + \cdots + X + 1 \quad \text{for } p \text{ prime}, \\
+\Phi_4 &= X^2 + 1.
+\end{aligned}}
+
+\p{In general #{\deg \Phi_n = \phi(n)}.}
+
+\transclude{GA43}
+
+\transclude{GA44}
+
+\transclude{GA45}
+
+##{\begin{array}{c|ccccc} k & 0 & 1 & 2 & 3 & 4 \\ \hline F_k = 2^{2^k} + 1 & 3 & 5 & 17 & 257 & 65537 \end{array}}
+
+\p{#{F_0, \ldots, F_4} are all prime. However in 1732 Euler showed #{F_5 = 641 \times 6700417}.}
+
+\p{Many more Fermat numbers have been proved composite, and no more have been shown to be prime.}
+
+\transclude{GA46}
+
+\p{\strong{Kummer Theory}}
+
+\p{We continue to assume #{\operatorname{char} K \nmid n}, but now further assume that #{\mu_n \subset K}, i.e. #{K} contains a primitive #{n}th root of unity #{\zeta_n}.}
+
+\p{Let #{a \in K^\times}. Let #{L/K} be a splitting field of #{f(X) = X^n - a}. Since #{f'(X) = nX^{n-1}} and #{n \cdot 1_K \neq 0} we have #{\gcd(f, f') = 1}, so #{f} is separable. By \ref{GA2N}, #{L/K} is Galois.}
+
+\p{Let #{\alpha \in L} be a root of #{f}. Then #{f(X) = \prod_{i=0}^{n-1} (X - \zeta_n^i \alpha)}. Therefore}
+
+##{L = K(\alpha, \zeta_n\alpha, \ldots, \zeta_n^{n-1}\alpha) = K(\alpha).}
+
+\p{We sometimes write #{\sqrt[n]{a}} for #{\alpha}. (Note: we had to pick one. This notation assumes we made some choice.)}
+
+\transclude{GA47}
+
+\transclude{GA48}
+
+\transclude{GA49}
+
+\transclude{GA4A}
+
+\transclude{GA4B}
+
+\p{\strong{Special case:} #{n = 2}, #{\operatorname{char} K \neq 2}. Then #{[K(\sqrt{a}):K] = 2} provided #{a \notin (K^\times)^2}.}
+
+\transclude{GA4C}
+
+\p{Now let #{K} be a field with #{\operatorname{char} K = 0}. Let #{f \in K[X]} be a polynomial.}
+
+\transclude{GA4D}
+
+\transclude{GA4E}
+
+\transclude{GA4F}
+
+\transclude{GA4G}
+
+\transclude{GA4H}
+
+\transclude{GA4I}
+
+\transclude{GA4J}
+
+\transclude{GA4K}
+
+\transclude{GA4L}

@@ -1,0 +1,31 @@
+\title{Gauss}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{n \geq 3}. A regular #{n}-gon is constructible by ruler and compass #{\iff \phi(n)} is a power of #{2}.}
+
+\proof{
+\p{(#{\Rightarrow}) Let #{\zeta_n = e^{2\pi i/n}}, #{\alpha = \zeta_n + \zeta_n^{-1} = 2\cos\big(\frac{2\pi}{n}\big)}. Since #{\alpha \in \mathbb{R}}, #{\zeta_n \notin \mathbb{R}}, and #{\zeta_n} is a root of #{X^2 - \alpha X + 1 \in \mathbb{Q}(\alpha)[X]}, we have #{[\mathbb{Q}(\zeta_n):\mathbb{Q}(\alpha)] = 2}.}
+
+\p{If a regular #{n}-gon can be constructed by ruler and compass then #{\alpha} is constructible #{\implies [\mathbb{Q}(\alpha):\mathbb{Q}]} is a power of #{2} by \ref{GA13}. By \ref{GA43},}
+
+##{\phi(n) = [\mathbb{Q}(\zeta_n):\mathbb{Q}] = 2[\mathbb{Q}(\alpha):\mathbb{Q}]}
+
+\p{is a power of #{2}.}
+
+\p{(#{\Leftarrow}) For the converse we use the converse of \ref{GA11} (proof omitted). It remains to show that if #{\phi(n)} is a power of #{2} then there exist fields}
+
+##{\mathbb{Q} = K_m \subset K_{m-1} \subset \cdots \subset K_1 \subset K_0 = \mathbb{Q}(\zeta_n)}
+
+\p{where #{[K_i:K_{i+1}] = 2} for all #{i} and #{K_1 = \mathbb{Q}(\alpha)}.}
+
+\p{By the Fundamental Theorem of Galois Theory it suffices to construct subgroups}
+
+##{\lbrace 1\rbrace  = H_0 \subset H_1 \subset \cdots \subset H_{m-1} \subset H_m = (\mathbb{Z}/n\mathbb{Z})^\times}
+
+\p{where #{(H_i : H_{i-1}) = 2} for all #{i}, and #{H_1 = \lbrace \pm 1\rbrace }.}
+
+\p{Assuming #{H_0, H_1, \ldots, H_j} have been constructed and #{H_j \neq G}, we note that #{G/H_j} has order a power of #{2}, hence contains an element #{gH_j} of order #{2}. Set #{H_{j+1} = \langle H_j, g \rangle} and repeat.}
+}

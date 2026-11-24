@@ -1,0 +1,35 @@
+\title{Uniqueness of Splitting Fields}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{0 \neq f \in K[X]}. Let #{L} be a splitting field of #{f} over #{K}. Let #{\sigma \colon K \hookrightarrow M} be any field embedding such that #{\sigma f \in M[X]} splits. Then}
+
+\ul{
+\li{\p{\strong{(i)} there exists a #{\sigma}-embedding #{\tau \colon L \hookrightarrow M};}
+##{\begin{array}{ccc} L & \overset{\tau}{\dashrightarrow} & M \\ \big| & \nearrow {\scriptstyle \sigma} & \\ K & & \end{array}}}
+\li{\strong{(ii)} if #{M} is a splitting field for #{\sigma f} over #{\sigma K} then any #{\tau} as in (i) is an isomorphism.}
+}
+
+\p{In particular, any #{2} splitting fields for #{f} over #{K} are #{K}-isomorphic.}
+
+\proof{
+\p{(i) Proof by induction on #{n = [L:K]}. If #{n = 1}, then #{L = K} and there is nothing to prove. So suppose #{n > 1} and let #{g \in K[X]} be an irreducible factor of #{f} of degree #{> 1}.}
+
+\p{Let #{\alpha \in L} be a root of #{g}. Let #{\beta \in M} be a root of #{\sigma g}. Then by \ref{GA1B}, #{\sigma} extends to an embedding #{\sigma_1 \colon K(\alpha) \to M}, #{\alpha \mapsto \beta}.}
+
+##{\begin{array}{rcl} L & \dashrightarrow & M \\ \big| & & \\ K(\alpha) & \xrightarrow{\sigma_1} & M \\ \big|\;{\scriptstyle \deg g} & & \\ K & \xrightarrow{\sigma} & M \end{array}}
+
+\p{Then #{[L:K(\alpha)] < [L:K]}, #{L} is a splitting field of #{f} over #{K(\alpha)}, and #{\sigma_1 f = \sigma f} splits in #{M}.}
+
+\p{So by the induction hypothesis, #{\sigma_1} extends to an embedding #{\tau \colon L \to M}.}
+
+\p{(ii) Pick any #{\tau \colon L \hookrightarrow M} as in (i). Let #{\alpha_1, \ldots, \alpha_n} be the roots of #{f} in #{L}. The roots of #{\sigma f} in #{M} are #{\tau\alpha_1, \ldots, \tau\alpha_n}. If #{M} is a splitting field for #{\sigma f} over #{\sigma K}, then}
+
+##{M = \sigma K(\tau\alpha_1, \ldots, \tau\alpha_n) = \tau\big(K(\alpha_1, \ldots, \alpha_n)\big) = \tau(L).}
+
+\p{Therefore #{\tau} is surjective. #{\tau} is injective because all field homomorphisms are. Therefore #{\tau} is an isomorphism.}
+
+\p{For the final statement, suppose #{L/K} and #{M/K} are both splitting fields for #{f} over #{K}, and let #{\sigma \colon K \hookrightarrow M} be the inclusion map. Then (i) and (ii) give a #{K}-isomorphism #{L \to M}.}
+}

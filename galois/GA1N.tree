@@ -1,0 +1,17 @@
+\title{Algebraic closures in two easy cases}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose that (i) #{K \subset \mathbb{C}} or (ii) #{K} is countable. Then #{K} has an algebraic closure.}
+
+\proof{
+\p{(i) If #{K \subset \mathbb{C}} then let #{L = \lbrace \alpha \in \mathbb{C} : \alpha \text{ algebraic over } K\rbrace }. #{L} is a field by \ref{GA0T}, and #{L/K} is clearly algebraic. If #{f \in K[X]} then write #{f(X) = \prod_{i=1}^n (X - \alpha_i)} for some #{\alpha_i \in \mathbb{C}}. The definition of #{L} implies all #{\alpha_i \in L}, i.e. #{f} splits into linear factors over #{L}. \ref{GA1M} tells us #{L} is algebraically closed. Therefore #{L} is the algebraic closure of #{K}.}
+
+\p{(ii) If #{K} is countable, then so is #{K[X]}. Enumerate the monic irreducible polynomials #{f_1, f_2, \ldots}. Let #{L_0 = K} and for each #{i \geq 1} let #{L_i} be a splitting field for #{f_i} over #{L_{i-1}}. Then}
+
+##{L_0 \subset L_1 \subset L_2 \subset \cdots.}
+
+\p{Then #{L = \bigcup_{n \geq 0} L_n} is a field, #{L/K} is algebraic, and every polynomial in #{K[X]} splits over #{L}. \ref{GA1M} #{\implies L} is algebraically closed. Therefore #{L} is the algebraic closure of #{K}.}
+}

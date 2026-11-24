@@ -1,0 +1,21 @@
+\title{Fundamental Theorem of Algebra}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathbb{C}} is algebraically closed.}
+
+\proof{
+\p{We’ll use the following facts:}
+
+\ul{
+\li{\strong{(i)} Every polynomial over #{\mathbb{R}} of odd degree has a root in #{\mathbb{R}}.}
+\li{\strong{(ii)} Every quadratic over #{\mathbb{C}} has a root in #{\mathbb{C}} (we use the quadratic formula, #{\sqrt{re^{i\theta}} = \sqrt{r}\,e^{i\theta /2}}).}
+\li{\strong{(iii)} Every group of order #{2^n} (with #{n \geq 1}) has a subgroup of index #{2}.}
+}
+
+\p{Suppose #{L/\mathbb{C}} is a finite extension with #{L \neq \mathbb{C}}. Replacing #{L} by its Galois closure over #{\mathbb{R}} we may assume #{L/\mathbb{R}} is Galois. Let #{G = \operatorname{Gal}(L/\mathbb{R})}. Let #{H \leq G} be a Sylow #{2}-subgroup. Then #{[L^H:\mathbb{R}] = (G:H)} is odd. So if #{\alpha \in L^H} then #{[\mathbb{R}(\alpha):\mathbb{R}]} is odd. Hence #{\alpha \in \mathbb{R}} by (i). Therefore #{L^H = \mathbb{R}} and #{G = H} is a #{2}-group.}
+
+\p{Let #{G_1 = \operatorname{Gal}(L/\mathbb{C}) \leq \operatorname{Gal}(L/\mathbb{R}) = G}. Since #{L \neq \mathbb{C}}, we have #{G_1} non-trivial, so by (iii) it has an index #{2} subgroup, say #{G_2}. Then #{[L^{G_2}:\mathbb{C}] = (G_1:G_2) = 2}, contradicting (ii).}
+}

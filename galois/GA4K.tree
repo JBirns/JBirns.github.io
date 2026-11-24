@@ -1,0 +1,11 @@
+\title{Insolubility of degree #{\geq 5} polynomials}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \in K[X]} is a polynomial of degree #{n \geq 5} with Galois group #{A_n} or #{S_n}, then #{f} is \em{not} soluble by radicals.}
+
+\proof{
+\p{#{A_5} is nonabelian and simple, hence not soluble. By \ref{GA4H}, #{A_n} and #{S_n} are not soluble for all #{n \geq 5} since they contain #{A_5} as a subgroup.}
+}

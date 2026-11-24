@@ -1,0 +1,31 @@
+\title{Trace and norm via the minimal polynomial}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[L:K] < \infty}, and let #{\alpha \in L}. Let #{f} be the minimal polynomial of #{\alpha} over #{K}, say}
+
+##{f(X) = X^n + a_{n-1} X^{n-1} + \cdots + a_1 X + a_0, \quad a_i \in K.}
+
+\p{Then}
+
+##{\operatorname{Tr}_{L/K}(\alpha) = -m a_{n-1}, \qquad N_{L/K}(\alpha) = \big((-1)^n a_0\big)^m,}
+
+\p{where #{m = [L:K(\alpha)]}.}
+
+\proof{
+\p{By \ref{GA32}, without loss of generality #{L = K(\alpha)}, i.e. #{m = 1}. If #{A} represents #{m_\alpha} with respect to the basis #{1, \alpha, \ldots, \alpha^{n-1}} then}
+
+##{A = \begin{pmatrix}
+0 & & & & -a_0 \\
+1 & 0 & & & -a_1 \\
+& 1 & \ddots & & \vdots \\
+& & \ddots & 0 & -a_{n-2} \\
+& & & 1 & -a_{n-1}
+\end{pmatrix}}
+
+\p{(recognise as the companion matrix in GRM). Therefore}
+
+##{\operatorname{Tr}_{L/K}(\alpha) = \operatorname{tr}(A) = -a_{n-1}, \qquad N_{L/K}(\alpha) = \det A = (-1)^n a_0.}
+}

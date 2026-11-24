@@ -1,0 +1,13 @@
+\title{Field extensions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\mathbb{C}/\mathbb{R}}, #{\mathbb{Q}[\sqrt{2}]/\mathbb{Q}}, #{\mathbb{R}/\mathbb{Q}}.}
+\li{\p{\strong{(ii)} (Adjoining a root of an irreducible polynomial.) Let #{K} be a field and #{f \in K[X]} an irreducible polynomial. We recall from GRM that #{K[X]} is Euclidean, hence a PID. Therefore #{(f) \subset K[X]} is a maximal ideal, so}
+##{L = \frac{K[X]}{(f)}}
+\p{is a field extension of #{K}, and #{\alpha = X + (f) \in L} is a root of #{f}.}
+\p{For example, taking #{K = \mathbb{R}}, #{f = X^2+1} gives the first example in (i); the second can be seen similarly.}}
+}

@@ -1,0 +1,7 @@
+\title{Galois groups up to conjugacy}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{G = \operatorname{Gal}(f/K) \leq S_n} is really only defined up to conjugacy, since if we reorder #{\alpha_1, \ldots, \alpha_n} using #{\sigma \in S_n} then #{G} changes to #{\sigma G \sigma^{-1}}. But we can still distinguish #{\langle (12), (34) \rangle \leq S_4} and #{\langle (12)(34), (13)(24) \rangle \leq S_4}, even though both are isomorphic to #{C_2 \times C_2}.}

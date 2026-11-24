@@ -1,0 +1,9 @@
+\title{The regular 9-gon}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This shows that a regular #{9}-gon cannot be constructed by ruler and compass.}
+
+\p{Later we will prove the result of Gauss which says that a regular #{n}-gon is constructible if and only if #{\phi(n)} is a power of #{2}.}

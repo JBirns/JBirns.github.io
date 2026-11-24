@@ -1,0 +1,21 @@
+\title{Kummer}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\operatorname{char} K \nmid n} and #{\mu_n \subset K}. Then every degree #{n} Galois extension #{L/K} with cyclic Galois group is of the form #{L = K(\sqrt[n]{a})} for some #{a \in K^\times}.}
+
+\proof{
+\p{Write #{\operatorname{Gal}(L/K) = \lbrace \sigma^i : 0 \leq i < n\rbrace }. By \ref{GA46}, there exists #{x \in L} such that}
+
+##{\alpha := \sum_{j=0}^{n-1} \zeta_n^j \sigma^j(x) \neq 0}
+
+\p{(the \em{Lagrange resolvent}). Then}
+
+##{\sigma(\alpha) = \sum_{j=0}^{n-1} \zeta_n^j \sigma^{j+1}(x) = \sum_{j=0}^{n-1} \zeta_n^{j-1} \sigma^j(x) = \zeta_n^{-1}\alpha,}
+
+\p{(for the second equality, reindex #{j \mapsto j - 1}, using #{\sigma^n = \mathrm{id}} and #{\zeta_n^n = 1}). The Galois conjugates #{\sigma^j(\alpha) = \zeta_n^{-j}\alpha} are distinct, so #{[K(\alpha):K] = n} and #{L = K(\alpha)}. Finally}
+
+##{\sigma(\alpha^n) = (\zeta_n^{-1}\alpha)^n = \alpha^n \implies \alpha^n \in K.}
+}

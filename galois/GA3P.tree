@@ -1,0 +1,15 @@
+\title{A quartic with Galois group #{C_4}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{f(X) = X^4 - 4X^2 + 2}, irreducible in #{\mathbb{Q}[X]} by Eisenstein (#{p = 2}) and Gauss’ Lemma. Then #{g(X) = X(X^2 + 8X + 8)}, and}
+
+##{\operatorname{Disc}(f) = \operatorname{Disc}(g) = 8^2 \operatorname{Disc}(X^2 + 8X + 8) = 2^{11}.}
+
+\p{#{\operatorname{Gal}(g/\mathbb{Q}) = C_2 \implies \operatorname{Gal}(f/\mathbb{Q}) = C_4} or #{D_8}. But}
+
+##{f(X) = (X^2 - 2 + \sqrt{2})(X^2 - 2 - \sqrt{2}) \in \mathbb{Q}(\sqrt{\Delta})[X] = \mathbb{Q}(\sqrt{2})[X].}
+
+\p{Therefore #{\operatorname{Gal}(f/\mathbb{Q}) \cap A_4 = \operatorname{Gal}(f/\mathbb{Q}(\sqrt{2}))} is not a transitive subgroup of #{S_4}. #{D_8} contains all the double transpositions, so #{D_8 \cap A_4} is a transitive subgroup. Therefore #{\operatorname{Gal}(f/\mathbb{Q}) = C_4} (compare \ref{GA2S}).}

@@ -1,0 +1,11 @@
+\title{Fixed field}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{S \subset \operatorname{Aut}(L)} is any subset we define the \em{fixed field} of #{S} to be}
+
+##{L^S = \lbrace x \in L : \sigma(x) = x \; \forall \sigma \in S\rbrace .}
+
+\p{This is a subfield of #{L} (exercise).}

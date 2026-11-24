@@ -1,0 +1,7 @@
+\title{Algebraically closed field}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A field #{K} is \em{algebraically closed} if every non-constant polynomial in #{K[X]} has a root in #{K}; equivalently every irreducible polynomial in #{K[X]} is linear.}

@@ -1,7 +1,9 @@
-\title{About this website}
+\title{Practical Guide to this Website}
 
 \p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura). You can navigate around it through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.
 By the section headers, you may see a link like “[AB12]”. Clicking that link will take you to that section as its own page without the surrounding content.
+}
+\p{
 At the bottom of a page, you may see any of the following headings containing links to other pages:
 }
 \ul{

@@ -1,0 +1,7 @@
+\title{Automorphism}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An \em{automorphism} of a field #{L} is a bijective homomorphism #{\sigma \colon L \to L}. We write #{\operatorname{Aut}(L)} for the group of automorphisms of #{L} under composition, i.e. #{(\sigma\tau)(x) = \sigma(\tau(x))}.}

@@ -1,0 +1,26 @@
+\title{Cyclotomic Galois groups embed in #{(\mathbb{Z}/n\mathbb{Z})^\times}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{There exists an injective group homomorphism}
+
+##{\chi \colon \operatorname{Gal}(K(\zeta_n)/K) \hookrightarrow (\mathbb{Z}/n\mathbb{Z})^\times.}
+
+\p{In particular #{\operatorname{Gal}(K(\zeta_n)/K)} is abelian, and #{[K(\zeta_n):K]} divides #{\phi(n)}.}
+
+\proof{
+\p{Let #{G = \operatorname{Gal}(K(\zeta_n)/K)}. If #{\sigma \in G} then #{\zeta_n} and hence also #{\sigma(\zeta_n)} are roots of #{X^n - 1}. Therefore #{\sigma(\zeta_n) = \zeta_n^a} for some #{a \in \mathbb{Z}}. Since #{\zeta_n} is a primitive #{n}th root of unity, the value of #{a} is unique mod #{n}. We define}
+
+##{\begin{aligned}
+\chi \colon G &\to \mathbb{Z}/n\mathbb{Z} \\
+\sigma &\mapsto a.
+\end{aligned}}
+
+\p{Now let #{\sigma, \tau \in G}, with #{\sigma(\zeta_n) = \zeta_n^a}, #{\tau(\zeta_n) = \zeta_n^b}. Then}
+
+##{\sigma\tau(\zeta_n) = \sigma(\zeta_n^b) = \zeta_n^{ab}.}
+
+\p{So #{\chi(\sigma\tau) = ab = \chi(\sigma)\chi(\tau)}. In particular, #{\chi(\sigma)\chi(\sigma^{-1}) = \chi(1) = 1}, so #{\chi(\sigma) \in (\mathbb{Z}/n\mathbb{Z})^\times}, and #{\chi} is a group homomorphism. Since any #{\sigma \in G} is uniquely determined by #{\sigma(\zeta_n)}, it is clear that #{\chi} is injective.}
+}

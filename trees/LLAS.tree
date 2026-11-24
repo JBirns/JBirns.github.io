@@ -1,0 +1,15 @@
+\title{Lecture Notes}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+\import{names}
+
+\p{These notes are based on lectures I have attended and are not endorsed by the lecturers. Any changes, and in particular, all errors, are almost surely mine.}
+
+\transclude{\camIA}
+
+\transclude{\camIB}
+
+\transclude{\camII}
+
+\transclude{\othernotes}

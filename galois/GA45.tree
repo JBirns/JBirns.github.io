@@ -1,0 +1,17 @@
+\title{Constructible regular polygons}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A regular #{n}-gon is constructible by ruler and compass iff #{n} is a power of #{2} times distinct primes of the form #{F_k = 2^{2^k} + 1}.}
+
+\proof{
+\p{If #{n = \prod p_i^{\alpha_i}} then #{\phi(n) = \prod p_i^{\alpha_i - 1}(p_i - 1)}. So #{\phi(n)} is a power of #{2} #{\iff} #{n} is a product of a power of #{2} and distinct odd primes of the form #{2^m + 1}.}
+
+\p{If #{2^m + 1} is prime then #{m} must be a power of #{2}. Indeed, if #{m = ab} with #{b > 1} odd, then putting #{x = 2^a} in}
+
+##{x^b + 1 = (x + 1)(x^{b-1} - x^{b-2} + \cdots - x + 1)}
+
+\p{gives a nontrivial factorisation.}
+}

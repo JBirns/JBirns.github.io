@@ -1,0 +1,7 @@
+\title{Variants of the definition of soluble}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The definition is unchanged if we replace “abelian” with “cyclic” or “cyclic of prime order”.}

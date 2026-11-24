@@ -1,0 +1,11 @@
+\title{Minimal polynomials as orbit products}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We saw in the proof of (i) #{\Rightarrow} (ii) that if #{L/K} is Galois and #{\alpha \in L}, then the minimal polynomial of #{\alpha} over #{K} is}
+
+##{\prod_{i=1}^m (X - \alpha_i)}
+
+\p{where #{\alpha_1, \ldots, \alpha_m} are the distinct elements of #{\operatorname{orb}_G(\alpha) = \lbrace \sigma(\alpha) : \sigma \in G\rbrace }.}

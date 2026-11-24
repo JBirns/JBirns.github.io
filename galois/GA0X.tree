@@ -1,0 +1,7 @@
+\title{Constructible points}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{(x, y) \in \mathbb{R}^2} is \em{constructible} from #{S} if we can enlarge #{S} to contain #{(x, y)} by a finite sequence of the operations (i), (ii) and (iii).}

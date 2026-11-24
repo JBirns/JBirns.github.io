@@ -1,0 +1,40 @@
+\title{Computing degrees}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} Let #{f(X) = X^d - n} (#{d, n \in \mathbb{Z}}, #{n \neq 0}, #{d \geq 2}). Suppose there exists a prime #{p} such that when we write #{n = p^e m} with #{p \nmid m}, then #{(d, e) = 1}. We claim that #{f} is irreducible in #{\mathbb{Q}[X]}.}
+\p{Equivalently, we show that #{[\mathbb{Q}(\alpha):\mathbb{Q}] = d} where #{\alpha = \sqrt[d]{n}}.}
+\p{By Euclid’s algorithm, there exist #{r, s \in \mathbb{Z}} such that #{rd + se = 1} (we may arrange #{s > 0}). Then}
+##{p^{dr} n^s = p^{dr}(p^e m)^s = p m^s.}
+\p{We put #{\beta = p^r \alpha^s} so that #{\beta^d = p m^s}. Then #{\beta} is a root of #{g(X) = X^d - p m^s}, which is irreducible in #{\mathbb{Z}[X]} by Eisenstein’s criterion, hence irreducible in #{\mathbb{Q}[X]} by Gauss’ Lemma. Therefore #{[\mathbb{Q}(\beta):\mathbb{Q}] = d}.}
+\p{But #{\mathbb{Q}(\beta) \subset \mathbb{Q}(\alpha)} and #{[\mathbb{Q}(\alpha):\mathbb{Q}] \leq \deg f = d}. This gives #{[\mathbb{Q}(\alpha):\mathbb{Q}] = d} as required.}}
+\li{\p{\strong{(ii)} Let #{p} be an odd prime, #{\zeta_p = e^{2\pi i/p}} and #{\alpha = 2\cos\big(\frac{2\pi}{p}\big) = \zeta_p + \zeta_p^{-1}}. Let’s compute #{[\mathbb{Q}(\alpha):\mathbb{Q}]}.}
+\p{#{\zeta_p} is a root of}
+##{f(X) = \frac{X^p - 1}{X - 1} = X^{p-1} + \cdots + X + 1,}
+\p{which is irreducible by Eisenstein’s criterion applied to #{f(X+1)}. Therefore}
+##{[\mathbb{Q}(\zeta_p):\mathbb{Q}] = \deg f = p - 1}
+\p{(an important result to remember).}
+##{\begin{array}{c}
+\mathbb{Q}(\zeta_p) \\ | \\ \mathbb{Q}(\alpha) \\ | \\ \mathbb{Q}
+\end{array}}
+\p{#{\zeta_p} is a root of #{g(X) = (X - \zeta_p)(X - \zeta_p^{-1}) = X^2 - \alpha X + 1 \in \mathbb{Q}(\alpha)[X]}. Therefore #{[\mathbb{Q}(\zeta_p):\mathbb{Q}(\alpha)] \leq \deg g = 2}.}
+\p{But #{\alpha \in \mathbb{R}} and #{\zeta_p \notin \mathbb{R}}, so #{\zeta_p \notin \mathbb{Q}(\alpha) \subset \mathbb{R}}. Therefore #{[\mathbb{Q}(\zeta_p):\mathbb{Q}(\alpha)] \neq 1}, so #{[\mathbb{Q}(\zeta_p):\mathbb{Q}(\alpha)] = 2}.}
+\p{The Tower Law then gives #{[\mathbb{Q}(\alpha):\mathbb{Q}] = \frac{p-1}{2}}.}}
+\li{\p{\strong{(iii)} Suppose #{m}, #{n} and #{mn} are not perfect squares. Let #{\alpha = \sqrt{m} + \sqrt{n}}. Let’s compute #{[\mathbb{Q}(\alpha):\mathbb{Q}]}.}
+\p{Clearly #{\mathbb{Q}(\alpha) \subset \mathbb{Q}(\sqrt{m}, \sqrt{n})}. Conversely we have}
+##{m = (\alpha - \sqrt{n})^2 = \alpha^2 - 2\alpha\sqrt{n} + n \implies \sqrt{n} = \frac{\alpha^2 - m + n}{2\alpha} \in \mathbb{Q}(\alpha)}
+\p{and #{\sqrt{m} = \alpha - \sqrt{n} \in \mathbb{Q}(\alpha)}. Therefore #{\mathbb{Q}(\alpha) = \mathbb{Q}(\sqrt{m}, \sqrt{n})}.}
+##{\begin{array}{cl}
+\mathbb{Q}(\sqrt{m}, \sqrt{n}) & \\
+| & \leq 2 \text{ since } \sqrt{m} \text{ is a root of } f(X) = X^2 - m \in \mathbb{Q}(\sqrt{n})[X] \\
+\mathbb{Q}(\sqrt{n}) & \\
+| & 2 \\
+\mathbb{Q} &
+\end{array}}
+\p{Suppose #{\sqrt{m} \in \mathbb{Q}(\sqrt{n})}. Then #{\sqrt{m} = r + s\sqrt{n}} for some #{r, s \in \mathbb{Q}}, so #{m = r^2 + 2rs\sqrt{n} + s^2 n}. Since #{\sqrt{n} \notin \mathbb{Q}} we must have #{rs = 0}.
+If #{r = 0}, then #{mn} is a square, a contradiction. If #{s = 0}, then #{m} is a square, a contradiction.}
+\p{Therefore #{[\mathbb{Q}(\sqrt{m}, \sqrt{n}):\mathbb{Q}(\sqrt{n})] = 2}, and the Tower Law gives #{[\mathbb{Q}(\alpha):\mathbb{Q}] = 2 \cdot 2 = 4}.}}
+}

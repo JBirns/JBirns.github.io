@@ -1,0 +1,9 @@
+\title{Subfields of #{\mathbb{F}_{p^6}}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{\begin{array}{ccccc} & & \mathbb{F}_{p^6} & & \\ & {\scriptstyle 3}\diagup & & \diagdown {\scriptstyle 2} & \\ \mathbb{F}_{p^2} & & & & \mathbb{F}_{p^3} \\ & {\scriptstyle 2}\diagdown & & \diagup {\scriptstyle 3} & \\ & & \mathbb{F}_p & & \end{array}}
+
+\p{All extensions are Galois with cyclic Galois groups of orders indicated.}

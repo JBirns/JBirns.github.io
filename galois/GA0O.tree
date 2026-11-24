@@ -1,0 +1,12 @@
+\title{Finite extensions are algebraic}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} We have #{[K(\alpha):K] < \infty \iff \alpha} algebraic over #{K}.}
+\li{\strong{(ii)} If #{[L:K] < \infty} then for any #{\alpha \in L} we certainly have #{[K(\alpha):K] < \infty}.}
+}
+
+\p{So any finite extension is algebraic, but the converse is false.}

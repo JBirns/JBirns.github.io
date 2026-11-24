@@ -1,0 +1,18 @@
+\title{Simple roots and the derivative}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} and #{\alpha \in K} a root of #{f}. Then #{\alpha} is a simple root #{\iff f'(\alpha) \neq 0}.}
+
+\proof{
+\p{#{f(X) = (X - \alpha) g(X)} for some #{g \in K[X]}. Then}
+
+##{\begin{aligned}
+\alpha \text{ is a simple root} &\iff X - \alpha \text{ is not a factor of } g \\
+&\iff g(\alpha) \neq 0.
+\end{aligned}}
+
+\p{But #{f'(X) = (X - \alpha) g'(X) + g(X) \implies f'(\alpha) = g(\alpha)}.}
+}

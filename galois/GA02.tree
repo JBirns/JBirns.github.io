@@ -1,0 +1,7 @@
+\title{Field}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{field} #{K} is a ring (commutative with #{1}, with #{0_K \neq 1_K}) in which every non-zero element has an inverse under multiplication.}

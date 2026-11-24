@@ -1,0 +1,58 @@
+\title{Normal and Separable Extensions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{GA1X}
+
+\transclude{GA1Y}
+
+\p{\strong{Separability}}
+
+\p{Over #{\mathbb{R}} or #{\mathbb{C}} we know from basic calculus that a polynomial #{f} has a repeated root #{\alpha} iff #{f(\alpha) = f'(\alpha) = 0}. To work over arbitrary fields we proceed purely algebraically (no calculus!).}
+
+\transclude{GA1Z}
+
+\p{\strong{Exercise.} Check this definition satisfies #{(f+g)' = f' + g'} and #{(fg)' = fg' + f'g}.}
+
+\transclude{GA20}
+
+\p{By the GCD of polynomials #{f, g \in K[X]}, not both #{0}, we mean the unique monic polynomial #{\gcd(f, g)} which generates the ideal #{(f, g) \subset K[X]}. This is the unique monic polynomial which divides #{f} and #{g} and can be written as #{af + bg} for some #{a, b \in K[X]}.}
+
+\p{We can compute #{\gcd(f, g)}, together with #{a, b}, using Euclid’s algorithm.}
+
+\transclude{GA21}
+
+\transclude{GA22}
+
+\transclude{GA23}
+
+\transclude{GA24}
+
+\transclude{GA25}
+
+\transclude{GA26}
+
+\transclude{GA27}
+
+\transclude{GA28}
+
+\p{\strong{One aim for this lecture:} Show that if #{L/K} is a field extension and #{\alpha_1, \ldots, \alpha_n \in L} are separable, then #{K(\alpha_1, \ldots, \alpha_n)/K} is separable.}
+
+\transclude{GA29}
+
+\transclude{GA2A}
+
+\transclude{GA2B}
+
+\p{Note that \ref{GA2A} is the case #{n = 1}.}
+
+\p{\strong{Obvious variant of \ref{GA2B}.} Let #{\sigma \colon K \hookrightarrow M} be an embedding. Then #{\#\lbrace \sigma\text{-homomorphisms } L \to M\rbrace  \leq [L:K]}, with equality #{\iff} each #{\sigma(f_i)} splits into distinct linear factors over #{M}.}
+
+\p{We’ll use this variant in the induction argument.}
+
+\transclude{GA2C}
+
+\transclude{GA2D}
+
+\transclude{GA2E}

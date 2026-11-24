@@ -1,0 +1,19 @@
+\title{Constructible numbers lie in constructible fields}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{x \in \mathbb{R}} is constructible then #{\mathbb{Q}(x)} is a constructible subfield of #{\mathbb{R}}.}
+
+\proof{
+\p{Suppose #{S \subset \mathbb{R}^2} is a finite set of points all of whose coordinates belong to a constructible field #{K}. It suffices to show that if we adjoin #{(x, y) \in \mathbb{R}^2} to #{S} using (iii) then #{K(x, y)} is also constructible.}
+
+\p{#{K} constructible #{\implies} there exist #{\mathbb{Q} = F_0 \subset F_1 \subset \cdots \subset F_n} with #{[F_i:F_{i-1}] = 2} for all #{1 \leq i \leq n} and #{K \subset F_n}.}
+
+\p{The lines and circles in (i) and (ii) have equations of the form}
+
+##{ax + by = c, \qquad (x-a)^2 + (y-b)^2 = c \qquad \text{with } a, b, c \in K.}
+
+\p{If #{(x, y)} is a point of intersection of 2 such lines and circles then #{x = r + s\sqrt{v}}, #{y = t + u\sqrt{v}} for some #{r, s, t, u, v \in K}. Therefore #{x, y \in K(\sqrt{v}) \subset F_n(\sqrt{v})}. Since #{[F_n(\sqrt{v}):F_n] = 1} or #{2}, it follows that #{K(x, y)} is constructible.}
+}

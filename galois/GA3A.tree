@@ -1,0 +1,35 @@
+\title{Existence and uniqueness of finite fields}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{q = p^n} for some #{n \geq 1}.}
+
+\ul{
+\li{\strong{(i)} There exists a field with #{q} elements.}
+\li{\strong{(ii)} Any field with #{q} elements is a splitting field of #{X^q - X} over #{\mathbb{F}_p}.}
+}
+
+\p{In particular, any two finite fields with the same order are isomorphic.}
+
+\proof{
+\p{(i) Let #{L} be a splitting field of #{f(X) = X^q - X} over #{\mathbb{F}_p}. Let #{K \subset L} be the fixed field of}
+
+##{\begin{aligned}
+\phi^n \colon L &\to L \\
+x &\mapsto x^q.
+\end{aligned}}
+
+\p{Then}
+
+##{K = \lbrace \alpha \in L : \phi^n(\alpha) = \alpha\rbrace  = \lbrace \alpha \in L : \alpha^q = \alpha\rbrace  = \lbrace \alpha \in L : f(\alpha) = 0\rbrace .}
+
+\p{Therefore #{\#K \leq \deg f = q}. But #{f'(X) = qX^{q-1} - 1 = -1 \implies \gcd(f, f') = 1 \implies f} separable. Therefore #{\#K = q}. (By the way, #{L = K}.)}
+
+\p{(ii) Suppose #{K} is a field with #{\#K = q}. Lagrange’s Theorem #{\implies \alpha^{q-1} = 1} for all #{\alpha \in K^\times} since #{\#K^\times = q - 1}, so #{\alpha^q = \alpha} for all #{\alpha \in K}. So}
+
+##{f(X) = X^q - X = \prod_{\alpha \in K} (X - \alpha)}
+
+\p{splits into linear factors over #{K}, but clearly not over any proper subfield. So #{K} is a splitting field for #{f} over #{\mathbb{F}_p}.}
+}

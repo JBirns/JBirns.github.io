@@ -1,0 +1,11 @@
+\title{#{S_4} is soluble}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{S_4} is soluble:}
+
+##{\lbrace 1\rbrace  \leq V \leq A_4 \leq S_4}
+
+\p{with #{V/\lbrace 1\rbrace  \cong C_2 \times C_2}, #{A_4/V \cong C_3}, #{S_4/A_4 \cong C_2}.}

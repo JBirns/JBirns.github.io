@@ -1,0 +1,29 @@
+\title{Solubility by radicals}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} be irreducible. Then #{f} is soluble by radicals #{\iff \operatorname{Gal}(f/K)} is soluble.}
+
+\proof{
+\p{(#{\Rightarrow}) By definition there exist fields #{K = K_0 \subset \cdots \subset K_m} such that #{f} has a root in #{K_m} and for each #{1 \leq i \leq m}, #{K_i = K_{i-1}(\alpha_i)} with #{\alpha_i^{d_i} \in K_{i-1}} for some #{d_i \geq 1}.}
+
+\p{Repeatedly applying \ref{GA4J} we may assume #{K_m/K} is Galois. By adjoining suitable roots of unity first, we may further assume each #{K_i/K_{i-1}} is either cyclotomic or Kummer. By \ref{GA3Y} and \ref{GA48}, each #{\operatorname{Gal}(K_i/K_{i-1})} is abelian. So by the Fundamental Theorem of Galois Theory, #{\operatorname{Gal}(K_m/K)} is soluble.}
+
+\p{Since #{f} has a root in #{K_m} and #{K_m/K} is normal (since Galois), we know #{f} splits in #{K_m}. Therefore #{\operatorname{Gal}(f/K)} is a quotient of #{\operatorname{Gal}(K_m/K)}, so #{\operatorname{Gal}(f/K)} is soluble by \ref{GA4H}.}
+
+\p{(#{\Leftarrow}) By the Galois correspondence, there exist fields}
+
+##{K = K_0 \subset K_1 \subset \cdots \subset K_m}
+
+\p{such that #{f} has a root in #{K_m} and each #{K_i/K_{i-1}} is Galois with cyclic Galois group. Let #{n = \operatorname{lcm}_{1 \leq i \leq m} [K_i:K_{i-1}]}. Then}
+
+##{K = K_0 \subset K_0(\zeta_n) \subset K_1(\zeta_n) \subset \cdots \subset K_m(\zeta_n).}
+
+\p{By \ref{GA2U}(i), #{K_i(\zeta_n)/K_{i-1}(\zeta_n)} is Galois and}
+
+##{\operatorname{Gal}(K_i(\zeta_n)/K_{i-1}(\zeta_n)) \hookrightarrow \operatorname{Gal}(K_i/K_{i-1}).}
+
+\p{Therefore #{\operatorname{Gal}(K_i(\zeta_n)/K_{i-1}(\zeta_n))} is cyclic of order dividing #{n}. Kummer’s Theorem (\ref{GA4C}) #{\implies f} is soluble by radicals.}
+}

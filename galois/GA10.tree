@@ -1,0 +1,7 @@
+\title{Degree of a constructible field}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We see by the Tower Law that #{K} constructible #{\implies [K:\mathbb{Q}]} is a power of #{2}.}

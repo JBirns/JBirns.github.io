@@ -1,0 +1,11 @@
+\title{A field with four elements}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Taking #{K = \mathbb{F}_2}, #{f = X^2 + X + 1 \in \mathbb{F}_2[X]} gives}
+
+##{L = \frac{\mathbb{F}_2[X]}{(X^2+X+1)},}
+
+\p{a field with #{4} elements.}

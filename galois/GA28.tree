@@ -1,0 +1,7 @@
+\title{Number fields are simple extensions}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{\ref{GA24} and \ref{GA26} show that if #{[K:\mathbb{Q}] < \infty} then #{K = \mathbb{Q}(\alpha)} for some #{\alpha \in K} (a.k.a. a \em{number field}).}

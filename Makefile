@@ -26,3 +26,6 @@ publish:
 
 clean:
 	rm -rf output build _tmp
+
+paste:
+	bash scripts/paste.sh $(FILE)

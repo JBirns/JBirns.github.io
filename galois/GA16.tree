@@ -1,0 +1,7 @@
+\title{Existence of roots}
+\taxon{Question}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in K[X]} be a nonconstant polynomial. Is there a field extension #{L/K} in which #{f} has a root? Or an extension in which #{f} splits into linear factors?}

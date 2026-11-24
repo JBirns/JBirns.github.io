@@ -1,0 +1,9 @@
+\title{Embeddings of #{\mathbb{Q}(\sqrt{2})} into #{\mathbb{R}}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{There are exactly #{2} #{\mathbb{Q}}-homomorphisms #{\mathbb{Q}(\sqrt{2}) \to \mathbb{R}}, given by}
+
+##{a + b\sqrt{2} \mapsto a + b\sqrt{2} \qquad \text{and} \qquad a + b\sqrt{2} \mapsto a - b\sqrt{2}.}

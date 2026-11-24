@@ -1,0 +1,50 @@
+\title{Splitting Fields}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{GA16}
+
+\p{If #{K \subset \mathbb{C}} then the Fundamental Theorem of Algebra shows we can factor #{f} in #{\mathbb{C}[X]} as a product of linear polynomials. But what about #{K = \mathbb{F}_p}?}
+
+\transclude{GA17}
+
+\transclude{GA18}
+
+\transclude{GA19}
+
+\p{We actually need a slight variant of \ref{GA18}. The proof is exactly the same, but the extra generality is useful for inductive proofs.}
+
+\transclude{GA1A}
+
+\p{N.B. Taking #{\sigma = \mathrm{id} \colon K \to K} we recover the definition of a #{K}-embedding.}
+
+\transclude{GA1B}
+
+\transclude{GA1C}
+
+\transclude{GA1D}
+
+\transclude{GA1E}
+
+\transclude{GA1F}
+
+\transclude{GA1G}
+
+\transclude{GA1H}
+
+\transclude{GA1I}
+
+\transclude{GA1J}
+
+\transclude{GA1K}
+
+\transclude{GA1L}
+
+\transclude{GA1M}
+
+\p{(Later we will show that every field #{K} has an algebraic closure. Here are two easy cases.)}
+
+\transclude{GA1N}
+
+\transclude{GA1O}
