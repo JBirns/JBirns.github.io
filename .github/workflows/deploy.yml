@@ -57,7 +57,9 @@ jobs:
       # Only needed for diagrams written with \tex{...}{...}; skipped otherwise.
       - name: Install LaTeX (only if a tree uses \tex)
         run: |
-          if grep -rqE '^[^%]*\\tex\{' trees; then
+          TREE_DIRS=$(python3 -c 'import tomllib; print(" ".join(tomllib.load(open("forest.toml","rb"))["forest"]["trees"]))')
+          echo "Tree folders: $TREE_DIRS"
+          if grep -rqE '^[^%]*\\tex\{' $TREE_DIRS; then
             sudo apt-get update
             sudo apt-get install -y --no-install-recommends \
               texlive-latex-base texlive-latex-recommended texlive-latex-extra \
