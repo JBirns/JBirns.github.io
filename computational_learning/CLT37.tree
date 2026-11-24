@@ -1,0 +1,17 @@
+\title{Updating ages on birthdays}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{\begin{aligned}
+&\text{If } (\text{person}, \text{age} : x, \text{name} : y) \wedge (\text{birthday}, \text{who} : y) \\
+&\text{Then Modify } 1\; (\text{age} : [x + 1]) \wedge \text{Remove } 2.
+\end{aligned}}
+
+\p{The remove statement here prevents the same person from being updated multiple times. Perhaps this database has daily checks of its users, and updates ages on the relevant day. This would be done with an earlier rule}
+
+##{\begin{aligned}
+&\text{If } (\text{person}, \text{name} : y, \text{birthDay} : \text{today}) \\
+&\text{Then Add } (\text{birthday}, \text{who} : y).
+\end{aligned}}

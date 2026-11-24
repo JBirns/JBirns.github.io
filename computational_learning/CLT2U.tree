@@ -46,4 +46,32 @@
 
 \transclude{CLT30}
 
-\p{(The rest of this lecture is in the scanned notes.)}
+\transclude{CLT35}
+
+\p{Production rule consequents are actions of one of the following three forms:}
+
+\ul{
+\li{\strong{1.} #{\text{Add}\; e}: this adds the element #{e} to working memory.}
+\li{\strong{2.} #{\text{Remove}\; i}: this removes members of working memory that satisfy the #{i}th antecedent condition. Note this cannot be used if the #{i}th condition is a negative condition.}
+\li{\strong{3.} #{\text{Modify}\; i\; (\text{attribute} : \text{specification})}: this modifies members of working memory satisfying condition #{i} by applying the specification to the attribute.}
+}
+
+\transclude{CLT36}
+
+\transclude{CLT37}
+
+\transclude{CLT38}
+
+\transclude{CLT39}
+
+\p{\strong{Some things to consider.}}
+
+\ul{
+\li{\em{Conflict resolution.} In a large enough production system, you will almost certainly run into situations where a given member of working memory triggers \em{multiple} rules at once. What order should you do them in? Some ideas here include: randomly, provide an order for rule evaluation ahead of time, choose rules based on frequency or recency, etc. There is no “right” choice here. It is largely context dependent.}
+\li{\em{Efficiency.} It has been shown that in practice the vast majority of time spent by production systems is in rule matching. Thus there is a method called the \em{Rete method} where one encodes all antecedents into a large network, and uses graph algorithms for efficient traversal. Because the rules of production systems don’t change over time, much of the heavy lifting can be coded ahead of time.}
+\li{\em{Explicit use.} Production systems are one of the most successful versions of simple reasoning systems. They appear in the form of \em{expert systems}, \em{MYCIN} (medical diagnosis) and \em{XCON} (computer configuration), which introduced context to allow for parallel processing of rules.}
+}
+
+\p{After all this, however, a key question remains: where does it all come from? Certainly designing a production system for counting days in a year is easy, because there are few rules that have no ambiguity.}
+
+\p{The aforementioned MYCIN used a production system for diagnosing bacterial infections. The system had thousands of rules based on expert advice from doctors.}

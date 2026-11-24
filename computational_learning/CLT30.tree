@@ -1,7 +1,9 @@
-\title{A production rule antecedent}
+\title{An antecedent with variables}
 \taxon{Example}
 \date{2026-11-24}
 \author{JB00}
 \import{macros}
 
-\p{#{A = (\text{Person}, \text{age} : \lbrace {>}\,25\rbrace , \text{occupation} : x, \text{height} : [\text{age} + 5])}.}
+\p{#{(\text{person}, \text{age} : [n + 2], \text{occupation} : X)} where #{n} is a constant that was perhaps declared earlier.}
+
+\p{Variables in production rules are to be read existentially. That is, this antecedent is satisfied if some assignment of its variables is satisfied by an element of working memory.}

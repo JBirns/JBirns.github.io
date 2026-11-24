@@ -1,0 +1,9 @@
+\title{A negated antecedent}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\neg(\text{person}, \text{age} : \lbrace {<}\,23 \wedge {>}\,6\rbrace )}.}
+
+\p{This antecedent will be satisfied if \em{no} members of working memory are of type person and age below #{23} but above #{6}. Note this isn’t saying it is \em{impossible} for such a member to exist, only that it doesn’t exist right now!}

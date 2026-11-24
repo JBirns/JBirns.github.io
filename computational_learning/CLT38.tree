@@ -1,0 +1,31 @@
+\title{A robotic arm}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let’s look at a full production system. We imagine this system is controlling the actions of a robotic arm at a construction site, whose job it is to move bricks (stacked in a heap). We want these bricks to be ultimately laid out in weight order.}
+
+\p{Our system starts with the production rules:}
+
+##{\begin{aligned}
+&\text{If } (\text{brick}, \text{position} : \text{heap}, \text{name} : x, \text{weight} : y) \\
+&\qquad \wedge \neg(\text{brick}, \text{position} : \text{heap}, \text{weight} : \lbrace {>}\,y\rbrace ) \\
+&\qquad \wedge \neg(\text{brick}, \text{position} : \text{hand}) \\
+&\text{Then Modify } 1\; (\text{position} : \text{hand})
+\end{aligned}}
+
+##{\begin{aligned}
+&\text{If } (\text{brick}, \text{position} : \text{hand}) \wedge (\text{current}, \text{position} : i) \\
+&\text{Then Modify } 1\; (\text{position} : i) \\
+&\qquad\; \; \, \text{Modify } 2\; (\text{position} : [i + 1])
+\end{aligned}}
+
+\p{For concreteness, perhaps we also begin with the working memory}
+
+##{\begin{gathered}
+(\text{current}, \text{position} : 1), \\
+(\text{brick}, \text{position} : \text{heap}, \text{name} : A, \text{weight} : 10), \\
+(\text{brick}, \text{position} : \text{heap}, \text{name} : B, \text{weight} : 30), \\
+(\text{brick}, \text{position} : \text{heap}, \text{name} : C, \text{weight} : 20).
+\end{gathered}}

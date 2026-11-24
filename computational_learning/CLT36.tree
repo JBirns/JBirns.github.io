@@ -1,0 +1,9 @@
+\title{A rule encoding a Horn clause}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{\text{If } (\text{student}, \text{name} : x) \text{ Then Add } (\text{person}, \text{name} : x).}
+
+\p{This is the production rule that encodes the Horn clause #{\forall x\, (\text{student}(x) \subset \text{person}(x))}.}

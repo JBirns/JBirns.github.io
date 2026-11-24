@@ -1,0 +1,39 @@
+\title{Days in a year}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{In this example our working memory will be seeded with a single member #{(\text{wantDays}, \text{year} : n)}, where #{n} is some integer. The purpose of our production system will be to compute the number of days in the year #{n}. Our rules look as follows:}
+
+\ul{
+\li{\p{\strong{1.} #{\begin{aligned}
+&\text{If } (\text{wantDays}, \text{year} : n) \\
+&\text{Then Remove } 1 \\
+&\qquad\; \; \, \text{Add } (\text{year}, \text{mod4} : [n \bmod 4], \text{mod100} : [n \bmod 100], \\
+&\qquad\qquad\qquad\; \text{mod400} : [n \bmod 400])
+\end{aligned}}}
+\p{This takes the seed input, and replaces it with a working memory element containing the data of its remainder modulo #{4}, #{100} and #{400}.}}
+\li{\p{\strong{2.} #{\begin{aligned}
+&\text{If } (\text{year}, \text{mod400} : 0) \\
+&\text{Then Remove } 1 \\
+&\qquad\; \; \, \text{Add } (\text{answer}, \text{days} : 366)
+\end{aligned}}}
+\p{If the year is divisible by #{400}, it is always a leap year.}}
+\li{\strong{3.} #{\begin{aligned}
+&\text{If } (\text{year}, \text{mod100} : 0, \text{mod400} : \lbrace {\neq}\,0\rbrace ) \\
+&\text{Then Remove } 1 \\
+&\qquad\; \; \, \text{Add } (\text{answer}, \text{days} : 365)
+\end{aligned}}}
+\li{\strong{4.} #{\begin{aligned}
+&\text{If } (\text{year}, \text{mod4} : 0, \text{mod100} : \lbrace {\neq}\,0\rbrace ) \\
+&\text{Then Remove } 1 \\
+&\qquad\; \; \, \text{Add } (\text{answer}, \text{days} : 366)
+\end{aligned}}}
+\li{\p{\strong{5.} #{\begin{aligned}
+&\text{If } (\text{year}, \text{mod4} : \lbrace {\neq}\,0\rbrace ) \\
+&\text{Then Remove } 1 \\
+&\qquad\; \; \, \text{Add } (\text{answer}, \text{days} : 365)
+\end{aligned}}}
+\p{Our final rules deal with the fact that you skip leap years at (most) years divisible by #{100}.}}
+}
