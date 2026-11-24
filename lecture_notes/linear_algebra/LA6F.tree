@@ -1,0 +1,7 @@
+\title{Symmetrising a quadratic form}
+\taxon{Observation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{x^TAx = \sum_{i,j=1}^n a_{ij}x_ix_j = \sum_{i,j=1}^n a_{ji}x_ix_j = \frac{1}{2}\sum_{i,j=1}^n (a_{ij} + a_{ji})x_ix_j = \frac{1}{2}x^T\underbrace{(A + A^T)}_{\text{symmetric}}x.}

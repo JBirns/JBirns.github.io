@@ -1,0 +1,13 @@
+\title{When two cosets are equal}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{H \leq G}, #{a, b \in G}. Then #{aH = bH \iff a^{-1}b \in H}.}
+
+\proof{
+\p{(#{\Rightarrow}) #{b \in bH = aH}, so #{b = ah} for some #{h \in H}, so #{a^{-1}b = h \in H}.}
+
+\p{(#{\Leftarrow}) Suppose #{a^{-1}b = k \in H}. Then #{b = ak \in aH}; also #{b \in bH}, so #{aH = bH} by \ref{GP17}.}
+}

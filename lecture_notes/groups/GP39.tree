@@ -1,0 +1,21 @@
+\title{Order of #{GL_3(\mathbb{F}_p)}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{What is #{|GL_3(\mathbb{F}_p)|}? #{\det \neq 0} means we need linearly independent columns.}
+
+\ul{
+\li{The number of choices for the first column is #{p^3 - 1} (not #{\begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}}).}
+\li{The second column is not a multiple of the first, so the number of choices for the second column is #{p^3 - p}.}
+\li{The third column is not in the space spanned by the first two columns; this space has size #{p^2} (consider #{\alpha c_1 + \beta c_2}, #{\alpha, \beta \in \mathbb{F}_p}). So the number of choices for the third column is #{p^3 - p^2}.}
+}
+
+\p{So #{|GL_3(\mathbb{F}_p)| = (p^3 - 1)(p^3 - p)(p^3 - p^2)}.}
+
+\p{We can still consider #{\mathrm{Det} \colon GL_3(\mathbb{F}_p) \to (\mathbb{F}_p \setminus \lbrace 0\rbrace , \times)}, #{A \mapsto \det(A)}. Note #{(\mathbb{F}_p \setminus \lbrace 0\rbrace , \times)} is a group: closure ✓, identity #{= 1}, associativity ✓. For inverses, let #{a \in \mathbb{F}_p \setminus \lbrace 0\rbrace }. By Bézout’s Theorem (see Numbers & Sets §2) there exist #{x, y} s.t. #{ax + py = 1}, so #{ax \equiv 1 \bmod p}. Choose #{\bar{x} \equiv x \bmod p}, #{1 \leq \bar{x} \leq p - 1}; then #{a^{-1} = \bar{x}}.}
+
+\p{#{\mathrm{Det}} is a surjective homomorphism to #{(\mathbb{F}_p \setminus \lbrace 0\rbrace , \times)}, so by the First Isomorphism Theorem #{|GL_3(\mathbb{F}_p)|/|SL_3(\mathbb{F}_p)| = p - 1}, so}
+
+##{|SL_3(\mathbb{F}_p)| = \frac{(p^3 - 1)(p^3 - p)(p^3 - p^2)}{p - 1}.}

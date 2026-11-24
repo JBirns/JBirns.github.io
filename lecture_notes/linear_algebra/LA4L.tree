@@ -1,0 +1,17 @@
+\title{Properties of the determinant of a linear map}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\det \colon \mathcal{L}(V, V) \to F} satisfies:}
+
+\ul{
+\li{\strong{(i)} #{\det(\mathrm{Id}) = 1};}
+\li{\strong{(ii)} #{\det(\alpha \circ \beta) = \det\alpha\det\beta};}
+\li{\strong{(iii)} #{\det(\alpha) \neq 0 \iff \alpha} is invertible, and then #{\det(\alpha^{-1}) = (\det\alpha)^{-1}}.}
+}
+
+\proof{
+\p{Pick a basis, and re-express in terms of #{[\alpha]_{\mathcal{B}}}, #{[\beta]_{\mathcal{B}}}.}
+}

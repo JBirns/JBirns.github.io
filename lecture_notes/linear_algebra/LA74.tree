@@ -1,0 +1,15 @@
+\title{Polarisation identity}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A Hermitian form #{\phi} on a complex vector space #{V} is \em{entirely determined} by #{Q \colon V \to \mathbb{R}}, #{u \mapsto \phi(u, u)}, via the formula (learn by heart!)}
+
+##{\phi(u, v) = \frac{1}{4}\big[ Q(u + v) - Q(u - v) + iQ(u + iv) - iQ(u - iv) \big],}
+
+\p{the polarisation identity for Hermitian forms.}
+
+\proof{
+\p{Exercise (just check).}
+}

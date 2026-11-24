@@ -1,0 +1,23 @@
+\title{Characterisations of normality}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K \leq G}. The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{gK = Kg} for all #{g \in G};}
+\li{\strong{(ii)} #{gKg^{-1} = K} for all #{g \in G};}
+\li{\strong{(iii)} #{gkg^{-1} \in K} for all #{k \in K}, #{g \in G}.}
+}
+
+\proof{
+\p{(i) #{\Rightarrow} (ii):}
+
+##{gKg^{-1} = \lbrace gkg^{-1} : k \in K\rbrace  = (gK)g^{-1} = (Kg)g^{-1} = K.}
+
+\p{(ii) #{\Rightarrow} (iii) ✓.}
+
+\p{(iii) #{\Rightarrow} (i): for any #{k \in K}, #{g \in G} there exists #{k' \in K} s.t. #{gkg^{-1} = k'}, so #{gk = k'g \in Kg}, so #{gK \subseteq Kg}. Similarly #{g^{-1}kg = k'' \in K}, so #{kg = gk''}, so #{Kg \subseteq gK}. Hence #{gK = Kg}.}
+}

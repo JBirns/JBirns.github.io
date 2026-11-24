@@ -1,0 +1,21 @@
+\title{Index form of Orbit–Stabiliser}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We actually prove that #{|G : \operatorname{Stab}_G(x)|}, the number of left cosets of #{\operatorname{Stab}_G(x)} in #{G}, is equal to #{|\operatorname{Orb}_G(x)|}, a more general statement (since it allows for infinite #{G}).}
+
+\proof{
+\p{Let #{(G : \operatorname{Stab}_G(x))} be the set of left cosets of #{\operatorname{Stab}_G(x)} in #{G}. Consider the map}
+
+##{\theta \colon \operatorname{Orb}_G(x) \to (G : \operatorname{Stab}_G(x)), \quad g(x) \mapsto g\operatorname{Stab}_G(x).}
+
+\p{\em{#{\theta} well-defined:} #{g(x) = h(x) \Rightarrow h^{-1}g(x) = x \Rightarrow h^{-1}g \in \operatorname{Stab}_G(x) \Rightarrow g\operatorname{Stab}_G(x) = h\operatorname{Stab}_G(x)} (\ref{GP19}) #{\Rightarrow \theta(g(x)) = \theta(h(x))}.}
+
+\p{\em{#{\theta} injective:} #{\theta(g(x)) = \theta(h(x)) \Rightarrow g\operatorname{Stab}_G(x) = h\operatorname{Stab}_G(x) \Rightarrow h^{-1}g\operatorname{Stab}_G(x) = \operatorname{Stab}_G(x) \Rightarrow h^{-1}g(x) = x \Rightarrow g(x) = h(x)}.}
+
+\p{\em{#{\theta} surjective:} given #{g\operatorname{Stab}_G(x) \in (G : \operatorname{Stab}_G(x))}, then #{g(x) \in \operatorname{Orb}_G(x)} and #{\theta(g(x)) = g\operatorname{Stab}_G(x)}.}
+
+\p{Thus #{\theta} is a well-defined bijection as required.}
+}

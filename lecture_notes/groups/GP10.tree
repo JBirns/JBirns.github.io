@@ -1,0 +1,16 @@
+\title{The alternating group}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The even permutations of #{S_n} (#{n \geq 2}) form a subgroup called the \em{alternating group}, denoted #{A_n}.}
+
+\proof{
+\ul{
+\li{#{\mathrm{id} = (1\,2)(1\,2) \in A_n}.}
+\li{If #{\operatorname{sgn}(\sigma) = 1 = \operatorname{sgn}(\rho)} then #{\operatorname{sgn}(\sigma\rho) = \operatorname{sgn}(\sigma)\operatorname{sgn}(\rho) = 1} by \ref{GP0Y}. (Closure, since #{A_n} contains all #{\sigma} s.t. #{\operatorname{sgn}(\sigma) = 1}.)}
+\li{If #{\sigma = \tau_1\cdots\tau_k} with #{\tau_i} transpositions, then #{\sigma^{-1} = \tau_k\cdots\tau_1}, so #{\operatorname{sgn}(\sigma) = \operatorname{sgn}(\sigma^{-1})}.}
+\li{Associativity is inherited.}
+}
+}

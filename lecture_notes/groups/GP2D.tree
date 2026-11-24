@@ -1,0 +1,11 @@
+\title{Cayley's Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Any group #{G} is isomorphic to a subgroup of #{\mathrm{Sym}(X)} for some non-empty set #{X}.}
+
+\proof{
+\p{We take #{X} to be #{G} and consider the left regular action #{G \times G \to G}, #{(g, h) \mapsto gh}. This is a faithful action as #{gh = h} for all #{h \in G} implies #{g = e}. Thus we have an injective homomorphism #{\Phi \colon G \to \mathrm{Sym}(G)}, and #{G \lesssim \mathrm{Sym}(G)} as required.}
+}

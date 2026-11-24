@@ -1,0 +1,55 @@
+\title{Determinants and Traces}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Trace}}
+
+\transclude{LA3W}
+
+\transclude{LA3X}
+
+\transclude{LA3Y}
+
+\transclude{LA3Z}
+
+\transclude{LA40}
+
+\transclude{LA41}
+
+\p{\strong{Determinants: permutations and transpositions}}
+
+\ul{
+\li{\em{Permutation}: #{S_n} is the group of permutations of #{\lbrace 1, \ldots, n\rbrace }, i.e. bijections #{\sigma \colon \lbrace 1, \ldots, n\rbrace  \to \lbrace 1, \ldots, n\rbrace }.}
+\li{\em{Transposition}: for #{k \neq l}, #{\tau_{kl} \in S_n} exchanges #{k} and #{l} and fixes everything else.}
+\li{\em{Decomposition}: any permutation #{\sigma} can be decomposed as a product of transpositions, #{\sigma = \prod_{i=1}^{n_\sigma} \tau_i}, #{\tau_i} a transposition.}
+\li{\em{Signature}: #{\varepsilon \colon S_n \to \lbrace -1, 1\rbrace }, #{\sigma \mapsto 1} if #{n_\sigma} is even, #{-1} if #{n_\sigma} is odd. #{\varepsilon(\sigma)} is the signature of #{\sigma}, and #{\varepsilon} is a homomorphism: #{\varepsilon(\sigma \circ \sigma') = \varepsilon(\sigma)\varepsilon(\sigma')}. (Proved well-defined in IA Groups.)}
+}
+
+\transclude{LA42}
+
+\transclude{LA43}
+
+\transclude{LA44}
+
+\p{\strong{Exercise.} Show similarly that}
+
+##{\det\begin{pmatrix} \lambda_1 & & * \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix} = \prod_{i=1}^n \lambda_i \quad \text{and} \quad \det\begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ * & & \lambda_n \end{pmatrix} = \prod_{i=1}^n \lambda_i.}
+
+\transclude{LA45}
+
+\p{\strong{Why use this formula for #{\det A}?}}
+
+\transclude{LA46}
+
+\p{\strong{Aim:} we want to show that there is in fact only \em{one} (up to a multiplicative constant) volume form on #{F^n \times \cdots \times F^n}, which is given by the determinant. Writing #{A = (a_{ij}) = \big( A^{(1)} \mid \cdots \mid A^{(n)} \big)} in terms of its column vectors, #{\det A = d(A^{(1)}, \ldots, A^{(n)})}.}
+
+\transclude{LA47}
+
+\transclude{LA48}
+
+\transclude{LA49}
+
+\transclude{LA4A}
+
+\transclude{LA4B}

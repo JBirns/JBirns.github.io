@@ -1,0 +1,30 @@
+\title{Uniqueness of identity and inverses}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{(G, *)} be a group.}
+
+\ul{
+\li{\strong{(i)} The identity element is unique.}
+\li{\strong{(ii)} Inverses are unique.}
+}
+
+\proof{
+\p{(i) Suppose #{e} and #{\hat{e}} are both identities, so #{a * e = a = e * a} and #{a * \hat{e} = a = \hat{e} * a} for all #{a \in G}. In particular #{e = e * \hat{e} = \hat{e}}, i.e. the identity is unique.}
+
+\p{(ii) Suppose both #{y} and #{z} are inverses for #{x}, so}
+
+##{x * y = e = y * x, \qquad x * z = e = z * x.}
+
+\p{Then}
+
+##{\begin{aligned}
+y &= y * e \\
+&= y * (x * z) \\
+&= (y * x) * z \\
+&= e * z \\
+&= z.
+\end{aligned}}
+}

@@ -1,0 +1,7 @@
+\title{Similarity and diagonalisation}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This is just a special case of equivalent matrices. It is the central concept when we study diagonalisation of matrices #{\leadsto} spectral theory.}

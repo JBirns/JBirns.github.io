@@ -1,0 +1,7 @@
+\title{Number of conjugacy classes of #{S_n}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The number of distinct conjugacy classes of #{S_n} is given by #{p(n)}, the number of partitions of #{n} into positive integers, i.e. #{n = n_1 + \cdots + n_k} with #{n_1 \geq n_2 \geq \cdots \geq n_k \geq 1}.}

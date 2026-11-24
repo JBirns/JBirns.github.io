@@ -1,0 +1,7 @@
+\title{Definiteness of #{\operatorname{diag}(I_p, 0)}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\begin{pmatrix} I_p & 0 \\ 0 & 0 \end{pmatrix}} (#{n \times n}) is positive definite for #{p = n}, and positive semi-definite for #{p \leq n}.}

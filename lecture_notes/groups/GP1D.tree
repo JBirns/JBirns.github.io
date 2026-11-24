@@ -1,0 +1,7 @@
+\title{The set of left cosets}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We write #{(G : H)} for the set of left cosets of #{H} in #{G}.}

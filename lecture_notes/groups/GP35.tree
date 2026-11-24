@@ -1,0 +1,125 @@
+\title{Matrix Groups}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{M_n(\mathbb{R})} denote the set of all #{n \times n} matrices with entries in #{\mathbb{R}}. Define}
+
+##{GL_n(\mathbb{R}) = \lbrace A \in M_n(\mathbb{R}) : \det A \neq 0\rbrace .}
+
+\transclude{GP36}
+
+\p{E.g.}
+
+##{GL_2(\mathbb{R}) = \left\lbrace  \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a, b, c, d \in \mathbb{R},\; ad - bc \neq 0 \right\rbrace ,}
+
+\p{with #{\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}}.}
+
+\transclude{GP37}
+
+\p{So by the First Isomorphism Theorem, #{\ker(\mathrm{Det}) \trianglelefteq GL_n(\mathbb{R})}, where}
+
+##{\ker(\mathrm{Det}) = \lbrace A \in GL_n(\mathbb{R}) : \det A = 1\rbrace  = SL_n(\mathbb{R}),}
+
+\p{known as the \em{special linear group}. Furthermore, by the First Isomorphism Theorem, #{GL_n(\mathbb{R})/SL_n(\mathbb{R}) \cong (\mathbb{R} \setminus \lbrace 0\rbrace , \times)}.}
+
+\transclude{GP38}
+
+\transclude{GP39}
+
+\p{\strong{Actions of #{GL_n(\mathbb{C})}}}
+
+\transclude{GP3A}
+
+\transclude{GP3B}
+
+\p{We will use the following result from Vectors & Matrices when investigating Möbius groups.}
+
+\transclude{GP3C}
+
+\p{Recall if #{A \in M_n(\mathbb{R})}, #{A^T} is defined by #{(A^T)_{ij} = A_{ji}}, i.e. the #{ij}th entry of #{A^T} is the #{ji}th entry of #{A}. E.g. #{A = \begin{pmatrix} 2 & 4 \\ 3 & 5 \end{pmatrix}}, #{A^T = \begin{pmatrix} 2 & 3 \\ 4 & 5 \end{pmatrix}}. Note:}
+
+\ul{
+\li{\strong{(i)} #{(AB)^T = B^TA^T}: #{[(AB)^T]_{ij} = (AB)_{ji} = A_{jk}B_{ki}} and #{[B^TA^T]_{ij} = B^T_{ik}A^T_{kj} = B_{ki}A_{jk}}.}
+\li{\strong{(ii)} #{AA^T = I \iff A^TA = I}: (#{\Rightarrow}) #{A^TA = A^{-1}(AA^T)A = A^{-1}A = I}.}
+\li{\strong{(iii)} #{(A^T)^{-1} = (A^{-1})^T}, since #{I_n = (AA^{-1})^T = (A^{-1})^TA^T}.}
+\li{\strong{(iv)} #{\det(A^T) = \det A}.}
+}
+
+\p{Define #{O_n(\mathbb{R}) = \lbrace A \in M_n(\mathbb{R}) : A^TA = I\rbrace }, so the columns of #{A} form an orthonormal basis for #{\mathbb{R}^n}.}
+
+\transclude{GP3D}
+
+\p{Note #{1 = (\det A)^2 \Rightarrow \det A = \pm 1} if #{A \in O_n(\mathbb{R})}. So}
+
+##{\mathrm{Det} \colon O_n(\mathbb{R}) \to (\lbrace \pm 1\rbrace , \times), \quad A \mapsto \det A}
+
+\p{is a surjective homomorphism, as #{\begin{pmatrix} -1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix} \in O_n(\mathbb{R})}. So}
+
+##{\ker(\mathrm{Det}) = \lbrace A \in O_n(\mathbb{R}) : \det A = 1\rbrace  = SO_n(\mathbb{R}) \trianglelefteq O_n(\mathbb{R})}
+
+\p{(it also has index #{2}). By the First Isomorphism Theorem, #{O_n(\mathbb{R})/SO_n(\mathbb{R}) \cong C_2}.}
+
+\transclude{GP3E}
+
+\p{Note by (ii), if #{\lambda} is an eigenvalue of #{A}, #{A\mathbf{x} = \lambda\mathbf{x}}, then #{|\lambda\mathbf{x}| = |\mathbf{x}|}, i.e. #{|\lambda| = 1}.}
+
+\p{\strong{In 2D}}
+
+\p{Let #{A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in O_2(\mathbb{R})}. Then}
+
+##{I = AA^T = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} a & c \\ b & d \end{pmatrix} \implies 1 = a^2 + b^2 = c^2 + d^2,\; 0 = ac + bd,}
+
+##{I = A^TA = \begin{pmatrix} a & c \\ b & d \end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix} \implies 1 = a^2 + c^2 = b^2 + d^2,\; 0 = ab + cd.}
+
+\p{For #{0 \leq \theta < 2\pi} let #{\begin{pmatrix} a \\ c \end{pmatrix} = \begin{pmatrix} \cos\theta \\ \sin\theta \end{pmatrix}}, so #{\begin{pmatrix} b \\ d \end{pmatrix} = \begin{pmatrix} -\sin\theta \\ \cos\theta \end{pmatrix}} or #{\begin{pmatrix} \sin\theta \\ -\cos\theta \end{pmatrix}}.}
+
+\p{\em{First case:} #{A = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}}, #{\det A = 1}.}
+
+##{A\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \cos\theta\,x - \sin\theta\,y \\ \sin\theta\,x + \cos\theta\,y \end{pmatrix}}
+
+\p{represents a rotation: letting #{z = x + iy}, #{e^{i\theta}z = (\cos\theta\,x - \sin\theta\,y) + i(\sin\theta\,x + \cos\theta\,y)}. All elements of #{SO_2(\mathbb{R})} are of this form.}
+
+\p{\em{Second case:} #{A = \begin{pmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{pmatrix}}, #{\det A = -1}.}
+
+##{A\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} \cos\theta\,x + \sin\theta\,y \\ \sin\theta\,x - \cos\theta\,y \end{pmatrix}, \qquad e^{i\theta}\bar{z} = (\cos\theta\,x + \sin\theta\,y) + i(\sin\theta\,x - \cos\theta\,y).}
+
+\p{What are the fixed points in this case?}
+
+##{z = e^{i\theta}\bar{z} \iff e^{-i\theta /2}z = e^{i\theta /2}\bar{z} \iff e^{-i\theta /2}z = t \in \mathbb{R} \iff z = e^{i\theta /2}t.}
+
+\p{So #{A} is the reflection in the line #{te^{i\theta /2}} (at angle #{\theta /2} to the real axis). All elements of #{O_2(\mathbb{R}) \setminus SO_2(\mathbb{R})} are of this form. So}
+
+##{O_2(\mathbb{R}) = \underbrace{SO_2(\mathbb{R})}_{\substack{\text{rotations} \\ \det = 1}} \sqcup \underbrace{\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}SO_2(\mathbb{R})}_{\substack{\text{reflections} \\ \det = -1}},}
+
+\p{a coset decomposition since the quotient is #{\cong C_2}.}
+
+\p{Note any element of #{O_2(\mathbb{R})} is a product of at most #{2} reflections, since for #{A \in SO_2(\mathbb{R})},}
+
+##{A = \left[A\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\right]\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},}
+
+\p{and the bracketed matrix is a reflection.}
+
+\p{\strong{In 3D}}
+
+\transclude{GP3F}
+
+\p{Alternatively, consider #{\chi_A(x)}: it is a real cubic and thus has a real root, #{\lambda = 1} or #{-1}. The other eigenvalues are either a complex conjugate pair (then #{\lambda = 1}, since #{\det A = 1}), or all are real: either #{1, -1, -1} or #{1, 1, 1}.}
+
+\transclude{GP3G}
+
+\p{Suppose #{r} is a reflection in a plane #{\Pi} through #{\mathbf{0}}. Let #{\mathbf{n}} be a unit vector #{\perp} to #{\Pi}. Then}
+
+##{r(\mathbf{x}) = \mathbf{x} - 2(\mathbf{x} \cdot \mathbf{n})\mathbf{n},}
+
+\p{so #{\mathbf{n} \mapsto -\mathbf{n}} and #{\Pi} is fixed. So #{r} is conjugate to #{\begin{pmatrix} -1 & & 0 \\ & 1 & \\ 0 & & 1 \end{pmatrix} \in O_3(\mathbb{R})}, and}
+
+##{O_3(\mathbb{R}) = \underbrace{SO_3(\mathbb{R})}_{\substack{\text{rotations} \\ \det = 1}} \sqcup \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}SO_3(\mathbb{R}),}
+
+\p{where the second coset (#{\det = -1}) includes reflections, but also inversion in the origin and combinations of rotations and reflections.}
+
+\transclude{GP3H}
+
+\p{Alternatively, any element of #{SO_3(\mathbb{R})} is a product of at most #{2} reflections via the 2D case. Thus any element of #{\begin{pmatrix} -1 & & 0 \\ & 1 & \\ 0 & & 1 \end{pmatrix}SO_3(\mathbb{R})} is a product of at most #{3} reflections.}
+
+\p{Note we do need #{3}, e.g. #{\begin{pmatrix} -1 & & 0 \\ & -1 & \\ 0 & & -1 \end{pmatrix}}.}

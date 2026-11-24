@@ -1,0 +1,11 @@
+\title{#{C_4} and the 4th roots of unity}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{See \ref{GP0E}:}
+
+##{G = (\lbrace 0, 1, 2, 3\rbrace , +_4) \cong (\lbrace 1, e^{i\pi /2}, e^{\pi i}, e^{3\pi i/2}\rbrace , \times) = H,}
+
+\p{with #{\theta \colon G \to H}, #{n \mapsto e^{in\pi /2}}. #{\theta} is an isomorphism: the groups are “essentially the same”.}

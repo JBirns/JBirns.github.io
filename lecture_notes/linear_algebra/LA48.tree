@@ -1,0 +1,20 @@
+\title{Swapping entries of a volume form}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{d} be a volume form. Then swapping two entries changes the sign:}
+
+##{d(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_n) = -d(v_1, \ldots, v_j, \ldots, v_i, \ldots, v_n).}
+
+\proof{
+\p{By the definition of “alternate”, #{d(v_1, \ldots, v_i + v_j, \ldots, v_i + v_j, \ldots, v_n) = 0}. By multilinearity,}
+
+##{\begin{aligned}
+d(v_1, \ldots, v_i, \ldots, v_i, \ldots, v_n) + d(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_n) \\
++ d(v_1, \ldots, v_j, \ldots, v_i, \ldots, v_n) + d(v_1, \ldots, v_j, \ldots, v_j, \ldots, v_n) = 0,
+\end{aligned}}
+
+\p{so #{0 = 0 + d(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_n) + d(v_1, \ldots, v_j, \ldots, v_i, \ldots, v_n) + 0}.}
+}

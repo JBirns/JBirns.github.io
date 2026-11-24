@@ -1,0 +1,16 @@
+\title{Triangle inequality}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\Vert u + v\Vert  \leq \Vert u\Vert  + \Vert v\Vert }. #{\leadsto} Key to show that #{\Vert \cdot\Vert } is a norm (metric space).}
+
+\proof{
+##{\begin{aligned}
+\Vert u + v\Vert ^2 = \langle u + v, u + v \rangle &= \Vert u\Vert ^2 + 2\operatorname{Re}(\langle u, v \rangle) + \Vert v\Vert ^2 \\
+&\leq \Vert u\Vert ^2 + 2\Vert u\Vert \,\Vert v\Vert  + \Vert v\Vert ^2 = (\Vert u\Vert  + \Vert v\Vert )^2
+\end{aligned}}
+
+\p{by Cauchy–Schwarz.}
+}

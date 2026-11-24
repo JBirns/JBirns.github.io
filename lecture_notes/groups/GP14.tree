@@ -1,0 +1,7 @@
+\title{Coset}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{H \leq G} and #{g \in G}. The \em{left coset} #{gH} is defined to be #{\lbrace gh : h \in H\rbrace }. Similarly the \em{right coset} is given by #{Hg = \lbrace hg : h \in H\rbrace }.}

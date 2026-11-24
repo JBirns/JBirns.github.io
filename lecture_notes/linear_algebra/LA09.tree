@@ -1,0 +1,11 @@
+\title{Sum of subspaces}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space, #{U \leq V}, #{W \leq V}. Then the \em{sum} of #{U} and #{W} is the set}
+
+##{U + W = \lbrace u + w : (u, w) \in U \times W\rbrace .}
+
+\p{E.g. in #{V = \mathbb{R}^2} with #{U}, #{W} the two coordinate axes, #{U + W = V}.}

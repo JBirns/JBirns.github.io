@@ -1,0 +1,26 @@
+\title{Elementary matrices}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} For #{i \neq j}, #{T_{ij}} is the identity matrix with rows #{i} and #{j} swapped: its #{(i,i)} and #{(j,j)} entries are #{0}, its #{(i,j)} and #{(j,i)} entries are #{1}, and the other diagonal entries are #{1}; all other entries are #{0}.}
+\li{\strong{(ii)} #{M_{i,\lambda}} is the identity matrix with the #{(i,i)} entry replaced by #{\lambda}.}
+\li{\strong{(iii)} #{C_{ij,\lambda} = I + \lambda E_{ij}}, where #{E_{ij}} has a #{1} in position #{(i,j)} and #{0} elsewhere.}
+}
+
+\proof{
+\p{\em{Constructive proof that any #{m \times n} matrix is equivalent to #{\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}} for some #{r}.} Algorithm:}
+
+\ul{
+\li{Start with #{A}; if all entries are zero then we are done.}
+\li{Pick #{a_{ij} = \lambda \neq 0}. Swap rows #{i} and #{1}, and swap columns #{j} and #{1}, so #{\lambda} is in position #{(1,1)}.}
+\li{Multiply column #{1} by #{1/\lambda} (since #{\lambda \neq 0}) to get #{1} in position #{(1,1)}.}
+\li{\p{Now clear out row #{1} and column #{1} using elementary operations of type (iii), giving}
+##{\begin{pmatrix} 1 & 0 \\ 0 & \tilde{A} \end{pmatrix}.}}
+\li{Iterate with #{\tilde{A}}, which is #{(m-1) \times (n-1)}.}
+\li{\p{At the end of the process,}
+##{\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix} = Q^{-1}AP = \underbrace{E'_l \cdots E'_1}_{\text{row operations}}\,A\,\underbrace{E_1 \cdots E_c}_{\text{column operations}}.}}
+}
+}

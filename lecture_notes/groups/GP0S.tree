@@ -1,0 +1,7 @@
+\title{Gap in the notes}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{(The scan skips the next pages of the notes here: the proof of \ref{GP0R}, the definition of #{S_n}, cycles and transpositions, Lemma 6 (disjoint cycles commute) and the statement of Theorem 1 (every #{\sigma \in S_n} is a product of disjoint cycles). The notes resume with the proof of Theorem 1.)}

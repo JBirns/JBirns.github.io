@@ -1,0 +1,14 @@
+\title{Definiteness}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\phi} be a symmetric bilinear form on a real vector space (#{F = \mathbb{R}}). We say that:}
+
+\ul{
+\li{\strong{(i)} #{\phi} is \em{positive definite} #{\iff \forall u \in V \setminus \lbrace 0\rbrace }, #{\phi(u, u) > 0};}
+\li{\strong{(ii)} #{\phi} is \em{positive semi-definite} #{\iff \forall u \in V}, #{\phi(u, u) \geq 0};}
+\li{\strong{(iii)} #{\phi} is \em{negative definite} #{\iff \forall u \in V \setminus \lbrace 0\rbrace }, #{\phi(u, u) < 0};}
+\li{\strong{(iv)} #{\phi} is \em{negative semi-definite} #{\iff \forall u \in V}, #{\phi(u, u) \leq 0}.}
+}

@@ -1,0 +1,7 @@
+\title{#{m_\alpha} divides #{\chi_\alpha}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{m_\alpha \mid \chi_\alpha}.}

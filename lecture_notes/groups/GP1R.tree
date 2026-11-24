@@ -1,0 +1,19 @@
+\title{Applications of the First Isomorphism Theorem}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{\operatorname{sgn} \colon S_n \to (\lbrace \pm 1\rbrace , \times)}, #{\sigma \mapsto \operatorname{sgn}(\sigma)}. #{\operatorname{Im}(\operatorname{sgn}) = (\lbrace \pm 1\rbrace , \times)}, #{\ker(\operatorname{sgn}) = A_n}, so}
+##{S_n/A_n \cong (\lbrace \pm 1\rbrace , \times) \cong C_2 \implies |A_n| = |S_n|/2.}}
+\li{\p{\strong{(ii)} #{\theta \colon (\mathbb{R}, +) \to (\mathbb{C} \setminus \lbrace 0\rbrace , \times)}, #{r \mapsto e^{2\pi ir}}. Note #{\theta(r + s) = \theta(r)\theta(s)}.}
+##{\operatorname{Im}(\theta) = S^1 = \lbrace z \in \mathbb{C} : |z| = 1\rbrace  \text{ (the unit circle)}, \qquad \ker(\theta) = (\mathbb{Z}, +) \trianglelefteq (\mathbb{R}, +),}
+\p{so #{(\mathbb{R}, +)/(\mathbb{Z}, +) \cong S^1}.}}
+\li{\p{\strong{(iii)} Recall #{GL_2(\mathbb{R}) = \lbrace 2 \times 2 \text{ matrices, entries in } \mathbb{R}, \det \neq 0\rbrace }.}
+##{\det \colon GL_2(\mathbb{R}) \to (\mathbb{R} \setminus \lbrace 0\rbrace , \times), \quad M \mapsto \det M}
+\p{is a homomorphism since #{\det(AB) = \det(A)\det(B)}. #{\operatorname{Im}(\det) = (\mathbb{R} \setminus \lbrace 0\rbrace , \times)} since #{\det\begin{pmatrix} \alpha & 0 \\ 0 & 1 \end{pmatrix} = \alpha \in \mathbb{R} \setminus \lbrace 0\rbrace }.}
+##{\ker(\det) = SL_2(\mathbb{R}) = \lbrace 2 \times 2 \text{ matrices, entries in } \mathbb{R}, \det = 1\rbrace ,}
+\p{so #{SL_2(\mathbb{R}) \trianglelefteq GL_2(\mathbb{R})} and #{GL_2(\mathbb{R})/SL_2(\mathbb{R}) \cong (\mathbb{R} \setminus \lbrace 0\rbrace , \times)}.}}
+\li{\strong{(iv)} #{\theta \colon (\mathbb{Z}, +) \to (\lbrace 0, 1, \ldots, n-1\rbrace , +_n)}, #{n \mapsto \bar{n}}. #{\ker\theta = n\mathbb{Z}}.}
+}

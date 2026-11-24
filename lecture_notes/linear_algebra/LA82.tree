@@ -1,0 +1,28 @@
+\title{Self-adjoint, isometry}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional inner product space, #{\alpha \in \mathcal{L}(V)} and #{\alpha^* \in \mathcal{L}(V)} the adjoint map. Then:}
+
+\ul{
+\li{#{\langle \alpha v, w \rangle = \langle v, \alpha w \rangle} for all #{(v, w) \in V \times V} #{\iff \alpha = \alpha^*}: #{\alpha} is a \em{self-adjoint} map (#{\mathbb{R}}: #{\alpha} symmetric; #{\mathbb{C}}: #{\alpha} Hermitian).}
+\li{#{\langle \alpha v, \alpha w \rangle = \langle v, w \rangle} for all #{(v, w) \in V \times V} #{\iff \alpha^* = \alpha^{-1}}: #{\alpha} is an \em{isometry} (#{\mathbb{R}}: #{\alpha} orthogonal; #{\mathbb{C}}: #{\alpha} unitary).}
+}
+
+\proof{
+\p{We check the equivalence: preserving the scalar product (#{\langle \alpha v, \alpha w \rangle = \langle v, w \rangle} for all #{(v, w) \in V \times V}) is equivalent to (#{\alpha} invertible and #{\alpha^* = \alpha^{-1}}).}
+
+\p{(#{\Rightarrow}) Assume #{\langle \alpha v, \alpha w \rangle = \langle v, w \rangle} for all #{(v, w) \in V \times V}. Taking #{v = w}, #{\Vert \alpha v\Vert ^2 = \langle \alpha v, \alpha v \rangle = \langle v, v \rangle = \Vert v\Vert ^2}, so #{\alpha} is an isometry (preserves the norm). Hence #{\operatorname{Ker}\alpha = \lbrace 0\rbrace }, so #{\alpha} is bijective since #{V} is finite dimensional, so #{\alpha^{-1}} is well defined, since #{\alpha \in \mathcal{L}(V)}. Then for all #{(v, w) \in V \times V},}
+
+##{\langle v, \alpha^*(w) \rangle = \langle \alpha v, w \rangle = \langle \alpha v, \alpha(\alpha^{-1}w) \rangle = \langle v, \alpha^{-1}(w) \rangle}
+
+\p{by definition of #{\alpha^*} and by assumption. So for all #{v \in V}, #{\langle v, \alpha^*w - \alpha^{-1}w \rangle = 0}. I take #{v = \alpha^*w - \alpha^{-1}w}; then #{\alpha^*w = \alpha^{-1}w} for all #{w \in V}, so #{\alpha^* = \alpha^{-1}}.}
+
+\p{(#{\Leftarrow}) #{\alpha \in \mathcal{L}(V)}, #{\alpha^* = \alpha^{-1}}. Then}
+
+##{\langle \alpha v, \alpha w \rangle = \langle v, \underbrace{\alpha^*\alpha}_{\mathrm{Id} \text{ by assumption}} w \rangle = \langle v, w \rangle}
+
+\p{by definition of #{\alpha^*}.}
+}

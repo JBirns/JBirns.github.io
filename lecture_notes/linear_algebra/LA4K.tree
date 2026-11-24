@@ -1,0 +1,11 @@
+\title{Definition}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \colon V \to V} be linear (an endomorphism). We define}
+
+##{\det\alpha = \det([\alpha]_{\mathcal{B}}),}
+
+\p{for #{\mathcal{B}} any basis of #{V}. #{\leadsto} This number does not depend on the choice of basis, due to \ref{LA4J}.}

@@ -2,7 +2,7 @@
 \author{JB00}
 \import{macros}
 
-\p{I'll write things here.}
+\p{I'll write things here. No posts just yet...}
 
 \query\datalog{
   ?X -: {\rel/has-tag ?X '{blog}} {\rel/has-taxon ?X '{Blog Post}}

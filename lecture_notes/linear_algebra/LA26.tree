@@ -1,0 +1,22 @@
+\title{Coordinate maps and the matrix of a linear map}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B}} be a basis of #{V} and #{\mathcal{C}} a basis of #{W}, and let}
+
+##{\varepsilon_{\mathcal{B}} \colon V \to F^n,\; v \mapsto [v]_{\mathcal{B}}, \qquad \varepsilon_{\mathcal{C}} \colon W \to F^m,\; w \mapsto [w]_{\mathcal{C}}.}
+
+\p{Then the following diagram commutes:}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}
+\node (V) at (0,1.8) {$V$};
+\node (W) at (3,1.8) {$W$};
+\node (Fn) at (0,0) {$F^n$};
+\node (Fm) at (3,0) {$F^m$};
+\draw[->] (V) -- node[above] {$\alpha$} (W);
+\draw[->] (V) -- node[left] {$\varepsilon_{\mathcal{B}}$} (Fn);
+\draw[->] (W) -- node[right] {$\varepsilon_{\mathcal{C}}$} (Fm);
+\draw[->] (Fn) -- node[below] {$[\alpha]_{\mathcal{B},\mathcal{C}}$} (Fm);
+\end{tikzpicture}}

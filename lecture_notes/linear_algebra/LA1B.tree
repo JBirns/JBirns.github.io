@@ -1,0 +1,11 @@
+\title{Examples of linear maps}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Let #{M} be an #{n \times m} matrix. Then #{\alpha \colon \mathbb{R}^m \to \mathbb{R}^n}, #{X \mapsto MX} is linear (exercise).}
+\li{\strong{(ii)} #{\alpha \colon \mathcal{C}([0,1]) \to \mathcal{C}([0,1])}, #{f \mapsto \alpha(f)} where #{\alpha(f)(x) = \int_0^x f(t)\,dt}, is a linear map.}
+\li{\strong{(iii)} Fix #{x \in [a,b]}. Then #{\mathcal{C}([a,b]) \to \mathbb{R}}, #{f \mapsto f(x)} is a linear map.}
+}

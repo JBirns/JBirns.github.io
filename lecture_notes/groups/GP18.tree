@@ -1,0 +1,7 @@
+\title{#{S_n} as a union of cosets of #{A_n}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{S_n = \underbrace{A_n}_{\text{even perms}} \sqcup \underbrace{(1\,2)A_n}_{\text{odd perms}}}.}

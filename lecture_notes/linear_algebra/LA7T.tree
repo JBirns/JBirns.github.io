@@ -1,0 +1,11 @@
+\title{Orthogonal}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an inner product space and #{W \leq V}. Then}
+
+##{W^\perp = \lbrace v \in V : \langle v, w \rangle = 0\; \forall w \in W\rbrace}
+
+\p{is the \em{orthogonal} of #{W}.}

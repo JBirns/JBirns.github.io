@@ -1,0 +1,35 @@
+\title{Spectral Theory for Self-Adjoint Maps}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\em{Spectral theory} #{\equiv} the study of the spectrum of operators #{\leadsto} mathematics, #{\leadsto} physics (QM).}
+\li{#{\to} Infinite dimensional: finite dimensional linear maps #{\leadsto} infinite dimensional: Hilbert space, compact operators.}
+\li{Adjoint operator: for #{V, W} finite dimensional inner product spaces and #{\alpha \in \mathcal{L}(V, W)}, the adjoint #{\alpha^* \in \mathcal{L}(W, V)} is the unique map s.t. #{\langle \alpha(v), w \rangle_W = \langle v, \alpha^*(w) \rangle_V} for all #{(v, w) \in V \times W}.}
+}
+
+\p{We defined:}
+
+\ul{
+\li{self-adjoint maps: #{V = W}, #{\alpha = \alpha^* \iff \forall (v, w) \in V \times V}, #{\langle \alpha v, w \rangle = \langle v, \alpha w \rangle};}
+\li{isometries: #{V = W}, #{\alpha^* = \alpha^{-1} \iff \forall (v, w) \in V \times V}, #{\langle \alpha v, \alpha w \rangle = \langle v, w \rangle} (#{\mathbb{R}}: orthogonal group; #{\mathbb{C}}: unitary group).}
+}
+
+\p{\strong{Spectral theory for self-adjoint operators}}
+
+\transclude{LA88}
+
+\transclude{LA89}
+
+\transclude{LA8A}
+
+\transclude{LA8B}
+
+\p{\strong{Spectral theory for unitary maps}}
+
+\transclude{LA8C}
+
+\transclude{LA8D}
+
+\transclude{LA8E}

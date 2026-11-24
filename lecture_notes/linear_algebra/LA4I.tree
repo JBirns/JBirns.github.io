@@ -1,0 +1,7 @@
+\title{Unique solvability of linear systems}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This gives us the sharp criterion for invertibility of a linear system of #{n} equations with #{n} unknowns: for #{Y \in F^n} and #{A \in M_n(F)}, the system #{AX = Y}, #{X \in F^n}, has a unique solution #{X} #{\iff} #{A} is invertible #{\iff \det A \neq 0}.}

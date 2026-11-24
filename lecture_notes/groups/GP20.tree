@@ -1,0 +1,23 @@
+\title{Equivalent conditions for an internal direct product}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{There are alternative equivalent definitions of internal direct product. #{G} is the internal direct product of subgroups #{H} and #{K} if:}
+
+\ul{
+\li{\strong{(i)} #{H \trianglelefteq G}, #{K \trianglelefteq G};}
+\li{\strong{(ii)} #{H \cap K = \lbrace e\rbrace };}
+\li{\strong{(iii)} #{HK = G}.}
+}
+
+\p{We need to show (i), (ii), (iii) #{\iff} (i)#{'}, (ii)#{'}, (iii)#{'}.}
+
+\p{(#{\Rightarrow}) We show #{K \trianglelefteq G}. Let #{k \in K}, #{g = h_1k_1 \in G} by (i). Then}
+
+##{gkg^{-1} = h_1\underbrace{k_1kk_1^{-1}}_{\bar{k} \in K}h_1^{-1} = \bar{k}h_1h_1^{-1} = \bar{k} \in K}
+
+\p{by (iii). Similarly #{H \trianglelefteq G}. And (i) #{\Rightarrow} (iii)#{'}.}
+
+\p{(#{\Leftarrow}) Need to show (iii). For #{h \in H}, #{k \in K} consider #{h^{-1}k^{-1}hk}. Then #{h^{-1}(k^{-1}hk) \in H} since #{H \trianglelefteq G}, and #{(h^{-1}k^{-1}h)k \in K} since #{K \trianglelefteq G}. So #{h^{-1}k^{-1}hk \in H \cap K = \lbrace e\rbrace }, so #{hk = kh}.}

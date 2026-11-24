@@ -1,0 +1,38 @@
+\title{Gram–Schmidt orthogonalisation process}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an inner product space, #{I} a countable (or finite) set and #{(v_i)_{i \in I}} linearly independent. Then there exists a sequence #{(e_i)_{i \in I}} of orthonormal vectors s.t.}
+
+##{\operatorname{span}\langle v_1, \ldots, v_k \rangle = \operatorname{span}\langle e_1, \ldots, e_k \rangle \quad \forall k \geq 1.}
+
+\p{#{\leadsto} If #{\dim V < \infty}, there exists an orthonormal basis.}
+
+\proof{
+\p{We construct the family #{(e_i)} by induction on #{k}. For #{k = 1}: #{v_1 \neq 0 \implies e_1 = \dfrac{v_1}{\Vert v_1\Vert }}.}
+
+\p{Suppose we found #{(e_1, \ldots, e_k)}; we look for #{e_{k+1}}. By induction #{\langle e_1, \ldots, e_k \rangle = \langle v_1, \ldots, v_k \rangle}. We define}
+
+##{e'_{k+1} = v_{k+1} - \underbrace{\sum_{i=1}^k \langle v_{k+1}, e_i \rangle e_i}_{\text{projection of } v_{k+1} \text{ onto } \operatorname{span}\langle v_1, \ldots, v_k \rangle}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw (0,0) -- (6,0) -- (7.5,1.5) -- (1.5,1.5) -- cycle;
+\node at (3.6,0.4) {$\langle e_1, \ldots, e_k \rangle = \langle v_1, \ldots, v_k \rangle$};
+\coordinate (P) at (5.2,0.9);
+\draw[->, thick] (P) -- (5.6,3.3) node[above] {$v_{k+1}$};
+\draw[->, thick] (5.6,0.9) -- (5.6,3.2);
+\draw[dashed] (P) -- (5.6,0.9);
+\node[right] at (5.6,2.2) {$e'_{k+1}$};
+\end{tikzpicture}}
+
+\ul{
+\li{#{e'_{k+1} \neq 0}. Indeed, otherwise #{v_{k+1} \in \langle e_1, \ldots, e_k \rangle = \langle v_1, \ldots, v_k \rangle}, contradicting the fact that #{(v_i)_{i \in I}} is free.}
+\li{\p{Pick #{1 \leq j \leq k}:}
+##{\langle e'_{k+1}, e_j \rangle = \Big\langle v_{k+1} - \sum_{i=1}^k \langle v_{k+1}, e_i \rangle e_i, e_j \Big\rangle = \langle v_{k+1}, e_j \rangle - \langle v_{k+1}, e_j \rangle = 0.}}
+\li{#{\langle v_1, \ldots, v_{k+1} \rangle = \langle e_1, \ldots, e_k, e'_{k+1} \rangle}.}
+}
+
+\p{We take #{e_{k+1} = \dfrac{e'_{k+1}}{\Vert e'_{k+1}\Vert }}.}
+}

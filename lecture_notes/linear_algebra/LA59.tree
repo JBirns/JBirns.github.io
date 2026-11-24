@@ -1,0 +1,13 @@
+\title{Fundamental theorem of algebra}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Any complex polynomial of positive degree has a (complex) root (hence exactly #{\deg f} roots when counted with multiplicity):}
+
+##{f \in \mathbb{C}[t] \implies f(t) = c\prod_{i=1}^k (t - \lambda_i)^{\alpha_i}, \quad c \in \mathbb{C},\; \lambda_i \in \mathbb{C},\; \alpha_i \in \mathbb{N}.}
+
+\proof{
+\p{See IB Complex Analysis.}
+}

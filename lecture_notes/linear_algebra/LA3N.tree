@@ -1,0 +1,9 @@
+\title{Non-degenerate iff invertible matrix}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, V} be finite dimensional, #{\mathcal{B}} a basis of #{U}, #{\mathcal{C}} a basis of #{V}, #{\phi \colon U \times V \to F} a bilinear form and #{A = [\phi]_{\mathcal{B},\mathcal{C}}}. Then}
+
+##{\phi \text{ non-degenerate} \iff A \text{ invertible}.}

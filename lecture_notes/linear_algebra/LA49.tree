@@ -1,0 +1,13 @@
+\title{Permuting entries of a volume form}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{\sigma \in S_n} and #{d} a volume form,}
+
+##{d(v_{\sigma(1)}, \ldots, v_{\sigma(n)}) = \varepsilon(\sigma)d(v_1, \ldots, v_n).}
+
+\proof{
+\p{Write #{\sigma = \prod_{i=1}^{n_\sigma} \tau_i} and apply \ref{LA48} #{n_\sigma} times.}
+}

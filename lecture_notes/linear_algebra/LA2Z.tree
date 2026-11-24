@@ -1,0 +1,10 @@
+\title{The dual basis via the Kronecker symbol}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{With the Kronecker symbol #{\delta_{ij} = 1} if #{i = j}, #{0} otherwise,}
+
+##{\varepsilon_j\Big( \sum_{i=1}^n a_ie_i \Big) = a_j \iff \varepsilon_j(e_i) = \delta_{ij}.
+ \qquad (*)}

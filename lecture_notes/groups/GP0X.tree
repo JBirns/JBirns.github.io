@@ -1,0 +1,30 @@
+\title{The sign is well defined}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The function #{\operatorname{sgn} \colon S_n \to \lbrace \pm 1\rbrace }, #{\sigma \mapsto \operatorname{sgn}(\sigma)}, is well-defined, i.e. if #{\sigma = \tau_1\cdots\tau_a = \tau'_1\cdots\tau'_b} with #{\tau_i} and #{\tau'_i} transpositions, then #{(-1)^a = (-1)^b}.}
+
+\proof{
+\p{Let #{c(\sigma)} denote the number of cycles in a disjoint cycle decomposition of #{\sigma}, including #{1}-cycles. So #{c(\mathrm{id}) = n}. Let #{\tau} be a transposition.}
+
+\p{\strong{Claim.} #{c(\sigma\tau) = c(\sigma) \pm 1 \equiv c(\sigma) + 1 \pmod 2}.}
+
+\p{\em{Proof of claim.} Let #{\tau = (k\, l)}. There are #{2} cases.}
+
+\ul{
+\li{\p{\strong{(i)} #{k, l} in different cycles of #{\sigma}:}
+##{(k, a_1, \ldots, a_r)(l, b_1, \ldots, b_s)(k\, l) = (k, b_1, \ldots, b_s, l, a_1, \ldots, a_r),}
+\p{so #{c(\sigma\tau) = c(\sigma) - 1}.}}
+\li{\p{\strong{(ii)} #{k, l} in the same cycle of #{\sigma}:}
+##{(k, a_1, \ldots, a_r, l, b_1, \ldots, b_s)(k\, l) = (k, b_1, b_2, \ldots, b_s)(l, a_1, a_2, \ldots, a_r),}
+\p{so #{c(\sigma\tau) = c(\sigma) + 1}.}}
+}
+
+\p{Assume #{\sigma = \mathrm{id}\cdot\tau_1\tau_2\cdots\tau_a = \mathrm{id}\cdot\tau'_1\tau'_2\cdots\tau'_b}. Then}
+
+##{c(\sigma) \equiv n + a \pmod 2 \quad\text{and}\quad c(\sigma) \equiv n + b \pmod 2,}
+
+\p{so #{a \equiv b \pmod 2}, so #{(-1)^a = (-1)^b}.}
+}

@@ -1,0 +1,7 @@
+\title{Similar matrices}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A, A'} be #{n \times n} (square) matrices. We say that #{A} and #{A'} are \em{similar} (#{=} conjugate) iff #{A' = P^{-1}AP} for some #{n \times n} square invertible matrix #{P}.}

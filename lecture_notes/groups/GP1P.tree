@@ -1,0 +1,35 @@
+\title{First Isomorphism Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G, H} be groups and #{\theta \colon G \to H} a group homomorphism. Then #{\operatorname{Im}\theta \leq H}, #{\ker\theta \trianglelefteq G} and}
+
+##{G/\ker\theta \cong \operatorname{Im}\theta.}
+
+\proof{
+\p{We need to construct an isomorphism #{\phi \colon G/\ker\theta \to \operatorname{Im}\theta}. Let #{K = \ker\theta} and set #{\phi \colon gK \mapsto \theta(g)}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}
+\draw (0,0) ellipse (0.9 and 1.1); \node at (-0.9,1.1) {$G$};
+\draw (4,0) ellipse (0.9 and 1.1); \node at (5.1,1) {$H$};
+\draw (0,0.4) circle (0.28) node {\scriptsize $gK$};
+\draw (0,-0.5) circle (0.28) node {\scriptsize $K$};
+\node (a) at (4,0.4) {$\theta(g)$}; \node (b) at (4,-0.5) {$e_H$};
+\draw[->] (0.3,0.4) -- (a); \draw[->] (0.3,-0.5) -- (b);
+\draw[->] (1,1.3) -- node[above] {$\theta$} (3,1.3);
+\end{tikzpicture}}
+
+\p{\em{#{\phi} well-defined:} suppose #{gK = hK}. Then #{h^{-1}g \in K} (\ref{GP19}), so #{\theta(h^{-1}g) = e_H}, so #{\theta(h)^{-1}\theta(g) = e_H} since #{\theta} is a homomorphism, so #{\theta(g) = \theta(h)}, i.e. #{\phi(gK) = \phi(hK)}.}
+
+\p{\em{#{\phi} a homomorphism:}}
+
+##{\phi(gK\,hK) = \phi(ghK) = \theta(gh) = \theta(g)\theta(h) = \phi(gK)\phi(hK),}
+
+\p{as #{\theta} is a homomorphism.}
+
+\p{\em{#{\phi} surjective:} if #{\theta(g) \in \operatorname{Im}\theta} then #{\phi(gK) = \theta(g)}.}
+
+\p{\em{#{\phi} injective:} suppose #{\phi(gK) = \phi(hK)}. Then #{\theta(g) = \theta(h)}, so #{\theta(h)^{-1}\theta(g) = e_H}, i.e. #{\theta(h^{-1}g) = e_H}, so #{h^{-1}g \in K}, so #{gK = hK}.}
+}

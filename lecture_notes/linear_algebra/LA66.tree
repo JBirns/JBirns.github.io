@@ -1,0 +1,7 @@
+\title{Nilpotent maps and stable complements}
+\taxon{Question}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{With #{F = \operatorname{span}\langle x, \alpha(x), \ldots, \alpha^{k-1}(x) \rangle}, can I find #{G} s.t. #{V = F \oplus G} with #{G} stable by #{\alpha}? #{\leadsto} done.}

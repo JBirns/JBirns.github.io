@@ -1,0 +1,7 @@
+\title{Columns replaced by basis vectors}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\det\big( A^{(1)}, \ldots, A^{(j-1)}, e_i, A^{(j+1)}, \ldots, A^{(n)} \big) = (-1)^{i+j}\det(A_{\hat{i}\hat{j}})}.}

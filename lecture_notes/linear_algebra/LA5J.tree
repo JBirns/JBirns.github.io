@@ -1,0 +1,11 @@
+\title{Matrices of finite order are diagonalisable}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{A \in M_n(\mathbb{C})} has finite order (#{\exists m \in \mathbb{N}^*} with #{A^m = \mathrm{Id}}), then #{A} is diagonalisable. Indeed,}
+
+##{t^m - 1 = \prod_{j=1}^m (t - \xi_m^j), \quad \xi_m = e^{2\pi i/m},}
+
+\p{is a product of distinct linear factors which kills #{A}.}

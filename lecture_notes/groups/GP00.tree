@@ -1,0 +1,18 @@
+\title{IA Group Theory}
+\taxon{Lecture notes}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{These notes are based on lectures given by Dr [Rachel Camina](https://www.dpmms.cam.ac.uk/~rdc26/) and are not endorsed by her. This course is self-contained including the [examples sheets](https://www.dpmms.cam.ac.uk/study/IA/Groups/2021-2022/), she recommended the book \em{Algebra & Geometry}, Alan Beardon, CUP.}
+
+\ol{
+    \li{[[GP01]]}
+    \li{[[GP0P]]}
+    \li{[[GP13]]}
+    \li{[[GP1H]]}
+    \li{[[GP1V]]}
+    \li{[[GP24]]}
+    \li{[[GP35]]}
+    \li{[[GP3I]]}
+}

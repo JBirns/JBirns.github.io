@@ -1,0 +1,13 @@
+\title{Unimodal}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+\import{names}
+
+\taxon{Definition}
+
+\p{
+  A sequence #{(a_i)_{i=1}^n} is said to be \em{unimodal} if
+  ##{a_1\le a_2\le\dots\le a_k \ge a_{k+1}\ge\dots\ge a_n}
+  for some #{1\le k\le n}. A polynomial with integer coefficients is said to be \em{unimodal} if the sequence of its coefficients is unimodal.
+}

@@ -1,0 +1,70 @@
+\title{Sharp criterion for diagonalisability}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F} with #{\dim_F V < +\infty}, and #{\alpha \in \mathcal{L}(V)}. Then #{\alpha} is diagonalisable #{\iff} there exists a polynomial #{p} which is the product of \em{distinct} linear factors s.t. #{p(\alpha) = 0}.}
+
+\p{Equivalently: #{\alpha} is diagonalisable #{\iff} there exist distinct #{\lambda_1, \ldots, \lambda_k \in F} s.t., with #{p(t) = \prod_{i=1}^k (t - \lambda_i)}, we have #{p(\alpha) = 0}.}
+
+\proof{
+\p{(#{\Rightarrow}) Suppose #{\alpha} is diagonalisable, with #{\lambda_1, \ldots, \lambda_k} the distinct evals. Let #{p(t) = \prod_{i=1}^k (t - \lambda_i)}. Let #{\mathcal{B}} be a basis of #{V} made of evecs of #{\alpha} (it is precisely the basis in which #{[\alpha]_{\mathcal{B}}} is diagonal). Then for #{v \in \mathcal{B}}, #{\alpha(v) = \lambda_iv} for some #{i \in \lbrace 1, \ldots, k\rbrace }, so #{(\alpha - \lambda_i\mathrm{Id})(v) = 0}, so}
+
+##{p(\alpha)(v) = \Big[ \prod_{j=1}^k (\alpha - \lambda_j\mathrm{Id}) \Big] (v) = 0,}
+
+\p{since the factors commute and one of the #{j}’s is #{i}. This means #{p(\alpha)(v) = 0} for all #{v \in \mathcal{B}}, so #{p(\alpha)(v) = 0} for all #{v \in V} since #{\mathcal{B}} is a basis; hence #{p(\alpha) = 0}.}
+
+\p{(#{\Leftarrow}) (Kernel lemma; Bézout’s theorem for prime polynomials.) Suppose that #{p(\alpha) = 0} for #{p(t) = \prod_{i=1}^k (t - \lambda_i)}, #{\lambda_i \neq \lambda_j} for #{i \neq j}. Let #{V_{\lambda_i} = \operatorname{Ker}(\alpha - \lambda_i\mathrm{Id})}. We claim}
+
+##{V = \bigoplus_{i=1}^k V_{\lambda_i}.}
+
+\p{Indeed, let}
+
+##{q_j(t) = \prod_{\substack{i=1 \\ i \neq j}}^k \frac{t - \lambda_i}{\lambda_j - \lambda_i}, \quad 1 \leq j \leq k.}
+
+\p{Then #{q_j(\lambda_i) = 1} if #{i = j} and #{0} if #{i \neq j}. Hence let us consider #{q(t) = \sum_{j=1}^k q_j(t)}. Then #{\deg q_j \leq k - 1 \implies \deg q \leq k - 1}, and #{q(\lambda_j) = 1} for all #{1 \leq j \leq k}. So the polynomial #{q(t) - 1} has degree #{\leq k - 1} and at least #{k} roots, so #{q(t) = 1} for all #{t}:}
+
+##{\forall t, \quad q_1(t) + \cdots + q_k(t) = 1.
+ \qquad (*)}
+
+\p{Let us define the \em{projector} #{\pi_j = q_j(\alpha) \in \mathcal{L}(V)}. Then}
+
+##{\sum_{j=1}^k \pi_j = \sum_{j=1}^k q_j(\alpha) = \Big( \sum_{j=1}^k q_j \Big)(\alpha) = \mathrm{Id}}
+
+\p{by (#{*}). This means that for all #{v \in V},}
+
+##{v = q(\alpha)(v) = \sum_{j=1}^k \pi_j(v) = \sum_{j=1}^k q_j(\alpha)(v).}
+
+\p{Observe: pick #{j \in \lbrace 1, \ldots, k\rbrace }. Then}
+
+##{(\alpha - \lambda_j\mathrm{Id})q_j(\alpha)(v) = \frac{1}{\prod_{i \neq j}(\lambda_j - \lambda_i)}\,p(\alpha)(v) = 0}
+
+\p{by definition of #{q_j}, #{p}, and by assumption. Hence for all #{j \in \lbrace 1, \ldots, k\rbrace }, #{(\alpha - \lambda_j\mathrm{Id})\pi_j(v) = 0}, i.e. #{\pi_j(v) \in V_{\lambda_j}} (#{\pi_j} is a projector onto #{V_{\lambda_j}}). Now, for all #{v \in V},}
+
+##{v = \sum_{j=1}^k \underbrace{\pi_j(v)}_{\in V_{\lambda_j}} \implies V = \sum_{j=1}^k V_{\lambda_j}.}
+
+\p{We now need to show the sum is \em{direct}. Indeed, let #{v \in V_{\lambda_j} \cap \big( \sum_{i \neq j} V_{\lambda_i} \big)}.}
+
+\ul{
+\li{\p{#{v \in V_{\lambda_j} \iff \alpha(v) = \lambda_jv}, so}
+##{\pi_j(v) = q_j(\alpha)(v) = \Big[ \prod_{i \neq j} \frac{\alpha - \lambda_i\mathrm{Id}}{\lambda_j - \lambda_i} \Big] (v) = \Big[ \prod_{i \neq j} \frac{\lambda_j - \lambda_i}{\lambda_j - \lambda_i} \Big]v = v.}
+\p{So #{\pi_j|_{V_{\lambda_j}} = \mathrm{Id}}.}}
+\li{\p{Now for #{i_0 \neq j} and #{v \in V_{\lambda_{i_0}}}, #{\alpha(v) = \lambda_{i_0}v}, so}
+##{\pi_j(v) = q_j(\alpha)(v) = \Big[ \prod_{i \neq j} \frac{\alpha - \lambda_i\mathrm{Id}}{\lambda_j - \lambda_i} \Big] (v) = \Big( \prod_{i \neq j} \frac{\lambda_{i_0} - \lambda_i}{\lambda_j - \lambda_i} \Big)v = 0}
+\p{since #{i_0 \neq j} (the factor #{i = i_0} vanishes). So #{\pi_j|_{V_{\lambda_i}} = 0} for #{i \neq j}.}}
+}
+
+\p{As a conclusion, for #{v \in V_{\lambda_j} \cap \big( \sum_{i \neq j} V_{\lambda_i} \big)}:}
+
+\ul{
+\li{\strong{1.} #{v \in V_{\lambda_j} \implies \pi_j(v) = v};}
+\li{\strong{2.} #{v \in \sum_{i \neq j} V_{\lambda_i} \implies \pi_j(v) = 0};}
+}
+
+\p{so #{v = 0}. We have proved}
+
+##{V = \bigoplus_{j=1}^k V_{\lambda_j}, \qquad \pi_j|_{V_{\lambda_j}} = \mathrm{Id}, \quad \pi_j|_{V_{\lambda_i}} = 0,\; i \neq j,}
+
+\p{where #{\pi_j} is the projector onto #{V_{\lambda_j}}. Taking a basis of each #{V_{\lambda_j}} gives a basis of #{V} made of eigenvectors, so #{\alpha} is diagonalisable.}
+}

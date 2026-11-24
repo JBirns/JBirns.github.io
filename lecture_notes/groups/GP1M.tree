@@ -1,0 +1,15 @@
+\title{Subgroups of index 2 are normal}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{K \leq G} and the index of #{K} in #{G} is #{2} then #{K \trianglelefteq G}.}
+
+\proof{
+\p{For any #{g \in G \setminus K},}
+
+##{G = K \sqcup gK = K \sqcup Kg}
+
+\p{(by \ref{GP17}), so #{gK = Kg} for all #{g \in G} (since if #{g \in K} then #{gK = K = Kg}).}
+}

@@ -1,0 +1,53 @@
+\title{Elementary Operations and Elementary Matrices}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This is a special case of the change of basis formula. Let #{\alpha \colon V \to W} be linear, #{(\mathcal{B}, \mathcal{B}')} bases of #{V}, #{(\mathcal{C}, \mathcal{C}')} bases of #{W}; we pass from #{[\alpha]_{\mathcal{B},\mathcal{C}}} to #{[\alpha]_{\mathcal{B}',\mathcal{C}'}}.}
+
+\p{When #{V = W}, a linear map #{\alpha \colon V \to V} is called an \em{endomorphism}. Take #{\mathcal{B} = \mathcal{C}}, #{\mathcal{B}' = \mathcal{C}'}, and #{P} the change of basis matrix from #{\mathcal{B}'} to #{\mathcal{B}}. Then}
+
+##{[\alpha]_{\mathcal{B}',\mathcal{B}'} = P^{-1}[\alpha]_{\mathcal{B},\mathcal{B}}P.}
+
+\transclude{LA2O}
+
+\transclude{LA2P}
+
+\transclude{LA2Q}
+
+\ul{
+\li{Elementary row operations are defined in an analogous way.}
+\li{Elementary operations are invertible.}
+\li{These operations can be realised through the action of \em{elementary matrices}.}
+}
+
+\transclude{LA2R}
+
+\p{The link between elementary operations and elementary matrices: an elementary column (row) operation can be performed by multiplying #{A} by the corresponding elementary matrix from the right (left). (Check as exercise.) E.g.}
+
+##{\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 4 & 3 \end{pmatrix}.}
+
+\p{\strong{Variation 1: Gauss’ pivot algorithm}}
+
+\p{If you use \em{only} row operations, we can reach the so-called \em{row echelon form} of the matrix: each nonzero row begins with a leading #{1} (a \em{pivot}), each pivot lies strictly to the right of the pivot in the row above, and the zero rows come last.}
+
+\p{Algorithm:}
+
+\ul{
+\li{Assume that #{a_{i1} \neq 0} for some #{i}.}
+\li{Swap rows #{i} and #{1}.}
+\li{Divide the first row by #{\lambda = a_{i1}} to get #{1} in position #{(1,1)}.}
+\li{Use this #{1} to clear the rest of the first column.}
+\li{Move to the 2nd column.}
+\li{Iterate.}
+}
+
+\p{This procedure is exactly what you do when solving a linear system of equations: Gauss’ pivot algorithm.}
+
+\p{\strong{Variation 2: Representation of square invertible matrices}}
+
+\transclude{LA2S}
+
+\p{Outcome: #{AE_1 \cdots E_c = I_n}, so #{A^{-1} = E_1 \cdots E_c}. This gives an algorithm for computing #{A^{-1}}, and for solving the linear system of equations #{Ax = b}.}
+
+\transclude{LA2T}

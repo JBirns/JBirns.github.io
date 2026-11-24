@@ -1,0 +1,12 @@
+\title{Examples of linear forms}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\operatorname{Tr} \colon M_{n,n}(F) \to F}, #{A = (a_{ij}) \mapsto \sum_{i=1}^n a_{ii}}. Then #{\operatorname{Tr} \in M_{n,n}(F)^*}.}
+\li{\p{\strong{(ii)} Let #{f \colon [0,1] \to \mathbb{R}}, #{x \mapsto f(x)}, and}
+##{T_f \colon \mathcal{C}^\infty([0,1], \mathbb{R}) \to \mathbb{R}, \quad \phi \mapsto \int_0^1 f(x)\phi(x)\,dx,}
+\p{i.e. #{T_f(\phi) = \int_0^1 f(x)\phi(x)\,dx}. Then #{T_f} is a linear form on #{\mathcal{C}^\infty([0,1], \mathbb{R})} (an #{\mathbb{R}}-vector space). [#{\leadsto} quantum mechanics: a function defines a linear form.] Theory of distributions #{\Rightarrow} a generalisation of the notion of function.}}
+}

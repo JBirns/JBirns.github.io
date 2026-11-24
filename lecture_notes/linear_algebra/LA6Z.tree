@@ -1,0 +1,13 @@
+\title{Change of basis for sesquilinear forms}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B}, \mathcal{B}'} be bases for #{V} with #{P = [\mathrm{Id}]_{\mathcal{B}',\mathcal{B}}}, and #{\mathcal{C}, \mathcal{C}'} bases for #{W} with #{Q = [\mathrm{Id}]_{\mathcal{C}',\mathcal{C}}}. Then}
+
+##{[\phi]_{\mathcal{B}',\mathcal{C}'} = P^T[\phi]_{\mathcal{B},\mathcal{C}}\bar{Q}.}
+
+\proof{
+\p{Exercise.}
+}

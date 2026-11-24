@@ -1,0 +1,11 @@
+\title{Order of an element of a direct product}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{(h, k) \in H \times K} where #{H, K} are groups. Then #{o((h, k)) = \operatorname{lcm}(o(h), o(k))}.}
+
+\proof{
+\p{Let #{n = o((h, k))} and #{m = \operatorname{lcm}(o(h), o(k))}. Then #{h^m = e_H}, #{k^m = e_K} by \ref{GP0N}, so #{(h, k)^m = (h^m, k^m) = (e_H, e_K)}, so #{n \mid m} by \ref{GP0N}. Also #{(e_H, e_K) = (h, k)^n = (h^n, k^n)}, so #{o(h) \mid n}, #{o(k) \mid n} (\ref{GP0N}), so #{m \mid n}.}
+}

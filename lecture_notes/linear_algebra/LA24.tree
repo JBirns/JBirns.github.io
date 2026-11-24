@@ -1,0 +1,22 @@
+\title{Matrix of a composite}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\beta \colon U \to V} and #{\alpha \colon V \to W} be linear, so #{\alpha \circ \beta \colon U \to W}. Let #{\mathcal{A}} be a basis of #{U}, #{\mathcal{B}} a basis of #{V} and #{\mathcal{C}} a basis of #{W}. Then}
+
+##{[\alpha \circ \beta]_{\mathcal{A},\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}} \cdot [\beta]_{\mathcal{A},\mathcal{B}}.}
+
+\proof{
+\p{Let #{\bar{A} = [\alpha]_{\mathcal{B},\mathcal{C}} = (a_{ij})} and #{\bar{B} = [\beta]_{\mathcal{A},\mathcal{B}} = (b_{jl})}. Pick #{u_l \in \mathcal{A}} (the basis of #{U}). Then}
+
+##{\begin{aligned}
+(\alpha \circ \beta)(u_l) &= \alpha(\beta(u_l)) = \alpha\Big( \sum_j b_{jl}v_j \Big) && (\text{definition of } \bar{B}) \\
+&= \sum_j b_{jl}\alpha(v_j) && (\text{since } \alpha \text{ is linear}) \\
+&= \sum_j b_{jl}\sum_i a_{ij}w_i && (\text{definition of } \bar{A}) \\
+&= \sum_i \Big( \sum_j a_{ij}b_{jl} \Big) w_i,
+\end{aligned}}
+
+\p{and #{\sum_j a_{ij}b_{jl}} is the #{(i,l)} entry of the matrix #{\bar{A}\bar{B}}.}
+}

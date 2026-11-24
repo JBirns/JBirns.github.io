@@ -1,0 +1,12 @@
+\title{Left and right maps of a bilinear form}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A bilinear form #{\phi \colon U \times V \to F} determines two linear maps:}
+
+##{\begin{aligned}
+\phi_L &\colon U \to V^*, & \phi_L(u) &\colon V \to F,\; v \mapsto \phi(u, v) \quad (\phi \text{ left}); \\
+\phi_R &\colon V \to U^*, & \phi_R(v) &\colon U \to F,\; u \mapsto \phi(u, v) \quad (\phi \text{ right}).
+\end{aligned}}

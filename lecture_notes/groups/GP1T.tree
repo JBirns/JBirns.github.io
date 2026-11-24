@@ -1,0 +1,13 @@
+\title{Injective iff trivial kernel}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A homomorphism #{\theta \colon G \to H} is injective iff #{\ker\theta = \lbrace e_G\rbrace }.}
+
+\proof{
+\p{(#{\Rightarrow}) Suppose #{\theta(g) = e_H = \theta(e_G)}. Injective #{\implies g = e_G}.}
+
+\p{(#{\Leftarrow}) Suppose #{\theta(g) = \theta(h)}. Then #{\theta(h)^{-1}\theta(g) = e_H}, so #{\theta(h^{-1}g) = e_H}, so #{h^{-1}g \in \ker\theta = \lbrace e_G\rbrace }, so #{h^{-1}g = e_G}, so #{h = g}.}
+}

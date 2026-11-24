@@ -1,0 +1,11 @@
+\title{Fixed points of Möbius maps}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A non-identity Möbius map #{f} has either (i) #{2} fixed points or (ii) #{1} fixed point.}
+
+\proof{
+\p{Suppose #{gfg^{-1} = h}. Then #{\alpha} is a fixed point of #{f}, i.e. #{f(\alpha) = \alpha}, #{\iff g(\alpha)} is a fixed point of #{h} (i.e. #{h(g(\alpha)) = g(\alpha)}). So the number of fixed points of #{f} equals the number of fixed points of #{h}. By \ref{GP3Q}, either #{f} is conjugate to #{z \mapsto \nu z}, which has #{2} fixed points (#{0}, #{\infty}), or #{f} is conjugate to #{z \mapsto z + 1}, which has #{1} fixed point (#{\infty}).}
+}

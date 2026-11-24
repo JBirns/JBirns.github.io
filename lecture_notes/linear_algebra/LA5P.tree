@@ -1,0 +1,22 @@
+\title{Cayley–Hamilton}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space with #{\dim_F V < \infty}, and #{\alpha \in \mathcal{L}(V)} with characteristic polynomial #{\chi_\alpha(t) = \det(\alpha - tI)}. Then #{\chi_\alpha(\alpha) = 0}.}
+
+\proof{
+\p{\em{for #{F = \mathbb{C}}.} (General proof in the notes.) Let #{F = \mathbb{C}}, #{\alpha \in \mathcal{L}(V)}, #{n = \dim_{\mathbb{C}} V}. There exists #{\mathcal{B} = \lbrace v_1, \ldots, v_n\rbrace } s.t.}
+
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} a_1 & & * \\ & \ddots & \\ 0 & & a_n \end{pmatrix} \quad \text{(triangular)}.}
+
+\p{Let #{U_j = \langle v_1, \ldots, v_j \rangle}. Then #{(\alpha - a_jI)U_j \leq U_{j-1}} because of the triangular form. Now #{\chi_\alpha(t) = \prod_{i=1}^n (a_i - t)}, and}
+
+##{\begin{aligned}
+(\alpha - a_1I) \cdots (\alpha - a_{n-1}I)\underbrace{(\alpha - a_nI)V}_{\leq U_{n-1}} &\leq (\alpha - a_1I) \cdots \underbrace{(\alpha - a_{n-1}I)U_{n-1}}_{\leq U_{n-2}} \\
+&\leq \cdots \leq (\alpha - a_1I)U_1 = 0.
+\end{aligned}}
+
+\p{Hence #{\chi_\alpha(\alpha) = 0}.}
+}

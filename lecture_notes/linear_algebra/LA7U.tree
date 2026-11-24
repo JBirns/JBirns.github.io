@@ -1,0 +1,9 @@
+\title{Orthogonal complements}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an inner product space with #{\dim V < \infty} and #{W \leq V}. Then}
+
+##{V = W \overset{\perp}{\oplus} W^\perp.}

@@ -1,0 +1,13 @@
+\title{Examples of cyclic groups}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{(\mathbb{Z}, +) = \langle 1 \rangle = \langle -1 \rangle}, the infinite cyclic group. We have shown all subgroups of #{(\mathbb{Z}, +)} are cyclic (\ref{GP0B}).}
+\li{#{(\lbrace \pm 1\rbrace , \times) = \langle -1 \rangle}.}
+\li{#{(\lbrace 0, 1, 2, 3\rbrace , +_4) = \langle 1 \rangle = \langle 3 \rangle}.}
+}
+
+\p{Note cyclic groups are abelian.}

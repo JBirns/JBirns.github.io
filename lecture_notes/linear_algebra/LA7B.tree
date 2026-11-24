@@ -1,0 +1,7 @@
+\title{Inner product}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{\mathbb{R}} (#{\mathbb{C}}). An \em{inner product} is a positive definite symmetric (Hermitian) form #{\phi} on #{V}.}

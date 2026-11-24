@@ -1,0 +1,24 @@
+\title{Composites and inverses of isomorphisms}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} The composition of two homomorphisms is a homomorphism. Similarly for isomorphisms; thus if #{G_1 \cong G_2} and #{G_2 \cong G_3}, then #{G_1 \cong G_3}.}
+\li{\strong{(ii)} If #{\theta \colon G_1 \to G_2} is an isomorphism, then so is its inverse #{\theta^{-1} \colon G_2 \to G_1}. So #{G_1 \cong G_2 \implies G_2 \cong G_1}.}
+}
+
+\proof{
+\p{(i) Suppose #{\theta_1 \colon (G_1, *_1) \to (G_2, *_2)} and #{\theta_2 \colon (G_2, *_2) \to (G_3, *_3)} are homomorphisms. Thus #{\theta_2 \circ \theta_1} is a function from #{G_1} to #{G_3}; we need to check it’s a homomorphism. Let #{x, y \in G_1}. Then}
+
+##{\begin{aligned}
+\theta_2 \circ \theta_1(x *_1 y) &= \theta_2(\theta_1(x) *_2 \theta_1(y)) && \text{since } \theta_1 \text{ is a homomorphism} \\
+&= \theta_2(\theta_1(x)) *_3 \theta_2(\theta_1(y)) && \text{since } \theta_2 \text{ is a homomorphism} \\
+&= (\theta_2 \circ \theta_1)(x) *_3 (\theta_2 \circ \theta_1)(y). &&
+\end{aligned}}
+
+\p{(ii) #{\theta} is a bijection, so #{\theta^{-1}} exists; we need to show it’s a homomorphism. Let #{y, z \in G_2}. Then there exist #{x, k \in G_1} s.t. #{\theta^{-1}(y) = x}, #{\theta^{-1}(z) = k}. Note}
+
+##{\theta(x *_1 k) = \theta(x) *_2 \theta(k) = y *_2 z \implies \theta^{-1}(y *_2 z) = x *_1 k = \theta^{-1}(y) *_1 \theta^{-1}(z).}
+}

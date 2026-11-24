@@ -1,0 +1,17 @@
+\title{of the diagonalisation of symmetric bilinear forms theorem}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F = \mathbb{R}}, #{\dim_{\mathbb{R}} V < \infty}, and #{\phi} a symmetric bilinear form on #{V}. Then there exists a basis #{\mathcal{B} = (v_1, \ldots, v_n)} of #{V} s.t.}
+
+##{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_p & 0 & 0 \\ 0 & -I_q & 0 \\ 0 & 0 & 0 \end{pmatrix}, \quad p, q \geq 0,\; p + q = r(\phi).}
+
+\proof{
+\p{Let #{\mathcal{E} = (e_1, \ldots, e_n)} be a basis of #{V} with #{[\phi]_{\mathcal{E}} = \operatorname{diag}(a_1, \ldots, a_n)}, #{a_i \in \mathbb{R}}. Reorder: #{a_i > 0} for #{1 \leq i \leq p}, #{a_i < 0} for #{p + 1 \leq i \leq p + q}, #{a_i = 0} for #{i \geq p + q + 1}. We define}
+
+##{v_i = \begin{cases} e_i/\sqrt{a_i} & 1 \leq i \leq p, \\ e_i/\sqrt{|a_i|} & p + 1 \leq i \leq p + q, \\ e_i & i \geq p + q + 1, \end{cases}}
+
+\p{and #{\mathcal{B} = (v_1, \ldots, v_n)}. Then #{[\phi]_{\mathcal{B}}} has the assumed form.}
+}

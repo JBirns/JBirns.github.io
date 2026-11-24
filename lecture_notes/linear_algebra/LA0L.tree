@@ -1,0 +1,7 @@
+\title{Minimal spanning families}
+\taxon{Question}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{V} is finite dimensional, is there a minimal number of vectors in a family so that they span #{V}?}

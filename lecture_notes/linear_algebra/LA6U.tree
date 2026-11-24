@@ -1,0 +1,7 @@
+\title{Kernel and rank}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\dim K + r(\phi) = n}.}

@@ -1,0 +1,18 @@
+\title{Products of subgroups}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Let #{N \trianglelefteq G}, #{H \leq G}. Then #{NH = \lbrace nh : n \in N, h \in H\rbrace  \leq G}.}
+\li{\strong{(ii)} Let #{N \trianglelefteq G}, #{M \trianglelefteq G}. Then #{NM \trianglelefteq G}.}
+}
+
+\proof{
+\p{(i) Closure: for #{nh, \bar{n}\bar{h} \in NH}, #{nh\bar{n}\bar{h} = n\hat{n}h\bar{h} \in NH} (writing #{h\bar{n} = \hat{n}h}). Identity: #{e = ee \in NH}. Inverses: #{(nh)^{-1} = h^{-1}n^{-1} = \hat{n}h^{-1}} for some #{\hat{n} \in N}, which is in #{NH}. Associativity is inherited.}
+
+\p{(ii) Check normality:}
+
+##{g(nm)g^{-1} = \underbrace{gng^{-1}}_{\in N}\,\underbrace{gmg^{-1}}_{\in M} \in NM.}
+}

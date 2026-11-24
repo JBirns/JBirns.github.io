@@ -1,0 +1,25 @@
+\title{Invertible matrices reduce to the identity}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{A} is an #{n \times n} square invertible matrix, then we can obtain #{I_n} using elementary row operations only (or column operations only).}
+
+\proof{
+\p{We do the proof for column operations, arguing by induction on the number of rows. Suppose that we could reach the form}
+
+##{\begin{pmatrix} I_k & 0 \\ * & * \end{pmatrix},}
+
+\p{where the top-left block is the #{k \times k} identity. We want to obtain this structure with #{k \mapsto k + 1}.}
+
+\p{\strong{Claim:} there exists #{j > k} with #{\lambda = a_{k+1,j} \neq 0}. Indeed, otherwise the vector #{e_{k+1}} (with #{1} in position #{k+1} and #{0} elsewhere) is not in the span of the column vectors of #{A} (exercise), which contradicts the assumption that #{A} is invertible.}
+
+\ul{
+\li{Swap columns #{k + 1} and #{j}.}
+\li{Divide column #{k + 1} by #{\lambda = a_{k+1,j} \neq 0}.}
+\li{Use this #{1} to clear the rest of row #{k + 1} using elementary column operations of type (iii).}
+}
+
+\p{This gives the structure of the induction hypothesis for #{k + 1}; the process ends when #{k = n}.}
+}

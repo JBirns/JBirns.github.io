@@ -1,0 +1,15 @@
+\title{#{V \cong F^n}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{V} is a vector space over #{F} of dimension #{n}, then #{V \cong F^n}, where #{F^n = \left\lbrace  \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} : x_i \in F,\; 1 \leq i \leq n \right\rbrace }.}
+
+\proof{
+\p{Let #{\mathcal{B} = (v_1, \ldots, v_n)} be a basis of #{V}. Then}
+
+##{\alpha \colon V \to F^n, \quad v = \sum_{i=1}^n \lambda_iv_i \mapsto \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}}
+
+\p{(the coordinates of #{v}) is an isomorphism (check as exercise).}
+}

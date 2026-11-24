@@ -1,0 +1,14 @@
+\title{Isomorphism}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F}. A map #{\alpha \colon V \to W} is called an \em{isomorphism} iff}
+
+\ul{
+\li{\strong{(i)} #{\alpha} is linear;}
+\li{\strong{(ii)} #{\alpha} is bijective.}
+}
+
+\p{If such an #{\alpha} exists, we write #{V \cong W} (#{V} is isomorphic to #{W}).}

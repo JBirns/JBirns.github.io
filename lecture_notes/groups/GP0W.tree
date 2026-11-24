@@ -1,0 +1,7 @@
+\title{Sign of a permutation}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\sigma \in S_n} (#{n \geq 2}). Then the \em{sign} of #{\sigma}, written #{\operatorname{sgn}(\sigma)}, is #{(-1)^k} where #{k} is the number of transpositions in some expression of #{\sigma} as a product of transpositions.}

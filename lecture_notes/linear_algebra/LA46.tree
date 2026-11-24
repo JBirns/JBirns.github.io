@@ -1,0 +1,18 @@
+\title{Volume form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{volume form} #{d} on #{F^n} is a function}
+
+##{d \colon \underbrace{F^n \times \cdots \times F^n}_{n \text{ times}} \to F}
+
+\p{such that:}
+
+\ul{
+\li{\p{\strong{(i)} #{d} is \em{multilinear}: for any #{1 \leq i \leq n} and any #{(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n) \in (F^n)^{n-1}},}
+##{F^n \to F, \quad \textcolor{blue}{v} \mapsto d(v_1, \ldots, v_{i-1}, \textcolor{blue}{v}, v_{i+1}, \ldots, v_n)}
+\p{is linear, i.e. an element of #{(F^n)^*} (#{\leadsto} linear with respect to all #{n} coordinates);}}
+\li{\strong{(ii)} #{d} is \em{alternate}: if #{v_i = v_j} for some #{i \neq j}, then #{d(v_1, \ldots, v_n) = 0}.}
+}

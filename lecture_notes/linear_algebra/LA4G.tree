@@ -1,0 +1,7 @@
+\title{Determinant of the inverse}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We have proved that #{\det(A^{-1}) = (\det A)^{-1}}.}

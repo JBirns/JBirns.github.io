@@ -1,0 +1,15 @@
+\title{Spanning families contain a basis}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{(v_1, \ldots, v_n)} spans #{V}, then some subset of this family is a basis of #{V}.}
+
+\proof{
+\p{If #{(v_1, \ldots, v_n)} are linearly independent then we are done. Let us assume they are not linearly independent. Then by possibly reordering the vectors, #{v_n \in \langle v_1, \ldots, v_{n-1} \rangle} (#{v_n} is a linear combination of #{v_1, \ldots, v_{n-1}}). Hence}
+
+##{V = \langle v_1, \ldots, v_n \rangle = \langle v_1, \ldots, v_{n-1} \rangle,}
+
+\p{so #{\langle v_1, \ldots, v_{n-1} \rangle = V}. So we have removed a vector from this set and preserved the span. By induction, we will eventually reach a basis.}
+}

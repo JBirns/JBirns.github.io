@@ -1,0 +1,12 @@
+\title{Singular}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)}. We say that}
+
+\ul{
+\li{\strong{(i)} #{A} is \em{singular} if #{\det A = 0};}
+\li{\strong{(ii)} #{A} is \em{non-singular} if #{\det A \neq 0}.}
+}

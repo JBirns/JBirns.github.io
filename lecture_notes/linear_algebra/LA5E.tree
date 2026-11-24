@@ -1,0 +1,19 @@
+\title{Coefficients of the characteristic polynomial}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be #{n}-dimensional over #{F = \mathbb{R}} or #{\mathbb{C}}, and #{\alpha \in \mathcal{L}(V)}. Then}
+
+##{\chi_\alpha(t) = (-1)^nt^n + c_{n-1}t^{n-1} + \cdots + c_0, \quad c_0 = \det A = \det\alpha, \quad c_{n-1} = (-1)^{n-1}\operatorname{tr}A.}
+
+\proof{
+\p{#{\chi_\alpha(t) = \det(\alpha - tI)}, so #{\chi_\alpha(0) = \det\alpha = c_0}.}
+
+\p{Say that #{F = \mathbb{R}} or #{\mathbb{C}} (if #{F = \mathbb{R}}, we can think of #{A = [\alpha]_{\mathcal{B}}} as having complex entries as well). We know that #{\alpha} is triangulable over #{\mathbb{C}}:}
+
+##{\chi_\alpha(t) = \det\begin{pmatrix} a_1 - t & & * \\ & \ddots & \\ 0 & & a_n - t \end{pmatrix} = \prod_{i=1}^n (a_i - t) = (-1)^nt^n + c_{n-1}t^{n-1} + \cdots + c_0,}
+
+\p{so #{c_{n-1} = (-1)^{n-1}\sum_{i=1}^n a_i = (-1)^{n-1}\operatorname{tr}\alpha} (independent of basis).}
+}

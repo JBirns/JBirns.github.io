@@ -1,0 +1,21 @@
+\title{Dual map}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F} and #{\alpha \in \mathcal{L}(V, W)}. Then the map}
+
+##{\alpha^* \colon W^* \to V^*, \quad \varepsilon \mapsto \varepsilon \circ \alpha}
+
+\p{is an element of #{\mathcal{L}(W^*, V^*)}. It is called the \em{dual map} of #{\alpha}.}
+
+\proof{
+\p{#{\varepsilon \circ \alpha \colon V \to F} is linear by linearity of #{\varepsilon} and #{\alpha}, so #{\varepsilon \circ \alpha \in V^*}.}
+
+\p{#{\alpha^*} is linear: for #{\theta_1, \theta_2 \in W^*},}
+
+##{\alpha^*(\theta_1 + \theta_2) = (\theta_1 + \theta_2) \circ \alpha = \theta_1 \circ \alpha + \theta_2 \circ \alpha = \alpha^*(\theta_1) + \alpha^*(\theta_2),}
+
+\p{and similarly, for all #{\lambda \in F}, #{\alpha^*(\lambda\theta) = \lambda\alpha^*(\theta)}. So #{\alpha^*} is linear, #{\alpha^* \in \mathcal{L}(W^*, V^*)}.}
+}

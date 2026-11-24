@@ -1,0 +1,15 @@
+\title{Examples of subgroups}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{(\mathbb{Z}, +) \leq (\mathbb{Q}, +) \leq (\mathbb{R}, +)}.}
+\li{#{(\lbrace \pm 1\rbrace , \times) \leq (\mathbb{Q} \setminus \lbrace 0\rbrace , \times)}.}
+\li{In \ref{GP04}(10), #{\lbrace 1, \sigma, \sigma^2\rbrace } is a subgroup.}
+\li{\p{In \ref{GP04}(12), the \em{special linear} group}
+##{SL_2(\mathbb{R}) = \lbrace A \in GL_2(\mathbb{R}) : \det A = 1\rbrace  \leq GL_2(\mathbb{R}),}
+\p{the \em{general linear} group.}}
+\li{If #{G} is a group then #{\lbrace e\rbrace  \leq G} is the \em{trivial subgroup} and #{G \leq G} is the \em{improper subgroup}.}
+}

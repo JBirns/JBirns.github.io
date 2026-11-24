@@ -1,0 +1,9 @@
+\title{The kernel of #{f \mapsto f'' - f}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \colon \mathcal{C}^\infty(\mathbb{R}) \to \mathcal{C}^\infty(\mathbb{R})}, #{f \mapsto \alpha(f) = f'' - f}. Then #{\alpha} is linear and}
+
+##{\operatorname{Ker}\alpha = \lbrace f \in \mathcal{C}^\infty(\mathbb{R}) : f'' - f = 0\rbrace  = \operatorname{Span}_{\mathbb{R}}\langle e^t, e^{-t} \rangle.}

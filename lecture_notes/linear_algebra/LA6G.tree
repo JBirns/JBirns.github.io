@@ -1,0 +1,24 @@
+\title{Quadratic forms and symmetric bilinear forms}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{Q \colon V \to F} is a quadratic form, then there exists a unique symmetric bilinear form #{\phi \colon V \times V \to F} s.t. #{Q(u) = \phi(u, u)} for all #{u \in V}.}
+
+\proof{
+\p{Let #{\psi} be a bilinear form on #{V} s.t. #{Q(u) = \psi(u, u)} for all #{u}, and let #{\phi(u, v) = \frac{1}{2}\big( \psi(u, v) + \psi(v, u) \big)}. Then #{\phi} is symmetric and #{\phi(u, u) = \psi(u, u) = Q(u)}, so a symmetric #{\phi} exists.}
+
+\p{Uniqueness: let #{\phi} be a symmetric bilinear form s.t. #{\phi(u, u) = Q(u)} for all #{u \in V}. Then}
+
+##{\begin{aligned}
+Q(u + v) = \phi(u + v, u + v) &= \phi(u, u) + \phi(v, u) + \phi(u, v) + \phi(v, v) \\
+&= \phi(u, u) + 2\phi(u, v) + \phi(v, v),
+\end{aligned}}
+
+\p{since #{\phi} is bilinear and symmetric. Hence}
+
+##{\boxed{\phi(u, v) = \frac{1}{2}\big[ Q(u + v) - Q(u) - Q(v) \big]},}
+
+\p{the \em{polarisation identity}.}
+}

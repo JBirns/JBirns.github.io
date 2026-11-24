@@ -1,0 +1,11 @@
+\title{The inverse of an isomorphism is linear}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\alpha \colon V \to W} is an isomorphism, then #{\alpha^{-1} \colon W \to V} is linear. Indeed, let #{(w_1, w_2) \in W \times W} with #{w_1 = \alpha(v_1)}, #{w_2 = \alpha(v_2)}, #{(v_1, v_2) \in V \times V}. Hence}
+
+##{\alpha^{-1}(w_1 + w_2) = \alpha^{-1}(\alpha(v_1) + \alpha(v_2)) = \alpha^{-1}(\alpha(v_1 + v_2)) = v_1 + v_2 = \alpha^{-1}(w_1) + \alpha^{-1}(w_2).}
+
+\p{Similarly, for all #{\lambda \in F}, #{v \in V}, #{\alpha^{-1}(\lambda v) = \lambda\alpha^{-1}(v)}.}

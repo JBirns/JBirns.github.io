@@ -1,0 +1,21 @@
+\title{Basic consequences of the axioms}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} Associativity means we don’t need brackets: #{x * y * z} is unambiguous. Furthermore, by induction, #{x_1 * x_2 * \cdots * x_n} is unambiguous (#{n = 3} ✓):}
+##{\begin{aligned}
+x_1 * (x_2 * \cdots * x_n) &= (x_1 * x_2) * (x_3 * \cdots * x_n) \\
+&= (x_1 * x_2 * x_3) * (x_4 * \cdots * x_n) \\
+&= \cdots \\
+&= (x_1 * \cdots * x_{n-1}) * x_n.
+\end{aligned}}}
+\li{\strong{(ii)} We often omit `#{*}’ and write #{xy} for #{x * y}, and #{G} for #{(G, *)}.}
+\li{\p{\strong{(iii)} #{(xy)^{-1} = y^{-1}x^{-1}}, since it works:}
+##{(xy)y^{-1}x^{-1} = x(yy^{-1})x^{-1} = xex^{-1} = xx^{-1} = e.}
+\p{Note inverses are unique.}}
+\li{\strong{(iv)} #{(x^{-1})^{-1} = x}.}
+\li{\strong{(v)} If #{x, y, z \in G} and #{xy = xz}, then #{x^{-1}xy = x^{-1}xz \implies y = z} (\em{cancellation law}). So in a line of a multiplication table each term only appears once.}
+}

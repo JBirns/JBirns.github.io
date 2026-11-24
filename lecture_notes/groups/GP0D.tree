@@ -1,0 +1,11 @@
+\title{Homomorphism}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{(G, *_G)} and #{(H, *_H)} be groups. Then the function #{\theta \colon G \to H} is a \em{homomorphism} if}
+
+##{\theta(x *_G y) = \theta(x) *_H \theta(y) \quad \forall x, y \in G,}
+
+\p{“a map which respects the group operation”.}

@@ -1,0 +1,7 @@
+\title{Another proof of rank–nullity}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This provides another proof of the rank–nullity theorem: #{r(\alpha) + n(\alpha) = n}.}

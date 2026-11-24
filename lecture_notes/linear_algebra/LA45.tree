@@ -1,0 +1,21 @@
+\title{#{\det A = \det A^T}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\det A = \det(A^T)}.}
+
+\proof{
+##{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma)a_{\sigma(1)1} \cdots a_{\sigma(n)n} = \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{i=1}^n a_{\sigma(i)i}.}
+
+\p{Change variable: #{j = \sigma(i)}; since #{\sigma} is a bijection, #{i = \sigma^{-1}(j)}, so}
+
+##{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{j=1}^n a_{j\sigma^{-1}(j)}.}
+
+\p{Now remember #{\varepsilon(\sigma\sigma^{-1}) = \varepsilon(\sigma)\varepsilon(\sigma^{-1}) = 1}, so #{\varepsilon(\sigma^{-1}) = \varepsilon(\sigma)} since #{\varepsilon(\sigma) \in \lbrace -1, 1\rbrace }. Hence}
+
+##{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma^{-1})\prod_{j=1}^n a_{j\sigma^{-1}(j)} = \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{j=1}^n a_{j\sigma(j)} = \det(A^T),}
+
+\p{by letting #{\sigma \mapsto \sigma^{-1}}.}
+}

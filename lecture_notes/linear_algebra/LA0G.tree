@@ -1,0 +1,7 @@
+\title{The span is the smallest subspace containing #{S}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\langle S \rangle} is the smallest vector subspace which contains #{S}.}

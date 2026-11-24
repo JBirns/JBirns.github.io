@@ -1,0 +1,55 @@
+\title{Normal Subgroups, Quotient Groups and Homomorphisms}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given a group #{G}, a subgroup #{H} of #{G} and the set of left cosets of #{H} in #{G}, #{(G : H)}, we would like to define a group operation #{\circ} on the cosets so that #{((G : H), \circ)} is a group. We would like}
+
+##{(gH) \circ (kH) = gkH.}
+
+\p{When does this work? Consider #{gHkH}; if #{Hk = kH} then #{gHkH = gkHH = gkH}. This motivates the following definition.}
+
+\transclude{GP1I}
+
+\transclude{GP1J}
+
+\transclude{GP1K}
+
+\transclude{GP1L}
+
+\transclude{GP1M}
+
+\transclude{GP1N}
+
+\transclude{GP1O}
+
+\p{Recall #{\theta \colon G \to H} is a homomorphism if #{\theta(xy) = \theta(x)\theta(y)};}
+
+##{\begin{aligned}
+\operatorname{Im}(\theta) &= \lbrace \theta(g) : g \in G\rbrace  \leq H \quad \text{(1)}, \\
+\ker(\theta) &= \lbrace g \in G : \theta(g) = e_H\rbrace  \trianglelefteq G \quad \text{(Example Sheet 1)}.
+\end{aligned}}
+
+\p{Here (1) \ref{GP0F}.}
+
+\transclude{GP1P}
+
+\transclude{GP1Q}
+
+\p{\strong{Aside.} Suppose #{f \colon A \to B}.}
+
+\ul{
+\li{\strong{(i)} #{f} is an \em{injective} map if for #{a_1, a_2 \in A}, #{f(a_1) = f(a_2) \implies a_1 = a_2}, i.e. each element of #{A} maps to a different element of #{B}.}
+\li{\strong{(ii)} #{f} is \em{surjective} (onto) if given #{b \in B} there exists #{a \in A} s.t. #{f(a) = b} (every element in #{B} is “hit”).}
+\li{\strong{(iii)} #{f} is \em{bijective} if #{f} is both injective and surjective.}
+}
+
+\transclude{GP1R}
+
+\transclude{GP1S}
+
+\transclude{GP1T}
+
+\p{Recall: if #{N \trianglelefteq G}, #{g \in G}, #{n \in N}, then #{gng^{-1} \in N}, so #{gng^{-1} = \hat{n}} for some #{\hat{n} \in N}, so #{gn = \hat{n}g}.}
+
+\transclude{GP1U}

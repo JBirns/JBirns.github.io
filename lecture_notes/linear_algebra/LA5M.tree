@@ -1,0 +1,15 @@
+\title{The minimal polynomial divides killing polynomials}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \in \mathcal{L}(V)} and #{p \in F[t]}. Then #{p(\alpha) = 0 \iff m_\alpha} is a factor of #{p} (#{\iff m_\alpha \mid p}).}
+
+\proof{
+\p{Let #{p \in F[t]} with #{p(\alpha) = 0}, and #{m_\alpha} the minimal polynomial of #{\alpha}, so #{\deg m_\alpha \leq \deg p}. By Euclidean division, #{p = m_\alpha q + r} with #{\deg r < \deg m_\alpha}. Then}
+
+##{0 = p(\alpha) = m_\alpha(\alpha)q(\alpha) + r(\alpha) = 0 + r(\alpha),}
+
+\p{so #{r(\alpha) = 0}, so #{r \equiv 0} by minimality of #{\deg m_\alpha}. Hence #{p = qm_\alpha}, so #{m_\alpha \mid p}. (The converse is clear.)}
+}

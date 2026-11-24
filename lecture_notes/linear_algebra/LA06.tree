@@ -1,0 +1,10 @@
+\title{Examples of subspaces}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{V = \mathbb{R}^{\mathbb{R}}}, the space of functions #{f \colon \mathbb{R} \to \mathbb{R}}. #{\mathcal{C}(\mathbb{R})}, the space of those which are continuous, satisfies #{\mathcal{C}(\mathbb{R}) \leq V}. #{\mathbb{P}(\mathbb{R})}, the space of polynomials in the variable, satisfies #{\mathbb{P}(\mathbb{R}) \leq V}.}
+\li{\strong{(ii)} #{\left\lbrace  \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} \in \mathbb{R}^3 : x_1 + x_2 + x_3 = t \right\rbrace }. Check that this is a subspace of #{\mathbb{R}^3} if #{t = 0} only.}
+}

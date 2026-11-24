@@ -1,0 +1,9 @@
+\title{Hermitian form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A sesquilinear form #{\phi \colon V \times V \to \mathbb{C}} is called \em{Hermitian} if}
+
+##{\forall (u, v) \in V \times V, \quad \phi(u, v) = \overline{\phi(v, u)}.}

@@ -1,0 +1,7 @@
+\title{A minimal polynomial computation}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{A = \begin{pmatrix} 1 & 0 & -2 \\ 0 & 1 & 1 \\ 0 & 0 & 2 \end{pmatrix}}; what is #{m_A}? #{\chi_A(t) = (t - 1)^2(t - 2)} (up to sign), so #{m_A} is either #{(t - 1)^2(t - 2)} or #{(t - 1)(t - 2)}. Check: #{(A - I)(A - 2I) = 0}, so #{m_A = (t - 1)(t - 2)} and #{A} is diagonalisable.}

@@ -1,0 +1,16 @@
+\title{Stabilisers are subgroups}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\operatorname{Stab}_G(x)} is a subgroup of #{G}.}
+
+\proof{
+\ul{
+\li{#{e(x) = x \Rightarrow e \in \operatorname{Stab}_G(x)}.}
+\li{If #{g, h \in \operatorname{Stab}_G(x)} then #{(gh)(x) = g(h(x)) = g(x) = x}, so #{gh \in \operatorname{Stab}_G(x)}.}
+\li{If #{g \in \operatorname{Stab}_G(x)}, #{g(x) = x}, then #{x = e(x) = (g^{-1}g)(x) = g^{-1}(g(x)) = g^{-1}(x)}, so #{g^{-1} \in \operatorname{Stab}_G(x)}.}
+\li{Associativity is inherited from #{G}.}
+}
+}

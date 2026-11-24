@@ -1,0 +1,7 @@
+\title{Transitive action}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say #{G} acts \em{transitively} on #{X} if for any #{x \in X}, #{\operatorname{Orb}_G(x) = X}. Equivalently, if given any pair #{x_1, x_2 \in X} there exists #{g \in G} s.t. #{g(x_1) = x_2}.}

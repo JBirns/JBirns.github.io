@@ -1,0 +1,17 @@
+\title{Finite simple groups}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{A_5} is the smallest non-abelian simple group.}
+\li{\strong{(ii)} #{A_n} is simple for all #{n \geq 5} (see IB GRM). But #{A_4} is not simple.}
+\li{\p{\strong{(iii)} A classification of finite simple groups exists. It includes the families}
+\ul{
+\li{#{C_p}, #{p} prime (the only abelian simple groups);}
+\li{#{A_n}, #{n \geq 5};}
+\li{groups of “Lie type” (“matrix groups”);}
+\li{#{26} sporadic groups, including the Monster and Baby Monster.}
+}}
+}

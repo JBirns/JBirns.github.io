@@ -1,0 +1,13 @@
+\title{Equivalent iff same rank}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Two matrices #{A, A' \in M_{m,n}(F)} are equivalent #{\iff r_c(A) = r_c(A')}.}
+
+\proof{
+\p{(#{\Rightarrow}) If #{A} and #{A'} are equivalent then they correspond to the same linear map #{\alpha} expressed in two different bases, so #{r_c(A) = r(\alpha) = r_c(A')}.}
+
+\p{(#{\Leftarrow}) #{A} and #{A'} are both equivalent to #{\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}}, so #{A} and #{A'} are equivalent.}
+}

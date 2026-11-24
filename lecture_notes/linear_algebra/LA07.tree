@@ -1,0 +1,16 @@
+\title{Warning}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The union of two subspaces is generically \em{not} a subspace, as it is typically not stable under addition. E.g. #{V = \mathbb{R}^2} with #{U} and #{W} the two coordinate axes: for #{\vec{u} \in U}, #{\vec{w} \in W} nonzero, #{\vec{u} + \vec{w} \notin U \cup W}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-0.5,0) -- (3,0) node[right] {$U$};
+\draw[->] (0,-0.5) -- (0,2) node[above] {$W$};
+\draw[->, thick] (0,0) -- (1.5,0) node[below] {$\vec{u}$};
+\draw[->, thick] (0,0) -- (0,1.2) node[left] {$\vec{w}$};
+\draw[dashed] (1.5,0) -- (1.5,1.2) -- (0,1.2);
+\draw[->, dotted, thick] (0,0) -- (1.5,1.2) node[above right] {$\vec{u} + \vec{w} \notin U \cup W$};
+\end{tikzpicture}}

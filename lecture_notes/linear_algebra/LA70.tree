@@ -1,0 +1,28 @@
+\title{Hermitian Forms in #{\mathbb{C}} and Skew-Symmetric Forms on #{\mathbb{R}}}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Hermitian forms: #{\dim_{\mathbb{C}} V < \infty}, #{\phi \colon V \times V \to \mathbb{C}} sesquilinear (#{W = V}).}
+
+\transclude{LA71}
+
+\transclude{LA72}
+
+\transclude{LA73}
+
+\transclude{LA74}
+
+\transclude{LA75}
+
+\p{\strong{Skew-symmetric real-valued forms}}
+
+\p{Let #{F = \mathbb{R}} and #{V} a vector space over #{\mathbb{R}}.}
+
+\transclude{LA76}
+
+\transclude{LA77}
+
+\transclude{LA78}
+
+\transclude{LA79}

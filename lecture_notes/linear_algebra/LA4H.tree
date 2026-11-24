@@ -1,0 +1,21 @@
+\title{Characterisations of invertibility}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)}. The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{A} is invertible;}
+\li{\strong{(ii)} #{A} is non-singular;}
+\li{\strong{(iii)} #{r(A) = n}.}
+}
+
+\proof{
+\p{(i) #{\iff} (iii) is the rank–nullity theorem; (i) #{\Rightarrow} (ii) is \ref{LA4F}. We need to show (ii) #{\Rightarrow} (iii). Suppose #{r(A) < n}, i.e. #{\dim\operatorname{span}\lbrace c_1, \ldots, c_n\rbrace  < n}, where #{A = (c_1 \mid \cdots \mid c_n)}. Then there exists #{(\lambda_1, \ldots, \lambda_n) \neq (0, \ldots, 0)} s.t. #{\sum_{i=1}^n \lambda_ic_i = 0}. Pick #{j} s.t. #{\lambda_j \neq 0}; then #{c_j = -\frac{1}{\lambda_j}\sum_{i \neq j} \lambda_ic_i}, and}
+
+##{\det A = \det(c_1, \ldots, c_j, \ldots, c_n) = \det\Big( c_1, \ldots, -\frac{1}{\lambda_j}\sum_{i \neq j} \lambda_ic_i, \ldots, c_n \Big) = 0}
+
+\p{by linearity and alternation.}
+}

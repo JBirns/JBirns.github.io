@@ -1,0 +1,18 @@
+\title{Symmetric forms over #{\mathbb{C}}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F = \mathbb{C}}, #{\dim_{\mathbb{C}} V < \infty}, and #{\phi} a symmetric bilinear form on #{V}. Then there exists a basis #{\mathcal{B}} of #{V} s.t.}
+
+##{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}, \quad r = r(\phi).}
+
+\proof{
+\p{Pick a basis #{\mathcal{E} = (e_1, \ldots, e_n)} s.t. #{[\phi]_{\mathcal{E}} = \operatorname{diag}(a_1, \ldots, a_n)}. Reorder the #{a_i} s.t. #{a_i \neq 0} for #{1 \leq i \leq r} and #{a_i = 0} for #{i > r}. For #{i \leq r}, let #{\sqrt{a_i}} be \em{a} choice of complex root of #{a_i}; we define}
+
+##{v_i = \begin{cases} e_i/\sqrt{a_i} & 1 \leq i \leq r, \\ e_i & i > r, \end{cases}
+ \qquad (*)}
+
+\p{and #{\mathcal{B} = (v_1, \ldots, v_r, e_{r+1}, \ldots, e_n)}. Then #{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}} by (#{*}).}
+}

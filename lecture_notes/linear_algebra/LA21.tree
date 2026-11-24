@@ -1,0 +1,9 @@
+\title{Matrix of #{\alpha} in the bases #{\mathcal{B}}, #{\mathcal{C}}}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{matrix of #{\alpha} with respect to #{\mathcal{B}}, #{\mathcal{C}}} is the #{m \times n} matrix}
+
+##{[\alpha]_{\mathcal{B},\mathcal{C}} \coloneqq \Big( [\alpha(v_1)]_{\mathcal{C}} \; \Big|\; [\alpha(v_2)]_{\mathcal{C}} \; \Big|\; \cdots \; \Big|\; [\alpha(v_n)]_{\mathcal{C}} \Big).}

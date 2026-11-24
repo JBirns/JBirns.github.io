@@ -1,0 +1,22 @@
+\title{Cauchy–Schwarz}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{|\langle u, v \rangle| \leq \Vert u\Vert \,\Vert v\Vert }. Moreover, equality holds iff #{u} and #{v} are collinear.}
+
+\proof{
+\p{Let #{F = \mathbb{R}} or #{\mathbb{C}} and #{t \in F}. Then}
+
+##{\begin{aligned}
+0 \leq \Vert tu - v\Vert ^2 = \langle tu - v, tu - v \rangle &= t\bar{t}\langle u, u \rangle - t\langle u, v \rangle - \bar{t}\underbrace{\langle v, u \rangle}_{\overline{\langle u, v \rangle}} + \Vert v\Vert ^2 \\
+&= |t|^2\Vert u\Vert ^2 - 2\operatorname{Re}(t\langle u, v \rangle) + \Vert v\Vert ^2.
+\end{aligned}}
+
+\p{Explicitly, take #{t = \dfrac{\overline{\langle u, v \rangle}}{\Vert u\Vert ^2}} (for #{u \neq 0}). Then}
+
+##{0 \leq \frac{|\langle u, v \rangle|^2}{\Vert u\Vert ^4}\Vert u\Vert ^2 - 2\operatorname{Re}\Big( \frac{|\langle u, v \rangle|^2}{\Vert u\Vert ^2} \Big) + \Vert v\Vert ^2 \implies 0 \leq \Vert v\Vert ^2 - \frac{|\langle u, v \rangle|^2}{\Vert u\Vert ^2},}
+
+\p{so #{|\langle u, v \rangle|^2 \leq \Vert u\Vert ^2\Vert v\Vert ^2}.}
+}

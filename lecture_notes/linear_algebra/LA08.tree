@@ -1,0 +1,13 @@
+\title{Intersections of subspaces}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space and #{U, W \leq V}. Then #{U \cap W \leq V}.}
+
+\proof{
+\p{#{0 \in U}, #{0 \in W \Rightarrow 0 \in U \cap W}.}
+
+\p{Stability: let #{(\lambda_1, \lambda_2) \in F^2}, #{(v_1, v_2) \in (U \cap W)^2}. Then #{\lambda_1v_1 + \lambda_2v_2 \in U} and #{\in W}, since #{v_1, v_2} lie in both. So #{\lambda_1v_1 + \lambda_2v_2 \in U \cap W}.}
+}

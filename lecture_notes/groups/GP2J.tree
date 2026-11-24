@@ -1,0 +1,11 @@
+\title{Stabiliser}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} act on #{X} and #{x \in X}. The \em{stabiliser} of #{x} in #{G} is given by}
+
+##{\operatorname{Stab}_G(x) = \lbrace g \in G : g(x) = x\rbrace  \subseteq G,}
+
+\p{i.e. all those elements in #{G} that fix #{x}.}

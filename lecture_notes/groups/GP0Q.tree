@@ -1,0 +1,76 @@
+\title{Symmetries of a square}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}[scale=0.8]
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 1};
+    \node[above right] at (1,1) {\scriptsize 2};
+    \node[below right] at (1,0) {\scriptsize 3};
+    \node[below left] at (0,0) {\scriptsize 4};
+    \node at (0.5,-0.55) {$e$};
+  \end{scope}
+  \begin{scope}[shift={(2.2,0)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 4};
+    \node[above right] at (1,1) {\scriptsize 1};
+    \node[below right] at (1,0) {\scriptsize 2};
+    \node[below left] at (0,0) {\scriptsize 3};
+    \node at (0.5,-0.55) {$r$};
+  \end{scope}
+  \begin{scope}[shift={(4.4,0)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 3};
+    \node[above right] at (1,1) {\scriptsize 4};
+    \node[below right] at (1,0) {\scriptsize 1};
+    \node[below left] at (0,0) {\scriptsize 2};
+    \node at (0.5,-0.55) {$r^2$};
+  \end{scope}
+  \begin{scope}[shift={(6.6,0)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 2};
+    \node[above right] at (1,1) {\scriptsize 3};
+    \node[below right] at (1,0) {\scriptsize 4};
+    \node[below left] at (0,0) {\scriptsize 1};
+    \node at (0.5,-0.55) {$r^3$};
+  \end{scope}
+  \begin{scope}[shift={(0,-2)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 2};
+    \node[above right] at (1,1) {\scriptsize 1};
+    \node[below right] at (1,0) {\scriptsize 4};
+    \node[below left] at (0,0) {\scriptsize 3};
+    \node at (0.5,-0.55) {$r^2t$};
+  \end{scope}
+  \begin{scope}[shift={(2.2,-2)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 4};
+    \node[above right] at (1,1) {\scriptsize 3};
+    \node[below right] at (1,0) {\scriptsize 2};
+    \node[below left] at (0,0) {\scriptsize 1};
+    \node at (0.5,-0.55) {$t$};
+  \end{scope}
+  \begin{scope}[shift={(4.4,-2)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 3};
+    \node[above right] at (1,1) {\scriptsize 2};
+    \node[below right] at (1,0) {\scriptsize 1};
+    \node[below left] at (0,0) {\scriptsize 4};
+    \node at (0.5,-0.55) {$rt$};
+  \end{scope}
+  \begin{scope}[shift={(6.6,-2)}]
+    \draw (0,0) rectangle (1,1);
+    \node[above left] at (0,1) {\scriptsize 1};
+    \node[above right] at (1,1) {\scriptsize 4};
+    \node[below right] at (1,0) {\scriptsize 3};
+    \node[below left] at (0,0) {\scriptsize 2};
+    \node at (0.5,-0.55) {$r^3t$};
+  \end{scope}
+\draw[dotted] (0.5,-2.1) -- (0.5,-0.9);
+\draw[dashed] (2.1,-1.5) -- (3.3,-1.5);
+\draw[dotted] (4.4,-2) -- (5.4,-1);
+\draw[dotted] (6.6,-1) -- (7.6,-2);
+\end{tikzpicture}}

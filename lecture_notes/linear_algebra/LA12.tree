@@ -1,0 +1,28 @@
+\title{Dimension of a quotient}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional vector space over #{F} and #{U \leq V}. Then #{U} and #{V/U} are both finite dimensional and}
+
+##{\dim V = \dim U + \dim(V/U).}
+
+\proof{
+\p{Let #{(u_1, \ldots, u_l)} be a basis of #{U}. Complete it to a basis #{\mathcal{B} = (u_1, \ldots, u_l, w_{l+1}, \ldots, w_n)} of #{V}.}
+
+\p{\strong{Claim:} #{S = (w_{l+1} + U, \ldots, w_n + U)} is a basis of #{V/U}. We must show}
+
+\ul{
+\li{\strong{(i)} #{\langle w_{l+1} + U, \ldots, w_n + U \rangle = V/U};}
+\li{\strong{(ii)} #{S} is a linearly independent set.}
+}
+
+\p{(ii): if #{\sum_{i > l} \lambda_i(w_i + U) = 0 + U} then #{\sum_{i > l} \lambda_iw_i \in U}, so #{\sum_{i > l} \lambda_iw_i = \sum_{i \leq l} \mu_iu_i}; since #{\mathcal{B}} is a basis, all #{\lambda_i = 0}.}
+
+\p{(i): suppose #{v + U \in V/U}. Since #{v \in V}, it can be written as #{\sum \lambda_iv_i}, #{\lambda_i \in F}, #{v_i \in \mathcal{B}}. Therefore}
+
+##{v + U = \sum_{i=1}^l \lambda_iu_i + \sum_{i=l+1}^n \lambda_iw_i + U = \sum_{i=l+1}^n \lambda_iw_i + U}
+
+\p{since the #{u_i} are a basis for #{U}. Therefore #{\langle w_{l+1} + U, \ldots, w_n + U \rangle = V/U}.}
+}

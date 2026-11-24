@@ -1,0 +1,28 @@
+\title{Möbius maps preserve cross-ratios}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Given #{z_1, z_2, z_3, z_4 \in \mathbb{C}_\infty} distinct and #{w_1, w_2, w_3, w_4 \in \mathbb{C}_\infty} distinct, there exists #{f \in \mathcal{M}} s.t. #{f(z_i) = w_i} iff #{[z_1, z_2, z_3, z_4] = [w_1, w_2, w_3, w_4]}.}
+
+\p{In particular, Möbius maps preserve cross-ratios, i.e.}
+
+##{[z_1, z_2, z_3, z_4] = [f(z_1), f(z_2), f(z_3), f(z_4)].}
+
+\proof{
+\p{(#{\Rightarrow}) Suppose #{f(z_j) = w_j} and #{z_i, w_i \neq \infty} for all #{i}, and #{f(z) = \frac{az + b}{cz + d}}. Then #{cz_j + d \neq 0} for all #{j}. So}
+
+##{w_j - w_k = \frac{(ad - bc)(z_j - z_k)}{(cz_j + d)(cz_k + d)},}
+
+\p{so #{[z_1, z_2, z_3, z_4] = [w_1, w_2, w_3, w_4] = [f(z_1), f(z_2), f(z_3), f(z_4)]}. (Need to check the other cases: #{z_1 = \infty}, #{w_1 = f(\infty) = \frac{a}{c}}, etc.)}
+
+\p{(#{\Leftarrow}) Suppose #{[z_1, z_2, z_3, z_4] = [w_1, w_2, w_3, w_4]}. Let #{g \in \mathcal{M}} s.t. #{g(z_1) = 0}, #{g(z_2) = 1}, #{g(z_4) = \infty}, and #{h \in \mathcal{M}} s.t. #{h(w_1) = 0}, #{h(w_2) = 1}, #{h(w_4) = \infty}. Then}
+
+##{\begin{aligned}
+g(z_3) &= [0, 1, g(z_3), \infty] = [g(z_1), g(z_2), g(z_3), g(z_4)] = [z_1, z_2, z_3, z_4] \\
+&= [w_1, w_2, w_3, w_4] = [h(w_1), h(w_2), h(w_3), h(w_4)] = [0, 1, h(w_3), \infty] = h(w_3).
+\end{aligned}}
+
+\p{So #{h^{-1}g} is the required map.}
+}

@@ -1,0 +1,11 @@
+\title{Eigenvalue, eigenvector, eigenspace}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\lambda \in F} is an \em{eigenvalue} of #{\alpha \in \mathcal{L}(V)} if #{\exists v \in V \setminus \lbrace 0\rbrace } s.t. #{\alpha(v) = \lambda v}.}
+\li{\strong{(ii)} #{v \in V} is an \em{eigenvector} of #{\alpha \in \mathcal{L}(V)} if #{v \neq 0} and #{\exists \lambda \in F} s.t. #{\alpha(v) = \lambda v}.}
+\li{\strong{(iii)} #{V_\lambda = \lbrace v \in V : \alpha(v) = \lambda v\rbrace  \leq V} is the \em{eigenspace} associated to #{\lambda \in F}.}
+}

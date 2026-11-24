@@ -1,0 +1,7 @@
+\title{#{L^p} spaces}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{p \geq 2}, #{L^p(\mathbb{R}) = \lbrace f \colon \mathbb{R} \to \mathbb{R} : \int_{\mathbb{R}} |f(x)|^p\,dx < \infty\rbrace } #{\leadsto} reflexive spaces.}

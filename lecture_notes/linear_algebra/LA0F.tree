@@ -1,0 +1,11 @@
+\title{Span of a family of vectors}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space and #{S \subset V} a subset (a collection of vectors). We define the \em{span} of #{S},}
+
+##{\langle S \rangle = \lbrace \text{\emph{finite} linear combinations of elements of } S\rbrace  = \Big\lbrace  \sum_{s \in J} \lambda_s v_s : v_s \in S,\; J \text{ finite} \Big\rbrace .}
+
+\p{Convention: #{\langle \emptyset \rangle = \lbrace 0\rbrace }.}

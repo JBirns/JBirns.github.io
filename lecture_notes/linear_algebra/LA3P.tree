@@ -1,0 +1,7 @@
+\title{The scalar product is non-degenerate}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\phi \colon \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}}, #{(x, y) \mapsto \sum_{i=1}^n x_iy_i} is non-degenerate: with #{e_i} the #{i}th standard basis vector and #{\mathcal{B} = (e_1, \ldots, e_n)}, #{[\phi]_{\mathcal{B},\mathcal{B}} = I_n}.}

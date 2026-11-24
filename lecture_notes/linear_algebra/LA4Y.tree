@@ -1,0 +1,23 @@
+\title{Cramer’s rule}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)} be invertible and #{b \in F^n}. Then the unique solution to #{Ax = b} is given by}
+
+##{x_i = \frac{1}{\det A}\det(A_{\hat{i}b}), \quad 1 \leq i \leq n,}
+
+\p{where #{A_{\hat{i}b}} is the matrix obtained by replacing the #{i}th column of #{A} by the vector #{b}.}
+
+\proof{
+\p{#{A} invertible #{\implies \exists! x \in F^n} s.t. #{Ax = b}. Let #{x} be this solution, #{x = A^{-1}b}. Then}
+
+##{\begin{aligned}
+\det(A_{\hat{i}b}) &= \det\big( A^{(1)}, \ldots, A^{(i-1)}, b, A^{(i+1)}, \ldots, A^{(n)} \big) \\
+&= \det\Big( A^{(1)}, \ldots, A^{(i-1)}, \sum_{j=1}^n x_jA^{(j)}, A^{(i+1)}, \ldots, A^{(n)} \Big) \\
+&= x_i\det\big( A^{(1)}, \ldots, A^{(i-1)}, A^{(i)}, A^{(i+1)}, \ldots, A^{(n)} \big) = x_i\det A,
+\end{aligned}}
+
+\p{since #{\det} is linear and alternate (all the other terms in the sum are #{0}).}
+}

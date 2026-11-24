@@ -1,0 +1,38 @@
+\title{Linear Maps from #{V} to #{W} and Matrices}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{LA1V}
+
+\transclude{LA1W}
+
+\p{\strong{Matrices and linear maps}}
+
+\transclude{LA1X}
+
+\transclude{LA1Y}
+
+\transclude{LA1Z}
+
+\transclude{LA20}
+
+\p{\strong{Matrices are the representations of linear maps}}
+
+\p{Let #{V, W} be vector spaces over #{F} and #{\alpha \colon V \to W} a linear map. Let #{\mathcal{B} = (v_1, \ldots, v_n)} be a basis of #{V} and #{\mathcal{C} = (w_1, \ldots, w_m)} a basis of #{W}. For #{v \in V}, #{v = \sum_{j=1}^n \lambda_jv_j}, we write}
+
+##{[v]_{\mathcal{B}} \coloneqq \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix} \in F^n,}
+
+\p{the coordinates of #{v} in the basis #{\mathcal{B}}. Similarly, for a vector #{w \in W}, #{[w]_{\mathcal{C}}} is the vector of coordinates of #{w} in the basis #{\mathcal{C}}.}
+
+\transclude{LA21}
+
+\transclude{LA22}
+
+\transclude{LA23}
+
+\transclude{LA24}
+
+\transclude{LA25}
+
+\transclude{LA26}

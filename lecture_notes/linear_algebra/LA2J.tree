@@ -1,0 +1,12 @@
+\title{Column and row rank}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_{m,n}(F)}.}
+
+\ul{
+\li{The \em{column rank} of #{A}, #{r_c(A)}, is the dimension of the span of the column vectors of #{A} in #{F^m}: if #{A = (c_1 \mid \cdots \mid c_n)}, #{c_i \in F^m}, then #{r_c(A) = \dim_F \operatorname{span}\lbrace c_1, \ldots, c_n\rbrace }.}
+\li{Similarly, the \em{row rank} is the column rank of #{A^T}.}
+}

@@ -1,0 +1,7 @@
+\title{Bases as isomorphisms to #{F^n}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Choosing a basis of #{V} is like choosing an isomorphism from #{V} to #{F^n}.}

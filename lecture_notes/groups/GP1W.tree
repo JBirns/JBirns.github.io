@@ -1,0 +1,17 @@
+\title{Properties of direct products}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} If #{H} and #{K} are both finite, #{|H \times K| = |H||K|}.}
+\li{\p{\strong{(ii)} For all #{h_1, h_2 \in H} and #{k_1, k_2 \in K}:}
+##{\begin{aligned}
+H \times K \text{ abelian} &\iff (h_1, k_1)(h_2, k_2) = (h_2, k_2)(h_1, k_1) \\
+&\iff (h_1h_2, k_1k_2) = (h_2h_1, k_2k_1) \\
+&\iff h_1h_2 = h_2h_1 \text{ and } k_1k_2 = k_2k_1 \\
+&\iff H \text{ abelian and } K \text{ abelian}.
+\end{aligned}}}
+\li{\strong{(iii)} #{H \cong \lbrace (h, e_K) : h \in H\rbrace  \leq H \times K} and #{K \cong \lbrace (e_H, k) : k \in K\rbrace  \leq H \times K}.}
+}

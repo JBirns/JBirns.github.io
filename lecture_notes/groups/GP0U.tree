@@ -1,0 +1,24 @@
+\title{Order of a product of disjoint cycles}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\sigma, \tau} be disjoint cycles in #{S_n}. Then #{o(\sigma\tau) = \operatorname{lcm}\lbrace o(\sigma), o(\tau)\rbrace }.}
+
+\proof{
+\p{Let #{k = \operatorname{lcm}\lbrace o(\sigma), o(\tau)\rbrace }, so #{o(\sigma) \mid k} and #{o(\tau) \mid k}. Then}
+
+##{\begin{aligned}
+(\sigma\tau)^k &= \sigma\tau\sigma\tau\cdots\sigma\tau \\
+&= \sigma^k\tau^k && \text{since } \sigma, \tau \text{ commute (Lemma 6)} \\
+&= e \cdot e && \text{(1)} \\
+&= e,
+\end{aligned}}
+
+\p{Here (1) \ref{GP0N}.}
+
+\p{so #{o(\sigma\tau) \mid k} by \ref{GP0N}.}
+
+\p{Now suppose #{o(\sigma\tau) = n}, so #{(\sigma\tau)^n = e}, so #{\sigma^n\tau^n = e}. But #{\sigma, \tau} move different elements of #{X}, so #{\sigma^n = e} and #{\tau^n = e}. By \ref{GP0N}, #{o(\sigma) \mid n} and #{o(\tau) \mid n}, so #{k = \operatorname{lcm}\lbrace o(\sigma), o(\tau)\rbrace  \mid n = o(\sigma\tau)}. Hence #{o(\sigma\tau) = \operatorname{lcm}\lbrace o(\sigma), o(\tau)\rbrace }.}
+}

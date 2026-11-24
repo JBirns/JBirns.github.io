@@ -1,0 +1,11 @@
+\title{Direct sum}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F} and #{U, W \leq V}. We say #{V = U \oplus W} (“#{V} is the direct sum of #{U} and #{W}”) if any element #{v \in V} can be uniquely decomposed as}
+
+##{v = u + w, \quad u \in U,\; w \in W.}
+
+\p{Equivalently, #{V = U \oplus W \iff \forall v \in V,\; \exists! (u, w) \in U \times W} s.t. #{v = u + w}.}

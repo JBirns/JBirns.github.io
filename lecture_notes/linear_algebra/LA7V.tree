@@ -1,0 +1,11 @@
+\title{Projection}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{V = U \oplus W} (#{U} is \em{a} complement of #{W} in #{V}). We define}
+
+##{\pi \colon V \to W, \quad v = u + w \mapsto w.}
+
+\p{Then #{\pi} is linear and #{\pi^2 = \pi}; we say that #{\pi} is the \em{projection operator} onto #{W}.}

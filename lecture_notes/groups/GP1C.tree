@@ -1,0 +1,7 @@
+\title{Index and order}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{G} is finite, #{|G : H| = \frac{|G|}{|H|}}. But we can have #{|G : H|} finite with #{G} and #{H} both infinite.}

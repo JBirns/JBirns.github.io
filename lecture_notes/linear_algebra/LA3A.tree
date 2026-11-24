@@ -1,0 +1,25 @@
+\title{The double dual}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{V} is a finite dimensional vector space over #{F}, then}
+
+##{\hat{\; } \colon V \to V^{**}, \quad v \mapsto \hat{v}}
+
+\p{is an isomorphism.}
+
+\proof{
+\p{#{V} is finite dimensional. Given #{v \in V}, #{\hat{v} \in V^{**} = \mathcal{L}(V^*, F)}.}
+
+\ul{
+\li{\p{#{\hat{\; }} is linear: for #{v_1, v_2 \in V}, #{\lambda_1, \lambda_2 \in F}, #{\varepsilon \in V^*},}
+##{\widehat{\lambda_1v_1 + \lambda_2v_2}(\varepsilon) = \varepsilon(\lambda_1v_1 + \lambda_2v_2) = \lambda_1\varepsilon(v_1) + \lambda_2\varepsilon(v_2) = \lambda_1\hat{v}_1(\varepsilon) + \lambda_2\hat{v}_2(\varepsilon),}
+\p{so #{\widehat{\lambda_1v_1 + \lambda_2v_2} = \lambda_1\hat{v}_1 + \lambda_2\hat{v}_2}.}}
+\li{#{\hat{\; }} is injective: indeed, let #{e \in V \setminus \lbrace 0\rbrace }. Extend to a basis #{(e, e_2, \ldots, e_n)} of #{V} and let #{(\varepsilon, \varepsilon_2, \ldots, \varepsilon_n)} be the dual basis of #{V^*}. Then #{\hat{e}(\varepsilon) = \varepsilon(e) = 1} by definition, so #{\hat{e} \neq 0}. Hence #{N(\hat{\; }) = \lbrace 0\rbrace }, and #{\hat{\; }} is injective.}
+\li{#{\hat{\; }} is an isomorphism: we can compare dimensions, #{\dim V = \dim V^* = \dim (V^*)^* = \dim V^{**}} as shown previously (\ref{LA30}).}
+}
+
+\p{As a conclusion, #{\hat{\; } \colon V \to V^{**}} is injective and #{\dim V = \dim V^{**}}, so #{\hat{\; }} is surjective, so #{\hat{\; }} is an isomorphism (\ref{LA1S}).}
+}

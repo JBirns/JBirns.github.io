@@ -1,0 +1,11 @@
+\title{Degenerate and non-degenerate bilinear forms}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\operatorname{Ker}\phi_L} is the “left kernel of #{\phi}” and #{\operatorname{Ker}\phi_R} is the “right kernel of #{\phi}”. We say that #{\phi} is \em{non-degenerate} if}
+
+##{\operatorname{Ker}\phi_L = \lbrace 0\rbrace  \text{ and } \operatorname{Ker}\phi_R = \lbrace 0\rbrace .}
+
+\p{Otherwise, we say that #{\phi} is \em{degenerate}.}

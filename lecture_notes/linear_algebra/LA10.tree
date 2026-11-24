@@ -1,0 +1,32 @@
+\title{Dimension of a sum of subspaces}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, W \leq V}. If #{U} and #{W} are finite dimensional, then so is #{U + W}, and}
+
+##{\dim(U + W) = \dim U + \dim W - \dim(U \cap W).}
+
+\proof{
+\p{Pick #{(v_1, \ldots, v_l)} a basis of #{U \cap W}. Extend it to bases}
+
+##{(v_1, \ldots, v_l, u_1, \ldots, u_m) \text{ of } U, \qquad (v_1, \ldots, v_l, w_1, \ldots, w_n) \text{ of } W.}
+
+\p{\strong{Claim:} #{(v_1, \ldots, v_l, u_1, \ldots, u_m, w_1, \ldots, w_n)} is a basis of #{U + W}.}
+
+\p{We need to show that it is a generating family of #{U + W} (exercise), and that it is a free family. Suppose}
+
+##{\underbrace{\sum_{i=1}^l \alpha_iv_i + \sum_{i=1}^m \beta_iu_i}_{\in U} + \underbrace{\sum_{i=1}^n \gamma_iw_i}_{\in W} = 0.
+ \qquad (*)}
+
+\p{Then #{\sum_{i=1}^n \gamma_iw_i \in U \cap W}, so #{\sum_{i=1}^l \delta_iv_i = \sum_{i=1}^n \gamma_iw_i} for some #{\delta_i}, since #{(v_1, \ldots, v_l)} is a basis of #{U \cap W}. Substituting into (#{*}),}
+
+##{\sum_{i=1}^l (\alpha_i + \delta_i)v_i + \sum_{i=1}^m \beta_iu_i = 0,}
+
+\p{so #{\beta_i = 0} and #{\alpha_i = -\delta_i}, since #{(v_1, \ldots, v_l, u_1, \ldots, u_m)} is a basis of #{U}. Then by (#{*}),}
+
+##{\sum_{i=1}^l \alpha_iv_i + \sum_{i=1}^n \gamma_iw_i = 0,}
+
+\p{so #{\alpha_i = \gamma_i = 0} since #{(v_1, \ldots, v_l, w_1, \ldots, w_n)} is a basis of #{W}. Counting, #{\dim(U + W) = l + m + n = \dim U + \dim W - \dim(U \cap W)}.}
+}

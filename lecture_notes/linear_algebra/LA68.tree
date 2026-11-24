@@ -1,0 +1,13 @@
+\title{Change of basis for bilinear forms on #{V}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\phi \colon V \times V \to F} be bilinear, #{\mathcal{B}, \mathcal{B}'} two bases of #{V} and #{P = [\mathrm{Id}]_{\mathcal{B}',\mathcal{B}}}. Then}
+
+##{[\phi]_{\mathcal{B}'} = P^T[\phi]_{\mathcal{B}}P.}
+
+\proof{
+\p{Special case of the general formula (\ref{LA3S}).}
+}

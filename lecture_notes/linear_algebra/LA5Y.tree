@@ -1,0 +1,45 @@
+\title{Jordan Normal Form}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{In this section, #{F = \mathbb{C}}.}
+
+\transclude{LA5Z}
+
+\transclude{LA60}
+
+\transclude{LA61}
+
+\transclude{LA62}
+
+\p{\strong{A useful observation, which explains why the JNF is unique}}
+
+\p{#{\to} We can directly compute the quantities #{a_\lambda}, #{g_\lambda}, #{c_\lambda} on the JNF. Indeed, let #{m \geq 2} and #{J_m(\lambda) \in M_m(\mathbb{C})} as above. Then #{J_m - \lambda\mathrm{Id}} has #{1}s on the superdiagonal and #{0} elsewhere, #{(J_m - \lambda\mathrm{Id})^2} has #{1}s on the second superdiagonal and #{0} elsewhere, and by induction we can show}
+
+##{(J_m - \lambda\mathrm{Id})^k = \begin{cases} \begin{pmatrix} 0 & I_{m-k} \\ 0 & 0 \end{pmatrix} & k < m, \\ 0 & k = m. \end{cases}}
+
+\p{So we say that #{J_m - \lambda\mathrm{Id}} is \em{nilpotent} of order #{m} (#{U^m = 0} and #{U^{m-1} \neq 0}). Hence:}
+
+\ul{
+\li{#{a_\lambda} is the sum of the sizes of the blocks with eval #{\lambda} (compute the characteristic polynomial in JNF) #{=} the number of #{\lambda}s on the diagonal;}
+\li{#{g_\lambda = \dim\operatorname{Ker}(A - \lambda\mathrm{Id})} is the number of blocks with eval #{\lambda};}
+\li{#{c_\lambda}: the block #{(\lambda)} is killed by #{t - \lambda}, and #{J_m(\lambda)} by #{(t - \lambda)^m}, since #{J_m - \lambda\mathrm{Id}} is nilpotent of order #{m}. So #{c_\lambda} is the size of the largest block with eval #{\lambda}.}
+}
+
+\transclude{LA63}
+
+\p{\strong{Exercise.} #{A = \begin{pmatrix} 3 & -2 & 0 \\ 1 & 0 & 0 \\ 1 & 0 & 1 \end{pmatrix}}: find a basis in which #{A} is in JNF.}
+
+\transclude{LA64}
+
+\transclude{LA65}
+
+\p{So #{V = \bigoplus_{i=1}^k V_{\lambda_i}} with #{V_{\lambda_i} = \operatorname{Ker}(\alpha - \lambda_i\mathrm{Id})^{c_i}}, and by definition #{(\alpha - \lambda_i\mathrm{Id})|_{V_{\lambda_i}}} is nilpotent: #{(\alpha - \lambda_i\mathrm{Id})^{c_i}|_{V_{\lambda_i}} = 0}. #{\implies} All I need to do is to find the JNF of nilpotent endomorphisms:}
+
+\ul{
+\li{if #{\alpha \in \mathcal{L}(V)}, #{\dim_{\mathbb{C}} V = n}, with #{\alpha^k = 0} and #{\alpha^{k-1} \neq 0}, then the JNF has blocks #{J_m(0)} #{\leadsto} by induction on dimension.}
+\li{#{\alpha^k = 0}, #{\alpha^{k-1} \neq 0 \implies \exists x \in V} with #{\alpha^{k-1}(x) \neq 0}, and then #{(x, \alpha(x), \ldots, \alpha^{k-1}(x))} is free.}
+}
+
+\transclude{LA66}

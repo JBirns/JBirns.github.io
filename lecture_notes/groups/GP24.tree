@@ -1,0 +1,199 @@
+\title{Group Actions}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{It is often easier to understand a group if it’s doing something: permuting elements, rotating a square, etc.}
+
+\transclude{GP25}
+
+\transclude{GP26}
+
+\transclude{GP27}
+
+\transclude{GP28}
+
+\transclude{GP29}
+
+\transclude{GP2A}
+
+\transclude{GP2B}
+
+\transclude{GP2C}
+
+\p{\strong{Useful note.} If #{\ker\Phi = \lbrace e\rbrace } then #{G} is isomorphic to a subgroup of #{\mathrm{Sym}(X)}; we write #{G \lesssim \mathrm{Sym}(X)}. So if #{|G|} does not divide #{|\mathrm{Sym}(X)|} then #{\ker\Phi \neq \lbrace e\rbrace }.}
+
+\transclude{GP2D}
+
+\transclude{GP2E}
+
+\transclude{GP2F}
+
+\transclude{GP2G}
+
+\p{So the left regular action is a transitive action.}
+
+\transclude{GP2H}
+
+\transclude{GP2I}
+
+\transclude{GP2J}
+
+\transclude{GP2K}
+
+\transclude{GP2L}
+
+\transclude{GP2M}
+
+\transclude{GP2N}
+
+\transclude{GP2O}
+
+\p{\strong{Application to symmetry groups of regular solids}}
+
+\p{Let #{S} be a regular solid and #{V} its vertices. The symmetries of #{S} are the isometries (distance preserving maps) of #{\mathbb{R}^2} or #{\mathbb{R}^3} that map #{S} to itself.}
+
+\p{\strong{Tetrahedron} (self-dual).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}[scale=1.2]
+\coordinate (A) at (0,1.3); \coordinate (B) at (1,0.3); \coordinate (C) at (0.2,-0.3); \coordinate (D) at (-0.9,0.1);
+\draw (A) -- (B) -- (C) -- (D) -- cycle; \draw (A) -- (C); \draw[dashed] (B) -- (D);
+\node[above] at (A) {\small 1}; \node[right] at (B) {\small 2}; \node[below] at (C) {\small 3}; \node[left] at (D) {\small 4};
+\node at (-1.8,0.5) {$T =$};
+\end{tikzpicture}}
+
+\p{The faces are #{4} equilateral triangles. Let #{G} be the group of symmetries of #{T} and #{X = \lbrace \text{vertices of } T\rbrace  = \lbrace 1, 2, 3, 4\rbrace }. Then there is a homomorphism #{\Phi \colon G \to \mathrm{Sym}(X) \cong S_4} (\ref{GP29}). Note #{\ker\Phi = \lbrace e\rbrace }, since if all vertices are fixed then #{T} is fixed.}
+
+\p{Consider #{G^+ \leq G}, the subgroup of rotations.}
+
+\ul{
+\li{Rotation by #{\frac{2\pi}{3}} about the axis through vertex #{1} and the centre of the opposite face: the #{3}-cycle #{(2\,3\,4)}, and by #{\frac{4\pi}{3}}: #{(2\,4\,3)}. There are #{4} such axes, giving #{8} rotations of order #{3} (the #{3}-cycles in #{S_4}).}
+\li{Rotation by #{\pi} about the axis through the midpoints of opposite edges: the double transposition #{(1\,4)(2\,3)}. There are #{3} such axes.}
+\li{The identity.}
+}
+
+\p{So #{G^+ \cong A_4}.}
+
+\p{Now consider #{G} (all symmetries). Clearly #{\operatorname{Orb}_G(1) = \lbrace 1, 2, 3, 4\rbrace  = \operatorname{Orb}_{G^+}(1)}. Consider #{\operatorname{Stab}_G(1)}. Note if #{3} vertices are fixed then #{T} is fixed. Suppose vertices #{1} and #{2} are fixed: then we have the reflection in the plane through #{1}, #{2} and the midpoint of edge #{34}, giving the transposition #{(3\,4) = \tau} (note there are #{6} such). If just #{1} is fixed we have the order #{3} rotation from before, #{= \sigma}. This is everything, so}
+
+##{\operatorname{Stab}_G(1) = \langle \sigma, \tau \rangle \cong D_6,}
+
+\p{so #{|G| = |\operatorname{Orb}_G(1)|\,|\operatorname{Stab}_G(1)| = 4 \times 6 = 24} by the Orbit–Stabiliser Theorem, so #{G \cong S_4}.}
+
+\p{Note #{\operatorname{Stab}_{G^+}(1) = \langle \sigma \rangle}. Also #{(1\,2\,3\,4) = (1\,2)(2\,3\,4)}.}
+
+\p{\strong{Cube} (dual to the octahedron).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}[scale=1.1]
+\coordinate (a) at (0,0); \coordinate (b) at (1.5,0); \coordinate (c) at (1.5,1.5); \coordinate (d) at (0,1.5);
+\coordinate (e) at (0.6,0.5); \coordinate (f) at (2.1,0.5); \coordinate (g) at (2.1,2); \coordinate (h) at (0.6,2);
+\draw (a) -- (b) -- (c) -- (d) -- cycle; \draw (b) -- (f) -- (g) -- (c); \draw (d) -- (h) -- (g);
+\draw[dashed] (a) -- (e) -- (f); \draw[dashed] (e) -- (h);
+\draw[dotted] (d) -- (f); \node[right] at (f) {\small $D_1$};
+\node[left] at (d) {\small 1}; \node[above] at (h) {\small 2}; \node[above right] at (g) {\small 3}; \node[above left] at (c) {\small 4};
+\node[right] at (2.1,0.3) {\small $1'$}; \node[below] at (a) {\small $3'$}; \node[below] at (b) {\small $2'$}; \node[left] at (e) {\small $4'$};
+\node at (-1,0.8) {$C =$};
+\end{tikzpicture}}
+
+\p{Let #{G^+} be the group of rotations of #{C}. Then #{G^+} acts on the set of diagonals #{X = \lbrace D_1, D_2, D_3, D_4\rbrace }. If a rotation #{\sigma} fixes all diagonals, then #{\sigma = \mathrm{id}}. So we have an injective homomorphism #{\Phi \colon G^+ \to \mathrm{Sym}(X) \cong S_4}. Rotations:}
+
+\ul{
+\li{the identity;}
+\li{#{\sigma}, rotation by #{\pi /2} about an axis through the centres of opposite faces, corresponds to #{(1\,2\,3\,4)} in the action on diagonals. There are #{3} such axes, giving #{6} elements of order #{4} and #{3} elements of order #{2};}
+\li{#{\rho}, rotation by #{2\pi /3} about a diagonal #{D_1}; #{o(\rho) = 3}, corresponding to #{(2\,3\,4)}. There are #{4} such axes, giving #{8} elements of order #{3};}
+\li{#{\tau}, rotation by #{\pi} about an axis through the midpoints of opposite edges; #{o(\tau) = 2}, corresponding to #{(1\,3)}. There are #{6} such axes.}
+}
+
+\p{I.e. #{G^+ \cong S_4}.}
+
+\p{Note #{\operatorname{Orb}_{G^+}(D_1) = \lbrace D_1, D_2, D_3, D_4\rbrace } and #{\operatorname{Stab}_{G^+}(D_1) = \langle \rho, \tau \rangle}. Or consider #{G^+} acting on vertex #{1}: #{|\operatorname{Orb}_{G^+}(1)| = 8}, #{|\operatorname{Stab}_{G^+}(1)| = |\langle \rho \rangle| = 3}.}
+
+\p{Now consider the full symmetry group of #{C}; call it #{G}. Consider the action on the faces #{F_1, \ldots, F_6}. This yields an injective (faithful) homomorphism #{\Phi \colon G \to \mathrm{Sym}\lbrace F_i\rbrace  \cong S_6}. #{|\operatorname{Orb}(F_1)| = 6} and #{\operatorname{Stab}(F_1) \cong D_8}, so #{|G| = 6 \times 8 = 48}.}
+
+\p{So the action on diagonals is not faithful: there exists #{g \in G} with #{g(D_i) = D_i}, #{1 \leq i \leq 4}, but #{g \neq \mathrm{id}}. Label the vertices of #{C} by #{\lbrace (\pm 1, \pm 1, \pm 1)\rbrace }; then #{g \colon (x, y, z) \mapsto (-x, -y, -z)}. If we label the faces of the cube as a die (#{1} opposite #{6}, #{2} opposite #{5}, #{3} opposite #{4}), then #{g = (1\,6)(2\,5)(3\,4)}. Then #{G \cong G^+ \times \langle g \rangle}, since}
+
+\ul{
+\li{#{G^+ \trianglelefteq G} (index #{2});}
+\li{#{\langle g \rangle \trianglelefteq G}, as #{g} commutes with all rotations;}
+\li{#{G^+ \cap \langle g \rangle = \lbrace e\rbrace };}
+\li{#{|G^+\langle g \rangle| = 48 = |G|}.}
+}
+
+\p{\strong{Dodecahedron} #{D} (dual to the icosahedron): #{12} regular pentagonal faces, #{30} edges, #{20} vertices.}
+
+\p{Let #{G^+} be the group of rotations of #{D} and #{F} a face of #{D}. Then #{|\operatorname{Orb}_{G^+}(F)| = 12} and #{|\operatorname{Stab}_{G^+}(F)| = 5} (stick an axis through the centre of the face), so #{|G^+| = 5 \times 12 = 60} by the Orbit–Stabiliser Theorem.}
+
+\p{There are five cubes embedded in #{D}: each face of a cube is a diagonal of a pentagonal face; #{15} pairs of (opposite) edges, #{3} pairs per cube, gives #{5} cubes. #{G^+} acts faithfully on the cubes, so #{\Phi \colon G^+ \to S_5} is injective, and #{|G^+| = 60}, so (by some work) #{G^+ \cong A_5}.}
+
+\p{We can find the elements of #{A_5}:}
+
+\ul{
+\li{rotations through opposite faces: #{5}-cycles (#{6} axes #{\times} #{4} elements per axis gives #{24} #{5}-cycles);}
+\li{rotations through opposite vertices: #{3}-cycles;}
+\li{rotations through opposite edges: double transpositions (#{15} such).}
+}
+
+\p{\strong{Another application of the Orbit–Stabiliser Theorem}}
+
+\transclude{GP2P}
+
+\p{\strong{Conjugacy action}}
+
+\p{#{G \times G \to G}, #{(g, h) \mapsto ghg^{-1}}. Orbits are called \em{conjugacy classes},}
+
+##{\operatorname{ccl}_G(h) = \lbrace ghg^{-1} : g \in G\rbrace}
+
+\p{(a set, and not necessarily a subgroup). Stabilisers are called \em{centralisers},}
+
+##{C_G(h) = \lbrace g \in G : ghg^{-1} = h\rbrace}
+
+\p{(a subgroup).}
+
+\transclude{GP2Q}
+
+\transclude{GP2R}
+
+\transclude{GP2S}
+
+\transclude{GP2T}
+
+\transclude{GP2U}
+
+\p{\strong{Conjugation in #{S_n}}}
+
+\transclude{GP2V}
+
+\p{Note #{n = n_1 + n_2 + \cdots + n_k}. E.g. #{(1\,2\,3\,4)(5\,6\,7) = (1\,2\,3\,4)(5\,6\,7)(8) \in S_8} has cycle type #{(4, 3, 1)}, and #{e \in S_5} has cycle type #{(1, 1, 1, 1, 1)}.}
+
+\transclude{GP2W}
+
+\transclude{GP2X}
+
+\transclude{GP2Y}
+
+\p{However, in #{A_n} conjugation is less clear. Certainly}
+
+##{\operatorname{ccl}_{A_n}(x) = \lbrace gxg^{-1} : g \in A_n\rbrace  \subseteq \lbrace gxg^{-1} : g \in S_n\rbrace  = \operatorname{ccl}_{S_n}(x)}
+
+\p{since #{A_n \leq S_n}. So if two elements are conjugate in #{A_n}, they have the same cycle type. But having the same cycle type in #{A_n} does not guarantee being conjugate.}
+
+\transclude{GP2Z}
+
+\p{\strong{Key point.} Take #{x \in A_n}.}
+
+\ul{
+\li{If #{C_{A_n}(x) = C_{S_n}(x)} then #{|\operatorname{ccl}_{A_n}(x)| = \frac{1}{2}|\operatorname{ccl}_{S_n}(x)|}.}
+\li{If #{C_{A_n}(x) \lneq C_{S_n}(x)}, then #{C_{S_n}(x)} contains an odd permutation and #{|C_{A_n}(x)| = |C_{S_n}(x) \cap A_n| = \frac{|C_{S_n}(x)|}{2}} (since #{1} odd element #{\Rightarrow \frac{1}{2}} odd, Sheet 2, Q4), so #{|\operatorname{ccl}_{A_n}(x)| = |\operatorname{ccl}_{S_n}(x)|}.}
+}
+
+\transclude{GP30}
+
+\transclude{GP31}
+
+\transclude{GP32}
+
+\p{Recall a group #{G} is simple if it has no nontrivial proper normal subgroups, i.e. if its only normal subgroups are #{\lbrace e\rbrace } and #{G}.}
+
+\transclude{GP33}
+
+\transclude{GP34}

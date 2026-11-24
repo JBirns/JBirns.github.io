@@ -1,0 +1,20 @@
+\title{Subspace}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F}. A subset #{U} of #{V} is a \em{vector subspace} of #{V} (notation #{U \leq V}) if:}
+
+\ul{
+\li{#{0 \in U};}
+\li{for all #{(u_1, u_2) \in U \times U}, #{u_1 + u_2 \in U};}
+\li{for all #{(\lambda, u) \in F \times U}, #{\lambda u \in U}.}
+}
+
+\p{The last two conditions are equivalent to}
+
+##{\forall (\lambda_1, \lambda_2) \in F \times F,\; \forall (u_1, u_2) \in U \times U, \quad \lambda_1u_1 + \lambda_2u_2 \in U.
+ \qquad (*)}
+
+\p{(#{*}) means that #{U} is \em{stable} under scalar multiplication and vector addition.}

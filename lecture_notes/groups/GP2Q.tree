@@ -1,0 +1,15 @@
+\title{Conjugacy classes and centralisers}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} By \ref{GP2H} the conjugacy classes partition #{G}.}
+\li{\strong{(ii)} By the Orbit–Stabiliser Theorem, for #{h \in G}, #{|G| = |C_G(h)|\,|\operatorname{ccl}_G(h)|}. In particular #{|\operatorname{ccl}_G(h)|} divides #{|G|}.}
+\li{\strong{(iii)} If #{k \in \operatorname{ccl}_G(h)} then #{o(k) = o(h)}, since #{k = ghg^{-1}} for some #{g \in G}, so #{k^{o(h)} = (ghg^{-1})^{o(h)} = gh^{o(h)}g^{-1} = e}, so #{o(k) \mid o(h)}. Similarly #{h = g^{-1}kg \Rightarrow o(h) \mid o(k)}.}
+\li{\p{\strong{(iv)} Recall #{Z(G) = \lbrace g \in G : gh = hg\; \forall h \in G\rbrace  \trianglelefteq G}, the “centre of #{G}”, and #{Z(G) = \bigcap_{h \in G} C_G(h)}. Note #{z \in Z(G) \iff |\operatorname{ccl}_G(z)| = 1}: if #{z \in Z(G)} then #{\operatorname{ccl}_G(z) = \lbrace gzg^{-1} : g \in G\rbrace  = \lbrace z\rbrace }, as #{gzg^{-1} = gg^{-1}z = z}.}
+\p{If #{|\operatorname{ccl}_G(z)| = 1}, note #{z = eze^{-1} \in \operatorname{ccl}_G(z)}, so #{gzg^{-1} = z} for all #{g \in G}.}}
+\li{\strong{(v)} Let #{H \leq G}. Then #{H} is normal iff it is a union of conjugacy classes (Sheet 3, Q3).}
+\li{\strong{(vi)} #{G} is abelian iff #{G = Z(G)}.}
+}

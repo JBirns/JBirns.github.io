@@ -1,0 +1,19 @@
+\title{Geometric multiplicity is at most algebraic}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\lambda} is an eval of #{\alpha \in \mathcal{L}(V)}, then #{1 \leq g_\lambda \leq a_\lambda}.}
+
+\proof{
+\p{#{g_\lambda = \dim\operatorname{Ker}(\alpha - \lambda I) \geq 1} since #{\lambda} is an eval. Let us show that #{g_\lambda \leq a_\lambda}. Indeed, let #{(v_1, \ldots, v_{g_\lambda})} be a basis of #{V_\lambda = \operatorname{Ker}(\alpha - \lambda I)}, and complete it to a basis #{\mathcal{B} = (v_1, \ldots, v_{g_\lambda}, v_{g_\lambda+1}, \ldots, v_n)} of #{V}. Then}
+
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} \lambda\mathrm{Id}_{g_\lambda} & * \\ 0 & A_1 \end{pmatrix},}
+
+\p{so}
+
+##{\det(\alpha - tI) = \det\begin{pmatrix} (\lambda - t)\mathrm{Id}_{g_\lambda} & * \\ 0 & A_1 - tI \end{pmatrix} = (\lambda - t)^{g_\lambda}\chi_{A_1}(t),}
+
+\p{so #{g_\lambda \leq a_\lambda}.}
+}

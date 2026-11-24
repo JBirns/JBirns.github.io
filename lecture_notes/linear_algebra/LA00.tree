@@ -1,0 +1,37 @@
+\title{Linear Algebra}
+\taxon{Lecture notes}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{These notes are based on lectures given by Dr [Pierre Raphael](https://www.maths.cam.ac.uk/person/pr463) and are not endorsed by him. This course is self-contained including the [examples sheets](https://www.dpmms.cam.ac.uk/study/IB/LinearAlgebra/2022-2023/).}
+
+\ol{
+    \li{[[LA01]]}
+    \li{[[LA0B]]}
+    \li{[[LA0E]]}
+    \li{[[LA0X]]}
+    \li{[[LA19]]}
+    \li{[[LA1U]]}
+    \li{[[LA27]]}
+    \li{[[LA2N]]}
+    \li{[[LA2U]]}
+    \li{[[LA36]]}
+    \li{[[LA3E]]}
+    \li{[[LA3V]]}
+    \li{[[LA4C]]}
+    \li{[[LA4P]]}
+    \li{[[LA4Z]]}
+    \li{[[LA5F]]}
+    \li{[[LA5O]]}
+    \li{[[LA5Y]]}
+    \li{[[LA67]]}
+    \li{[[LA6K]]}
+    \li{[[LA70]]}
+    \li{[[LA7A]]}
+    \li{[[LA7E]]}
+    \li{[[LA7Q]]}
+    \li{[[LA81]]}
+    \li{[[LA87]]}
+    \li{[[LA8F]]}
+}

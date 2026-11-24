@@ -1,0 +1,12 @@
+\title{Diagonalisable, triangulable}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{\alpha \in \mathcal{L}(V)} is \em{diagonalisable} if there exists a basis #{\mathcal{B}} of #{V} s.t. #{[\alpha]_{\mathcal{B}}} is diagonal:}
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}.}}
+\li{\p{\strong{(ii)} #{\alpha \in \mathcal{L}(V)} is \em{triangulable} if there exists a basis #{\mathcal{B}} of #{V} s.t. #{[\alpha]_{\mathcal{B}}} is triangular:}
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} \lambda_1 & & * \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}.}}
+}

@@ -1,0 +1,7 @@
+\title{Normal subgroup}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A subgroup #{K} of #{G} is called \em{normal} if #{gK = Kg} for all #{g \in G}. We write #{K \trianglelefteq G}.}

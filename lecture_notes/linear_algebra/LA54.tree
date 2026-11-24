@@ -1,0 +1,16 @@
+\title{Eigenvalues and the determinant}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \in \mathcal{L}(V)} and #{\lambda \in F}. Then #{\lambda} is an eigenvalue #{\iff \det(\alpha - \lambda I) = 0}.}
+
+\proof{
+##{\begin{aligned}
+\lambda \text{ eval} &\iff \exists v \in V \setminus \lbrace 0\rbrace  \text{ s.t.\; } \alpha(v) = \lambda v \iff \exists v \in V \setminus \lbrace 0\rbrace  \text{ s.t.\; } (\alpha - \lambda I)(v) = 0 \\
+&\iff \operatorname{Ker}(\alpha - \lambda I) \neq \lbrace 0\rbrace  \iff \alpha - \lambda I \text{ not injective} \\
+&\iff \alpha - \lambda I \text{ not surjective } (\text{since } \alpha \colon V \to V \text{ and } \dim V < \infty) \\
+&\iff \alpha - \lambda I \text{ not bijective} \iff \det(\alpha - \lambda I) = 0.
+\end{aligned}}
+}

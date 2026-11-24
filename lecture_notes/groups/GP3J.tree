@@ -1,0 +1,11 @@
+\title{Möbius transformation}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A \em{Möbius transformation} (or \em{map}) is a function of a complex variable #{z} that can be written in the form}
+
+##{f(z) = \frac{az + b}{cz + d}}
+
+\p{for some #{a, b, c, d \in \mathbb{C}} with #{ad - bc \neq 0}.}

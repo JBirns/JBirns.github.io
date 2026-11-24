@@ -1,0 +1,10 @@
+\title{Orthogonal and unitary matrices}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{A \in M_n(\mathbb{R})} is \em{orthogonal} if #{A^TA = \mathrm{Id}} (#{\iff A^{-1} = A^T}).}
+\li{\strong{(ii)} #{A \in M_n(\mathbb{C})} is \em{unitary} if #{A^T\bar{A} = \mathrm{Id}} (#{\iff A^{-1} = \bar{A}^T}).}
+}

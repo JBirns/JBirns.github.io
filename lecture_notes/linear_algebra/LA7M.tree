@@ -1,0 +1,11 @@
+\title{Extending to an orthonormal basis}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{V} is a finite dimensional inner product space, then any orthonormal set of vectors can be extended to an orthonormal basis of #{V}.}
+
+\proof{
+\p{Pick #{(e_1, \ldots, e_k)} orthonormal. Then they are linearly independent, so we can extend to #{(e_1, \ldots, e_k, v_{k+1}, \ldots, v_n)}, a basis of #{V}. Apply Gram–Schmidt to this set, noticing there is no need to modify the first #{k} vectors. This gives #{(e_1, \ldots, e_k, e_{k+1}, \ldots, e_n)}, an orthonormal basis of #{V}.}
+}

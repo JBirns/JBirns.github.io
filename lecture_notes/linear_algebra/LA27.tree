@@ -1,0 +1,46 @@
+\title{Change of Basis and Equivalent Matrices}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall: for #{\alpha \colon V \to W} with #{\mathcal{B} = (v_1, \ldots, v_n)} a basis of #{V} and #{\mathcal{C} = (w_1, \ldots, w_m)} a basis of #{W},}
+
+##{[\alpha(v)]_{\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}} \cdot [v]_{\mathcal{B}},}
+
+\p{where the #{j}th column of #{[\alpha]_{\mathcal{B},\mathcal{C}}} holds the coordinates of #{\alpha(v_j)} in #{w_1, \ldots, w_m}.}
+
+\transclude{LA28}
+
+\p{Recall also that for #{\beta \colon U \to V}, #{\alpha \colon V \to W} with bases #{\mathcal{A}}, #{\mathcal{B}}, #{\mathcal{C}} of #{U}, #{V}, #{W}, we have #{[\alpha \circ \beta]_{\mathcal{A},\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}}[\beta]_{\mathcal{A},\mathcal{B}}} (\ref{LA24}).}
+
+\p{What if we want to change basis? Let #{\alpha \colon V \to W}, with bases #{\mathcal{B} = \lbrace v_1, \ldots, v_n\rbrace }, #{\mathcal{B}' = \lbrace v'_1, \ldots, v'_n\rbrace } of #{V} and #{\mathcal{C} = \lbrace w_1, \ldots, w_m\rbrace }, #{\mathcal{C}' = \lbrace w'_1, \ldots, w'_m\rbrace } of #{W}. \strong{Aim:} relate #{[\alpha]_{\mathcal{B},\mathcal{C}}} and #{[\alpha]_{\mathcal{B}',\mathcal{C}'}}.}
+
+\transclude{LA29}
+
+\transclude{LA2A}
+
+\transclude{LA2B}
+
+\transclude{LA2C}
+
+\p{We changed basis #{\mathcal{B}} to #{\mathcal{B}'} in #{V}. We can also change basis #{\mathcal{C}} to #{\mathcal{C}'} in #{W}: set #{P = [I]_{\mathcal{B}',\mathcal{B}}} (#{n \times n}, invertible) and #{Q = [I]_{\mathcal{C}',\mathcal{C}}} (#{m \times m}, invertible).}
+
+\transclude{LA2D}
+
+\transclude{LA2E}
+
+\transclude{LA2F}
+
+\transclude{LA2G}
+
+\transclude{LA2H}
+
+\transclude{LA2I}
+
+\transclude{LA2J}
+
+\transclude{LA2K}
+
+\transclude{LA2L}
+
+\transclude{LA2M}

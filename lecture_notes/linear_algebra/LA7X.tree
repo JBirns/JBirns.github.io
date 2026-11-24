@@ -1,0 +1,50 @@
+\title{Orthogonal projection}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an inner product space and #{W \leq V}, #{W} finite dimensional. Let #{(e_1, \ldots, e_k)} be an orthonormal basis of #{W} (given by Gram–Schmidt). Then:}
+
+\ul{
+\li{\strong{(i)} #{\pi(v) = \sum_{i=1}^k \langle v, e_i \rangle e_i} for all #{v \in V}, and #{V = W \overset{\perp}{\oplus} W^\perp};}
+\li{\strong{(ii)} for all #{v \in V} and all #{w \in W}, #{\Vert v - \pi(v)\Vert  \leq \Vert v - w\Vert }, with equality iff #{w = \pi(v)} (that is, #{\pi(v)} is the point in #{W} closest to #{v}).}
+}
+
+\proof{
+\p{(i) #{W = \operatorname{span}\langle e_1, \ldots, e_k \rangle}, with #{(e_i)_{1 \leq i \leq k}} orthonormal. Let us define #{\pi(v) = \sum_{i=1}^k \langle v, e_i \rangle e_i}, and observe}
+
+##{v = \underbrace{\pi(v)}_{\in W} + \underbrace{v - \pi(v)}_{\text{claim: } \in W^\perp}.}
+
+\p{Indeed,}
+
+##{v - \pi(v) \in W^\perp \iff \forall w \in W,\; \langle v - \pi(v), w \rangle = 0 \iff \forall 1 \leq j \leq k,\; \langle v - \pi(v), e_j \rangle = 0.}
+
+\p{We compute}
+
+##{\langle v - \pi(v), e_j \rangle = \Big\langle v - \sum_{i=1}^k \langle v, e_i \rangle e_i, e_j \Big\rangle = \langle v, e_j \rangle - \langle v, e_j \rangle = 0,}
+
+\p{since #{(e_i)_{1 \leq i \leq k}} is orthonormal. We have shown #{v - \pi(v) \in W^\perp}. Hence}
+
+##{v = \underbrace{\pi(v)}_{\in W} + \underbrace{(v - \pi(v))}_{\in W^\perp} \implies V = W + W^\perp,}
+
+\p{and if #{v \in W \cap W^\perp}, then #{\Vert v\Vert ^2 = \langle \underbrace{v}_{\in W}, \underbrace{v}_{\in W^\perp} \rangle = 0}, so #{v = 0} since #{\langle \cdot, \cdot \rangle} is a scalar product. So #{V = W \overset{\perp}{\oplus} W^\perp}.}
+
+\p{(ii) Pick #{v \in V}, and let #{w \in W}. Then}
+
+##{\begin{aligned}
+\Vert v - w\Vert ^2 &= \Vert \underbrace{v - \pi(v)}_{\in W^\perp} + \underbrace{\pi(v) - w}_{\in W}\Vert ^2 = \langle v - \pi(v) + \pi(v) - w, v - \pi(v) + \pi(v) - w \rangle \\
+&= \Vert v - \pi(v)\Vert ^2 + \Vert \pi(v) - w\Vert ^2 \geq \Vert v - \pi(v)\Vert ^2,
+\end{aligned}}
+
+\p{with equality iff #{w = \pi(v)}. (Basically Pythagoras for the scalar product.)}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw (0,0) -- (6,0) -- (7.5,1.8) -- (1.5,1.8) -- cycle;
+\node at (1.1,0.3) {$W$};
+\coordinate (P) at (4.2,1.0);
+\fill (P) circle (1.5pt) node[below right] {$\pi(v)$};
+\draw[->, thick] (P) -- (4.6,3.4) node[above] {$v$};
+\draw[dotted] (P) -- (4.6,3.4);
+\end{tikzpicture}}
+}

@@ -1,0 +1,13 @@
+\title{Examples of spans}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{1.} #{V = \mathbb{R}^3}, #{S = \left\lbrace  \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 3 \\ -2 \\ -4 \end{pmatrix} \right\rbrace }. Then #{\langle S \rangle = \left\lbrace  \begin{pmatrix} a \\ b \\ 2b \end{pmatrix} : (a, b) \in \mathbb{R}^2 \right\rbrace }.}
+\li{\strong{2.} #{V = \mathbb{R}^n}. Define #{e_i} to be the vector with #{1} in the #{i}th component and #{0} elsewhere. Then #{V = \langle e_1, \ldots, e_n \rangle}.}
+\li{\p{\strong{3.} #{X} any set, #{V = \mathbb{R}^X = \lbrace f \colon X \to \mathbb{R}\rbrace }. Let #{\delta_x \colon X \to \mathbb{R}}, #{y \mapsto 1} if #{x = y}, #{0} otherwise. Then}
+##{\langle (\delta_x)_{x \in X} \rangle = \lbrace f \in \mathbb{R}^X : f \text{ has finite support}\rbrace ,}
+\p{where #{\operatorname{Supp} f = \lbrace x \in X : f(x) \neq 0\rbrace }.}}
+}

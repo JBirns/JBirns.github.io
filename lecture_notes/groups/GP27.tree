@@ -1,0 +1,11 @@
+\title{Two-sided inverses and bijections}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall a permutation of a set #{X} is a bijection of #{X}. We have commented that a bijection #{f \colon X \to X} has a #{2}-sided inverse, i.e. there exists #{g \colon X \to X} such that #{f \circ g(x) = x} and #{g \circ f(x) = x} for all #{x \in X}.}
+
+\p{Conversely, if #{f \colon X \to X} is a map with a two-sided inverse, then #{f} is a bijection: #{f \circ g(x) = x} for all #{x \in X \Rightarrow f} surjective; #{g \circ f(x) = x} for all #{x \in X \Rightarrow f} injective.}
+
+\p{Note #{2}-sided is necessary: #{\phi \colon \mathbb{Z} \to \mathbb{Z}}, #{x \mapsto 2x} and #{\psi \colon \mathbb{Z} \to \mathbb{Z}}, #{2x \mapsto x}, #{2x + 1 \mapsto 0} have #{\psi\phi = \mathrm{id}}, but #{\phi} is not a bijection.}

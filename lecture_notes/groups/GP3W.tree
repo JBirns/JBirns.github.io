@@ -1,0 +1,15 @@
+\title{Concyclic points}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{z_1, z_2, z_3, z_4} lie in some circle in #{\mathbb{C}_\infty} iff #{[z_1, z_2, z_3, z_4] \in \mathbb{R}}.}
+
+\proof{
+\p{Let #{C} be the circle through #{z_1, z_2, z_4} and let #{g} be the Möbius map with #{g(z_1) = 0}, #{g(z_2) = 1}, #{g(z_4) = \infty}, so #{g \colon C \to \mathbb{R} \cup \lbrace \infty\rbrace }. Then by \ref{GP3V},}
+
+##{g(z_3) = [0, 1, g(z_3), \infty] = [g(z_1), g(z_2), g(z_3), g(z_4)] = [z_1, z_2, z_3, z_4].}
+
+\p{So #{[z_1, z_2, z_3, z_4] \in \mathbb{R} \iff g(z_3) \in \mathbb{R} \iff z_3 \in C}.}
+}

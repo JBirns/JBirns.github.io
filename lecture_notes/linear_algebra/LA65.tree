@@ -1,0 +1,7 @@
+\title{Diagonalisable case}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\alpha} is diagonalisable, #{c_j = 1}, so #{V_j} is the eigenspace associated to #{\lambda_j}.}

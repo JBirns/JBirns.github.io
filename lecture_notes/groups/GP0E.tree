@@ -1,0 +1,18 @@
+\title{A homomorphism onto the 4th roots of unity}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{G = (\lbrace 0, 1, 2, 3\rbrace , +_4)}, #{H = (\lbrace 1, e^{\pi i/2}, e^{\pi i}, e^{3\pi i/2}\rbrace , \times)} (the #{4}th roots of unity).}
+
+##{\theta \colon G \to H, \quad n \mapsto e^{n\pi i/2}.}
+
+\p{Then, since #{n + m = n +_4 m + 4k},}
+
+##{\begin{aligned}
+\theta(n +_4 m) &= e^{(n +_4 m)\pi i/2} \\
+&= e^{(n + m)\pi i/2} \\
+&= e^{n\pi i/2} \times e^{m\pi i/2} \\
+&= \theta(n) \times \theta(m).
+\end{aligned}}

@@ -1,0 +1,7 @@
+\title{Completing an eigenvector to a basis}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\alpha(v_j) = \lambda v_j} with #{v_j \neq 0}, then I can complete to a basis #{\mathcal{B} = (v_1, \ldots, v_{j-1}, v_j, \ldots, v_n)} of #{V}, and the #{j}th column of #{[\alpha]_{\mathcal{B}}} is #{\lambda e_j} (#{\lambda} in position #{j}, #{0} elsewhere).}

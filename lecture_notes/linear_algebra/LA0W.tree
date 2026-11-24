@@ -1,0 +1,39 @@
+\title{Steinitz Exchange Lemma}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional vector space over #{F}. Take}
+
+\ul{
+\li{\strong{(i)} #{(v_1, \ldots, v_m)} free;}
+\li{\strong{(ii)} #{(w_1, \ldots, w_n)} generating, i.e. #{\langle w_1, \ldots, w_n \rangle = V}.}
+}
+
+\p{Then}
+
+\ul{
+\li{\strong{(I)} #{m \leq n};}
+\li{\strong{(II)} up to reordering, #{(v_1, \ldots, v_m, w_{m+1}, \ldots, w_n)} spans #{V}.}
+}
+
+\proof{
+\p{Induction argument: suppose that we have replaced #{l} (#{\geq 0}) of the #{w_i}. Reordering if necessary,}
+
+##{\langle v_1, \ldots, v_l, w_{l+1}, \ldots, w_n \rangle = V.}
+
+\p{If #{m = l} we are done. Assume #{l < m}. Then #{v_{l+1} \in V}, so}
+
+##{v_{l+1} = \sum_{i \leq l} \alpha_iv_i + \sum_{i > l} \beta_iw_i.}
+
+\p{Since the family #{(v_1, \ldots, v_{l+1})} is free, one of the #{\beta_i} is non-zero. Up to reordering, #{\beta_{l+1} \neq 0}, so}
+
+##{w_{l+1} = \frac{1}{\beta_{l+1}}\Big[ v_{l+1} - \sum_{i \leq l} \alpha_iv_i - \sum_{i > l+1} \beta_iw_i \Big].}
+
+\p{Hence}
+
+##{V = \langle v_1, \ldots, v_l, w_{l+1}, \ldots, w_n \rangle = \langle v_1, \ldots, v_l, v_{l+1}, w_{l+2}, \ldots, w_n \rangle,}
+
+\p{so #{l \to l + 1}. We are done after #{m} steps; in particular we never run out of #{w_i}, so #{\boxed{m \leq n}}.}
+}

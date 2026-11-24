@@ -1,0 +1,11 @@
+\title{Conjugate matrices have the same determinant}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Conjugate matrices have the same determinant.}
+
+\proof{
+\p{#{\det(P^{-1}AP) = \det(P^{-1})\det A\det P = \frac{1}{\det P}\det A\det P = \det A}, since #{P} invertible #{\implies \det P \neq 0}.}
+}

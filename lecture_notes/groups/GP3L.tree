@@ -1,0 +1,24 @@
+\title{#{GL_2(\mathbb{C})/Z \cong \mathcal{M}}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{GL_2(\mathbb{C})/Z \cong \mathcal{M}}, where #{Z = \left\lbrace \begin{pmatrix} \lambda & 0 \\ 0 & \lambda \end{pmatrix} : \lambda \in \mathbb{C} \setminus \lbrace 0\rbrace \right\rbrace }.}
+
+\proof{
+\p{We construct a surjective homomorphism from #{GL_2(\mathbb{C})} onto #{\mathcal{M}} with kernel #{Z}. Let}
+
+##{\Phi \colon GL_2(\mathbb{C}) \to \mathcal{M}, \quad \begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto f(z) = \frac{az + b}{cz + d}.}
+
+\p{#{\Phi} is a homomorphism: with #{f(z) = \frac{az + b}{cz + d}}, #{g(z) = \frac{\alpha z + \beta}{\gamma z + \delta}},}
+
+##{\begin{aligned}
+\Phi\left(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\right)\Phi\left(\begin{pmatrix} \alpha & \beta \\ \gamma & \delta \end{pmatrix}\right)(z) &= f \circ g(z) = \frac{(a\alpha + b\gamma)z + (a\beta + b\delta)}{(c\alpha + d\gamma)z + (c\beta + d\delta)} \\
+&= \Phi\left(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} \alpha & \beta \\ \gamma & \delta \end{pmatrix}\right)(z)
+\end{aligned}}
+
+\p{(from the proof of \ref{GP3K}). Clearly #{\Phi} is surjective.}
+
+\p{#{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \ker\Phi} iff #{\frac{az + b}{cz + d} = z} for all #{z \in \mathbb{C}_\infty}. Let #{z = \infty \Rightarrow c = 0}; #{z = 0 \Rightarrow b = 0}; #{z = 1 \Rightarrow a = d}. So #{\ker\Phi = Z}. Finally apply the First Isomorphism Theorem.}
+}

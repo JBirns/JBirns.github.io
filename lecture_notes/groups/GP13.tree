@@ -1,0 +1,34 @@
+\title{Cosets and Lagrange}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{GP14}
+
+\transclude{GP15}
+
+\transclude{GP16}
+
+\transclude{GP17}
+
+\transclude{GP18}
+
+\transclude{GP19}
+
+\transclude{GP1A}
+
+\transclude{GP1B}
+
+\transclude{GP1C}
+
+\transclude{GP1D}
+
+\transclude{GP1E}
+
+\transclude{GP1F}
+
+\p{\strong{Euler’s totient function.} Let #{n \in \mathbb{N}}. #{\phi(n) = |\lbrace 1 \leq a \leq n : \operatorname{hcf}(a, n) = 1\rbrace |}. So #{\phi(12) = |\lbrace 1, 5, 7, 11\rbrace | = 4}.}
+
+\transclude{GP1G}
+
+\p{Fermat’s Little Theorem is a special case: #{p} prime, #{a \in \mathbb{Z}}, #{\operatorname{hcf}(a, p) = 1}. Then #{a^{p-1} \equiv 1 \pmod p}.}

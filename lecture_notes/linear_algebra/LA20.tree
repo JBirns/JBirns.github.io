@@ -1,0 +1,16 @@
+\title{Dimension of #{M_{m,n}(F)}}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\dim_F M_{m,n}(F) = m \times n}.}
+
+\proof{
+\p{We exhibit a basis using \em{elementary matrices}. For #{1 \leq i \leq m}, #{1 \leq j \leq n}, let #{E_{ij}} be the matrix with a #{1} in row #{i}, column #{j}, and #{0} elsewhere. Then #{(E_{ij})_{1 \leq i \leq m,\, 1 \leq j \leq n}} is a basis of #{M_{m,n}(F)}:}
+
+\ul{
+\li{it spans #{M_{m,n}(F)}: #{A = (a_{ij}) = \sum_{i=1}^m \sum_{j=1}^n a_{ij}E_{ij}};}
+\li{the family is free: if #{\sum_{i,j} \lambda_{ij}E_{ij} = 0} then the matrix #{(\lambda_{ij})} is zero, so every #{\lambda_{ij} = 0}.}
+}
+}

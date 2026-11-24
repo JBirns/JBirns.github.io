@@ -1,0 +1,17 @@
+\title{The determinant homomorphism}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Define #{\mathrm{Det} \colon GL_n(\mathbb{R}) \to (\mathbb{R} \setminus \lbrace 0\rbrace , \times)}, #{A \mapsto \det A}. This is a surjective group homomorphism.}
+
+\proof{
+\p{Note #{(\mathbb{R} \setminus \lbrace 0\rbrace , \times)} is a group, and #{\mathrm{Det}} is clearly a map to it. We need to check it is a group homomorphism:}
+
+##{\mathrm{Det}(AB) = \det(AB) = \det A\cdot\det B = \mathrm{Det}(A)\,\mathrm{Det}(B),}
+
+\p{where #{AB} is matrix multiplication in #{GL_n} and #{\cdot} is multiplication in #{(\mathbb{R} \setminus \lbrace 0\rbrace , \times)}.}
+
+\p{#{\mathrm{Det}} is surjective: let #{r \in (\mathbb{R} \setminus \lbrace 0\rbrace , \times)}. Then #{A = \begin{pmatrix} r & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix} \in GL_n(\mathbb{R})} has #{\det A = r}.}
+}

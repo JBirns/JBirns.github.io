@@ -1,0 +1,23 @@
+\title{Conjugacy classes in #{M_2(\mathbb{C})}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_2(\mathbb{C})} and consider the conjugation action of #{GL_2(\mathbb{C})} on #{M_2(\mathbb{C})}. Then precisely one of the following occurs:}
+
+\ul{
+\li{\strong{(i)} the orbit of #{A} contains a diagonal matrix #{\begin{pmatrix} \lambda & 0 \\ 0 & \mu \end{pmatrix}} with #{\lambda \neq \mu};}
+\li{\strong{(ii)} the orbit of #{A} is #{\left\lbrace \begin{pmatrix} \lambda & 0 \\ 0 & \lambda \end{pmatrix}\right\rbrace  = \lbrace \lambda I\rbrace } for some #{\lambda};}
+\li{\strong{(iii)} the orbit of #{A} contains a matrix #{\begin{pmatrix} \lambda & 1 \\ 0 & \lambda \end{pmatrix}} for some #{\lambda}.}
+}
+
+\proof{
+\p{See Vectors & Matrices, but essentially:}
+
+\ul{
+\li{\strong{(i)} In this case #{A} has #{2} distinct eigenvalues #{\lambda \neq \mu}; take a basis consisting of an eigenvector for #{\lambda} and an eigenvector for #{\mu}. Distinct pairs give distinct orbits.}
+\li{\strong{(ii)} #{A = \lambda I}: eigenvalues #{\lambda, \lambda}, #{2} linearly independent eigenvectors.}
+\li{\strong{(iii)} In this case #{A} has a repeated eigenvalue but just one linearly independent eigenvector.}
+}
+}

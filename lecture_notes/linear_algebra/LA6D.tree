@@ -1,0 +1,7 @@
+\title{Quadratic form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A map #{Q \colon V \to F} is a \em{quadratic form} iff there exists a bilinear form #{\phi \colon V \times V \to F} s.t. for all #{u \in V}, #{Q(u) = \phi(u, u)}.}

@@ -1,0 +1,7 @@
+\title{Polynomials of bounded degree}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Consider #{V = \mathbb{P}[x]}, the set of polynomials on #{\mathbb{R}}. Further, consider #{V_n = \mathbb{P}_n[x]}, the subspace of polynomials with degree less than or equal to #{n}. Then #{V_n} is spanned by #{\lbrace 1, x, x^2, \ldots, x^n\rbrace }, so #{V_n} is finite dimensional. Conversely, #{V} is infinite-dimensional: there is no finite set #{S} with #{\langle S \rangle = V}.}

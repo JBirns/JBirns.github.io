@@ -1,0 +1,7 @@
+\title{A scalar matrix in JNF}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{n = 3}, #{A = \begin{pmatrix} \lambda & 0 & 0 \\ 0 & \lambda & 0 \\ 0 & 0 & \lambda \end{pmatrix} = \begin{pmatrix} J_1(\lambda) & & 0 \\ & J_1(\lambda) & \\ 0 & & J_1(\lambda) \end{pmatrix}} is in JNF.}

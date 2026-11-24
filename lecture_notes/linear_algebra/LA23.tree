@@ -1,0 +1,19 @@
+\title{Matrix times coordinate vector}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For all #{v \in V},}
+
+##{[\alpha(v)]_{\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}}\,[v]_{\mathcal{B}},}
+
+\p{where the right-hand side is the product of a matrix by a vector, #{(Av)_i = \sum_{j=1}^n a_{ij}\lambda_j}.}
+
+\proof{
+\p{Let #{v \in V}, #{v = \sum_{j=1}^n \lambda_jv_j}. Then}
+
+##{\alpha(v) = \alpha\Big( \sum_{j=1}^n \lambda_jv_j \Big) = \sum_{j=1}^n \lambda_j\alpha(v_j) = \sum_{j=1}^n \lambda_j\sum_{i=1}^m a_{ij}w_i = \sum_{i=1}^m \underbrace{\Big( \sum_{j=1}^n a_{ij}\lambda_j \Big)}_{\text{coords of } \alpha(v) \text{ in } \mathcal{C}} w_i,}
+
+\p{using linearity of #{\alpha} and the definition of #{[\alpha]_{\mathcal{B},\mathcal{C}}}.}
+}

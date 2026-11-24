@@ -1,0 +1,11 @@
+\title{Characteristic polynomial}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \in \mathcal{L}(V)}. The \em{characteristic polynomial} of #{\alpha} is}
+
+##{\chi_\alpha(t) = \det(A - tI),}
+
+\p{where #{A = [\alpha]_{\mathcal{B}}}, #{\mathcal{B}} any basis of #{V}.}

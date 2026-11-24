@@ -1,0 +1,27 @@
+\title{Dimension of the annihilator}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{U^0 \leq V^*}.}
+\li{\strong{(ii)} If #{U \leq V} and #{\dim V < \infty}, then #{\dim V = \dim U + \dim U^0}.}
+}
+
+\proof{
+\p{(i) #{0 \in U^0}. If #{(\alpha, \alpha') \in U^0 \times U^0}, then for all #{u \in U}, #{(\alpha + \alpha')(u) = \alpha(u) + \alpha'(u) = 0 + 0 = 0}, and for all #{\lambda \in F}, #{(\lambda\alpha)(u) = \lambda\alpha(u) = 0}. Hence #{U^0 \leq V^*}.}
+
+\p{(ii) Let #{U \leq V}, #{\dim V = n}. Let #{(e_1, \ldots, e_k)} be a basis of #{U}, and complete it to a basis #{\mathcal{B} = (e_1, \ldots, e_k, e_{k+1}, \ldots, e_n)} of #{V}. Let #{\mathcal{B}^* = (\varepsilon_1, \ldots, \varepsilon_n)} be the dual basis of #{\mathcal{B}}.}
+
+\p{\strong{Claim:} #{U^0 = \langle \varepsilon_{k+1}, \ldots, \varepsilon_n \rangle}.}
+
+\ul{
+\li{Pick #{i > k}. Then #{\varepsilon_i(e_j) = \delta_{ij} = 0} for all #{j \in \lbrace 1, \ldots, k\rbrace }, so #{\varepsilon_i \in U^0} since #{U = \langle e_1, \ldots, e_k \rangle}. Hence #{\langle \varepsilon_{k+1}, \ldots, \varepsilon_n \rangle \leq U^0}.}
+\li{\p{Let #{\alpha \in U^0}. Since #{\alpha \in V^*} and #{(\varepsilon_1, \ldots, \varepsilon_n)} is a basis of #{V^*}, #{\alpha = \sum_{i=1}^n \alpha_i\varepsilon_i}. Now for #{i \leq k}, #{\alpha \in U^0 \implies \alpha(e_i) = 0} for all #{1 \leq i \leq k} (since #{U = \langle e_1, \ldots, e_k \rangle}), so}
+##{\sum_{j=1}^n \alpha_j\underbrace{\varepsilon_j(e_i)}_{\delta_{ij}} = 0 \implies \alpha_i = 0,\; 1 \leq i \leq k.}
+\p{Hence #{\alpha = \sum_{i=k+1}^n \alpha_i\varepsilon_i \in \langle \varepsilon_{k+1}, \ldots, \varepsilon_n \rangle}, so #{U^0 \leq \langle \varepsilon_{k+1}, \ldots, \varepsilon_n \rangle}.}}
+}
+
+\p{Therefore #{\dim U^0 = n - k = \dim V - \dim U}.}
+}

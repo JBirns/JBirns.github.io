@@ -1,0 +1,34 @@
+\title{Diagonalisation Criterion and Minimal Polynomial}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{LA5G}
+
+\transclude{LA5H}
+
+\transclude{LA5I}
+
+\transclude{LA5J}
+
+\transclude{LA5K}
+
+\p{\strong{Minimal polynomial of an endomorphism}}
+
+\p{Reminder (GRM): the Euclidean algorithm for polynomials. If #{a, b} are polynomials over #{F} with #{b \neq 0}, then there exist polynomials #{q, r} over #{F} with #{\deg r < \deg b} and #{a = qb + r}.}
+
+\transclude{LA5L}
+
+\p{#{\leadsto} Existence and uniqueness follow from the following observations.}
+
+\ul{
+\li{\strong{1.} Let #{\dim_F V = n} and #{\alpha \in \mathcal{L}(V)}. We know #{\dim_F \mathcal{L}(V) = n^2}, so #{(\mathrm{Id}, \alpha, \ldots, \alpha^{n^2})} cannot be free: there are #{(a_{n^2}, \ldots, a_1, a_0) \neq (0, \ldots, 0)} with #{a_{n^2}\alpha^{n^2} + \cdots + a_1\alpha + a_0 = 0}. So there exists #{p \in F[t]}, #{p \neq 0}, s.t. #{p(\alpha) = 0}.}
+}
+
+\transclude{LA5M}
+
+\ul{
+\li{\strong{3.} If #{m_1, m_2} are both polynomials with smallest degree which kill #{\alpha}, then by the above lemma #{m_1 \mid m_2} and #{m_2 \mid m_1}, so #{m_2 = cm_1}, #{c \in F} #{\leadsto} uniqueness up to a constant.}
+}
+
+\transclude{LA5N}

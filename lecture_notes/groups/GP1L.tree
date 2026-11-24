@@ -1,0 +1,14 @@
+\title{Examples of normal subgroups}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{\lbrace e\rbrace  \trianglelefteq G}, #{G \trianglelefteq G}.}
+\li{If #{G} is abelian all subgroups are normal, since if #{k \in K \leq G}, #{g \in G} then #{gkg^{-1} = gg^{-1}k = k \in K}.}
+\li{Kernels of homomorphisms are normal subgroups (Example Sheet 1, Q9). So #{A_n \trianglelefteq S_n} since #{A_n = \ker(\operatorname{sgn})}.}
+\li{\p{#{D_{2n} = \langle r, t \mid r^n = 1 = t^2, trt = r^{-1} \rangle}. Then #{\langle r \rangle \trianglelefteq D_{2n}}: clearly #{r^ir^jr^{-i} = r^j \in \langle r \rangle}. Also}
+##{(r^it)r^j(r^it)^{-1} = r^itr^jtr^{-i} = r^ir^{-j}ttr^{-i} = r^{i-j-i} = r^{-j} \in \langle r \rangle.}
+\p{Or use the following lemma.}}
+}

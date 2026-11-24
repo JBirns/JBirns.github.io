@@ -1,0 +1,7 @@
+\title{Triply transitive action}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A group #{G} acts \em{triply transitively} on a set #{X} if given #{x_1, x_2, x_3 \in X} all distinct and #{y_1, y_2, y_3 \in X} all distinct, there exists #{g \in G} s.t. #{g(x_i) = y_i}, #{i = 1, 2, 3}. A group #{G} acts \em{sharply triply transitively} if such a #{g} is unique.}

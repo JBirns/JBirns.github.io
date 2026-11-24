@@ -1,0 +1,7 @@
+\title{Groups of order #{2^k}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{There are lots of groups of order #{2^k}, e.g. #{14} of order #{16}, and #{\approx 50\,000\,000\,000} of order #{2^{10}}.}

@@ -1,0 +1,7 @@
+\title{Abelian group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A group #{G} is \em{abelian} (or \em{commutative}) if #{xy = yx} for all #{x, y \in G}.}

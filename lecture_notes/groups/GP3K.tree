@@ -1,0 +1,20 @@
+\title{The Möbius group}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The set #{\mathcal{M}} of all Möbius maps on #{\mathbb{C}_\infty} is a group under composition. It is a subgroup of #{\mathrm{Sym}(\mathbb{C}_\infty)}.}
+
+\proof{
+\ul{
+\li{Composition of maps is associative.}
+\li{#{I(z) = z \in \mathcal{M}}.}
+\li{\p{Closure: let #{f(z) = \frac{az + b}{cz + d}}, #{g(z) = \frac{\alpha z + \beta}{\gamma z + \delta}}. Suppose #{c \neq 0}, #{\gamma \neq 0}, and first suppose #{z \in \mathbb{C} \setminus \lbrace -\frac{\delta}{\gamma}\rbrace }. Then}
+##{f(g(z)) = \frac{a\big(\frac{\alpha z + \beta}{\gamma z + \delta}\big) + b}{c\big(\frac{\alpha z + \beta}{\gamma z + \delta}\big) + d} = \frac{(a\alpha + b\gamma)z + (a\beta + b\delta)}{(c\alpha + d\gamma)z + (c\beta + d\delta)} \in \mathcal{M},}
+\p{since #{(a\alpha + b\gamma)(c\beta + d\delta) - (a\beta + b\delta)(c\alpha + d\gamma) = (ad - bc)(\alpha\delta - \beta\gamma) \neq 0}. Also #{f(g(-\frac{\delta}{\gamma})) = f(\infty) = \frac{a}{c}}, and}
+##{\frac{(a\alpha + b\gamma)(-\frac{\delta}{\gamma}) + (a\beta + b\delta)}{(c\alpha + d\gamma)(-\frac{\delta}{\gamma}) + (c\beta + d\delta)} = \frac{a\alpha(-\frac{\delta}{\gamma}) + a\beta}{c\alpha(-\frac{\delta}{\gamma}) + c\beta} = \frac{a}{c}.}
+\p{(Exercise: also check #{c = 0}.)}}
+\li{Inverses: #{f(z) = \frac{az + b}{cz + d}}, #{ad - bc \neq 0}. Let #{f^*(z) = \frac{dz - b}{-cz + a}}. Then #{f(f^*(z)) = z = f^*(f(z))} for #{z \neq -\frac{d}{c}, \frac{a}{c}, \infty}; these cases are fine too (check). If #{c = 0}, #{f(f^*(\infty)) = f(\infty) = \infty = f^*(f(\infty))}.}
+}
+}

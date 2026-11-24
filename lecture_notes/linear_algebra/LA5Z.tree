@@ -1,0 +1,19 @@
+\title{Jordan normal form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(\mathbb{C})}. We say that #{A} is in \em{Jordan normal form} (JNF) if it is a block diagonal matrix}
+
+##{A = \begin{pmatrix} J_{n_1}(\lambda_1) & & & 0 \\ & J_{n_2}(\lambda_2) & & \\ & & \ddots & \\ 0 & & & J_{n_k}(\lambda_k) \end{pmatrix},}
+
+\p{where}
+
+\ul{
+\li{#{k \in \mathbb{N}_{>0}};}
+\li{#{n_1, \ldots, n_k} are integers with #{\sum_{i=1}^k n_i = n};}
+\li{#{\lambda_i \in \mathbb{C}}, #{1 \leq i \leq k}: they need \em{not} be distinct;}
+\li{\p{for #{m \in \mathbb{N}}, #{m \neq 0}, #{\lambda \in \mathbb{C}}: #{J_m(\lambda) = (\lambda)} if #{m = 1}, and for #{m \geq 2} the #{m \times m} \em{Jordan block}}
+##{J_m(\lambda) = \begin{pmatrix} \lambda & 1 & & 0 \\ & \ddots & \ddots & \\ & & \ddots & 1 \\ 0 & & & \lambda \end{pmatrix}.}}
+}

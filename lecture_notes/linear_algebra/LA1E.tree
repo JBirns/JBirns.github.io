@@ -1,0 +1,11 @@
+\title{Remarks on extension by linearity}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{This is true in the infinite dimensional case as well.}
+\li{Often, to define a linear map, we define its value on a basis and “extend by linearity”.}
+\li{If #{\alpha_1, \alpha_2 \colon V \to W} are linear and agree on a basis of #{V}, they are equal.}
+}

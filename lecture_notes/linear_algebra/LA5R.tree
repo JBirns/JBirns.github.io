@@ -1,0 +1,14 @@
+\title{Algebraic and geometric multiplicity}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\dim_F V < \infty}, #{\alpha \in \mathcal{L}(V)}, and #{\lambda} an eval of #{\alpha}. Write}
+
+##{\chi_\alpha(t) = (t - \lambda)^{a_\lambda}q(t), \quad q \in F[t],\; q(\lambda) \neq 0.}
+
+\ul{
+\li{#{a_\lambda} is the \em{algebraic multiplicity} of #{\lambda};}
+\li{#{g_\lambda = \dim\operatorname{Ker}(\alpha - \lambda I)} is the \em{geometric multiplicity} of #{\lambda}.}
+}

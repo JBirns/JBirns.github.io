@@ -1,0 +1,7 @@
+\title{A free and a non-free family in #{\mathbb{R}^3}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{V = \mathbb{R}^3}. If #{v_1, v_2} span a plane #{P} and #{v_3 \in P}, then #{(v_1, v_2)} is free but #{(v_1, v_2, v_3)} is not free.}

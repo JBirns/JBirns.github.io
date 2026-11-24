@@ -1,0 +1,23 @@
+\title{#{\mathcal{M}} is sharply triply transitive}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The action of #{\mathcal{M}} on #{\mathbb{C}_\infty} is sharply triply transitive.}
+
+\proof{
+\p{Label the first triple #{\lbrace z_0, z_1, z_\infty\rbrace } and the second triple #{\lbrace w_0, w_1, w_\infty\rbrace }. We construct #{g \in \mathcal{M}} s.t. #{g \colon z_0 \mapsto 0}, #{z_1 \mapsto 1}, #{z_\infty \mapsto \infty}. First suppose #{z_0, z_1, z_\infty \neq \infty}:}
+
+##{g(z) = \frac{(z - z_0)(z_1 - z_\infty)}{(z - z_\infty)(z_1 - z_0)}.}
+
+\p{Check: “#{ad - bc}” #{= (z_0 - z_\infty)(z_1 - z_\infty)(z_1 - z_0) \neq 0}. Otherwise:}
+
+##{\begin{aligned}
+z_\infty = \infty&:\; g(z) = \frac{z - z_0}{z_1 - z_0}; \\ z_1 = \infty&:\; g(z) = \frac{z - z_0}{z - z_\infty}; \\ z_0 = \infty&:\; g(z) = \frac{z_1 - z_\infty}{z - z_\infty}.
+\end{aligned}}
+
+\p{Similarly find #{h} s.t. #{h \colon w_0 \mapsto 0}, #{w_1 \mapsto 1}, #{w_\infty \mapsto \infty}. Then #{f = h^{-1}g \colon z_i \mapsto w_i} as required.}
+
+\p{Now to prove uniqueness, suppose #{f' \colon z_i \mapsto w_i}. Then #{f^{-1}f' \colon z_i \mapsto z_i}. Let #{g} be as above. Then #{gf^{-1}f'g^{-1}} maps #{0 \mapsto 0 \Rightarrow b = 0}; #{1 \mapsto 1 \Rightarrow a = d}; #{\infty \mapsto \infty \Rightarrow c = 0}. So #{gf^{-1}f'g^{-1} = \mathrm{id}}, so #{f^{-1}f' = \mathrm{id}}, so #{f' = f}.}
+}

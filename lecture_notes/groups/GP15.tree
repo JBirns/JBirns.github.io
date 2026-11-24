@@ -1,0 +1,14 @@
+\title{Cosets of #{A_3} in #{S_3}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{S_3 = \lbrace e, (1\,2\,3), (1\,3\,2), (1\,2), (1\,3), (2\,3)\rbrace }, #{H = \lbrace \mathrm{id}, (1\,2\,3), (1\,3\,2)\rbrace  = A_3}.}
+
+##{\begin{aligned}
+(1\,2)H &= \lbrace (1\,2), (1\,2)(1\,2\,3), (1\,2)(1\,3\,2)\rbrace  = \lbrace (1\,2), (2\,3), (1\,3)\rbrace , \\
+(1\,2\,3)H &= H \quad \text{since } H \text{ is a subgroup}.
+\end{aligned}}
+
+\p{Note #{H \sqcup (1\,2)H = S_3} (disjoint union).}

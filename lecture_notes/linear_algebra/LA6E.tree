@@ -1,0 +1,11 @@
+\title{Quadratic forms in coordinates}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B} = (e_i)_{1 \leq i \leq n}} and #{A = [\phi]_{\mathcal{B}} = (\phi(e_i, e_j)) = (a_{ij})_{1 \leq i,j \leq n}}. If #{u = \sum_{i=1}^n x_ie_i}, #{x = (x_1, \ldots, x_n)^T}, then}
+
+##{Q(u) = \phi(u, u) = \phi\Big( \sum_{i=1}^n x_ie_i, \sum_{j=1}^n x_je_j \Big) = \sum_{i=1}^n \sum_{j=1}^n x_ix_j\underbrace{\phi(e_i, e_j)}_{a_{ij}} = x^TAx,}
+
+\p{since #{\phi} is bilinear. So #{\boxed{Q(u) = x^TAx}}.}

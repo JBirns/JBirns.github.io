@@ -1,0 +1,14 @@
+\title{Exercise}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Using the polarisation identity, one can show that}
+
+##{\begin{aligned}
+\alpha \text{ isometry } (\alpha^* = \alpha^{-1}) &\iff \forall (v, w) \in V \times V,\; \langle \alpha v, \alpha w \rangle = \langle v, w \rangle \\
+&\iff \forall v \in V,\; \Vert \alpha(v)\Vert  = \Vert v\Vert ,
+\end{aligned}}
+
+\p{i.e. preservation of the scalar product #{\iff} preservation of the norm.}

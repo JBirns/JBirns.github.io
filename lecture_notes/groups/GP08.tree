@@ -1,0 +1,7 @@
+\title{Order of a group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a group. If the number of elements in the set #{G} is finite, then #{G} is called a \em{finite group}. Otherwise #{G} is called an \em{infinite group}. If #{G} is a finite group, denote the number of elements in the set #{G} by #{|G|} and call this the \em{order} of #{G}.}

@@ -1,0 +1,11 @@
+\title{Triangular matrices with zero diagonal}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{A = (a_{ij})} is an upper (lower) triangular matrix with #{0} on the diagonal, i.e. #{a_{ij} = 0} for #{i \geq j} (#{i \leq j}), then #{\det A = 0}.}
+
+\proof{
+\p{#{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma)a_{\sigma(1)1} \cdots a_{\sigma(n)n}}. For the summand not to be zero, we need #{\sigma(j) < j} for all #{j \in \lbrace 1, \ldots, n\rbrace }, which is impossible for #{\sigma \in S_n} since it is a bijection. So all summands are zero and #{\det A = 0}.}
+}

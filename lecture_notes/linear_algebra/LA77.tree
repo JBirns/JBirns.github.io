@@ -1,0 +1,12 @@
+\title{Basic facts about skew-symmetric forms}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\phi(u, u) = -\phi(u, u) \implies \phi(u, u) = 0} for all #{u \in V}.}
+\li{\strong{(ii)} For all bases #{\mathcal{B}} of #{V}, #{[\phi]_{\mathcal{B}} = -[\phi]_{\mathcal{B}}^T}.}
+\li{\p{\strong{(iii)} For #{A \in M_n(\mathbb{R})},}
+##{A = \underbrace{\tfrac{1}{2}(A + A^T)}_{\text{symmetric}} + \underbrace{\tfrac{1}{2}(A - A^T)}_{\text{skew-symmetric}}.}}
+}

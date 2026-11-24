@@ -1,0 +1,19 @@
+\title{#{p}-groups have non-trivial centre}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and #{G} a group of order #{p^n}. Then #{Z(G)} is non-trivial, i.e. #{Z(G) \supsetneq \lbrace e\rbrace }.}
+
+\proof{
+\p{Let #{G} act on #{G} by conjugation. Then the conjugacy classes of #{G} partition #{G},}
+
+##{G = \bigsqcup_{\text{distinct conjugacy classes}} \operatorname{ccl}_G(x)}
+
+\p{(\ref{GP2H}). By the Orbit–Stabiliser Theorem, #{|\operatorname{ccl}_G(x)|} divides #{|G| = p^n}. Either #{|\operatorname{ccl}_G(x)| = 1} or #{p \mid |\operatorname{ccl}_G(x)|}. So by \ref{GP2Q}(iv),}
+
+##{|G| = \sum_{x \in Z(G)} |\operatorname{ccl}_G(x)| + \sum_{\substack{\text{distinct conjugacy classes} \\ \text{with } p \mid |\operatorname{ccl}_G(x)|}} |\operatorname{ccl}_G(x)|.}
+
+\p{Now #{p} divides the LHS, so #{p} divides the RHS, so #{p \mid \sum_{x \in Z(G)} |\operatorname{ccl}_G(x)| = |Z(G)|}. In particular #{|Z(G)| \neq 1}.}
+}

@@ -1,0 +1,23 @@
+\title{Each group element acts as a permutation}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose the group #{G} acts on the non-empty set #{X}. Fix #{g \in G}. Then}
+
+##{\phi_g \colon X \to X, \quad x \mapsto \rho(g, x) = g(x)}
+
+\p{is a permutation of #{X}, i.e. #{\phi_g \in \mathrm{Sym}(X)}.}
+
+\proof{
+\p{Clearly #{\phi_g} is a map from #{X} to #{X}. We need to show #{\phi_g} is a bijection; it is enough to show it has a #{2}-sided inverse.}
+
+##{\begin{aligned}
+\phi_{g^{-1}} \circ \phi_g(x) &= \phi_{g^{-1}}(\rho(g, x)) = \rho(g^{-1}, \rho(g, x)) \\
+&= \rho(g^{-1}g, x) && \text{since } \rho \text{ is a group action} \\
+&= \rho(e, x) = x \quad \forall x \in X.
+\end{aligned}}
+
+\p{Similarly #{\phi_g \circ \phi_{g^{-1}}(x) = x} for all #{x \in X}.}
+}

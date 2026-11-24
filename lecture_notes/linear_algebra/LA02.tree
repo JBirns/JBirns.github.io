@@ -1,0 +1,18 @@
+\title{#{F}-vector space}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An \em{#{F}-vector space} (a vector space over #{F}) is an abelian group #{(V, +)} equipped with a function}
+
+##{F \times V \to V, \quad (\lambda, v) \mapsto \lambda v}
+
+\p{(multiplication of a vector #{v} by a scalar #{\lambda}) such that}
+
+\ul{
+\li{#{\lambda(v_1 + v_2) = \lambda v_1 + \lambda v_2};}
+\li{#{(\lambda_1 + \lambda_2)v = \lambda_1v + \lambda_2v};}
+\li{#{\lambda(\mu v) = (\lambda\mu)v};}
+\li{#{1 \cdot v = v}.}
+}

@@ -1,0 +1,13 @@
+\title{Sums of eigenspaces are direct}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We have proved the following: if #{\lambda_1, \ldots, \lambda_k} are #{k} distinct evals of #{\alpha}, then}
+
+##{\sum_{i=1}^k V_{\lambda_i} = \bigoplus_{i=1}^k V_{\lambda_i}}
+
+\p{is always true (and we know the projectors). This means that the only way diagonalisation fails is if}
+
+##{\bigoplus_{i=1}^k V_{\lambda_i} = \sum_{j=1}^k V_{\lambda_j} < V \quad \text{(a strict subspace)}.}

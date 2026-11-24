@@ -1,0 +1,15 @@
+\title{Adjoint and dual maps}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We are using the same notation #{\alpha^*} for the adjoint of #{\alpha} and the dual of #{\alpha}. If #{V, W} are real inner product spaces and #{\alpha \in \mathcal{L}(V, W)}, we have isomorphisms}
+
+##{\psi_{R,V} \colon V \xrightarrow{\; \sim\; } V^*,\; v \mapsto \langle \cdot, v \rangle, \qquad \psi_{R,W} \colon W \xrightarrow{\; \sim\; } W^*,\; w \mapsto \langle \cdot, w \rangle.}
+
+\p{Then the adjoint map of #{\alpha} is given by}
+
+##{W \xrightarrow{\; \psi_{R,W}\; } W^* \xrightarrow{\; \text{dual of } \alpha\; } V^* \xrightarrow{\; \psi_{R,V}^{-1}\; } V}
+
+\p{#{\longrightarrow} exercise. I.e. the maps are the same modulo isomorphism.}

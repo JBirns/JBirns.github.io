@@ -1,0 +1,36 @@
+\title{Gram–Schmidt and Orthogonal Complement}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{\mathbb{R}} (#{\mathbb{C}}). An inner product is a positive definite symmetric (Hermitian) form on #{V}, written #{\phi(u, v) = \langle u, v \rangle}.}
+
+\ul{
+\li{\em{Norm}: #{\Vert v\Vert  = \sqrt{\langle v, v \rangle}}, where #{\langle v, v \rangle \in \mathbb{R}_+} since #{\phi} is positive, and #{\Vert v\Vert  = 0 \iff v = 0} since #{\phi} is definite. #{\leadsto} The associated notion of length.}
+}
+
+\transclude{LA7F}
+
+\p{\strong{Exercise.} Equality #{\implies u, v} proportional.}
+
+\transclude{LA7G}
+
+\transclude{LA7H}
+
+\transclude{LA7I}
+
+\transclude{LA7J}
+
+\transclude{LA7K}
+
+\transclude{LA7L}
+
+\p{#{\implies} Gram–Schmidt describes an algorithm to compute #{e_k} for all #{k}.}
+
+\transclude{LA7M}
+
+\transclude{LA7N}
+
+\transclude{LA7O}
+
+\transclude{LA7P}

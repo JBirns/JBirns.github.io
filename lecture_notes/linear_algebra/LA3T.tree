@@ -1,0 +1,7 @@
+\title{Rank of a bilinear form}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{rank} of #{\phi}, #{r(\phi)}, is the rank of any matrix representing #{\phi}. Indeed, #{r(P^TAQ) = r(A)} for #{P, Q} invertible.}

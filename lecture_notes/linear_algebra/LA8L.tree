@@ -1,0 +1,9 @@
+\title{Matrix reformulation of simultaneous diagonalisation}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A, B \in M_n(\mathbb{R})} (resp. #{M_n(\mathbb{C})}), both symmetric (Hermitian). Assume #{x^TAx > 0} for all #{x \neq 0}. Then there exists #{Q \in M_n(\mathbb{R})} (#{M_n(\mathbb{C})}) invertible s.t. both #{Q^TAQ} (#{Q^\dagger AQ}) and #{Q^TBQ} (#{Q^\dagger BQ}) are diagonal.}
+
+\p{#{\leadsto} Direct consequence of the simultaneous diagonalisation theorem.}

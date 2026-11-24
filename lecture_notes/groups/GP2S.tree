@@ -1,0 +1,20 @@
+\title{If #{G/Z(G)} is cyclic then #{G} is abelian}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a finite group and #{Z(G)} the centre of #{G}. If #{G/Z(G)} is cyclic then #{G} is abelian.}
+
+\proof{
+\p{Let #{Z = Z(G)}. #{G/Z} is cyclic so #{G/Z = \langle yZ \rangle} for some #{y \in G}. Let #{g, h \in G}. Then #{gZ = y^iZ} for some #{i}, so #{g = y^iz_1} for some #{z_1 \in Z}. Similarly #{hZ = y^jZ} for some #{j}, so #{h = y^jz_2} for some #{z_2 \in Z}. Now}
+
+##{\begin{aligned}
+gh &= y^iz_1y^jz_2 = y^iy^jz_1z_2 && z_1 \in Z \\
+&= y^jy^iz_2z_1 \\
+&= y^jz_2y^iz_1 && z_2 \in Z \\
+&= hg,
+\end{aligned}}
+
+\p{so #{G} is abelian as required.}
+}

@@ -1,0 +1,32 @@
+\title{Sylvester’s law of inertia}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F = \mathbb{R}}, #{\dim_{\mathbb{R}} V < +\infty}, and #{\phi} a symmetric bilinear form on #{V}. If #{\phi} is represented by}
+
+##{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_p & 0 & 0 \\ 0 & -I_q & 0 \\ 0 & 0 & 0 \end{pmatrix} \; (\mathcal{B} \text{ a basis of } V), \qquad [\phi]_{\mathcal{B}'} = \begin{pmatrix} I_{p'} & 0 & 0 \\ 0 & -I_{q'} & 0 \\ 0 & 0 & 0 \end{pmatrix} \; (\mathcal{B}' \text{ a basis of } V),}
+
+\p{then #{p = p'} and #{q = q'}.}
+
+\proof{
+\p{In order to prove that #{p} is independent of the choice of basis, we show that #{p} has a geometric interpretation.}
+
+\p{\strong{Claim:} #{p} is the largest dimension of a subspace on which #{\phi} is positive definite. #{\to} The claim implies the theorem.}
+
+\p{Say #{\mathcal{B} = (v_1, \ldots, v_n)} is a basis in which #{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_p & & \\ & -I_q & \\ & & 0 \end{pmatrix}}.}
+
+\ul{
+\li{\p{\strong{1.} Consider #{X = \langle v_1, \ldots, v_p \rangle}. Then #{\phi} is positive definite on #{X}. Indeed, for #{u = \sum_{i=1}^p \lambda_iv_i},}
+##{\begin{aligned}
+Q(u) = \phi(u, u) &= \phi\Big( \sum_{i=1}^p \lambda_iv_i, \sum_{j=1}^p \lambda_jv_j \Big) \\
+&= \sum_{i,j=1}^p \lambda_i\lambda_j\phi(v_i, v_j) = \sum_{i=1}^p \lambda_i^2 > 0 \quad \text{for } u \neq 0.
+\end{aligned}}
+\p{So #{\dim X = p} and #{\phi|_{X \times X}} is positive definite.}}
+\li{\p{\strong{2.} Suppose that #{\phi} is positive definite when restricted to another subspace #{X'}. Let #{X = \langle v_1, \ldots, v_p \rangle}, #{Y = \langle v_{p+1}, \ldots, v_n \rangle}. From the form of #{[\phi]_{\mathcal{B}}}, we know that #{\phi} is negative semi-definite on #{Y}. Hence #{Y \cap X' = \lbrace 0\rbrace }, since}
+##{u \in Y \cap X',\; u \neq 0 \implies \phi(u, u) \leq 0 \; (u \in Y) \text{ and } \phi(u, u) > 0 \; (u \in X'),}
+\p{a contradiction ↯.
+Therefore #{Y + X' = Y \oplus X'}, so #{\underbrace{\dim Y}_{n - p} + \dim X' \leq n}, so #{\dim X' \leq p}.}}
+}
+}

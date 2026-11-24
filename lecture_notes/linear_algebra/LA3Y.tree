@@ -1,0 +1,11 @@
+\title{#{\operatorname{Tr}(AB) = \operatorname{Tr}(BA)}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\operatorname{Tr}(AB) = \operatorname{Tr}(BA)} for all #{(A, B) \in M_n(F) \times M_n(F)}.}
+
+\proof{
+##{\operatorname{Tr}(AB) = \sum_{i=1}^n \Big( \sum_{j=1}^n a_{ij}b_{ji} \Big) = \sum_{j=1}^n \underbrace{\sum_{i=1}^n b_{ji}a_{ij}}_{(BA)_{jj}} = \operatorname{Tr}(BA).}
+}

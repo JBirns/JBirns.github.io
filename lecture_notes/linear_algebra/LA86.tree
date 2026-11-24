@@ -1,0 +1,12 @@
+\title{Isometries and orthonormal bases}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be finite dimensional with #{\lbrace e_1, \ldots, e_n\rbrace } an orthonormal basis.}
+
+\ul{
+\li{#{F = \mathbb{R}}: #{O(V) \overset{1:1}{\longleftrightarrow} \lbrace \text{orthonormal bases of } V\rbrace }, #{\alpha \mapsto \lbrace \alpha(e_1), \ldots, \alpha(e_n)\rbrace }.}
+\li{#{F = \mathbb{C}}: #{U(V) \overset{1:1}{\longleftrightarrow} \lbrace \text{orthonormal bases of } V\rbrace }, #{\alpha \mapsto \lbrace \alpha(e_1), \ldots, \alpha(e_n)\rbrace }.}
+}

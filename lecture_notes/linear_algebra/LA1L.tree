@@ -1,0 +1,12 @@
+\title{Kernel and image of a linear map}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F} and #{\alpha \colon V \to W} a linear map. We define:}
+
+\ul{
+\li{\strong{(i)} #{N(\alpha) = \operatorname{Ker}\alpha = \lbrace v \in V : \alpha(v) = 0\rbrace }, the \em{kernel} of #{\alpha};}
+\li{\strong{(ii)} #{\operatorname{Im}(\alpha) = \lbrace w \in W : \exists v \in V,\; w = \alpha(v)\rbrace }, the \em{image} of #{\alpha}.}
+}

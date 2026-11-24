@@ -1,0 +1,20 @@
+\title{Non-degenerate forms need equal dimensions}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\phi} non-degenerate #{\implies \dim U = \dim V}.}
+
+\proof{
+\p{By \ref{LA3L},}
+
+##{\begin{aligned}
+\phi \text{ non-degenerate} &\iff \operatorname{Ker}\phi_L = \operatorname{Ker}\phi_R = \lbrace 0\rbrace  \\
+&\iff n(A^T) = 0 = n(A) \\
+&\iff r(A^T) = \dim U,\; r(A) = \dim V \quad \text{(rank--nullity theorem)} \\
+&\iff A \text{ invertible and } \dim U = \dim V,
+\end{aligned}}
+
+\p{using #{r(A) = r(A^T)}.}
+}

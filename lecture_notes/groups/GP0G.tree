@@ -1,0 +1,7 @@
+\title{Isomorphism}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A bijective homomorphism is called an \em{isomorphism}. If #{G} and #{H} are groups and #{\theta \colon G \to H} is an isomorphism we say #{G} and #{H} are \em{isomorphic}, and write #{G \cong H}.}

@@ -1,0 +1,9 @@
+\title{Matrix of a bilinear form in a basis}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B} = (e_1, \ldots, e_m)} be a basis of #{U}, #{\mathcal{C} = (f_1, \ldots, f_n)} a basis of #{V}, and #{\phi \colon U \times V \to F} a bilinear form. The matrix of #{\phi} with respect to #{\mathcal{B}} and #{\mathcal{C}} is}
+
+##{[\phi]_{\mathcal{B},\mathcal{C}} = \big( \underbrace{\phi(e_i, f_j)}_{\in F} \big)_{1 \leq i \leq m,\, 1 \leq j \leq n}.}

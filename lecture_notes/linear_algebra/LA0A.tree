@@ -1,0 +1,17 @@
+\title{Sums of subspaces are subspaces}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space. If #{U \leq V}, #{W \leq V} then #{U + W \leq V}.}
+
+\proof{
+\p{#{0 = \underbrace{0}_{\in U} + \underbrace{0}_{\in W} \in U + W}.}
+
+\p{Let #{f, g \in U + W} and #{\lambda_1, \lambda_2 \in F}. Then #{f = f_1 + f_2}, #{g = g_1 + g_2} with #{f_1, g_1 \in U}, #{f_2, g_2 \in W}, and}
+
+##{\lambda_1f + \lambda_2g = \lambda_1(f_1 + f_2) + \lambda_2(g_1 + g_2) = \underbrace{(\lambda_1f_1 + \lambda_2g_1)}_{\in U} + \underbrace{(\lambda_1f_2 + \lambda_2g_2)}_{\in W},}
+
+\p{so #{\lambda_1f + \lambda_2g \in U + W}.}
+}

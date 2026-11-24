@@ -1,0 +1,7 @@
+\title{Even and odd permutations}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\sigma} is an \em{even permutation} if #{\operatorname{sgn}(\sigma) = 1} and an \em{odd permutation} if #{\operatorname{sgn}(\sigma) = -1}.}

@@ -1,0 +1,11 @@
+\title{Remarks on #{A_n}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{|A_n| = \frac{1}{2}|S_n| = \frac{n!}{2}} (exercise — see later).}
+\li{\strong{(ii)} Cycles of even length are odd and cycles of odd length are even.}
+\li{\strong{(iii)} #{A_n = \ker(\operatorname{sgn})}, hence a subgroup (Example Sheet, Q9).}
+}

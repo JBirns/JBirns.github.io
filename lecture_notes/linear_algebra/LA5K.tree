@@ -1,0 +1,21 @@
+\title{Simultaneous diagonalisation}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Assume #{\dim_F V < +\infty} and #{\alpha, \beta \in \mathcal{L}(V)} are diagonalisable. Then #{\alpha, \beta} are simultaneously diagonalisable (there exists a basis #{\mathcal{B}} of #{V} in which both #{[\alpha]_{\mathcal{B}}}, #{[\beta]_{\mathcal{B}}} are diagonal) #{\iff} #{\alpha} and #{\beta} commute.}
+
+\proof{
+\p{(#{\Rightarrow}) There is a basis #{\mathcal{B}} of #{V} in which #{[\alpha]_{\mathcal{B}} = D_1}, #{[\beta]_{\mathcal{B}} = D_2} with #{D_1, D_2} diagonal. Then #{D_1D_2 = D_2D_1}, so #{\alpha\beta = \beta\alpha}.}
+
+\p{(#{\Leftarrow}) Suppose #{\alpha, \beta} are both diagonalisable and #{\alpha\beta = \beta\alpha}. Let #{\lambda_1, \ldots, \lambda_k} be the distinct evals of #{\alpha}. We have shown #{\alpha} diagonalisable #{\iff V = \bigoplus_{i=1}^k V_{\lambda_i}}, where #{V_{\lambda_i}} is the espace associated to #{\lambda_i}.}
+
+\p{\strong{Claim:} #{V_{\lambda_i}} is stable by #{\beta}: #{\beta(V_{\lambda_i}) \leq V_{\lambda_i}}. Indeed, let #{v \in V_{\lambda_i}}; then}
+
+##{\alpha\beta(v) = \beta\alpha(v) = \beta(\lambda_iv) = \lambda_i\beta(v)}
+
+\p{by commuting and since #{v \in V_{\lambda_i}}, so #{\beta(v) \in V_{\lambda_i}}.}
+
+\p{We use our criterion for diagonalisability: #{\beta} diagonalisable #{\implies \exists p} with distinct linear factors s.t. #{p(\beta) = 0}. Now #{\beta|_{V_{\lambda_j}}} is an endomorphism (#{\beta \colon V_{\lambda_j} \to V_{\lambda_j}}) and #{p(\beta|_{V_{\lambda_j}}) = 0}, where #{p} has distinct linear factors. So #{\beta|_{V_{\lambda_j}}} is diagonalisable: there exists a basis #{\mathcal{B}_j} of #{V_{\lambda_j}} in which #{\beta|_{V_{\lambda_j}}} is diagonal. Then since #{V = \bigoplus V_{\lambda_i}}, #{\mathcal{B} = (\mathcal{B}_1, \ldots, \mathcal{B}_k)} is a basis of #{V} in which both #{\alpha} and #{\beta} are in diagonal form.}
+}

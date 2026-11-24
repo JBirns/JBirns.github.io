@@ -1,0 +1,12 @@
+\title{Orthogonal}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{For #{T \subset U} (note: only a subset, not a subspace) we define}
+##{T^\perp = \lbrace v \in V : \phi(t, v) = 0\; \forall t \in T\rbrace .}}
+\li{\p{For #{S \subset V} we define}
+##{{}^\perp S = \lbrace u \in U : \phi(u, s) = 0\; \forall s \in S\rbrace .}}
+}

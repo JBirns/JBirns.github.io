@@ -1,0 +1,30 @@
+\title{Vector Spaces and Subspaces}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F} be an arbitrary field (or #{\mathbb{R}} or #{\mathbb{C}}).}
+
+\transclude{LA02}
+
+\p{We know how to sum two vectors, and multiply a vector #{v \in V} by a scalar #{\lambda \in F}.}
+
+\transclude{LA03}
+
+\transclude{LA04}
+
+\transclude{LA05}
+
+\p{\strong{Exercise.} If #{V} is an #{F}-vector space and #{U \leq V}, then #{U} is an #{F}-vector space.}
+
+\transclude{LA06}
+
+\transclude{LA07}
+
+\transclude{LA08}
+
+\transclude{LA09}
+
+\transclude{LA0A}
+
+\p{\strong{Exercise.} Show that #{U + W} is the smallest subspace of #{V} which contains both #{U} and #{W} (smallest in terms of: you couldn’t take anything out).}

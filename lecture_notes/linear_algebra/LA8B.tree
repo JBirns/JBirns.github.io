@@ -1,0 +1,7 @@
+\title{Orthogonal decomposition into eigenspaces}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional inner product space. If #{\alpha \in \mathcal{L}(V)} is self-adjoint, then #{V} is the orthogonal direct sum of all the eigenspaces of #{\alpha}.}

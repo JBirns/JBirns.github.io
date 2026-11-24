@@ -1,0 +1,7 @@
+\title{Definition}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)} and pick #{i, j \in \lbrace 1, \ldots, n\rbrace }. We define #{A_{\hat{i}\hat{j}} \in M_{n-1}(F)}, obtained by removing the #{i}th row and #{j}th column from #{A}.}

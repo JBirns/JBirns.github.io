@@ -1,0 +1,20 @@
+\title{Elements of #{SO_3(\mathbb{R})} are rotations}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in SO_3(\mathbb{R})}. Then #{A} is conjugate to a matrix of the form}
+
+##{\begin{pmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{pmatrix}}
+
+\p{for some #{\theta \in \lbrack 0, 2\pi\rparen }. In particular, #{A} is a rotation around an axis through the origin.}
+
+\proof{
+\p{By \ref{GP3F} there exists #{\mathbf{v} \in \mathbb{R}^3} with #{A\mathbf{v} = \mathbf{v}}; we can assume #{|\mathbf{v}| = 1}. Let #{\lbrace \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3\rbrace } be the standard orthonormal basis for #{\mathbb{R}^3}. There exists #{P \in SO_3(\mathbb{R})} s.t. #{P\mathbf{v} = \mathbf{e}_3}, so #{PAP^{-1}(\mathbf{e}_3) = \mathbf{e}_3}. And for #{\Pi} the plane #{\perp} to #{\mathbf{e}_3}, #{PAP^{-1}(\Pi)} is still #{\perp} to #{\mathbf{e}_3}. So}
+
+##{PAP^{-1} = \left(\begin{array}{c|c} Q & \begin{matrix} 0 \\ 0 \end{matrix} \\ \hline \begin{matrix} 0 & 0 \end{matrix} & 1 \end{array}\right),}
+
+\p{where the #{2 \times 2} block #{Q} is the action on #{\Pi}.
+#{\det PAP^{-1} = \det A = 1}, so #{\det Q = 1} and #{Q^TQ = I}, so #{Q = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}} for some #{\theta \in \lbrack 0, 2\pi\rparen }, as required.}
+}

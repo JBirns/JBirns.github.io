@@ -1,0 +1,15 @@
+\title{Extending a map on a basis by linearity}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be #{F}-vector spaces and #{\mathcal{B}} a basis of #{V}. Let #{\alpha_0 \colon \mathcal{B} \to W} be \em{any} map. Then there is a unique linear map #{\alpha \colon V \to W} extending #{\alpha_0}, i.e. #{\alpha(v) = \alpha_0(v)} for all #{v \in \mathcal{B}}.}
+
+\proof{
+\p{Let #{\mathcal{B} = (v_1, \ldots, v_n)} and #{v \in V}, #{v = \sum_{i=1}^n \lambda_iv_i}. By linearity, a linear #{\alpha \colon V \to W} extending #{\alpha_0} must satisfy}
+
+##{\alpha(v) = \alpha\Big( \sum_{i=1}^n \lambda_iv_i \Big) = \sum_{i=1}^n \lambda_i\underbrace{\alpha(v_i)}_{\alpha_0(v_i)},}
+
+\p{and this formula defines a linear map.}
+}

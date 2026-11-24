@@ -1,0 +1,7 @@
+\title{Minimal polynomial}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F} with #{\dim_F V < \infty}, and #{\alpha \in \mathcal{L}(V)}. The \em{minimal polynomial} #{m_\alpha} of #{\alpha} is the (unique up to a constant) non-zero polynomial with \em{smallest degree} s.t. #{m_\alpha(\alpha) = 0}.}

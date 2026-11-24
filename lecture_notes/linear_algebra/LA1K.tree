@@ -1,0 +1,24 @@
+\title{Isomorphic iff same dimension}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F} with finite dimension. Then}
+
+##{V \cong W \iff \dim_F V = \dim_F W.}
+
+\proof{
+\p{(#{\Leftarrow}) If #{\dim_F V = \dim_F W = n}, then #{V \cong F^n} and #{W \cong F^n} by \ref{LA1I}, so #{V \cong W} by transitivity.}
+
+\p{(#{\Rightarrow}) Let #{\alpha \colon V \to W} be an isomorphism and #{\mathcal{B}} a basis of #{V}.}
+
+\p{\strong{Claim:} #{\alpha(\mathcal{B})} is a basis of #{W}. Sketch:}
+
+\ul{
+\li{#{\alpha(\mathcal{B})} spans #{W}: follows from the surjectivity of #{\alpha}.}
+\li{#{\alpha(\mathcal{B})} is a free family: follows from the injectivity of #{\alpha}.}
+}
+
+\p{Hence #{\dim W = |\alpha(\mathcal{B})| = |\mathcal{B}| = \dim V}.}
+}

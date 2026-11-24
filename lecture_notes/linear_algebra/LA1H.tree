@@ -1,0 +1,17 @@
+\title{Isomorphism is an equivalence relation}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\cong} is an equivalence relation on the class of all vector spaces over #{F}:}
+
+\ul{
+\li{\strong{(i)} #{i_V \colon V \to V} is an isomorphism;}
+\li{\strong{(ii)} #{\alpha \colon V \to W} an isomorphism #{\implies \alpha^{-1} \colon W \to V} is an isomorphism;}
+\li{\strong{(iii)} if #{\beta \colon U \to V} and #{\alpha \colon V \to W} are isomorphisms, then #{\alpha \circ \beta \colon U \to W} is an isomorphism.}
+}
+
+\proof{
+\p{Exercise.}
+}

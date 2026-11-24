@@ -1,0 +1,25 @@
+\title{Diagonalising a quadratic form}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V = \mathbb{R}^3} with basis #{e_1, e_2, e_3} and}
+
+##{Q(x_1, x_2, x_3) = x_1^2 + x_2^2 + 2x_3^2 + 2x_1x_2 + 2x_1x_3 - 2x_2x_3 = x^TAx,}
+
+##{A = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & -1 \\ 1 & -1 & 2 \end{pmatrix}.}
+
+\p{Diagonalise: two ways.}
+
+\ul{
+\li{\strong{1.} Follow the proof of diagonalisation #{\leadsto} algorithm.}
+\li{\p{\strong{2.} Complete the square:}
+##{\begin{aligned}
+Q(x_1, x_2, x_3) &= x_1^2 + x_2^2 + 2x_3^2 + 2x_1x_2 + 2x_1x_3 - 2x_2x_3 \\
+&= (x_1 + x_2 + x_3)^2 + x_3^2 - 4x_2x_3 \\
+&= \underbrace{(x_1 + x_2 + x_3)^2}_{x_1'^2} + \underbrace{(x_3 - 2x_2)^2}_{x_2'^2} - \underbrace{4x_2^2}_{x_3'^2}.
+\end{aligned}}
+\p{So there is #{P} with #{P^TAP = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}}. To find #{P}, remember}
+##{\begin{pmatrix} x_1' \\ x_2' \\ x_3' \end{pmatrix} = \underbrace{\begin{pmatrix} 1 & 1 & 1 \\ 0 & -2 & 1 \\ 0 & -2 & 0 \end{pmatrix}}_{P^{-1}}\begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}.}}
+}

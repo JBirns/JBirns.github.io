@@ -1,0 +1,15 @@
+\title{#{SL_2(\mathbb{C})/\lbrace\pm I\rbrace \cong \mathcal{M}}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{SL_2(\mathbb{C})/\lbrace \pm I\rbrace  \cong \mathcal{M}}.}
+
+\proof{
+\p{Restrict #{\Phi} to #{SL_2(\mathbb{C})}: #{\Phi \colon SL_2(\mathbb{C}) \to \mathcal{M}}, #{\begin{pmatrix} a & b \\ c & d \end{pmatrix} \mapsto \frac{az + b}{cz + d}}. We require #{\Phi} to be surjective:}
+
+##{f(z) = \frac{az + b}{cz + d} = \frac{\frac{a}{\sqrt{ad - bc}}z + \frac{b}{\sqrt{ad - bc}}}{\frac{c}{\sqrt{ad - bc}}z + \frac{d}{\sqrt{ad - bc}}},}
+
+\p{and the rescaled matrix has determinant #{1}. And #{\ker\Phi = \lbrace \pm I\rbrace }.}
+}

@@ -1,0 +1,7 @@
+\title{The symmetric group}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathrm{Sym}(X)} is a group under composition of functions. It is called the \em{symmetric group} on #{X}.}

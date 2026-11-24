@@ -1,0 +1,15 @@
+\title{Examples of stabilisers}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Trivial action: #{\operatorname{Stab}_G(x) = G}.}
+\li{\strong{(ii)} #{S_n} on #{X = \lbrace 1, 2, \ldots, n\rbrace }: #{\operatorname{Stab}_G(1) \cong S_{n-1}}. #{H = \langle (1\,2)(3\,4\,5) \rangle} on #{X}: #{\operatorname{Stab}_H(1) = \langle (3\,4\,5) \rangle = \lbrace e, (3\,4\,5), (3\,5\,4)\rbrace }.}
+\li{\strong{(iii)} #{D_8} on the edges of a square: #{\operatorname{Stab}_{D_8}(b) = \lbrace e, t\rbrace }.}
+\li{\strong{(iv)} Left regular action: #{\operatorname{Stab}_G(k) = \lbrace e\rbrace }, as #{gk = k \Rightarrow g = e}.}
+\li{\p{\strong{(v)} Conjugation:}
+##{\operatorname{Stab}_G(k) = \lbrace g \in G : gkg^{-1} = k\rbrace  = \lbrace g \in G : gk = kg\rbrace  = C_G(k),}
+\p{the “centraliser of #{k} in #{G}”, i.e. all those elements of #{G} that commute with #{k}.}}
+}

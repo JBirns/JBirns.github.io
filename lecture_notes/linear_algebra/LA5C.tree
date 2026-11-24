@@ -1,0 +1,9 @@
+\title{Conjugate matrices have the same characteristic polynomial}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Conjugate matrices have the same characteristic polynomial:}
+
+##{\det(P^{-1}AP - \lambda I) = \det(P^{-1}(A - \lambda I)P) = \det(A - \lambda I).}

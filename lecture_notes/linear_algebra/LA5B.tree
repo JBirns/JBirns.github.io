@@ -1,0 +1,9 @@
+\title{The matrix #{A - \lambda I}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{A - \lambda I = \begin{pmatrix} a_{11} - \lambda & & a_{ij} \\ & a_{22} - \lambda & \\ a_{ij} & & \ddots \\ & & & a_{nn} - \lambda \end{pmatrix}.}
+
+\p{The fact that #{\det(A - \lambda I)} is a polynomial in #{\lambda} follows from the very definition of #{\det}.}

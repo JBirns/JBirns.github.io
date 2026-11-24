@@ -1,0 +1,7 @@
+\title{Cycle type}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\sigma \in S_n} and write #{\sigma} as a product of disjoint cycles, including #{1}-cycles. Then the \em{cycle type} of #{\sigma} is #{(n_1, n_2, \ldots, n_k)} where #{n_1 \geq n_2 \geq \cdots \geq n_k \geq 1} and the cycles in #{\sigma} have lengths #{n_i}.}

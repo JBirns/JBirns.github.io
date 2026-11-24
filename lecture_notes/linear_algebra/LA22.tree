@@ -1,0 +1,11 @@
+\title{Columns of the matrix of a linear map}
+\taxon{Observation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{[\alpha]_{\mathcal{B},\mathcal{C}} = (a_{ij})_{1 \leq i \leq m,\, 1 \leq j \leq n}} where, by definition, for #{1 \leq j \leq n},}
+
+##{\alpha(v_j) = \sum_{i=1}^m a_{ij}w_i.}
+
+\p{So column #{j} holds the coordinates of #{\alpha(v_j)} with respect to #{w_1, \ldots, w_m}.}

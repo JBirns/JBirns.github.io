@@ -1,0 +1,11 @@
+\title{of Steinitz}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional vector space over #{F}. Then any two bases of #{V} have the same number of vectors, called the \em{dimension} of #{V}, #{\dim_F V \in \mathbb{N}}.}
+
+\proof{
+\p{Let #{(v_1, \ldots, v_n)}, #{(w_1, \ldots, w_m)} be two different bases of #{V}. Since #{(v_i)_{1 \leq i \leq n}} is free and #{(w_i)_{1 \leq i \leq m}} is generating, \ref{LA0W} gives #{n \leq m}. Similarly #{(w_i)} free and #{(v_i)} generating gives #{m \leq n}. Hence #{n = m}.}
+}

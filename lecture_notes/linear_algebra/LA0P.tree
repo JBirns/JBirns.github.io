@@ -1,0 +1,7 @@
+\title{Free families contain no zero vector}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{(v_i)_{1 \leq i \leq n}} is a free family (#{\iff} linearly independent) then #{v_i \neq 0} for all #{1 \leq i \leq n}.}

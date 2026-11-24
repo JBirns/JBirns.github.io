@@ -1,0 +1,7 @@
+\title{Jordan block}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{J_\lambda = \begin{pmatrix} \lambda & 1 & & 0 \\ & \ddots & \ddots & \\ & & \ddots & 1 \\ 0 & & & \lambda \end{pmatrix} \in M_n(F)}. Check: #{g_\lambda = 1}, #{a_\lambda = n}, #{c_\lambda = n}.}

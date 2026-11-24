@@ -1,0 +1,13 @@
+\title{Examples of orbits}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Trivial action: #{\operatorname{Orb}_G(x) = \lbrace x\rbrace }.}
+\li{\strong{(ii)} #{S_n} acting on #{\lbrace 1, 2, \ldots, n\rbrace  = X}: #{\operatorname{Orb}_G(1) = X}. If #{H = \langle (1\,2)(3\,4\,5) \rangle} acting on #{X = \lbrace 1, 2, 3, 4, 5\rbrace }: #{\operatorname{Orb}_H(1) = \lbrace 1, 2\rbrace }, #{\operatorname{Orb}_H(3) = \lbrace 3, 4, 5\rbrace }.}
+\li{\strong{(iii)} #{D_8} on the edges of a square: #{\operatorname{Orb}_{D_8}(a) = \lbrace a, b, c, d\rbrace }.}
+\li{\strong{(iv)} Left regular action: #{\operatorname{Orb}_G(k) = G} since #{g = g(k^{-1}k) = (gk^{-1})k} for any #{g \in G}.}
+\li{\strong{(v)} Conjugation: #{\operatorname{Orb}_G(k) = \lbrace gkg^{-1} : g \in G\rbrace  = \operatorname{ccl}_G(k)}, the \em{conjugacy class of #{k} in #{G}}. If #{h \in \operatorname{ccl}_G(k)} we say #{h} and #{k} are \em{conjugate}.}
+}

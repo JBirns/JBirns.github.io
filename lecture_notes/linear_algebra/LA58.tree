@@ -1,0 +1,11 @@
+\title{Polynomials agreeing at many points}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{f_1, f_2} are polynomials of degree #{< n} s.t. #{f_1(t_i) = f_2(t_i)} for #{n} distinct values #{(t_i)_{1 \leq i \leq n}}, then #{f_1 \equiv f_2}.}
+
+\proof{
+\p{#{f_1 - f_2} has degree #{< n} and at least #{n} roots, so #{f_1 - f_2 = 0}.}
+}

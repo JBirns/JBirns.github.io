@@ -1,0 +1,12 @@
+\title{Sesquilinear form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be #{\mathbb{C}}-vector spaces. A \em{sesquilinear form} #{\phi} is a function #{\phi \colon V \times W \to \mathbb{C}} s.t.}
+
+\ul{
+\li{\strong{(i)} #{\phi(\lambda_1v_1 + \lambda_2v_2, w) = \lambda_1\phi(v_1, w) + \lambda_2\phi(v_2, w)};}
+\li{\strong{(ii)} #{\phi(v, \lambda_1w_1 + \lambda_2w_2) = \bar{\lambda}_1\phi(v, w_1) + \bar{\lambda}_2\phi(v, w_2)} (antilinear with respect to the 2nd coordinate).}
+}

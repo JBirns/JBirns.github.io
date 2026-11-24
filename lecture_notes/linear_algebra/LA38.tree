@@ -1,0 +1,38 @@
+\title{Kernel and image of the dual map}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F}. Let #{\alpha \in \mathcal{L}(V, W)} and let #{\alpha^* \in \mathcal{L}(W^*, V^*)} be the dual map. Then:}
+
+\ul{
+\li{\strong{(i)} #{N(\alpha^*) = (\operatorname{Im}\alpha)^0}, the annihilator of #{\operatorname{Im}\alpha} (so #{\alpha^*} injective #{\iff \alpha} surjective);}
+\li{\strong{(ii)} #{\operatorname{Im}(\alpha^*) \leq (N(\alpha))^0}, with equality if #{V, W} are finite dimensional (hence in this case, #{\alpha^*} surjective #{\iff \alpha} injective).}
+}
+
+\proof{
+\p{(i) Let #{\varepsilon \in W^*}. Then}
+
+##{\begin{aligned}
+\varepsilon \in N(\alpha^*) &\iff \alpha^*(\varepsilon) = 0 \iff \varepsilon \circ \alpha = 0 \\
+&\iff \forall x \in V,\; \varepsilon(\alpha(x)) = 0 \\
+&\iff \varepsilon \in (\operatorname{Im}\alpha)^0.
+\end{aligned}}
+
+\p{(ii) Let us first show that #{\operatorname{Im}(\alpha^*) \leq (N(\alpha))^0}. Indeed, let #{\varepsilon \in \operatorname{Im}(\alpha^*)}, so #{\varepsilon = \alpha^*(\phi)}, #{\phi \in W^*}. Then for all #{u \in N(\alpha)},}
+
+##{\varepsilon(u) = \alpha^*(\phi)(u) = \phi \circ \alpha(u) = \phi(\alpha(u)) = 0}
+
+\p{by definition of #{\alpha^*} and since #{u \in N(\alpha)}. So #{\varepsilon \in (N(\alpha))^0}.}
+
+\p{In finite dimension we can compare dimensions:}
+
+##{\dim(\operatorname{Im}\alpha^*) = r(\alpha^*) = r\big( [\alpha^*]_{\mathcal{C}^*,\mathcal{B}^*} \big) = r\big( [\alpha]_{\mathcal{B},\mathcal{C}}^T \big) = r\big( [\alpha]_{\mathcal{B},\mathcal{C}} \big) = r(\alpha),}
+
+\p{since #{r(A) = r(A^T)} (\ref{LA2M}). Hence}
+
+##{\dim(\operatorname{Im}\alpha^*) = r(\alpha) = \dim V - \dim N(\alpha) = \dim\big( (N(\alpha))^0 \big)}
+
+\p{by rank–nullity and \ref{LA33}. Since #{\operatorname{Im}(\alpha^*) \leq (N(\alpha))^0} with equal dimensions, #{\operatorname{Im}(\alpha^*) = (N(\alpha))^0}.}
+}

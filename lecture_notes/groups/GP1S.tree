@@ -1,0 +1,11 @@
+\title{Quotients are homomorphic images}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{K \trianglelefteq G}. Then #{K} is the kernel of the natural surjective homomorphism}
+
+##{\theta \colon G \to G/K, \quad g \mapsto gK.}
+
+\p{“A quotient is the image of a homomorphism.” Thus homomorphic images of #{G} are equivalent (isomorphic) to quotients of #{G}.}

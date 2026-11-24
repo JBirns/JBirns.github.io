@@ -1,0 +1,7 @@
+\title{Characterisation of the determinant}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\det} is the only volume form s.t. #{d(e_1, \ldots, e_n) = 1}.}

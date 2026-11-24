@@ -1,0 +1,12 @@
+\title{Conjugacy classes in #{\mathcal{M}}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Any non-identity Möbius map is conjugate to one of}
+
+\ul{
+\li{\strong{(i)} #{z \mapsto \nu z}, #{\nu \neq 0, 1};}
+\li{\strong{(ii)} #{z \mapsto z + 1}.}
+}

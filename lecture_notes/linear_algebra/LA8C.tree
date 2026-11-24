@@ -1,0 +1,33 @@
+\title{Eigenvalues of unitary maps}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a \em{complex} inner product space (Hermitian sesquilinear structure) and #{\alpha \in \mathcal{L}(V)} unitary (#{\alpha^* = \alpha^{-1}}). Then:}
+
+\ul{
+\li{\strong{(i)} all the evals of #{\alpha} lie on the unit circle;}
+\li{\strong{(ii)} evecs of #{\alpha} with respect to different evals are orthogonal.}
+}
+
+\proof{
+\p{(i) Let #{\alpha v = \lambda v}, #{v \in V \setminus \lbrace 0\rbrace }, #{\lambda \in \mathbb{C}}.}
+
+\ul{
+\li{#{\lambda \neq 0}: #{\alpha} unitary #{\implies \alpha} invertible, so its kernel is trivial, and a nontrivial evec cannot be in #{\operatorname{Ker}\alpha}.}
+\li{\p{#{\lambda\langle v, v \rangle = \lambda\Vert v\Vert ^2}, and}
+##{\langle \lambda v, v \rangle = \langle \alpha v, v \rangle = \langle v, \alpha^*v \rangle = \langle v, \alpha^{-1}v \rangle = \langle v, \lambda^{-1}v \rangle = \bar{\lambda}^{-1}\langle v, v \rangle.}}
+}
+
+\p{Therefore #{\lambda\Vert v\Vert ^2 = \dfrac{1}{\bar{\lambda}}\Vert v\Vert ^2} with #{v \neq 0}, so #{\lambda\bar{\lambda} = 1}, i.e. #{|\lambda| = 1}.}
+
+\p{(ii) Let #{\alpha v = \lambda v}, #{\alpha w = \mu w}, #{\lambda, \mu \neq 0}, #{\lambda \neq \mu}. Then}
+
+##{\begin{aligned}
+\lambda\langle v, w \rangle = \langle \lambda v, w \rangle = \langle \alpha v, w \rangle &= \langle v, \alpha^*w \rangle = \langle v, \alpha^{-1}w \rangle \\
+&= \Big\langle v, \frac{1}{\mu}w \Big\rangle = \frac{1}{\bar{\mu}}\langle v, w \rangle = \mu\langle v, w \rangle
+\end{aligned}}
+
+\p{by (i). So #{(\lambda - \mu)\langle v, w \rangle = 0} with #{\lambda \neq \mu}, hence #{\langle v, w \rangle = 0}.}
+}

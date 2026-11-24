@@ -1,0 +1,31 @@
+\title{Triangulability criterion}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\alpha \in \mathcal{L}(V)} is triangulable #{\iff \chi_\alpha} can be written as a product of linear factors over #{F}:}
+
+##{\chi_\alpha(t) = c\prod_{i=1}^n (t - \lambda_i).}
+
+\p{#{\leadsto} If #{F = \mathbb{C}}, any matrix is triangulable.}
+
+\proof{
+\p{(#{\Rightarrow}) Suppose #{\alpha} is triangulable; then}
+
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} a_1 & & * \\ & \ddots & \\ 0 & & a_n \end{pmatrix} \implies \chi_\alpha(t) = \det\begin{pmatrix} a_1 - t & & * \\ & \ddots & \\ 0 & & a_n - t \end{pmatrix} = \prod_{i=1}^n (a_i - t).}
+
+\p{(#{\Leftarrow}) We argue by induction on #{n = \dim V}. For #{n = 1} there is nothing to prove. For #{n > 1}: by assumption, #{\chi_\alpha(t)} has a root #{\lambda}. Then #{\chi_\alpha(\lambda) = 0 \iff \lambda} is an eval of #{\alpha} (\ref{LA54}). Let #{U = V_\lambda} be the associated espace, #{\lbrace 0\rbrace  \lneq U}. Let #{(v_1, \ldots, v_k)} be a basis of #{U}, and complete it with #{(v_{k+1}, \ldots, v_n)} to a basis of #{V}. Let #{W = \operatorname{span}(v_{k+1}, \ldots, v_n)}, so #{V = U \oplus W}. Then}
+
+##{[\alpha]_{\mathcal{B}} = \begin{pmatrix} \lambda I_k & * \\ 0 & C \end{pmatrix},}
+
+\p{where #{\alpha} induces an endomorphism #{\bar{\alpha} \colon V/U \to V/U} and #{C = [\bar{\alpha}]_{\bar{\mathcal{B}}}}, #{\bar{\mathcal{B}} = (v_{k+1} + U, \ldots, v_n + U)}. Then (block product, \ref{LA4M})}
+
+##{\det(\alpha - tI) = \det\begin{pmatrix} (\lambda - t)I_k & * \\ 0 & C - tI \end{pmatrix} = (\lambda - t)^k\det(C - tI) = c\prod_{i=1}^n (t - a_i)}
+
+\p{by assumption, so #{\det(C - tI) = \tilde{c}\prod_{i=k+1}^n (t - \tilde{a}_i)} (because it is a polynomial). We use the induction hypothesis, because #{\dim V/U = \dim V - \dim U < \dim V}: there is a basis #{\tilde{\mathcal{B}} = (\tilde{v}_{k+1}, \ldots, \tilde{v}_n)} of #{W} (representing a basis of #{V/U}) in which}
+
+##{[C]_W = \begin{pmatrix} \tilde{a}_{k+1} & & * \\ & \ddots & \\ 0 & & \tilde{a}_n \end{pmatrix}.}
+
+\p{Then #{V = U \oplus W} and #{\hat{\mathcal{B}} = (v_1, \ldots, v_k, \tilde{v}_{k+1}, \ldots, \tilde{v}_n)} is a basis of #{V} in which #{[\alpha]_{\hat{\mathcal{B}}}} is in triangular form.}
+}

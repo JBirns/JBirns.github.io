@@ -1,0 +1,23 @@
+\title{The general linear group}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{GL_n(\mathbb{R})} is a group under matrix multiplication. It is called the \em{general linear group}.}
+
+\proof{
+\p{\em{Closure:} for #{A, B \in GL_n(\mathbb{R})}, clearly #{AB \in M_n(\mathbb{R})} and}
+
+##{\det(AB) = \det A\det B \neq 0,}
+
+\p{, so #{AB \in GL_n(\mathbb{R})}.}
+
+\p{\em{Identity:} #{I_n = \begin{pmatrix} 1 & & 0 \\ & \ddots & \\ 0 & & 1 \end{pmatrix} \in GL_n(\mathbb{R})}.}
+
+\p{\em{Inverse:} #{\det A \neq 0 \Rightarrow A^{-1}} exists, and #{\det(A^{-1}) = \frac{1}{\det A} \neq 0}.}
+
+\p{\em{Associativity:} matrix multiplication is associative (summation convention):}
+
+##{(A(BC))_{ij} = A_{ik}(BC)_{kj} = A_{ik}B_{kl}C_{lj} = (AB)_{il}C_{lj} = ((AB)C)_{ij}.}
+}

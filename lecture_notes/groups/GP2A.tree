@@ -1,0 +1,14 @@
+\title{Remarks on the permutation representation}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} \ref{GP29} gives us an equivalent definition of a group action. If #{G} is a group and #{X} is a set s.t. #{\Phi \colon G \to \mathrm{Sym}(X)} is a group homomorphism, then}
+##{\rho \colon G \times X \to X, \quad (g, x) \mapsto \phi_g(x) \text{ where } \Phi(g) = \phi_g}
+\p{is a group action. (Only one direction was proved here.)}}
+\li{\p{\strong{(ii)} Using the notation of \ref{GP29}, by the First Isomorphism Theorem #{G/\ker\Phi \cong \operatorname{Im}\Phi \leq \mathrm{Sym}(X)}. Note}
+##{\ker\Phi = \lbrace g \in G : \Phi(g) = \mathrm{id}_X\rbrace  = \lbrace g \in G : \phi_g(x) = \rho(g, x) = x\; \forall x \in X\rbrace  \trianglelefteq G,}
+\p{i.e. all those elements that fix every element of #{X}, that act “trivially”.}}
+}

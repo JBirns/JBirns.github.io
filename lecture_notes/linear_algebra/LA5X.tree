@@ -1,0 +1,26 @@
+\title{Characterisation of diagonalisable endomorphisms over #{F = \mathbb{C}}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F = \mathbb{C}}, #{\dim_F V < +\infty} and #{\alpha \in \mathcal{L}(V)}. The following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{\alpha} is diagonalisable;}
+\li{\strong{(ii)} for all evals #{\lambda} of #{\alpha}, #{a_\lambda = g_\lambda};}
+\li{\strong{(iii)} for all evals #{\lambda} of #{\alpha}, #{c_\lambda = 1}.}
+}
+
+\proof{
+\p{(i) #{\iff} (iii) is done (\ref{LA5H} with \ref{LA5M}). We need (i) #{\iff} (ii). Indeed, let #{(\lambda_1, \ldots, \lambda_k)} be the distinct evals of #{\alpha}. We showed}
+
+##{\alpha \text{ diagonalisable} \iff V = \bigoplus_{i=1}^k V_{\lambda_i} \quad \text{(the sum is always direct)}.}
+
+\p{Now #{\dim V = n = \deg\chi_\alpha = \sum_{i=1}^k a_{\lambda_i}}, where #{\chi_\alpha(t) = (-1)^n\prod (t - \lambda_i)^{a_{\lambda_i}}}, and #{\dim \bigoplus V_{\lambda_i} = \sum g_{\lambda_i}}. So}
+
+##{\alpha \text{ diagonalisable} \iff \sum_{i=1}^k a_{\lambda_i} = \sum_{i=1}^k g_{\lambda_i}.
+ \qquad (*)}
+
+\p{We know #{g_{\lambda_i} \leq a_{\lambda_i}} for all #{1 \leq i \leq k}. Hence (#{*}) holds #{\iff a_{\lambda_i} = g_{\lambda_i}} for all #{1 \leq i \leq k}.}
+}

@@ -1,0 +1,11 @@
+\title{Similar matrices have the same trace}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Similar matrices have the same trace.}
+
+\proof{
+\p{#{\operatorname{Tr}(P^{-1}AP) = \operatorname{Tr}(APP^{-1}) = \operatorname{Tr}(A)}.}
+}

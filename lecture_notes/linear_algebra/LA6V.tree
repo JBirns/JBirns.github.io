@@ -1,0 +1,11 @@
+\title{Isotropic subspaces}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{F = \mathbb{R}}, one notices that there is a subspace #{T} of dimension #{n - (p + q) + \min\lbrace p, q\rbrace } s.t. #{\phi|_T = 0}. Indeed, take #{\mathcal{B} = (v_1, \ldots, v_n)} with #{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_p & & \\ & -I_q & \\ & & 0 \end{pmatrix}}, and when #{p \geq q},}
+
+##{T = \langle \underbrace{v_1 + v_{p+1}, \ldots, v_q + v_{p+q}}_{q}, \underbrace{v_{p+q+1}, \ldots, v_n}_{n - p - q} \rangle.}
+
+\p{Check: #{\phi|_T = 0} (for all #{(u, v) \in T \times T}, #{\phi(u, v) = 0}). Moreover, one could show that this is the largest dimension of a subspace #{T'} on which #{\phi|_{T' \times T'} = 0}.}

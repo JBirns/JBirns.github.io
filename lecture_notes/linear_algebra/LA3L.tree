@@ -1,0 +1,16 @@
+\title{Matrices of #{\phi_L} and #{\phi_R}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B} = (e_1, \ldots, e_m)} be a basis of #{U} with dual basis #{\mathcal{B}^* = (\varepsilon_1, \ldots, \varepsilon_m)} of #{U^*}, and #{\mathcal{C} = (f_1, \ldots, f_n)} a basis of #{V} with dual basis #{\mathcal{C}^* = (\eta_1, \ldots, \eta_n)} of #{V^*}. Let #{A = [\phi]_{\mathcal{B},\mathcal{C}}}. Then}
+
+##{[\phi_R]_{\mathcal{C},\mathcal{B}^*} = A, \qquad [\phi_L]_{\mathcal{B},\mathcal{C}^*} = A^T.}
+
+\proof{
+\ul{
+\li{#{\phi_L(e_i)(f_j) = \phi(e_i, f_j) = A_{ij}}, so #{\phi_L(e_i) = \sum_j A_{ij}\eta_j}.}
+\li{#{\phi_R(f_j)(e_i) = \phi(e_i, f_j) = A_{ij}}, so #{\phi_R(f_j) = \sum_i A_{ij}\varepsilon_i}.}
+}
+}

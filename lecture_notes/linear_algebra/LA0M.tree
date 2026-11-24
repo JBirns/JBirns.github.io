@@ -1,0 +1,9 @@
+\title{Linearly independent}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We say that #{(v_1, \ldots, v_n) \in V} are \em{linearly independent} if}
+
+##{\sum_{i=1}^n \lambda_iv_i = 0,\; \lambda_i \in F \implies \lambda_1 = \cdots = \lambda_n = 0.}

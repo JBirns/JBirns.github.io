@@ -1,0 +1,15 @@
+\title{The double annihilator}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional vector space over #{F} and #{U \leq V}. Then #{\hat{U} = U^{00}}, where #{\hat{U}} is the image of #{U} by the #{\hat{\; }} map. So after identification of #{V} and #{V^{**}}, we have}
+
+##{\boxed{U = U^{00}}.}
+
+\proof{
+\p{Let us show that #{\hat{U} \leq U^{00}}. Indeed, let #{u \in U}. Then for all #{\varepsilon \in U^0}, #{\varepsilon(u) = 0} (definition of #{U^0}), so for all #{\varepsilon \in U^0}, #{\hat{u}(\varepsilon) = \varepsilon(u) = 0}. Hence #{\hat{u} \in U^{00}}, so #{\hat{U} \subset U^{00}}.}
+
+\p{Compute dimensions: #{\dim(U^{00}) = \dim V^* - \dim U^0 = \dim V - (\dim V - \dim U) = \dim U = \dim\hat{U}}.}
+}

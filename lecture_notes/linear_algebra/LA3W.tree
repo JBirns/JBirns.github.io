@@ -1,0 +1,9 @@
+\title{Trace}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)} (#{= M_{n \times n}(F)}, a square matrix), #{A = (A_{ij})_{1 \leq i,j \leq n}}. We define the \em{trace} of #{A}:}
+
+##{\operatorname{tr}A = \sum_{i=1}^n A_{ii}.}

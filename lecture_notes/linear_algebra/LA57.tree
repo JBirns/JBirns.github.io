@@ -1,0 +1,11 @@
+\title{Number of roots of a polynomial}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A non-zero polynomial of degree #{n} (#{\geq 0}) has at most #{n} roots (counted with multiplicity).}
+
+\proof{
+\p{Induction on the degree #{\leadsto} exercise.}
+}

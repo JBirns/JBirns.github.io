@@ -1,0 +1,51 @@
+\title{Eigenvectors, Eigenvalues and Triangular Matrices}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\leadsto} First step towards the diagonalisation of endomorphisms. Let #{V} be a vector space over #{F}, #{\dim_F V = n < \infty}, and #{\alpha \colon V \to V} linear, an endomorphism of #{V}.}
+
+\p{\strong{General problem.} Can we find a basis #{\mathcal{B}} of #{V} s.t. in this basis, #{[\alpha]_{\mathcal{B}} \coloneqq [\alpha]_{\mathcal{B},\mathcal{B}}} has a “nice” form?}
+
+\p{Reminder: if #{\mathcal{B}'} is another basis of #{V} and #{P} the change of basis matrix, #{[\alpha]_{\mathcal{B}'} = P^{-1}[\alpha]_{\mathcal{B}}P}. Equivalently: given a square matrix, is it conjugate to a matrix with a “simple” form?}
+
+\transclude{LA50}
+
+\transclude{LA51}
+
+\transclude{LA52}
+
+\transclude{LA53}
+
+\transclude{LA54}
+
+\transclude{LA55}
+
+\p{\strong{Elementary facts about polynomials}}
+
+\p{We will study #{P(\alpha)} where #{P} is a polynomial and #{\alpha \in \mathcal{L}(V)}.}
+
+\ul{
+\li{#{F} a field; #{f(t) = a_nt^n + a_{n-1}t^{n-1} + \cdots + a_1t + a_0}, #{a_i \in F}. The largest exponent #{n} s.t. #{a_n \neq 0} is #{n = \deg f}.}
+\li{#{\deg(f + g) \leq \max\lbrace \deg f, \deg g\rbrace }, #{\deg(fg) = \deg f + \deg g}.}
+\li{#{F[t] \coloneqq \lbrace \text{polynomials with coefficients in } F\rbrace }.}
+\li{#{\lambda} is a \em{root} of #{f(t) \iff f(\lambda) = 0}.}
+}
+
+\transclude{LA56}
+
+\transclude{LA57}
+
+\transclude{LA58}
+
+\transclude{LA59}
+
+\transclude{LA5A}
+
+\transclude{LA5B}
+
+\transclude{LA5C}
+
+\transclude{LA5D}
+
+\transclude{LA5E}

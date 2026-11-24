@@ -1,0 +1,13 @@
+\title{The quotient is a vector space}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{V/U} is an #{F}-vector space.}
+
+\proof{
+\p{\em{Comment.} The multiplication (#{*}) is well-defined: if #{v_1 + U = v_2 + U} then #{v_1 - v_2 \in U}, so #{\lambda(v_1 - v_2) \in U}, so #{\lambda v_1 + U = \lambda v_2 + U \in V/U}.}
+
+\p{\strong{Exercise:} prove that #{V/U} is an #{F}-vector space.}
+}

@@ -4,7 +4,7 @@
 \import{macros}
 \import{names}
 
-\p{These notes are based on lectures I have attended and are not endorsed by the lecturers. Any changes, and in particular, all errors, are almost surely mine.}
+\p{These notes are based on lectures I have attended and are not endorsed by the lecturers. Any changes, and in particular, all errors, are almost surely mine. None of the content was written with generative AI.}
 
 \transclude{\camIA}
 

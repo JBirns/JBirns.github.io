@@ -1,0 +1,16 @@
+\title{Rotations in 3D have an axis}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in SO_3(\mathbb{R})}. Then #{A} has an eigenvector with eigenvalue #{1}.}
+
+\proof{
+##{\begin{aligned}
+\det(A - I) &= \det(A - AA^T) = \det A\,\det(I - A^T) = \det(I - A^T) \\
+&= \det((I - A)^T) = \det(I - A) = (-1)^3\det(A - I) = -\det(A - I),
+\end{aligned}}
+
+\p{so #{\det(A - I) = 0} and #{A} has eigenvalue #{1}.}
+}

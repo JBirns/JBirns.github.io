@@ -1,0 +1,11 @@
+\title{Invertible matrices are non-singular}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{A} is invertible, then #{A} is non-singular.}
+
+\proof{
+\p{#{A} is invertible, so there exists #{A^{-1}} with #{AA^{-1} = A^{-1}A = I_n}. Hence #{\det(AA^{-1}) = \det(I_n) = 1}, so #{\det A\det(A^{-1}) = 1}, so #{\det A \neq 0}.}
+}

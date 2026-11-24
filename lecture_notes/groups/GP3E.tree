@@ -1,0 +1,20 @@
+\title{Orthogonal matrices are isometries}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in O_n(\mathbb{R})} and #{\mathbf{x}, \mathbf{y} \in \mathbb{R}^n}. Then}
+
+\ul{
+\li{\strong{(i)} #{A\mathbf{x} \cdot A\mathbf{y} = \mathbf{x} \cdot \mathbf{y}};}
+\li{\strong{(ii)} #{|A\mathbf{x}| = |\mathbf{x}|}.}
+}
+
+\p{So #{A} is an isometry (distance preserving map) of Euclidean space #{\mathbb{R}^n}.}
+
+\proof{
+\p{(i) #{A\mathbf{x} \cdot A\mathbf{y} = (A\mathbf{x})^T(A\mathbf{y}) = \mathbf{x}^TA^TA\mathbf{y} = \mathbf{x}^T\mathbf{y} = \mathbf{x} \cdot \mathbf{y}}.}
+
+\p{(ii) #{|A\mathbf{x}|^2 = A\mathbf{x} \cdot A\mathbf{x} = \mathbf{x} \cdot \mathbf{x} = |\mathbf{x}|^2}.}
+}

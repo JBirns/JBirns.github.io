@@ -1,0 +1,15 @@
+\title{#{A_5} is simple}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{A_5} is a simple group.}
+
+\proof{
+\p{Suppose #{N \trianglelefteq A_5}. Then #{N} is a union of conjugacy classes (Sheet 3, Q3), so}
+
+##{|N| = 1 + 15a + 20b + 12c,}
+
+\p{where #{a, b \in \lbrace 0, 1\rbrace }, #{c \in \lbrace 0, 1, 2\rbrace } (since the class of #{5}-cycles splits in two). But by Lagrange #{|N|} divides #{|A_5| = 60}. The only possibility is #{|N| = 1} or #{60}.}
+}

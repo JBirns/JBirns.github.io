@@ -1,0 +1,9 @@
+\title{Skew-symmetric}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A bilinear form #{\phi \colon V \times V \to \mathbb{R}} is \em{skew-symmetric} if}
+
+##{\phi(u, v) = -\phi(v, u) \quad \forall (u, v) \in V \times V.}

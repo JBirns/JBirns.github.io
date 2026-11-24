@@ -1,0 +1,10 @@
+\title{#{p}-groups}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} A group of order #{p^n} for a prime #{p} is called a \em{finite #{p}-group}.}
+\li{\strong{(ii)} If all elements have #{p}-power order, #{G} is called a \em{#{p}-group}, e.g. #{C_{p^\infty}}, the Prüfer group.}
+}

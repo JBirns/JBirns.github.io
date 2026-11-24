@@ -1,0 +1,11 @@
+\title{Signature}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Under the assumptions above (real and symmetric), we define}
+
+##{s(\phi) = p - q,}
+
+\p{the \em{signature} of #{\phi}. (We also speak of the signature of the associated quadratic form #{Q(u) = \phi(u, u)}.)}

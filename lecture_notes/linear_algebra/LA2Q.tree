@@ -1,0 +1,13 @@
+\title{Elementary column operations}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{elementary column operations} on an #{m \times n} matrix #{A} are:}
+
+\ul{
+\li{\strong{(i)} swap columns #{i} and #{j} (#{i \neq j});}
+\li{\strong{(ii)} replace column #{i} by #{\lambda \times} column #{i} (#{\lambda \neq 0}, #{\lambda \in F});}
+\li{\strong{(iii)} add #{\lambda \times} (column #{i}) to column #{j} (#{i \neq j}).}
+}

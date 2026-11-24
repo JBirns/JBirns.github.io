@@ -1,0 +1,14 @@
+\title{Orthogonal direct sum}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an inner product space and #{V_1, V_2 \leq V}. We say that #{V} is the \em{orthogonal direct sum} of #{V_1} and #{V_2} if}
+
+\ul{
+\li{\strong{(i)} #{V = V_1 \oplus V_2};}
+\li{\strong{(ii)} for all #{(v_1, v_2) \in V_1 \times V_2}, #{\langle v_1, v_2 \rangle = 0}.}
+}
+
+\p{Notation: #{V = V_1 \overset{\perp}{\oplus} V_2}.}

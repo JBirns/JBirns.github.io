@@ -1,0 +1,34 @@
+\title{Generalised eigenspace decomposition}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\dim_{\mathbb{C}} V = n < +\infty} and #{\alpha \in \mathcal{L}(V)}, with #{m_\alpha(t) = (t - \lambda_1)^{c_1} \cdots (t - \lambda_k)^{c_k}}, where #{\lambda_1, \ldots, \lambda_k} are the distinct evals of #{\alpha}. Then}
+
+##{V = \bigoplus_{j=1}^k V_j, \qquad V_j = \operatorname{Ker}\big[ (\alpha - \lambda_j\mathrm{Id})^{c_j} \big],}
+
+\p{where #{V_j} is the \em{generalised eigenspace}.}
+
+\proof{
+\p{The projectors onto the #{V_j} are explicit. Indeed, let}
+
+##{p_j(t) = \prod_{i \neq j} (t - \lambda_i)^{c_i}.}
+
+\p{Then the #{p_j} polynomials have no common factor, so by Euclid’s algorithm we can find polynomials #{q_1, \ldots, q_k} s.t.}
+
+##{\sum_{i=1}^k p_iq_i = 1.
+ \qquad (*)}
+
+\p{We define #{\pi_j = q_jp_j(\alpha)}.}
+
+\ul{
+\li{\strong{(i)} By (#{*}), #{\mathrm{Id} = \sum_{j=1}^k q_jp_j(\alpha) = \sum_{j=1}^k \pi_j}, so for all #{v \in V}, #{v = \sum_{j=1}^k \pi_j(v)}.}
+\li{\p{\strong{(ii)} Since #{m_\alpha(\alpha) = 0} with #{m_\alpha = \prod_{j=1}^k (t - \lambda_j)^{c_j}},}
+##{(\alpha - \lambda_j\mathrm{Id})^{c_j}\pi_j = (\alpha - \lambda_j\mathrm{Id})^{c_j}q_jp_j(\alpha) = q_j(\alpha)m_\alpha(\alpha) = 0,}
+\p{so for all #{v \in V}, #{\pi_j(v) \in V_j = \operatorname{Ker}(\alpha - \lambda_j\mathrm{Id})^{c_j}}. Hence for all #{v \in V}, #{v = \sum_{j=1}^k \underbrace{\pi_j(v)}_{\in V_j}}, so #{V = \sum_{j=1}^k V_j}.}}
+\li{\p{\strong{(iii)} We show that #{\sum_{j=1}^k V_j = \bigoplus_{j=1}^k V_j}. Indeed, #{\pi_i\pi_j = 0} if #{i \neq j} (the product contains #{m_\alpha(\alpha)} as a factor), and}
+##{\pi_i = \pi_i\underbrace{\Big( \sum_{j=1}^k \pi_j \Big)}_{\mathrm{Id}} = \pi_i^2 \quad \text{(the projector property)},}
+\p{so #{\pi_i|_{V_i} = \mathrm{Id}} (as #{\pi_j|_{V_i} = 0} for #{j \neq i}, since #{p_j} contains the factor #{(t - \lambda_i)^{c_i}}). The direct sum property follows: if #{v \in V_i \cap \big( \sum_{j \neq i} V_j \big)}, then #{v = \sum_{j \neq i} v_j}, #{v_j \in V_j}; apply #{\pi_i} and use #{\pi_i|_{V_i} = \mathrm{Id}} and #{\pi_i|_{V_j} = 0} for #{j \neq i} to get #{v = 0}.}}
+}
+}

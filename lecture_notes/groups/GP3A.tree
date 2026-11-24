@@ -1,0 +1,17 @@
+\title{Actions of #{GL_n(\mathbb{C})}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} Let #{\mathbb{C}^n} denote vectors of length #{n} with entries in #{\mathbb{C}}:}
+##{GL_n(\mathbb{C}) \times \mathbb{C}^n \to \mathbb{C}^n, \quad (A, \mathbf{v}) \mapsto A\mathbf{v}.}
+\p{Note #{I\mathbf{v} = \mathbf{v}}, #{(AB)\mathbf{v} = A(B\mathbf{v})}. This action is faithful: #{A\mathbf{v} = \mathbf{v}} for all #{\mathbf{v} \in \mathbb{C}^n \Rightarrow A = I_n} (consider #{A\mathbf{e}_1, A\mathbf{e}_2, \ldots}). The action has two orbits:}
+##{\operatorname{Orb}_{GL_n(\mathbb{C})}(\mathbf{0}) = \lbrace \mathbf{0}\rbrace ; \qquad \mathbf{v} \neq \mathbf{0},\; \operatorname{Orb}_{GL_n(\mathbb{C})}(\mathbf{v}) = \mathbb{C}^n \setminus \lbrace \mathbf{0}\rbrace ,}
+\p{i.e. given #{\mathbf{w} \neq \mathbf{0}} there exists #{A \in GL_n(\mathbb{C})} s.t. #{A\mathbf{v} = \mathbf{w}}.}}
+\li{\p{\strong{(ii)} Conjugation action of #{GL_n(\mathbb{C})} on #{M_n(\mathbb{C})}:}
+##{GL_n(\mathbb{C}) \times M_n(\mathbb{C}) \to M_n(\mathbb{C}), \quad (P, A) \mapsto PAP^{-1}.}
+\p{Note #{PQ(A) = (PQ)A(PQ)^{-1} = PQAQ^{-1}P^{-1} = P(Q(A))}}
+\p{.}}
+}

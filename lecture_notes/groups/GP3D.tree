@@ -1,0 +1,17 @@
+\title{The orthogonal group}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{O_n(\mathbb{R})} is a subgroup of #{GL_n(\mathbb{R})}, called the \em{orthogonal group}.}
+
+\proof{
+\p{#{1 = \det(A^TA) = \det(A^T)\det A = (\det A)^2 \Rightarrow \det A \neq 0}, so #{O_n(\mathbb{R})} is a subset of #{GL_n(\mathbb{R})}; associativity is inherited.}
+
+\ul{
+\li{#{I_n \in O_n(\mathbb{R})}.}
+\li{Closure: for #{A, B \in O_n(\mathbb{R})}, #{(AB)^TAB = B^TA^TAB = B^TB = I}, so #{AB \in O_n(\mathbb{R})}.}
+\li{Inverse: #{A^TA = I_n \Rightarrow A^T = A^{-1}}, and #{A^T \in O_n(\mathbb{R})} since #{(A^T)^T = A} and #{AA^T = I}.}
+}
+}

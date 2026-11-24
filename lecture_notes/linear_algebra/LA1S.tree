@@ -1,0 +1,17 @@
+\title{Injective, surjective, bijective in equal dimension}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F} of \em{equal} finite dimension, and #{\alpha \colon V \to W} a linear map. Then the following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{\alpha} is injective;}
+\li{\strong{(ii)} #{\alpha} is surjective;}
+\li{\strong{(iii)} #{\alpha} is an isomorphism.}
+}
+
+\proof{
+\p{It is clear that (iii) #{\Rightarrow} (i), (ii) and that (i), (ii) together #{\Rightarrow} (iii), so it suffices to show (i) and (ii) are equivalent. Note that #{\alpha} is injective iff #{n(\alpha) = 0}, and #{\alpha} is surjective iff #{r(\alpha) = \dim W = n}. By the rank–nullity theorem, #{n(\alpha) + r(\alpha) = n}, so the result follows immediately.}
+}

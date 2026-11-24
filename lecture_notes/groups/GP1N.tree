@@ -1,0 +1,23 @@
+\title{Quotient group}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{K \trianglelefteq G}, the set #{(G : K)} of left cosets of #{K} in #{G} is a group under coset multiplication, i.e. #{gK \circ hK = ghK}. This group is called the \em{quotient group} (or \em{factor group}) of #{G} by #{K} and is denoted #{G/K}.}
+
+\proof{
+\p{We need to check that coset multiplication is well defined, i.e. if #{gK = \hat{g}K} and #{hK = \hat{h}K} then #{ghK = \hat{g}\hat{h}K}.}
+
+\p{By \ref{GP19}, #{gK = \hat{g}K} tells us that #{\hat{g}^{-1}g \in K}, and #{hK = \hat{h}K \implies \hat{h}^{-1}h \in K}. Now #{\hat{g}^{-1}g \in K}, so #{h^{-1}\hat{g}^{-1}gh \in K} since #{K \trianglelefteq G}, so #{\hat{h}^{-1}h\,h^{-1}\hat{g}^{-1}gh \in K}, i.e. #{(\hat{g}\hat{h})^{-1}gh \in K}, so #{ghK = \hat{g}\hat{h}K} by \ref{GP19}.}
+
+\p{So coset multiplication is well defined. The group axioms now follow easily:}
+
+\ul{
+\li{By construction coset multiplication is closed, as #{ghK \in (G : K)} for #{g, h \in G}.}
+\li{The identity is given by #{eK = K}.}
+\li{#{(gK)^{-1} = g^{-1}K}.}
+\li{\p{Associativity holds since it does in #{G}; to check:}
+##{(gK\,hK)\,lK = (gh)lK = g(hl)K = gK\,(hK\,lK).}}
+}
+}

@@ -1,0 +1,34 @@
+\title{Basis, Dimension and Direct Sums}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{LA0Y}
+
+\transclude{LA0Z}
+
+\transclude{LA10}
+
+\transclude{LA11}
+
+\transclude{LA12}
+
+\transclude{LA13}
+
+\transclude{LA14}
+
+\transclude{LA15}
+
+\transclude{LA16}
+
+\transclude{LA17}
+
+\transclude{LA18}
+
+\p{\strong{Exercise.} Show that the following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{\sum_{i=1}^l V_i = \bigoplus_{i=1}^l V_i} (the sum is direct);}
+\li{\strong{(ii)} for all #{i}, #{V_i \cap \Big( \sum_{j \neq i} V_j \Big) = \lbrace 0\rbrace };}
+\li{\strong{(iii)} for any basis #{\mathcal{B}_i} of #{V_i}, #{\mathcal{B} = \bigcup_{i=1}^l \mathcal{B}_i} is a basis of #{\sum_{i=1}^l V_i}.}
+}

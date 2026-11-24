@@ -1,0 +1,9 @@
+\title{Definition}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F}. The space of linear maps from #{V} to #{W} is}
+
+##{\mathcal{L}(V, W) = \lbrace \alpha \colon V \to W \text{ linear}\rbrace .}

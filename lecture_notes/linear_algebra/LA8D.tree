@@ -1,0 +1,21 @@
+\title{Spectral theorem for unitary maps}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional complex inner product space and #{\alpha \in \mathcal{L}(V)} unitary (#{\alpha^* = \alpha^{-1}}). Then #{V} has an orthonormal basis made of evecs of #{\alpha}.}
+
+\p{#{\leadsto} Equivalently, #{\alpha} unitary on #{V} Hermitian can be diagonalised in an orthonormal basis.}
+
+\proof{
+\p{Pick #{\mathcal{B}} to be any orthonormal basis of #{V}, and #{A = [\alpha]_{\mathcal{B}}}. Then #{\chi_A(t)} (the characteristic polynomial of #{A}) has a \em{complex} root, so #{\alpha} has a complex eval. Fix #{v_1 \in V \setminus \lbrace 0\rbrace }, #{\Vert v_1\Vert  = 1}, #{\alpha v_1 = \lambda v_1}. Let #{U = \langle v_1 \rangle^\perp}.}
+
+\p{\strong{Key observation:} #{\alpha(U) \leq U}. Indeed, pick #{u \in U}:}
+
+##{\langle \alpha u, v_1 \rangle = \langle u, \alpha^*v_1 \rangle = \langle u, \alpha^{-1}v_1 \rangle = \Big\langle u, \frac{1}{\lambda}v_1 \Big\rangle = \frac{1}{\bar{\lambda}}\underbrace{\langle u, v_1 \rangle}_{= 0 \text{ since } u \in U} = 0,}
+
+\p{so #{\alpha u \in U}.}
+
+\p{We argue by induction on #{\dim_{\mathbb{C}} V = n}. We consider #{\alpha|_U \in \mathcal{L}(U)}, which is unitary, and by the induction hypothesis #{\alpha|_U} is diagonalisable in an orthonormal basis #{(v_2, \ldots, v_n)} of #{U}. Then #{(v_1, \ldots, v_n)} is an orthonormal basis of #{V} made of evecs of #{\alpha}.}
+}

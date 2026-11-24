@@ -1,0 +1,38 @@
+\title{The determinant is multiplicative}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A, B \in M_n(F)}. Then #{\det(AB) = \det A\det B}.}
+
+\proof{
+\p{Pick #{A} and consider the map}
+
+##{d_A \colon \underbrace{F^n \times \cdots \times F^n}_{n} \to F, \quad (v_1, \ldots, v_n) \mapsto \det(Av_1, \ldots, Av_n).}
+
+\ul{
+\li{#{d_A} is multilinear (#{v_i \mapsto Av_i} is linear);}
+\li{#{d_A} is alternate (#{v_i = v_j \implies Av_i = Av_j}).}
+}
+
+\p{Hence, by the theorem on the classification of volume forms (\ref{LA4A}), there exists #{C} s.t.}
+
+##{d_A(v_1, \ldots, v_n) = C\det(v_1, \ldots, v_n).
+ \qquad (*)}
+
+\p{Now we compute #{C}. #{Ae_i = A_i} (the #{i}th column of #{A}), so}
+
+##{d_A(e_1, \ldots, e_n) = \det(Ae_1, \ldots, Ae_n) = \det(A_1, \ldots, A_n) = \det A,}
+
+\p{while (#{*}) gives #{d_A(e_1, \ldots, e_n) = C\underbrace{\det(e_1, \ldots, e_n)}_{1}}. Hence #{C = \det A}. We have proved}
+
+##{d_A(v_1, \ldots, v_n) = \det(Av_1, \ldots, Av_n) = \det A\det(v_1, \ldots, v_n).
+ \qquad (**)}
+
+\p{Now observe #{AB = \big( (AB)_1, \ldots, (AB)_n \big)} with #{(AB)_i = AB_i}. So}
+
+##{\det(AB) = \det(AB_1, \ldots, AB_n) = (\det A)(\det B)}
+
+\p{by (#{**}) with #{v_i = B_i}.}
+}

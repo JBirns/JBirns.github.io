@@ -1,0 +1,54 @@
+\title{Some Properties of Determinants}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\transclude{LA4D}
+
+\transclude{LA4E}
+
+\transclude{LA4F}
+
+\transclude{LA4G}
+
+\transclude{LA4H}
+
+\transclude{LA4I}
+
+\p{\strong{Determinants of linear maps}}
+
+\transclude{LA4J}
+
+\transclude{LA4K}
+
+\transclude{LA4L}
+
+\p{\strong{Determinant of block matrices}}
+
+\transclude{LA4M}
+
+\transclude{LA4N}
+
+\p{In particular, for #{A = \begin{pmatrix} \lambda_1 & & * \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}}, #{\det A = \prod_{i=1}^n \lambda_i}.}
+
+\transclude{LA4O}
+
+\p{If #{a, b, c} span a parallelepiped, then #{|\mathrm{volume}(\vec{a}, \vec{b}, \vec{c})| = |(a \wedge b) \cdot c|}. On the other hand, #{\det(a, b, c) = (a \wedge b) \cdot c} (check that this is a volume form). So}
+
+##{\det(a, b, c) = \text{signed volume}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=1.1]
+\coordinate (O) at (0,0);
+\coordinate (a) at (2.6,0);
+\coordinate (b) at (1.1,0.7);
+\coordinate (c) at (0.9,1.6);
+\draw[->, thick] (O) -- (a) node[below] {$a$};
+\draw[->, thick] (O) -- (b) node[above left] {$b$};
+\draw[->, thick] (O) -- (c) node[left] {$c$};
+\draw (a) -- ($(a)+(b)$) -- (b);
+\draw (c) -- ($(c)+(a)$) -- ($(c)+(a)+(b)$) -- ($(c)+(b)$) -- cycle;
+\draw[dashed] (a) -- ($(a)+(c)$);
+\draw[dashed] ($(a)+(b)$) -- ($(a)+(b)+(c)$);
+\draw[dashed] (b) -- ($(b)+(c)$);
+\node at (4.6,1.3) {volume};
+\end{tikzpicture}}

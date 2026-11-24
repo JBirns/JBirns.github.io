@@ -1,0 +1,12 @@
+\title{Bilinear form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, V} be vector spaces over #{F}. Then #{\phi \colon U \times V \to F} is a \em{bilinear form} if it is “linear in both components”:}
+
+##{\begin{aligned}
+\phi(u, \cdot) \colon V &\to F,\; v \mapsto \phi(u, v) && \text{is linear, } \forall u \in U; \\
+\phi(\cdot, v) \colon U &\to F,\; u \mapsto \phi(u, v) && \text{is linear, } \forall v \in V.
+\end{aligned}}

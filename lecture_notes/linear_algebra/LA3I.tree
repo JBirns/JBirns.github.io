@@ -1,0 +1,16 @@
+\title{A bilinear form in coordinates}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+##{\phi(u, v) = [u]_{\mathcal{B}}^T[\phi]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{C}}.
+ \qquad (*)}
+
+\p{#{\leadsto} the link between the bilinear form and its matrix in a given basis.}
+
+\proof{
+\p{Let #{u = \sum_{i=1}^m \lambda_ie_i}, #{v = \sum_{j=1}^n \mu_jf_j}. Then by linearity,}
+
+##{\phi(u, v) = \phi\Big( \sum_{i=1}^m \lambda_ie_i, \sum_{j=1}^n \mu_jf_j \Big) = \sum_{i=1}^m \sum_{j=1}^n \lambda_i\mu_j\phi(e_i, f_j) = [u]_{\mathcal{B}}^T[\phi]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{C}}.}
+}

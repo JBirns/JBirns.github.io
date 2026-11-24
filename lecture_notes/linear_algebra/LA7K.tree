@@ -1,0 +1,9 @@
+\title{Norm and expansion in an orthonormal basis}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{In particular, in an orthonormal basis,}
+
+##{\Vert v\Vert ^2 = \langle v, v \rangle = \sum_{i=1}^n |\langle v, e_i \rangle|^2, \qquad v = \sum_{i=1}^n \langle v, e_i \rangle e_i \quad (\Vert e_i\Vert  = 1).}

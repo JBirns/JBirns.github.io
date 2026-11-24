@@ -1,0 +1,18 @@
+\title{#{C_2 \times C_2} and #{C_2 \times C_3}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{C_2 \times C_2 = \langle x \rangle \times \langle y \rangle = \lbrace e, x\rbrace  \times \lbrace e, y\rbrace }, with elements #{(e, e)}, #{(x, e)}, #{(e, y)}, #{(x, y)}:}
+##{\begin{array}{c|cccc}
+\circ & (e,e) & (x,e) & (e,y) & (x,y) \\ \hline
+(e,e) & (e,e) & (x,e) & (e,y) & (x,y) \\
+(x,e) & (x,e) & (e,e) & (x,y) & (e,y) \\
+(e,y) & (e,y) & (x,y) & (e,e) & (x,e) \\
+(x,y) & (x,y) & (e,y) & (x,e) & (e,e)
+\end{array}}
+\p{The \em{Klein #{4}-group}, #{\cong} \ref{GP04}(9). Note #{o((x, e)) = o((e, y)) = o((x, y)) = 2}, so #{C_2 \times C_2 \not\cong C_4}.}}
+\li{\strong{(ii)} However #{C_2 \times C_3 \cong C_6} (Sheet 2, Q10).}
+}

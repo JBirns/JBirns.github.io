@@ -1,0 +1,20 @@
+\title{Application to Bilinear Forms}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We translate the theorems from the previous lecture into statements about bilinear forms.}
+
+\transclude{LA8G}
+
+\transclude{LA8H}
+
+\transclude{LA8I}
+
+\transclude{LA8J}
+
+\transclude{LA8K}
+
+\p{\strong{Note:} this is the criterion for bilinear forms, which is not the same as for endomorphisms (there the criterion is commuting; \ref{LA5K}).}
+
+\transclude{LA8L}

@@ -1,0 +1,13 @@
+\title{Change of dual basis}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The change of basis matrix from #{F^*} to #{E^*} is #{(P^{-1})^T}.}
+
+\proof{
+\p{By \ref{LA35} (with #{\mathrm{Id}^* = \mathrm{Id}}),}
+
+##{[\mathrm{Id}]_{F^*,E^*} = [\mathrm{Id}]_{E,F}^T = \big( [\mathrm{Id}]_{F,E}^{-1} \big)^T = (P^{-1})^T.}
+}

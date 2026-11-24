@@ -1,0 +1,11 @@
+\title{Orbit}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} act on a set #{X} and #{x \in X}. The \em{orbit} of #{x \in X} is given by}
+
+##{\operatorname{Orb}_G(x) = \lbrace g(x) : g \in G\rbrace  \subseteq X,}
+
+\p{i.e. the set of points in #{X} which #{x} can be mapped to.}

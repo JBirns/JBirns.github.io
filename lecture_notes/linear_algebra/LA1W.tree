@@ -1,0 +1,17 @@
+\title{The space of linear maps}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathcal{L}(V, W)} is a vector space over #{F} equipped with}
+
+##{(\alpha_1 + \alpha_2)(v) \coloneqq \alpha_1(v) + \alpha_2(v), \qquad (\lambda\alpha)(v) \coloneqq \lambda\alpha(v).}
+
+\p{Moreover, if #{V, W} are finite dimensional over #{F} then so is #{\mathcal{L}(V, W)}, and}
+
+##{\dim_F \mathcal{L}(V, W) = (\dim_F V)(\dim_F W).}
+
+\proof{
+\p{Proving that #{\mathcal{L}(V, W)} is a vector space is an exercise; the dimensionality part is proved later (\ref{LA25}).}
+}

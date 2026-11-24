@@ -1,0 +1,17 @@
+\title{#{g^n = e} iff the order divides #{n}}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{G} is a group, #{g \in G} and #{o(g) = m}. Let #{n \in \mathbb{N}_{>0}}. Then #{g^n = e \iff m \mid n}.}
+
+\proof{
+\p{(#{\Leftarrow}) Suppose #{m \mid n}; then #{n = qm} for some #{q \in \mathbb{N}}, so #{g^n = g^{qm} = (g^m)^q = e^q = e}.}
+
+\p{(#{\Rightarrow}) Suppose #{g^n = e}. We can write #{n = qm + r} with #{0 \leq r < m}, #{q \in \mathbb{N}}. Then}
+
+##{e = g^n = g^{qm + r} = (g^m)^q g^r = e^q g^r = eg^r = g^r,}
+
+\p{so #{r = 0} by minimality of #{m}, so #{n = qm} as required.}
+}

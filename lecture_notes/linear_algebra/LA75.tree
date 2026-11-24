@@ -1,0 +1,22 @@
+\title{Sylvester’s law of inertia for Hermitian forms}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\dim_{\mathbb{C}} V < \infty} and #{\phi \colon V \times V \to \mathbb{C}} a Hermitian form on #{V}. Then there exists a basis #{\mathcal{B} = (v_1, \ldots, v_n)} of #{V} with}
+
+##{[\phi]_{\mathcal{B}} = \begin{pmatrix} I_p & & \\ & -I_q & \\ & & 0 \end{pmatrix},}
+
+\p{where #{p, q} depend only on #{\phi}.}
+
+\proof{
+\p{\em{Proof (sketch: nearly identical to the real case of symmetric forms).}}
+
+\ul{
+\li{\p{Existence: if #{\phi \equiv 0} we are done. Assume #{\phi \neq 0}; then the polarisation identity ensures that there exists #{e_1 \neq 0} s.t. #{\phi(e_1, e_1) \neq 0}. Rescale: #{v_1 = e_1/\sqrt{|\phi(e_1, e_1)|}}, so #{\phi(v_1, v_1) = \pm 1} (recall #{\phi(v_1, v_1) \in \mathbb{R}}). Then we consider the orthogonal}
+##{W = \lbrace w \in V : \phi(v_1, w) = 0\rbrace}
+\p{and check (verbatim like in the real case) that #{V = \langle v_1 \rangle \oplus W} (#{\dim W = n - 1}). Now argue by induction on #{\dim V} by considering #{\phi|_W}, which is Hermitian on #{W \times W}.}}
+\li{Uniqueness of #{p}: as in the real case, #{p} is the maximal dimension of a subspace on which #{\phi} is positive definite (#{\phi(u, u) \in \mathbb{R}}). Similarly for #{q}.}
+}
+}

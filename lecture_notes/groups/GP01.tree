@@ -1,0 +1,84 @@
+\title{Basic Definitions and Examples}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Notation:}}
+
+##{\begin{array}{llll}
+\forall & \text{for all} & \text{s.t.} & \text{such that} \\
+\exists & \text{there exists} & \therefore & \text{therefore} \\
+\Rightarrow & \text{implies} & \text{↯} & \text{contradiction}
+\end{array}}
+
+\p{A \em{binary operation} #{*} on a set #{X} is a way of combining #{2} elements of #{X} to unambiguously give another element of #{X}, i.e. #{* \colon X \times X \to X}.}
+
+\transclude{GP02}
+
+\transclude{GP03}
+
+\transclude{GP04}
+
+\transclude{GP05}
+
+\transclude{GP06}
+
+\transclude{GP07}
+
+\p{Note all the above examples are abelian except (10) and (12).}
+
+\transclude{GP08}
+
+\transclude{GP09}
+
+\transclude{GP0A}
+
+\transclude{GP0B}
+
+\p{\strong{Aside.} We need the notion of functions [see Numbers & Sets, IA].}
+
+\p{#{f} is a \em{function} between sets #{A} and #{B} if it assigns each element of #{A} a unique element of #{B}:}
+
+##{f \colon A \to B, \quad a \mapsto f(a).}
+
+\p{E.g. #{f \colon \mathbb{Z} \to \mathbb{Z}}, #{x \mapsto x + 1}; #{g \colon \mathbb{Z} \to \mathbb{Z}}, #{x \mapsto 2x}.}
+
+\p{\em{Composition of functions:} suppose #{g \colon A \to B} and #{f \colon B \to C}. Define}
+
+##{f \circ g \colon A \to C, \quad a \mapsto (f \circ g)(a) = f(g(a)).}
+
+\p{E.g. #{(f \circ g)(x) = 2x + 1}, #{(g \circ f)(x) = 2x + 2}.}
+
+\p{Suppose #{f_1 \colon A \to B}, #{f_2 \colon A \to B}. Then #{f_1 = f_2} if #{f_1(a) = f_2(a)} for all #{a \in A}.}
+
+\p{#{f \colon A \to B} is a \em{bijection} if it defines a pairing between elements of #{A} and elements of #{B}. That is, given #{b \in B} there exists a unique #{a \in A} s.t. #{f(a) = b}.}
+
+\p{E.g. #{f \colon \mathbb{Z} \to \mathbb{Z}}, #{x \mapsto x + 1}. In this case we can define #{f^{-1} \colon B \to A}, #{b \mapsto a} where #{f(a) = b}. Then}
+
+##{f \circ f^{-1} = \mathrm{id}_B, \qquad f^{-1} \circ f = \mathrm{id}_A, \qquad \text{where } \mathrm{id}_B(b) = b.}
+
+\transclude{GP0C}
+
+\transclude{GP0D}
+
+\transclude{GP0E}
+
+\transclude{GP0F}
+
+\transclude{GP0G}
+
+\transclude{GP0H}
+
+\transclude{GP0I}
+
+\transclude{GP0J}
+
+\transclude{GP0K}
+
+\transclude{GP0L}
+
+\transclude{GP0M}
+
+\transclude{GP0N}
+
+\transclude{GP0O}

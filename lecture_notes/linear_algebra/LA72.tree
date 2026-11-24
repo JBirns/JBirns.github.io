@@ -1,0 +1,7 @@
+\title{Hermitian forms are real on the diagonal}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\phi} is Hermitian then #{\phi(u, u) = \overline{\phi(u, u)}}, so #{\phi(u, u) \in \mathbb{R}} for all #{u \in V}. #{\to} This allows us to speak of positive/negative (semi-)definite Hermitian forms.}

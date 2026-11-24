@@ -1,0 +1,9 @@
+\title{Eigenvalues and signature}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The diagonal entries of #{P^TAP} (#{P^\dagger AP}) are the evals of #{A}. Moreover, the signature of #{\phi} is}
+
+##{s(\phi) = \#(\text{positive evals of } A) - \#(\text{negative evals of } A).}

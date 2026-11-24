@@ -1,0 +1,15 @@
+\title{Computing a JNF}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{A = \begin{pmatrix} 0 & -1 \\ 1 & 2 \end{pmatrix}}. Find a basis in which #{A} is in JNF.}
+
+\ul{
+\li{\strong{(i)} #{\chi_A(t) = \begin{vmatrix} -t & -1 \\ 1 & 2 - t \end{vmatrix} = (t - 1)^2}, so there is one eval #{\lambda = 1}. Since #{A - \mathrm{Id} \neq 0}, #{m_A(t) = (t - 1)^2} and the JNF is #{\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}}.}
+\li{\p{\strong{(ii)} Eigenvectors: #{A - \mathrm{Id} = \begin{pmatrix} -1 & -1 \\ 1 & 1 \end{pmatrix}}, #{\operatorname{Ker}(A - \mathrm{Id}) = \langle v_1 \rangle}, #{v_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}}. I look for a (non-unique!) #{v_2} s.t. #{(A - \mathrm{Id})v_2 = v_1}: #{v_2 = \begin{pmatrix} -1 \\ 0 \end{pmatrix}} works. Then with #{\mathcal{B} = (v_1, v_2)},}
+##{[A]_{\mathcal{B}} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \mathrm{Id} + \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix},}
+\p{and with #{Q = (v_1 \mid v_2) = \begin{pmatrix} 1 & -1 \\ -1 & 0 \end{pmatrix}},}
+##{A = \underbrace{\begin{pmatrix} 1 & -1 \\ -1 & 0 \end{pmatrix}}_{Q}\underbrace{\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}}_{J}\underbrace{\begin{pmatrix} 1 & -1 \\ -1 & 0 \end{pmatrix}^{-1}}_{Q^{-1}}.}}
+}

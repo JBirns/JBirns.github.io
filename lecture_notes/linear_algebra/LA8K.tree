@@ -1,0 +1,11 @@
+\title{Simultaneous diagonalisation}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional real (complex) vector space, and let #{\phi, \psi \colon V \times V \to F} be symmetric (Hermitian) bilinear forms. Assume #{\phi} is positive definite. Then there exists a basis #{(v_1, \ldots, v_n)} of #{V} with respect to which \em{both} bilinear forms are represented by a diagonal matrix.}
+
+\proof{
+\p{#{\phi} is positive definite, so #{\phi} induces a scalar product on #{V}: #{V} equipped with #{\phi} is a finite dimensional inner product space, #{\langle u, v \rangle = \phi(u, v)}. Hence, by the previous corollary, there exists an orthonormal (for the #{\phi}-induced scalar product) basis of #{V} in which #{\psi} is represented by a diagonal matrix. Observe that #{\phi} in this basis is represented by the identity matrix (because this basis is orthonormal for #{\phi}: for #{\mathcal{B} = (v_1, \ldots, v_n)}, #{\langle v_i, v_j \rangle = \delta_{ij} = \phi(v_i, v_j)}). So both matrices of #{\phi}, #{\psi} in #{\mathcal{B}} are diagonal.}
+}

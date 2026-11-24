@@ -1,0 +1,21 @@
+\title{Self-adjoint maps and isometries in orthonormal bases}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional real (complex) inner product space. Then #{\alpha \in \mathcal{L}(V)} is}
+
+\ul{
+\li{\strong{(i)} self-adjoint #{\iff} in any orthonormal basis #{\mathcal{B}} of #{V}, #{[\alpha]_{\mathcal{B}}} is symmetric (Hermitian);}
+\li{\strong{(ii)} an isometry #{\iff} in any orthonormal basis #{\mathcal{B}} of #{V}, #{[\alpha]_{\mathcal{B}}} is orthogonal (unitary).}
+}
+
+\proof{
+\p{For #{\mathcal{B}} an orthonormal basis, #{[\alpha^*]_{\mathcal{B}} = \overline{[\alpha]_{\mathcal{B}}}^T}.}
+
+\ul{
+\li{Self-adjoint: #{\overline{[\alpha]_{\mathcal{B}}}^T = [\alpha]_{\mathcal{B}}}.}
+\li{Isometry: #{\overline{[\alpha]_{\mathcal{B}}}^T = [\alpha]_{\mathcal{B}}^{-1}}.}
+}
+}

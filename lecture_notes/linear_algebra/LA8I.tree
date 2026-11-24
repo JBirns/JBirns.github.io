@@ -1,0 +1,11 @@
+\title{Diagonalising a form in an orthonormal basis}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional real (complex) inner product space, and #{\phi \colon V \times V \to F} a symmetric (Hermitian) bilinear form. Then there exists an orthonormal basis of #{V} s.t. #{\phi} in this basis is represented by a diagonal matrix.}
+
+\proof{
+\p{Let #{\mathcal{B} = \lbrace v_1, \ldots, v_n\rbrace } be any orthonormal basis of #{V} (it exists by Gram–Schmidt), and #{A = [\phi]_{\mathcal{B}}}. Then #{A^T = A} (#{A^\dagger = A}) since #{\phi} is symmetric (Hermitian), hence there is an orthogonal (unitary) matrix #{P} s.t. #{P^TAP} (#{P^\dagger AP}) is diagonal, say #{D}. Let #{v_i} be the #{i}th row of #{P^T} (#{P^\dagger}); then #{\lbrace v_1, \ldots, v_n\rbrace } is an orthonormal basis, say #{\mathcal{B}'}, of #{V}, and #{[\phi]_{\mathcal{B}'} = D}, using the change of basis formula for bilinear forms.}
+}

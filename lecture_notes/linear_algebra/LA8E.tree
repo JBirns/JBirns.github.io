@@ -1,0 +1,11 @@
+\title{Warning}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We used the complex structure to make sure that there is an eval (which is a priori complex valued). In general, a real valued orthogonal matrix (#{AA^T = \mathrm{Id}}) \em{cannot} be diagonalised over #{\mathbb{R}}. E.g. the rotation map in #{\mathbb{R}^2},}
+
+##{A = \begin{pmatrix} \cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha \end{pmatrix}, \qquad \chi_A(\lambda) = \begin{vmatrix} \cos\alpha - \lambda & -\sin\alpha \\ \sin\alpha & \cos\alpha - \lambda \end{vmatrix} = (\cos\alpha - \lambda)^2 + \sin^2\alpha,}
+
+\p{so #{\lambda = e^{\pm i\alpha} \notin \mathbb{R}} generically.}

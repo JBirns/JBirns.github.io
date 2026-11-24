@@ -1,0 +1,16 @@
+\title{Exercise}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\alpha \colon V \to W}, #{Y \leq V} and #{Z = \alpha(Y) \leq W}. Take a basis #{\mathcal{B} = (v_1, \ldots, v_k, v_{k+1}, \ldots, v_n)} of #{V} such that #{\mathcal{B}' = (v_1, \ldots, v_k)} is a basis of #{Y}, and write #{\mathcal{B}'' = (v_{k+1}, \ldots, v_n)}. Take a basis #{\mathcal{C} = (w_1, \ldots, w_l, w_{l+1}, \ldots, w_m)} of #{W} such that #{\mathcal{C}' = (w_1, \ldots, w_l)} is a basis of #{Z}, and #{\mathcal{C}'' = (w_{l+1}, \ldots, w_m)}. Then}
+
+##{[\alpha]_{\mathcal{B},\mathcal{C}} = \big( \alpha(v_1) \mid \cdots \mid \alpha(v_k) \mid \alpha(v_{k+1}) \mid \cdots \mid \alpha(v_n) \big) = \begin{pmatrix} \bar{A} & \bar{B} \\ 0 & \bar{C} \end{pmatrix},}
+
+\p{where}
+
+\ul{
+\li{\strong{(i)} #{\bar{A} = [\alpha|_Y]_{\mathcal{B}',\mathcal{C}'}}, with #{\alpha|_Y} the restriction of #{\alpha} to #{Y};}
+\li{\strong{(ii)} #{\alpha} induces the well-defined map #{\bar{\alpha} \colon V/Y \to W/Z}, #{v + Y \mapsto \alpha(v) + Z}, and #{[\bar{\alpha}]_{\mathcal{B}'',\mathcal{C}''} = \bar{C}}.}
+}

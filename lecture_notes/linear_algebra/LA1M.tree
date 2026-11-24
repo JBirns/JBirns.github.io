@@ -1,0 +1,21 @@
+\title{Kernel and image are subspaces}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\operatorname{Ker}\alpha} is a vector subspace of #{V} and #{\operatorname{Im}\alpha} is a vector subspace of #{W}.}
+
+\proof{
+\p{(i) Let #{(\lambda_1, \lambda_2) \in F^2}, #{(v_1, v_2) \in \operatorname{Ker}\alpha \times \operatorname{Ker}\alpha}. Then}
+
+##{\alpha(\lambda_1v_1 + \lambda_2v_2) = \lambda_1\alpha(v_1) + \lambda_2\alpha(v_2) = 0 + 0 = 0,}
+
+\p{so #{\lambda_1v_1 + \lambda_2v_2 \in \operatorname{Ker}\alpha}.}
+
+\p{(ii) Let #{(\lambda_1, \lambda_2) \in F^2}, #{(w_1, w_2) \in \operatorname{Im}\alpha \times \operatorname{Im}\alpha}, so #{w_1 = \alpha(v_1)}, #{w_2 = \alpha(v_2)}. Then}
+
+##{\lambda_1w_1 + \lambda_2w_2 = \lambda_1\alpha(v_1) + \lambda_2\alpha(v_2) = \alpha(\lambda_1v_1 + \lambda_2v_2),}
+
+\p{so #{\lambda_1w_1 + \lambda_2w_2 \in \operatorname{Im}\alpha}.}
+}

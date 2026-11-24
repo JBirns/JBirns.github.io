@@ -1,0 +1,7 @@
+\title{Orthogonal sums are direct}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{v \in V_1 \cap V_2} then #{\Vert v\Vert ^2 = \langle \underbrace{v}_{\in V_1}, \underbrace{v}_{\in V_2} \rangle = 0 \implies v = 0}, i.e. orthogonal #{\implies} direct.}

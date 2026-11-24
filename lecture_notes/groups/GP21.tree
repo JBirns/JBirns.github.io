@@ -1,0 +1,11 @@
+\title{#{C_{15} \cong C_3 \times C_5}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{G = \langle a \rangle \cong C_{15}}. #{C_5 \cong \langle a^3 \rangle = H \trianglelefteq G}, #{C_3 \cong \langle a^5 \rangle = K \trianglelefteq G}. #{H \cap K = \langle a^3 \rangle \cap \langle a^5 \rangle = \lbrace e\rbrace }, and}
+
+##{a^k = (a^3)^{2k}(a^5)^{-k} \in HK,}
+
+\p{so #{C_{15} \cong C_3 \times C_5 \cong K \times H}.}

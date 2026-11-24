@@ -1,0 +1,11 @@
+\title{Groups of order #{p^2}}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{|G| = p^2} for some prime #{p}. Then #{G} is abelian and there are, up to isomorphism, just two groups of order #{p^2}, namely #{C_p \times C_p} and #{C_{p^2}}.}
+
+\proof{
+\p{Sheet 3, Q10.}
+}

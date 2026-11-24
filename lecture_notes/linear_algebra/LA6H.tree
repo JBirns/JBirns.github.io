@@ -1,0 +1,23 @@
+\title{Diagonalisation of symmetric bilinear forms}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\phi \colon V \times V \to F} be a symmetric bilinear form, #{\dim_F V < \infty}. Then there exists a basis #{\mathcal{B}} of #{V} s.t. #{[\phi]_{\mathcal{B}}} is diagonal.}
+
+\proof{
+\p{Induction on the dimension #{n}; #{n = 0, 1} is clear. Suppose the theorem holds for all dimensions #{< n}.}
+
+\ul{
+\li{\strong{1.} Let #{\phi \colon V \times V \to F} be a symmetric bilinear form. If #{\phi(u, u) = 0} for all #{u \in V}, then #{\phi} is identically #{0} (#{\leadsto} polarisation identity), and we are done. So assume #{\phi \neq 0}; then there exists #{u \in V \setminus \lbrace 0\rbrace } s.t. #{\phi(u, u) \neq 0}.}
+\li{\p{\strong{2.} Let us call #{u = e_1} (#{e_1 \neq 0}, #{\phi(e_1, e_1) \neq 0}). Let us define}
+##{U = (\langle e_1 \rangle)^\perp = \lbrace v \in V : \phi(e_1, v) = 0\rbrace  = \operatorname{Ker}\lbrace \phi(e_1, \cdot) \colon V \to F,\; v \mapsto \phi(e_1, v)\rbrace ,}
+\p{which is linear because #{\phi} is bilinear. By rank–nullity, #{\dim V = n = 1 + \dim U} (the rank of #{\phi(e_1, \cdot)} is #{1} since #{\phi(e_1, e_1) \neq 0}), so #{\dim U = n - 1}.}}
+\li{\strong{3.} \strong{Claim:} #{U + \langle e_1 \rangle = U \oplus \langle e_1 \rangle}. Indeed, if #{v \in \langle e_1 \rangle \cap U}, then #{v = \lambda e_1}, #{\lambda \in F}, and #{\phi(e_1, v) = 0} (#{v \in U}). So #{0 = \phi(e_1, \lambda e_1) = \lambda\underbrace{\phi(e_1, e_1)}_{\neq 0}}, so #{\lambda = 0} and #{v = 0}.}
+\li{\strong{4.} Conclusion: #{V = \langle e_1 \rangle \oplus U}, since #{\dim V = n}, #{\dim\langle e_1 \rangle = 1}, #{\dim U = n - 1}.}
+\li{\p{\strong{5.} Complete #{(e_2, \ldots, e_n)}, a basis of #{U}, to #{\mathcal{B} = (e_1, \ldots, e_n)}, a basis of #{V}. Then}
+##{[\phi]_{\mathcal{B}} = \begin{pmatrix} \phi(e_1, e_1) & 0 \\ 0 & A' \end{pmatrix},}
+\p{since #{\phi(e_1, e_j) = \phi(e_j, e_1) = 0} for #{j \geq 2}, where #{A' = (\phi(e_i, e_j))_{2 \leq i,j \leq n}} and #{(A')^T = A'} (#{\phi} symmetric). So #{\phi|_U \colon U \times U \to F} is bilinear symmetric with matrix #{A'} in #{\mathcal{B}' = (e_2, \ldots, e_n)}. By the induction hypothesis, I can find a basis #{(e'_2, \ldots, e'_n)} of #{U} in which #{[\phi|_U]_{\mathcal{B}'}} is diagonal. Then #{[\phi]_{(e_1, e'_2, \ldots, e'_n)}} is in diagonal form.}}
+}
+}

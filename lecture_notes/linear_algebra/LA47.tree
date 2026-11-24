@@ -1,0 +1,19 @@
+\title{The determinant is a volume form}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{F^n \times \cdots \times F^n \to F}, #{(A^{(1)}, \ldots, A^{(n)}) \mapsto \det A} is a volume form.}
+
+\proof{
+\p{(i) Multilinear: for #{\sigma \in S_n}, #{\prod_{i=1}^n a_{\sigma(i)i}} is multilinear, as there is only one term from each column appearing in the expression. The sum of multilinear maps is multilinear.}
+
+\p{(ii) Alternate: assume #{k \neq l} and #{A^{(k)} = A^{(l)}}. We want to show #{\det A = 0}. Let #{\tau} be the transposition #{\tau_{kl}}; then #{A^{(k)} = A^{(l)} \iff a_{ij} = a_{i\tau(j)}} for all #{i, j}. We can decompose}
+
+##{S_n = A_n \sqcup \tau A_n \quad \text{(disjoint union)},}
+
+\p{where #{A_n} is the set of permutations with an even number of transpositions and #{\tau A_n} the permutations with an odd number of transpositions. Then, using \ref{LA45},}
+
+##{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{i=1}^n a_{i\sigma(i)} = \sum_{\sigma \in A_n} \prod_{i=1}^n a_{i\sigma(i)} - \sum_{\sigma \in A_n} \prod_{i=1}^n \underbrace{a_{i\tau\sigma(i)}}_{= a_{i\sigma(i)}} = 0.}
+}

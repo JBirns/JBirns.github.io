@@ -1,0 +1,25 @@
+\title{#{\mathcal{L}(V, W) \cong M_{m,n}(F)}}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{V} and #{W} are vector spaces over #{F} with #{\dim_F V = n} and #{\dim_F W = m}, then}
+
+##{\mathcal{L}(V, W) \cong M_{m,n}(F),}
+
+\p{so #{\dim \mathcal{L}(V, W) = m \times n}.}
+
+\proof{
+\p{Fix bases #{\mathcal{B}}, #{\mathcal{C}} of #{V}, #{W}.}
+
+\p{\strong{Claim:} #{\theta \colon \mathcal{L}(V, W) \to M_{m,n}(F)}, #{\alpha \mapsto [\alpha]_{\mathcal{B},\mathcal{C}}} is an isomorphism.}
+
+\ul{
+\li{#{\theta} is linear: #{[\lambda_1\alpha_1 + \lambda_2\alpha_2]_{\mathcal{B},\mathcal{C}} = \lambda_1[\alpha_1]_{\mathcal{B},\mathcal{C}} + \lambda_2[\alpha_2]_{\mathcal{B},\mathcal{C}}}.}
+\li{\p{#{\theta} is surjective: indeed, pick #{A = (a_{ij})_{1 \leq i \leq m,\, 1 \leq j \leq n}}. Consider the map}
+##{\alpha \colon v_j \mapsto \sum_{i=1}^m a_{ij}w_i, \quad 1 \leq j \leq n,}
+\p{and extend #{\alpha} by linearity (\ref{LA1D}). Then #{[\alpha]_{\mathcal{B},\mathcal{C}} = A}.}}
+\li{#{\theta} is injective: #{[\alpha]_{\mathcal{B},\mathcal{C}} = 0 \implies \alpha = 0}, as you have no other choice.}
+}
+}

@@ -1,0 +1,11 @@
+\title{QR decomposition}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(\mathbb{R})} (#{M_n(\mathbb{C})}) be invertible. Then #{A} can be written as #{A = RT}, where #{T} is upper triangular and #{R} is orthogonal (unitary).}
+
+\proof{
+\p{Apply Gram–Schmidt to the column vectors #{(c_1, \ldots, c_n)} of #{A}.}
+}

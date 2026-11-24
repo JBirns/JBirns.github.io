@@ -1,0 +1,72 @@
+\title{Examples of groups}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{1.} #{(\mathbb{Z}, +)}, #{e = 0}, #{x^{-1} = -x}.}
+\li{\strong{2.} #{(\mathbb{Q}, +)}; #{(\mathbb{R}, +)}, #{e = 0}, #{x^{-1} = -x}.}
+\li{\strong{3.} #{(\mathbb{Z}, -)} is not a group: associativity fails.}
+\li{\strong{4.} #{(\mathbb{Z}, \times)} is not a group: no inverses.}
+\li{\strong{5.} #{(\mathbb{Q}, \times)} is not a group: #{0^{-1}} does not exist.}
+\li{\strong{6.} #{(\mathbb{Q} \setminus \lbrace 0\rbrace , \times)}, #{e = 1}, #{x^{-1} = \frac{1}{x}}.}
+\li{\p{\strong{7.} #{(\lbrace \pm 1\rbrace , \times)}. We can write a multiplication table for (7):}
+##{\begin{array}{c|cc} \times & 1 & -1 \\ \hline 1 & 1 & -1 \\ -1 & -1 & 1 \end{array} \qquad e = 1,\; (-1)^{-1} = -1.}}
+\li{\p{\strong{8.} #{(\lbrace 0, 1, 2\rbrace , +_3)}:}
+##{\begin{array}{c|ccc} +_3 & 0 & 1 & 2 \\ \hline 0 & 0 & 1 & 2 \\ 1 & 1 & 2 & 0 \\ 2 & 2 & 0 & 1 \end{array} \qquad e = 0,\; 1^{-1} = 2.}}
+\li{\p{\strong{9.} #{(\lbrace a, b, c, e\rbrace , *)}:}
+##{\begin{array}{c|cccc} * & e & a & b & c \\ \hline e & e & a & b & c \\ a & a & e & c & b \\ b & b & c & e & a \\ c & c & b & a & e \end{array}}}
+\li{\p{\strong{10.} “Groups are abstractions of symmetries.” Rotations and reflections of an equilateral triangle. Set:}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}[scale=0.75]
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 1};
+    \node[left] at (0,0) {\small 3};
+    \node[right] at (1.2,0) {\small 2};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$e$};
+  \end{scope}
+  \begin{scope}[shift={(5,0)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 3};
+    \node[left] at (0,0) {\small 2};
+    \node[right] at (1.2,0) {\small 1};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$\sigma$\\(rotate $120^\circ$)};
+  \end{scope}
+  \begin{scope}[shift={(10,0)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 2};
+    \node[left] at (0,0) {\small 1};
+    \node[right] at (1.2,0) {\small 3};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$\sigma \circ \sigma = \sigma^2$\\(rotate $240^\circ$)};
+  \end{scope}
+  \begin{scope}[shift={(0,-3.8)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 1};
+    \node[left] at (0,0) {\small 2};
+    \node[right] at (1.2,0) {\small 3};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$\tau$};
+  \end{scope}
+  \begin{scope}[shift={(5,-3.8)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 3};
+    \node[left] at (0,0) {\small 1};
+    \node[right] at (1.2,0) {\small 2};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$\tau \circ \sigma$};
+  \end{scope}
+  \begin{scope}[shift={(10,-3.8)}]
+    \draw (0,0) -- (1.2,0) -- (0.6,1.04) -- cycle;
+    \node[above] at (0.6,1.04) {\small 2};
+    \node[left] at (0,0) {\small 3};
+    \node[right] at (1.2,0) {\small 1};
+    \node[align=center, anchor=north] at (0.6,-0.25) {$\sigma \circ \tau = \tau \circ \sigma^2$};
+  \end{scope}
+\draw[dotted] (0.6,-3.8) -- (0.6,-2.76);
+\end{tikzpicture}}
+\p{The operation is “do one then the next”, e.g. #{\tau \circ \sigma = } do #{\sigma} then #{\tau}. This defines a group with #{6} elements.}}
+\li{\p{\strong{11.} #{M_2(\mathbb{R}) = \lbrace 2 \times 2 \text{ matrices with entries in } \mathbb{R}\rbrace  = \left\lbrace  \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a, b, c, d \in \mathbb{R} \right\rbrace } under addition:}
+##{\begin{pmatrix} a & b \\ c & d \end{pmatrix} + \begin{pmatrix} \alpha & \beta \\ \gamma & \delta \end{pmatrix} = \begin{pmatrix} a + \alpha & b + \beta \\ c + \gamma & d + \delta \end{pmatrix}.}}
+\li{\p{\strong{12.} #{GL_2(\mathbb{R}) = \lbrace \text{invertible } 2 \times 2 \text{ matrices with entries in } \mathbb{R}\rbrace }. For}
+##{A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, \quad \det A = ad - bc \neq 0, \quad A^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.}
+\p{Under multiplication this is a group.}}
+}

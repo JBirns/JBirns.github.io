@@ -1,0 +1,22 @@
+\title{Orthogonal diagonalisation of symmetric matrices}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(\mathbb{R})} (resp. #{\mathbb{C}}) be a symmetric (Hermitian) matrix. Then there is an orthogonal (resp. unitary) matrix #{P} s.t. #{P^TAP} (resp. #{P^\dagger AP}) is diagonal with real valued entries.}
+
+\proof{
+\p{#{F = \mathbb{R}} (#{\mathbb{C}}). Let #{\langle \cdot, \cdot \rangle} be the standard inner product over #{F^n}. Then #{A \in \mathcal{L}(F^n)} is self-adjoint, hence we can find an orthonormal (for the standard inner product) basis of #{F^n} s.t. #{A} is diagonal in this basis, say #{(v_1, \ldots, v_n)}. Let #{P = (v_1 \mid \cdots \mid v_n)}. Then}
+
+##{\begin{aligned}
+(v_1, \ldots, v_n) \text{ orthonormal basis} &\iff P \text{ orthogonal (unitary)} \\
+&\iff P^TP = \mathrm{Id}\; (P^\dagger P = \mathrm{Id}),
+\end{aligned}}
+
+\p{so}
+
+##{P^{-1}AP = P^TAP = D = \begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix},}
+
+\p{and we know the #{\lambda_i} are real since they are evals of a symmetric operator.}
+}

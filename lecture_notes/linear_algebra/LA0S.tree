@@ -1,0 +1,11 @@
+\title{Examples of bases}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{1.} #{V = \mathbb{R}^n = \left\lbrace  \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} : x_i \in \mathbb{R},\; 1 \leq i \leq n \right\rbrace }. With #{e_i} having #{1} in the #{i}th line, #{(e_i)_{1 \leq i \leq n}} is a basis of #{V}.}
+\li{\strong{2.} #{V = \mathbb{C}}, #{F = \mathbb{C}}: #{\lbrace 1\rbrace } is a basis of #{V}. If #{F = \mathbb{R}}, then #{\lbrace 1, i\rbrace } is a basis of #{V}.}
+\li{\strong{3.} #{V = \mathbb{P}[x] = \lbrace \text{polynomials over } \mathbb{R}\rbrace }, #{S = \lbrace x^n : n \geq 0\rbrace }. Then #{S} is a basis of #{V}.}
+}

@@ -1,0 +1,11 @@
+\title{Unions of families}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{We will in the sequel systematically use the following notation. Given two collections of vectors #{\mathcal{B}_1 = \lbrace v_1, \ldots, v_l\rbrace }, #{\mathcal{B}_2 = \lbrace w_1, \ldots, w_m\rbrace }, we write}
+
+##{\mathcal{B}_1 \cup \mathcal{B}_2 = \lbrace v_1, \ldots, v_l, w_1, \ldots, w_m\rbrace ,}
+
+\p{a \em{list}, not a set, so duplicates are allowed. With this notation #{\lbrace v_1\rbrace  \cup \lbrace v_1\rbrace  = \lbrace v_1, v_1\rbrace }, so the collection #{\lbrace v_1\rbrace  \cup \lbrace v_1\rbrace } is never a free family.}

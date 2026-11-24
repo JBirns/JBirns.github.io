@@ -1,0 +1,7 @@
+\title{Linear form}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A linear map #{\alpha \colon V \to F} is called a \em{linear form}.}

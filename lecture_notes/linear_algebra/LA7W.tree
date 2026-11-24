@@ -1,0 +1,7 @@
+\title{The complementary projection}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathrm{Id} - \pi} is the projection onto #{U}. #{\longrightarrow} If #{V} is an inner product space and #{W} is finite dimensional, then we can choose #{U = W^\perp}, and #{\pi} is explicit.}

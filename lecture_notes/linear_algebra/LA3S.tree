@@ -1,0 +1,17 @@
+\title{Change of basis for bilinear forms}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B}, \mathcal{B}'} be bases of #{U} with #{P = [\mathrm{Id}]_{\mathcal{B}',\mathcal{B}}}, and #{\mathcal{C}, \mathcal{C}'} bases of #{V} with #{Q = [\mathrm{Id}]_{\mathcal{C}',\mathcal{C}}}. Let #{\phi \colon U \times V \to F} be a bilinear form. Then}
+
+##{[\phi]_{\mathcal{B}',\mathcal{C}'} = P^T[\phi]_{\mathcal{B},\mathcal{C}}Q}
+
+\p{(the change of basis formula for bilinear maps).}
+
+\proof{
+##{\phi(u, v) = [u]_{\mathcal{B}}^T[\phi]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{C}} = \big( P[u]_{\mathcal{B}'} \big)^T[\phi]_{\mathcal{B},\mathcal{C}}\big( Q[v]_{\mathcal{C}'} \big) = [u]_{\mathcal{B}'}^T\underbrace{\big( P^T[\phi]_{\mathcal{B},\mathcal{C}}Q \big)}_{[\phi]_{\mathcal{B}',\mathcal{C}'}}[v]_{\mathcal{C}'},}
+
+\p{by uniqueness of the matrix.}
+}

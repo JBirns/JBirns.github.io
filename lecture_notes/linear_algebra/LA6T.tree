@@ -1,0 +1,7 @@
+\title{Kernel of a bilinear form}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \lbrace v \in V : \phi(u, v) = 0\; \forall u \in V\rbrace } is the \em{kernel} of the bilinear form #{\phi}.}

@@ -1,0 +1,30 @@
+\title{Dual basis}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F} with a finite basis #{\mathcal{B} = \lbrace e_1, \ldots, e_n\rbrace }. Then there exists a basis for #{V^*} given by #{\mathcal{B}^* = \lbrace \varepsilon_1, \ldots, \varepsilon_n\rbrace } with}
+
+##{\varepsilon_j\Big( \sum_{i=1}^n a_ie_i \Big) = a_j, \quad 1 \leq j \leq n.}
+
+\p{#{\mathcal{B}^*} is called the \em{dual basis} of #{\mathcal{B}}.}
+
+\proof{
+\p{Let #{\lbrace \varepsilon_1, \ldots, \varepsilon_n\rbrace } be defined by (#{*}).}
+
+\ul{
+\li{\p{\strong{1.} #{(\varepsilon_1, \ldots, \varepsilon_n)} is free. Indeed, if #{\sum_{j=1}^n \lambda_j\varepsilon_j = 0} then for each #{i},}
+##{\sum_{j=1}^n \lambda_j\underbrace{\varepsilon_j(e_i)}_{\delta_{ij}} = 0 \implies \lambda_i = 0,}
+\p{so the family is free.}}
+\li{\p{\strong{2.} #{(\varepsilon_1, \ldots, \varepsilon_n)} generates #{V^*}. Pick #{\alpha \in V^*}; then for #{x = \sum_{j=1}^n \lambda_je_j \in V},}
+##{\alpha(x) = \alpha\Big( \sum_{j=1}^n \lambda_je_j \Big) = \sum_{j=1}^n \lambda_j\alpha(e_j).
+ \qquad (\dagger)}
+\p{On the other hand, consider the linear form #{\sum_{j=1}^n \underbrace{\alpha(e_j)}_{\in F}\varepsilon_j \in V^*}. Then}
+##{\begin{aligned}
+\sum_{j=1}^n \alpha(e_j)\varepsilon_j(x) &= \sum_{j=1}^n \alpha(e_j)\varepsilon_j\Big( \sum_{k=1}^n \lambda_ke_k \Big) = \sum_{j=1}^n \alpha(e_j)\sum_{k=1}^n \lambda_k\underbrace{\varepsilon_j(e_k)}_{\delta_{jk}} \\
+&= \sum_{j=1}^n \alpha(e_j)\lambda_j = \alpha(x)
+\end{aligned}}
+\p{by (#{\dagger}). Hence #{\boxed{\alpha = \sum_{j=1}^n \alpha(e_j)\varepsilon_j}}.}}
+}
+}

@@ -1,0 +1,7 @@
+\title{Annihilators of subspaces of the dual}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{For #{T \leq V^*}, we can define #{T^0 = \lbrace v \in V : \theta(v) = 0,\; \forall \theta \in T\rbrace }.}

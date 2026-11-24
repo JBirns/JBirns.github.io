@@ -1,0 +1,15 @@
+\title{Orbits partition the set}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The distinct #{G}-orbits form a partition of #{X}.}
+
+\proof{
+\p{Let #{x \in X}; then #{x \in \operatorname{Orb}_G(x)} since #{x = e(x)}. Suppose #{z \in \operatorname{Orb}_G(x) \cap \operatorname{Orb}_G(y)}. We show #{\operatorname{Orb}_G(x) = \operatorname{Orb}_G(y) = \operatorname{Orb}_G(z)}.}
+
+\p{#{z \in \operatorname{Orb}_G(x)}, so there exists #{g \in G} s.t. #{g(x) = z}. Suppose #{t \in \operatorname{Orb}_G(z)}, so there exists #{h \in G} s.t. #{h(z) = t}. Then #{t = h(g(x)) = (hg)(x)}, so #{t \in \operatorname{Orb}_G(x)}. So #{\operatorname{Orb}_G(z) \subseteq \operatorname{Orb}_G(x)}.}
+
+\p{Similarly, as #{g(x) = z}, #{x = e(x) = (g^{-1}g)(x) = g^{-1}(z)}, so #{\operatorname{Orb}_G(x) \subseteq \operatorname{Orb}_G(z)}. Thus #{\operatorname{Orb}_G(x) = \operatorname{Orb}_G(z)}. Similarly #{\operatorname{Orb}_G(z) = \operatorname{Orb}_G(y)}.}
+}

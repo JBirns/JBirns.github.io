@@ -1,0 +1,7 @@
+\title{Matrix groups over other fields}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{More generally we can define the general linear group and special linear group over any field. Examples of fields: #{\mathbb{R}}, #{\mathbb{C}}, #{\mathbb{Q}}, #{\mathbb{F}_p} where #{\mathbb{F}_p = (\lbrace 0, 1, 2, \ldots, p-1\rbrace , +_p, \times_p)}, #{p} prime. Note #{GL_n(\mathbb{F}_p)} and #{SL_n(\mathbb{F}_p)} are finite groups.}

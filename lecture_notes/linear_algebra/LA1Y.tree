@@ -1,0 +1,7 @@
+\title{#{M_{m,n}(F)}}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{M_{m,n}(F)} is the set of #{m \times n} matrices over #{F}.}

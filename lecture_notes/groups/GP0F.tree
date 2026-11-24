@@ -1,0 +1,34 @@
+\title{The image of a homomorphism}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} and #{H} be groups and suppose we have a homomorphism #{\theta \colon G \to H}. Then #{\theta(G) = \lbrace \theta(g) : g \in G\rbrace }, the \em{image} of #{\theta}, is a subgroup of #{H}, written #{\theta(G) \leq H}.}
+
+\proof{
+\p{#{\theta(G) \subseteq H} by definition.}
+
+\p{\em{Closure:} let #{x, y \in \theta(G)}. Then #{x = \theta(g)} and #{y = \theta(h)} for #{g, h \in G}, and}
+
+##{x *_H y = \theta(g) *_H \theta(h) = \theta(g *_G h) \in \theta(G)}
+
+\p{since #{\theta} is a homomorphism.}
+
+\p{\em{Identity:}}
+
+##{\theta(e_G) = \theta(e_G *_G e_G) = \theta(e_G) *_H \theta(e_G).}
+
+\p{Premultiplying by #{\theta(e_G)^{-1} \in H} gives #{e_H = \theta(e_G) \in \theta(G)}.}
+
+\p{\em{Inverses:} let #{x = \theta(g) \in \theta(G)}. Then}
+
+##{\begin{aligned}
+e_H = \theta(e_G) &= \theta(g *_G g^{-1}) = \theta(g) *_H \theta(g^{-1}) = x *_H \theta(g^{-1}), \\
+\text{also} \quad e_H &= \theta(g^{-1} *_G g) = \theta(g^{-1}) *_H x.
+\end{aligned}}
+
+\p{Inverses are unique, so this tells us that #{\theta(g^{-1}) = \theta(g)^{-1} \in \theta(G)}.}
+
+\p{Associativity is inherited.}
+}

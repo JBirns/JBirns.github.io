@@ -1,0 +1,7 @@
+\title{Index}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{H \leq G}. The \em{index} of #{H} in #{G} is the number of left cosets of #{H} in #{G}, denoted #{|G : H|}.}

@@ -1,0 +1,12 @@
+\title{Basis}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A subset #{S} of #{V} is a \em{basis} of #{V} if}
+
+\ul{
+\li{\strong{(i)} #{\langle S \rangle = V} (generating family);}
+\li{\strong{(ii)} #{S} is linearly independent (free).}
+}

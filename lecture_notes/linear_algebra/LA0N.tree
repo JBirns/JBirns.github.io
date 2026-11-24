@@ -1,0 +1,11 @@
+\title{Free families}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{1.} We also say that the family #{(v_1, \ldots, v_n)} is \em{free}.}
+\li{\p{\strong{2.} Equivalently, #{(v_1, \ldots, v_n)} are \em{not} linearly independent if one of these vectors is a linear combination of the remaining #{(n - 1)} vectors. Indeed, there exist #{(\lambda_1, \ldots, \lambda_n)} not all zero (say #{\lambda_j \neq 0}) s.t. #{\sum \lambda_iv_i = 0}, so}
+##{v_j = -\frac{1}{\lambda_j}\sum_{i \neq j} \lambda_iv_i.}}
+}

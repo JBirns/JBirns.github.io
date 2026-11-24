@@ -1,0 +1,17 @@
+\title{Group action}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a group and #{X} a non-empty set. We say that #{G} \em{acts} on #{X} if there is a mapping}
+
+##{\rho \colon G \times X \to X, \quad (g, x) \mapsto \rho(g, x) = g(x)}
+
+\p{such that}
+
+\ul{
+\li{\strong{(i)} if #{g \in G}, #{x \in X} then #{\rho(g, x) = g(x) \in X} (implied by the notation);}
+\li{\strong{(ii)} #{\rho(gh, x) = \rho(g, h(x))}; shorthand #{gh(x) = g(h(x))};}
+\li{\strong{(iii)} #{\rho(e, x) = x}; shorthand #{e(x) = x}.}
+}

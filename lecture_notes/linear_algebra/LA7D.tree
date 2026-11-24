@@ -1,0 +1,13 @@
+\title{Examples of inner products}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\mathbb{R}^n}, #{x = (x_1, \ldots, x_n)^T}, #{y = (y_1, \ldots, y_n)^T}: #{\langle x, y \rangle = \sum_{i=1}^n x_iy_i}.}
+\li{\strong{(ii)} #{\mathbb{C}^n}: #{\langle x, y \rangle = \sum_{i=1}^n x_i\bar{y}_i}.}
+\li{\strong{(iii)} #{V = \mathcal{C}([0,1], \mathbb{C})}: #{\langle f, g \rangle = \int_0^1 f(t)\overline{g(t)}\,dt}, the “#{L^2} scalar product”.}
+}
+
+\p{#{\longrightarrow} One can check that (i), (ii), (iii) are inner products. Note #{\langle u, u \rangle = 0 \implies u = 0} #{\leadsto} the definite positive assumption.}

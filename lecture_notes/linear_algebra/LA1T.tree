@@ -1,0 +1,11 @@
+\title{A dimension computation by rank–nullity}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V = \left\lbrace  \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : x + y + z = 0 \right\rbrace }. What is #{\dim V}? Consider}
+
+##{\alpha \colon \mathbb{R}^3 \to \mathbb{R}, \quad \begin{pmatrix} x \\ y \\ z \end{pmatrix} \mapsto x + y + z.}
+
+\p{Then #{\operatorname{Ker}\alpha = V} and #{\operatorname{Im}\alpha = \mathbb{R}}, so #{3 = n(\alpha) + 1}, hence #{n(\alpha) = 2} by rank–nullity.}

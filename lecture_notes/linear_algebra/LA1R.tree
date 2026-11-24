@@ -1,0 +1,15 @@
+\title{Rank–Nullity Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, V} be vector spaces over #{F} with #{\dim_F U < +\infty}, and let #{\alpha \colon U \to V} be a linear map. Then}
+
+##{\dim U = r(\alpha) + n(\alpha).}
+
+\proof{
+\p{We have proved (\ref{LA1P}) that #{U/\operatorname{Ker}\alpha \cong \operatorname{Im}\alpha}. Hence, by \ref{LA12},}
+
+##{\dim\operatorname{Im}\alpha = \dim(U/\operatorname{Ker}\alpha) = \dim U - \dim\operatorname{Ker}\alpha.}
+}

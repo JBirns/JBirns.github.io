@@ -1,0 +1,58 @@
+\title{Sylvester’s Law and Sesquilinear Forms}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall (\ref{LA6H}): if #{\dim V < \infty} and #{\phi \colon V \times V \to F} is a symmetric bilinear form, then there exists a basis #{\mathcal{B}} of #{V} in which #{[\phi]_{\mathcal{B}}} is diagonal.}
+
+\p{\strong{Warning:} #{F} is #{\mathbb{R}} or #{\mathbb{C}} in this section.}
+
+\transclude{LA6L}
+
+\transclude{LA6M}
+
+\p{We want to address the same problem with #{F = \mathbb{R}} #{\leadsto} we cannot take complex roots anymore.}
+
+\transclude{LA6N}
+
+\transclude{LA6O}
+
+\p{#{\leadsto} This definition makes sense: it does not depend on the basis.}
+
+\transclude{LA6P}
+
+\transclude{LA6Q}
+
+\transclude{LA6R}
+
+\transclude{LA6S}
+
+\transclude{LA6T}
+
+\transclude{LA6U}
+
+\transclude{LA6V}
+
+\p{\strong{Sesquilinear forms}}
+
+\p{Let #{F = \mathbb{C}}. The standard inner product on #{\mathbb{C}^n} is, for #{x = (x_1, \ldots, x_n)^T}, #{y = (y_1, \ldots, y_n)^T}, #{x_i, y_i \in \mathbb{C}},}
+
+##{\langle x, y \rangle \coloneqq \sum_{i=1}^n x_i\bar{y}_i.}
+
+\p{In particular #{\Vert x\Vert ^2 = \langle x, x \rangle = \sum_{i=1}^n |x_i|^2 \in \mathbb{R}^+}.}
+
+\p{\strong{Warning:} #{\mathbb{C}^n \times \mathbb{C}^n \to \mathbb{C}}, #{(x, y) \mapsto \langle x, y \rangle} is \em{not} a bilinear form: for #{\lambda \in \mathbb{C}},}
+
+##{\langle \lambda x, y \rangle = \sum_{i=1}^n \lambda x_i\bar{y}_i = \lambda\langle x, y \rangle, \qquad \langle x, \lambda y \rangle = \sum_{i=1}^n x_i\overline{\lambda y_i} = \bar{\lambda}\langle x, y \rangle,}
+
+\p{#{\leadsto} so it is \em{antilinear} with respect to the 2nd coordinate.}
+
+\transclude{LA6W}
+
+\p{So for #{\dim_{\mathbb{C}} V, \dim_{\mathbb{C}} W < \infty}, a sesquilinear #{\phi \colon V \times W \to \mathbb{C}} is linear in the 1st variable and antilinear in the 2nd variable.}
+
+\transclude{LA6X}
+
+\transclude{LA6Y}
+
+\transclude{LA6Z}

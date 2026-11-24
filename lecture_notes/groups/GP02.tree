@@ -1,0 +1,14 @@
+\title{Group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{G} is a set and #{*} is a binary operation on #{G}, then #{(G, *)} is a \em{group} if the following #{4} axioms hold:}
+
+\ul{
+\li{\strong{(i)} #{x, y \in G \implies x * y \in G}  (closure);}
+\li{\strong{(ii)} there exists an element #{e \in G} satisfying #{x * e = x = e * x} for all #{x \in G}  (existence of an identity);}
+\li{\strong{(iii)} for every #{x \in G}, there is a #{y \in G} s.t. #{x * y = e = y * x}  (existence of inverses);}
+\li{\strong{(iv)} the associative law holds: for every #{x, y, z \in G}, #{x * (y * z) = (x * y) * z}.}
+}

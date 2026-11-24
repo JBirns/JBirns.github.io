@@ -1,0 +1,11 @@
+\title{Coordinates under change of basis}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{[v]_{\mathcal{B}} = P[v]_{\mathcal{B}'}}.}
+
+\proof{
+\p{We have #{[\alpha(v)]_{\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{B}}} (\ref{LA23}). Since #{P = [I]_{\mathcal{B}',\mathcal{B}}}, this gives #{[I(v)]_{\mathcal{B}} = [I]_{\mathcal{B}',\mathcal{B}}[v]_{\mathcal{B}'}}, i.e. #{[v]_{\mathcal{B}} = P[v]_{\mathcal{B}'}}.}
+}

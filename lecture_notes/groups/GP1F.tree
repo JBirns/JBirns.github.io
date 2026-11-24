@@ -1,0 +1,11 @@
+\title{Groups of prime order are cyclic}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{|G| = p} for some prime #{p}, then #{G} is cyclic.}
+
+\proof{
+\p{Let #{e \neq g \in G}. Then #{\lbrace e\rbrace  \neq \langle g \rangle \leq G}. By Lagrange, #{1 \neq |\langle g \rangle| \mid |G| = p}, so #{|\langle g \rangle| = p = |G|}, so #{\langle g \rangle = G}, i.e. #{G} is cyclic.}
+}

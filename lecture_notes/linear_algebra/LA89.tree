@@ -1,0 +1,23 @@
+\title{Spectral theorem for self-adjoint maps}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional inner product space and #{\alpha \in \mathcal{L}(V)} self-adjoint (#{\alpha = \alpha^*}). Then #{V} has an orthonormal basis made of eigenvectors of #{\alpha}.}
+
+\p{#{\leadsto} We also say #{\alpha} can be diagonalised in an orthonormal basis of #{V}.}
+
+\proof{
+\p{#{F = \mathbb{R}} or #{\mathbb{C}}. We argue by induction on the dimension of #{V}, #{\dim_F V = n}. For #{n = 1} there is nothing to prove.}
+
+\p{#{n - 1 \to n}: let #{\mathcal{B}} be any orthonormal basis of #{V}, and say #{A = [\alpha]_{\mathcal{B}}}. By the fundamental theorem of algebra, we know that #{\chi_A(t)} (the characteristic polynomial of #{A}) has a complex root. This root is an eval of #{\alpha} and #{\alpha = \alpha^*}, so this root is \em{real} (\ref{LA88}). Let us call #{\lambda \in \mathbb{R}} this eval, and pick an evec #{v_1 \in V \setminus \lbrace 0\rbrace }, #{\Vert v_1\Vert  = 1}, #{\alpha v_1 = \lambda v_1}. Let #{U = \operatorname{span}\langle v_1 \rangle^\perp \leq V}.}
+
+\p{\strong{Key observation:} #{U} is stable by #{\alpha}: #{\alpha(U) \leq U}. Indeed, let #{u \in U}; then}
+
+##{\langle \alpha u, v_1 \rangle = \langle u, \alpha^*v_1 \rangle = \langle u, \alpha v_1 \rangle = \langle u, \lambda v_1 \rangle = \lambda\underbrace{\langle u, v_1 \rangle}_{= 0} = 0,}
+
+\p{so #{\alpha(u) \in U}.}
+
+\p{This implies we may consider #{\alpha|_U \in \mathcal{L}(U)}, which is self-adjoint, and #{n = \dim V = \dim U + 1} (#{1 = \dim\langle v_1 \rangle}), so #{\dim U = n - 1}. Hence there is #{(v_2, \ldots, v_n)}, an orthonormal basis of evecs for #{\alpha|_U}. Then #{V = \langle v_1 \rangle \overset{\perp}{\oplus} U}, and #{(v_1, \ldots, v_n)} is an orthonormal basis of #{V} made of evecs of #{\alpha}.}
+}

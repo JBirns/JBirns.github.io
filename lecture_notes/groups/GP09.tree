@@ -1,0 +1,15 @@
+\title{Subgroup}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{(G, *)} be a group and #{H} a subset of #{G} (#{H \subseteq G}, i.e. #{h \in H \Rightarrow h \in G}). Then #{(H, *)} is a \em{subgroup} of #{(G, *)} if #{(H, *)} is a group (with the same operation), i.e. if}
+
+\ul{
+\li{\strong{(a)} #{h, k \in H \implies h * k \in H};}
+\li{\strong{(b)} #{e_G \in H};}
+\li{\strong{(c)} #{h \in H \implies h^{-1} \in H}.}
+}
+
+\p{(Note associativity is inherited.) Written #{H \leq G}.}

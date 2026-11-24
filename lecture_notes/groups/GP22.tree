@@ -1,0 +1,19 @@
+\title{Recognising dihedral groups}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{G} is a group with #{|G| = 2n}, #{n \geq 3}, and there exist #{b \in G} with #{o(b) = n} and #{a \in G} with #{o(a) = 2} and #{aba = b^{-1}}. Then #{G \cong D_{2n}}.}
+
+\proof{
+\p{Note #{\langle b \rangle \trianglelefteq G} since it has index #{2}. Also #{a \notin \langle b \rangle}, since #{ab \neq ba}. So}
+
+##{G = \langle b \rangle \sqcup \langle b \rangle a = \lbrace e, b, \ldots, b^{n-1}, a, ba, b^2a, \ldots, b^{n-1}a\rbrace .}
+
+\p{Furthermore #{ab = b^{-1}a}, so}
+
+##{ab^k = (ab)b^{k-1} = b^{-1}ab^{k-1} = b^{-2}ab^{k-2} = \cdots = b^{-k}a.}
+
+\p{So #{(b^ka)(b^ka) = b^kb^{-k}aa = ee = e}. One can check that #{\theta \colon D_{2n} \to G}, #{r \mapsto b}, #{t \mapsto a} is an isomorphism.}
+}

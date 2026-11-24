@@ -1,0 +1,42 @@
+\title{Determinant of a block triangular matrix}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_k(F)}, #{B \in M_l(F)}, #{C \in M_{k,l}(F)}, and}
+
+##{M = \begin{pmatrix} A & C \\ 0 & B \end{pmatrix} \in M_n(F), \quad n = k + l.}
+
+\p{Then #{\det M = (\det A)(\det B)}.}
+
+\proof{
+##{\det M = \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{i=1}^n m_{\sigma(i)i}.
+ \qquad (*)}
+
+\p{Observation: #{m_{\sigma(i)i} = 0} if #{i \leq k}, #{\sigma(i) > k}. Therefore in (#{*}) we need only sum over}
+
+\ul{
+\li{\strong{(i)} #{\sigma \in S_n} s.t. #{\forall j \in \llbracket 1, k\rrbracket }, #{\sigma(j) \in \llbracket 1, k\rrbracket }, which forces}
+\li{\strong{(ii)} #{\forall j \in \llbracket k+1, n\rrbracket }, #{\sigma(j) \in \llbracket k+1, n\rrbracket }}
+}
+
+\p{(where #{\llbracket 1, k\rrbracket  = \lbrace 1, \ldots, k\rbrace }). So we restrict #{\sigma} to permutations}
+
+##{\sigma_1 \colon \llbracket 1, k\rrbracket  \to \llbracket 1, k\rrbracket , \qquad \sigma_2 \colon \llbracket k+1, n\rrbracket  \to \llbracket k+1, n\rrbracket .}
+
+\p{Then}
+
+\ul{
+\li{\strong{(i)} for #{1 \leq j \leq k} (so #{1 \leq \sigma(j) \leq k}), #{m_{\sigma(j)j} = a_{\sigma(j)j} = a_{\sigma_1(j)j}};}
+\li{\strong{(ii)} for #{k+1 \leq j \leq n} (so #{k+1 \leq \sigma(j) \leq n}), #{m_{\sigma(j)j} = b_{\sigma(j)j} = b_{\sigma_2(j)j}}.}
+}
+
+\p{So #{\sigma} sends #{\lbrace 1, \ldots, k\rbrace } to itself and #{\lbrace k+1, \ldots, n\rbrace } to itself, and #{\varepsilon(\sigma) = \varepsilon(\sigma_1)\varepsilon(\sigma_2)} (decompose into transpositions), where #{\sigma_1 \in S_k} acts on #{\lbrace 1, \ldots, k\rbrace } and #{\sigma_2 \in S_l} acts on #{\lbrace k+1, \ldots, n\rbrace }. Hence}
+
+##{\begin{aligned}
+\det M &= \sum_{\sigma \in S_n} \varepsilon(\sigma)\prod_{i=1}^n m_{\sigma(i)i} = \sum_{\substack{\sigma_1 \in S_k \\ \sigma_2 \in S_l}} \varepsilon(\sigma_1 \circ \sigma_2)\prod_{i=1}^k a_{\sigma_1(i)i}\prod_{j=k+1}^n b_{\sigma_2(j)j} \\
+&= \sum_{\substack{\sigma_1 \in S_k \\ \sigma_2 \in S_l}} \varepsilon(\sigma_1)\varepsilon(\sigma_2)\prod_{i=1}^k a_{\sigma_1(i)i}\prod_{j=k+1}^n b_{\sigma_2(j)j} \\
+&= \underbrace{\sum_{\sigma_1 \in S_k} \varepsilon(\sigma_1)\prod_{i=1}^k a_{\sigma_1(i)i}}_{\det A}\; \underbrace{\sum_{\sigma_2 \in S_l} \varepsilon(\sigma_2)\prod_{j=k+1}^n b_{\sigma_2(j)j}}_{\det B}.
+\end{aligned}}
+}

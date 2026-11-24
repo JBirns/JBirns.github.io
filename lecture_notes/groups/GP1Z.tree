@@ -1,0 +1,29 @@
+\title{Direct Product Theorem}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a group with subgroups #{H} and #{K}. If}
+
+\ul{
+\li{\strong{(i)} each element of #{G} can be written as #{hk}, some #{h \in H}, #{k \in K},}
+\li{\strong{(ii)} #{H \cap K = \lbrace e\rbrace },}
+\li{\strong{(iii)} #{hk = kh} for all #{h \in H}, #{k \in K},}
+}
+
+\p{then #{G \cong H \times K} and we call #{G} the (internal) direct product of #{H} and #{K}.}
+
+\proof{
+\p{Let #{\theta \colon H \times K \to G}, #{(h, k) \mapsto hk}.}
+
+\p{\em{#{\theta} a homomorphism:}}
+
+##{\theta((h_1, k_1)(h_2, k_2)) = \theta(h_1h_2, k_1k_2) = h_1\underbrace{h_2k_1}_{k_1h_2}k_2 = h_1k_1h_2k_2 = \theta((h_1, k_1))\theta((h_2, k_2))}
+
+\p{by (iii).}
+
+\p{\em{#{\theta} injective:} if #{\theta((h_1, k_1)) = \theta((h_2, k_2))} then #{h_1k_1 = h_2k_2}, so #{h_2^{-1}h_1 = k_2k_1^{-1} \in H \cap K = \lbrace e\rbrace } by (ii), so #{h_1 = h_2} and #{k_1 = k_2}. So #{(h_1, k_1) = (h_2, k_2)}.}
+
+\p{\em{#{\theta} surjective} by (i). So #{\theta} is an isomorphism as required.}
+}

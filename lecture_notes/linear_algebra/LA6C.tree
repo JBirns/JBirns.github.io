@@ -1,0 +1,11 @@
+\title{Symmetric matrices and diagonal representations}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{For #{A \in M_n(F)}, we say that #{A} is symmetric #{\iff A = A^T \iff A = (a_{ij})_{1 \leq i,j \leq n}} with #{a_{ji} = a_{ij}}.}
+\li{#{\phi} symmetric #{\iff [\phi]_{\mathcal{B}}} is symmetric in \em{any} basis #{\mathcal{B}} of #{V}.}
+\li{To be able to represent #{\phi} by a diagonal matrix, #{\phi} must be symmetric: #{P^TAP = D \implies D^T = P^TA^TP \implies A = A^T}.}
+}

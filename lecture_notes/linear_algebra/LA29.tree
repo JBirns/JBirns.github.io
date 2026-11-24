@@ -1,0 +1,9 @@
+\title{Change of basis matrix}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The \em{change of basis matrix} from #{\mathcal{B}'} to #{\mathcal{B}} is #{P = (p_{ij})_{1 \leq i, j \leq n}} given by}
+
+##{P = \big( [v'_1]_{\mathcal{B}} \mid \cdots \mid [v'_n]_{\mathcal{B}} \big) = [I]_{\mathcal{B}',\mathcal{B}}.}

@@ -1,0 +1,22 @@
+\title{Kernels of the example actions}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Referring to \ref{GP26}:}
+
+\ul{
+\li{\strong{(i)} trivial action: #{\ker\Phi = G};}
+\li{\strong{(ii)} #{S_n} acting on #{\lbrace 1, \ldots, n\rbrace }: faithful;}
+\li{\strong{(iii)} #{D_8} acting on the edges of a square: faithful;}
+\li{\strong{(iv)} left regular action: faithful;}
+\li{\strong{(v)} conjugation: #{\ker\Phi = \lbrace g \in G : gkg^{-1} = k\; \forall k \in G\rbrace  = Z(G)}, the \em{centre} of #{G}, “the elements that commute with everything”;}
+\li{\strong{(vi)} conjugation on #{N \trianglelefteq G}: #{\ker\Phi = \lbrace g \in G : gng^{-1} = n\; \forall n \in N\rbrace  = C_G(N)}, the \em{centraliser} of #{N} in #{G};}
+\li{\p{\strong{(vii)} left coset action:}
+##{\begin{aligned}
+\ker\Phi &= \lbrace g \in G : gkH = kH\; \forall k \in G\rbrace  = \lbrace g \in G : k^{-1}gk \in H\; \forall k \in G\rbrace  \\
+&= \lbrace g \in G : g \in kHk^{-1}\; \forall k \in G\rbrace  = \bigcap_{k \in G} kHk^{-1} = \operatorname{Core}_G(H) \trianglelefteq G,
+\end{aligned}}
+\p{and #{\operatorname{Core}_G(H) \leq H}, the “core of #{H}”.}}
+}

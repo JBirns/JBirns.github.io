@@ -1,0 +1,29 @@
+\title{Expansion of the determinant}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)}.}
+
+\ul{
+\li{\p{\strong{(i)} Expansion with respect to the #{j}th column: pick #{1 \leq j \leq n}; then}
+##{\det A = \sum_{i=1}^n (-1)^{i+j}a_{ij}\det A_{\hat{i}\hat{j}}.}}
+\li{\p{\strong{(ii)} Expansion with respect to the #{i}th row: pick #{1 \leq i \leq n}; then}
+##{\det A = \sum_{j=1}^n (-1)^{i+j}a_{ij}\det A_{\hat{i}\hat{j}}.}}
+}
+
+\proof{
+\p{We prove the expansion with respect to column #{j} (row expansion follows by taking the transpose). Pick #{1 \leq j \leq n} and write #{A = \big( A^{(1)} \mid \cdots \mid A^{(n)} \big)}, #{A^{(j)} = \sum_{i=1}^n a_{ij}e_i}, #{A = (a_{ij})_{1 \leq i,j \leq n}}. Hence}
+
+##{\begin{aligned}
+\det A &= \det\Big( A^{(1)}, \ldots, \sum_{i=1}^n a_{ij}e_i, \ldots, A^{(n)} \Big) \\
+&= \sum_{i=1}^n a_{ij}\det\big( A^{(1)}, \ldots, e_i, \ldots, A^{(n)} \big) \qquad \text{(by linearity)} \\
+&= \sum_{i=1}^n a_{ij}(-1)^{j-1}\det\big( e_i, A^{(1)}, \ldots, A^{(n)} \big) \\
+&= \sum_{i=1}^n a_{ij}(-1)^{j-1}(-1)^{i-1}\det\left( \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \tilde{A}^{(1)}, \ldots, \tilde{A}^{(n)} \right) \\
+&= \sum_{i=1}^n a_{ij}(-1)^{i+j}\det\begin{pmatrix} 1 & a_{i1} \; \cdots \; a_{in} \\ 0 & A_{\hat{i}\hat{j}} \end{pmatrix} \\
+&= \sum_{i=1}^n a_{ij}(-1)^{i+j}\det A_{\hat{i}\hat{j}}
+\end{aligned}}
+
+\p{by block computation (\ref{LA4M}). Here, in the second line the column #{e_i} (in position #{j}) is moved to the front by #{j - 1} swaps, and in the third line row #{i} is moved to the top by #{i - 1} swaps (with #{\tilde{A}^{(k)}} the permuted columns, column #{j} omitted).}
+}

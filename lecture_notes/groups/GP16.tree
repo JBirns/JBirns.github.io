@@ -1,0 +1,15 @@
+\title{Cosets have the same size}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{H \leq G} and #{g \in G}. Then there is a bijection between #{H} and #{gH}; in particular if #{H} is finite then #{|H| = |gH|}.}
+
+\proof{
+\p{Define #{\theta_g \colon H \to gH}, #{h \mapsto gh}. We show #{\theta_g} is a bijection.}
+
+\p{\em{Surjectivity:} if #{gh \in gH} then #{\theta_g(h) = gh}.}
+
+\p{\em{Injectivity:} if #{\theta_g(h_1) = \theta_g(h_2)} then #{gh_1 = gh_2}, so #{h_1 = h_2} (cancellation law).}
+}

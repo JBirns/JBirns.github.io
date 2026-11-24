@@ -1,0 +1,13 @@
+\title{Bounds on the minimal polynomial multiplicity}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\lambda} be an eval of #{\alpha \in \mathcal{L}(V)}, and let #{c_\lambda} be the multiplicity of #{\lambda} as a root of #{m_\alpha}. Then #{1 \leq c_\lambda \leq a_\lambda}.}
+
+\proof{
+\p{Cayley–Hamilton #{\implies m_\alpha \mid \chi_\alpha \implies c_\lambda \leq a_\lambda}.}
+
+\p{#{c_\lambda \geq 1}: indeed, there is #{v \neq 0} s.t. #{\alpha(v) = \lambda v}, so for all #{p \in F[t]}, #{p(\alpha)(v) = p(\lambda)v} (using #{\alpha^n(v) = \lambda^nv}). Hence #{0 = m_\alpha(\alpha)(v) = m_\alpha(\lambda)v}, so #{m_\alpha(\lambda) = 0} since #{v \neq 0}. Hence #{c_\lambda \geq 1}.}
+}

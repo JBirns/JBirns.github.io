@@ -1,0 +1,7 @@
+\title{Column rank is the rank of the map}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\alpha} is a linear map represented by #{A} with respect to some basis, then #{r_c(A) = r(\alpha) = \dim\operatorname{Im}\alpha} (exercise).}

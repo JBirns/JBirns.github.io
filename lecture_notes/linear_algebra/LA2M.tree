@@ -1,0 +1,19 @@
+\title{Column rank equals row rank}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{r_c(A) = r_c(A^T)} (column rank #{=} row rank).}
+
+\proof{
+\p{Let #{r = r_c(A)}. Then}
+
+##{Q^{-1}AP = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}_{m \times n}.}
+
+\p{Take the transpose: #{(Q^{-1}AP)^T = P^TA^T(Q^{-1})^T = P^TA^T(Q^T)^{-1}}, so}
+
+##{P^TA^T(Q^T)^{-1} = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}^T_{m \times n} = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}_{n \times m}.}
+
+\p{Hence #{r_c(A^T) = r = r_c(A)}.}
+}

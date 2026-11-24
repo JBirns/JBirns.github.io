@@ -1,0 +1,14 @@
+\title{Polynomial of an endomorphism}
+\taxon{Notation}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Pick a polynomial over #{F}, #{p(t) = a_nt^n + \cdots + a_1t + a_0}, #{a_i \in F}.}
+
+\ul{
+\li{For #{A \in M_n(F)}, for all #{n}, #{A^n \in M_n(F)}. We define #{p(A) \coloneqq a_nA^n + \cdots + a_1A + a_0I \in M_n(F)}.}
+\li{\p{For #{\alpha \in \mathcal{L}(V)} we define}
+##{p(\alpha) = a_n\alpha^n + \cdots + a_1\alpha + a_0\mathrm{Id}, \qquad \alpha^n = \underbrace{\alpha \circ \cdots \circ \alpha}_{n} \in \mathcal{L}(V).}
+\p{#{\leadsto} very useful.}}
+}

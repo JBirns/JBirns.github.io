@@ -1,0 +1,11 @@
+\title{The dual as row vectors}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{It is sometimes convenient to think of #{V^*} as the space of \em{row} vectors of length #{n} over #{F}. If #{(e_1, \ldots, e_n)} is a basis of #{V}, #{x = \sum_{i=1}^n x_ie_i \in V}, and #{(\varepsilon_1, \ldots, \varepsilon_n)} is the dual basis of #{V^*}, #{\alpha = \sum_{i=1}^n \alpha_i\varepsilon_i \in V^*}, then}
+
+##{\alpha(x) = \sum_{i=1}^n \alpha_i\varepsilon_i\Big( \sum_{j=1}^n x_je_j \Big) = \sum_{i=1}^n \alpha_i\sum_{j=1}^n x_j\underbrace{\varepsilon_i(e_j)}_{\delta_{ij}} = \sum_{i=1}^n \alpha_ix_i = (\alpha_1 \; \cdots \; \alpha_n)\begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}.}
+
+\p{#{\leadsto} scalar product structure.}

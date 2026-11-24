@@ -1,0 +1,10 @@
+\title{Rank and nullity}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{r(\alpha) = \dim\operatorname{Im}\alpha} is the \em{rank} of #{\alpha};}
+\li{#{n(\alpha) = \dim\operatorname{Ker}\alpha} is the \em{nullity} of #{\alpha}.}
+}

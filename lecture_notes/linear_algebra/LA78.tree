@@ -1,0 +1,23 @@
+\title{Sylvester for skew-symmetric forms}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{\mathbb{R}} with #{\dim V < \infty}, and #{\phi \colon V \times V \to \mathbb{R}} a skew-symmetric bilinear form. Then there exists a basis of #{V},}
+
+##{\mathcal{B} = (v_1, w_1, v_2, w_2, \ldots, v_m, w_m, v_{2m+1}, v_{2m+2}, \ldots, v_n),}
+
+\p{s.t. #{[\phi]_{\mathcal{B}}} is block diagonal with #{m} blocks #{\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}} followed by zeros.}
+
+\proof{
+\p{\em{Proof of sketch, again similar to the regular case.} Induction on #{\dim V}.}
+
+\ul{
+\li{#{\phi \equiv 0 \to} done.}
+\li{#{\phi \neq 0 \implies \exists (v_1, w_1) \in V \times V} s.t. #{\phi(v_1, w_1) \neq 0}. Then #{v_1 \neq 0}, #{w_1 \neq 0}, and after scaling #{\phi(v_1, w_1) = 1}, so #{\phi(w_1, v_1) = -1} since #{\phi} is skew-symmetric.}
+\li{#{(v_1, w_1)} are linearly independent; otherwise #{\phi(v_1, \lambda v_1) = \lambda\phi(v_1, v_1) = 0} (skew-symmetric).}
+\li{Define #{U = \langle v_1, w_1 \rangle} and #{W = \lbrace v \in V : \phi(v_1, v) = \phi(w_1, v) = 0\rbrace }. Exercise: #{V = U \oplus W}.}
+\li{Apply the induction hypothesis to #{\phi|_{W \times W}}, which is skew-symmetric.}
+}
+}

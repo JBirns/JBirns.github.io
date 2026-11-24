@@ -1,0 +1,28 @@
+\title{Fermat–Euler Theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{n \in \mathbb{N}}, #{a \in \mathbb{Z}} with #{\operatorname{hcf}(a, n) = 1}. Then #{a^{\phi(n)} \equiv 1 \pmod n}.}
+
+\proof{
+\p{We prove the Fermat–Euler Theorem using Lagrange; first we need to set it up. Let #{n \in \mathbb{N}},}
+
+##{R_n = \lbrace 0, 1, \ldots, n-1\rbrace , \qquad R_n^* = \lbrace a \in R_n : \operatorname{hcf}(a, n) = 1\rbrace .}
+
+\p{Define #{\times_n} to be multiplication mod #{n}.}
+
+\p{\strong{Claim.} #{(R_n^*, \times_n)} is a group.}
+
+\p{\em{Proof of claim.} Notation: for #{u \in \mathbb{Z}}, write #{\bar{u} \in R_n} s.t. #{u \equiv \bar{u} \pmod n}.}
+
+\ul{
+\li{Closure: #{\operatorname{hcf}(a, n) = 1 = \operatorname{hcf}(b, n) \implies \operatorname{hcf}(ab, n) = 1 \implies \operatorname{hcf}(\overline{ab}, n) = 1}.}
+\li{Identity: #{1}.}
+\li{Associativity ✓.}
+\li{Inverses: let #{a \in R_n^*}, so #{\operatorname{hcf}(a, n) = 1}. Then there exist #{u, v \in \mathbb{Z}} s.t. #{au + vn = 1} (Bézout’s Theorem), so #{au \equiv 1 \pmod n}. Then #{\bar{u} \in R_n^*} is #{a^{-1}}.}
+}
+
+\p{Note #{|R_n^*| = \phi(n)}. Let #{a \equiv \bar{a} \pmod n}, #{\bar{a} \in R_n^*}. By \ref{GP1E}, #{\bar{a}^{\phi(n)} = \bar{a}^{|R_n^*|} = 1} in #{R_n^*}, so #{a^{\phi(n)} \equiv 1 \pmod n}.}
+}

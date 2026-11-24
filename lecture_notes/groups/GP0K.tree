@@ -1,0 +1,7 @@
+\title{Cyclic group}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{A group #{H} is \em{cyclic} if there exists #{h \in H} such that each element of #{H} is a power of #{h}, i.e. for each #{x \in H} there exists #{m \in \mathbb{Z}} s.t. #{x = h^m}. Then #{h} is called a \em{generator} of #{H} and we write #{H = \langle h \rangle}.}

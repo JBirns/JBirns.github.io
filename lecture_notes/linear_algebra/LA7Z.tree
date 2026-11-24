@@ -1,0 +1,29 @@
+\title{Adjoint}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be finite dimensional inner product spaces and #{\alpha \in \mathcal{L}(V, W)}. Then there exists a unique linear map #{\alpha^* \colon W \to V} s.t.}
+
+##{\forall (v, w) \in V \times W, \quad \langle \alpha(v), w \rangle = \langle v, \alpha^*(w) \rangle.}
+
+\p{Moreover, if #{\mathcal{B}} is an orthonormal basis of #{V} and #{\mathcal{C}} an orthonormal basis of #{W}, then}
+
+##{[\alpha^*]_{\mathcal{C},\mathcal{B}} = \overline{[\alpha]_{\mathcal{B},\mathcal{C}}}^T.}
+
+\proof{
+\p{Computation: let #{\mathcal{B} = (v_1, \ldots, v_n)}, #{\mathcal{C} = (w_1, \ldots, w_m)}, #{A = [\alpha]_{\mathcal{B},\mathcal{C}} = (a_{ij})}.}
+
+\p{Existence: define #{\alpha^*} by #{[\alpha^*]_{\mathcal{C},\mathcal{B}} = \bar{A}^T = C = (c_{ij})}, #{c_{ij} = \bar{a}_{ji}}. We compute}
+
+##{\Big\langle \alpha\Big( \sum_i \lambda_iv_i \Big), \sum_j \mu_jw_j \Big\rangle = \Big\langle \sum_{i,k} \lambda_ia_{ki}w_k, \sum_j \mu_jw_j \Big\rangle = \sum_{i,j} \lambda_ia_{ji}\bar{\mu}_j}
+
+\p{since #{\mathcal{C}} is an orthonormal basis. Then}
+
+##{\Big\langle \sum_i \lambda_iv_i, \alpha^*\Big( \sum_j \mu_jw_j \Big) \Big\rangle = \Big\langle \sum_i \lambda_iv_i, \sum_{j,k} \mu_jc_{kj}v_k \Big\rangle = \sum_{i,j} \lambda_i\bar{c}_{ij}\bar{\mu}_j,}
+
+\p{and #{\bar{c}_{ij} = a_{ji}}, so the two agree.}
+
+\p{Uniqueness: follows by computing #{\alpha^*(w_j)} #{\leadsto} exercise.}
+}

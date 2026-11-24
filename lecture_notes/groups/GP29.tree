@@ -1,0 +1,15 @@
+\title{An action is a homomorphism to #{\mathrm{Sym}(X)}}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{G} acts on the set #{X}. Then the map #{\Phi \colon G \to \mathrm{Sym}(X)}, #{g \mapsto \phi_g}, as in \ref{GP28}, is a homomorphism.}
+
+\proof{
+\p{We need #{\Phi(gh) = \Phi(g) \circ \Phi(h)}, i.e. #{\phi_{gh} = \phi_g \circ \phi_h}. Let #{x \in X}. Then}
+
+##{\phi_{gh}(x) = \rho(gh, x) = \rho(g, \rho(h, x)) = \phi_g \circ \phi_h(x).}
+
+\p{True for all #{x \in X}, so done.}
+}

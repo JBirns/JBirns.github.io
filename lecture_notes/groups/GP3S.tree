@@ -1,0 +1,17 @@
+\title{Möbius maps send circles to circles}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \in \mathcal{M}} and #{C} a circle in #{\mathbb{C}_\infty}. Then #{f(C)} is a circle in #{\mathbb{C}_\infty}.}
+
+\proof{
+\p{By \ref{GP3N}, we just need to consider #{f(z) = az}, #{z + b} or #{\frac{1}{z}}. Let #{S_{A,B,C}} be the circle defined by (#{*}).}
+
+\ul{
+\li{If #{f(z) = az}: #{S_{A,B,C} \mapsto S_{A/(a\bar{a}),\,B/a,\,C}}.}
+\li{If #{f(z) = z + b}: #{S_{A,B,C} \mapsto S_{A,\,B - Ab,\,C + Ab\bar{b} - \bar{B}b - B\bar{b}}}.}
+\li{If #{f(z) = \frac{1}{z} = w}: #{S_{A,B,C} \mapsto A + Bw + \bar{B}\bar{w} + Cw\bar{w} = 0}, i.e. #{S_{C,\bar{B},A}}.}
+}
+}

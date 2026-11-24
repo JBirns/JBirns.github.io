@@ -1,0 +1,7 @@
+\title{Two minimal polynomials}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V = \mathbb{R}^2}, #{A = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}}, #{B = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}}. Let #{p(t) = (t - 1)^2}; then #{p(A) = p(B) = 0}, so each minimal polynomial is either #{t - 1} or #{(t - 1)^2}. Check: #{m_A = t - 1} and #{m_B = (t - 1)^2}. Hence #{A} is diagonalisable and #{B} is \em{not} diagonalisable.}

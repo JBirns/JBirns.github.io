@@ -1,0 +1,33 @@
+\title{Characterisations of direct sums}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, W \leq V}. Then the following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{V = U \oplus W};}
+\li{\strong{(ii)} #{V = U + W} and #{U \cap W = \lbrace 0\rbrace };}
+\li{\strong{(iii)} for any basis #{\mathcal{B}_1} of #{U} and #{\mathcal{B}_2} of #{W}, the union #{\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2} is a basis of #{V}.}
+}
+
+\proof{
+\p{\strong{(ii) #{\Rightarrow} (i).} #{V = U + W} gives, for all #{v \in V}, some #{(u, w) \in U \times W} s.t. #{v = u + w}. Uniqueness: if #{u_1 + w_1 = u_2 + w_2 = v} then}
+
+##{\underbrace{u_1 - u_2}_{\in U} = \underbrace{w_2 - w_1}_{\in W},}
+
+\p{so #{u_1 - u_2 \in U \cap W = \lbrace 0\rbrace } and #{w_1 - w_2 \in U \cap W = \lbrace 0\rbrace }, so #{u_1 = u_2}, #{w_1 = w_2}.}
+
+\p{\strong{(i) #{\Rightarrow} (iii).} Let #{\mathcal{B}_1} be a basis of #{U} and #{\mathcal{B}_2} a basis of #{W}, and #{\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2}. Then #{\mathcal{B}} is a generating family of #{U + W = V}. It is a free family: suppose #{\sum_{v_i \in \mathcal{B}} \lambda_iv_i = 0}. Splitting the sum into a part in #{U} and a part in #{W}, and comparing with #{0 = \underbrace{0}_{\in U} + \underbrace{0}_{\in W}}, uniqueness (the sum is direct) gives}
+
+##{\sum_{v_i \in \mathcal{B}_1} \lambda_iv_i = 0, \qquad \sum_{v_i \in \mathcal{B}_2} \lambda_iv_i = 0,}
+
+\p{so #{\lambda_i = 0} since #{\mathcal{B}_1}, #{\mathcal{B}_2} are bases. Hence #{\mathcal{B}} is free.}
+
+\p{\strong{(iii) #{\Rightarrow} (ii).} We need to show #{V = U + W} and #{U \cap W = \lbrace 0\rbrace }. Let #{\mathcal{B}_1} be a basis of #{U} and #{\mathcal{B}_2} a basis of #{W}; then #{\mathcal{B} = \mathcal{B}_1 \cup \mathcal{B}_2} is a basis of #{V}, so #{V = U + W}. If #{v \in U \cap W} then}
+
+##{v = \sum_{u \in \mathcal{B}_1} \lambda_uu = \sum_{w \in \mathcal{B}_2} \lambda_ww \implies \sum_{u \in \mathcal{B}_1} \lambda_uu - \sum_{w \in \mathcal{B}_2} \lambda_ww = 0,}
+
+\p{so all #{\lambda = 0} since #{\mathcal{B}_1 \cup \mathcal{B}_2} is free. Hence #{U \cap W = \lbrace 0\rbrace }.}
+}

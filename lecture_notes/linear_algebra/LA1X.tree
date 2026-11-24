@@ -1,0 +1,11 @@
+\title{Matrix}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{An #{m \times n} \em{matrix} over #{F} is an array with #{m} rows and #{n} columns with entries in #{F}:}
+
+##{A = (a_{ij})_{\substack{1 \leq i \leq m \\ 1 \leq j \leq n}},}
+
+\p{where #{a_{ij}} is the entry in row #{i} and column #{j}.}

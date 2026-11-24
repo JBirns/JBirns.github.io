@@ -1,0 +1,13 @@
+\title{Determinant of block upper triangular matrices}
+\taxon{Corollary}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{A_1, \ldots, A_k} are square matrices, then}
+
+##{\det\begin{pmatrix} A_1 & & * \\ & \ddots & \\ 0 & & A_k \end{pmatrix} = \det(A_1) \cdots \det(A_k).}
+
+\proof{
+\p{By induction on the number #{k} of blocks.}
+}

@@ -1,0 +1,11 @@
+\title{Definition}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\alpha \colon V \to V} is a linear endomorphism, we can define}
+
+##{\operatorname{Tr}\alpha = \operatorname{Tr}([\alpha]_{\mathcal{B}})}
+
+\p{in any basis #{\mathcal{B}}.}

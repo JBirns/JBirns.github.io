@@ -1,0 +1,7 @@
+\title{Spans, generating family}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be an #{F}-vector space and #{S \subset V}. We say that #{S} \em{spans} #{V} if #{\langle S \rangle = V}. If #{S} spans #{V}, we say that #{S} is a \em{generating family} of #{V}.}

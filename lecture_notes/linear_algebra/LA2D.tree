@@ -1,0 +1,21 @@
+\title{Change of basis formula}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\bar{A} = [\alpha]_{\mathcal{B},\mathcal{C}}}, #{\bar{A}' = [\alpha]_{\mathcal{B}',\mathcal{C}'}}, #{P = [I]_{\mathcal{B}',\mathcal{B}}} and #{Q = [I]_{\mathcal{C}',\mathcal{C}}}. Then}
+
+##{\bar{A}' = Q^{-1}\bar{A}P.}
+
+\proof{
+\p{We use #{[\alpha(v)]_{\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{B}}} and #{[v]_{\mathcal{B}} = P[v]_{\mathcal{B}'}}. On the one hand,}
+
+##{[\alpha(v)]_{\mathcal{C}} = Q[\alpha(v)]_{\mathcal{C}'} = Q[\alpha]_{\mathcal{B}',\mathcal{C}'}[v]_{\mathcal{B}'} = Q\bar{A}'[v]_{\mathcal{B}'}.}
+
+\p{On the other hand,}
+
+##{[\alpha(v)]_{\mathcal{C}} = [\alpha]_{\mathcal{B},\mathcal{C}}[v]_{\mathcal{B}} = \bar{A}P[v]_{\mathcal{B}'}.}
+
+\p{Hence for all #{v \in V}, #{Q\bar{A}'[v]_{\mathcal{B}'} = \bar{A}P[v]_{\mathcal{B}'}}, so #{Q\bar{A}' = \bar{A}P}, i.e. #{\bar{A}' = Q^{-1}\bar{A}P}.}
+}

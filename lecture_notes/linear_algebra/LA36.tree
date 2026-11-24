@@ -1,0 +1,46 @@
+\title{Properties of the Dual Map, Double Dual}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall: for #{V, W} vector spaces over #{F} and #{\alpha \in \mathcal{L}(V, W)}, the dual map is #{\alpha^* \colon W^* \to V^*}, #{\varepsilon \mapsto \varepsilon \circ \alpha}. For matrix representations: if #{\mathcal{B}} is a basis of #{V}, #{\mathcal{C}} a basis of #{W}, and #{\mathcal{B}^*}, #{\mathcal{C}^*} the dual bases of #{V^*}, #{W^*}, then #{[\alpha^*]_{\mathcal{C}^*,\mathcal{B}^*} = [\alpha]_{\mathcal{B},\mathcal{C}}^T}.}
+
+\p{Now let #{E = (e_1, \ldots, e_n)} be a basis of #{V} and #{F = (f_1, \ldots, f_n)} another basis of #{V}. Let #{P = [\mathrm{Id}]_{F,E}} (the change of basis matrix from #{F} to #{E}), and #{E^* = (\varepsilon_1, \ldots, \varepsilon_n)}, #{F^* = (\eta_1, \ldots, \eta_n)}.}
+
+\transclude{LA37}
+
+\p{\strong{Properties of the dual map}}
+
+\transclude{LA38}
+
+\p{#{\longrightarrow} This is a fundamental property, with applications in infinite dimension. #{\leadsto} \em{Dual method}: there are many problems (controllability) where the understanding of #{\alpha^*} is simpler than the understanding of #{\alpha}.}
+
+\p{\strong{Double dual}}
+
+\p{Let #{V} be a vector space over #{F} and #{V^* = \mathcal{L}(V, F)}. We define the \em{bidual}}
+
+##{V^{**} = (V^*)^* = \mathcal{L}(V^*, F).}
+
+\p{This is a very important space, in particular in infinite dimension, since in general there is no obvious connection between #{V} and #{V^*} (unless there is a Hilbertian structure). However, there is a large class of function spaces such that #{V \cong V^{**}} (\em{reflexive} spaces).}
+
+\transclude{LA39}
+
+\p{In general, there is a \em{canonical embedding} of #{V} into #{V^{**}}. Indeed, pick #{v \in V} and define}
+
+##{\hat{v} \colon V^* \to F, \quad \varepsilon \mapsto \varepsilon(v).}
+
+\p{Check well-definedness and linearity: #{\varepsilon \in V^* \implies \varepsilon(v) \in F}, and for #{\lambda_1, \lambda_2 \in F}, #{\varepsilon_1, \varepsilon_2 \in V^*},}
+
+##{\hat{v}(\lambda_1\varepsilon_1 + \lambda_2\varepsilon_2) = (\lambda_1\varepsilon_1 + \lambda_2\varepsilon_2)(v) = \lambda_1\varepsilon_1(v) + \lambda_2\varepsilon_2(v) = \lambda_1\hat{v}(\varepsilon_1) + \lambda_2\hat{v}(\varepsilon_2),}
+
+\p{so #{\hat{v} \in \mathcal{L}(V^*, F)}.}
+
+\transclude{LA3A}
+
+\p{(In infinite dimension, we can show under canonical assumptions (Banach space) that #{\hat{\; }} is injective; its image is in general a proper subspace of #{V^{**}}.)}
+
+\transclude{LA3B}
+
+\transclude{LA3C}
+
+\transclude{LA3D}

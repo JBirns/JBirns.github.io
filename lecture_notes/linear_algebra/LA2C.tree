@@ -1,0 +1,11 @@
+\title{Careful}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{With #{P = \big( [v'_1]_{\mathcal{B}}, \ldots, [v'_n]_{\mathcal{B}} \big)} we have #{[v]_{\mathcal{B}} = P[v]_{\mathcal{B}'}}, so}
+
+##{[v]_{\mathcal{B}'} = P^{-1}[v]_{\mathcal{B}}.}
+
+\p{Note the \em{inverse}.}

@@ -1,0 +1,21 @@
+\title{First isomorphism theorem}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V, W} be vector spaces over #{F} and #{\alpha \colon V \to W} a linear map. Then}
+
+##{\bar{\alpha} \colon V/\operatorname{Ker}\alpha \to \operatorname{Im}\alpha, \quad v + \operatorname{Ker}\alpha \mapsto \alpha(v)}
+
+\p{is an isomorphism.}
+
+\proof{
+\p{This follows from linearity.}
+
+\ul{
+\li{#{\bar{\alpha}} is well-defined: #{v + \operatorname{Ker}\alpha = v' + \operatorname{Ker}\alpha \implies v - v' \in \operatorname{Ker}\alpha \implies \alpha(v - v') = 0 \implies \alpha(v) = \alpha(v')}.}
+\li{#{\bar{\alpha}} is a linear map: this follows from the linearity of #{\alpha}.}
+\li{#{\bar{\alpha}} is a bijection. Injectivity: #{\bar{\alpha}(v + \operatorname{Ker}\alpha) = 0 \implies \alpha(v) = 0 \implies v \in \operatorname{Ker}\alpha \implies v + \operatorname{Ker}\alpha = 0 + \operatorname{Ker}\alpha}. Surjectivity follows from the definition of the image: if #{w \in \operatorname{Im}\alpha}, there is #{v \in V} s.t. #{w = \alpha(v) = \bar{\alpha}(v + \operatorname{Ker}\alpha)}.}
+}
+}

@@ -1,0 +1,20 @@
+\title{The sign is a homomorphism}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{n \geq 2}. The map}
+
+##{\operatorname{sgn} \colon (S_n, \circ) \to (\lbrace \pm 1\rbrace , \times), \quad \sigma \mapsto \operatorname{sgn}(\sigma)}
+
+\p{is a well-defined non-trivial homomorphism.}
+
+\proof{
+\ul{
+\li{Well defined by \ref{GP0X}.}
+\li{#{\operatorname{sgn}((1\,2)) = -1}, so it is non-trivial.}
+\li{\p{Homomorphism: let #{\alpha, \beta \in S_n} with #{\operatorname{sgn}(\alpha) = (-1)^k} and #{\operatorname{sgn}(\beta) = (-1)^l}. So there exist transpositions #{\tau_i} and #{\tau'_i} s.t. #{\alpha = \tau_1\cdots\tau_k}, #{\beta = \tau'_1\cdots\tau'_l}. Then #{\alpha\beta = \tau_1\cdots\tau_k\tau'_1\cdots\tau'_l}, so}
+##{\operatorname{sgn}(\alpha\beta) = (-1)^{k+l} = (-1)^k(-1)^l = \operatorname{sgn}(\alpha)\operatorname{sgn}(\beta).}}
+}
+}

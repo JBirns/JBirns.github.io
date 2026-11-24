@@ -1,0 +1,26 @@
+\title{Eigenvalues of self-adjoint maps}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional inner product space and #{\alpha \in \mathcal{L}(V)} self-adjoint (#{\alpha = \alpha^*}). Then:}
+
+\ul{
+\li{\strong{(i)} #{\alpha} has real evals;}
+\li{\strong{(ii)} evecs of #{\alpha} with respect to different evals are orthogonal.}
+}
+
+\proof{
+\p{(i) Let #{v \in V \setminus \lbrace 0\rbrace }, #{\lambda \in \mathbb{C}} with #{\alpha v = \lambda v}. Then #{\langle \lambda v, v \rangle = \lambda\Vert v\Vert ^2}, and}
+
+##{\langle \alpha v, v \rangle = \langle v, \alpha^*v \rangle = \langle v, \alpha v \rangle = \langle v, \lambda v \rangle = \bar{\lambda}\Vert v\Vert ^2}
+
+\p{(definition of #{\alpha^*}, self-adjoint, sesquilinear). So #{(\lambda - \bar{\lambda})\Vert v\Vert ^2 = 0} with #{\Vert v\Vert ^2 \neq 0}, so #{\lambda = \bar{\lambda}}, i.e. #{\lambda \in \mathbb{R}}.}
+
+\p{(ii) Let #{\alpha v = \lambda v}, #{\lambda \in \mathbb{R}}, #{v \neq 0}, and #{\alpha w = \mu w}, #{\mu \in \mathbb{R}}, #{w \neq 0}, with #{\lambda \neq \mu}. Then}
+
+##{\lambda\langle v, w \rangle = \langle \lambda v, w \rangle = \langle \alpha v, w \rangle = \langle v, \alpha^*w \rangle = \langle v, \alpha w \rangle = \bar{\mu}\langle v, w \rangle = \mu\langle v, w \rangle.}
+
+\p{So #{(\lambda - \mu)\langle v, w \rangle = 0} with #{\lambda \neq \mu}, hence #{\langle v, w \rangle = 0}.}
+}

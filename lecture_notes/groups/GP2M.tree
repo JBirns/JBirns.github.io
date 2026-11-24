@@ -1,0 +1,7 @@
+\title{The kernel as an intersection of stabilisers}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall #{\Phi \colon G \to \mathrm{Sym}(X)}. Then #{\ker\Phi = \lbrace g \in G : g(x) = x\; \forall x \in X\rbrace  = \bigcap_{x \in X} \operatorname{Stab}_G(x)}.}

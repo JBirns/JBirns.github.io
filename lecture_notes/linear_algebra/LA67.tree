@@ -1,0 +1,34 @@
+\title{Bilinear Forms II}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Bilinear forms #{\phi \colon V \times V \to F}, with #{\dim_F V < \infty} and #{\mathcal{B} = (e_i)_{1 \leq i \leq n}} a basis of #{V}:}
+
+##{[\phi]_{\mathcal{B}} = [\phi]_{\mathcal{B},\mathcal{B}} = \big( \phi(e_i, e_j) \big)_{1 \leq i,j \leq n}.}
+
+\transclude{LA68}
+
+\transclude{LA69}
+
+\transclude{LA6A}
+
+\transclude{LA6B}
+
+\transclude{LA6C}
+
+\transclude{LA6D}
+
+\transclude{LA6E}
+
+\transclude{LA6F}
+
+\transclude{LA6G}
+
+\transclude{LA6H}
+
+\p{#{\to} Extension to infinite dimensional cases.}
+
+\transclude{LA6I}
+
+\transclude{LA6J}

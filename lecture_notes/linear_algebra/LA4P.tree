@@ -1,0 +1,38 @@
+\title{Adjugate Matrix}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Recall: for #{A \in M_n(F)}, #{A = \big( A^{(1)} \mid \cdots \mid A^{(n)} \big)}, we know the action of the determinant when swapping two vectors #{j}, #{k}:}
+
+##{\det\big( A^{(1)}, \ldots, A^{(j)}, \ldots, A^{(k)}, \ldots, A^{(n)} \big) = -\det\big( A^{(1)}, \ldots, A^{(k)}, \ldots, A^{(j)}, \ldots, A^{(n)} \big)}
+
+\p{since #{\det} is an alternate form.}
+
+\ul{
+\li{Using that #{\det A = \det(A^T)}, we can similarly prove that swapping two rows changes the determinant by a factor of #{(-1)}.}
+}
+
+\transclude{LA4Q}
+
+\p{\strong{Column (row) expansion and the adjugate matrix}}
+
+\p{Column expansion reduces the computation of #{n \times n} determinants to #{(n-1) \times (n-1)} determinants #{\leadsto} very useful to compute determinants.}
+
+\transclude{LA4R}
+
+\transclude{LA4S}
+
+\transclude{LA4T}
+
+\transclude{LA4U}
+
+\transclude{LA4V}
+
+\transclude{LA4W}
+
+\transclude{LA4X}
+
+\p{\strong{Cramer’s rule}}
+
+\transclude{LA4Y}

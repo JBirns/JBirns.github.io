@@ -1,0 +1,13 @@
+\title{Examples of bilinear forms}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{V \times V^* \to F}, #{(v, \theta) \mapsto \theta(v)} is a bilinear map.}
+\li{\p{\strong{(ii)} \em{Scalar product} on #{U = V = \mathbb{R}^n}:}
+##{\psi \colon \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}, \quad \left( x = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}, y = \begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix} \right) \mapsto \sum_{i=1}^n x_iy_i}
+\p{is a bilinear map.}}
+\li{\strong{(iii)} #{U = V = \mathcal{C}([0,1], \mathbb{R})}, #{\phi(f, g) = \int_0^1 f(t)g(t)\,dt} #{\leadsto} bilinear form (#{=} infinite dimensional scalar product).}
+}

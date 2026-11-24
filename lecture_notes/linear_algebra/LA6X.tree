@@ -1,0 +1,7 @@
+\title{Definition}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{B} = (v_1, \ldots, v_m)} be a basis of #{V} and #{\mathcal{C} = (w_1, \ldots, w_n)} a basis of #{W}. Then #{[\phi]_{\mathcal{B},\mathcal{C}} = (\phi(v_i, w_j))}, an #{m \times n} matrix.}

@@ -1,0 +1,22 @@
+\title{The real line to the unit circle}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Consider the image of #{\mathbb{R} \cup \lbrace \infty\rbrace } under #{f(z) = \frac{z - i}{z + i}}. It is a circle in #{\mathbb{C}_\infty} containing #{f(0) = -1}, #{f(\infty) = 1}, #{f(1) = -i}. So #{f(\mathbb{R} \cup \lbrace \infty\rbrace ) = } the unit circle.}
+
+\p{Furthermore, complementary components are mapped to complementary components: #{f(i) = 0}, so the upper half-plane is mapped to the unit disc.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}[scale=0.8]
+\fill[pattern=north east lines] (-2,0) rectangle (2,1.3);
+\draw (-2,0) -- (2,0); \draw (0,-0.8) -- (0,1.4);
+\fill (0,0.6) circle (1.5pt); \node[left] at (0,0.6) {\small $i$};
+\node[below] at (-1.3,0) {\small $\mathbb{R} \cup \{\infty\}$};
+\draw[->] (2.5,0.3) -- (3.7,0.3); \node[above] at (3.1,0.3) {\small $f$};
+\begin{scope}[xshift=6cm]
+\fill[pattern=north east lines] (0,0) circle (0.9);
+\draw (0,0) circle (0.9); \draw (-1.8,0) -- (1.8,0); \draw (0,-1.2) -- (0,1.3);
+\node[above right] at (1,0.6) {\small $f(i) = 0$};
+\end{scope}
+\end{tikzpicture}}

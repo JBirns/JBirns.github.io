@@ -1,0 +1,38 @@
+\title{Examples of quotient groups}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{S_n/A_n = (\lbrace A_n, (1\,2)A_n\rbrace , \circ) \cong C_2}.}
+\li{\p{\strong{(ii)} #{D_8 = \langle a, b \mid a^4 = 1 = b^2, bab = a^{-1} \rangle}. Let #{K = \lbrace 1, a^2\rbrace }.}
+\p{\strong{Claim.} #{K \trianglelefteq D_8}:}
+##{(a^ib)a^2(a^ib)^{-1} = a^iba^2ba^{-i} = a^{-2} = a^2 \in K, \qquad a^ia^2a^{-i} = a^2 \in K.}
+\p{#{\frac{|D_8|}{|K|} = 4 = |(D_8 : K)|}, i.e. #{4} distinct left cosets:}
+##{\begin{aligned}
+K &= \lbrace 1, a^2\rbrace , & aK &= \lbrace a, a^3\rbrace , \\
+bK &= \lbrace b, ba^2\rbrace  = \lbrace b, a^2b\rbrace , & abK &= \lbrace ab, aba^2\rbrace  = \lbrace ab, a^3b\rbrace .
+\end{aligned}}
+##{\begin{array}{c|cccc}
+\circ & K & aK & bK & abK \\ \hline
+K & K & aK & bK & abK \\
+aK & aK & K & abK & bK \\
+bK & bK & abK & K & aK \\
+abK & abK & bK & aK & K
+\end{array}}
+\p{Note #{aK\,aK = a^2K = K}. This is #{\cong} \ref{GP04}(9).}}
+\li{\p{\strong{(iii)} Recall the subgroups of #{(\mathbb{Z}, +)} are precisely the groups #{(n\mathbb{Z}, +)} where #{n \in \mathbb{N} \cup \lbrace 0\rbrace }, #{n\mathbb{Z} = \lbrace nk : k \in \mathbb{Z}\rbrace }. Since #{(\mathbb{Z}, +)} is abelian, all subgroups are normal, #{n\mathbb{Z} \trianglelefteq \mathbb{Z}}.}
+\p{Suppose #{n = 5}. The cosets are given by}
+##{5\mathbb{Z},\quad 1 + 5\mathbb{Z},\quad 2 + 5\mathbb{Z},\quad 3 + 5\mathbb{Z},\quad 4 + 5\mathbb{Z}, \qquad \text{where } r + 5\mathbb{Z} = \lbrace r + 5k : k \in \mathbb{Z}\rbrace .}
+\p{E.g. #{(1 + 5\mathbb{Z}) + (2 + 5\mathbb{Z}) = 3 + 5\mathbb{Z}} and #{(3 + 5\mathbb{Z}) + (4 + 5\mathbb{Z}) = 2 + 5\mathbb{Z}}. Then, with coset “addition” #{\circ},}
+##{(\mathbb{Z}/5\mathbb{Z}, \circ) \cong (\lbrace 0, 1, 2, 3, 4\rbrace , +_5), \qquad \theta \colon n + 5\mathbb{Z} \mapsto \bar{n},}
+\p{where #{n \equiv \bar{n} \bmod 5}, #{\bar{n} \in \lbrace 0, 1, 2, 3, 4\rbrace }.}
+\p{\em{Well-defined map:} if #{n + 5\mathbb{Z} = m + 5\mathbb{Z}} then #{-m + n \in 5\mathbb{Z}} (\ref{GP19}), so #{-m + n \equiv 0 \bmod 5}, i.e. #{m \equiv n \bmod 5}, so #{\bar{n} = \bar{m}}.}
+\p{\em{Homomorphism:}}
+##{\begin{aligned}
+\theta((n + 5\mathbb{Z}) + (m + 5\mathbb{Z})) &= \theta(n + m + 5\mathbb{Z}) = \overline{n + m} = \bar{n} +_5 \bar{m} \\
+&= \theta(n + 5\mathbb{Z}) +_5 \theta(m + 5\mathbb{Z}).
+\end{aligned}}
+\p{In general, #{(\mathbb{Z}/n\mathbb{Z}, \circ) \cong (\lbrace 0, 1, \ldots, n-1\rbrace , +_n)}.}}
+}

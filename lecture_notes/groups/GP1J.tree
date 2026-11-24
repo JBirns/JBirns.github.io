@@ -1,0 +1,19 @@
+\title{A normal and a non-normal subgroup of #{S_3}}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{K = \lbrace \mathrm{id}, (1\,2\,3), (1\,3\,2)\rbrace  \trianglelefteq S_3}:}
+
+##{\begin{aligned}
+(1\,2)K &= \lbrace (1\,2), (2\,3), (1\,3)\rbrace  = K(1\,2), \\
+(1\,3)K &= K(1\,3), \\
+(2\,3)K &= K(2\,3),
+\end{aligned}}
+
+\p{and #{(1\,2\,3)K = K = K(1\,2\,3)} etc.}
+
+\p{But #{H = \lbrace 1, (1\,2)\rbrace } is not normal in #{S_3}:}
+
+##{(1\,3)H = \lbrace (1\,3), (1\,2\,3)\rbrace , \qquad H(1\,3) = \lbrace (1\,3), (1\,3\,2)\rbrace .}

@@ -1,0 +1,21 @@
+\title{Subgroups of #{\mathbb{Z}}}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The subgroups of #{\mathbb{Z}} (under addition) are exactly #{n\mathbb{Z} = \lbrace nk : k \in \mathbb{Z}\rbrace }, #{n \in \mathbb{Z}_{\geq 0}}.}
+
+\proof{
+\p{First note #{n\mathbb{Z}} is a subgroup of #{\mathbb{Z}}:}
+
+\ul{
+\li{#{0 \in n\mathbb{Z}}.}
+\li{If #{a, b \in n\mathbb{Z}}, then #{a = na'}, #{b = nb'} for some #{a', b' \in \mathbb{Z}}. Then #{a + b = na' + nb' = n(a' + b') \in n\mathbb{Z}}.}
+\li{If #{a = na' \in n\mathbb{Z}} then #{-a = n(-a') \in n\mathbb{Z}}.}
+}
+
+\p{Associativity is inherited.}
+
+\p{Conversely assume #{H \leq \mathbb{Z}}. If #{H = \lbrace 0\rbrace }, then #{H = 0\mathbb{Z}} ✓. Otherwise choose #{0 < n \in H} with #{n} minimal. Then #{n\mathbb{Z} \leq H} by closure and inverses. We now show #{H = n\mathbb{Z}}: suppose there exists #{h \in H \setminus n\mathbb{Z}}. We can write #{h = nk + h'} with #{h' \in \lbrace 1, 2, \ldots, n-1\rbrace }. But #{h' = h - nk \in H}, contradicting minimality of #{n}. Thus #{H = n\mathbb{Z}}.}
+}

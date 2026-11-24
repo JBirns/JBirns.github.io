@@ -1,0 +1,26 @@
+\title{Annihilators of sums and intersections}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a finite dimensional vector space over #{F} and #{U_1, U_2 \leq V}. Then}
+
+\ul{
+\li{\strong{(i)} #{(U_1 + U_2)^0 = U_1^0 \cap U_2^0};}
+\li{\strong{(ii)} #{(U_1 \cap U_2)^0 = U_1^0 + U_2^0}.}
+}
+
+\proof{
+\p{(i) Let #{\theta \in V^*}. Then}
+
+##{\begin{aligned}
+\theta \in (U_1 + U_2)^0 &\iff \forall (u_1, u_2) \in U_1 \times U_2,\; \theta(u_1 + u_2) = 0 \\
+&\iff \theta(u) = 0\; \forall u \in U_1 \cup U_2 \quad (\text{linearity of } \theta) \\
+&\iff \theta \in U_1^0 \cap U_2^0.
+\end{aligned}}
+
+\p{Thus we have proved #{(U_1 + U_2)^0 = U_1^0 \cap U_2^0}.}
+
+\p{(ii) Apply (i) to #{U_1^0, U_2^0 \leq V^*}, take #{{}^0} of the result, and use #{U^{00} = U} (\ref{LA3B}).}
+}

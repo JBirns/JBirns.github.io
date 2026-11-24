@@ -1,0 +1,11 @@
+\title{Equivalent matrices}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Two matrices #{A, A' \in M_{m,n}(F)} are \em{equivalent} if}
+
+##{A' = Q^{-1}AP}
+
+\p{where #{Q \in M_{m \times m}} is invertible and #{P \in M_{n \times n}} is invertible.}

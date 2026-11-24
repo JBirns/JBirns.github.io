@@ -1,0 +1,9 @@
+\title{The inverse of a change of basis matrix}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{P} is an #{n \times n} invertible matrix, and #{P^{-1}} is the change of basis matrix from #{\mathcal{B}} to #{\mathcal{B}'}. Indeed, by \ref{LA24},}
+
+##{[I]_{\mathcal{B},\mathcal{B}'}[I]_{\mathcal{B}',\mathcal{B}} = [I]_{\mathcal{B}',\mathcal{B}'} = I_n, \qquad [I]_{\mathcal{B}',\mathcal{B}}[I]_{\mathcal{B},\mathcal{B}'} = [I]_{\mathcal{B},\mathcal{B}} = I_n.}

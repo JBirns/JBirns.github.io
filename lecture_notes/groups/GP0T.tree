@@ -1,0 +1,13 @@
+\title{Disjoint cycle decomposition}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Every #{\sigma \in S_n} can be written as a product of disjoint cycles.}
+
+\proof{
+\p{Let #{a_1 \in \lbrace 1, 2, \ldots, n\rbrace  = X}. Consider #{a_1, \sigma(a_1), \sigma^2(a_1), \ldots}. Since #{X} is finite there exists a minimal #{j} s.t. #{\sigma^j(a_1) \in \lbrace a_1, \sigma(a_1), \ldots, \sigma^{j-1}(a_1)\rbrace }. We claim #{\sigma^j(a_1) = a_1}, since if not, #{\sigma^j(a_1) = \sigma^i(a_1)} with #{j > i \geq 1}, so #{\sigma^{j-i}(a_1) = a_1}, contradicting minimality of #{j}. So #{(a_1, \sigma(a_1), \ldots, \sigma^{j-1}(a_1))} is a cycle in #{\sigma}.}
+
+\p{If there exists #{b \in X \setminus \lbrace a_1, \sigma(a_1), \ldots, \sigma^{j-1}(a_1)\rbrace }, consider #{b, \sigma(b), \ldots}. Note the cycle #{(b, \sigma(b), \ldots, \sigma^{k-1}(b))} is disjoint from the cycle #{(a_1, \sigma(a_1), \ldots, \sigma^{j-1}(a_1))} because #{\sigma} is a bijection. Continue in this way until all elements of #{X} are reached.}
+}

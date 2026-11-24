@@ -1,0 +1,13 @@
+\title{Adjugate matrix}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)}. The \em{adjugate matrix} #{\operatorname{adj}(A)} is the #{n \times n} matrix with #{(i,j)} entry given by}
+
+##{(\operatorname{adj}A)_{ij} = (-1)^{i+j}\det A_{\textcolor{blue}{\hat{j}\hat{i}}}.}
+
+\p{Equivalently,}
+
+##{(\operatorname{adj}A)_{ji} = (-1)^{i+j}\det A_{\hat{i}\hat{j}} = \det\big( A^{(1)}, \ldots, A^{(j-1)}, e_i, A^{(j+1)}, \ldots, A^{(n)} \big).}

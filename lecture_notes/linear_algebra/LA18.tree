@@ -1,0 +1,15 @@
+\title{Sum of several subspaces}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V} be a vector space over #{F} and #{V_1, \ldots, V_l \leq V}.}
+
+\ul{
+\li{\strong{(i)} #{\displaystyle\sum_{i=1}^l V_i = \lbrace v_1 + \cdots + v_l : v_j \in V_j,\; 1 \leq j \leq l\rbrace }.}
+\li{\p{\strong{(ii)} The sum is \em{direct}, #{\displaystyle\sum_{i=1}^l V_i = \bigoplus_{i=1}^l V_i}, iff}
+##{v_1 + \cdots + v_l = v'_1 + \cdots + v'_l \implies v_1 = v'_1, \ldots, v_l = v'_l.}}
+}
+
+\p{Equivalently, #{V = \bigoplus_{i=1}^l V_i \iff \forall v \in V,\; \exists! (v_1, \ldots, v_l) \in \prod_{i=1}^l V_i} with #{v = \sum_{i=1}^l v_i}.}

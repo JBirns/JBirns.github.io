@@ -1,0 +1,11 @@
+\title{Determinant}
+\taxon{Definition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \in M_n(F)}, #{A = (a_{ij})_{1 \leq i,j \leq n}}. We define the \em{determinant} of #{A} as}
+
+##{\det A = \sum_{\sigma \in S_n} \varepsilon(\sigma)\,a_{\sigma(1)1}a_{\sigma(2)2} \cdots a_{\sigma(n)n}.}
+
+\p{There are #{n!} terms, and each term has one entry from each row and each column (#{\sigma \in S_n}).}

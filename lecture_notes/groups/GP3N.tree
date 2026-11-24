@@ -1,0 +1,29 @@
+\title{Generators of the Möbius group}
+\taxon{Proposition}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Every Möbius map can be written as a composition of maps of the following forms:}
+
+\ul{
+\li{\strong{(i)} #{z \mapsto az}, #{a \neq 0}, representing a dilation/rotation;}
+\li{\strong{(ii)} #{z \mapsto z + b}, a translation;}
+\li{\strong{(iii)} #{z \mapsto \frac{1}{z}}, an inversion.}
+}
+
+\proof{
+\p{Let #{f(z) = \frac{az + b}{cz + d}}. If #{c = 0}:}
+
+##{z \overset{f_1}{\longmapsto} \Big(\frac{a}{d}\Big)z \overset{f_2}{\longmapsto} \Big(\frac{a}{d}\Big)z + \frac{b}{d},}
+
+\p{with #{f_1} of type (i) and #{f_2} of type (ii), so #{f = f_2 \circ f_1}.}
+
+\p{If #{c \neq 0}:}
+
+##{f(z) = \frac{az + b}{cz + d} = \frac{\frac{a}{c}z + \frac{b}{c}}{z + \frac{d}{c}} = \frac{a}{c} + \frac{\big(\frac{bc - ad}{c^2}\big)}{z + \frac{d}{c}} = A + \frac{B}{z + \frac{d}{c}},}
+
+##{z \overset{\text{(ii)}}{\longmapsto} z + \frac{d}{c} \overset{\text{(iii)}}{\longmapsto} \frac{1}{z + \frac{d}{c}} \overset{\text{(i)}}{\longmapsto} \frac{B}{z + \frac{d}{c}} \overset{\text{(ii)}}{\longmapsto} A + \frac{B}{z + \frac{d}{c}}.}
+
+\p{With #{f_1(z) = z + \frac{d}{c}}, #{f_2(z) = \frac{1}{z}}, #{f_3(z) = Bz}, #{f_4(z) = A + z}, we get #{f = f_4 \circ f_3 \circ f_2 \circ f_1}.}
+}

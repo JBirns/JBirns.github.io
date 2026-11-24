@@ -1,0 +1,7 @@
+\title{The #{2 \times 2} determinant}
+\taxon{Example}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{#{\det\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} = a_{11}a_{22} - a_{12}a_{21}}: the first term comes from the identity (#{\varepsilon = 1}) and the second from the transposition #{\tau_{12}} (#{\varepsilon = -1}).}

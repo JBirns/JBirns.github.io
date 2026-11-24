@@ -1,0 +1,7 @@
+\title{Geometric meaning of #{q}}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{Similarly, #{q} is the largest dimension of a subspace on which #{\phi} is negative definite.}

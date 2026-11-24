@@ -1,0 +1,29 @@
+\title{Conjugacy in #{S_n}}
+\taxon{Theorem}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The permutations #{\pi} and #{\sigma} in #{S_n} are conjugate in #{S_n} #{\iff} they have the same cycle type.}
+
+\proof{
+\p{Suppose #{\sigma} has cycle type #{(n_1, n_2, \ldots, n_k)}. Write}
+
+##{\sigma = (a_{11}\,a_{12}\,\ldots\,a_{1n_1})(a_{21}\,a_{22}\,\ldots\,a_{2n_2})\cdots(a_{k1}\,a_{k2}\,\ldots\,a_{kn_k}).}
+
+\p{Let #{\tau \in S_n}. Then (#{\tau(a_{ij})} is any element, since #{\tau} is a bijection)}
+
+##{\tau\sigma\tau^{-1}(\tau(a_{ij})) = \tau\sigma(a_{ij}) = \begin{cases} \tau(a_{i,j+1}) & j < n_i, \\ \tau(a_{i1}) & j = n_i. \end{cases}}
+
+\p{So}
+
+##{\tau\sigma\tau^{-1} = (\tau(a_{11})\,\tau(a_{12})\,\ldots\,\tau(a_{1n_1}))(\tau(a_{21})\,\ldots\,\tau(a_{2n_2}))\cdots(\tau(a_{k1})\,\ldots\,\tau(a_{kn_k})).}
+
+\p{So if two elements of #{S_n} are conjugate they have the same cycle type.}
+
+\p{Furthermore, if #{\pi} has the same cycle type as #{\sigma}, we can write}
+
+##{\pi = (b_{11}\,b_{12}\,\ldots\,b_{1n_1})\cdots(b_{k1}\,b_{k2}\,\ldots\,b_{kn_k}).}
+
+\p{Define #{\tau(a_{ij}) = b_{ij}}. Then #{\pi = \tau\sigma\tau^{-1}}. Thus two permutations of the same cycle type are conjugate.}
+}

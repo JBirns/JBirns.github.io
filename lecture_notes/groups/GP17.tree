@@ -1,0 +1,34 @@
+\title{Cosets partition the group}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{The left cosets of #{H} in #{G} form a partition of #{G}, i.e.}
+
+\ul{
+\li{\strong{(i)} each #{g \in G} lies in some left coset of #{H} in #{G};}
+\li{\strong{(ii)} if #{aH \cap bH \neq \emptyset} (some #{a, b \in G}) then #{aH = bH}.}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns}}{\begin{tikzpicture}
+\draw (0,0) rectangle (8,1.6);
+\draw (1.2,0) -- (1.2,1.6); \draw (2.4,0) -- (2.4,1.6); \draw (3.6,0) -- (3.6,1.6); \draw (6.8,0) -- (6.8,1.6);
+\node at (0.6,1) {$H$}; \node at (0.6,0.5) {\small $= eH$};
+\node at (1.8,0.8) {$g_1H$}; \node at (3,0.8) {$g_2H$}; \node at (5.2,0.8) {$\cdots$}; \node at (7.4,0.8) {$g_{k-1}H$};
+\node at (8.3,-0.2) {$G$};
+\end{tikzpicture}}
+
+\proof{
+\p{(i) #{g \in gH} since #{e \in H}.}
+
+\p{(ii) Suppose #{c \in aH \cap bH}.}
+
+\p{\strong{Claim.} #{aH = cH = bH}.}
+
+\p{\em{Proof of claim.} Now #{c \in aH} so #{c = ak} for some #{k \in H}. Then}
+
+##{cH = \lbrace ch : h \in H\rbrace  = \lbrace akh : h \in H\rbrace  \subseteq aH.}
+
+\p{Similarly, #{a = ck^{-1} \in cH}, so #{aH \subseteq cH}. So #{aH = cH}. Similarly #{cH = bH}. #{\square}}
+}

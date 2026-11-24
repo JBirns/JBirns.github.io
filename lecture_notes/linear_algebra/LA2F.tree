@@ -1,0 +1,13 @@
+\title{Equivalence of matrices is an equivalence relation}
+\taxon{Remark}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{This defines an equivalence relation on #{M_{m,n}(F)}:}
+
+\ul{
+\li{#{A = I_m^{-1}AI_n};}
+\li{#{A' = Q^{-1}AP \implies A = (Q^{-1})^{-1}A'P^{-1}};}
+\li{if #{A' = Q^{-1}AP} and #{A'' = (Q')^{-1}A'P'}, then #{A'' = (QQ')^{-1}A(PP')}.}
+}

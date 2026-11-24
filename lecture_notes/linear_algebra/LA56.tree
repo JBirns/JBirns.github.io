@@ -1,0 +1,15 @@
+\title{Roots give linear factors}
+\taxon{Lemma}
+\date{2026-11-24}
+\author{JB00}
+\import{macros}
+
+\p{If #{\lambda} is a root of #{f} then #{t - \lambda} divides #{f}: #{f(t) = (t - \lambda)g(t)} with #{g(t) \in F[t]}.}
+
+\proof{
+\p{#{f(t) = a_nt^n + a_{n-1}t^{n-1} + \cdots + a_1t + a_0} and #{f(\lambda) = a_n\lambda^n + \cdots + a_1\lambda + a_0 = 0}. So}
+
+##{f(t) = f(t) - f(\lambda) = a_n(t^n - \lambda^n) + \cdots + a_1(t - \lambda),}
+
+\p{and each #{t^k - \lambda^k = (t - \lambda)(t^{k-1} + \lambda t^{k-2} + \cdots + \lambda^{k-2}t + \lambda^{k-1})}.}
+}
