@@ -15,8 +15,10 @@ I am a PhD student in mathematics at the [[WH6R]] working with [[EGR0]]. Prior t
 
 %\transclude{\research}
 
-\transclude{\teaching}
-
 \transclude{\lecturenotes}
 
 \transclude{\blog}
+
+\transclude{\teaching}
+
+\transclude{\talks}

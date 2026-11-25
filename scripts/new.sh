@@ -27,9 +27,31 @@ to_base36() {
   printf '%s' "$out"
 }
 
-# Is this address already used, in trees/ (any subfolder) or drafts/?
+# Every address already in use: the file names of all .tree files in the tree folders listed in
+# forest.toml (and their subfolders) and in drafts/, plus addresses given to subtrees inside them
+# with \subtree[ADDR]{...}.
+USED="$(python3 - <<'PY'
+import os, re
+text = open("forest.toml", encoding="utf-8").read()
+m = re.search(r"^\s*trees\s*=\s*\[(.*?)\]", text, re.S | re.M)
+folders = re.findall(r'"([^"]*)"', m.group(1)) if m else ["trees"]
+used = set()
+for folder in folders + ["drafts"]:
+    for dirpath, _, files in os.walk(folder):
+        for f in files:
+            if f.endswith(".tree"):
+                used.add(f[:-5])
+                try:
+                    src = open(os.path.join(dirpath, f), encoding="utf-8").read()
+                except (OSError, UnicodeDecodeError):
+                    continue
+                used.update(a.strip() for a in re.findall(r"\\subtree\s*\[([^\]]+)\]", src))
+print("\n".join(sorted(used)))
+PY
+)"
+
 taken() {
-  [ -n "$(find trees drafts -name "$1.tree" 2>/dev/null | head -n 1)" ]
+  grep -qxF -- "$1" <<< "$USED"
 }
 
 if [ "${MODE:-sequential}" = "random" ]; then

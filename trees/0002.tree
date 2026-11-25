@@ -1,8 +1,36 @@
 \title{Practical Guide to this Website}
 
-\p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura). You can navigate around it through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.
-By the section headers, you may see a link like “[AB12]”. Clicking that link will take you to that section as its own page without the surrounding content.
+\p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura).}
+
+\p{The main difference with a typical way to organise information is that hierarchy is \em{relative} instead of absolute. For instance, in a set of notes written in #{\LaTeX}, you have the hierarchy}
+
+\figure{\tex{\startverb\usepackage{tikz}\usetikzlibrary{arrows.meta}\stopverb}{\startverb
+\begin{tikzpicture}[
+  every node/.style={draw, rounded corners, inner sep=4pt, font=\sffamily},
+  level 1/.style={level distance=14mm},
+  level 2/.style={level distance=16mm, sibling distance=27mm},
+  edge from parent/.style={draw, -{Stealth}}
+]
+\node {Section}
+  child {node {Subsection}
+    child {node {Definitions}}
+    child {node {Discussions}}
+    child {node {Theorems}}
+    child {node {Lemmas}}
+  };
+\end{tikzpicture}
+\stopverb}}
+
+\p{Whereas here, all pages you can view (a.k.a. trees) exist in an interconnected network where you can go "up a level" or "down a level" but do not have an absolute place in the hierarchy (if you wish, the poset of trees, ordered by inclusion, is not necessarily graded). For example, a theorem can exist as a subtree of two separate trees.}
+
+\subtree{
+\p{\strong{Practical Guide to Use}}
+
+\p{You can navigate around this site through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.}
+
+\p{By the section headers, you may see a code like “[AB12]”. Clicking that link will take you to that tree/section as its own tree/page without the surrounding content.
 }
+
 \p{
 At the bottom of a page, you may see any of the following headings containing links to other pages:
 }
@@ -12,3 +40,4 @@ At the bottom of a page, you may see any of the following headings containing li
     \li{“\strong{Backlinks}” contains links to pages that refer to the current page.}
     \li{“\strong{References}” links to external resources and books referred to in the page.}
     }
+}

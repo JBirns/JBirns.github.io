@@ -1,0 +1,11 @@
+\title{Talks}
+\date{2026-11-25}
+\author{JB00}
+\import{macros}
+
+\import{names}
+
+\ul{
+  \li{Graph Folding, \em{New York Graph Theory Workshop}, 26#{\phantom{}^\text{th}} May 2026}
+  \li{Graph Isomorphism Testing — Recent Advances, \em{New York Combinatorics Seminar}, 26#{\phantom{}^\text{th}} September 2025}
+}
