@@ -1,0 +1,19 @@
+\title{Introduction to Domination Polynomial of a Graph}
+\taxon{Reference}
+\date{2014}
+\author/literal{Saeid Alikhani}
+\author/literal{Yee-Hock Peng}
+\meta{journal}{Ars Combinatoria}
+\meta{volume}{114}
+
+\meta{bibtex}{\startverb
+@article{alikhani2014introduction,
+author = {Alikhani, Saeid and Peng, Yee-Hock},
+year = {2014},
+month = {05},
+pages = {},
+title = {Introduction to Domination Polynomial of a Graph},
+volume = {114},
+journal = {Ars Combinatoria}
+}
+\stopverb}

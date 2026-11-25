@@ -1,0 +1,23 @@
+\title{Unimodality}
+\date{2026-11-21}
+\author{JB00}
+\import{macros}
+%%%%%%%%%%%%%%%%%%%\taxon{Blog Post}
+\tag{blog}
+\import{names}
+
+\p{
+  There's a notion that turns up with some frequency in the study of polynomials and sequences that arise in combinatorial studies:
+}
+\transclude{BMUU}
+
+\p{When I first came across this notion, I thought it somewhat whimiscal --- a property that was studied because mathematicians like things that exhibit patterns and have some kind of pleasant aethetic. There are a number of unimodality results and conjectures in the literature, notably}
+
+\scope{\put\transclude/expanded{false}
+  \transclude{001Y}}
+  \subtree{\taxon{Remark} \p{The notion of \em{log-concavity} may make some appearances, this is a condition that implies unimodality.}}
+\scope{\put\transclude/expanded{false}
+\transclude{\logconcave}
+  \transclude{001Z}
+  \transclude{0020}
+}

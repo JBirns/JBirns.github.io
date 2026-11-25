@@ -29,3 +29,6 @@ clean:
 
 paste:
 	bash scripts/paste.sh $(FILE)
+
+reference:
+	bash scripts/reference.sh $(FILE)

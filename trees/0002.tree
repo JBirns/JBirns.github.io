@@ -23,8 +23,7 @@
 
 \p{Whereas here, all pages you can view (a.k.a. trees) exist in an interconnected network where you can go "up a level" or "down a level" but do not have an absolute place in the hierarchy (if you wish, the poset of trees, ordered by inclusion, is not necessarily graded). For example, a theorem can exist as a subtree of two separate trees.}
 
-\subtree{
-\p{\strong{Practical Guide to Use}}
+\subtree{\title{Practical Guide to Use}
 
 \p{You can navigate around this site through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.}
 

@@ -1,0 +1,23 @@
+\title{The vertex independence sequence of a graph is not constrained}
+\taxon{Reference}
+\date{1987}
+\author/literal{Yousef Alavi}
+\author/literal{Paresh J Malde}
+\author/literal{Allen J Schwenk}
+\author/literal{Paul Erdös}
+\meta{journal}{Congressus Numerantium}
+\meta{volume}{58}
+\meta{number}{15-23}
+\meta{pages}{2}
+
+\meta{bibtex}{\startverb
+@article{alavi1987vertex,
+  title={The vertex independence sequence of a graph is not constrained},
+  author={Alavi, Yousef and Malde, Paresh J and Schwenk, Allen J and Erd{\"o}s, Paul},
+  journal={Congressus Numerantium},
+  volume={58},
+  number={15-23},
+  pages={2},
+  year={1987}
+}
+\stopverb}

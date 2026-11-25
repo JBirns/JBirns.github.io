@@ -1,0 +1,9 @@
+\title{The independence polynomial of a tree is unimodal.}
+\taxon{Conjecture}
+\date{2026-11-25}
+\author{JB00}
+\import{macros}
+\import{names}
+
+\p{The result for all graphs is "as false as possible". In [[0022]] where this conjecture is made, they prove that any possible "shape" of coefficients can arise amongst multipartite graphs.
+}

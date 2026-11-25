@@ -1,0 +1,24 @@
+\title{Hodge theory for combinatorial geometries}
+\taxon{Reference}
+\date{2018}
+\author/literal{Karim Adiprasito}
+\author/literal{June Huh}
+\author/literal{Eric Katz}
+\meta{journal}{Annals of Mathematics}
+\meta{volume}{188}
+\meta{number}{2}
+\meta{pages}{381–452}
+\meta{doi}{10.4007/annals.2018.188.2.1}
+
+\meta{bibtex}{\startverb
+@article{adiprasito2018hodge,
+  author    = {Adiprasito, Karim and Huh, June and Katz, Eric},
+  title     = {Hodge theory for combinatorial geometries},
+  journal   = {Annals of Mathematics},
+  volume    = {188},
+  number    = {2},
+  pages     = {381--452},
+  doi       = {10.4007/annals.2018.188.2.1},
+  year      = {2018},
+}
+\stopverb}
