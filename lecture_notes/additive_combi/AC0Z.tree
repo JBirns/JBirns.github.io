@@ -1,0 +1,62 @@
+\title{Combinatorial Methods}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{For now, let #{G} be an abelian group. Given #{A, B \subseteq G}, we defined #{A \pm B = \lbrace a \pm b : a \in A,\; b \in B\rbrace }. If #{A} and #{B} are finite, then}
+
+##{\max\lbrace |A|, |B|\rbrace  \leq |A \pm B| \leq |A||B|}
+
+\p{(and better bounds are available in certain settings).}
+
+\transclude{AC10}
+
+\transclude{AC11}
+
+\transclude{AC12}
+
+\transclude{AC13}
+
+\transclude{AC14}
+
+\transclude{AC15}
+
+\p{Then \ref{AC14} shows, for example, that #{d(A, A) \leq d(A, -A) + d(-A, A)}, i.e. #{\log\delta(A) \leq 2\log\sigma(A)}, so #{\delta(A) \leq \sigma(A)^2}, or #{|A - A| \leq |A + A|^2/|A|}.}
+
+\transclude{AC16}
+
+\transclude{AC17}
+
+\p{We are now in a position to generalise \ref{AC11}.}
+
+\transclude{AC18}
+
+\transclude{AC19}
+
+\transclude{AC1A}
+
+\p{For #{p = 2}, this is now a theorem as of November (2023), due to Gowers, Green, Manners and Tao.}
+
+\transclude{AC1B}
+
+\p{Observe that if #{G} is finite, then}
+
+##{|A|^3E(A, A) = |G|^3 \cdot \mathbb{E}_{x + y = z + w}\mathbf{1}_A(x)\mathbf{1}_A(y)\mathbf{1}_A(z)\mathbf{1}_A(w) = |G|^3\Vert \widehat{\mathbf{1}_A}\Vert _4^4}
+
+\p{by Example sheet 1, Question 3.}
+
+\transclude{AC1C}
+
+\transclude{AC1D}
+
+\transclude{AC1E}
+
+\p{In particular, if #{A \subseteq G} is such that #{|A + A| \leq K|A|}, then #{E(A, A) \geq \frac{1}{K} > 0}. The converse is \em{not} true.}
+
+\transclude{AC1F}
+
+\transclude{AC1G}
+
+\p{We first prove a technical lemma, using a method known as “dependent random choice”.}
+
+\transclude{AC1H}

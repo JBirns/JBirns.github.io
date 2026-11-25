@@ -1,0 +1,10 @@
+\title{Averages and roots of unity}
+\taxon{Notation}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{Given a finite set #{B} and any function #{f \colon B \to \mathbb{C}}, we write #{\mathbb{E}_{x \in B}f(x) \coloneqq \frac{1}{|B|}\sum_{x \in B} f(x)}.}
+\li{Write #{\omega = e^{2\pi i/p}}. Note #{\sum_{a \in \mathbb{F}_p} \omega^a = 0}.}
+}

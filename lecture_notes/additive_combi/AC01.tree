@@ -1,0 +1,108 @@
+\title{Fourier-Analytic Techniques}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G = \mathbb{F}_p^n}, where #{p} is a small fixed prime (#{p = 2, 3, 5}) and #{n} is large (#{n \to \infty}).}
+
+\transclude{AC02}
+
+\transclude{AC03}
+
+\p{It is easy to verify the \em{inversion formula}:}
+
+##{f(x) = \sum_{t \in \mathbb{F}_p^n} \hat{f}(t)\omega^{-x \cdot t} \quad \forall x \in \mathbb{F}_p^n.}
+
+\p{Indeed,}
+
+##{\sum_{t \in \mathbb{F}_p^n} \hat{f}(t)\omega^{-x \cdot t} = \sum_{t \in \mathbb{F}_p^n} \big( \mathbb{E}_yf(y)\omega^{y \cdot t} \big)\omega^{-x \cdot t} = \mathbb{E}_yf(y)\underbrace{\sum_t \omega^{(y - x) \cdot t}}_{= p^n\mathbf{1}_{\lbrace y = x\rbrace }} = f(x).}
+
+\transclude{AC04}
+
+\p{Note: given #{A \subseteq \mathbb{F}_p^n}, #{\widehat{\mathbf{1}_A}(0) = \mathbb{E}_{x \in \mathbb{F}_p^n}\mathbf{1}_A(x) = \alpha}.}
+
+\p{Writing #{-A = \lbrace -a : a \in A\rbrace }, we have}
+
+##{\begin{aligned}
+\widehat{\mathbf{1}_{-A}}(t) &= \mathbb{E}_{x \in \mathbb{F}_p^n}\mathbf{1}_{-A}(x)\omega^{x \cdot t} = \mathbb{E}_{x \in \mathbb{F}_p^n}\mathbf{1}_A(-x)\omega^{x \cdot t} \\
+&= \mathbb{E}_{y \in \mathbb{F}_p^n}\mathbf{1}_A(y)\omega^{-y \cdot t} = \overline{\mathbb{E}_{y \in \mathbb{F}_p^n}\mathbf{1}_A(y)\omega^{y \cdot t}} = \overline{\widehat{\mathbf{1}_A}(t)}.
+\end{aligned}}
+
+\transclude{AC05}
+
+\transclude{AC06}
+
+\transclude{AC07}
+
+\transclude{AC08}
+
+\transclude{AC09}
+
+\transclude{AC0A}
+
+\transclude{AC0B}
+
+\transclude{AC0C}
+
+\transclude{AC0D}
+
+\transclude{AC0E}
+
+\transclude{AC0F}
+
+\p{Note: we can interchange summation because we are in a finite group.}
+
+\transclude{AC0G}
+
+\transclude{AC0H}
+
+\transclude{AC0I}
+
+\transclude{AC0J}
+
+\transclude{AC0K}
+
+\transclude{AC0L}
+
+\p{We shall combine these observations to prove:}
+
+\transclude{AC0M}
+
+\transclude{AC0N}
+
+\p{The largest known subset of #{\mathbb{F}_3^n} containing no non-trivial 3-APs has size #{\geq (2.218)^n} (Tyrrell 2022); we will return to this later.}
+
+\p{\strong{General finite abelian groups}}
+
+\p{From now on, let #{G} be a finite abelian group. #{G} comes equipped with a set of \em{characters}, i.e. group homomorphisms #{\gamma \colon G \to \mathbb{C}^\times}, which themselves form a group, #{\hat{G}}, referred to as the \em{dual} of #{G}. It turns out that if #{G} is finite abelian, then #{\hat{G} \cong G}. For instance:}
+
+\ul{
+\li{if #{G = \mathbb{F}_p^n}, then #{\hat{G} = \lbrace \gamma_t \colon x \mapsto \omega^{x \cdot t},\; t \in G\rbrace } \em{(here #{x \cdot t} is the scalar product)};}
+\li{if #{G = \mathbb{Z}_p = \mathbb{Z}/p\mathbb{Z}}, then #{\hat{G} = \lbrace \gamma_t \colon x \mapsto \omega^{xt},\; t \in G\rbrace } \em{(here #{xt} is the regular product)}.}
+}
+
+\transclude{AC0O}
+
+\p{It is easy to verify that #{f(x) = \sum_{\gamma \in \hat{G}} \hat{f}(\gamma)\overline{\gamma(x)}}. You may also check that \ref{AC0A} and \ref{AC0D}, \ref{AC06}, the convolution example and \ref{AC09}, \ref{AC0C} and \ref{AC0F} go through in this more general context.}
+
+\transclude{AC0P}
+
+\transclude{AC0Q}
+
+\transclude{AC0R}
+
+\p{We must convert the large Fourier coefficient into a density increment.}
+
+\transclude{AC0S}
+
+\transclude{AC0T}
+
+\transclude{AC0U}
+
+\transclude{AC0V}
+
+\transclude{AC0W}
+
+\transclude{AC0X}
+
+\transclude{AC0Y}

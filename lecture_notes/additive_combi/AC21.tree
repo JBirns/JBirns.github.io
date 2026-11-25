@@ -1,0 +1,9 @@
+\title{#{T_3} is controlled by the #{U^2}-norm}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f_1, f_2, f_3 \colon G \to \mathbb{C}}. Then}
+
+##{|T_3(f_1, f_2, f_3)| \leq \min_{i \in [3]} \Vert f_i\Vert _{U^2(G)}\prod_{j \neq i} \Vert f_j\Vert _{L^\infty(G)}.}

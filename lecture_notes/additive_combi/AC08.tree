@@ -1,0 +1,11 @@
+\title{Inner products and #{L^2} norms}
+\taxon{Notation}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f, g \colon \mathbb{F}_p^n \to \mathbb{C}}, write}
+
+##{\langle f, g \rangle \coloneqq \mathbb{E}_{x \in \mathbb{F}_p^n}f(x)\overline{g(x)} \quad \text{and} \quad \langle \hat{f}, \hat{g} \rangle = \sum_{t \in \mathbb{F}_p^n} \hat{f}(t)\overline{\hat{g}(t)}.}
+
+\p{Consequently, #{\Vert f\Vert _2^2 = \mathbb{E}_x|f(x)|^2} and #{\Vert \hat{f}\Vert _2^2 = \sum_t |\hat{f}(t)|^2}.}

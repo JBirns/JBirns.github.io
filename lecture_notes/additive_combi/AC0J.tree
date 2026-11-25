@@ -1,0 +1,20 @@
+\title{Density increment from a large Fourier coefficient}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n} of density #{\alpha} be such that there exists #{t \neq 0} in #{\operatorname{Spec}_\rho(\mathbf{1}_A)}. Then there exist #{V \leq \mathbb{F}_p^n} of codimension #{1} and #{x \in \mathbb{F}_p^n} such that}
+
+##{|A \cap (x + V)| \geq \alpha(1 + \rho /2)|V|.}
+
+\proof{
+\p{Let #{t \neq 0} be such that #{|\widehat{\mathbf{1}_A}(t)| \geq \rho\alpha}, and let #{V \coloneqq \langle t \rangle^\perp}. Write #{v_j + V} for #{j \in [p] = \lbrace 1, 2, \ldots, p\rbrace } for the cosets of #{V}, such that #{v_j + V = \lbrace x \in \mathbb{F}_p^n : x \cdot t = j\rbrace }. Then, since #{t \neq 0},}
+
+##{\begin{aligned}
+\widehat{\mathbf{1}_A}(t) = \widehat{f_A}(t) &= \mathbb{E}_{x \in \mathbb{F}_p^n}(\mathbf{1}_A(x) - \alpha)\omega^{x \cdot t} \\
+&= \mathbb{E}_{j \in [p]}\underbrace{\mathbb{E}_{x \in v_j + V}(\mathbf{1}_A(x) - \alpha)}_{\eqqcolon a_j = \frac{|A \cap (v_j + V)|}{|V|} - \alpha}\omega^j = \mathbb{E}_{j \in [p]}\omega^ja_j.
+\end{aligned}}
+
+\p{By the triangle inequality, #{\mathbb{E}_{j \in [p]}|a_j| \geq \rho\alpha}. Since #{\mathbb{E}_{j \in [p]}a_j = 0}, #{\mathbb{E}_{j \in [p]}(a_j + |a_j|) \geq \rho\alpha}, so there exists #{j \in [p]} such that #{a_j + |a_j| \geq \rho\alpha}, which implies #{a_j \geq \rho\alpha /2}.}
+}

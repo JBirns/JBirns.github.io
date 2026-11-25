@@ -1,0 +1,13 @@
+\title{Size of the large spectrum}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{For all #{\rho > 0}, #{|\operatorname{Spec}_\rho(f)| \leq \rho^{-2}\Vert f\Vert _2^2/\Vert f\Vert _1^2}.}
+
+\proof{
+\p{By Parseval,}
+
+##{\Vert f\Vert _2^2 = \Vert \hat{f}\Vert _2^2 \geq \sum_{t \in \operatorname{Spec}_\rho(f)} |\hat{f}(t)|^2 \geq |\operatorname{Spec}_\rho(f)|\,\rho^2\Vert f\Vert _1^2.}
+}

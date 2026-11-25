@@ -1,0 +1,15 @@
+\title{Rudin’s Inequality}
+\taxon{Corollary}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\Lambda \subseteq \widehat{\mathbb{F}_2^n}} be a linearly independent set and let #{p \in \lbrack 2, \infty\rparen }. Then for all #{\hat{f} \in \ell^2(\Lambda)} [i.e. #{\hat{f} \colon \Lambda \to \mathbb{C}}],}
+
+##{\Big\Vert  \sum_{\gamma \in \Lambda} \hat{f}(\gamma)\gamma \Big\Vert _{L^p(\mathbb{F}_2^n)} = O\big( \sqrt{p}\,\Vert \hat{f}\Vert _{\ell^2(\Lambda)} \big)}
+
+\p{\em{(the left-hand side is normalised, #{\mathbb{E}} over #{\mathbb{F}_2^n}; the right-hand side uses counting measure on #{\Lambda})}.}
+
+\proof{
+\p{#{\to} Example sheet 2.}
+}

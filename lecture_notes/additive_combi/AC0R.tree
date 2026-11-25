@@ -1,0 +1,53 @@
+\title{Analogue of \ref{AC0J}}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq [N]} of density #{\alpha > 0}, satisfying #{N > 50\alpha^{-2}}, contain no non-trivial 3-APs. Let #{p} be a prime in #{[N/3, 2N/3]}, and write #{A' = A \cap [p] \subseteq \mathbb{Z}_p}. Then either}
+
+\ul{
+\li{\strong{(i)} #{\sup_{t \neq 0} |\widehat{\mathbf{1}_{A'}}(t)| \geq \frac{\alpha^2}{10}} (where the Fourier coefficient is computed in #{\mathbb{Z}_p}), or}
+\li{\strong{(ii)} there exists an interval #{J \subseteq [N]} of length #{\geq N/3} such that #{|A \cap J| \geq \alpha(1 + \alpha /400)|J|}.}
+}
+
+\proof{
+\p{We may assume that #{|A'| = |A \cap [p]| \geq \alpha(1 - \frac{\alpha}{200})p}, since otherwise}
+
+##{|A \cap [p + 1, N]| \geq \underbrace{\alpha(N - p) + \frac{\alpha^2p}{200}}_{\alpha N - \text{difference}} \geq \alpha\Big( 1 + \frac{\alpha}{400} \Big)(N - p),}
+
+\p{so we would be in case (ii) with #{J = [p + 1, N]}.}
+
+\p{Let #{A'' = A' \cap [p/3, 2p/3]}. Note that all 3-APs of the form #{(x, x + d, x + 2d)} in #{A'' \times A'' \times A''} are in fact 3-APs in #{[N]}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[thick] (0,0) circle (1.6);
+\node at (2.3,0.3) {$\mathbb{Z}_p$};
+\draw[very thick] (130:1.45) -- (130:1.75) node[above right] {$p/3$};
+\draw[very thick] (230:1.45) -- (230:1.75) node[below right] {$2p/3$};
+\draw[blue, thick, ->] (125:2.0) arc (125:235:2.0);
+\node[blue] at (180:2.4) {$A''$};
+\node[blue] at (140:1.6) {$\times$};
+\node[blue] at (165:1.6) {$\times$};
+\node[blue] at (200:1.6) {$\times$};
+\node[blue] at (220:1.6) {$\times$};
+\end{tikzpicture}}
+
+\p{If #{|A' \cap [p/3]|} or #{|A' \cap [2p/3, p]|} is at least #{2|A'|/5}, then we are again in case (ii) (check). So we may assume that #{|A''| \geq |A'|/5}.}
+
+\p{Now, as in \ref{AC0K} and \ref{AC0M}, with #{\alpha' = |A'|/p} and #{\alpha'' = |A''|/p},}
+
+##{\frac{\alpha''}{p} = \frac{|A''|}{p^2} = T_3(\mathbf{1}_{A'}, \mathbf{1}_{A''}, \mathbf{1}_{A'}) = \alpha' \cdot \alpha''^2 + \sum_{t \neq 0} \widehat{\mathbf{1}_{A'}}(t)\widehat{\mathbf{1}_{A''}}(t)\widehat{\mathbf{1}_{A'}}(t),}
+
+\p{\em{(the left-hand side counts the trivial 3-APs, as there are no non-trivial ones)}. So, as before,}
+
+##{\frac{\alpha' \cdot \alpha''^2}{2} \leq \sup_{t \neq 0} |\widehat{\mathbf{1}_{A'}}(t)| \cdot \alpha'',}
+
+\p{provided that #{\frac{\alpha''}{p} \leq \frac{\alpha' \cdot (\alpha'')^2}{2}}, which holds by assumption (check).}
+
+\p{Case (i) gave us}
+
+##{\sup_{t \neq 0} |\widehat{\mathbf{1}_{A'}}(t)| \geq \frac{\alpha' \cdot \alpha''}{2} \geq \frac{(\alpha')^2}{10};}
+
+\p{plugging in the assumption from the first line of the proof gives the result \em{(from restricting to a third of #{\mathbb{Z}_p})}.}
+}

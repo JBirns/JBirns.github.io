@@ -1,0 +1,37 @@
+\title{#{T_4} is controlled by the #{U^3}-norm}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon G \to \mathbb{C}} with #{\Vert f\Vert _{L^\infty(G)} \leq 1}. Then #{|T_4(f, f, f, f)| \leq \Vert f\Vert _{U^3(G)}}.}
+
+\proof{
+\p{Reparametrising, we have}
+
+##{T_4(f, f, f, f) = \mathbb{E}_{a,b,c,d \in G}f(3a + 2b + c)f(2a + b - d)f(a - c - 2d)f(-b - 2c - 3d),}
+
+\p{where the first term does not depend on #{d}. So, by Cauchy–Schwarz,}
+
+##{\begin{aligned}
+&|T_4(f, f, f, f)|^8 \\
+&\leq \Big( \mathbb{E}_{a,b,c}\big| \mathbb{E}_df(2a + b - d) \\
+&\qquad\qquad \cdot f(a - c - 2d)f(-b - 2c - 3d) \big|^2 \Big)^4 \\
+&= \Big( \mathbb{E}_{d,d'}\mathbb{E}_{a,b}f(2a + b - d)\overline{f(2a + b - d')} \\
+&\qquad \cdot \mathbb{E}_cf(a - c - 2d)f(-b - 2c - 3d)\overline{f(a - c - 2d')f(-b - 2c - 3d')} \Big)^4 \\
+&\leq \Big( \mathbb{E}_{d,d'}\mathbb{E}_{a,b}\big| \mathbb{E}_cf(a - c - 2d)f(-b - 2c - 3d) \\
+&\qquad\qquad \cdot \overline{f(a - c - 2d')f(-b - 2c - 3d')} \big|^2 \Big)^2 \\
+&= \Big( \mathbb{E}_{d,d',c,c'}\mathbb{E}_af(a - c - 2d)\overline{f(a - c - 2d')} \\
+&\qquad \cdot \overline{f(a - c' - 2d)}f(a - c' - 2d') \\
+&\qquad \cdot \mathbb{E}_bf(-b - 2c - 3d)\overline{f(-b - 2c - 3d')} \\
+&\qquad \cdot \overline{f(-b - 2c' - 3d)}f(-b - 2c' - 3d') \Big)^2 \\
+&\leq \mathbb{E}_{c,c',d,d'}\mathbb{E}_a\big| \mathbb{E}_bf(-b - 2c - 3d)\overline{f(-b - 2c - 3d')} \\
+&\qquad\qquad \cdot \overline{f(-b - 2c' - 3d)}f(-b - 2c' - 3d') \big|^2 \\
+&= \mathbb{E}_{b,b',c,c',d,d'}f(-b - 2c - 3d)\overline{f(-b - 2c - 3d')} \\
+&\qquad \cdot \overline{f(-b - 2c' - 3d)}f(-b - 2c' - 3d') \\
+&\qquad \cdot \overline{f(-b' - 2c - 3d)}f(-b' - 2c - 3d') \\
+&\qquad \cdot f(-b' - 2c' - 3d)\overline{f(-b' - 2c' - 3d')},
+\end{aligned}}
+
+\p{using Cauchy–Schwarz at each inequality. This is #{\Vert f\Vert _{U^3(G)}^8} after a change of variables: the eight points are the vertices of a cube indexed by #{(b \text{ or } b', c \text{ or } c', d \text{ or } d')}.}
+}

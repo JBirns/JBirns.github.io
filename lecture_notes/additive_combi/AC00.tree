@@ -1,0 +1,16 @@
+\title{Additive Combinatorics}
+\taxon{Lecture notes}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+
+\p{These notes are based on lectures given by Professor [Julia Wolf](https://www.juliawolf.org/index.shtml) for part III of the mathematical tripos and are not endorsed by her. This course is self-contained including the examples sheets (not accessible).}
+
+
+\ol{
+    \li{[[AC01]]}
+    \li{[[AC0Z]]}
+    \li{[[AC1I]]}
+    \li{[[AC1U]]}
+}

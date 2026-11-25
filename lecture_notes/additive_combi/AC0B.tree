@@ -1,0 +1,7 @@
+\title{Large spectrum of a subspace}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{By \ref{AC05}, if #{f = \mathbf{1}_V} with #{V \leq \mathbb{F}_p^n}, then for all #{\rho > 0}, #{\operatorname{Spec}_\rho(f) = V^\perp}.}

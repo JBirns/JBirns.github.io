@@ -1,0 +1,9 @@
+\title{Sets with large doubling}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n} be a set of linearly independent vectors. Then #{A + A} has size #{\binom{|A|}{2} + |A| = \binom{|A| + 1}{2}}. But #{|A| \leq n} (small)!}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n} be a set chosen at random, each element with probability #{p^{-\theta n}}, with #{\theta \in \lparen \frac{1}{2}, 1\rbrack }. Then w.h.p. #{|A + A| = (1 - o(1))|A|^2/2}.}

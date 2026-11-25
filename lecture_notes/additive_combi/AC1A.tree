@@ -1,0 +1,11 @@
+\title{Polynomial Freiman–Ruzsa}
+\taxon{Conjecture}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n} be such that #{|A + A| \leq K|A|}. Then there exists a subspace #{H \leq \mathbb{F}_p^n} of size at most #{C_1(K) \cdot |A|} such that for some #{x \in \mathbb{F}_p^n},}
+
+##{|A \cap (x + H)| \geq \frac{|A|}{C_2(K)},}
+
+\p{where #{C_1(K)} and #{C_2(K)} are polynomials in #{K}.}

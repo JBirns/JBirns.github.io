@@ -1,0 +1,15 @@
+\title{Sharpness of Freiman–Ruzsa}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A = H \cup R \subseteq \mathbb{F}_p^n}, where #{H \leq \mathbb{F}_p^n} is a subspace of dimension #{d} with #{K \ll d \ll n - K}, and #{R} consists of #{K - 1} linearly independent vectors in #{H^\perp}. Then #{|A| = |H \cup R| \sim |H|} and}
+
+##{|A + A| = |(H \cup R) + (H \cup R)| = |(H + H) \cup (H + R) \cup (R + R)| \sim K|H| \sim K|A|,}
+
+\p{but any subspace #{V \leq \mathbb{F}_p^n} containing #{A} must have size}
+
+##{\geq p^{d + (K - 1)} = |H| \cdot p^{K - 1} \sim |A| \cdot p^{K - 1},}
+
+\p{where the constant is exponential in #{K}.}

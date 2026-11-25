@@ -1,0 +1,11 @@
+\title{Additive energy}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given an abelian group #{G} and finite sets #{A, B \subseteq G}, define the \em{additive energy} between #{A} and #{B} to be}
+
+##{E(A, B) = \frac{\#\lbrace (a, a', b, b') \in A \times A \times B \times B : a + b = a' + b'\rbrace }{|A|^{3/2}|B|^{3/2}}.}
+
+\p{We refer to quadruples #{(a, a', b, b') \in A^2 \times B^2} such that #{a + b = a' + b'} as \em{additive quadruples}.}

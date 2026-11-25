@@ -1,0 +1,50 @@
+\title{Probabilistic Tools}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Recall (Chernoff): given #{\mathbb{C}}-valued independent random variables #{X_1, X_2, \ldots, X_n} with mean #{0}, for all #{\theta \geq 0},}
+
+##{\mathbb{P}\bigg[ \Big| \sum X_i \Big| \geq \theta\sqrt{\sum_{i=1}^n \Vert X_i\Vert _{L^\infty(\mathbb{P})}^2} \bigg] \leq 4\exp(-\theta^2/4).}
+
+\transclude{AC1J}
+
+\transclude{AC1K}
+
+\transclude{AC1L}
+
+\p{Recall that given #{A \subseteq \mathbb{F}_2^n} of density #{\alpha > 0}, #{|\operatorname{Spec}_\rho(\mathbf{1}_A)| \leq \rho^{-2}\alpha^{-1}}. This is best possible, as the example of a subspace #{H \leq \mathbb{F}_2^n} shows: #{\operatorname{Spec}_1(\mathbf{1}_H) = H^\perp}, so}
+
+##{|\operatorname{Spec}_1(\mathbf{1}_H)| = |H^\perp| = \frac{|\mathbb{F}_2^n|}{|H|} = \bigg( \frac{|H|}{|\mathbb{F}_2^n|} \bigg)^{-1} = \alpha^{-1}.}
+
+\transclude{AC1M}
+
+\p{You will prove Chang’s Theorem in more generality on Example sheet 3.}
+
+\transclude{AC1N}
+
+\p{Note that if #{G = \mathbb{F}_2^n}, then a set #{S \subseteq G} is dissociated iff it is linearly independent.}
+
+\transclude{AC1O}
+
+\p{We may bootstrap Khintchine’s inequality to obtain the following.}
+
+\transclude{AC1P}
+
+\p{\strong{Aside.}}
+
+\ul{
+\li{#{f \in L^p(G)}: #{f} is a function on #{G} with bounded #{L^p}-norm, #{\Vert f\Vert _{L^p(G)} = \big( \mathbb{E}_{x \in G}|f(x)|^p \big)^{1/p}}.}
+\li{#{\hat{f} \in \ell^2(\Lambda)}: #{\hat{f}} is a function supported on #{\Lambda \subseteq \hat{G}} with bounded #{\ell^2}-norm, #{\Vert \hat{f}\Vert _{\ell^2(\Lambda)} = \big( \sum_{\gamma \in \Lambda} |\hat{f}(\gamma)|^2 \big)^{1/2}}.}
+\li{#{X \in L^p(\mathbb{P})}: the random variable #{X} has bounded #{p}th moment (with respect to #{\mathbb{P}}), i.e. #{\mathbb{E}(|X|^p) < \infty}.}
+}
+
+\transclude{AC1Q}
+
+\transclude{AC1R}
+
+\transclude{AC1S}
+
+\transclude{AC1T}
+
+\p{A similar bound holds in #{\mathbb{Z}_N}, where Behrend’s construction offers a comparable lower bound.}

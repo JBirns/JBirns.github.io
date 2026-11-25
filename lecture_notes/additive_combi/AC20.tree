@@ -1,0 +1,9 @@
+\title{Gowers #{U^2}-norm}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f \colon G \to \mathbb{C}} with #{G} finite abelian, define its \em{#{U^2}-norm} by the formula}
+
+##{\Vert f\Vert _{U^2(G)}^4 = \mathbb{E}_{x,a,b \in G}f(x)\overline{f(x + a)f(x + b)}f(x + a + b).}

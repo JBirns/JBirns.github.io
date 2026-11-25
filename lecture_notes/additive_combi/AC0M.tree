@@ -1,0 +1,46 @@
+\title{Meshulam’s Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n}, #{p \geq 3}, be a set containing no non-trivial 3-APs. Then #{|A| = O\big( \frac{p^n}{n\log p} \big)}.}
+
+\proof{
+\p{By assumption, #{T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) = \frac{\alpha}{p^n}} (only the trivial 3-APs, with #{d = 0}, are counted). But as in \ref{AC0K},}
+
+##{T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) = \alpha^3 + \sum_{t \neq 0} \widehat{\mathbf{1}_A}(t)^2\overline{\widehat{\mathbf{1}_{2 \cdot A}}(t)}.}
+
+\p{\strong{Observation.} So provided #{p^n \geq 2\alpha^{-2}},}
+
+##{\frac{\alpha^3}{2} \leq \Big| \frac{\alpha}{p^n} - \alpha^3 \Big| \leq \sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)| \cdot \alpha,}
+
+\p{that is, #{\sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)| \geq \frac{\alpha^2}{2}}. By \ref{AC0J} with #{\rho = \alpha /2}, there exist #{V \leq \mathbb{F}_p^n} of codimension #{1} and #{x \in \mathbb{F}_p^n} such that}
+
+##{|A \cap (x + V)| \geq (\alpha + \alpha^2/4)|V|.}
+
+\p{Iterate this observation. Let #{A_0 = A}, #{V_0 = \mathbb{F}_p^n}, #{\alpha_0 = \frac{|A_0|}{|V_0|} = \alpha}. At step #{i}, we are given a set #{A_{i-1} \subseteq V_{i-1}} of density #{\alpha_{i-1}} with no non-trivial 3-APs. Provided that #{p^{\dim V_{i-1}} \geq 2\alpha_{i-1}^{-2}}, there exist #{V_i \leq V_{i-1}} of codimension #{1} and #{x_i \in V_{i-1}} such that}
+
+##{|A_{i-1} \cap (x_i + V_i)| \geq \Big( \alpha_{i-1} + \frac{\alpha_{i-1}^2}{4} \Big)|V_i|.}
+
+\p{Set #{A_i = (A_{i-1} - x_i) \cap V_i}. Note #{\alpha_i \geq \alpha_{i-1} + \frac{\alpha_{i-1}^2}{4}}, and #{A_i} is free of non-trivial 3-APs.}
+
+\p{Through this iteration, the density increases from #{\alpha} to #{2\alpha} in at most #{\alpha /(\alpha^2/4) = 4\alpha^{-1}} steps, from #{2\alpha} to #{4\alpha} in at most #{2\alpha /((2\alpha)^2/4) = 2\alpha^{-1}} steps, …, and would reach #{1} in at most #{4\alpha^{-1}(1 + \frac{1}{2} + \frac{1}{4} + \cdots) = 8\alpha^{-1}} steps.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}
+\draw (0,0) -- (6,0);
+\draw (0,0.12) -- (0,-0.12) node[below] {$\alpha$};
+\draw (1.5,0.12) -- (1.5,-0.12) node[below] {$2\alpha$};
+\draw (3,0.12) -- (3,-0.12) node[below] {$4\alpha$};
+\node at (4,-0.35) {$\cdots$};
+\draw (6,0.12) -- (6,-0.12) node[below] {$1$};
+\end{tikzpicture}}
+
+\p{The argument must therefore end with #{\dim(V_i) \geq n - 8\alpha^{-1}}, at which point we must have had}
+
+##{p^{\dim V_i} \leq 2\alpha_i^{-2} \leq 2\alpha^{-2}}
+
+\p{(or else we could have continued).}
+
+\p{But we may assume that #{\alpha \geq \sqrt{2}p^{-n/4}}, whence #{p^{n - 8\alpha^{-1}} \leq p^{n/2}}, or #{n/2 \leq 8\alpha^{-1}}.}
+}

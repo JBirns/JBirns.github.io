@@ -1,0 +1,83 @@
+\title{Croot–Sisask Almost Periodicity}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a finite abelian group \em{(not actually necessary: it can work for non-abelian groups, and we only actually need the group to be discrete)}, let #{\varepsilon > 0} and let #{p \in \lbrack 2, \infty\rparen }. Let #{A, B \subseteq G} be such that #{|A + B| \leq K|A|}, and let #{f \colon G \to \mathbb{C}}. Then there exist #{b \in B} and a set #{X \subseteq B - b} such that #{|X| \geq (2K)^{-O(\varepsilon^{-2}p)}|B|} and}
+
+##{\Vert \tau_x(f * \mu_A) - f * \mu_A\Vert _{L^p(G)} \leq \varepsilon\Vert f\Vert _{L^p(G)} \quad \forall x \in X,}
+
+\p{where #{\tau_x(g)(y) = g(y + x)} and #{\mu_A} is the characteristic measure of #{A}.}
+
+\proof{
+\p{The main idea is to approximate}
+
+##{f * \mu_A(y) = \mathbb{E}_x\mu_A(x)f(y - x) = \mathbb{E}_{x \in A}f(y - x)}
+
+\p{by #{\frac{1}{k}\sum_{i=1}^k f(y - z_i)}, with #{z_i} sampled independently at random from #{A}, for some choice of #{k}.}
+
+\p{For each #{y \in G}, define #{Z_i(y) = \tau_{-z_i}(f)(y) - f * \mu_A(y)} for #{i \in [k]}. For fixed #{y \in G}, these are independent and have mean #{0}, so by the Marcinkiewicz–Zygmund inequality, for each #{y \in G},}
+
+##{\begin{aligned}
+\Big\Vert  \sum_{i=1}^k Z_i(y) \Big\Vert _{L^p(\mathbb{P})}^p &= O\bigg( p^{p/2}\Big\Vert  \sum_{i=1}^k |Z_i(y)|^2 \Big\Vert _{L^{p/2}(\mathbb{P})}^{p/2} \bigg) = O\bigg( p^{p/2}\,\mathbb{E}\Big( \sum_{i=1}^k |Z_i(y)|^2 \Big)^{p/2} \bigg),
+\end{aligned}}
+
+\p{and, by Hölder with #{\frac{2}{p} + \frac{1}{p'} = 1},}
+
+##{\Big( \sum_{i=1}^k |Z_i(y)|^2 \Big)^{p/2} \leq \bigg( \Big( \sum_{i=1}^k 1^{p'} \Big)^{1/p'}\Big( \sum_{i=1}^k |Z_i(y)|^{2 \cdot p/2} \Big)^{2/p} \bigg)^{p/2} = k^{p/2 - 1}\sum_{i=1}^k |Z_i(y)|^p,}
+
+\p{as #{\frac{1}{p'} \cdot \frac{p}{2} = \frac{p}{2} - 1}. So for each #{y \in G},}
+
+##{\Big\Vert  \sum_{i=1}^k Z_i(y) \Big\Vert _{L^p(\mathbb{P})}^p = O\Big( p^{p/2}k^{p/2-1}\,\mathbb{E}\sum_{i=1}^k |Z_i(y)|^p \Big).}
+
+\p{Summing over #{y \in G},}
+
+##{\mathbb{E}_{y \in G}\Big\Vert  \sum_{i=1}^k Z_i(y) \Big\Vert _{L^p(\mathbb{P})}^p = O\Big( p^{p/2}k^{p/2-1}\,\mathbb{E}\sum_{i=1}^k \mathbb{E}_{y \in G}|Z_i(y)|^p \Big),}
+
+\p{with}
+
+##{\big( \mathbb{E}_{y \in G}|Z_i(y)|^p \big)^{1/p} = \Vert Z_i\Vert _{L^p(G)} \leq \underbrace{\Vert \tau_{-z_i}(f)\Vert _{L^p(G)}}_{= \Vert f\Vert _{L^p(G)}} + \underbrace{\Vert f * \mu_A\Vert _{L^p(G)}}_{\leq \Vert f\Vert _{L^p(G)}}}
+
+\p{by Young’s convolution inequality (if #{1 + \frac{1}{r} = \frac{1}{p} + \frac{1}{q}}, then #{\Vert f * g\Vert _r \leq \Vert f\Vert _p\Vert g\Vert _q}). It follows that}
+
+##{\begin{aligned}
+\mathbb{E}_{(z_1, \ldots, z_k) \in A^k}\mathbb{E}_{y \in G}\Big| \sum_{i=1}^k Z_i(y) \Big|^p &= O\Big( p^{p/2}k^{p/2-1}\,\mathbb{E}_{(z_1, \ldots, z_k) \in A^k}\sum_{i=1}^k 2^p\Vert f\Vert _{L^p(G)}^p \Big) \\
+&= O\big( p^{p/2}k^{p/2}\Vert f\Vert _{L^p(G)}^p \big) = O\big( (pk\Vert f\Vert _{L^p(G)}^2)^{p/2} \big),
+\end{aligned}}
+
+\p{so}
+
+##{\mathbb{E}_{(z_1, \ldots, z_k) \in A^k}\underbrace{\mathbb{E}_{y \in G}\Big| \frac{1}{k}\sum_{i=1}^k \big( \tau_{-z_i}(f)(y) - f * \mu_A(y) \big) \Big|^p}_{(*)} = O\big( (pk^{-1}\Vert f\Vert _{L^p(G)}^2)^{p/2} \big).}
+
+\p{Choose #{k = O(\varepsilon^{-2}p)} such that the right-hand side is at most #{\big( \frac{\varepsilon}{4}\Vert f\Vert _{L^p(G)} \big)^p}. Write}
+
+##{L = \Big\lbrace  (z_1, \ldots, z_k) \in A^k : (*) \leq \Big( \frac{\varepsilon}{2}\Vert f\Vert _{L^p(G)} \Big)^p \Big\rbrace .}
+
+\p{By Markov, since #{\mathbb{E}(*) \leq \big( \frac{\varepsilon}{4}\Vert f\Vert _{L^p(G)} \big)^p = 2^{-p}\big( \frac{\varepsilon}{2}\Vert f\Vert _{L^p(G)} \big)^p},}
+
+##{\frac{|L^c|}{|A|^k} = \mathbb{P}\Big( (*) > \Big( \frac{\varepsilon}{2}\Vert f\Vert _{L^p(G)} \Big)^p \Big) \leq \mathbb{P}\big( (*) \geq 2^p\,\mathbb{E}(*) \big) \leq 2^{-p},}
+
+\p{so #{\frac{|L|}{|A|^k} \geq 1 - 2^{-p}}; in particular, #{|L| \geq \frac{1}{2}|A|^k}.}
+
+\p{Let #{D = \lbrace (b, \ldots, b) : b \in B\rbrace } (#{k} times), so #{L + D \subseteq (A + B)^k}, whence}
+
+##{|L + D| \leq |(A + B)^k| \leq (K|A|)^k = K^k|A|^k \leq (2K)^k|L|}
+
+\p{since #{|L| \geq \frac{1}{2}|A|^k} \em{(does taking the #{2} out of the bracket help the bound?)}. By \ref{AC1D}, the number of additive quadruples in #{L \times L \times D \times D} is at least #{\frac{|D|^2|L|}{(2K)^k}}, so there are at least #{\frac{|D|^2}{(2K)^k}} pairs #{(b_1, b_2) \in D \times D} such that #{r_{L-L}(b_1 - b_2) > 0}.}
+
+\p{In particular, there exist #{b \in B} and #{X \subseteq B - b} of size #{|X| \geq \frac{|B|}{(2K)^k}} (note #{|B| = |D|}) such that #{r_{L-L}(x) > 0} for all #{x \in X}. In other words, for all #{x \in X} there exist #{\ell_1(x), \ell_2(x) \in L} such that for all #{i \in [k]}, #{\ell_1(x)_i = \ell_2(x)_i + x}.}
+
+\p{By the triangle inequality, for each #{x \in X},}
+
+##{\begin{aligned}
+&\Vert \tau_{-x}(f * \mu_A) - f * \mu_A\Vert _{L^p(G)} \\
+&\leq \Big\Vert  \tau_{-x}(f * \mu_A) - \tau_{-x}\Big( \frac{1}{k}\sum_{i=1}^k \tau_{-\ell_2(x)_i}(f) \Big) \Big\Vert _{L^p(G)} \\
+&\qquad + \Big\Vert  \tau_{-x}\Big( \frac{1}{k}\sum_{i=1}^k \tau_{-\ell_2(x)_i}(f) \Big) - f * \mu_A \Big\Vert _{L^p(G)} \\
+&= \Big\Vert  f * \mu_A - \frac{1}{k}\sum_{i=1}^k \tau_{-\ell_2(x)_i}(f) \Big\Vert _{L^p(G)} \\
+&\qquad + \Big\Vert  \frac{1}{k}\sum_{i=1}^k \underbrace{\tau_{-x-\ell_2(x)_i}}_{= \tau_{-\ell_1(x)_i}}(f) - f * \mu_A \Big\Vert _{L^p(G)} \\
+&\leq 2 \cdot \frac{\varepsilon}{2}\Vert f\Vert _{L^p(G)}
+\end{aligned}}
+
+\p{by definition of #{L}. (Replacing #{X} by #{-X} if necessary gives the statement with #{\tau_x}.)}
+}

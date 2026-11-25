@@ -1,0 +1,11 @@
+\title{Roth’s Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq [N]} be a subset containing no non-trivial 3-APs. Then #{|A| = O\big( \frac{N}{\log\log N} \big)}.}
+
+\proof{
+\p{#{\to} Example sheet 1.}
+}

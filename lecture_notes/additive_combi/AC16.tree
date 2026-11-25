@@ -1,0 +1,9 @@
+\title{Iterated sumsets}
+\taxon{Notation}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{A \subseteq G} and #{\ell, m \in \mathbb{N}_0}, write #{\ell A - mA} for the set}
+
+##{\underbrace{A + \cdots + A}_{\ell \text{ times}} \underbrace{- A - \cdots - A}_{m \text{ times}}.}

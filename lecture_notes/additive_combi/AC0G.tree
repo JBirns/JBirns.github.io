@@ -1,0 +1,7 @@
+\title{The #{\ell^4} norm and additive quadruples}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{\Vert \hat{f}\Vert _4^4 = \mathbb{E}_{x + y = z + w}f(x)f(y)\overline{f(z)f(w)}}. #{\to} Example sheet 1.}

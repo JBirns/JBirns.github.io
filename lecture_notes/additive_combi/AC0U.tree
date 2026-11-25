@@ -1,0 +1,7 @@
+\title{Behrend’s construction}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{There exists a set #{A \subseteq [N]} containing no non-trivial 3-APs of size #{|A| \geq C\exp(-c\sqrt{\log N})N}, where #{C, c > 0} are absolute constants. #{\to} Example sheet 1.}

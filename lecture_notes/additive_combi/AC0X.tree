@@ -1,0 +1,11 @@
+\title{Size of Bohr sets}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\Gamma \subseteq \hat{G}} be of size #{d}, and let #{\rho > 0}. Then #{|B(\Gamma, \rho)| \geq \big( \frac{\rho}{2\pi} \big)^d|G|}.}
+
+\proof{
+\p{#{\to} Example sheet 2.}
+}

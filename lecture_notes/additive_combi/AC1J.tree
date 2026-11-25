@@ -1,0 +1,31 @@
+\title{Khintchine’s Inequality}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X_1, \ldots, X_n} be independent random variables taking values #{\pm x_i} with probability #{\frac{1}{2}} each, for all #{i = 1, \ldots, n}. Then for all #{p \in \lbrack 2, \infty\rparen },}
+
+##{\Big\Vert  \sum_{i=1}^n X_i \Big\Vert _{L^p(\mathbb{P})} = O\bigg( p^{1/2}\Big( \sum_{i=1}^n \Vert X_i\Vert _{L^2(\mathbb{P})}^2 \Big)^{1/2} \bigg).}
+
+\proof{
+\p{By nesting of norms, it suffices to prove the case #{p = 2k} with #{k \in \mathbb{N}}. Write #{X = \sum_{i=1}^n X_i} and without loss of generality assume that #{\sum_{i=1}^n \Vert X_i\Vert _\infty^2 = \sum_{i=1}^n \Vert X_i\Vert _2^2 = 1}.}
+
+\p{By Chernoff, for all #{\theta \geq 0}, #{\mathbb{P}(|X| \geq \theta) \leq 4\exp(-\theta^2/4)}, so (integrating by parts)}
+
+##{\Vert X\Vert _{2k}^{2k} = \int_0^\infty 2kt^{2k-1}\mathbb{P}[|X| \geq t]\,dt \leq 8k\underbrace{\int_0^\infty t^{2k-1}\exp(-t^2/4)\,dt}_{= I(k)}.}
+
+\p{We shall prove by induction on #{k} that #{I(k) \leq C^{2k}\frac{(2k)^k}{4k}}. Indeed, if #{k = 1},}
+
+##{\int_0^\infty te^{-t^2/4}\,dt = \big[ -2e^{-t^2/4} \big]_0^\infty = 2 \leq C^2 \cdot \frac{2}{4} \quad \text{if } C \geq 2.}
+
+\p{For #{k > 1},}
+
+##{\begin{aligned}
+I(k) &= \int_0^\infty t^{2k-2} \cdot t\exp(-t^2/4)\,dt \\
+&= \big[ t^{2k-2} \cdot (-2)\exp(-t^2/4) \big]_0^\infty - \int_0^\infty (2k - 2)t^{2k-3} \cdot (-2)\exp(-t^2/4)\,dt \\
+&= 4(k - 1)\int_0^\infty t^{2(k-1)-1}\exp(-t^2/4)\,dt = 4(k - 1)I(k - 1) \\
+&\leq 4(k - 1)C^{2(k-1)}\big( 2(k - 1) \big)^{k-1}/4(k - 1) \qquad \text{(by the induction hypothesis)} \\
+&\leq C^{2k}(2k)^k/4k \qquad \text{if } C \geq \sqrt{2}.
+\end{aligned}}
+}

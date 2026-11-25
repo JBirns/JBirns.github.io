@@ -1,0 +1,11 @@
+\title{Fourier coefficients of the quadric}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{Q = \lbrace x \in \mathbb{F}_p^n \text{ s.t. } x \cdot x = 0\rbrace }. Then #{|Q| = \big( \frac{1}{p} + O(p^{-n/2}) \big)p^n} and}
+
+##{\sup_{t \neq 0} |\widehat{\mathbf{1}_Q}(t)| = O(p^{-n/2}).}
+
+\p{#{\to} Example sheet 1.}

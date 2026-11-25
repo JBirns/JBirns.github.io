@@ -1,0 +1,11 @@
+\title{#{U^2}-Inverse Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{F}_p^n \to \mathbb{C}} satisfy #{\Vert f\Vert _\infty \leq 1} and #{\Vert f\Vert _{U^2} \geq \delta} for some #{\delta > 0}. Then there exists #{b \in \mathbb{F}_p^n} such that #{|\mathbb{E}_xf(x)\omega^{x \cdot b}| \geq \delta^2}. In other words, #{|\langle f, \phi \rangle| \geq \delta^2} for #{\phi(x) = \omega^{x \cdot b}}, and we say “#{f} correlates with a linear function”.}
+
+\proof{
+\p{We have seen #{\Vert f\Vert _{U^2}^2 \leq \Vert \hat{f}\Vert _\infty\Vert f\Vert _2 \leq \Vert \hat{f}\Vert _\infty}, so #{\delta^2 \leq \Vert \hat{f}\Vert _\infty = |\mathbb{E}_xf(x)\omega^{x \cdot b}|} for some #{b \in \mathbb{F}_p^n}.}
+}

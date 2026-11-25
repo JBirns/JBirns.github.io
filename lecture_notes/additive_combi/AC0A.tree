@@ -1,0 +1,9 @@
+\title{Large spectrum}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\rho > 0} and #{f \colon \mathbb{F}_p^n \to \mathbb{C}}. Define the \em{#{\rho}-large spectrum} of #{f} to be the set}
+
+##{\operatorname{Spec}_\rho(f) = \lbrace t \in \mathbb{F}_p^n : |\hat{f}(t)| \geq \rho\Vert f\Vert _1\rbrace .}

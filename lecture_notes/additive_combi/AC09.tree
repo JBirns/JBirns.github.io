@@ -1,0 +1,16 @@
+\title{Plancherel and Parseval}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The following hold for all #{f, g \colon \mathbb{F}_p^n \to \mathbb{C}}:}
+
+\ul{
+\li{\strong{(i)} #{\langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle} (Plancherel’s identity);}
+\li{\strong{(ii)} #{\Vert f\Vert _2 = \Vert \hat{f}\Vert _2} (Parseval’s identity).}
+}
+
+\proof{
+\p{Exercise, similar to the inversion formula.}
+}

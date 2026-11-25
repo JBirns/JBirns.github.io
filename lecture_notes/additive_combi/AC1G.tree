@@ -1,0 +1,53 @@
+\title{Balog–Szemerédi–Gowers}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be an abelian group, and let #{A \subseteq G} be finite such that #{E(A, A) \geq \eta} for some #{\eta > 0}. Then there exists #{A' \subseteq A} of size at least #{c(\eta)|A|} such that #{|A' + A'| \leq C(\eta)|A|}, where #{c(\eta)} and #{C(\eta)} can be taken to be polynomials in #{\eta}.}
+
+\proof{
+\p{We call a difference #{d} “popular” if #{d} can be written as #{d = x - y} with #{x, y \in A} in at least #{\eta|A|/2} many ways, i.e. if #{r_{A-A}(d) \geq \eta|A|/2}. There must be at least #{\eta|A|/2} popular differences, for if not,}
+
+##{\eta|A|^3 \leq \sum_d r_{A-A}(d)^2 = \underbrace{\sum_{d \text{ popular}} r_{A-A}(d)^2}_{< \eta\frac{|A|}{2} \cdot |A|^2} + \underbrace{\sum_{d \text{ unpopular}} r_{A-A}(d)^2}_{< \eta\frac{|A|}{2}\sum_d r_{A-A}(d) = \eta\frac{|A|}{2} \cdot |A|^2} < \eta|A|^3,}
+
+\p{a contradiction ↯.}
+
+\p{Define a graph with vertex set #{A}, joining #{x} and #{y} by an edge if #{y - x} is a popular difference. Then}
+
+##{\mathbb{E}_{x \in A}|N(x)| = \frac{1}{|A|}\sum_{x \in A} |N(x)| \geq \eta|A|/2,}
+
+\p{where #{N(x)} is the neighbourhood of #{x}, i.e. the set of #{y} such that #{y \sim x}. We also have #{\mathbb{E}_{x,y \in A}|N(x) \cap N(y)| \geq \eta^2|A|/4}. Indeed,}
+
+##{\begin{aligned}
+\mathbb{E}_{x,y \in A}|N(x) \cap N(y)| &= \mathbb{E}_{x,y \in A}\sum_{z \in A} \mathbf{1}_{N(x)}(z)\mathbf{1}_{N(y)}(z) = \sum_{z \in A} \big( \mathbb{E}_{x \in A}\mathbf{1}_{N(x)}(z) \big)^2 \\
+&\geq \frac{1}{|A|}\Big( \sum_{z \in A} \mathbb{E}_{x \in A}\mathbf{1}_{N(x)}(z) \Big)^2 \qquad \text{(by Cauchy--Schwarz)} \\
+&= \frac{1}{|A|}\big( \mathbb{E}_{x \in A}|N(x)| \big)^2 \geq \frac{1}{|A|}\Big( \frac{\eta|A|}{2} \Big)^2 = \frac{\eta^2|A|}{4},
+\end{aligned}}
+
+\p{using #{\mathbf{1}_{N(x)}(z) = \mathbf{1}_{N(z)}(x)}.}
+
+\p{We apply \ref{AC1H} with #{m = n = |A|} and #{\delta^2 = \eta^2/4} to obtain a subset #{A' \subseteq A} of size #{\geq \frac{\eta^5|A|}{2^{11/2}}} with the property that #{|N(x) \cap N(y)| \geq \frac{\eta^2|A|}{8}} for at least #{90\%} of pairs #{(x, y) \in A'^2}. But then, for at least #{10\%} of #{x \in A'}, #{|N(x) \cap N(y)| \geq \frac{\eta^2|A|}{8}} for at least #{80\%} of #{y \in A'}. Hence there exists #{A'' \subseteq A'} of size #{\geq \eta^{10}|A|/2^{15}} such that for all #{x \in A''}, at least #{80\%} of the #{z \in A'} satisfy #{|N(x) \cap N(z)| \geq \eta^2|A|/8}.}
+
+\p{Let #{x, y \in A''}. Then there are at least #{\eta^{10}|A|/2^{12}} elements #{z \in A'} such that #{|N(x) \cap N(z)| \geq \eta^2|A|/8} and #{|N(y) \cap N(z)| \geq \eta^2|A|/8}.}
+
+\p{[We shall prove an upper bound on #{|A'' - A''|} by showing that each element of #{A'' - A''} can be written as a linear combination of many distinct octuples from #{A}.]}
+
+\p{For each such #{z}, there are thus #{\geq \big( \frac{\eta^2|A|}{8} \big)^2} many pairs #{(u, v)} such that #{u \in N(x) \cap N(z)} and #{v \in N(y) \cap N(z)}. For each such pair #{(u, v)}, the elements #{u - x}, #{z - u}, #{v - z}, #{y - v} are all popular differences. Hence, for each pair #{(u, v)}, there are at least #{(\eta|A|/2)^4} octuples #{(a_1, \ldots, a_8) \in A^8} such that}
+
+##{u - x = a_2 - a_1, \quad z - u = a_4 - a_3, \quad v - z = a_6 - a_5, \quad y - v = a_8 - a_7.}
+
+\p{In other words, there are at least}
+
+##{\underbrace{\Big( \frac{\eta^{10}|A|}{2^{12}} \Big)}_{\#z\text{'s}}\underbrace{\Big( \frac{\eta^2|A|}{8} \Big)^2}_{\#(u, v)}\underbrace{\Big( \frac{\eta|A|}{2} \Big)^4}_{\#\text{octuples}} = |A|^7\eta^{18}/2^{22}}
+
+\p{octuples #{(a_1, \ldots, a_8) \in A^8} such that #{y - x = a_2 - a_1 + a_4 - a_3 + a_6 - a_5 + a_8 - a_7}. But distinct #{y - x} give distinct octuples, so}
+
+##{\frac{\eta^{18}}{2^{22}}|A|^7 \cdot |A'' - A''| \leq \underbrace{|A|^8}_{\text{max \# octuples}},}
+
+\p{so}
+
+##{|A'' - A''| \leq 2^{22}\eta^{-18}|A| \leq 2^{37}\eta^{-28}|A''|.}
+
+\p{(The bound on #{|A'' + A''|} follows from Plünnecke.)}
+}

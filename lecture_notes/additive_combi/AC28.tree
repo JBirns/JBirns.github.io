@@ -1,0 +1,7 @@
+\title{Quadratic phases have maximal #{U^3}-norm}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{M} be an #{n \times n} (symmetric) matrix with entries in #{\mathbb{F}_p}. Then #{f(x) = \omega^{x^TMx}} has the maximum possible #{U^3}-norm, i.e. #{\Vert f\Vert _{U^3} = 1}.}

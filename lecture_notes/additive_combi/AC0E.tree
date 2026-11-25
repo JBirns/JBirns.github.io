@@ -1,0 +1,14 @@
+\title{Convolutions of indicator functions}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{A, B \subseteq \mathbb{F}_p^n},}
+
+##{\begin{aligned}
+\mathbf{1}_A * \mathbf{1}_B(x) &= \mathbb{E}_{y \in \mathbb{F}_p^n}\mathbf{1}_A(y)\mathbf{1}_B(x - y) = \frac{1}{p^n}|A \cap (x - B)| \\
+&= \frac{1}{p^n}\#\lbrace \text{ways } x \text{ can be written as } x = a + b \text{ with } a \in A,\; b \in B\rbrace .
+\end{aligned}}
+
+\p{In particular we see that the support of #{\mathbf{1}_A * \mathbf{1}_B} is the \em{sumset} #{A + B \coloneqq \lbrace a + b : a \in A,\; b \in B\rbrace }.}

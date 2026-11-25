@@ -1,0 +1,33 @@
+\title{Marcinkiewicz–Zygmund Inequality}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p \in \lbrack 2, \infty\rparen }, and let #{X_1, \ldots, X_n \in L^p(\mathbb{P})} be independent random variables with #{\mathbb{E}\big[ \sum X_i \big] = 0}. Then}
+
+##{\Big\Vert  \sum X_i \Big\Vert _{L^p(\mathbb{P})} = O\bigg( p^{1/2}\Big\Vert  \sum |X_i|^2 \Big\Vert _{L^{p/2}(\mathbb{P})}^{1/2} \bigg).}
+
+\proof{
+\p{For #{\mathbb{C}}-valued random variables, the result follows from the real case by taking real and imaginary parts and applying the triangle inequality.}
+
+\p{Next assume that the distribution of the #{X_i}’s is symmetric, i.e. #{\mathbb{P}(X_i = a) = \mathbb{P}(X_i = -a)} for all #{a \in \mathbb{R}}. Partition the probability space #{\Omega} into disjoint sets #{\Omega_1, \Omega_2, \ldots, \Omega_M}, writing #{\mathbb{P}_j} for the induced probability measure on #{\Omega_j}, such that all the #{X_i}’s are symmetric and take at most two values on each #{\Omega_j}. Applying Khintchine, for each #{j \in [M]},}
+
+##{\Big\Vert  \sum_{i=1}^n X_i \Big\Vert _{L^p(\mathbb{P}_j)}^p = O\bigg( p^{p/2}\underbrace{\Big( \sum_{i=1}^n \Vert X_i\Vert _{L^2(\mathbb{P}_j)}^2 \Big)^{p/2}}_{= \Vert \sum_{i=1}^n |X_i|^2\Vert _{L^{p/2}(\mathbb{P}_j)}^{p/2}} \bigg).}
+
+\p{So summing over all #{j \in [M]} and taking #{p}th roots gives the symmetric case.}
+
+\p{Now suppose the #{X_i}’s are arbitrary, and let #{Y_1, \ldots, Y_n} be such that #{X_i \sim Y_i} and #{X_1, \ldots, X_n, Y_1, \ldots, Y_n} are independent. Applying the symmetric result to #{X_i - Y_i},}
+
+##{\begin{aligned}
+\Big\Vert  \sum_{i=1}^n (X_i - Y_i) \Big\Vert _{L^p(\mathbb{P} \times \mathbb{P})} &= O\bigg( p^{1/2}\Big\Vert  \sum_{i=1}^n |X_i - Y_i|^2 \Big\Vert _{L^{p/2}(\mathbb{P} \times \mathbb{P})}^{1/2} \bigg) \\
+&= O\bigg( p^{1/2}\Big\Vert  \sum_{i=1}^n |X_i|^2 \Big\Vert _{L^{p/2}(\mathbb{P})}^{1/2} \bigg),
+\end{aligned}}
+
+\p{by expanding #{|X_i - Y_i|^2}, adjusting the constant, and using #{Y_i \sim X_i} and independence. But also}
+
+##{\begin{aligned}
+\Big\Vert  \sum_{i=1}^n X_i \Big\Vert _{L^p(\mathbb{P})} &= \Big\Vert  \sum_{i=1}^n X_i - \underbrace{\mathbb{E}\sum_{i=1}^n Y_i}_{= 0 \text{ by assumption}} \Big\Vert _{L^p(\mathbb{P})} = \Big\Vert  \mathbb{E}_Y\sum_i (X_i - Y_i) \Big\Vert _{L^p(\mathbb{P})} \\
+&\leq \Big\Vert  \sum (X_i - Y_i) \Big\Vert _{L^p(\mathbb{P} \times \mathbb{P})} \qquad \text{(by convexity, e.g.\; Jensen)}.
+\end{aligned}}
+}

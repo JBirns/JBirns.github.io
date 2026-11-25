@@ -1,0 +1,27 @@
+\title{Strong linearity}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{S} and #{\phi} be given by \ref{AC2A}. Then there exist an #{n \times n} matrix #{M} with entries in #{\mathbb{F}_p} and #{b \in \mathbb{F}_p^n} such that the map}
+
+##{\psi \colon \mathbb{F}_p^n \to \widehat{\mathbb{F}_p^n}, \quad x \mapsto Mx + b}
+
+\p{satisfies #{\psi(x) = \phi(x)} for #{\Omega_\delta(|\mathbb{F}_p^n|)} (i.e. a positive proportion of) elements #{x \in S}.}
+
+\proof{
+\p{Consider the graph #{\Gamma = \lbrace (h, \phi(h)) : h \in S\rbrace  \subseteq \mathbb{F}_p^n \times \widehat{\mathbb{F}_p^n}}. By \ref{AC2A}, #{\Gamma} has #{\Omega_\delta(|\mathbb{F}_p^n|^3)} additive quadruples. By the Balog–Szemerédi–Gowers Theorem (\ref{AC1G}), there exists #{\Gamma' \subseteq \Gamma} with #{|\Gamma'| = \Omega_\delta(|\Gamma|) = \Omega_\delta(|\mathbb{F}_p^n|)} and #{|\Gamma' + \Gamma'| \leq O_\delta(|\Gamma'|)}. Define #{S'} by #{\Gamma' = \lbrace (h, \phi(h)) : h \in S'\rbrace }, and note that #{|S'| = \Omega_\delta(|\mathbb{F}_p^n|)}.}
+
+\p{By the Freiman–Ruzsa Theorem (\ref{AC18}) applied to #{\Gamma' \subseteq \mathbb{F}_p^n \times \widehat{\mathbb{F}_p^n}}, there exists a subspace #{H \leq \mathbb{F}_p^n \times \widehat{\mathbb{F}_p^n}} with #{|H| = O_\delta(|\Gamma'|) = O_\delta(|\mathbb{F}_p^n|)} such that #{\Gamma' \subseteq H}.}
+
+\p{Denote by #{\pi \colon \mathbb{F}_p^n \times \widehat{\mathbb{F}_p^n} \to \mathbb{F}_p^n} the projection onto the first #{n} coordinates. By construction, #{\pi(H) \supseteq S'}. Moreover, since #{|S'| = \Omega_\delta(|\mathbb{F}_p^n|)},}
+
+##{|\operatorname{Ker}(\pi|_H)| = \frac{|H|}{|\operatorname{Im}(\pi|_H)|} \leq \frac{O_\delta(|\mathbb{F}_p^n|)}{|S'|} \leq O_\delta(1).}
+
+\p{We may thus partition #{H} into #{O_\delta(1)} cosets of #{H^* = \operatorname{Ker}(\pi|_H)} such that #{\pi} is injective on each coset. By averaging, there exists a coset #{x + H^*} such that}
+
+##{|\Gamma' \cap (x + H^*)| = \Omega_\delta(|\Gamma'|) = \Omega_\delta(|\mathbb{F}_p^n|).}
+
+\p{Set #{\Gamma'' = \Gamma' \cap (x + H^*)}, and define #{S''} accordingly. Now #{\pi|_{x + H^*}} is both injective and surjective onto its image, #{V = \operatorname{Im}(\pi|_{x + H^*})}. But this means that there exists an affine linear map #{\psi \colon V \to \widehat{\mathbb{F}_p^n}} such that #{(h, \psi(h)) \in \Gamma''} for all #{h \in S''}.}
+}

@@ -1,0 +1,9 @@
+\title{Fourier transform on #{G}}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f \colon G \to \mathbb{C}}, define its \em{Fourier transform} #{\hat{f} \colon \hat{G} \to \mathbb{C}} by}
+
+##{\hat{f}(\gamma) = \mathbb{E}_{x \in G}f(x)\gamma(x) \quad \forall \gamma \in \hat{G}.}

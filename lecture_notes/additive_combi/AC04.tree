@@ -1,0 +1,15 @@
+\title{Characteristic function, balanced function and characteristic measure}
+\taxon{Notation}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given a subset #{A} of a finite group #{G}, write}
+
+\ul{
+\li{#{\mathbf{1}_A} for the \em{characteristic function} (or indicator function) of #{A}: #{\mathbf{1}_A(x) = 1} if #{x \in A}, and #{0} if #{x \notin A};}
+\li{#{f_A} for the \em{balanced function} of #{A}, i.e. #{f_A(x) = \mathbf{1}_A(x) - \alpha}, where #{\alpha = \frac{|A|}{|G|}};}
+\li{#{\mu_A} for the \em{characteristic measure} of #{A}, i.e. #{\mu_A(x) = \alpha^{-1}\mathbf{1}_A(x)}.}
+}
+
+\p{Note #{\mathbb{E}_{x \in G}f_A(x) = 0} and #{\mathbb{E}_{x \in G}\mu_A(x) = 1}.}

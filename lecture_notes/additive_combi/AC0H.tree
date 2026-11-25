@@ -1,0 +1,34 @@
+\title{Bogolyubov’s Lemma}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{A \subseteq \mathbb{F}_p^n} of density #{\alpha > 0}, there exists a subspace #{V \leq \mathbb{F}_p^n} of codimension at most #{2\alpha^{-2}} such that}
+
+##{A + A - A - A \supseteq V.}
+
+\proof{
+\p{Observe that}
+
+##{A + A - A - A = \operatorname{supp}(\underbrace{\mathbf{1}_A * \mathbf{1}_A * \mathbf{1}_{-A} * \mathbf{1}_{-A}}_{g}),}
+
+\p{so we wish to find #{V \leq \mathbb{F}_p^n} such that #{g(x) > 0} for all #{x \in V}.}
+
+\p{Let #{K = \operatorname{Spec}_\rho(\mathbf{1}_A)} with #{\rho} to be determined, and let #{V \coloneqq \langle K \rangle^\perp}. By \ref{AC0C}, #{|K| \leq \rho^{-2}\alpha^{-1}}, and hence #{\operatorname{codim}(V) \leq |K| \leq \rho^{-2}\alpha^{-1}}. By the inversion formula and \ref{AC0F},}
+
+##{\begin{aligned}
+g(x) &= \sum_{t \in \mathbb{F}_p^n} \widehat{\mathbf{1}_A * \mathbf{1}_A * \mathbf{1}_{-A} * \mathbf{1}_{-A}}(t)\omega^{-x \cdot t} = \sum_{t \in \mathbb{F}_p^n} |\widehat{\mathbf{1}_A}(t)|^4\omega^{-x \cdot t} \\
+&= \alpha^4 + \underbrace{\sum_{t \in K \setminus \lbrace 0\rbrace } |\widehat{\mathbf{1}_A}(t)|^4\omega^{-x \cdot t}}_{\textcolor{blue}{(1)}} + \underbrace{\sum_{t \notin K} |\widehat{\mathbf{1}_A}(t)|^4\omega^{-x \cdot t}}_{\textcolor{blue}{(2)}}.
+\end{aligned}}
+
+\p{#{\textcolor{blue}{(1)}} #{\geq 0}, since #{x \cdot t = 0} for #{t \in K}, #{x \in V}. And}
+
+##{\begin{aligned}
+|\textcolor{blue}{(2)}| &\leq \sum_{t \notin K} |\widehat{\mathbf{1}_A}(t)|^4 \leq \sup_{t \notin K} |\widehat{\mathbf{1}_A}(t)|^2\sum_t |\widehat{\mathbf{1}_A}(t)|^2 \\
+&\leq (\rho\alpha)^2\Vert \mathbf{1}_A\Vert _2^2 \qquad (\text{by definition of } K \text{ and Parseval}) \\
+&= \rho^2\alpha^3.
+\end{aligned}}
+
+\p{So pick #{\rho} such that #{\rho^2\alpha^3 < \alpha^4}, e.g. #{\rho = \sqrt{\alpha /2}}. Then #{g(x) > 0} for all #{x \in V}, and #{\operatorname{codim}(V) \leq \rho^{-2}\alpha^{-1} = 2\alpha^{-2}}.}
+}

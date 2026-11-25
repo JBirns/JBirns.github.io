@@ -1,0 +1,13 @@
+\title{Integrating}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{f}, #{M}, #{b} are as in Step 3 and #{\mathbb{E}_h|\widehat{\Delta_hf}(Mh + b)|^2 = \Omega_\delta(1)}. Then there exists #{b' \in \mathbb{F}_p^n} such that}
+
+##{\Big| \mathbb{E}_xf(x)\omega^{x^T(M + M^T)x/2 + b'^Tx} \Big| = \Omega_\delta(1).}
+
+\proof{
+\p{#{\to} Example sheet 3.}
+}

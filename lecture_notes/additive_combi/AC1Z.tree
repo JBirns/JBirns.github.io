@@ -1,0 +1,19 @@
+\title{Fourier analysis cannot count 4-APs}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Recall from \ref{AC0K} that}
+
+##{|T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^3| \leq \sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)|.}
+
+\p{But it is impossible to bound}
+
+##{|T_4(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^4| = |\mathbb{E}_{x,d}\mathbf{1}_A(x)\mathbf{1}_A(x + d)\mathbf{1}_A(x + 2d)\mathbf{1}_A(x + 3d) - \alpha^4|}
+
+\p{by #{\sup_{t \neq 0}|\widehat{\mathbf{1}_A}(t)|}. Indeed, consider #{Q = \lbrace x \in \mathbb{F}_p^n : x \cdot x = 0\rbrace }. By Example sheet 1, Question 2(ii), #{\frac{|Q|}{p^n} = \frac{1}{p} + O(p^{-n/2})} and #{\sup_{t \neq 0}|\widehat{\mathbf{1}_Q}(t)| = O(p^{-n/2})}. But given a 3-AP #{x, x + d, x + 2d} in #{Q}, we automatically have that #{x + 3d \in Q}: for all #{x, d \in \mathbb{F}_p^n},}
+
+##{x \cdot x - 3(x + d) \cdot (x + d) + 3(x + 2d) \cdot (x + 2d) - (x + 3d) \cdot (x + 3d) = 0.}
+
+\p{So #{T_4(\mathbf{1}_Q, \mathbf{1}_Q, \mathbf{1}_Q, \mathbf{1}_Q) = T_3(\mathbf{1}_Q, \mathbf{1}_Q, \mathbf{1}_Q) = \alpha^3 + o(1)} by \ref{AC0K}.}

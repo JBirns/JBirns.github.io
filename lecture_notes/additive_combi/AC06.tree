@@ -1,0 +1,13 @@
+\title{Fourier coefficients of a random set}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{R \subseteq \mathbb{F}_p^n} be such that each #{x \in \mathbb{F}_p^n} lies in #{R} independently with probability #{\frac{1}{2}}. Then with high probability (w.h.p., i.e. with probability #{\to 1} as #{n \to \infty}),}
+
+##{\sup_{t \neq 0} |\widehat{\mathbf{1}_R}(t)| = O\bigg( \sqrt{\frac{\log(p^n)}{p^n}} \bigg).}
+
+\p{#{\to} Example sheet 1, using a Chernoff-type bound: given #{\mathbb{C}}-valued independent random variables #{X_1, X_2, \ldots, X_n} with mean #{0}, for all #{\theta \geq 0},}
+
+##{\mathbb{P}\bigg[ \Big| \sum X_i \Big| \geq \theta\sqrt{\sum_i \Vert X_i\Vert _{L^\infty(\mathbb{P})}^2} \bigg] \leq 4\exp(-\theta^2/4).}

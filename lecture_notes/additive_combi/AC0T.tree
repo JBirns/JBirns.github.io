@@ -1,0 +1,34 @@
+\title{Density increment on a progression}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq [N]} be of density #{\alpha > 0}. Let #{p} be a prime in #{[N/3, 2N/3]} (which exists by Bertrand’s postulate), and write #{A' = A \cap [p] \subseteq \mathbb{Z}_p}. Suppose there exists #{t \neq 0} such that #{|\widehat{\mathbf{1}_{A'}}(t)| \geq \alpha^2/10}. Then there exists a progression #{P} of length at least #{\alpha^2\sqrt{N}/500} such that}
+
+##{|A \cap P| \geq \alpha(1 + \alpha /80)|P|.}
+
+\proof{
+\p{Let #{\varepsilon = \frac{\alpha^2}{40\pi}}, and use \ref{AC0S} to partition #{[p]} into progressions #{P_i} of length at least}
+
+##{\frac{\varepsilon\sqrt{p}}{2} \geq \frac{\alpha^2}{40\pi}\frac{\sqrt{N/3}}{2} \geq \frac{\alpha^2\sqrt{N}}{500},}
+
+\p{and #{\operatorname{diam}\phi(P_i) \leq \varepsilon p}. Fix one #{x_i} from each #{P_i}. Writing #{f_{A'} = \mathbf{1}_{A'} - \alpha},}
+
+##{\begin{aligned}
+\frac{\alpha^2}{10} \leq |\widehat{f_{A'}}(t)| &= \frac{1}{p}\Big| \sum_i \sum_{x \in P_i} f_{A'}(x)\omega^{xt} \Big| \\
+&= \frac{1}{p}\Big| \sum_i \sum_{x \in P_i} f_{A'}(x)\omega^{x_it} + \sum_i \sum_{x \in P_i} f_{A'}(x)\big( \omega^{xt} - \omega^{x_it} \big) \Big| \\
+&\leq \frac{1}{p}\sum_i \Big| \sum_{x \in P_i} f_{A'}(x) \Big| + \frac{1}{p}\sum_i \sum_{x \in P_i} |f_{A'}(x)|\,2\pi\varepsilon \\
+&\leq \frac{1}{p}\sum_i \Big| \sum_{x \in P_i} f_{A'}(x) \Big| + \frac{\alpha^2}{20},
+\end{aligned}}
+
+\p{since #{|t(x_i - x)| \leq \varepsilon p} for all #{x \in P_i} \em{(like a radian, since it is a distance on the circle)}. So}
+
+##{\frac{1}{p}\sum_i \Big| \sum_{x \in P_i} f_{A'}(x) \Big| \geq \frac{\alpha^2}{20}.}
+
+\p{Since #{f_{A'}} has mean #{0},}
+
+##{\sum_i \Big( \Big| \sum_{x \in P_i} f_{A'}(x) \Big| + \sum_{x \in P_i} f_{A'}(x) \Big) \geq \frac{\alpha^2p}{20}.}
+
+\p{So there exists #{i} such that #{\big| \sum_{x \in P_i} f_{A'}(x) \big| + \sum_{x \in P_i} f_{A'}(x) \geq \frac{\alpha^2|P_i|}{40}}, and so #{\sum_{x \in P_i} f_{A'}(x) \geq \frac{\alpha^2|P_i|}{80}}.}
+}

@@ -1,0 +1,33 @@
+\title{Schoen–Shkredov}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p \neq 5}, and let #{A \subseteq \mathbb{F}_p^n}. Suppose that #{A} contains no non-trivial solutions to the equation}
+
+##{x_1 + x_2 + \cdots + x_5 = 5y,}
+
+\p{i.e. no solution #{(y, x_1, \ldots, x_5) \in A^6} such that #{y \neq x_i} for some #{i \in [5]}. Then}
+
+##{|A| = \exp(-\Omega(n^{1/5}))|\mathbb{F}_p^n|.}
+
+\proof{
+\p{Let #{\alpha = |A|/|\mathbb{F}_p^n|} and partition #{A} into #{A_1 \sqcup A_2}, where #{|A_1| = \lfloor \alpha p^n/2 \rfloor} and #{|A_2| = \lceil \alpha p^n/2 \rceil}. By averaging, there exists #{z \in \mathbb{F}_p^n} such that #{|A_1 \cap (z - A_2)| \geq \frac{\alpha^2p^n}{4}}. Let #{A' = A_1 \cap (z - A_2)}. By \ref{AC1R}, there exists a subspace #{V \leq \mathbb{F}_p^n} of codimension #{O(\log^4\alpha^{-1})} such that #{A' + A' - A' - A' \supseteq V}, and hence}
+
+##{2z + V \subseteq 2z + A' + A' - A' - A' \subseteq A_1 + A_1 + A_2 + A_2.}
+
+\p{Consequently, #{(5 \cdot A - A) \cap (2z + V) = \emptyset}, for if there were #{x, y \in A} such that #{5y - x \in 2z + V}, then we would be able to write #{5y - x} as #{a_1 + a_1' + a_2 + a_2'} with #{a_1, a_1' \in A_1}, #{a_2, a_2' \in A_2}, which, since #{A_1, A_2} are disjoint, would yield a non-trivial solution.}
+
+\p{It follows that for all #{w \in \mathbb{F}_p^n}, at most one of #{A \cap (w + V)} and #{5 \cdot A \cap (w + 2z + V)} can be non-empty. Therefore, letting #{w} range over a set of coset representatives for #{V} (which we index by #{V^\perp}),}
+
+##{2|A| = \sum_{w \in V^\perp} \big( |A \cap (w + V)| + |5 \cdot A \cap (w + 2z + V)| \big) \leq |V^\perp|\sup_{w \in V^\perp}|A \cap (w + V)|,}
+
+\p{so there exists #{w \in V^\perp} such that}
+
+##{|A \cap (w + V)| \geq \frac{2|A|}{|V^\perp|} = \frac{2\alpha|\mathbb{F}_p^n|}{|\mathbb{F}_p^n|/|V|} = 2\alpha|V|.}
+
+\p{The set #{A \cap (w + V) \subseteq w + V} has density #{2\alpha}, or equivalently #{(A - w) \cap V \subseteq V} has density at least #{2\alpha}, and contains no non-trivial solutions to #{x_1 + x_2 + x_3 + x_4 + x_5 = 5y}.}
+
+\p{After #{t} iterations, we obtain a subspace #{W} of codimension #{O(t\log^4\alpha^{-1})} and #{w \in \mathbb{F}_p^n} such that #{|A \cap (w + W)| \geq 2^t\alpha|W|}. Arguing as in the proof of Meshulam’s Theorem (\ref{AC0M}) yields the result.}
+}

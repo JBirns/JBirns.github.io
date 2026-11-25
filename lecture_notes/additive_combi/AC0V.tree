@@ -1,0 +1,11 @@
+\title{Bohr set}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\Gamma \subseteq \hat{G}} and #{\rho > 0}. By the \em{Bohr set} #{B(\Gamma, \rho)} we mean}
+
+##{B(\Gamma, \rho) = \lbrace x \in G : |\gamma(x) - 1| \leq \rho\; \forall \gamma \in \Gamma\rbrace .}
+
+\p{We call #{|\Gamma|} the \em{rank} and #{\rho} the \em{radius} of the Bohr set.}

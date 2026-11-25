@@ -1,0 +1,11 @@
+\title{Counting operator #{T_3} and dilates}
+\taxon{Notation}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f, g, h \colon \mathbb{F}_p^n \to \mathbb{C}}, write}
+
+##{T_3(f, g, h) \coloneqq \mathbb{E}_{x,d}f(x)g(x + d)h(x + 2d).}
+
+\p{Given #{A \subseteq \mathbb{F}_p^n}, write #{2 \cdot A = \lbrace 2a : a \in A\rbrace }; distinguish this from #{2A = A + A = \lbrace a + a' : a, a' \in A\rbrace }.}

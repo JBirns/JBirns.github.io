@@ -1,0 +1,11 @@
+\title{Fourier coefficients of an interval}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime, let #{L \leq p - 1} be even, and let #{J = [-L/2, L/2] \subseteq \mathbb{Z}_p}. Then for all #{t \neq 0},}
+
+##{|\widehat{\mathbf{1}_J}(t)| \leq \min\Big\lbrace  \frac{L + 1}{p}, \frac{1}{2|t|} \Big\rbrace .}
+
+\p{#{\to} Example sheet 1.}

@@ -1,0 +1,7 @@
+\title{Sets with doubling less than #{3/2}}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{A \subseteq \mathbb{F}_p^n} is such that #{|A + A| < \frac{3}{2}|A|}. Then there exists #{V \leq \mathbb{F}_p^n} such that #{A} is contained in a coset of #{V} and #{|V| < \frac{3}{2}|A|}. #{\to} Example sheet 2.}

@@ -1,0 +1,12 @@
+\title{Weak linearity}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{F}_p^n \to \mathbb{C}} satisfy #{\Vert f\Vert _\infty \leq 1} and #{\Vert f\Vert _{U^3} \geq \delta} for some #{\delta > 0}. Suppose that #{|\mathbb{F}_p^n| = \Omega_\delta(1)}. Then there exist #{S \subseteq \mathbb{F}_p^n} with #{|S|/|\mathbb{F}_p^n| = \Omega_\delta(1)} and a function #{\phi \colon S \to \widehat{\mathbb{F}_p^n}} such that}
+
+\ul{
+\li{\strong{(i)} #{|\widehat{\Delta_hf}(\phi(h))| = \Omega_\delta(1)} for all #{h \in S};}
+\li{\strong{(ii)} there are at least #{\Omega_\delta(|\mathbb{F}_p^n|^3)} additive quadruples #{(s_1, s_2, s_3, s_4) \in S^4} (i.e. #{s_1 + s_2 = s_3 + s_4}) such that #{\phi(s_1) + \phi(s_2) = \phi(s_3) + \phi(s_4)}.}
+}

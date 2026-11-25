@@ -1,0 +1,7 @@
+\title{The #{\log p} term in Meshulam's bound}
+\taxon{Remark}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{\em{Note that the #{\log p} term is constant, so we could write, e.g. if #{p = 3} and #{A} contains no non-trivial 3-APs, #{|A| = O\big( \frac{3^n}{n} \big)}.}}

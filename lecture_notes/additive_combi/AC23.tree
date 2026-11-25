@@ -1,0 +1,15 @@
+\title{Gowers #{U^3}-norm}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f \colon G \to \mathbb{C}} with #{G} finite abelian, define its \em{#{U^3}-norm} by}
+
+##{\begin{aligned}
+\Vert f\Vert _{U^3(G)}^8 &= \mathbb{E}_{x,a,b,c \in G}f(x)\overline{f(x + a)f(x + b)f(x + c)} \\
+&\qquad \cdot f(x + a + b)f(x + a + c)f(x + b + c)\overline{f(x + a + b + c)} \\
+&= \mathbb{E}_{x,h_1,h_2,h_3}\prod_{\varepsilon \in \lbrace 0,1\rbrace ^3} \mathcal{C}^{|\varepsilon|}f(x + \varepsilon \cdot h),
+\end{aligned}}
+
+\p{where #{\varepsilon \cdot h = \varepsilon_1h_1 + \varepsilon_2h_2 + \varepsilon_3h_3}, #{\mathcal{C}g = \overline{g}}, and #{|\varepsilon| = \#1\text{'s in } \varepsilon}.}

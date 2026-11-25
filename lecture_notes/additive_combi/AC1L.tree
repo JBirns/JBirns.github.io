@@ -1,0 +1,25 @@
+\title{Dual form of Rudin’s inequality}
+\taxon{Corollary}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\Lambda \subseteq \widehat{\mathbb{F}_2^n}} be linearly independent and let #{p \in \lparen 1, 2\rbrack }. Then for all #{f \in L^p(\mathbb{F}_2^n)},}
+
+##{\Vert \hat{f}\Vert _{\ell^2(\Lambda)} = O\bigg( \sqrt{\frac{p}{p - 1}}\,\Vert f\Vert _{L^p(\mathbb{F}_2^n)} \bigg).}
+
+\proof{
+\p{Let #{f \in L^p(\mathbb{F}_2^n)} and write #{g = \sum_{\gamma \in \Lambda} \hat{f}(\gamma)\gamma}. Then}
+
+##{\begin{aligned}
+\Vert \hat{f}\Vert _{\ell^2(\Lambda)}^2 = \sum_{\gamma \in \Lambda} |\hat{f}(\gamma)|^2 &= \sum_{\gamma \in \Lambda} \hat{f}(\gamma)\overline{\hat{g}(\gamma)} \\
+&= \langle \hat{f}, \hat{g} \rangle_{\ell^2(\widehat{\mathbb{F}_2^n})} \qquad (\text{since the coefficients of } g \text{ outside } \Lambda \text{ are } 0) \\
+&= \langle f, g \rangle_{L^2(\mathbb{F}_2^n)} \qquad \text{(by Plancherel)}.
+\end{aligned}}
+
+\p{But by Hölder, #{\langle f, g \rangle_{L^2(\mathbb{F}_2^n)} \leq \Vert f\Vert _{L^p(\mathbb{F}_2^n)}\Vert g\Vert _{L^{p'}(\mathbb{F}_2^n)}}, where #{\frac{1}{p'} + \frac{1}{p} = 1}. By Rudin with #{p'},}
+
+##{\Vert g\Vert _{L^{p'}(\mathbb{F}_2^n)} = O\big( \sqrt{p'}\,\Vert \hat{g}\Vert _{\ell^2(\Lambda)} \big) = O\bigg( \sqrt{\frac{p}{p - 1}}\,\Vert \hat{f}\Vert _{\ell^2(\Lambda)} \bigg).}
+
+\p{So #{\Vert \hat{f}\Vert _{\ell^2(\Lambda)}^2 = \Vert f\Vert _{L^p(\mathbb{F}_2^n)}\,O\Big( \sqrt{\frac{p}{p-1}}\,\Vert \hat{f}\Vert _{\ell^2(\Lambda)} \Big)}, i.e. #{\Vert \hat{f}\Vert _{\ell^2(\Lambda)} = O\Big( \sqrt{\frac{p}{p-1}}\,\Vert f\Vert _{L^p(\mathbb{F}_2^n)} \Big)}.}
+}

@@ -1,0 +1,7 @@
+\title{Interpreting the Schoen–Shkredov bound}
+\taxon{Remark}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{\em{Here #{n} is #{\log|\mathbb{F}_p^n|} up to a constant, and #{\Omega} is the opposite of #{O} (i.e. bounded below up to a constant).}}

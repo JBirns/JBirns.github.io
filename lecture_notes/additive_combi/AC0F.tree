@@ -1,0 +1,14 @@
+\title{Fourier transform of a convolution}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f, g \colon \mathbb{F}_p^n \to \mathbb{C}}, #{\widehat{f * g}(t) = \hat{f}(t)\hat{g}(t)} for all #{t \in \mathbb{F}_p^n}.}
+
+\proof{
+##{\begin{aligned}
+\widehat{f * g}(t) &= \mathbb{E}_{x \in \mathbb{F}_p^n}\big( \mathbb{E}_{y \in \mathbb{F}_p^n}f(y)g(x - y) \big)\omega^{x \cdot t} \\
+&= \mathbb{E}_yf(y)\,\mathbb{E}_ug(u)\omega^{(u + y) \cdot t} = \hat{f}(t)\hat{g}(t).
+\end{aligned}}
+}

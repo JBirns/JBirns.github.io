@@ -1,0 +1,26 @@
+\title{Counting 3-APs in Fourier-uniform sets}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p \geq 3}, and let #{A \subseteq \mathbb{F}_p^n} of density #{\alpha > 0} be such that #{\sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)| = o(1)}. Then #{A} contains #{(\alpha^3 + o(1))\cdot(p^n)^2} three-term arithmetic progressions (3-APs).}
+
+\proof{
+\p{The number of 3-APs in #{A} is #{(p^n)^2} times}
+
+##{\begin{aligned}
+T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) &= \mathbb{E}_{x,d}\mathbf{1}_A(x)\mathbf{1}_A(\underbrace{x + d}_{= y})\mathbf{1}_A(x + 2d) = \mathbb{E}_{x,y}\mathbf{1}_A(x)\mathbf{1}_A(y)\mathbf{1}_A(2y - x) \\
+&= \mathbb{E}_y\mathbf{1}_A(y)\big( \mathbf{1}_A * \mathbf{1}_A(\underbrace{2y}_{= z}) \big) = \langle \mathbf{1}_{2 \cdot A}, \mathbf{1}_A * \mathbf{1}_A \rangle \\
+&= \langle \widehat{\mathbf{1}_{2 \cdot A}}, \widehat{\mathbf{1}_A * \mathbf{1}_A} \rangle \qquad \text{(by Plancherel)} \\
+&= \langle \widehat{\mathbf{1}_{2 \cdot A}}, \widehat{\mathbf{1}_A}^2 \rangle = \alpha^3 + \sum_{t \neq 0} \widehat{\mathbf{1}_A}(t)^2\overline{\widehat{\mathbf{1}_{2 \cdot A}}(t)}.
+\end{aligned}}
+
+\p{The last sum is, in absolute value,}
+
+##{\begin{aligned}
+&\leq \sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)|\sum_{t \neq 0} |\widehat{\mathbf{1}_A}(t)\overline{\widehat{\mathbf{1}_{2 \cdot A}}(t)}| \\
+&\leq \sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)|\Big( \sum_t |\widehat{\mathbf{1}_A}(t)|^2 \Big)^{1/2}\Big( \sum_t |\widehat{\mathbf{1}_{2 \cdot A}}(t)|^2 \Big)^{1/2} \qquad \text{(by Cauchy--Schwarz)} \\
+&\leq \sup_{t \neq 0} |\widehat{\mathbf{1}_A}(t)| \cdot \alpha^{1/2} \cdot \alpha^{1/2} \qquad \text{(by Parseval)}.
+\end{aligned}}
+}

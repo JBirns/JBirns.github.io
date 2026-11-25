@@ -1,0 +1,17 @@
+\title{Bogolyubov’s Lemma, again}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{A \subseteq \mathbb{Z}_p} of density #{\alpha > 0}, there exists #{\Gamma \subseteq \widehat{\mathbb{Z}_p}} of size at most #{2\alpha^{-2}} such that #{B(\Gamma, 1/2) \subseteq A + A - A - A}.}
+
+\proof{
+\p{Recall #{\mathbf{1}_A * \mathbf{1}_A * \mathbf{1}_{-A} * \mathbf{1}_{-A}(x) = \sum_{t \in \widehat{\mathbb{Z}_p}} |\widehat{\mathbf{1}_A}(t)|^4\omega^{-xt}}. Let #{\Gamma = \operatorname{Spec}_{\sqrt{\alpha /2}}(\mathbf{1}_A)}, and note that for all #{x \in B(\Gamma, 1/2)} and #{t \in \Gamma}, #{\cos(2\pi xt/p) > 0}. Hence}
+
+##{\begin{aligned}
+\operatorname{Re}\Big( \sum_{t \in \widehat{\mathbb{Z}_p}} |\widehat{\mathbf{1}_A}(t)|^4\omega^{-xt} \Big) &= \underbrace{\sum_{t \in \Gamma} |\widehat{\mathbf{1}_A}(t)|^4\cos(2\pi xt/p)}_{> \alpha^4  (\text{the } t = 0 \text{ term is } \alpha^4)} + \underbrace{\sum_{t \notin \Gamma} |\widehat{\mathbf{1}_A}(t)|^4\cos(2\pi xt/p)}_{\geq -\sup_{t \notin \Gamma}|\widehat{\mathbf{1}_A}(t)|^2 \cdot \sum_t |\widehat{\mathbf{1}_A}(t)|^2},
+\end{aligned}}
+
+\p{and #{\sup_{t \notin \Gamma}|\widehat{\mathbf{1}_A}(t)|^2 \cdot \sum_t |\widehat{\mathbf{1}_A}(t)|^2 \leq \big( \sqrt{\alpha /2} \cdot \alpha \big)^2 \cdot \alpha = \alpha^4/2}. So the real part is positive, and #{x \in A + A - A - A}.}
+}

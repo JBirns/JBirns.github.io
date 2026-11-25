@@ -1,0 +1,15 @@
+\title{Special case of Chang’s Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_2^n} be a set of density #{\alpha > 0}. Then for all #{\rho > 0} there exists a subspace #{H \leq \mathbb{F}_2^n} of dimension at most #{O(\rho^{-2}\log\alpha^{-1})} such that #{H \supseteq \operatorname{Spec}_\rho(\mathbf{1}_A)}.}
+
+\proof{
+\p{Let #{\Lambda} be a maximal linearly independent subset of #{\operatorname{Spec}_\rho(\mathbf{1}_A)} and let #{H = \langle \operatorname{Spec}_\rho(\mathbf{1}_A) \rangle}. Then #{\dim(H) = |\Lambda|}. By \ref{AC1L}, for all #{p \in \lparen 1, 2\rbrack },}
+
+##{(\rho\alpha)^2|\Lambda| \leq \sum_{\gamma \in \Lambda} |\widehat{\mathbf{1}_A}(\gamma)|^2 = \Vert \widehat{\mathbf{1}_A}\Vert _{\ell^2(\Lambda)}^2 = O\Big( \frac{p}{p - 1}\underbrace{\Vert \mathbf{1}_A\Vert _{L^p(\mathbb{F}_2^n)}^2}_{= (\mathbb{E}_y|\mathbf{1}_A(y)|^p)^{2/p} = \alpha^{2/p}} \Big).}
+
+\p{So #{|\Lambda| \leq \rho^{-2}\alpha^{-2}O\big( \frac{p}{p-1}\alpha^{2/p} \big)}. Choose #{p = 1 + (\log(\alpha^{-1}))^{-1}} (we would like it to be #{1}, but cannot, since #{p \in \lparen 1, 2\rbrack }); a calculation then gives #{|\Lambda| = O(\rho^{-2}\log\alpha^{-1})}.}
+}

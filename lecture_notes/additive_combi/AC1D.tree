@@ -1,0 +1,21 @@
+\title{Lower bound on additive energy}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be abelian, and let #{A, B \subseteq G} be finite. Then #{E(A, B) \geq \frac{\sqrt{|A||B|}}{|A + B|}}.}
+
+\proof{
+\p{Note that}
+
+##{|A|^{3/2}|B|^{3/2}E(A, B) = \#\lbrace \text{additive quadruples}\rbrace  = \sum_{x \in G} r_{A+B}(x)^2,}
+
+\p{where #{r_{A+B}(x) = \#\lbrace \text{ways of writing } x = a + b \text{ with } a \in A,\; b \in B\rbrace } (known as the \em{representation function}). Observe #{\sum_{x \in G} r_{A+B}(x) = |A||B|}, so}
+
+##{\begin{aligned}
+|A|^{3/2}|B|^{3/2}E(A, B) &= \sum_{x \in G} \big( r_{A+B}(x) \cdot \mathbf{1}_{A+B}(x) \big)^2 \qquad \textcolor{blue}{\text{(makes no difference)}} \\
+&\geq \frac{\big( \sum_{x \in G} r_{A+B}(x) \big)^2}{\sum_{x \in G} \mathbf{1}_{A+B}(x)^2} \qquad \text{(by Cauchy--Schwarz)} \\
+&= \frac{(|A||B|)^2}{|A + B|}.
+\end{aligned}}
+}

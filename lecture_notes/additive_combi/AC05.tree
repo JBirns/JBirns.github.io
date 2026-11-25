@@ -1,0 +1,11 @@
+\title{Fourier transform of a subspace}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V \leq \mathbb{F}_p^n}. Then}
+
+##{\widehat{\mathbf{1}_V}(t) = \mathbb{E}_{x \in \mathbb{F}_p^n}\mathbf{1}_V(x)\omega^{x \cdot t} = \frac{|V|}{p^n}\mathbf{1}_{\lbrace x \cdot t = 0\; \forall x \in V\rbrace } = \frac{|V|}{p^n}\mathbf{1}_{V^\perp}(t),}
+
+\p{so #{\widehat{\mu_V}(t) = \mathbf{1}_{V^\perp}(t)}.}

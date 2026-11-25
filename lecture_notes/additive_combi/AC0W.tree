@@ -1,0 +1,15 @@
+\title{Bohr sets in #{\mathbb{F}_p^n}}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{When #{G = \mathbb{F}_p^n}, #{B(\Gamma, \rho) = \langle \Gamma \rangle^\perp} for all #{\rho < 1} (for #{p = 3}, say: the non-trivial cube roots of unity are at distance #{\sqrt{3}} from #{1}).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw (0,0) circle (1);
+\fill (0:1) circle (2pt) node[right] {$1$};
+\fill (120:1) circle (2pt);
+\fill (240:1) circle (2pt);
+\draw[dotted] (0:1) circle (0.6);
+\end{tikzpicture}}

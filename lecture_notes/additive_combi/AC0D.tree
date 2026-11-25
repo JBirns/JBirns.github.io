@@ -1,0 +1,9 @@
+\title{Convolution}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f, g \colon \mathbb{F}_p^n \to \mathbb{C}}, define their \em{convolution} #{f * g \colon \mathbb{F}_p^n \to \mathbb{C}} by}
+
+##{f * g(x) = \mathbb{E}_{y \in \mathbb{F}_p^n}f(y)g(x - y) \quad \forall x \in \mathbb{F}_p^n.}

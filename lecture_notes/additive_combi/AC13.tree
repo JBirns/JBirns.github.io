@@ -1,0 +1,11 @@
+\title{Ruzsa distance}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given finite sets #{A, B \subseteq G}, define the \em{Ruzsa distance} #{d(A, B)} between #{A} and #{B} by}
+
+##{d(A, B) \coloneqq \log\bigg( \frac{|A - B|}{\sqrt{|A||B|}} \bigg).}
+
+\p{#{d(A, B)} is clearly non-negative and symmetric.}

@@ -1,0 +1,7 @@
+\title{Sets with no doubling}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{V \leq \mathbb{F}_p^n} be a subspace. Then #{V + V = V}, so #{|V + V| = |V|}. In fact, if #{A \subseteq \mathbb{F}_p^n} is such that #{|A + A| = |A|}, then #{A} must be a coset of a subspace.}

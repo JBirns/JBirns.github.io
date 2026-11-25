@@ -1,0 +1,7 @@
+\title{A set whose sumset contains no large coset}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The set #{A = \lbrace x \in \mathbb{F}_2^n : |x| \geq \frac{n}{2} + \frac{\sqrt{n}}{2}\rbrace } has density at least #{\frac{1}{4}}, and there is no coset #{C} of any subspace of #{\mathbb{F}_2^n} of codimension #{\sqrt{n}} such that #{C \subseteq A + A}. #{\to} Example sheet 1.}

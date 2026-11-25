@@ -1,0 +1,105 @@
+\title{Further Topics}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{In #{\mathbb{F}_p^n} we can do much better, even for 3-APs.}
+
+\transclude{AC1V}
+
+\transclude{AC1W}
+
+\transclude{AC1X}
+
+\transclude{AC1Y}
+
+\p{We will deduce \ref{AC1V} on Example sheet 3.}
+
+\p{We do \em{not} know of a comparable bound for 4-APs. Fourier-analytic techniques also fail for this problem.}
+
+\transclude{AC1Z}
+
+\transclude{AC20}
+
+\p{Example sheet 1, Question 3(i) showed that #{\Vert f\Vert _{U^2(G)} = \Vert \hat{f}\Vert _{\ell^4(\hat{G})}}, so this is indeed a norm. Example sheet 1, Question 3(ii) asserted the following.}
+
+\transclude{AC21}
+
+\p{Note that}
+
+##{\sup_{\gamma \in \hat{G}} |\hat{f}(\gamma)|^4 \leq \sum_{\gamma \in \hat{G}} |\hat{f}(\gamma)|^4 \leq \sup_{\gamma \in \hat{G}} |\hat{f}(\gamma)|^2\sum_{\gamma \in \hat{G}} |\hat{f}(\gamma)|^2,}
+
+\p{and thus, by Parseval,}
+
+##{\Vert \hat{f}\Vert _{\ell^\infty(\hat{G})} \leq \Vert \hat{f}\Vert _{\ell^4(\hat{G})} = \Vert f\Vert _{U^2(G)} \leq \Vert \hat{f}\Vert _{\ell^\infty(\hat{G})}^{1/2} \cdot \Vert f\Vert _{L^2(G)}^{1/2}.}
+
+\p{Moreover, if #{f = f_A = \mathbf{1}_A - \alpha}, then}
+
+##{T_3(f, f, f) = T_3(\mathbf{1}_A - \alpha, \mathbf{1}_A - \alpha, \mathbf{1}_A - \alpha) = T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^3,}
+
+\p{since the remaining terms cancel: there are #{3} terms of the form #{(-\alpha)\mathbb{E}_{x,d}\mathbf{1}_A(x + d)\mathbf{1}_A(x + 2d) = -\alpha^3}, and #{3} terms of the form #{(-\alpha)^2\mathbb{E}_{x,d}\mathbf{1}_A(x + d) = +\alpha^3}.}
+
+\p{We could therefore reformulate the first step in the proof of Meshulam’s Theorem as follows: if #{p^n \geq 2\alpha^{-2}}, then}
+
+##{\frac{\alpha^3}{2} \leq |T_3(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^3| \leq \Vert f_A\Vert _{U^2(G)}}
+
+\p{by \ref{AC21}. It remains to show that if #{\Vert f_A\Vert _{U^2}} is not too small, then there exists a subspace #{V \leq \mathbb{F}_p^n} of bounded codimension on which #{A} has increased density.}
+
+\transclude{AC22}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=1.1]
+\coordinate (x) at (0,0);
+\coordinate (xa) at (2.5,0);
+\coordinate (xb) at (1,1);
+\coordinate (xab) at (3.5,1);
+\coordinate (xc) at (0,2);
+\coordinate (xac) at (2.5,2);
+\coordinate (xbc) at (1,3);
+\coordinate (xabc) at (3.5,3);
+\draw (x) -- (xa) -- (xab) -- (xb) -- cycle;
+\draw (xc) -- (xac) -- (xabc) -- (xbc) -- cycle;
+\draw (x) -- (xc); \draw (xa) -- (xac); \draw (xb) -- (xbc); \draw (xab) -- (xabc);
+\filldraw[fill=white] (x) circle (2pt);
+\filldraw[fill=white] (xa) circle (2pt);
+\filldraw[fill=white] (xb) circle (2pt);
+\filldraw[fill=white] (xab) circle (2pt);
+\filldraw[fill=white] (xc) circle (2pt);
+\filldraw[fill=white] (xac) circle (2pt);
+\filldraw[fill=white] (xbc) circle (2pt);
+\filldraw[fill=white] (xabc) circle (2pt);
+\node[below left] at (x) {$x$};
+\node[below right] at (xa) {$x + a$};
+\node[above right] at (xb) {$x + b$};
+\node[right] at (xab) {$x + a + b$};
+\node[left] at (xc) {$x + c$};
+\end{tikzpicture}}
+
+\transclude{AC23}
+
+\p{It is easy to verify that #{\Vert f\Vert _{U^3(G)}^8 = \mathbb{E}_h\Vert \Delta_hf\Vert _{U^2(G)}^4}, where #{\Delta_hf(x) = f(x)\overline{f(x + h)}}.}
+
+\transclude{AC24}
+
+\transclude{AC25}
+
+\p{Setting #{f_\varepsilon = f} for #{\varepsilon \in \lbrace 0, 1\rbrace ^2 \times \lbrace 0\rbrace } (a face of the cube) and #{f_\varepsilon \equiv 1} otherwise, the left-hand side is #{\Vert f\Vert _{U^2(G)}^4} \em{(as it is now just counting the quadruples)}, so #{\Vert f\Vert _{U^2(G)} \leq \Vert f\Vert _{U^3(G)}}.}
+
+\transclude{AC26}
+
+\p{One might hope to generalise Meshulam’s Theorem (\ref{AC0M}) as follows.}
+
+\transclude{AC27}
+
+\p{\strong{Idea.} By \ref{AC26} with #{f = f_A = \mathbf{1}_A - \alpha}, #{T_4(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^4 = T_4(f_A, f_A, f_A, f_A)} plus terms in which one to three of the inputs are equal to #{f_A}, each of which is controlled by #{\Vert f_A\Vert _{U^3}}. Hence #{|T_4(\mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A, \mathbf{1}_A) - \alpha^4| \leq 15\Vert f_A\Vert _{U^3}} \em{(the value #{15} is irrelevant; we just need a constant)}. So if #{A} contains no non-trivial 4-APs and #{p^n \geq 2\alpha^{-3}}, then #{\frac{\alpha^4}{2} \leq 15\Vert f_A\Vert _{U^3}} \em{(#{T_4} was shown above to be bounded)}.}
+
+\p{What can we say about functions whose #{U^3}-norm is large?}
+
+\transclude{AC28}
+
+\transclude{AC29}
+
+\transclude{AC2A}
+
+\transclude{AC2B}
+
+\transclude{AC2C}

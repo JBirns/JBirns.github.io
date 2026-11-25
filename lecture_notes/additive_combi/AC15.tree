@@ -1,0 +1,15 @@
+\title{Doubling and difference constants}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given a finite set #{A \subseteq G}, we write}
+
+##{\sigma(A) \coloneqq \frac{|A + A|}{|A|}}
+
+\p{for the \em{doubling constant}, and}
+
+##{\delta(A) \coloneqq \frac{|A - A|}{|A|}}
+
+\p{for the \em{difference constant} of #{A}.}

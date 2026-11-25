@@ -1,0 +1,15 @@
+\title{Ruzsa’s triangle inequality}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{For #{A, B, C \subseteq G} finite, #{d(A, C) \leq d(A, B) + d(B, C)}.}
+
+\proof{
+\p{Observe that #{|B| \cdot |A - C| \leq |A - B| \cdot |B - C|}. Indeed, writing each #{d \in A - C} as #{d = a_d - c_d} for some #{a_d \in A}, #{c_d \in C}, the map}
+
+##{\phi \colon B \times (A - C) \to (A - B) \times (B - C), \quad (b, d) \mapsto (a_d - b, b - c_d)}
+
+\p{is injective. The triangle inequality follows from the definition.}
+}

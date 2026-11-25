@@ -1,0 +1,7 @@
+\title{Large energy without small doubling}
+\taxon{Example}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be your favourite class of abelian groups. Then there exist constants #{\eta, \theta > 0} such that for all sufficiently large #{n}, there exists #{A \subseteq G} with #{|A| = n} satisfying #{E(A, A) \geq \eta} and #{|A + A| \geq \theta|A|^2}. #{\to} Example sheet 2.}

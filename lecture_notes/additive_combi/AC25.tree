@@ -1,0 +1,13 @@
+\title{Gowers–Cauchy–Schwarz Inequality}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f_\varepsilon \colon G \to \mathbb{C}} for #{\varepsilon \in \lbrace 0, 1\rbrace ^3},}
+
+##{|\langle (f_\varepsilon)_{\varepsilon \in \lbrace 0,1\rbrace ^3} \rangle_{U^3(G)}| \leq \prod_{\varepsilon \in \lbrace 0,1\rbrace ^3} \Vert f_\varepsilon\Vert _{U^3(G)}.}
+
+\proof{
+\p{#{\to} Example sheet 3.}
+}

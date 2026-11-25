@@ -1,0 +1,11 @@
+\title{Chang’s Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a finite abelian group and #{A \subseteq G} with density #{\alpha > 0}. If #{\Lambda \subseteq \operatorname{Spec}_\rho(\mathbf{1}_A)} is dissociated, then #{|\Lambda| = O(\rho^{-2}\log\alpha^{-1})}.}
+
+\proof{
+\p{#{\to} Example sheet 2.}
+}

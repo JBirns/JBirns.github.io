@@ -1,0 +1,55 @@
+\title{Plünnecke’s Inequality}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A, B \subseteq G} be finite sets such that #{|A + B| \leq K|A|} for some #{K > 0}. Then for any #{\ell, m \in \mathbb{N}_0},}
+
+##{|\ell B - mB| \leq K^{\ell + m}|A|.}
+
+\proof{
+\p{Without loss of generality assume #{|A + B| = K|A|}. Choose a non-empty subset #{A' \subseteq A} such that the ratio #{\frac{|A' + B|}{|A'|}} is minimised, and call this ratio #{K'}. Then #{|A' + B| = K'|A'|}, #{K' \leq K}, and #{|A'' + B| \geq K'|A''|} for all #{A'' \subseteq A}.}
+
+\p{\strong{Claim.} For any finite set #{C \subseteq G}, #{|A' + B + C| \leq K'|A' + C|}.}
+
+\p{Let’s complete the proof of the theorem assuming the claim. We first show that #{|A' + mB| \leq K'^m|A'|} for all #{m \in \mathbb{N}_0}. The cases #{m = 0} and #{m = 1} are clear. Suppose #{m > 1} and the result holds for #{m - 1}. By the claim with #{C = (m - 1)B}, we get}
+
+##{|A' + mB| = |A' + B + (m - 1)B| \leq K'|A' + (m - 1)B| \leq K'^m|A'|.}
+
+\p{But as in the proof of Ruzsa’s triangle inequality,}
+
+##{|A'||\ell B - mB| \leq |A' + \ell B||A' + mB| \leq K'^\ell|A'| \cdot K'^m|A'|,}
+
+\p{so #{|\ell B - mB| \leq K'^{\ell + m}|A'| \leq K^{\ell + m}|A|}.}
+
+\p{We now prove the claim by induction on #{|C|}. #{|C| = 1} holds by the choice of #{A'}. Suppose the claim is true for #{C}, and consider #{C' = C \cup \lbrace x\rbrace } for some #{x \notin C}. Observe that}
+
+##{A' + B + C' = (A' + B + C) \cup (A' + B + x),}
+
+\p{and in fact}
+
+##{A' + B + C' = (A' + B + C) \cup \big( (A' + B + x) \setminus (D + B + x) \big),}
+
+\p{where #{D = \lbrace a \in A' : a + B + x \subseteq A' + B + C\rbrace }. By definition of #{K'}, #{|D + B| \geq K'|D|}, so}
+
+##{\begin{aligned}
+|A' + B + C'| &\leq |A' + B + C| + |(A' + B + x) \setminus (D + B + x)| \\
+&\leq |A' + B + C| + |A' + B| - |D + B| \\
+&\leq K'|A' + C| + K'|A'| - K'|D| = K'(|A' + C| + |A'| - |D|).
+\end{aligned}}
+
+\p{We now apply the same argument again, writing}
+
+##{A' + C' = (A' + C) \sqcup \big( (A' + x) \setminus (E + x) \big),}
+
+\p{where #{E = \lbrace a \in A' : a + x \in A' + C\rbrace  \subseteq D}. We conclude that}
+
+##{|A' + C'| = |A' + C| + |A'| - |E| \geq |A' + C| + |A'| - |D|.}
+
+\p{Therefore}
+
+##{|A' + B + C'| \leq K'(|A' + C| + |A'| - |D|) \leq K'|A' + C'|,}
+
+\p{which proves the claim.}
+}

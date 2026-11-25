@@ -1,0 +1,11 @@
+\title{Bogolyubov, again, due to Sanders}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_p^n} be a set of density #{\alpha > 0}. Then there exists a subspace #{V \leq \mathbb{F}_p^n} of codimension #{O(\log^4(\alpha^{-1}))} such that #{V \subseteq A + A - A - A}.}
+
+\proof{
+\p{#{\to} Example sheet 3.}
+}

@@ -1,0 +1,7 @@
+\title{Ellenberg–Gijswijt, based on Croot–Lev–Pach}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_3^n} be a set containing no non-trivial 3-APs. Then #{|A| = o(2.756^n)} \em{(note #{2.756 < 3}; the proof for general #{p} is the same as for #{p = 3})}.}

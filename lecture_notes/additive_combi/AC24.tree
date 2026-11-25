@@ -1,0 +1,11 @@
+\title{Gowers inner product}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given functions #{f_\varepsilon \colon G \to \mathbb{C}} for #{\varepsilon \in \lbrace 0, 1\rbrace ^3}, define the \em{Gowers} (or #{U^3}-) \em{inner product} by}
+
+##{\langle (f_\varepsilon)_{\varepsilon \in \lbrace 0,1\rbrace ^3} \rangle_{U^3(G)} = \mathbb{E}_{x,h_1,h_2,h_3 \in G}\prod_{\varepsilon \in \lbrace 0,1\rbrace ^3} \mathcal{C}^{|\varepsilon|}f_\varepsilon(x + \varepsilon \cdot h).}
+
+\p{Observe #{\langle f, \ldots, f \rangle_{U^3(G)} = \Vert f\Vert _{U^3(G)}^8}.}

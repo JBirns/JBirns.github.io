@@ -1,0 +1,23 @@
+\title{#{U^3}-Inverse Theorem}
+\taxon{Theorem}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{F}_p^n \to \mathbb{C}} satisfy #{\Vert f\Vert _\infty \leq 1} and #{\Vert f\Vert _{U^3} \geq \delta} for some #{\delta > 0}. Then there exist a symmetric #{n \times n} matrix #{M} with entries in #{\mathbb{F}_p} and #{b \in \mathbb{F}_p^n} such that}
+
+##{|\mathbb{E}_xf(x)\omega^{x^TMx + b^Tx}| \geq c(\delta),}
+
+\p{where #{c(\delta)} is a polynomial in #{\delta} (depending on #{p}). In other words, #{|\langle f, \phi \rangle| \geq c(\delta)} for #{\phi(x) = \omega^{x^TMx + b^Tx}}, and we say “#{f} correlates with a quadratic phase function”.}
+
+\proof{
+\p{\em{Sketch of the proof.} Suppose #{\Vert f\Vert _{U^3} \geq \delta}.}
+
+\p{\strong{Step 1: “Weak linearity”.} If #{\Vert f\Vert _{U^3}^8 = \mathbb{E}_h\Vert \Delta_hf\Vert _{U^2}^4 \geq \delta^8}, then for at least a #{\delta^8/2} proportion of #{h \in \mathbb{F}_p^n}, #{\Vert \Delta_hf\Vert _{U^2}^4 \geq \delta^8/2}; for each such #{h \in \mathbb{F}_p^n}, there exists #{t_h} such that #{|\widehat{\Delta_hf}(t_h)|^2 \geq \delta^8/2}. Working a tiny bit harder, one can obtain \ref{AC2A}.}
+
+\p{\strong{Step 2: “Strong linearity”.} If #{S}, #{\phi} are as in \ref{AC2A}, then there exists a linear map #{\psi \colon \mathbb{F}_p^n \to \widehat{\mathbb{F}_p^n}} which coincides with #{\phi} for many elements of #{S}; more precisely, \ref{AC2B}.}
+
+\p{\strong{Step 3: “The symmetry argument” (#{p > 2}).} Having obtained #{\psi(x) = Mx + b} for some matrix #{M} and vector #{b} such that #{(h, Mh + b) \in \Gamma''} for all #{h \in S''}, we need to turn #{M} into a symmetric matrix in preparation for Step 4.}
+
+\p{\strong{Step 4: “Integrating” (#{p > 2}).} \ref{AC2C}.}
+}

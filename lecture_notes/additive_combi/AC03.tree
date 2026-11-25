@@ -1,0 +1,9 @@
+\title{Fourier transform}
+\taxon{Definition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f \colon \mathbb{F}_p^n \to \mathbb{C}}, define its \em{Fourier transform} #{\hat{f} \colon \mathbb{F}_p^n \to \mathbb{C}} by}
+
+##{\hat{f}(t) = \mathbb{E}_{x \in \mathbb{F}_p^n}f(x)\omega^{x \cdot t} \quad \forall t \in \mathbb{F}_p^n.}

@@ -1,0 +1,13 @@
+\title{Partitioning into progressions with small image}
+\taxon{Lemma}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{m \in \mathbb{N}}, and let #{\phi \colon [m] \to \mathbb{Z}_p}, #{x \mapsto xt}, for some fixed #{t \neq 0}. Given #{\varepsilon > 0}, there exists a partition of #{[m]} into (arithmetic) progressions #{P_i} of length in #{[\varepsilon\sqrt{m}/2, \varepsilon\sqrt{m}]} such that}
+
+##{\operatorname{diam}(\phi(P_i)) = \max_{x, y \in P_i} |\phi(x) - \phi(y)| \leq \varepsilon p \quad \forall i.}
+
+\proof{
+\p{Let #{u = \lfloor \sqrt{m} \rfloor} and consider #{0, t, 2t, \ldots, ut}. By the pigeonhole principle, we can find #{0 \leq v < w \leq u} such that #{|wt - vt| \leq p/u}. Divide #{[m]} into residue classes mod #{s}, where #{s = w - v} (so #{|st| \leq p/u}). Each has size at least #{m/s \geq m/u}. But each residue class can be divided into progressions of the form #{a, a + s, a + 2s, \ldots, a + ds}, with #{\varepsilon u/2 < d \leq \varepsilon u}. The diameter of the image of each progression under #{\phi} is #{|dst| \leq |\varepsilon ust| \leq \varepsilon p}.}
+}

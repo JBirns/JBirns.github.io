@@ -1,0 +1,25 @@
+\title{The Croot–Lev–Pach bound}
+\taxon{Proposition}
+\date{2024-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subseteq \mathbb{F}_3^n} contain no non-trivial 3-APs. Then #{|A| \leq 3m_{2n/3}}. [Recall: #{m_d = |M_n^d| = \dim(V_n^d)}.]}
+
+\proof{
+\p{Let #{d \in [1, 2n]} be an integer to be chosen later. Let #{W} be the subspace of #{V_n^d} of polynomials that vanish on #{(2 \cdot A)^c}. Clearly,}
+
+##{\dim(W) \geq \dim(V_n^d) - |(2 \cdot A)^c| = m_d - (3^n - |2 \cdot A|).}
+
+\p{We claim that there is #{P \in W} such that #{|\operatorname{supp}(P)| \geq \dim(W)}. Indeed, pick #{P \in W} of maximal support. If #{|\operatorname{supp}(P)| < \dim(W)}, then there would be a non-zero #{Q \in W} vanishing on #{\operatorname{supp}(P)}, in which case #{\operatorname{supp}(P + Q) \supsetneq \operatorname{supp}(P)}, contradicting the choice of #{P}.}
+
+\p{By assumption #{\lbrace a + a' : a \neq a' \in A\rbrace  \cap (2 \cdot A) = \emptyset}, as otherwise we would have a 3-AP. In particular, any polynomial that vanishes on #{(2 \cdot A)^c} also vanishes on #{\lbrace a + a' : a \neq a' \in A\rbrace }. By \ref{AC1X}, therefore,}
+
+##{|\operatorname{supp}(P)| = |\lbrace x \in \mathbb{F}_3^n : P(x) \neq 0\rbrace | = |\lbrace a \in A : P(2a) \neq 0\rbrace | \leq 2m_{d/2}.}
+
+\p{Putting everything together, we have}
+
+##{m_d - (3^n - |A|) \leq \dim(W) \leq |\operatorname{supp}(P)| \leq 2m_{d/2},}
+
+\p{or #{|A| \leq (3^n - m_d) + 2m_{d/2}}. But the monomials in #{M_n \setminus M_n^d} (i.e. those counted by the #{3^n - m_d} term) are in bijection with those of degree less than #{2n - d}, via #{x_1^{\alpha_1} \cdots x_n^{\alpha_n} \mapsto x_1^{2 - \alpha_1} \cdots x_n^{2 - \alpha_n}}, whence #{3^n - m_d \leq m_{2n-d}}. Thus setting #{d = 4n/3} yields #{|A| \leq 3m_{2n/3}}.}
+}
