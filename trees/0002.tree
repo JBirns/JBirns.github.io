@@ -2,7 +2,7 @@
 
 \p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura).}
 
-\p{The main difference with a typical way to organise information is that hierarchy is \em{relative} instead of absolute. For instance, in a set of notes written in #{\LaTeX}, you have the hierarchy}
+\p{The main difference between this site and a typical way to organise information is that the hierarchy is \em{relative} instead of absolute. For instance, in a set of notes written in #{\LaTeX}, you have the hierarchy}
 
 \figure{\tex{\startverb\usepackage{tikz}\usetikzlibrary{arrows.meta}\stopverb}{\startverb
 \begin{tikzpicture}[
