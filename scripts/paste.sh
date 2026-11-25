@@ -719,9 +719,10 @@ def main():
         path = new_tree(title)
         with open(path, encoding="utf-8") as f:
             template = f.read()
-        # Keep the header new.sh wrote (title, date, author, import) and replace its placeholder text.
-        cut = template.find("\\import{macros}")
-        head = template[:cut + len("\\import{macros}")] if cut != -1 else template.split("\n\n")[0]
+        # Keep everything new.sh wrote above its placeholder paragraph (title, date, author,
+        # imports, ...) and replace only the placeholder "\\p{ Write here ... }".
+        m = re.search(r"^\\p\{\s*Write here", template, re.M)
+        head = template[:m.start()] if m else template
         with open(path, "w", encoding="utf-8") as f:
             f.write(head.rstrip("\n") + "\n\n" + result)
         action = "Created"

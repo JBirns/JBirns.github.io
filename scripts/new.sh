@@ -27,25 +27,26 @@ to_base36() {
   printf '%s' "$out"
 }
 
+# Is this address already used, in trees/ (any subfolder) or drafts/?
+taken() {
+  [ -n "$(find trees drafts -name "$1.tree" 2>/dev/null | head -n 1)" ]
+}
+
 if [ "${MODE:-sequential}" = "random" ]; then
   # A random unused address among the 36^4 = 1,679,616 possibilities.
   while :; do
     n=$(( (RANDOM * 32768 + RANDOM) % 1679616 ))
     id="$(to_base36 "$n")"
-    [ -e "trees/$pat$id.tree" ] || break
+    taken "$pat$id" || break
   done
 else
-  # The next address after the largest existing one.
-  max=0
-  for f in trees/"$pat"????.tree; do
-    [ -e "$f" ] || continue
-    id="$(basename "$f" .tree)"
-    id="${id#"$pat"}"
-    case "$id" in *[!0-9A-Z]*|"") continue ;; esac
-    n=$((36#$id))
-    [ "$n" -gt "$max" ] && max=$n
+  # The first unused address counting up from 0001 (0001, 0002, ... 0009, 000A, ...).
+  n=1
+  while :; do
+    id="$(to_base36 "$n")"
+    taken "$pat$id" || break
+    n=$((n + 1))
   done
-  id="$(to_base36 $((max + 1)))"
 fi
 
 ADDR="$pat$id"
