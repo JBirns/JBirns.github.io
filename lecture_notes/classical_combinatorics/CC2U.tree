@@ -1,0 +1,7 @@
+\title{Transversals of linear spaces}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L_1, \ldots, L_m \subset X}, #{|X| = n}, be such that #{|L_i \cap L_j| = 1} for all #{i, j} with #{1 \leq i < j \leq m}. Is there a set #{Y \subset X} such that #{1 \leq |L_i \cap Y| \leq 2} for every #{i}?}

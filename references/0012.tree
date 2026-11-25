@@ -1,0 +1,19 @@
+\title{Advanced Problems and Solutions: Solutions: 4466}
+\taxon{Reference}
+\date{1955}
+\author/literal{Leo Moser}
+\author/literal{Peter Scherk}
+\meta{journal}{The American Mathematical Monthly}
+\meta{volume}{62}
+\meta{pages}{46–47}
+
+\meta{bibtex}{\startverb
+@article{Moser1955,
+  author    = {Moser, Leo and Scherk, Peter},
+  title     = {Advanced Problems and Solutions: Solutions: 4466},
+  journal   = {The American Mathematical Monthly},
+  volume    = {62},
+  pages     = {46--47},
+  year      = {1955},
+}
+\stopverb}

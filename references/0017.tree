@@ -1,0 +1,20 @@
+\title{A simple proof of a theorem of Bollobás and Leader}
+\taxon{Reference}
+\date{2003}
+\author/literal{Hong Bing Yu}
+\meta{journal}{Proceedings of the American Mathematical Society}
+\meta{volume}{131}
+\meta{pages}{2639–2640}
+\meta{doi}{10.1090/s0002-9939-03-07091-6}
+
+\meta{bibtex}{\startverb
+@article{Yu2003,
+  author    = {Yu, Hong Bing},
+  title     = {A simple proof of a theorem of Bollob{\'a}s and Leader},
+  journal   = {Proceedings of the American Mathematical Society},
+  volume    = {131},
+  pages     = {2639--2640},
+  doi       = {10.1090/s0002-9939-03-07091-6},
+  year      = {2003},
+}
+\stopverb}

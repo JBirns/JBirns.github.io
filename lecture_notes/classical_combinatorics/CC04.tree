@@ -1,0 +1,12 @@
+\title{Set system, SDR}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let us reformulate \ref{CC03} in terms of set systems. Let #{\mathcal{F} = \lbrace A_1, \ldots, A_m\rbrace } be a \em{set system}, a family of subsets of a (finite) set. A set #{\lbrace a_1, \ldots, a_m\rbrace } of #{m} distinct elements, with #{a_i \in A_i} for every #{i}, is a \em{set of distinct representatives} of #{\mathcal{F}}. Trivially, if #{\mathcal{F}} has an SDR then}
+
+##{\Big| \bigcup_{i \in I} A_i \Big| \geq |I| 
+ \qquad (2)}
+
+\p{for every set #{I \subset [m] = \lbrace 1, \ldots, m\rbrace }.}

@@ -1,0 +1,20 @@
+\title{A combinatorial problem on finite abelian groups}
+\taxon{Reference}
+\date{1996}
+\author/literal{Weidong Gao}
+\meta{journal}{Journal of Number Theory}
+\meta{volume}{58}
+\meta{pages}{100–103}
+\meta{doi}{10.1006/jnth.1996.0067}
+
+\meta{bibtex}{\startverb
+@article{Gao1996,
+  author    = {Gao, Weidong},
+  title     = {A combinatorial problem on finite abelian groups},
+  journal   = {Journal of Number Theory},
+  volume    = {58},
+  pages     = {100--103},
+  doi       = {10.1006/jnth.1996.0067},
+  year      = {1996},
+}
+\stopverb}

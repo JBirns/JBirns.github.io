@@ -1,0 +1,46 @@
+\title{Alon’s Combinatorial Nullstellensatz}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In this section we shall study polynomials in #{n} variables #{X_1, \ldots, X_n} over a field #{\mathbb{F}} or ring #{R}, concentrating on the set of common zeros of our polynomials. Occasionally we shall assume that #{\mathbb{F}} is algebraically closed. We frequently write #{X} for the #{n}-tuple #{(X_1, \ldots, X_n)}, and #{\mathbb{F}[X] = \mathbb{F}[X_1, \ldots, X_n]} for the ring of polynomials. In our main applications, later in this section, #{\mathbb{F}} will be a finite field. Our notation is self-explanatory; e.g. #{\deg f} is the total degree of #{f \in \mathbb{F}[X]}, and #{\deg_{X_i} f} is its degree in the variable #{X_i}. The degree of the zero polynomial is taken to be #{-\infty}.}
+
+\p{We start with one of the great theorems in all of mathematics, Hilbert’s Nullstellensatz. This theorem is a corner-stone of Algebraic Geometry: it expresses a deep connection between geometry and algebra. This fundamental theorem, proved by [David Hilbert in 1893](001C), concerns the common zeros of polynomials over an algebraically closed field.}
+
+\transclude{CC1I}
+
+\p{The converse assertion is trivial: if #{f^k \in I} for some natural number #{k} then #{f} vanishes at every point of #{V(I)}, since it vanishes at every zero of #{f^k}. Thus these two properties are equivalent: #{f} vanishes at every point in #{V(I)} if and only if some power of #{f} belongs to #{I}. Over the years, many proofs of Hilbert’s Nullstellensatz have been given; the best known is probably the proof [Zariski](001I) gave in 1947.}
+
+\p{There is a ‘weak form’ of Hilbert’s Nullstellensatz, which says the following.}
+
+\transclude{CC1J}
+
+\p{An important question concerning Bézout’s equation is the following. \em{If each polynomial #{f_i} has degree at most #{d}, what is the minimal #{\delta} such that we can choose polynomials #{g_i} of degree at most #{\delta}?} After numerous early results, starting with [Hermann in 1926](001B), this question was taken up by [Brownawell in 1987](001A), and a little later [Kollár](001D) proved the best possible bound #{\delta \leq d^{\min(m,n)} - d} when #{d \geq 3}. See also [Philippon 1987](001F) and [Shiffman 1989](001H).}
+
+\p{In fact, the ‘weak form’ is not that weak since, as shown by [Rabinowitsch in 1930](001G), it easily implies the following ‘strong’ form of the Nullstellensatz.}
+
+\transclude{CC1K}
+
+\p{The beautiful and very simple proof we have just given is usually referred to, rather dismissively, as the \em{‘Rabinowitsch Trick’}.}
+
+\p{Let us turn to the main topic of this section, Alon’s Combinatorial Nullstellensatz, which [first appeared in print in 1999](0018), although Alon had presented it at a conference four years earlier.}
+
+\transclude{CC1L}
+
+\p{In 2010, [Michałek](001E) surprised the world of combinatorics by giving a very simple and extremely elegant proof of Alon’s Combinatorial Nullstellensatz. As we have already remarked, this is the second proof we shall present. In this proof we use division by a monic linear polynomial #{X - t} in the ring #{R[X, Y, \ldots]} of polynomials of several variables over a ring #{R}. All we should note is that for #{k \geq 1} and #{t \in R} we have}
+
+##{X^k = (X - t)(X^{k-1} + tX^{k-2} + t^2X^{k-3} + \cdots + t^{k-1}) + t^k = (X - t)q + r,}
+
+\p{where #{q} is a monic polynomial of degree #{k - 1} in #{R[X]} and the remainder #{r} is in #{R}.}
+
+\p{As one of the many applications of his Combinatorial Nullstellensatz to Algebra, Alon gave a short proof of the classical theorem of Chevalley. This result was conjectured by Artin in 1934 and proved by Chevalley and Warning a year later, the former in its simple form below and the latter in a sharper form, giving the best bound on the number of common zeros.}
+
+\transclude{CC1M}
+
+\p{In fact, in 1964 [James Ax](0019) gave a very simple proof of Warning’s first theorem for one polynomial, sharpening Chevalley’s theorem above for #{m = 1}.}
+
+\transclude{CC1N}
+
+\p{Let us end this section with the Chevalley–Warning theorem about the number of common zeros of several polynomials over the field #{\mathbb{F}_p} of prime order #{p}. We shall prove this result by applying ACNS.}
+
+\transclude{CC1O}

@@ -1,0 +1,20 @@
+\title{Sharp effective Nullstellensatz}
+\taxon{Reference}
+\date{1988}
+\author/literal{János Kollár}
+\meta{journal}{Journal of the American Mathematical Society}
+\meta{volume}{1}
+\meta{pages}{963–975}
+\meta{doi}{10.1090/s0894-0347-1988-0944576-7}
+
+\meta{bibtex}{\startverb
+@article{Kollar1988,
+  author    = {Koll{\'a}r, J{\'a}nos},
+  title     = {Sharp effective Nullstellensatz},
+  journal   = {Journal of the American Mathematical Society},
+  volume    = {1},
+  pages     = {963--975},
+  doi       = {10.1090/s0894-0347-1988-0944576-7},
+  year      = {1988},
+}
+\stopverb}

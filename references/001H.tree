@@ -1,0 +1,20 @@
+\title{Degree bounds for the division problem in polynomial ideals}
+\taxon{Reference}
+\date{1989}
+\author/literal{Bernard Shiffman}
+\meta{journal}{Michigan Mathematical Journal}
+\meta{volume}{36}
+\meta{pages}{163–171}
+\meta{doi}{10.1307/mmj/1029003939}
+
+\meta{bibtex}{\startverb
+@article{Shiffman1989,
+  author    = {Shiffman, Bernard},
+  title     = {Degree bounds for the division problem in polynomial ideals},
+  journal   = {Michigan Mathematical Journal},
+  volume    = {36},
+  pages     = {163--171},
+  doi       = {10.1307/mmj/1029003939},
+  year      = {1989},
+}
+\stopverb}

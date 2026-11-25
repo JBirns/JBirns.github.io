@@ -1,0 +1,9 @@
+\title{Restricted sum}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Returning to the topic of sumsets, this time we shall investigate \em{restricted sums} of sets. Given sets #{A, B \subset \mathbb{Z}_p}, at least how large is their sum if we demand that the summands are different. Thus, at least how large is}
+
+##{A \oplus B = \lbrace a + b : a \in A, b \in B, a \neq b\rbrace ?}

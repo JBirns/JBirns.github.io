@@ -1,0 +1,16 @@
+\title{Über Ovale und Eiflächen}
+\taxon{Reference}
+\date{1887}
+\author/literal{Hermann Brunn}
+\meta{publisher}{Akademische Buchdruckerei von F. Straub}
+\meta{school}{Inaugural Dissertation, Munich}
+
+\meta{bibtex}{\startverb
+@phdthesis{Brunn1887,
+  author    = {Brunn, Hermann},
+  title     = {{\"U}ber Ovale und Eifl{\"a}chen},
+  publisher = {Akademische Buchdruckerei von F. Straub},
+  school    = {Inaugural Dissertation, Munich},
+  year      = {1887},
+}
+\stopverb}

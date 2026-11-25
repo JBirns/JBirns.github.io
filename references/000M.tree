@@ -1,0 +1,19 @@
+\title{Higher degree Erdős–Ginzburg–Ziv constants}
+\taxon{Reference}
+\date{2022}
+\author/literal{Yair Caro}
+\author/literal{John R. Schmitt}
+\meta{journal}{Integers}
+\meta{volume}{22}
+\meta{pages}{Paper A102, 17 pp.}
+
+\meta{bibtex}{\startverb
+@article{Caro2022,
+  author    = {Caro, Yair and Schmitt, John R.},
+  title     = {Higher degree Erd{\H{o}}s--Ginzburg--Ziv constants},
+  journal   = {Integers},
+  volume    = {22},
+  pages     = {Paper A102, 17 pp.},
+  year      = {2022},
+}
+\stopverb}

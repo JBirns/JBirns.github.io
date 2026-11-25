@@ -1,0 +1,15 @@
+\title{Dyson’s conjecture}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{a = (a_1, \ldots, a_n)}, where the #{a_i} are nonnegative integers, write #{D(a)} for the constant term of the Laurent polynomial}
+
+##{F(X; a) = \prod_{\substack{1 \leq i \leq n \\ i \neq j}} \bigg( 1 - \frac{X_i}{X_j} \bigg)^{a_i}}
+
+\p{in #{X = (X_1, \ldots, X_n)}. Show that}
+
+##{D(a) = \binom{m}{a_1, \ldots, a_n},}
+
+\p{where #{m = \sum_{i=1}^n a_i}.}

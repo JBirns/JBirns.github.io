@@ -1,0 +1,21 @@
+\title{Kruskal–Katona Theorem (Kruskal 1963, Katona 1968)}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A} \subset X^{(r)}}, #{1 \leq r \leq n}, and let #{I_a^{(r)}} be the initial segment of length #{a = |\mathcal{A}|} in the colex order on #{X^{(r)}}. Then}
+
+##{|\underline{\partial}^{(r)}\mathcal{A}| \geq |\underline{\partial}^{(r)}I_a^{(r)}|.}
+
+\proof{
+\p{Let #{J_a^{(n-r)}} be the initial segment of length #{a} in the \em{lex order} on #{X^{(n-r)}}, and set #{\mathcal{C} = X^{(\geq r+1)} \cup \mathcal{A}} and #{\mathcal{D} = X^{(\leq n-r-1)} \cup J_a^{(n-r)}}. Clearly, #{|\mathcal{C}| = |\mathcal{D}|}, so the vertex isoperimetric inequality in the cube tells us that #{|N(\mathcal{C})| \geq |N(\mathcal{D})|}. As it is easy to check that #{|\underline{\partial}I_a^{(r)}| = |\overline{\partial}J_a^{(n-r)}|}, we find that}
+
+##{|N(\mathcal{C})| = |X^{(\geq r)}| + |\underline{\partial}\mathcal{A}| \geq |N(\mathcal{D})| = |X^{(\leq n-r)}| + |\overline{\partial}J_a^{(n-r)}|,}
+
+\p{so}
+
+##{|\underline{\partial}\mathcal{A}| \geq |\overline{\partial}J_a^{(n-r)}| = |\underline{\partial}I_a^{(r)}|,}
+
+\p{as claimed.}
+}

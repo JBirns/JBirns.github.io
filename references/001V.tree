@@ -1,0 +1,21 @@
+\title{Méthodes topologiques dans les problèmes variationnels}
+\taxon{Reference}
+\date{1930}
+\author/literal{Lazar Lusternik}
+\author/literal{Lev Schnirelmann}
+\meta{pages}{68}
+\meta{publisher}{Issledovatelskiĭ Institut Matematiki i Mekhaniki pri O.M.G.U.}
+\meta{address}{Moscow}
+\meta{note}{In Russian}
+
+\meta{bibtex}{\startverb
+@book{Lusternik1930,
+  author    = {Lusternik, Lazar and Schnirelmann, Lev},
+  title     = {M{\'e}thodes topologiques dans les problèmes variationnels},
+  pages     = {68},
+  publisher = {Issledovatelski{\u{i}} Institut Matematiki i Mekhaniki pri O.M.G.U.},
+  address   = {Moscow},
+  note      = {In Russian},
+  year      = {1930},
+}
+\stopverb}

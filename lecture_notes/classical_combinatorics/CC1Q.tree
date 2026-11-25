@@ -1,0 +1,19 @@
+\title{Cauchy–Davenport via ACNS}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and #{A} and #{B} two non-empty subsets of #{\mathbb{Z}_p} such that #{|A| + |B| \leq p + 1}. Then #{|A + B| \geq |A| + |B| - 1}.}
+
+\proof{
+\p{Suppose for a contradiction that #{A + B \subset C \subset \mathbb{Z}_p} with #{|C| \leq |A| + |B| - 2 \leq p - 1}. Define #{f \in \mathbb{Z}_p[X, Y]} by}
+
+##{f(X, Y) = \prod_{c \in C} (X + Y - c);}
+
+\p{then #{f(x, y) = 0} for #{(x, y) \in A \times B}. However, #{\deg f = |A| + |B| - 2}, and the coefficient of #{X^{|A|-1}Y^{|B|-1}} in #{f} is}
+
+##{\binom{|A| + |B| - 2}{|A| - 1} \neq 0 \in \mathbb{Z}_p,}
+
+\p{contradicting ACNS, \ref{CC1L}.}
+}

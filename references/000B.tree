@@ -1,0 +1,20 @@
+\title{A theorem of finite sets}
+\taxon{Reference}
+\date{1968}
+\author/literal{Gyula O. H. Katona}
+\meta{booktitle}{Theory of Graphs (Proc. Colloq., Tihany, 1966)}
+\meta{pages}{187–207}
+\meta{publisher}{Academic Press}
+\meta{address}{New York–London}
+
+\meta{bibtex}{\startverb
+@incollection{Katona1968,
+  author    = {Katona, Gyula O. H.},
+  title     = {A theorem of finite sets},
+  booktitle = {Theory of Graphs (Proc. Colloq., Tihany, 1966)},
+  pages     = {187--207},
+  publisher = {Academic Press},
+  address   = {New York--London},
+  year      = {1968},
+}
+\stopverb}

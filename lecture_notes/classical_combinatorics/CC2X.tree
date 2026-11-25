@@ -1,0 +1,7 @@
+\title{The Erdős–Rado sunflower lemma}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A family of sets is a \em{#{\Delta}-system}, if any two elements of it intersect in the same set. Suppose #{\mathcal{A} \subset X^{(r)}} does not contain a #{\Delta}-system of size #{m}. Show that #{|\mathcal{A}| \leq (m-1)^r \times r!}}

@@ -1,0 +1,7 @@
+\title{Equality in the shadow bound}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{r \geq 1} and #{\mathcal{A} \subset X^{(r)}} with #{|\mathcal{A}| = \binom{y}{r} > 1} and #{|\partial\mathcal{A}| = \binom{y}{r-1}}. Does it follow that #{y} is an integer?}

@@ -1,0 +1,9 @@
+\title{Cauchy–Davenport for several summands}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and let #{A_1, \ldots, A_k} be non-empty subsets of #{\mathbb{Z}_p} with #{|A_1| + \cdots + |A_k| \leq p + k - 1}. Then}
+
+##{|A_1 + \cdots + A_k| \geq |A_1| + \cdots + |A_k| - k + 1.}

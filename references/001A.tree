@@ -1,0 +1,20 @@
+\title{Bounds for the degrees in the Nullstellensatz}
+\taxon{Reference}
+\date{1987}
+\author/literal{W. Dale Brownawell}
+\meta{journal}{Annals of Mathematics (2)}
+\meta{volume}{126}
+\meta{pages}{577–591}
+\meta{doi}{10.2307/1971361}
+
+\meta{bibtex}{\startverb
+@article{Brownawell1987,
+  author    = {Brownawell, W. Dale},
+  title     = {Bounds for the degrees in the Nullstellensatz},
+  journal   = {Annals of Mathematics (2)},
+  volume    = {126},
+  pages     = {577--591},
+  doi       = {10.2307/1971361},
+  year      = {1987},
+}
+\stopverb}

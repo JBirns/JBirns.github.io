@@ -1,0 +1,41 @@
+\title{Rónyai’s theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and let #{v_1, v_2, \ldots, v_m} be #{m = 4p - 2} vectors in the vector space #{V = \mathbb{Z}_p \oplus \mathbb{Z}_p} over #{\mathbb{Z}_p}. Then some #{p} of the vectors #{v_i} sum to #{0}.}
+
+\proof{
+\p{Assume for a contradiction that the assertion is false. Then, by the result in \ref{CC1W}, for all #{J \subset [m]} with #{|J| = p} or #{|J| = 3p} we have #{\sum_{j \in J} v_j \neq 0 \in V}.}
+
+\p{Setting #{v_i = (a_i, b_i)}, #{i = 1, \ldots, m}, define a polynomial #{f(X) \in \mathbb{Z}_p[X] = \mathbb{Z}_p[X_1, \ldots, X_m]} as follows:}
+
+##{\begin{aligned}
+f(X) = \Bigg( \bigg( \sum_{i=1}^m a_iX_i \bigg)^{p-1} - 1 \Bigg)&\Bigg( \bigg( \sum_{i=1}^m b_iX_i \bigg)^{p-1} - 1 \Bigg) \\
+&\times \Bigg( \bigg( \sum_{i=1}^m X_i \bigg)^{p-1} - 1 \Bigg)\big( r(X) - 2 \big),
+\end{aligned}}
+
+\p{where}
+
+##{r(X) = \sum_{I \in [m]^{(p)}} \prod_{i \in I} X_i.}
+
+\p{Clearly, #{\deg f \leq 4p - 3 = m - 1}. We claim that for #{c = (c_i)_1^m \in \lbrace 0, 1\rbrace ^m} we have}
+
+##{f(c) = \begin{cases} 2 & \text{if } c = 0 = (0)_1^m, \\ 0 & \text{otherwise.} \end{cases} 
+ \qquad (2)}
+
+\p{Indeed, #{f(0) = 2}, trivially. Also, for #{c = (c_i)_1^m \in \lbrace 0, 1\rbrace ^m} the third factor in the definition of #{f(c)}, the factor #{(\sum_1^m c_i)^{p-1} - 1}, is #{0} unless the sum #{w(c) = \sum_i c_i} in #{\mathbb{Z}} is a multiple of #{p}, i.e. #{w(c)} is #{p}, #{2p} or #{3p}. If #{w(c) = 2p} then the last (fourth) factor vanishes since #{\binom{2p}{p} = 2} in #{\mathbb{Z}_p}, and in the other two cases our hypotheses imply that at least one of the first two factors is #{0}.}
+
+\p{The polynomial}
+
+##{g(X) = 2(X_1 - 1)(X_2 - 1)\cdots(X_m - 1)}
+
+\p{satisfies the same identity (2) as #{f(X)}, so the difference}
+
+##{h(X) = g(X) - f(X) = \sum_{I \subset [m]} c_I\prod_{i \in I} X_i}
+
+\p{is identically zero on #{\lbrace 0, 1\rbrace ^m}.}
+
+\p{Finally, #{g} has degree #{m}, and #{\deg f \leq m - 1}, so #{h} has degree #{m}. The highest degree monomial in #{g}, and so in #{h}, is #{2\prod_{i=1}^m X_i}. This contradicts ACNS, since #{h(X)} is identically zero on the product of #{m} sets #{\lbrace 0, 1\rbrace }, each of size #{2}.}
+}

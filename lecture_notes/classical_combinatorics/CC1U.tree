@@ -1,0 +1,15 @@
+\title{Erdős–Heilbronn conjecture}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and let #{A} and #{B} be non-empty subsets of #{\mathbb{Z}_p} with #{|A| + |B| \leq p + 3}. Then #{|A \oplus B| \geq |A| + |B| - 3}.}
+
+\proof{
+\p{If #{|A| \neq |B|} then this is obvious from \ref{CC1T}, so it suffices to consider the case #{|A| = |B| \geq 2}. Pick an element #{b} of #{B} and set #{B' = B \setminus \lbrace b\rbrace }, so that #{|B'| < |A|}. By \ref{CC1T},}
+
+##{|A \oplus B| \geq |A \oplus B'| \geq |A| + |B'| - 2 = |A| + |B| - 3}
+
+\p{as claimed.}
+}

@@ -1,0 +1,12 @@
+\title{Hall’s Theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A bipartite graph #{G = (U, W; E)} has a complete matching from #{U} into #{W} if, and only if,}
+
+##{|\Gamma_G(A)| \geq |A| 
+ \qquad (1)}
+
+\p{for every #{A \subset U}.}

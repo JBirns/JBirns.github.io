@@ -1,0 +1,12 @@
+\title{Steiner symmetrization}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For a #{1}-codimensional subspace (hyperplane) #{H} of #{\mathbb{R}^n}, the \em{#{1}-dimensional symmetrization} (or compression) #{S_H(A)} of a body #{A \subset \mathbb{R}^n} is the set #{B \subset \mathbb{R}^n} defined as follows. For every line #{\ell} perpendicular to #{H}, the intersection #{B \cap \ell} is the interval of centre #{H \cap \ell} and length #{\lambda_1(A \cap \ell)}. Show that}
+
+##{\lambda\big( A_{(\varepsilon)} \big) \geq \lambda\big( (S_H(A))_{(\varepsilon)} \big) 
+ \qquad (3)}
+
+\p{for every #{\varepsilon > 0}. Deduce inequality (2) from this.}

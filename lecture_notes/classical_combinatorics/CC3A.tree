@@ -1,0 +1,7 @@
+\title{Lovász’s form of Kruskal–Katona}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Deduce from the previous exercise that if #{\mathcal{A} \subset [n]^{(r)}} and #{|\mathcal{A}| = \binom{x}{r}} for some real number #{x}, #{x > r}, then #{|\partial(\mathcal{A})| \geq \binom{x-1}{r}}.}

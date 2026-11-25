@@ -1,0 +1,33 @@
+\title{Frankl’s theorem on non-covering families}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{2 \leq k}, #{r < n \leq kr}, and let #{\mathcal{F} \subset X^{(r)}} be such that #{X} is not the union of #{k} sets in #{\mathcal{F}}. Then}
+
+##{|\mathcal{F}| \leq \binom{n-1}{r}.}
+
+\proof{
+\p{We may assume that #{k = \lceil n/r \rceil}, i.e. #{k} is as small as possible, subject to #{kr \geq n}. Equivalently, #{(k-1)r < n \leq kr} – otherwise we may decrease #{k} to obtain a stronger assertion. [Actually, this natural assumption makes no difference to this proof.]}
+
+\p{Let #{\Pi} be the set of all #{(n-1)!} cyclic permutations of #{X}. For #{\pi \in \Pi}, let #{\mathcal{F}_\pi} be the set of #{\pi}-arcs (arcs in the order #{\pi}) obtained from the sets in #{\mathcal{F}}. If #{F \in \mathcal{F}} is a #{\pi}-arc then we denote this #{\pi}-arc by #{F_\pi}.}
+
+\p{\strong{Claim.} #{|\mathcal{F}_\pi| \leq n - r} for every #{\pi}.}
+
+\p{We may assume that #{\pi} is the standard (identity) order #{1, 2, \ldots, n} on #{X}, the family #{\mathcal{F}_\pi} is not empty, and #{A_0 = \lbrace n - r + 1, n - r + 2, \ldots, n\rbrace  \in \mathcal{F}}.}
+
+\p{Set #{|\mathcal{F}_\pi| = \ell}. Assign to each #{\pi}-arc #{F_\pi} its last element, except assign the set #{\lbrace n, n+1, \ldots, kr\rbrace } to #{A_0}. Thus, in total we have assigned a set #{K} of #{\ell + kr - n} elements to #{\mathcal{F}_\pi}. Note that the set #{[n]} is a subset of #{[kr]}; also, having fixed the arcs #{F_\pi}, we no longer care about the cyclic order on #{[n]}.}
+
+\p{As #{X = [n]} is not the union of #{k} arcs, if #{1 \leq j \leq r} then}
+
+##{|K \cap \lbrace j, j + r, j + 2r, \ldots, j + (k-1)r\rbrace | \leq k - 1.}
+
+\p{Indeed, otherwise the intersection would give us #{k} arcs of #{\mathcal{F}_\pi}, which would cover #{X}. [It may be worth noting that with the exception of the last marker, #{j + (k-1)r}, all the markers point at different arcs, the last marker, #{j + (k-1)r}, points at #{A_0} whenever #{n - (k-1)r \leq j \leq r}.] Since the sets #{\lbrace j, j + r, j + 2r, \ldots, j + (k-1)r\rbrace }, #{j = 1, \ldots, r}, partition #{[kr]} and #{[kr]} contains #{K}, this tells us that #{|K| = \ell + kr - n \leq (k-1)r}, i.e. #{\ell \leq n - r}.}
+
+\p{From here the theorem follows by a simple double counting. Write #{P} for the set of pairs #{\lbrace (F, \pi) : \pi \in \Pi \text{ and } F \text{ is an arc in } \pi, \text{ i.e.\; } F_\pi \in \mathcal{F}\rbrace }. Then, by the Claim above,}
+
+##{|P| = |\mathcal{F}|r!(n-r)! = \sum_{\pi \in \Pi} |\mathcal{F}_\pi| \leq (n-1)!(n-r),}
+
+\p{so #{|\mathcal{F}| \leq \binom{n-1}{r}}, as required.}
+}

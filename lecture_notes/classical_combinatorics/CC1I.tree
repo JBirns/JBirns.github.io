@@ -1,0 +1,7 @@
+\title{Hilbert’s Nullstellensatz}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathbb{F}} be an algebraically closed field, and let #{I} be an ideal in #{\mathbb{F}[X]}. Denote by #{V(I) \subset K^n} the set of common zeros of the polynomials in #{I}. If #{f \in \mathbb{F}[X_1, \ldots, X_n]} vanishes at every point of #{V(I)} then some power of #{f} is in #{I}.}

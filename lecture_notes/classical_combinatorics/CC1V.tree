@@ -1,0 +1,28 @@
+\title{Alon–Friedland–Kalai}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime, and #{G = (V, E)} a loopless multigraph of average degree greater than #{2p - 2} and maximum degree #{2p - 1}. Then #{G} contains a #{p}-regular subgraph.}
+
+\proof{
+\p{Let #{A = (a_{v,e})} be the incidence matrix of #{G}, i.e. for #{v \in V} and #{e \in E} set}
+
+##{a_{v,e} = \begin{cases} 1 & \text{if } e \text{ is incident with } v, \\ 0 & \text{otherwise.} \end{cases}}
+
+\p{Let us define a polynomial #{f(X) = f(X_e : e \in E)} in variables #{X_e} indexed by the edges #{e \in E} as follows:}
+
+##{f(X) = \prod_{v \in V} \bigg( 1 - \Big( \sum_{e \in E} a_{v,e}X_e \Big)^{p-1} \bigg) - \prod_{e \in E} (1 - X_e). 
+ \qquad (1)}
+
+\p{Writing #{n} for the number of vertices and #{m} for the number of edges of #{G}, the degree of the first term in #{f} is #{(p-1)n}, and that of the second term is #{m > (p-1)n}, so #{f} has degree #{m}. Also, the coefficient of the monomial #{\prod_{e \in E} X_e} in #{f} is #{(-1)^{m+1} \neq 0}, so by ACNS #{f} is not identically #{0} on #{\lbrace 0, 1\rbrace ^E}; say, for #{x = (x_e)_{e \in E}}, with #{x_e} is #{0} or #{1} for each edge #{e}, we have #{f(x) \neq 0}. Since #{f(0) = 0}, this tells us that #{x \neq 0}, i.e.}
+
+##{F = \lbrace e : x_e = 1\rbrace  \neq \emptyset.}
+
+\p{Finally, all we have to observe that in the graph #{H = (V, F)} the degree of every vertex is a multiple of #{p}, i.e. #{0} in #{\mathbb{Z}_p}. Indeed, then every vertex has degree #{0} or #{p}, as no vertex has degree #{2p} or more. In the evaluation of #{f(X)} at #{x} the second term in (1) is #{0}, since not every #{x_e} is #{0}. Hence, if #{f(x) \neq 0} then in the evaluation of #{f(X)} at #{x} the first term is non-zero. But, again by Lagrange’s theorem, this implies that}
+
+##{\sum_{e \in E} a_{v,e}x_e = 0}
+
+\p{for every vertex #{v}, i.e. the degree of every vertex is #{0} in #{\mathbb{Z}_p}.}
+}

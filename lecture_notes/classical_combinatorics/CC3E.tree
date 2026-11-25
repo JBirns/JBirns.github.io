@@ -1,0 +1,7 @@
+\title{A basis of functions on the cube}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathbb{F}} be a field and #{V_n} the space of all #{\mathbb{F}}-valued functions on #{Q_n = \lbrace 0, 1\rbrace ^n}, viewed as a vector space over #{\mathbb{F}}. For #{i = 1, \ldots, n}, let #{x_i \in V_n} be given by #{x_i(a) = a_i}, where #{a = (a_1, \ldots, a_n) \in Q_n}, and for #{I \in \mathcal{P}(n)} set #{x_I = \prod_{i \in I} x_i}. (In particular, #{x_\emptyset(a) = 1} for all #{a \in Q_n}.) Check that #{B = \lbrace x_I : I \in \mathcal{P}(n)\rbrace } is a basis of #{V_n}.}

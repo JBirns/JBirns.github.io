@@ -1,0 +1,12 @@
+\title{The LSB Theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{d \geq 1}. Then the following equivalent assertions hold.}
+
+\ul{
+\li{\strong{(i)} For every continuous mapping #{f \colon S^d \to \mathbb{R}^d} there is a point #{x \in S^d} such that #{f(x) = f(-x)}.}
+\li{\strong{(ii)} Let #{\lbrace V_1, \ldots, V_{d+1}\rbrace } be a collection of closed sets covering #{S^d}. Then there is a set #{V_i} that contains a pair of antipodal points, i.e. there is a point #{x \in S^d} such that #{x, -x \in V_i}.}
+}

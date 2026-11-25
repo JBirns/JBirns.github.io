@@ -1,0 +1,19 @@
+\title{Cyclic subspaces of Grassmann derivations}
+\taxon{Reference}
+\date{1994}
+\author/literal{J. A. Dias da Silva}
+\author/literal{Yahya Ould Hamidoune}
+\meta{journal}{Bulletin of the London Mathematical Society}
+\meta{volume}{26}
+\meta{pages}{140–146}
+
+\meta{bibtex}{\startverb
+@article{DiasdaSilva1994,
+  author    = {Dias da Silva, J. A. and Hamidoune, Yahya Ould},
+  title     = {Cyclic subspaces of Grassmann derivations},
+  journal   = {Bulletin of the London Mathematical Society},
+  volume    = {26},
+  pages     = {140--146},
+  year      = {1994},
+}
+\stopverb}

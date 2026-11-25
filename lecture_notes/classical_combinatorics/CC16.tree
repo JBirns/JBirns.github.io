@@ -1,0 +1,12 @@
+\title{Brunn–Minkowski inequality}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A} and #{B} be nonempty compact subsets of #{\mathbb{R}^n}. Then}
+
+##{|A + B|^{1/n} \geq |A|^{1/n} + |B|^{1/n}. 
+ \qquad (1)}
+
+\p{Here #{|C|} stands for the Lebesgue measure or volume of a set #{C}. Furthermore, equality holds if and only if #{A} and #{B} are homothetic convex sets.}

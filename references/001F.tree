@@ -1,0 +1,18 @@
+\title{On the article “Bounds for the degrees in the Nullstellensatz” by W. D. Brownawell}
+\taxon{Reference}
+\date{1988}
+\author/literal{Patrice Philippon}
+\meta{journal}{Annals of Mathematics (2)}
+\meta{volume}{127}
+\meta{pages}{367–371}
+
+\meta{bibtex}{\startverb
+@article{Philippon1988,
+  author    = {Philippon, Patrice},
+  title     = {On the article ``Bounds for the degrees in the Nullstellensatz'' by W. D. Brownawell},
+  journal   = {Annals of Mathematics (2)},
+  volume    = {127},
+  pages     = {367--371},
+  year      = {1988},
+}
+\stopverb}

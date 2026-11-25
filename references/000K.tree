@@ -1,0 +1,20 @@
+\title{Zero-sum subsequences in abelian non-cyclic groups}
+\taxon{Reference}
+\date{1995}
+\author/literal{Yair Caro}
+\meta{journal}{Israel Journal of Mathematics}
+\meta{volume}{92}
+\meta{pages}{221–233}
+\meta{doi}{10.1007/bf02762078}
+
+\meta{bibtex}{\startverb
+@article{Caro1995,
+  author    = {Caro, Yair},
+  title     = {Zero-sum subsequences in abelian non-cyclic groups},
+  journal   = {Israel Journal of Mathematics},
+  volume    = {92},
+  pages     = {221--233},
+  doi       = {10.1007/bf02762078},
+  year      = {1995},
+}
+\stopverb}

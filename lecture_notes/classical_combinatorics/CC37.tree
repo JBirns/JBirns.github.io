@@ -1,0 +1,9 @@
+\title{Multiplicative Brunn–Minkowski}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{Prepare.} Show that (4) is equivalent to the following: if #{0 < t < 1} then}
+
+##{\lambda(tA + (1-t)B) \geq \lambda(A)^t\lambda(B)^{1-t}.}

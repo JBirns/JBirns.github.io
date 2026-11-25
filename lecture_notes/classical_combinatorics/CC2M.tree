@@ -1,0 +1,7 @@
+\title{Subset sums equal to a given number}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{x, x_1, \ldots, x_n} be real numbers. Show that at most #{\binom{n}{\lfloor n/2 \rfloor}} of the sums #{\sum_{i \in A} x_i} are equal to #{x}.}

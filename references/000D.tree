@@ -1,0 +1,20 @@
+\title{A general 2-part Erdős–Ko–Rado theorem}
+\taxon{Reference}
+\date{2017}
+\author/literal{Gyula O. H. Katona}
+\meta{journal}{Opuscula Mathematica}
+\meta{volume}{37}
+\meta{pages}{577–588}
+\meta{doi}{10.7494/opmath.2017.37.4.577}
+
+\meta{bibtex}{\startverb
+@article{Katona2017,
+  author    = {Katona, Gyula O. H.},
+  title     = {A general 2-part Erd{\H{o}}s--Ko--Rado theorem},
+  journal   = {Opuscula Mathematica},
+  volume    = {37},
+  pages     = {577--588},
+  doi       = {10.7494/opmath.2017.37.4.577},
+  year      = {2017},
+}
+\stopverb}

@@ -1,0 +1,11 @@
+\title{Additive group, additive set, sumset}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{We shall consider additively written Abelian groups: we call them \em{additive groups}. Also, an \em{additive set} is a finite nonempty subset of an additive group.}
+
+\p{Given additive sets #{A, B}, their sum (also called ‘Minkowski sum’) is}
+
+##{A + B = \lbrace a + b : a \in A, b \in B\rbrace .}

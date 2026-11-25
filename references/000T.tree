@@ -1,0 +1,20 @@
+\title{An isoperimetric method in additive theory}
+\taxon{Reference}
+\date{1996}
+\author/literal{Yahya Ould Hamidoune}
+\meta{journal}{Journal of Algebra}
+\meta{volume}{179}
+\meta{pages}{622–630}
+\meta{doi}{10.1006/jabr.1996.0028}
+
+\meta{bibtex}{\startverb
+@article{Hamidoune1996,
+  author    = {Hamidoune, Yahya Ould},
+  title     = {An isoperimetric method in additive theory},
+  journal   = {Journal of Algebra},
+  volume    = {179},
+  pages     = {622--630},
+  doi       = {10.1006/jabr.1996.0028},
+  year      = {1996},
+}
+\stopverb}

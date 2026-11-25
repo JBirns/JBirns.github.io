@@ -1,0 +1,20 @@
+\title{Drei Sätze über die n-dimensionale euklidische Sphäre}
+\taxon{Reference}
+\date{1933}
+\author/literal{Karol Borsuk}
+\meta{journal}{Fundamenta Mathematicae}
+\meta{volume}{20}
+\meta{pages}{177–190}
+\meta{doi}{10.4064/fm-20-1-177-190}
+
+\meta{bibtex}{\startverb
+@article{Borsuk1933,
+  author    = {Borsuk, Karol},
+  title     = {Drei S{\"a}tze {\"u}ber die n-dimensionale euklidische Sph{\"a}re},
+  journal   = {Fundamenta Mathematicae},
+  volume    = {20},
+  pages     = {177--190},
+  doi       = {10.4064/fm-20-1-177-190},
+  year      = {1933},
+}
+\stopverb}

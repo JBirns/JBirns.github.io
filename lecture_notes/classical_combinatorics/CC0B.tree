@@ -1,0 +1,7 @@
+\title{Antichain, Sperner family}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Our first proof of Sperner’s Theorem, to be stated below, will be based on \ref{CC0A}. We shall freely interchange #{X} and #{[n]}, and write #{\mathcal{P}(n)} for #{\mathcal{P}(X) = \mathcal{P}([n])}. We call a family #{\mathcal{A} \subset \mathcal{P}(n)} an \em{antichain} or a \em{Sperner family} if no set in #{\mathcal{A}} is contained in another.}

@@ -1,0 +1,28 @@
+\title{Examples II}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{If an exercise has a typo or is wrong, correct it and then solve it.}}
+
+\transclude{CC32}
+
+\p{In the exercises concerning subsets of #{\mathbb{R}^n}, feel free to ignore the topological difficulties. You may replace the Lebesgue measure #{\lambda} by vol.}
+
+\transclude{CC33}
+
+\transclude{CC34}
+
+\transclude{CC35}
+
+\transclude{CC36}
+
+\transclude{CC37}
+
+\transclude{CC38}
+
+\transclude{CC39}
+
+\transclude{CC3A}
+
+\transclude{CC3B}

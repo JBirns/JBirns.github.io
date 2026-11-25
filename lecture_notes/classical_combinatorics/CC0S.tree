@@ -1,0 +1,11 @@
+\title{#{k}-wise intersecting families}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{k \geq 2}, #{2 \leq r \leq (k-1)n/k}, and let #{\mathcal{A} \subset X^{(r)}} be such that #{\bigcap_{i=1}^k A_i \neq \emptyset} whenever #{A_1, \ldots, A_k \in \mathcal{A}}. Then #{|\mathcal{A}| \leq \binom{n-1}{r-1}}.}
+
+\proof{
+\p{Set #{\mathcal{F} = \lbrace X \setminus A : A \in \mathcal{A}\rbrace }. Then #{\bigcup_{i=1}^k F_i \neq X} whenever #{F_1, \ldots, F_k \in \mathcal{F}}, and so we have #{|\mathcal{A}| = |\mathcal{F}| \leq \binom{n-1}{n-r} = \binom{n-1}{r-1}}.}
+}

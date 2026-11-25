@@ -1,0 +1,48 @@
+\title{Applications of ACNS}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let us start with the algebraic proof of the (very very simple) Cauchy–Davenport theorem we promised in \ref{CC15}. Here and in the subsequent results in this section we keep the notation #{\mathbb{Z}_p} for the set of integers modulo a prime #{p}, although we make use of the fact that #{\mathbb{Z}_p} is a field.}
+
+\transclude{CC1Q}
+
+\p{Similarly, the prime order case of the Erdős–Ginzburg–Ziv theorem, \ref{CC1B}, is an easy consequence of Chevalley’s theorem, \ref{CC1M}.}
+
+\transclude{CC1R}
+
+\transclude{CC1S}
+
+\p{Trivially, if #{|A| = 1} then #{|A \oplus B| = |B|} if #{A \not\subset B} and #{|A \oplus B| = |B| - 1} if #{A \subset B}. Also, #{[n] \oplus [n] = [3, 2n-1]}, so for #{n \geq 2} we have #{|[n] \oplus [n]| \geq 2n - 3} provided #{2n - 3 \leq p}. [In 1964, Erdős and Heilbronn](001N) conjectured that for #{A = B} the restricted sum is at least as large as in the case when #{A} is an interval:}
+
+##{|A \oplus A| \geq 2|A| - 3,}
+
+\p{if #{2|A| - 3 \leq p}. This conjectured inequality seems to be a short step from the Cauchy–Davenport theorem but, amazingly, in spite of a number of serious attacks by many people, the Erdős–Heilbronn conjecture remained unsolved for thirty years: eventually, in 1994, [Dias da Silva and Hamidoune](001M) managed to prove it. Soon after this breakthrough result, [Alon, Nathanson and Ruzsa realized](001L) that in fact this conjecture is a very simple consequence of ACNS. Thus, given the right tool, the following theorem of Alon, Nathanson and Ruzsa, implying the Dias da Silva–Hamidoune theorem, is hardly more than a not too difficult exercise. Note that if #{A = [n]} and #{B = [m]} for #{n \neq m} then #{A \oplus B = [3, n + m - 2]}, so #{|A \oplus B| = n + m - 2}. The result below claims that this is an extremal example.}
+
+\transclude{CC1T}
+
+\p{The following immediate consequence of this theorem is slightly stronger than the Erdős–Heilbronn conjecture, as stated above (see also [Hamidoune, Lladó and Serra 2000](001O)).}
+
+\transclude{CC1U}
+
+\p{Our next application is very different. In 1973, Berge and Sauer made the fascinating conjecture that every #{4}-regular graph contains a #{3}-regular subgraph. (Not a spanning subgraph: it is trivial that not every #{4}-regular graph has a #{1}-factor.) Although this conjecture was proved by [Tashkinov in 1982](001P), we shall not present that result, but a close relative of it, proved by [Alon, Friedland and Kalai](001J) two years later in a very simple way (see also [Alon, Friedland and Kalai 1984](001K)).}
+
+\transclude{CC1V}
+
+\p{The last result we shall present is an extension of the Erdős–Ginzburg–Ziv theorem to two dimensions. For a prime #{p}, let #{s(p, 2)} be the minimal #{m} such that every sequence of #{m} vectors in the two-dimensional #{\mathbb{Z}_p}-vector space #{\mathbb{Z}_p \oplus \mathbb{Z}_p} contains #{p} terms summing to #{0}. Clearly, #{s(p, 2) \geq 4p - 3}, since the sequence of length #{4p - 4} in which each of the vectors #{(0, 0)}, #{(0, 1)}, #{(1, 0)} and #{(1, 1)} occurs #{p - 1} times does not have #{p} terms whose sum is #{0}.}
+
+\p{In 1983, Kemnitz conjectured that this is an extremal example, so #{s(p, 2) = 4p - 3} for every prime #{p}. This conjecture is trivial for #{p = 2}, but the case #{p = 3} already needs some effort. In 2000, Rónyai came close to proving this conjecture: he proved that #{s(p, 2) \leq 4p - 2}. As a preparation, we prove the following result.}
+
+\transclude{CC1W}
+
+\p{Here is a second proof.}
+
+\p{Here is then Rónyai’s theorem.}
+
+\transclude{CC1X}
+
+\p{Note another way of arriving at a contradiction. The set}
+
+##{\bigg\lbrace  \prod_{i \in I} X_i : I \subset [m] \bigg\rbrace}
+
+\p{of #{2^m} monomials is a basis for the vector space of functions #{\lbrace 0, 1\rbrace ^m \to \mathbb{Z}_p} over #{\mathbb{Z}_p}, but the coefficient #{c_{[m]}} in the expansion of #{h(X)} above is nonzero, in fact, #{c_{[m]} = 2 \neq 0 \in \mathbb{Z}_p}.}

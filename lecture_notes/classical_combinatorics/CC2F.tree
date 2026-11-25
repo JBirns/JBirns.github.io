@@ -1,0 +1,7 @@
+\title{Proving Hall’s Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Prove (Recall?) that if a bipartite graph with bipartition #{(U, W)} is such that #{|\Gamma(A)| \geq |A|} for every #{A \subset U} then it has a complete matching from #{U} to #{W}.}

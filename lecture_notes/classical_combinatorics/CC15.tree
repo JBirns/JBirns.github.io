@@ -1,0 +1,70 @@
+\title{Sumsets}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In the classical examples of isoperimetric inequalities in analysis and geometry often the most elegant way of proving them is by the use of sumsets. Given sets #{A, B \subset \mathbb{R}^n}, the \em{Minkowski sum} of #{A} and #{B} is the set #{\lbrace x + y : x \in A, y \in B\rbrace }. Needless to say, #{\mathbb{R}^n} can be replaced by any Abelian group. The fundamental inequality about sums is the \em{[Brunn](000J)–[Minkowski inequality](0011)}.}
+
+\transclude{CC16}
+
+\p{We leave the proof as an exercise. In the proof it may be assumed that the sets #{A} and #{B} are closures of their interiors, or even that they are unions of rectangular parallelepipeds (see also [Henstock and Macbeath 1953](000V), [Lyusternik 1935](000Z)).}
+
+\p{In the discrete case, which is our interest, such inequalities can be trivial, although not as clean as BM. However, most of the time they lead to deep questions. Here we shall hardly scrape the surface by proving some of the simplest inequalities. We start with the fundamental (and terribly easy) \em{Cauchy–Davenport theorem}.}
+
+\transclude{CC17}
+
+\p{In this very brief chapter we are interested in lower bounds on the number of elements #{|A + B|} in the sumset #{A + B} in terms of #{|A|} and #{|B|}. Let us mention now that the case when the ambient group is cyclic is by no means trivial, and indeed this is often the most interesting case for the results in this chapter.}
+
+\p{If #{A}, say, consists of one element then, trivially, #{|A + B| = |B|}, so in studying this problem, we care only about the case when both #{A} and #{B} have at least two elements. Since translations #{A \to A + s = \lbrace a + s : a \in A\rbrace } and #{B \to B + t}, and so #{A + B \to A + B + s + t}, do not change the cardinalities of these sets, we may translate these #{A} and #{B} to our heart’s content. Thus, e.g. if #{A, B \subset \mathbb{Z}} are non-empty finite sets then the cardinality of #{A + B} remains unchanged if we translate these sets so that they satisfy #{\max A = \min B = 0}. In that case #{A + B \supset A \cup B} and #{A \cap B = \lbrace 0\rbrace }, so #{|A + B| \geq |A \cup B| = |A| + |B| - 1}. Another trivial way of seeing this inequality is to enumerate the elements of #{A} and #{B} as #{A = \lbrace a_1 < a_2 < \cdots < a_k\rbrace } and #{B = \lbrace b_1 < b_2 < \cdots < b_\ell\rbrace }, and then note that}
+
+##{A + B \supset \lbrace a_1 + b_1, a_1 + b_2, a_1 + b_3, \ldots, a_1 + b_\ell, a_2 + b_\ell, a_3 + b_\ell, \ldots, a_k + b_\ell\rbrace .}
+
+\p{Also, for #{|A|, |B| \geq 2} (and still in #{\mathbb{Z}}), we have #{|A + B| = |A| + |B| - 1} if and only if #{A} and #{B} are arithmetic progressions with the same common difference.}
+
+\p{If #{G} is finite, of order #{n}, say, then #{A + B} need not be nearly as large. However, if #{|A| + |B| \geq n + 1} then #{A + B} is as large as possible: #{A + B = G}. Indeed, #{g \in A + B} iff the sets #{A} and #{B_g = g - B = \lbrace g - b : b \in B\rbrace } intersect. But as}
+
+##{|A \cap B_g| = |A| + |B_g| - |A \cup B_g| = |A| + |B| - |A \cup B_g| \geq |A| + |B| - n \geq 1,}
+
+\p{#{A} and #{B_g} do intersect. On the other hand, if #{|A| + |B| \leq n}, then #{A + B} can be quite small; e.g. if #{n = 2m} even and #{A = B} is the set of #{m = n/2} even integers in #{\mathbb{Z}_n} (the cyclic group of order #{n}) then #{|A| = |B| = n/2} and #{A + B = A = B}. As we shall see now, the fundamental (and very simple) Cauchy–Davenport theorem tells us that if #{p} is a prime then in #{\mathbb{Z}_p} a sumset #{A + B} has to be as large as in #{\mathbb{Z}}, provided the trivial condition #{|A| + |B| \leq p} is satisfied. This theorem was proved by [Davenport in 1935](000O), and was [discovered only some years later](000P) that it had been proved by Cauchy over one hundred years earlier, [in 1813](000N).}
+
+\transclude{CC18}
+
+\p{Minkowski addition is trivially associative and commutative: for subsets #{A, B, C} of an Abelian group we have #{A + B = B + A}, #{(A + B) + C = A + (B + C)}, etc. Thus \ref{CC18} has the following immediate consequence.}
+
+\transclude{CC19}
+
+\p{The Cauchy–Davenport theorem fails for general Abelian groups, even for cyclic groups. For example, as mentioned above, if #{A} and #{B} consist of all even numbers in #{\mathbb{Z}_n}, with #{n} even, then #{A + B} also consists of all even numbers, so #{|A + B| = |A| = |B| = n/2}. More generally, if #{A} and #{B} are nonempty subsets of an Abelian group #{G} and each of them is contained in a coset of the same subgroup #{H}, then #{|A + B| \leq |H|}. [In 1953, Kneser](000W) proved a considerable extension of the Cauchy–Davenport theorem: here we prove a slightly weaker version of this result.}
+
+\transclude{CC1A}
+
+\p{In fact, [Kneser proved more](000X), namely that if #{H} is chosen to be the \em{stabiliser} of #{A + B}, then}
+
+##{|A + B| \geq |A + H| + |B + H| - |H| \geq |A| + |B| - |H|.}
+
+\p{Note that (2) is stronger than the Cauchy–Davenport theorem, since if our group is #{\mathbb{Z}_p} then the only choice for #{H} is the subgroup consisting of the identity only. A little later [Kneser extended his theorem](000Y) to locally compact Abelian groups with the Haar measure (see also [Macbeath 1953](0010)).}
+
+\p{\ref{CC38} is another extension of the Cauchy–Davenport theorem. For further extensions and refinements, see [Hamidoune 1996](000T), [Hamidoune, Serra and Zémor 2006](000U), [Moser and Scherk 1955](0012), [Vosper 1956](0016).}
+
+\p{Let us turn to another basic theorem about sumsets. Given a sequence of elements #{(a_i)_1^m} of an Abelian group of order #{n}, if #{m \geq n} then some of these #{a_i} add up to #{0}; indeed, it is an easy exercise to show that there are #{1 \leq i \leq j \leq m} such that #{a_i + a_{i+1} + \cdots + a_j = 0}. [Erdős, Ginzburg and Ziv showed in 1961](000Q) that if #{m} is large enough then we can specify the number of summands: some #{n} of the #{a_i} add up to #{0}. Here we state this theorem in its original form, for the cyclic group #{\mathbb{Z}_n}.}
+
+\transclude{CC1B}
+
+\p{Although the proof above is very simple indeed, later we shall give an algebraic proof as well.}
+
+\transclude{CC1C}
+
+\p{Thus for example it is easy to see that the Davenport constant of the cyclic group #{\mathbb{Z}_n} is exactly #{n}. What about the Davenport constant of the group #{\mathbb{Z}_n^k}? A moment’s thought shows that this is at least #{k(n-1) + 1}, and this is conjectured to be the correct value. This has been proved for #{k = 2}, [by Olson](0014), who also showed it for general #{k} in the case when #{n} is prime. However, the conjecture is open in general. It is remarkable that the Davenport constants of these natural and uncomplicated groups are unknown.}
+
+\p{The problem of finding #{D(G)} was proposed by Harold Davenport at a conference at Ohio State University in 1966. As remarked by Davenport on that occasion, if #{G} is the class group of an algebraic number field #{\mathbb{F}}, then #{D(G)} is the maximal number of prime ideals (counted with multiplicity) in the decomposition of an irreducible integer in #{\mathbb{F}}.}
+
+\transclude{CC1D}
+
+\p{The Fundamental Theorem of Finite Abelian groups tells us that if #{G} is a nontrivial finite Abelian group then #{G = \mathbb{Z}_{n_1} \oplus \cdots \oplus \mathbb{Z}_{n_r}} for some unique integers #{1 < n_1 \mid n_2 \mid \ldots \mid n_r}. The integer #{r = r(G)} is the \em{rank} of #{G}, and we set #{d^*(G) = \sum_{i=1}^r (n_i - 1)}. [Olson proved that](0013) for #{p}-groups (i.e. for groups in which each #{n_i} is a power of the same prime #{p}) the trivial lower bound we have noted for #{D(G)} is, in fact, its value.}
+
+\transclude{CC1E}
+
+\p{Also, [Caro](000L) and [Gao](000S) proved independently that for an Abelian group #{G} the constants #{D(G)} and #{z(G)} are closely connected.}
+
+\transclude{CC1F}
+
+\p{In a later chapter we shall note more recent results about the Davenport and Erdős–Ginzburg–Ziv constants (see e.g. [Alon and Dubiner 1993](000H), [Bollobás and Leader 1999](000I), [Caro 1995](000K), [Caro and Schmitt 2022](000M), [Fox and Sauermann 2018](000R), [Olson 1976](0015), [Yu 2003](0017)).}

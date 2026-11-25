@@ -1,0 +1,20 @@
+\title{Remarks on a zero-sum theorem}
+\taxon{Reference}
+\date{1996}
+\author/literal{Yair Caro}
+\meta{journal}{Journal of Combinatorial Theory, Series A}
+\meta{volume}{76}
+\meta{pages}{315–322}
+\meta{doi}{10.1006/jcta.1996.0108}
+
+\meta{bibtex}{\startverb
+@article{Caro1996,
+  author    = {Caro, Yair},
+  title     = {Remarks on a zero-sum theorem},
+  journal   = {Journal of Combinatorial Theory, Series A},
+  volume    = {76},
+  pages     = {315--322},
+  doi       = {10.1006/jcta.1996.0108},
+  year      = {1996},
+}
+\stopverb}

@@ -1,0 +1,15 @@
+\title{#{\ell}-intersecting families for large #{n}}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{2 \leq \ell < r} be fixed. There is a constant #{n_0(r, \ell)} such that if #{n \geq n_0(r, \ell)} and any two sets in #{\mathcal{A} \subset X^{(r)}} intersect in at least #{\ell} elements, then #{|\mathcal{A}| \leq \binom{n-\ell}{r-\ell}}.}
+
+\proof{
+\p{If some #{\ell}-set is contained in all sets in #{\mathcal{A}}, there is nothing to prove. Otherwise wma that #{\mathcal{A}} is maximal, so there are #{A_1, A_2 \in \mathcal{A}} such that #{|A_1 \cap A_2| = \ell} and, in addition, there is a set #{A_3 \in \mathcal{A}} such that #{|A_1 \cap A_2 \cap A_3| < \ell}. But then a pedestrian checking of cases tells us that every set #{A \in \mathcal{A}} meets #{U = A_1 \cup A_2 \cup A_3} in at least #{\ell + 1} elements, since it has to meet each #{A_i} in at least #{\ell} elements. Finally, as #{|U| \leq 3r}, we find that}
+
+##{|\mathcal{A}| \leq \binom{3r}{\ell+1}\binom{n}{r-\ell -1} < \binom{n-\ell}{r-\ell},}
+
+\p{provided #{n} is large enough, say, #{n \geq (3r)^{\ell+2}}.}
+}

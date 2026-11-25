@@ -1,0 +1,25 @@
+\title{Alon–Nathanson–Ruzsa}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime, and #{A} and #{B} non-empty subsets of #{\mathbb{Z}_p} with #{|A| \neq |B|} and #{|A| + |B| \leq p + 2}. Then}
+
+##{|A \oplus B| \geq |A| + |B| - 2.}
+
+\proof{
+\p{Set #{a = |A|} and #{b = |B|} so that #{a} and #{b} are different natural numbers. We may assume that #{a < b}.}
+
+\p{Suppose our assertion is false, so that #{A \oplus B \subset C \subset \mathbb{Z}_p}, where #{|C| = a + b - 3 < p}. Since #{|A \oplus B| \geq |B| - 1 = b - 1}, we must have #{a \geq 2}. Clearly, the polynomial}
+
+##{f(X, Y) = (Y - X)\prod_{c \in C} (X + Y - c) \in \mathbb{Z}_p[X, Y]}
+
+\p{is identically zero on #{A \times B}.}
+
+\p{On the other hand, #{\deg f = a + b - 2}, and the coefficient of the monomial #{X^{a-1}Y^{b-1}} in #{f} is}
+
+##{\binom{a + b - 3}{a - 1} - \binom{a + b - 3}{a - 2} = \frac{b - a}{a - 1}\binom{a + b - 3}{a - 2} \neq 0 \in \mathbb{Z}_p,}
+
+\p{since #{a + b - 3 < p}. This contradicts ACNS, and so completes our proof.}
+}

@@ -1,0 +1,7 @@
+\title{Necklace splitting}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Every open necklace with #{k} types of bead, an even number of each kind, can be divided between two thieves with at most #{k} cuts such that each thief gets half of the beads of each kind.}

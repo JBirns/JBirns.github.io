@@ -1,0 +1,7 @@
+\title{Non-atomic measure}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{We say that a Borel measure #{\mu} on #{[0, 1]} is \em{continuous} or \em{non-atomic} if every point has zero measure: equivalently, if #{\mu(0, t)} is a continuous function of #{t}.}

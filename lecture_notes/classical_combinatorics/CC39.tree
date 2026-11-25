@@ -1,0 +1,13 @@
+\title{Left compressions and shadows}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given #{1 \leq i < j \leq n}, the \em{left compression operator} #{C_{ij}} is defined as follows. For #{\mathcal{A} \subset \mathcal{P}(n)} and #{A \in \mathcal{A}}, define}
+
+##{C_{ij}(A) = \begin{cases} (A \setminus \lbrace j\rbrace ) \cup \lbrace i\rbrace  & \text{if } j \in A, i \notin A, \text{ and } (A \setminus \lbrace j\rbrace ) \cup \lbrace i\rbrace  \notin \mathcal{A}, \\ A & \text{otherwise,} \end{cases}}
+
+\p{and then set #{C_{ij}(\mathcal{A}) = \lbrace C_{ij}(A) : A \in \mathcal{A}\rbrace }.}
+
+\p{Show that if #{\mathcal{A} \subset [n]^{(r)}} then the lower shadow of #{C_{ij}(\mathcal{A})} is not larger than the shadow of #{\mathcal{A}}. What about the upper shadows?}

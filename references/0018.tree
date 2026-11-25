@@ -1,0 +1,22 @@
+\title{Combinatorial Nullstellensatz}
+\taxon{Reference}
+\date{1999}
+\author/literal{Noga Alon}
+\meta{journal}{Combinatorics, Probability and Computing}
+\meta{volume}{8}
+\meta{pages}{7–29}
+\meta{note}{Recent Trends in Combinatorics (Mátraháza, 1995)}
+\meta{doi}{10.1017/s0963548398003411}
+
+\meta{bibtex}{\startverb
+@article{Alon1999,
+  author    = {Alon, Noga},
+  title     = {Combinatorial Nullstellensatz},
+  journal   = {Combinatorics, Probability and Computing},
+  volume    = {8},
+  pages     = {7--29},
+  note      = {Recent Trends in Combinatorics (M{\'a}trah{\'a}za, 1995)},
+  doi       = {10.1017/s0963548398003411},
+  year      = {1999},
+}
+\stopverb}

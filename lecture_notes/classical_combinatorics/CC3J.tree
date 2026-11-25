@@ -1,0 +1,15 @@
+\title{Equivalent forms of the LSB Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Prove the equivalence of the following five statements of the LSB Theorem, each of which is claimed to hold for all #{d \geq 1}.}
+
+\ul{
+\li{\strong{(i)} For every continuous mapping #{f \colon S^d \to \mathbb{R}^d} there is a point #{x \in S^d} such that #{f(x) = f(-x)}.}
+\li{\strong{(ii)} There is no continuous antipodal map from #{S^d} into #{S^{d-1}}.}
+\li{\strong{(iii)} Every continuous antipodal map #{f \colon S^d \to \mathbb{R}^d} maps a point #{x \in S^d} into #{0}.}
+\li{\strong{(iv)} There is no continuous map #{B^d \to S^{d-1}} which is antipodal on the boundary #{S^{d-1}} of the ball #{B^d \subset \mathbb{R}^d}.}
+\li{\strong{(v)} Let #{\lbrace V_1, \ldots, V_{d+1}\rbrace } be a collection of closed sets covering #{S^d}. Then there is a set #{V_i} that contains a pair of antipodal points, i.e. there is a point #{x \in S^d} such that #{x, -x \in V_i}.}
+}

@@ -1,0 +1,9 @@
+\title{Chains, antichains, graded posets}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Our prime example of a poset is #{\mathcal{P}(n)}, with the relation #{A < B} if #{A \subset B}. First, a poset is \em{trivial} if no two elements are comparable. Needless to say, we are not interested in trivial posets, so all posets we consider are assumed to be nontrivial. In fact, we shall assume more, namely that every poset we consider has a unique maximum and a unique minimum.}
+
+\p{In a poset #{P = (S, <)} a \em{chain} is a subset #{T \subset S} such that any two elements of #{T} are comparable, i.e. #{T = \lbrace t_0, t_1, \ldots, t_k\rbrace } with #{t_0 < t_1 < \cdots < t_k}. This chain has length #{k + 1}. An \em{antichain} is a subset of #{S} in which no two elements are comparable. Trivially, a chain and an antichain meet in at most one element. A poset #{P = (S, <)} is \em{graded} if it has a partition #{S = \bigcup_0^m S_i} into antichains #{S_i} such that if #{x < y} then there is a chain #{x = x_i < x_{i+1} < \cdots < x_j = y} with #{x_h \in S_h} for every #{h}.}

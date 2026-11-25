@@ -1,0 +1,7 @@
+\title{Davenport constant}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{There are a great many problems to do with sumsets that are still open. An important example concerns the \em{Davenport constant} of a (finite Abelian) group #{G} we denote by #{D(G)}. This is defined to be the least #{m} such that any sequence of #{m} elements from #{G} has a non-empty subset summing to zero.}

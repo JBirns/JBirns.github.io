@@ -1,0 +1,20 @@
+\title{A combinatorial problem on finite Abelian groups II}
+\taxon{Reference}
+\date{1969}
+\author/literal{John E. Olson}
+\meta{journal}{Journal of Number Theory}
+\meta{volume}{1}
+\meta{pages}{195–199}
+\meta{doi}{10.1016/0022-314x(69)90037-7}
+
+\meta{bibtex}{\startverb
+@article{Olson1969b,
+  author    = {Olson, John E.},
+  title     = {A combinatorial problem on finite Abelian groups II},
+  journal   = {Journal of Number Theory},
+  volume    = {1},
+  pages     = {195--199},
+  doi       = {10.1016/0022-314x(69)90037-7},
+  year      = {1969},
+}
+\stopverb}

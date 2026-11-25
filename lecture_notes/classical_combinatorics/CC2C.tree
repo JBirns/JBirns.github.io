@@ -1,0 +1,7 @@
+\title{Discrete ham sandwich in general position}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A_1, \ldots, A_d} be finite sets of points in #{\mathbb{R}^d}, with #{\bigcup_{i=1}^d A_i} in general position. Then there is an affine hyperplane such that each of the two open half-spaces it defines contains precisely #{\lfloor |A_i|/2 \rfloor} points of #{A_i} for each #{i}.}

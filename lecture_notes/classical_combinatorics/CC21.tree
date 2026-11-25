@@ -1,0 +1,7 @@
+\title{Proper colouring, chromatic number}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A \em{proper #{k}-colouring} (of the vertices) of a graph #{G = (V, E)} is a map #{\varphi \colon V \to C}, where #{C} is a set of #{k} elements (‘colours’), such that #{\varphi(a) \neq \varphi(b)} whenever #{ab \in E}. Equivalently, a #{k}-colouring is a partition of the vertex set into #{k} independent sets, with empty sets allowed. The \em{chromatic number} #{\chi(G)} of #{G} is the minimal #{k} for which #{G} has a (proper) colouring, i.e. the minimal number of independent sets covering the entire vertex set. Trivially, if #{H \subset G} then #{\chi(H) \leq \chi(G)}; also, #{\chi(G) \geq |G|/\alpha(G)}. [Here, as elsewhere, #{|G| = |V|} is the number of vertices.]}

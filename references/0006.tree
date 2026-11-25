@@ -1,0 +1,21 @@
+\title{The complete intersection theorem for systems of finite sets}
+\taxon{Reference}
+\date{1997}
+\author/literal{Rudolf Ahlswede}
+\author/literal{Levon H. Khachatrian}
+\meta{journal}{European Journal of Combinatorics}
+\meta{volume}{18}
+\meta{pages}{125–136}
+\meta{doi}{10.1006/eujc.1995.0092}
+
+\meta{bibtex}{\startverb
+@article{Ahlswede1997,
+  author    = {Ahlswede, Rudolf and Khachatrian, Levon H.},
+  title     = {The complete intersection theorem for systems of finite sets},
+  journal   = {European Journal of Combinatorics},
+  volume    = {18},
+  pages     = {125--136},
+  doi       = {10.1006/eujc.1995.0092},
+  year      = {1997},
+}
+\stopverb}

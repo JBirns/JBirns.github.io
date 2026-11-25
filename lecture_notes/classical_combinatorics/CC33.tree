@@ -1,0 +1,14 @@
+\title{Symmetrization and #{\varepsilon}-neighbourhoods}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{\varepsilon > 0} the \em{#{\varepsilon}-neighbourhood} of a set #{K \subset \mathbb{R}^n} is #{K_{(\varepsilon)} = \lbrace x \in \mathbb{R}^n : d(x, K) < \varepsilon\rbrace }.}
+
+\p{Given a #{1}-dimensional subspace (line) #{\ell} of #{\mathbb{R}^n}, the \em{#{1}-codimensional symmetrization} (or compression) #{S_\ell(A)} of a bounded open set #{A \subset \mathbb{R}^n} is the set #{B \subset \mathbb{R}^n} defined as follows. For every hyperplane #{H} perpendicular to #{\ell}, the intersection #{B \cap H} is the (#{(n-1)}-dimensional Euclidean) ball of centre #{H \cap \ell} and volume #{\lambda_{n-1}(A \cap H)}. Show that}
+
+##{\lambda\big( A_{(\varepsilon)} \big) \geq \lambda\big( (S_\ell(A))_{(\varepsilon)} \big) 
+ \qquad (1)}
+
+\p{for every #{\varepsilon > 0}.}

@@ -1,0 +1,16 @@
+\title{Combinatorics | Béla Bollobás}
+\taxon{Lecture notes}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{These notes are based on lectures given by Professor [Béla Bollobás](https://en.wikipedia.org/wiki/Béla_Bollobás) for part III of the mathematical tripos and are not endorsed by him. In his words at the time, the content of these notes would serve for use in the revision and expansion of his short old book, ‘[Combinatorics](0005)’, that he was preparing with Professor [Imre Leader](https://www.maths.cam.ac.uk/person/ibl10).}
+
+\p{This was the last course he taught before retiring from his teaching work (his research continues); his reasoning for this being "There is probability #{\epsilon} that I live until next year". Thankfully, and uncharacteristically, he was incorrect in his statement and it turns out that #{\epsilon} was bounded further from 0 than he predicted.}
+
+\ol{
+    \li{[[CC01]]}
+    \li{[[CC1G]]}
+    \li{[[CC1Y]]}
+    \li{[[CC2D]]}
+}

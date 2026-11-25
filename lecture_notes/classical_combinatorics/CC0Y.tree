@@ -1,0 +1,7 @@
+\title{Compressed set}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Call a set #{A \subset Q_n} \em{#{i}-compressed} if #{C_i(A) = A}, and call it \em{compressed} if it is #{i}-compressed for every #{i}.}

@@ -1,0 +1,7 @@
+\title{Finite traces of intersecting families}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A} \subset \mathbb{N}^{(<\omega)}} be an intersecting family of finite subsets of #{\mathbb{N}}. Is there a finite set #{F} such that #{\lbrace A \cap F : A \in \mathcal{A}\rbrace } is also intersecting?}

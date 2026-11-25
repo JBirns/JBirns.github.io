@@ -1,0 +1,16 @@
+\title{Intersecting Sperner families of arcs}
+\taxon{Lemma}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{C} \subset X^{(\leq n/2)}} be an intersecting Sperner family of arcs in a cyclic order #{x_1, x_2, \ldots, x_n} on #{X}, and let #{r} be the minimal length of an arc in #{\mathcal{C}}. Then #{\mathcal{C}} consists of at most #{r} arcs. In particular,}
+
+##{\sum_{C \in \mathcal{C}} 1/|C| \leq 1. 
+ \qquad (1)}
+
+\p{Furthermore, equality holds in (1) if and only if for some point #{x \in X} and integer #{r}, #{1 \leq r \leq n/2}, the family #{\mathcal{C}} is the set of #{r} arcs of length #{r} that contain #{x}.}
+
+\proof{
+\p{Let us assume, as we may, that #{C_0 = \lbrace x_1, \ldots, x_r\rbrace  \in \mathcal{C}} is a shortest arc. For #{r = 1} the assertions are trivial, since #{\mathcal{C} = \lbrace C_0\rbrace }. Otherwise, given #{C \neq C_0}, #{C \in \mathcal{C}}, define #{f(C) = i}, #{1 \leq i \leq r - 1}, if #{C} separates #{x_i} and #{x_{i+1}}, i.e. #{C} contains exactly one of #{x_i} and #{x_{i+1}}. Since every arc has length at most #{n/2}, the map #{f \colon \mathcal{C} \setminus \lbrace C_0\rbrace  \to [r-1]} is an injection, so #{|\mathcal{C}| \leq r}. This implies (1), and the third part is immediate.}
+}

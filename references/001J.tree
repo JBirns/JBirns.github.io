@@ -1,0 +1,22 @@
+\title{Regular subgraphs of almost regular graphs}
+\taxon{Reference}
+\date{1984}
+\author/literal{Noga Alon}
+\author/literal{Shmuel Friedland}
+\author/literal{Gil Kalai}
+\meta{journal}{Journal of Combinatorial Theory, Series B}
+\meta{volume}{37}
+\meta{pages}{79–91}
+\meta{doi}{10.1016/0095-8956(84)90047-9}
+
+\meta{bibtex}{\startverb
+@article{Alon1984,
+  author    = {Alon, Noga and Friedland, Shmuel and Kalai, Gil},
+  title     = {Regular subgraphs of almost regular graphs},
+  journal   = {Journal of Combinatorial Theory, Series B},
+  volume    = {37},
+  pages     = {79--91},
+  doi       = {10.1016/0095-8956(84)90047-9},
+  year      = {1984},
+}
+\stopverb}

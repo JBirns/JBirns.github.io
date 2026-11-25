@@ -1,0 +1,7 @@
+\title{Kruskal–Katona via #{UV}-compressions}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Deduce the Kruskal–Katona theorem from the previous exercise.}

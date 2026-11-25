@@ -1,0 +1,20 @@
+\title{Ein Satz über abelsche Gruppen mit Anwendungen auf die Geometrie der Zahlen}
+\taxon{Reference}
+\date{1955}
+\author/literal{Martin Kneser}
+\meta{journal}{Mathematische Zeitschrift}
+\meta{volume}{61}
+\meta{pages}{429–434}
+\meta{doi}{10.1007/bf01181357}
+
+\meta{bibtex}{\startverb
+@article{Kneser1955,
+  author    = {Kneser, Martin},
+  title     = {Ein Satz {\"u}ber abelsche Gruppen mit Anwendungen auf die Geometrie der Zahlen},
+  journal   = {Mathematische Zeitschrift},
+  volume    = {61},
+  pages     = {429--434},
+  doi       = {10.1007/bf01181357},
+  year      = {1955},
+}
+\stopverb}

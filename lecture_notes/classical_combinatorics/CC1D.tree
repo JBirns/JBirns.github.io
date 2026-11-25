@@ -1,0 +1,7 @@
+\title{Erdős–Ginzburg–Ziv constant}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Another constant defined by sumsets is the \em{Erdős–Ginzburg–Ziv constant} #{z(G)} of a finite Abelian group #{G}: the minimal integer #{z} such that every sequence of length #{z} in #{G} has a subsequence of length #{\exp(G)} summing to #{0}. (As usual, #{\exp(G)} is the \em{exponent} of #{G}, the least common multiple of the orders of the elements of #{G}.)}

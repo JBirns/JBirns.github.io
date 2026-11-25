@@ -1,0 +1,22 @@
+\title{On restricted sums}
+\taxon{Reference}
+\date{2000}
+\author/literal{Yahya Ould Hamidoune}
+\author/literal{Anna S. Lladó}
+\author/literal{Oriol Serra}
+\meta{journal}{Combinatorics, Probability and Computing}
+\meta{volume}{9}
+\meta{pages}{513–518}
+\meta{doi}{10.1017/s096354830000451x}
+
+\meta{bibtex}{\startverb
+@article{Hamidoune2000,
+  author    = {Hamidoune, Yahya Ould and Llad{\'o}, Anna S. and Serra, Oriol},
+  title     = {On restricted sums},
+  journal   = {Combinatorics, Probability and Computing},
+  volume    = {9},
+  pages     = {513--518},
+  doi       = {10.1017/s096354830000451x},
+  year      = {2000},
+}
+\stopverb}

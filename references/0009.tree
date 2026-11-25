@@ -1,0 +1,20 @@
+\title{On the set of divisors of a number}
+\taxon{Reference}
+\date{1951}
+\author/literal{N. G. de Bruijn}
+\author/literal{Cornelia van Ebbenhorst Tengbergen}
+\author/literal{D. Kruyswijk}
+\meta{journal}{Nieuw Archief voor Wiskunde (2)}
+\meta{volume}{23}
+\meta{pages}{191–193}
+
+\meta{bibtex}{\startverb
+@article{deBruijn1951,
+  author    = {de Bruijn, N. G. and van Ebbenhorst Tengbergen, Cornelia and Kruyswijk, D.},
+  title     = {On the set of divisors of a number},
+  journal   = {Nieuw Archief voor Wiskunde (2)},
+  volume    = {23},
+  pages     = {191--193},
+  year      = {1951},
+}
+\stopverb}

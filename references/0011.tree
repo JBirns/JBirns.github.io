@@ -1,0 +1,22 @@
+\title{Geometrie der Zahlen}
+\taxon{Reference}
+\date{1910}
+\author/literal{Hermann Minkowski}
+\meta{series}{Bibliotheca Mathematica Teubneriana, Band 40}
+\meta{pages}{vii+256}
+\meta{publisher}{Teubner}
+\meta{address}{Leipzig and Berlin}
+\meta{note}{Reprinted by Johnson Reprint Corp., New York–London, 1968}
+
+\meta{bibtex}{\startverb
+@book{Minkowski1910,
+  author    = {Minkowski, Hermann},
+  title     = {Geometrie der Zahlen},
+  series    = {Bibliotheca Mathematica Teubneriana, Band 40},
+  pages     = {vii+256},
+  publisher = {Teubner},
+  address   = {Leipzig and Berlin},
+  note      = {Reprinted by Johnson Reprint Corp., New York--London, 1968},
+  year      = {1910},
+}
+\stopverb}

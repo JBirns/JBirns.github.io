@@ -1,0 +1,20 @@
+\title{A theorem in additive number theory}
+\taxon{Reference}
+\date{1961}
+\author/literal{Paul Erdős}
+\author/literal{Abraham Ginzburg}
+\author/literal{Abraham Ziv}
+\meta{journal}{Bulletin of the Research Council of Israel, Section F: Mathematics and Physics}
+\meta{volume}{10}
+\meta{pages}{41–43}
+
+\meta{bibtex}{\startverb
+@article{Erdos1961b,
+  author    = {Erd{\H{o}}s, Paul and Ginzburg, Abraham and Ziv, Abraham},
+  title     = {A theorem in additive number theory},
+  journal   = {Bulletin of the Research Council of Israel, Section F: Mathematics and Physics},
+  volume    = {10},
+  pages     = {41--43},
+  year      = {1961},
+}
+\stopverb}

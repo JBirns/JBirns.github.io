@@ -1,0 +1,11 @@
+\title{Compressed sets are initial segments or exceptional}
+\taxon{Lemma}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{B \subset Q_n} be compressed but not an initial segment in the simplicial order on #{Q_n}. Then #{B} is exactly the exceptional set #{E_n} defined above.}
+
+\proof{
+\p{As #{B} is not an initial segment, there are points #{x, y \in Q_n} such that #{x < y}, #{x \notin B} and #{y \in B}. For #{1 \leq i \leq n} we cannot have #{i \in x} and #{i \in y}, since #{B} is compressed. Similarly, we cannot have #{i \notin x} and #{i \notin y} either. This tells us that the two points (viewed as subsets of #{X}) are complements of each other: #{y = x^c}. Since #{x} determines #{y} and vice versa, #{x} is the only point not in #{B} before a point in #{B}, and #{y} is the only point in #{B} after a point not in #{B}. Consequently, #{y} is the successor of #{x} (in our simplicial order) and writing #{I} for the initial segment ending in #{x}, we have #{B = (I \setminus \lbrace x\rbrace ) \cup \lbrace y\rbrace }. A moment’s thought tells us that there is only one point #{x \in Q_n} such that #{y = x^c} is the successor of #{x}, precisely the point having order #{2^{n-1}} in the simplicial order, giving us that #{B = E_n}.}
+}

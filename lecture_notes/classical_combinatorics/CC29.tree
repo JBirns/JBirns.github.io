@@ -1,0 +1,19 @@
+\title{Ham Sandwich Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mu_1, \ldots, \mu_d} be Borel probability measures on #{\mathbb{R}^d} (i.e. #{\mu_i(\mathbb{R}^d) = 1}) such that every affine hyperplane has measure #{0} in each of the measures. Then there is a half-space of measure #{1/2} in each of the measures.}
+
+\proof{
+\p{\em{Strong Hint.} Let us define a function #{f \colon S^d \to \mathbb{R}^d}, mapping a point #{x \in S^d}, #{x = (x_0, x_1, \ldots, x_d)}, into #{f(x) = (f_1(x), \ldots, f_d(x))} by setting}
+
+##{H(x) = \lbrace y \in \mathbb{R}^d : x_1y_1 + x_2y_2 + \cdots + x_dy_d \leq x_0\rbrace}
+
+\p{and then}
+
+##{f_i(x) = \mu_i(H(x)).}
+
+\p{Note that if #{x_0 = 1} then #{H(x) = \mathbb{R}^d}, so #{f_i(x) = 1} for every #{i}, and if #{x_0 = -1} then #{H(x) = \emptyset}, so #{f_i(x) = 0} for every #{i}; in every other case, #{H(x)} is a closed half-space, and #{f_i(x) + f_i(-x) = 1}. It is easy to show (see Exercise 3) that #{f} is a continuous map. Consequently, by \ref{CC23}(i), #{f(x) = f(-x)} for some #{x \in S^d}, so #{f_i(x) = 1/2} for every #{i}. Hence the half-space #{H(x)} has the desired properties.}
+}

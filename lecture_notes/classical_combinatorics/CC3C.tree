@@ -1,0 +1,40 @@
+\title{Examples III}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{If an exercise has a typo or is wrong, correct it and then solve it.}}
+
+\transclude{CC3D}
+
+\transclude{CC3E}
+
+\transclude{CC3F}
+
+\transclude{CC3G}
+
+\transclude{CC3H}
+
+\transclude{CC3I}
+
+\transclude{CC3J}
+
+\transclude{CC3K}
+
+\transclude{CC3L}
+
+\transclude{CC3M}
+
+##{* \quad * \quad *}
+
+\p{Prove the next five assertions, which were mentioned in \ref{CC26}.}
+
+\transclude{CC28}
+
+\transclude{CC29}
+
+\transclude{CC2A}
+
+\transclude{CC2B}
+
+\transclude{CC2C}

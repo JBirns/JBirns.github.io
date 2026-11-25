@@ -1,0 +1,20 @@
+\title{Sperner systems consisting of pairs of complementary subsets}
+\taxon{Reference}
+\date{1973}
+\author/literal{Béla Bollobás}
+\meta{journal}{Journal of Combinatorial Theory, Series A}
+\meta{volume}{15}
+\meta{pages}{363–366}
+\meta{doi}{10.1016/0097-3165(73)90086-1}
+
+\meta{bibtex}{\startverb
+@article{Bollobas1973,
+  author    = {Bollob{\'a}s, B{\'e}la},
+  title     = {Sperner systems consisting of pairs of complementary subsets},
+  journal   = {Journal of Combinatorial Theory, Series A},
+  volume    = {15},
+  pages     = {363--366},
+  doi       = {10.1016/0097-3165(73)90086-1},
+  year      = {1973},
+}
+\stopverb}

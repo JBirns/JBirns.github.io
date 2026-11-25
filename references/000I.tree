@@ -1,0 +1,21 @@
+\title{The number of k-sums modulo k}
+\taxon{Reference}
+\date{1999}
+\author/literal{Béla Bollobás}
+\author/literal{Imre Leader}
+\meta{journal}{Journal of Number Theory}
+\meta{volume}{78}
+\meta{pages}{27–35}
+\meta{doi}{10.1006/jnth.1999.2405}
+
+\meta{bibtex}{\startverb
+@article{Bollobas1999,
+  author    = {Bollob{\'a}s, B{\'e}la and Leader, Imre},
+  title     = {The number of k-sums modulo k},
+  journal   = {Journal of Number Theory},
+  volume    = {78},
+  pages     = {27--35},
+  doi       = {10.1006/jnth.1999.2405},
+  year      = {1999},
+}
+\stopverb}

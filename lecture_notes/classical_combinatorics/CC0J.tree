@@ -1,0 +1,19 @@
+\title{Symmetric chain decomposition}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The power set #{\mathcal{P}(n)} can be decomposed into symmetric chains. Every symmetric chain decomposition (SCD) consists of #{\binom{n}{\lfloor n/2 \rfloor}} chains.}
+
+\proof{
+\p{We have already noted the second assertion. To prove the first, we apply induction on #{n}, starting with the trivial case #{n = 1}. Thus, let #{n \geq 2}, and suppose that the theorem holds for smaller values of #{n}. Let #{\mathcal{P}(n-1) = \mathcal{C}_1 \cup \mathcal{C}_2 \cup \cdots \cup \mathcal{C}_s} be a partition of #{\mathcal{P}(n-1)} into symmetric chains. From each chain #{\mathcal{C}_i = \lbrace A_1, \ldots, A_k\rbrace }, #{A_1 \subset \cdots \subset A_k} we create two chains:}
+
+##{\mathcal{C}'_i = \lbrace A_1, A_2, \ldots, A_k, A_k \cup \lbrace n\rbrace \rbrace ,}
+
+\p{and}
+
+##{\mathcal{C}''_i = \lbrace A_1 \cup \lbrace n\rbrace , A_2 \cup \lbrace n\rbrace , \ldots, A_{k-1} \cup \lbrace n\rbrace \rbrace .}
+
+\p{Trivially, these are symmetric chains, and taking them all, we get a partition of #{\mathcal{P}(n)}, since the original chains partitioned #{\mathcal{P}(n-1)}.}
+}

@@ -1,0 +1,21 @@
+\title{#{i}-compression}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{To define a \em{#{1}-codimensional #{i}-compression} or simply \em{#{i}-compression}, the compression we shall use, we partition the cube into two faces in every direction. For #{A \subset Q_n \equiv \mathcal{P}(n)} and #{1 \leq i \leq n}, define}
+
+##{\begin{aligned}
+A_-^{(i)} &= \lbrace x : x \in A, i \notin x\rbrace  \subset \mathcal{P}(X \setminus \lbrace i\rbrace ), \\
+A_+^{(i)} &= \lbrace x - i : x \in A, i \in x\rbrace  \subset \mathcal{P}(X \setminus \lbrace i\rbrace ).
+\end{aligned}}
+
+\p{Here, #{A_-^{(i)}} is the part of #{A} on the \em{lower face} #{(Q_n)_-^{(i)}} of #{Q_n} in direction #{i}, and #{A_+^{(i)}} is the part of #{A} on the \em{upper face} #{(Q_n)_+^{(i)}}. Most importantly, #{A_+^{(i)}} and #{A_-^{(i)}} are sets in the cube #{\mathcal{P}(X \setminus \lbrace i\rbrace )}, as in the displayed formulae. Although it could hardly be otherwise, we emphasize that the neighbourhood of #{A_\pm^{(i)}} is taken in #{\mathcal{P}(X \setminus \lbrace i\rbrace )} as well, which is identified with the #{(n-1)}-dimensional cube (or power set) #{\mathcal{P}(n-1)}. Also, a point #{x \in (Q_n)_+^{(i)}} belongs to #{(N(A))_+^{(i)}} if it is either in #{N(A_+^{(i)})} or #{A_-^{(i)}}:}
+
+##{(N(A))_+^{(i)} = N(A_+^{(i)}) \cup A_-^{(i)} \subset \mathcal{P}(X \setminus \lbrace i\rbrace ), 
+ \qquad (1)}
+
+\p{and the same holds with #{+} and #{-} interchanged.}
+
+\p{For #{1 \leq i \leq n} we define the \em{#{i}-compression} #{C_i(A)} of a set #{A \subset Q_n} to be the set #{B \subset Q_n} such that #{B_\pm^{(i)}} is the initial segment of length #{|A_\pm^{(i)}|} in the simplicial order on #{\mathcal{P}(X \setminus \lbrace i\rbrace )}. By definition (and as any compression operator worth its salt), an #{i}-compression does not change the cardinality of a set. Also, every initial segment is invariant under these compressions.}

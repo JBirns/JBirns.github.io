@@ -1,0 +1,22 @@
+\title{Intersection theorems for systems of finite sets}
+\taxon{Reference}
+\date{1961}
+\author/literal{Paul Erdős}
+\author/literal{Chao Ko}
+\author/literal{Richard Rado}
+\meta{journal}{The Quarterly Journal of Mathematics. Oxford. Second Series}
+\meta{volume}{12}
+\meta{pages}{313–320}
+\meta{doi}{10.1093/qmath/12.1.313}
+
+\meta{bibtex}{\startverb
+@article{Erdos1961,
+  author    = {Erd{\H{o}}s, Paul and Ko, Chao and Rado, Richard},
+  title     = {Intersection theorems for systems of finite sets},
+  journal   = {The Quarterly Journal of Mathematics. Oxford. Second Series},
+  volume    = {12},
+  pages     = {313--320},
+  doi       = {10.1093/qmath/12.1.313},
+  year      = {1961},
+}
+\stopverb}

@@ -1,0 +1,19 @@
+\title{Combinatorics: Set Systems, Hypergraphs, Families of Vectors, and Combinatorial Probability}
+\taxon{Reference}
+\date{1986}
+\author/literal{Béla Bollobás}
+\meta{publisher}{Cambridge University Press, Cambridge}
+\meta{pages}{xii+177}
+\meta{isbn}{978-0-521-33703-8}
+
+\meta{bibtex}{\startverb
+@book{Bollobas1986,
+  author    = {Bollob{\'a}s, B{\'e}la},
+  title     = {Combinatorics: Set Systems, Hypergraphs, Families of Vectors, and Combinatorial Probability},
+  publisher = {Cambridge University Press},
+  address   = {Cambridge},
+  year      = {1986},
+  pages     = {xii+177},
+  isbn      = {978-0-521-33703-8},
+}
+\stopverb}

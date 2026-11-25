@@ -1,0 +1,7 @@
+\title{Simplicial, lex and colex orders}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The canonical order solving the vertex-isoperimetric problem in the cube #{Q_n} is the \em{simplicial order}, in which for #{x, y \in Q_n} we have #{x < y} if #{|x| < |y|} or #{|x| = |y| = r} and #{x < y} in the lex order on #{X^{(r)}}. In the \em{lex order} on #{X^{(r)}} we have #{x < y} if #{\min x \triangle y \in x}, and #{x < y} in the \em{colex order} if #{\max x \triangle y \in y}. Thus on #{Q_4} the simplicial order is #{\emptyset, 1, 2, 3, 4, 12, 13, 14, 23, 24, 34, 123, 124, 134, 234, 1234}; on #{[4]^{(2)}} the lex order is #{12, 13, 14, 23, 24, 34}, and the colex order is #{12, 13, 23, 14, 24, 34}. Unless stated otherwise, by an \em{initial segment} we mean an initial segment of #{Q_n} in the simplicial order. Note that, rather trivially, the neighbourhood of an initial segment is again an initial segment.}

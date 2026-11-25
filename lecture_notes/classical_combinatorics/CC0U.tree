@@ -1,0 +1,20 @@
+\title{Vertex isoperimetric problem}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Our main concern will be the discrete (rather than continuous) case. Given a graph #{G = (V, E)}, the \em{vertex isoperimetric problem} in #{G} is as follows: given a set #{A \subset V} of #{a} vertices, at least how large is its \em{closed neighbourhood}}
+
+##{\begin{aligned}
+N(A) &= \lbrace x \in V : d(x, A) \leq 1\rbrace  \\
+&= A \cup \lbrace x \in V \setminus A : xy \in E \text{ for some vertex } y \in A\rbrace
+\end{aligned}}
+
+\p{in terms of #{a}?}
+
+\p{In a variant of this problem, we start with a bipartite or #{r}-partite graph, and study the neighbourhood of a set #{A} contained in one of the parts. Thus, let #{G} be a bipartite graph with bipartition #{(V_1, V_2)} and edge set #{E}. Given a set #{A \subset V_1} with #{a} vertices, we should like to know at least how large the \em{open neighbourhood}}
+
+##{\Gamma(A) = \lbrace y \in V_2 : xy \in E \text{ for some vertex } x \in A\rbrace}
+
+\p{is in terms of #{a}. (Here it is nicer to take the open neighbourhood since the closed neighbourhood of a set #{A \subset V_1} is just #{N(A) = A \cup \Gamma(A)}.)}

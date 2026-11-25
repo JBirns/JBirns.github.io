@@ -1,0 +1,21 @@
+\title{Exceptional sets #{E_n}}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{n} odd, #{n = 2k + 1 \geq 3}, the bottom half-cube, i.e. the initial segment of length #{2^{n-1}} in the simplicial order on #{Q_n}, is #{H_n = X^{(\leq k)}}, which ends in #{x = \big( (k+2)\ldots(2k)(2k+1) \big)}, and is followed by #{y = \big( 12\ldots k(k+1) \big)}. [The set #{x} is the last set with #{k} elements, and #{y} is the first with #{k + 1}.] Exchanging #{x} and #{y}, we obtain}
+
+##{E_n = \big( H_n \cup \lbrace y\rbrace  \big) \setminus \lbrace x\rbrace .}
+
+\p{Then #{E_n} is compressed, but not an initial segment. (Here the expression ‘bottom half-cube’ is misleading, as we are not talking about the bottom \em{face} of the cube in some direction, but the bottom half of the power set #{\mathcal{P}(X)}, in which the ‘height’ of a subset is its cardinality. Simply: the collection of subsets of #{X} of size less than #{|X|/2}.)}
+
+\p{Similarly, for #{n} even, #{n = 2k \geq 4}, the set}
+
+##{H_n = X^{(\leq k-1)} \cup \big( (X \setminus \lbrace 1\rbrace )^{(k-1)} + 1 \big)}
+
+\p{is the half-cube in the simplicial order on #{Q_n}. The last element of #{H_n} is #{x = \big( 1(k+2)(k+3)\ldots(2k) \big)}, and the successor of #{x} is #{y = 23\ldots(k+1)}. Exchange #{x} and #{y} to obtain}
+
+##{E_n = \big( H_n \cup \lbrace y\rbrace  \big) \setminus \lbrace x\rbrace .}
+
+\p{Then #{E_n} is compressed, but is not an initial segment.}

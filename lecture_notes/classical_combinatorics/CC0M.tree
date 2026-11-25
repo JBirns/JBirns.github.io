@@ -1,0 +1,9 @@
+\title{Cyclic order, arc}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{As usual, we take #{X} to be a set with #{n} elements. In a \em{cyclic order} on #{X}, the elements of #{X} are in an order #{x_1, x_2, \ldots, x_n}, with #{x_{i+1}} the successor of #{x_i}, and #{x_1} succeeding #{x_n}. Note that there are #{(n-1)!} cyclic orders on #{X}. An \em{arc} in a cyclic order on #{X} is a set consisting of successive elements: #{x_i, x_{i+1}, \ldots, x_j}. Needless to say, we may have #{i \leq n} and #{1 \leq j}; e.g. for #{n = 7} the set #{\lbrace x_1, x_2, x_6, x_7\rbrace } is an arc, as seen from the form #{\lbrace x_6, x_7, x_1, x_2\rbrace }. In particular, in a cyclic order on #{n} for #{1 \leq k < n} there are #{n} arcs of length #{k}, i.e. with #{k} elements.}
+
+\p{More formally, a cyclic order on #{X} is a cyclic permutation #{\pi} of #{X}, and an \em{arc in #{\pi}}, or a \em{#{\pi}-arc}, is a set of size #{k - h + 1 \leq n} of the form #{\lbrace x_h, x_{h+1}, \ldots, x_k\rbrace }, where #{\pi(x_i) = x_{i+1}} for #{h \leq i < k}.}

@@ -1,0 +1,7 @@
+\title{Vertex isoperimetry in the grid}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{[n]^2} be the #{n \times n} grid with #{n^2} vertices and #{2n(n-1)} edges. Give an order on #{[n]^2} whose initial segments are best for the vertex isoperimetric problem.}

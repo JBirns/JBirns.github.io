@@ -1,0 +1,10 @@
+\title{Weak Nullstellensatz}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f_1, \ldots, f_m \in \mathbb{F}[X]} have no common zero in #{K^n}, where #{K} is an algebraically closed extension of #{\mathbb{F}}. Then the ideal these polynomials generate is the entire polynomial ring #{\mathbb{F}[X]}, i.e. there are polynomials #{g_1, \ldots, g_m \in \mathbb{F}[X]} that satisfy the \em{Bézout equation}}
+
+##{1 = g_1f_1 + \cdots + g_mf_m. 
+ \qquad (1)}

@@ -1,0 +1,18 @@
+\title{Die Frage der endlich vielen Schritte in der Theorie der Polynomideale}
+\taxon{Reference}
+\date{1926}
+\author/literal{Grete Hermann}
+\meta{journal}{Mathematische Annalen}
+\meta{volume}{95}
+\meta{pages}{736–788}
+
+\meta{bibtex}{\startverb
+@article{Hermann1926,
+  author    = {Hermann, Grete},
+  title     = {Die Frage der endlich vielen Schritte in der Theorie der Polynomideale},
+  journal   = {Mathematische Annalen},
+  volume    = {95},
+  pages     = {736--788},
+  year      = {1926},
+}
+\stopverb}

@@ -1,0 +1,7 @@
+\title{The 2023rd element in colex}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{What is the #{2023^{\text{rd}}} element of #{\mathbb{N}^{(5)}} in the colex order?}

@@ -1,0 +1,11 @@
+\title{Differences of enumerations of #{\mathbb{Z}_p}}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{[This is the correct place and correct form of what used to be \ref{CC3B}.] Let #{a_1, \ldots, a_n} and #{c_1, \ldots, c_n} be two enumerations of the elements of #{\mathbb{Z}_p}, and set #{b_i = c_i - a_i}. Then, trivially, #{\sum_{i=1}^n b_i = 0}. Show that this trivial condition suffices for the existence of two enumerations of #{\mathbb{Z}_p}, #{(a_i)} and #{(c_i)}, which give the sequence #{(b_i)}.}
+
+\p{To spell it out, let #{p} be a prime, and let #{b_1, \ldots, b_n \in \mathbb{Z}_p} be such that #{\sum_{i=1}^n b_i = 0}. Prove that there are enumerations #{a_1, \ldots, a_n} and #{c_1, \ldots, c_n} of the elements of #{\mathbb{Z}_p} such that for every #{i}, #{1 \leq i \leq n}, we have}
+
+##{a_i + b_i = c_i.}

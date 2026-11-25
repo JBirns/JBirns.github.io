@@ -1,0 +1,20 @@
+\title{On a combinatorial problem of Erdős, Ginzburg, and Ziv}
+\taxon{Reference}
+\date{1976}
+\author/literal{John E. Olson}
+\meta{journal}{Journal of Number Theory}
+\meta{volume}{8}
+\meta{pages}{52–57}
+\meta{doi}{10.1016/0022-314x(76)90021-4}
+
+\meta{bibtex}{\startverb
+@article{Olson1976,
+  author    = {Olson, John E.},
+  title     = {On a combinatorial problem of Erd{\H{o}}s, Ginzburg, and Ziv},
+  journal   = {Journal of Number Theory},
+  volume    = {8},
+  pages     = {52--57},
+  doi       = {10.1016/0022-314x(76)90021-4},
+  year      = {1976},
+}
+\stopverb}

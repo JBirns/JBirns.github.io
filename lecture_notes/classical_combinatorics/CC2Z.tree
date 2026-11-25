@@ -1,0 +1,17 @@
+\title{#{UV}-compressions and shadows}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{U, V \subset X} with #{|U| = |V|} and #{U \cap V = \emptyset}, define the \em{#{UV}-compression} of a set #{A \subset X} as follows:}
+
+##{C_{UV}(A) = \begin{cases} (A \cup U) \setminus V & \text{if } V \subset A, A \cap U = \emptyset, \\ A & \text{otherwise.} \end{cases}}
+
+\p{Furthermore, for #{\mathcal{A} \subset \mathcal{P}(n)}, set}
+
+##{C_{UV}(\mathcal{A}) = \lbrace C_{UV}(A) : A \in \mathcal{A}\rbrace  \bigcup \lbrace A \in \mathcal{A} : C_{UV}(A) \in \mathcal{A}\rbrace .}
+
+\p{We say that #{\mathcal{A}} is \em{#{UV}-compressed} if #{C_{UV}(\mathcal{A}) = \mathcal{A}}.}
+
+\p{Let #{U, V \subset X} with #{|U| = |V|} and #{\max U < \max V}. Suppose that #{\mathcal{A}} is #{U'V'}-compressed for all #{|U'| = |V'| < |U| = |V|} with #{\max U' < \max V'}. Show that #{\partial C_{UV}(\mathcal{A}) \subset C_{UV}(\partial\mathcal{A})}.}

@@ -1,0 +1,21 @@
+\title{Erdős–Ginzburg–Ziv constants by avoiding three-term arithmetic progressions}
+\taxon{Reference}
+\date{2018}
+\author/literal{Jacob Fox}
+\author/literal{Lisa Sauermann}
+\meta{journal}{Electronic Journal of Combinatorics}
+\meta{volume}{25}
+\meta{pages}{Paper 2.14, 9 pp.}
+\meta{doi}{10.37236/7275}
+
+\meta{bibtex}{\startverb
+@article{Fox2018,
+  author    = {Fox, Jacob and Sauermann, Lisa},
+  title     = {Erd{\H{o}}s--Ginzburg--Ziv constants by avoiding three-term arithmetic progressions},
+  journal   = {Electronic Journal of Combinatorics},
+  volume    = {25},
+  pages     = {Paper 2.14, 9 pp.},
+  doi       = {10.37236/7275},
+  year      = {2018},
+}
+\stopverb}

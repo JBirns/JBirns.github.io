@@ -1,0 +1,88 @@
+\title{Chains, Antichains and Scattered Sets of Vectors}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In 1943, in the Soviet journal \em{Matematicheskiy Sbornik}, Littlewood and Offord published the third part of their series of papers entitled \em{On the number of real roots of a random algebraic equation}. The first part, in the Journal of the LMS, appeared later, in 1945, and the second part even later, in 1948, in Annals of Mathematics. With these papers Littlewood and Offord launched the detailed study of random polynomials as a serious subject, and since then investigations along similar lines have gone from strength to strength.}
+
+\p{One of the lemmas Littlewood and Offord needed was the following. Let #{z_1, \ldots, z_n} be complex numbers, each of modulus at least #{1}, and let #{r} be a positive constant. Consider the #{2^n} sums #{\sum_{k=1}^n \varepsilon_k z_k}, where the #{\varepsilon_k} are #{\pm 1}. Then the number of these sums that fall into a circle of radius #{r} is not greater than #{cr2^n(\log n)n^{-1/2}} for a constant depending on #{r}. Soon after the publication of this paper, Erdős sharpened this result for real numbers and radius #{1} by appealing to Sperner’s theorem. In this section we shall prove this fundamental theorem of combinatorics together with some of its extensions and consequences, including an extension of the Littlewood–Offord lemma in a sharp form.}
+
+\p{We start by recalling a fundamental theorem of graph theory, the Kőnig–Egerváry–Hall Theorem, which in Cambridge we tend to call Hall’s Marriage Theorem, or Hall’s Matching Theorem, or simply Hall’s Theorem. This theorem (and almost every other result in this section) should be familiar to every mathematician, just as the Weierstrass Approximation Theorem, the Structure Theorem of Finite Abelian Groups, the PNT and the Law of Large Numbers must be familiar to all.}
+
+\p{Given a bipartite graph #{G = (U, W; E)}, i.e. a bipartite graph with bipartition #{(U, W)}, a \em{complete matching (CM) from #{U} into #{W}} is a subgraph #{H \subset G} such that #{d_H(u) = 1} for every #{u \in U}, and #{d_H(w) \leq 1} for every #{w \in W}.}
+
+\transclude{CC03}
+
+\p{We leave the proof as an exercise.}
+
+\transclude{CC04}
+
+\transclude{CC05}
+
+\transclude{CC06}
+
+\transclude{CC07}
+
+\transclude{CC08}
+
+\p{Put simply, this ‘theorem’ states the important basic fact that in a biregular graph #{(U, W; E)} the proportion of neighbours of a set #{A \subset U} in #{W} is at least as large as the proportion of #{A} in #{U}.}
+
+\transclude{CC09}
+
+\p{A standard and, for us, very important, example of a biregular graph has bipartition #{X^{(r)}, X^{(s)}}, and the edges are given by containment.}
+
+\transclude{CC0A}
+
+\transclude{CC0B}
+
+\transclude{CC0C}
+
+\p{Let us note the observation of Erdős that \ref{CC0C} implies the sharp form of the Littlewood–Offord Lemma for real numbers.}
+
+\transclude{CC0D}
+
+\p{The proof of \ref{CC0C} we have given is natural, but rather pedestrian. Next, we shall present a substantial extension of this theorem to regular graded posets.}
+
+\transclude{CC0E}
+
+\transclude{CC0F}
+
+\transclude{CC0G}
+
+\p{We prepare our second proof of the extension \ref{CC0G} by noting some properties of maximal chains. Keeping the notation of \ref{CC0G}, let #{r_i, s_i} be the parameters of #{P}, so that #{r_m = 0} and #{s_0 = 0}. Let #{M} be the total number of maximal chains and, for #{x \in S}, let #{m(x)} be the number of maximal chains containing #{x}. Note that if #{x \in S_h} then}
+
+##{m(x) = \bigg( \prod_{i=1}^h s_i \bigg)\bigg( \prod_{i=h}^{m-1} r_i \bigg),}
+
+\p{so #{m(x)} depends only on the level of #{x}. Also, every maximal chain meets #{S_h} in precisely one element, so if #{x \in S_h} then}
+
+##{m(x) = M/|S_h|.}
+
+\p{From here the second proof of \ref{CC0G} could hardly be simpler.}
+
+\p{In #{\mathcal{P}(X) = \mathcal{P}(n)}, our quintessential regular graded poset with level sets #{X^{(h)}}, an antichain is also called a \em{Sperner family} or a \em{Sperner system}. In #{\mathcal{P}(n)} both #{M} and #{m(x)} are trivially computed, so we obtain the following extension of Sperner’s Theorem, \ref{CC0C}, noted by Meshalkin (1963), Bollobás (1965) and Lubell (1966). The elegant proof below, based on maximal chains, was found by Lubell. The previous proofs arose from this proof.}
+
+\transclude{CC0H}
+
+\p{It is easy to reformulate this proof of \ref{CC0H} without mentioning maximal chains in #{\mathcal{P}(n)}. We say that a set #{A \in \mathcal{P}(n)} is \em{contained in a permutation} #{x_1x_2\ldots x_n} of #{[n]} if #{A = \lbrace x_1, \ldots, x_k\rbrace }, where #{k = |A|}, so that every set of order #{k} is contained in #{k!(n-k)!} permutations. Since every permutation contains at most one set in #{\mathcal{F}}, we find that}
+
+##{\sum_{F \in \mathcal{F}} |F|!(n - |F|)! \leq n!,}
+
+\p{as required.}
+
+\transclude{CC0I}
+
+\transclude{CC0J}
+
+\p{Strictly speaking, the proof above is not quite correct: we have deliberately failed to emphasize the obvious, that a chain #{\mathcal{C}''_i} may be empty, in which case we just discard it. Indeed, if #{\mathcal{C}_i} has length #{1}, i.e. consists of a set of size #{(n-1)/2}, then #{\mathcal{C}''_i} is defined to be the empty set. If each chain #{\mathcal{C}_i} in #{\mathcal{P}(n-1)} gave rise to two chains in #{\mathcal{P}(n)}, then the number of chains would grow as #{2^{n-1}} (as #{\mathcal{P}(1)} is partitioned into one symmetric chain), which is impossible.}
+
+\p{In a SCD of #{\mathcal{P}(n)} the number of chains that start at level #{i \leq n/2} is clearly #{\binom{n}{i} - \binom{n}{i-1}}, since for every #{j}, #{1 \leq j \leq n/2}, every symmetric chain containing a set at level #{j - 1} must have a set at level #{j} as well.}
+
+\p{In order to extend \ref{CC0D} from real numbers to vectors in normed spaces, Kleitman used a partition of #{\mathcal{P}(n)} into families whose \em{profile} is the same as the profile of a partition into symmetric chains, i.e. it is such that for #{0 \leq i \leq n/2} it contains exactly}
+
+##{\ell(n, i) = \binom{n}{i} - \binom{n}{i-1}}
+
+\p{families with #{n + 1 - 2i} sets, where #{\binom{n}{-1}} is defined to be #{0}.}
+
+\transclude{CC0K}
+
+\p{In the proof above the calculations involving #{\ell(n, i)} and various binomial coefficients are not needed, using them was an overkill. All we have to note is that the way the profile of a decomposition of #{\mathcal{P}(n-1)} is turned into the profile of a decomposition of #{\mathcal{P}(n)} is the same for an SCD as it was for an SDSS.}

@@ -1,0 +1,22 @@
+\title{Every 4-regular graph plus an edge contains a 3-regular subgraph}
+\taxon{Reference}
+\date{1984}
+\author/literal{Noga Alon}
+\author/literal{Shmuel Friedland}
+\author/literal{Gil Kalai}
+\meta{journal}{Journal of Combinatorial Theory, Series B}
+\meta{volume}{37}
+\meta{pages}{92–93}
+\meta{doi}{10.1016/0095-8956(84)90048-0}
+
+\meta{bibtex}{\startverb
+@article{Alon1984b,
+  author    = {Alon, Noga and Friedland, Shmuel and Kalai, Gil},
+  title     = {Every 4-regular graph plus an edge contains a 3-regular subgraph},
+  journal   = {Journal of Combinatorial Theory, Series B},
+  volume    = {37},
+  pages     = {92--93},
+  doi       = {10.1016/0095-8956(84)90048-0},
+  year      = {1984},
+}
+\stopverb}

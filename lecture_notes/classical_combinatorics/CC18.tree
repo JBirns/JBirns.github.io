@@ -1,0 +1,19 @@
+\title{Cauchy–Davenport theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and #{A} and #{B} two non-empty subsets of #{\mathbb{Z}_p} such that #{|A| + |B| \leq p + 1}. Then #{|A + B| \geq |A| + |B| - 1}.}
+
+\proof{
+\p{Assuming, as we may, that #{1 \leq |A| \leq |B|}, we shall apply induction on #{|A|}. For #{|A| = 1} our inequality is trivial, so we turn to the induction step. We may assume that #{0, a \in A}, where #{a \neq 0}. Since #{\lbrace a, 2a, \ldots, (p-1)a, pa\rbrace  = \mathbb{Z}_p}, there is a #{k \geq 0} such that #{ka \in B} and #{(k+1)a \notin B}. As we may replace #{B} by #{B - ka}, we may assume that #{0 \in B} and #{a \notin B}. But then #{1 \leq |A \cap B| < |A|}, so the induction hypothesis is applicable to the sets #{A \cap B} and #{A \cup B}. Since}
+
+##{(A \cap B) + (A \cup B) \subset A + B,}
+
+\p{we have}
+
+##{|A + B| \geq |(A \cap B) + (A \cup B)| \geq |A \cap B| + |A \cup B| - 1 = |A| + |B| - 1,}
+
+\p{completing our proof.}
+}

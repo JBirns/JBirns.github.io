@@ -1,0 +1,16 @@
+\title{The isoperimetric inequality in #{\mathbb{R}^n}}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Deduce from (1) the following version of the classical isoperimetric inequality in #{\mathbb{R}^n}. Let #{A \subset \mathbb{R}^n} be such that}
+
+##{\inf_{\varepsilon > 0} \lambda(A_{(\varepsilon)}) = \lambda(B) > 0,}
+
+\p{where #{B \subset \mathbb{R}^n} is a Euclidean ball. Then}
+
+##{\lambda(A_{(\varepsilon)}) \geq \lambda(B_{(\varepsilon)}) 
+ \qquad (2)}
+
+\p{for every #{\varepsilon > 0}.}

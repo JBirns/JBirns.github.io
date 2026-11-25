@@ -1,0 +1,20 @@
+\title{On a problem of Purdy related to Sperner systems}
+\taxon{Reference}
+\date{1974}
+\author/literal{J. Schönheim}
+\meta{journal}{Canadian Mathematical Bulletin}
+\meta{volume}{17}
+\meta{pages}{135–136}
+\meta{doi}{10.4153/cmb-1974-029-1}
+
+\meta{bibtex}{\startverb
+@article{Schonheim1974,
+  author    = {Sch{\"o}nheim, J.},
+  title     = {On a problem of Purdy related to Sperner systems},
+  journal   = {Canadian Mathematical Bulletin},
+  volume    = {17},
+  pages     = {135--136},
+  doi       = {10.4153/cmb-1974-029-1},
+  year      = {1974},
+}
+\stopverb}

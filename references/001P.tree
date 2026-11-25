@@ -1,0 +1,20 @@
+\title{3-regular subgraphs of 4-regular graphs}
+\taxon{Reference}
+\date{1984}
+\author/literal{V. A. Tashkinov}
+\meta{journal}{Matematicheskie Zametki}
+\meta{volume}{36}
+\meta{pages}{239–259}
+\meta{note}{In Russian}
+
+\meta{bibtex}{\startverb
+@article{Tashkinov1984,
+  author    = {Tashkinov, V. A.},
+  title     = {3-regular subgraphs of 4-regular graphs},
+  journal   = {Matematicheskie Zametki},
+  volume    = {36},
+  pages     = {239--259},
+  note      = {In Russian},
+  year      = {1984},
+}
+\stopverb}

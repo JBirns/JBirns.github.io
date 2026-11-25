@@ -1,0 +1,9 @@
+\title{Biregular bipartite graph, weight}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A bipartite graph #{G = (U, W; E)} is said to be \em{#{(k, \ell)}-regular} if #{d(u) = k \geq 1} and #{d(w) = \ell} for all #{u \in U} and #{w \in W}. Also, a bipartite graph is \em{biregular} if it is #{(k, \ell)}-regular for some natural numbers #{k} and #{\ell}.}
+
+\p{For a bipartite graph with bipartition #{(U, W)}, we shall find it useful to define the \em{weight} or \em{measure} of a set #{T \subset U} as #{w(T) = |T|/|U|}; similarly, for #{T \subset W}, we write #{w(T) = |T|/|W|}.}

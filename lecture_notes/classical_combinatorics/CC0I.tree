@@ -1,0 +1,7 @@
+\title{Symmetric chain}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The partition of #{\mathcal{P}(X)} into chains used in the proof of \ref{CC0C} is rather haphazard: essentially all we proved is that it exists. Next, following Kleitman, we shall show that there is a [partition into so-called symmetric chains](0009). A \em{symmetric chain} in #{\mathcal{P}(X)} is a nested sequence #{(C_j)_i^{n-i}} of subsets of #{X} such that #{|C_j| = j} for every #{j}. This symmetric chain has length #{n + 1 - 2i}: it can be obtained from a maximal chain (i.e. a chain of length #{n + 1}) by deleting its first #{i} and last #{i} sets. Thus, for #{n = 6}, the chain #{\lbrace 4\rbrace  \subset \lbrace 2, 4\rbrace  \subset \lbrace 1, 2, 4\rbrace  \subset \lbrace 1, 2, 4, 6\rbrace  \subset \lbrace 1, 2, 4, 5, 6\rbrace } is symmetric, and so is #{\lbrace 2, 3, 6\rbrace }, but #{\lbrace 3, 5\rbrace  \subset \lbrace 2, 3, 5\rbrace } is not. Clearly, the parity of the length of a symmetric chain in #{\mathcal{P}(X) = \mathcal{P}(n)} is different from the parity of #{n}. Also, the definition implies that every symmetric chain contains a set of size #{\lfloor n/2 \rfloor} and a set of size #{\lceil n/2 \rceil} – needless to say, for #{n} even these two sets coincide.}

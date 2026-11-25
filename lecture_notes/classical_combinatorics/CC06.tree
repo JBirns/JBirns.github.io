@@ -1,0 +1,15 @@
+\title{Degree condition for a complete matching}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a bipartite graph with bipartition #{(U, W)}. Suppose that #{d(u) \geq d(w) \geq 1} for all #{u \in U} and #{w \in W}. Then there is a complete matching from #{U} into #{W}.}
+
+\proof{
+\p{Pick an integer #{d} (say, let #{d} be the maximal degree in #{W}) such that #{d(w) \leq d \leq d(u)} for all #{u \in U} and #{w \in W}. Then for every #{A \subset U},}
+
+##{d|A| \leq e(A, \Gamma(A)) \leq d|\Gamma(A)|,}
+
+\p{so we are done by \ref{CC03}.}
+}

@@ -1,0 +1,11 @@
+\title{Weighted sums of Bernoulli variables}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{Z_1, \ldots, Z_n} be i.i.d. Bernoulli random variables with mean #{p \geq 1/2}. [Thus #{\mathbb{P}(Z_i = 1) = p} and #{\mathbb{P}(Z_i = 0) = 1 - p}.] Let #{c_1, \ldots, c_n} be positive reals summing to #{1}. Show that}
+
+##{\mathbb{P}\Big( \sum_{i=1}^n c_iZ_i \geq 1/2 \Big) \geq p.}
+
+\p{\em{Hint.} Check that wma that #{n} is odd.}

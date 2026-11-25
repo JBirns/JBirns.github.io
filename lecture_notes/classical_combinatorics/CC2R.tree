@@ -1,0 +1,7 @@
+\title{Small witnesses for intersecting families of #{3}-sets}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Show that there is an integer #{m} such that if #{\mathcal{A} \subset \mathbb{N}^{(\leq 3)}} is a finite intersecting family then there is a set #{M \in \mathbb{N}^{(m)}} such that #{A_i \cap A_j \cap M \neq \emptyset} for all #{A_i, A_j \in \mathcal{A}}. How small an #{m} can you guarantee?}

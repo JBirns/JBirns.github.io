@@ -1,0 +1,7 @@
+\title{Orders on the reals with successors}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Is there an order on the reals in which every number has a predecessor and a successor? [In the standard order, a real number has neither a predecessor nor a successor.]}

@@ -1,0 +1,20 @@
+\title{A simple proof of the Erdős–Chao Ko–Rado theorem}
+\taxon{Reference}
+\date{1972}
+\author/literal{Gyula O. H. Katona}
+\meta{journal}{Journal of Combinatorial Theory, Series B}
+\meta{volume}{13}
+\meta{pages}{183–184}
+\meta{doi}{10.1016/0095-8956(72)90054-8}
+
+\meta{bibtex}{\startverb
+@article{Katona1972,
+  author    = {Katona, Gyula O. H.},
+  title     = {A simple proof of the Erd{\H{o}}s--Chao Ko--Rado theorem},
+  journal   = {Journal of Combinatorial Theory, Series B},
+  volume    = {13},
+  pages     = {183--184},
+  doi       = {10.1016/0095-8956(72)90054-8},
+  year      = {1972},
+}
+\stopverb}

@@ -1,0 +1,31 @@
+\title{Greene’s extension of LSB}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For every cover of #{S^d} with #{d + 1} sets, each of which is either open or closed, one of the sets contains a pair of antipodal points.}
+
+\proof{
+\p{For #{0 \leq k \leq d + 1}, let #{\lbrace V_1, \ldots, V_k\rbrace  \cup \lbrace U_{k+1}, \ldots, U_{d+1}\rbrace } be a cover of #{S^d}, with each #{V_i} closed and each #{U_j} open. Our task is to show that one of these #{d + 1} sets contains a pair of antipodal points.}
+
+\p{\em{Case 1:} #{k = d + 1}. This is part (ii) of the LSB Theorem, \ref{CC23}.}
+
+\p{\em{Case 2:} #{k = 0}. In this case #{\lbrace U_1, \ldots, U_{d+1}\rbrace } is an open cover of #{S^d}. Let #{\lambda > 0} be a Lebesgue number of this cover #{S^d = \bigcup_{i=1}^{d+1} U_i}, so that every open ball of radius #{\lambda} in #{S^d} is contained in (at least) one of the sets #{U_i}. Set}
+
+##{V_i = \lbrace x \in S^d : \operatorname{dist}(x, \overline{U}_i) \geq \lambda /2\rbrace ,}
+
+\p{where #{\overline{U}_i = S^d \setminus U_i} is the complement of #{U_i}. Then #{V_i} is a closed subset of #{U_i} and #{S^d = \bigcup_{i=1}^{d+1} V_i}. By \ref{CC23}(ii), some #{V_i} contains a pair of antipodes #{x, -x}, and so #{\lbrace x, -x\rbrace  \subset V_i \subset U_i}.}
+
+\p{\em{Case 3:} #{1 \leq k \leq d}. Suppose for a contradiction that neither a set #{V_i} nor a set #{U_j} contains a pair of antipodes. It is easy to see that for every #{i}, #{1 \leq i \leq k}, there is an open set #{U_i} containing #{V_i} that still fails to contain a pair of antipodes. But then the open cover #{\lbrace U_1, \ldots, U_{d+1}\rbrace } contradicts Case 2.}
+
+\p{To define #{U_i} precisely, for #{i = 1, \ldots, k} and #{x \in S^d}, set}
+
+##{f_i(x) = \max\lbrace \operatorname{dist}(x, V_i), \operatorname{dist}(-x, V_i)\rbrace .}
+
+\p{Then #{f_i} is a continuous and strictly positive function on the entire compact set #{S^d}, so #{m_i = \min f_i > 0}. Set}
+
+##{U_i = \lbrace x : \operatorname{dist}(x, V_i) < m_i/2\rbrace ;}
+
+\p{then #{U_i} is an open set that contains #{V_i} and does not contain a pair of antipodes, as required.}
+}

@@ -1,0 +1,9 @@
+\title{Families with small pairwise intersections}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{1 \leq s < r}, and let #{\mathcal{B} \subset X^{(r)}} be such that #{|A \cap B| \leq s} whenever #{A \neq B} are in #{\mathcal{B}}. Show that}
+
+##{|\mathcal{B}| \leq (n)_{s+1}/(r)_{s+1} = n(n-1)\ldots(n-s)/r(r-1)\ldots(r-s).}

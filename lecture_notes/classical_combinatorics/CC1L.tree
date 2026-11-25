@@ -1,0 +1,20 @@
+\title{Alon’s Combinatorial Nullstellensatz (ACNS)}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{i = 1, \ldots, n}, let #{S_i} be a non-empty finite subset of a field #{\mathbb{F}} with #{|S_i| = d_i + 1}, and let #{f \in \mathbb{F}[X] = \mathbb{F}[X_1, \ldots, X_n]} be a polynomial of degree #{d = \sum_{i=1}^n d_i} in whose expansion the coefficient of the monomial #{X_1^{d_1}\cdots X_n^{d_n}} is non-zero. Then #{f} is not identically zero on #{S_1 \times \cdots \times S_n}.}
+
+\proof{
+\p{We apply induction on #{d}, the degree of #{f}, starting with the trivial base case #{d = 1}. Turning to the induction step, assume that #{\deg f = d > 1} and the assertion holds whenever #{\deg f < d}. We may assume that the expansion of #{f} contains a monomial #{X_1^{d_1}\cdots X_n^{d_n}} with coefficient #{1}, with #{d = \sum_i^n d_i} and #{d_1 \geq 1}. Finally, aiming for a contradiction, let us assume that #{f} vanishes on #{S_1 \times \cdots \times S_n}.}
+
+\p{Let #{s_1 \in S_1} and divide #{f} by #{X_1 - s_1}:}
+
+##{f = (X_1 - s_1)q + r, 
+ \qquad (2)}
+
+\p{where #{q \in \mathbb{F}[X_1, \ldots, X_n]}, #{r \in \mathbb{F}[X_2, \ldots, X_n]} and #{\deg q = d - 1}. Furthermore, the coefficient of the monomial #{X_1^{d_1-1}X_2^{d_2}\cdots X_n^{d_n}} in #{q} is also #{1}, as it is the same as the coefficient of #{X_1^{d_1}\cdots X_n^{d_n}} in the expansion of the polynomial #{f}.}
+
+\p{Pick a point #{x \in \lbrace s_1\rbrace  \times S_2 \times \cdots \times S_n} and substitute it into (2). Since #{f(x) = 0} and #{s_1 - s_1 = 0}, we have #{r(x) = 0}. But #{r(x) = r(x_1, \ldots, x_n)} does not depend on #{x_1}, so #{r} vanishes on the entire set #{S_1 \times \cdots \times S_n}. As #{s - s_1 \neq 0} whenever #{s \in S_1 \setminus \lbrace s_1\rbrace }, the polynomial #{q} vanishes on #{(S_1 \setminus \lbrace s_1\rbrace ) \times S_2 \times \cdots \times S_n}, contradicting our hypothesis.}
+}

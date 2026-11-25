@@ -1,0 +1,20 @@
+\title{Zeroes of polynomials over finite fields}
+\taxon{Reference}
+\date{1964}
+\author/literal{James Ax}
+\meta{journal}{American Journal of Mathematics}
+\meta{volume}{86}
+\meta{pages}{255–261}
+\meta{doi}{10.2307/2373163}
+
+\meta{bibtex}{\startverb
+@article{Ax1964,
+  author    = {Ax, James},
+  title     = {Zeroes of polynomials over finite fields},
+  journal   = {American Journal of Mathematics},
+  volume    = {86},
+  pages     = {255--261},
+  doi       = {10.2307/2373163},
+  year      = {1964},
+}
+\stopverb}

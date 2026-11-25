@@ -1,0 +1,7 @@
+\title{Discrete ham sandwich, odd sizes}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A_1, \ldots, A_d} be finite sets of points in #{\mathbb{R}^d}, with #{|A_i| = 2a_i + 1} odd for each #{i}. Then there is an affine hyperplane such that each of the two open half-spaces it defines contains at most #{a_i} points of #{A_i} for each #{i}.}

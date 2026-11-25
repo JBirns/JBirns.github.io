@@ -1,0 +1,21 @@
+\title{On the addition of residue classes mod p}
+\taxon{Reference}
+\date{1964}
+\author/literal{Paul Erdős}
+\author/literal{Hans Heilbronn}
+\meta{journal}{Acta Arithmetica}
+\meta{volume}{9}
+\meta{pages}{149–159}
+\meta{doi}{10.4064/aa-9-2-149-159}
+
+\meta{bibtex}{\startverb
+@article{Erdos1964,
+  author    = {Erd{\H{o}}s, Paul and Heilbronn, Hans},
+  title     = {On the addition of residue classes mod p},
+  journal   = {Acta Arithmetica},
+  volume    = {9},
+  pages     = {149--159},
+  doi       = {10.4064/aa-9-2-149-159},
+  year      = {1964},
+}
+\stopverb}

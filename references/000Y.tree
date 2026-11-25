@@ -1,0 +1,20 @@
+\title{Summenmengen in lokalkompakten abelschen Gruppen}
+\taxon{Reference}
+\date{1956}
+\author/literal{Martin Kneser}
+\meta{journal}{Mathematische Zeitschrift}
+\meta{volume}{66}
+\meta{pages}{88–110}
+\meta{doi}{10.1007/bf01186598}
+
+\meta{bibtex}{\startverb
+@article{Kneser1956,
+  author    = {Kneser, Martin},
+  title     = {Summenmengen in lokalkompakten abelschen Gruppen},
+  journal   = {Mathematische Zeitschrift},
+  volume    = {66},
+  pages     = {88--110},
+  doi       = {10.1007/bf01186598},
+  year      = {1956},
+}
+\stopverb}

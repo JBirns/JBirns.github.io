@@ -1,0 +1,7 @@
+\title{Kneser graph}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In 1955 Martin Kneser defined a graph which by now is called the \em{Kneser graph with parameters #{n} and #{k}}. The vertex set of this graph #{KG(n, k)} is #{[n]^{(k)}}, the set of #{k}-subsets of #{[n] = \lbrace 1, \ldots, n\rbrace }, and two #{k}-subsets are adjacent if and only if they are disjoint.}

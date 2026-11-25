@@ -1,0 +1,9 @@
+\title{Complete matchings in biregular graphs}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a #{(k, \ell)}-regular bipartite graph with bipartition #{(U, W)}. If #{1 \leq \ell \leq k} then there is a CM from #{U} into #{W}.}
+
+\p{Equivalently, if #{G} is a non-empty biregular bipartite graph with bipartition #{(U, W)} and #{|U| \leq |W|} then there is a CM from #{U} into #{W}.}

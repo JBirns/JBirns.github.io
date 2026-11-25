@@ -1,0 +1,19 @@
+\title{EGZ for primes via Chevalley}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For a prime #{p}, every sequence #{a_1, a_2, \ldots, a_{2p-1} \in \mathbb{Z}_p} has #{p} terms whose sum is #{0}.}
+
+\proof{
+\p{Define #{f_1, f_2 \in \mathbb{Z}_p[X] = \mathbb{Z}_p[X_1, \ldots, X_{2p-1}]} as follows:}
+
+##{f_1(X) = \sum_{i=1}^{2p-1} a_iX_i^{p-1} \quad \text{and} \quad f_2(X) = \sum_{i=1}^{2p-1} X_i^{p-1}.}
+
+\p{Since #{\deg f_1 + \deg f_2 = 2(p-1) < 2p - 1} and #{0 = (0)_1^{2p-1}} is a common root of #{f_1} and #{f_2}, by \ref{CC1M}, there is another common root, #{(x_1, \ldots, x_{2p-1})}, say. Setting #{I = \lbrace i : x_i \neq 0\rbrace  \neq \emptyset},}
+
+##{x_i^{p-1} = \begin{cases} 1 & \text{if } i \in I, \\ 0 & \text{if } i \notin I, \end{cases}}
+
+\p{so #{|I| = p} and #{\sum_{i \in I} a_i = 0 \in \mathbb{Z}_p}.}
+}

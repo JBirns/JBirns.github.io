@@ -1,0 +1,20 @@
+\title{The critical pairs of subsets of a group of prime order}
+\taxon{Reference}
+\date{1956}
+\author/literal{A. G. Vosper}
+\meta{journal}{Journal of the London Mathematical Society}
+\meta{volume}{31}
+\meta{pages}{200–205}
+\meta{doi}{10.1112/jlms/s1-31.2.200}
+
+\meta{bibtex}{\startverb
+@article{Vosper1956,
+  author    = {Vosper, A. G.},
+  title     = {The critical pairs of subsets of a group of prime order},
+  journal   = {Journal of the London Mathematical Society},
+  volume    = {31},
+  pages     = {200--205},
+  doi       = {10.1112/jlms/s1-31.2.200},
+  year      = {1956},
+}
+\stopverb}

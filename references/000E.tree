@@ -1,0 +1,20 @@
+\title{On a conjecture of Milner on k-graphs with non-disjoint edges}
+\taxon{Reference}
+\date{1968}
+\author/literal{Daniel J. Kleitman}
+\meta{journal}{Journal of Combinatorial Theory}
+\meta{volume}{5}
+\meta{pages}{153–156}
+\meta{doi}{10.1016/s0021-9800(68)80049-3}
+
+\meta{bibtex}{\startverb
+@article{Kleitman1968,
+  author    = {Kleitman, Daniel J.},
+  title     = {On a conjecture of Milner on k-graphs with non-disjoint edges},
+  journal   = {Journal of Combinatorial Theory},
+  volume    = {5},
+  pages     = {153--156},
+  doi       = {10.1016/s0021-9800(68)80049-3},
+  year      = {1968},
+}
+\stopverb}

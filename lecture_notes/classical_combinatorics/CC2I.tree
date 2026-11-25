@@ -1,0 +1,7 @@
+\title{Dilworth’s Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{(P, <)} be a (finite) poset. Show that the maximal size of an antichain is equal to the minimal number of chains covering #{P}.}

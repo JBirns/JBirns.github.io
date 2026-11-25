@@ -1,0 +1,15 @@
+\title{Shadow}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{1 \leq r \leq n}, the \em{lower shadow} or simply \em{shadow} of a family of sets #{\mathcal{A} \subset X^{(r)}} is}
+
+##{\underline{\partial}^{(r)}\mathcal{A} = \lbrace B \in X^{(r-1)} : B \subset A, A \in \mathcal{A}\rbrace , 
+ \qquad (2)}
+
+\p{so by \ref{CC08} of \ref{CC02},}
+
+##{|\underline{\partial}^{(r)}\mathcal{A}| \geq \frac{r}{n - r + 1}|\mathcal{A}|. 
+ \qquad (3)}

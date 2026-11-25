@@ -1,0 +1,9 @@
+\title{Regular graded poset}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A \em{regular graded poset} is a poset #{P = (S, <)} such that there are natural numbers #{r_i, s_i} with this property: for #{i < m} every #{x \in S_i} is dominated by precisely #{r_i} elements of #{S_{i+1}} and for #{i > 0} it dominates precisely #{s_i} elements of #{S_{i-1}}. The canonical regular graded poset is #{\mathcal{P}(X)}, with level sets #{X^{(0)}, X^{(1)}, \ldots, X^{(m)}}.}
+
+\p{We use the natural extension of the weight we defined earlier: if #{P = (S, <)} is a graded poset with level sets #{S_0, \ldots, S_m} then for #{A \subset S} we define #{A_i = A \cap S_i}, #{i = 0, \ldots, m}, and #{w(A) = \sum_0^m w(A_i) = \sum_0^m w(A \cap S_i) = \sum_0^m |A \cap S_i|/|S_i|}.}

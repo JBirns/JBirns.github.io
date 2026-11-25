@@ -1,0 +1,11 @@
+\title{Differences of enumerations of an Abelian group (#{{}^+})}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{a_1, \ldots, a_n} and #{c_1, \ldots, c_n} be two enumerations of the elements of an Abelian group, and set #{b_i = c_i - a_i}. Then, trivially, #{\sum_{i=1}^n b_i = 0}. Show that this trivial condition suffices for the existence of two enumerations, #{(a_i)} and #{(c_i)}, giving the sequence #{(b_i)}.}
+
+\p{To spell it out, let #{A} be an Abelian group of order #{n}, and let #{b_1, \ldots, b_n \in A} such that #{\sum_{i=1}^n b_i = 0}. Prove that there are enumerations #{a_1, \ldots, a_n} and #{c_1, \ldots, c_n} of the elements of #{A} such that for every #{i}, #{1 \leq i \leq n}, we have}
+
+##{a_i + b_i = c_i.}

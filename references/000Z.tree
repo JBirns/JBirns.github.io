@@ -1,0 +1,18 @@
+\title{Die Brunn–Minkowskische Ungleichung für beliebige messbare Mengen}
+\taxon{Reference}
+\date{1935}
+\author/literal{L. A. Lyusternik}
+\meta{journal}{Comptes Rendus de l’Académie des Sciences de l’URSS, Nouvelle Série}
+\meta{volume}{III}
+\meta{pages}{55–58}
+
+\meta{bibtex}{\startverb
+@article{Lyusternik1935,
+  author    = {Lyusternik, L. A.},
+  title     = {Die Brunn--Minkowskische Ungleichung f{\"u}r beliebige messbare Mengen},
+  journal   = {Comptes Rendus de l'Acad{\'e}mie des Sciences de l'URSS, Nouvelle S{\'e}rie},
+  volume    = {III},
+  pages     = {55--58},
+  year      = {1935},
+}
+\stopverb}

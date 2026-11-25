@@ -1,0 +1,20 @@
+\title{Kneser’s conjecture, chromatic number, and homotopy}
+\taxon{Reference}
+\date{1978}
+\author/literal{László Lovász}
+\meta{journal}{Journal of Combinatorial Theory, Series A}
+\meta{volume}{25}
+\meta{pages}{319–324}
+\meta{doi}{10.1016/0097-3165(78)90022-5}
+
+\meta{bibtex}{\startverb
+@article{Lovasz1978,
+  author    = {Lov{\'a}sz, L{\'a}szl{\'o}},
+  title     = {Kneser's conjecture, chromatic number, and homotopy},
+  journal   = {Journal of Combinatorial Theory, Series A},
+  volume    = {25},
+  pages     = {319--324},
+  doi       = {10.1016/0097-3165(78)90022-5},
+  year      = {1978},
+}
+\stopverb}

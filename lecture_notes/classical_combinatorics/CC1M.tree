@@ -1,0 +1,18 @@
+\title{Chevalley’s theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathbb{F}} be a finite field of order #{q} and characteristic #{p}, and let #{f_1, \ldots, f_m \in \mathbb{F}[X] = \mathbb{F}[X_1, \ldots, X_n]} be polynomials with a common zero such that #{\sum_{i=1}^m \deg f_i < n}. Then these polynomials #{f_1, \ldots, f_m} have another common zero.}
+
+\proof{
+\p{Suppose for a contradiction that our polynomials have only one common zero. We may and shall assume that this common zero is #{0 = (0)_1^n \in \mathbb{F}^n}. Define #{f \in \mathbb{F}[X]} by}
+
+##{f(X) = \prod_{i=1}^m \big( 1 - f_i(X)^{q-1} \big) + \gamma\prod_{j=1}^n \prod_{\substack{s \in \mathbb{F} \\ s \neq 0}} (X_j - s), 
+ \qquad (3)}
+
+\p{where #{\gamma \in \mathbb{F}} is chosen so that #{f(0) = 0}. Since at #{X = 0} the first summand on the right is #{1}, and the second is a non-zero multiple of #{\gamma}, we have a (unique) choice for #{\gamma}, which is not #{0}. Note that both summands are zero at every point #{z \neq 0}. Indeed, let #{z \neq 0}. By our assumption #{f_i(z) \neq 0} for some #{i}, and so #{f_i(z)^{q-1} = 1}, implying that the first summand in (3) is #{0}. Also, #{z_j \neq 0} for some #{j}, so the second summand in (3) is also #{0}. Consequently #{f} is identically zero on #{\mathbb{F} \times \cdots \times \mathbb{F}}. To complete our proof, let us check that this contradicts \ref{CC1L}.}
+
+\p{To this end, note that the degree of the second summand in (3) is #{n(q-1)}, while that of the first is no more than #{(n-1)(q-1)}, so that the degree of #{f} is #{n(q-1)}. Furthermore, the coefficient of the monomial #{X_1^{q-1}X_2^{q-1}\cdots X_n^{q-1}} of degree #{n(q-1)} is #{\gamma \neq 0} in the second summand, and so it is #{\gamma \neq 0} in the polynomial #{f} as well. This indeed contradicts \ref{CC1L}.}
+}

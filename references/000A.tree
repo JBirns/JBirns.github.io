@@ -1,0 +1,16 @@
+\title{The Erdős–Ko–Rado theorem is true for n = ckt}
+\taxon{Reference}
+\date{1978}
+\author/literal{Péter Frankl}
+\meta{booktitle}{Combinatorics (Proc. Fifth Hungarian Colloq., Keszthely, 1976), Colloq. Math. Soc. János Bolyai 18}
+\meta{pages}{364–375}
+
+\meta{bibtex}{\startverb
+@inproceedings{Frankl1978,
+  author    = {Frankl, P{\'e}ter},
+  title     = {The Erd{\H{o}}s--Ko--Rado theorem is true for n = ckt},
+  booktitle = {Combinatorics (Proc. Fifth Hungarian Colloq., Keszthely, 1976), Colloq. Math. Soc. J{\'a}nos Bolyai 18},
+  pages     = {364--375},
+  year      = {1978},
+}
+\stopverb}

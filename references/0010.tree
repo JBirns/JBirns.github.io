@@ -1,0 +1,20 @@
+\title{On measure of sum sets II. The sum-theorem for the torus}
+\taxon{Reference}
+\date{1953}
+\author/literal{A. M. Macbeath}
+\meta{journal}{Proceedings of the Cambridge Philosophical Society}
+\meta{volume}{49}
+\meta{pages}{40–43}
+\meta{doi}{10.1017/s0305004100028012}
+
+\meta{bibtex}{\startverb
+@article{Macbeath1953,
+  author    = {Macbeath, A. M.},
+  title     = {On measure of sum sets II. The sum-theorem for the torus},
+  journal   = {Proceedings of the Cambridge Philosophical Society},
+  volume    = {49},
+  pages     = {40--43},
+  doi       = {10.1017/s0305004100028012},
+  year      = {1953},
+}
+\stopverb}

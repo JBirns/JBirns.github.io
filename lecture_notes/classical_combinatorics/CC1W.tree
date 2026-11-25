@@ -1,0 +1,23 @@
+\title{Zero-sum #{p}-subsets of #{3p} vectors}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p \geq 2} be a prime, and let #{v_1, v_2, \ldots, v_{3p}} be #{3p} vectors in #{V = \mathbb{Z}_p \oplus \mathbb{Z}_p} with #{0} sum: #{\sum_{i=1}^{3p} v_i = 0 \in V}. Then some #{p} of these vectors also sum to #{0}, i.e. there is a set #{I \subset [3p]} with #{|I| = p} such that #{\sum_{i \in I} v_i = 0 \in V}.}
+
+\proof{
+\p{With #{v_i = (a_i, b_i)}, #{i = 1, \ldots, 3p}, define three polynomials over #{\mathbb{Z}_p} in #{3p - 1} variables #{X_1, \ldots, X_{3p-1}}:}
+
+##{f_1(X) = \sum_{i=1}^{3p-1} a_iX_i^{p-1}, \quad f_2(X) = \sum_{i=1}^{3p-1} b_iX_i^{p-1}, \quad f_3(X) = \sum_{i=1}^{3p-1} X_i^{p-1}.}
+
+\p{The sum of their degrees is #{3(p-1)}, which is less than the number of variables, #{3p - 1}, so the number of their common zeros is a multiple of #{p}. Since #{0 = (0)} is a common zero, there is another common zero, say #{x = (x_i) \in \mathbb{Z}_p^{3p-1}}. Let #{J = \lbrace j : x_j \neq 0\rbrace } so that #{J \neq \emptyset}. Then #{x_j^{p-1} = 1} for #{j \in J}, so #{\sum_{j \in J} a_j = \sum_{j \in J} b_j = 0 \in V} and #{|J|} is #{p} or #{2p}. In the first case #{I = J} will do, and in the second #{I = [3p] \setminus J}.}
+}
+
+\proof{
+\p{\em{Second proof.} Suppose that the conclusion of this theorem is false. This time set #{m = 3p} and let #{f(X) = f(X_1, \ldots, X_{3p})} be the polynomial}
+
+##{\Bigg( \bigg( \sum_{i=1}^m a_iX_i \bigg)^{p-1} - 1 \Bigg)\Bigg( \bigg( \sum_{i=1}^m b_iX_i \bigg)^{p-1} - 1 \Bigg)\Bigg( \bigg( \sum_{i=1}^m X_i \bigg)^{p-1} - 1 \Bigg).}
+
+\p{Let #{x \in \lbrace 0, 1\rbrace ^m} be such that #{f(x) \neq 0}. Then for #{J = \lbrace i \in [m] : x_i = 1\rbrace } we have #{\sum_{j \in J} a_j = \sum_{j \in J} b_j = \sum_{j \in J} 1 = 0 \in \mathbb{Z}_p}, so #{|J| = 0, p, 2p} or #{m = 3p}. If #{|J| = p} then #{I = J} will do, and if #{|J| = 2p} then #{I = [m] \setminus J}. Hence on #{\lbrace 0, 1\rbrace ^m} the evaluation #{f(x)} is nonzero at only two places: #{0 = (0)} and #{1 = (1)}, at which it is #{-1}. Therefore #{f(x) = g(x)} for all #{x \in \lbrace 0, 1\rbrace ^m} where #{g(X) = -\prod_{i=1}^m X_i - \prod_{i=1}^m (1 - X_i)}. Since #{\deg g = m - 1} and #{\deg f = 3p - 3 = m - 3}, this contradicts the fact that the evaluations of the #{2^m} monomials #{\prod_{i \in A} X_i}, #{A \in \mathcal{P}(m)}, form a basis of the #{\mathbb{Z}_p}-vector space of all functions #{\lbrace 0, 1\rbrace ^m \to \mathbb{Z}_p}.}
+}

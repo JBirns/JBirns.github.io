@@ -1,0 +1,7 @@
+\title{Radon’s Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Show that every set of #{d + 2} points in #{\mathbb{R}^d} can be partitioned into two sets whose convex hulls intersect.}

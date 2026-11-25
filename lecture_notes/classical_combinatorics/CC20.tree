@@ -1,0 +1,7 @@
+\title{Independent set, independence number}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A set of vertices of a graph #{G = (V, E)} is \em{independent} if no two of its vertices are joined by an edge. The \em{independence number} #{\alpha(G)} of #{G} is the maximal cardinality of an independent set of vertices.}

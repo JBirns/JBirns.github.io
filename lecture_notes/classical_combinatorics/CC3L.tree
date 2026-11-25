@@ -1,0 +1,11 @@
+\title{The planar Ham Sandwich Theorem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The (rather trivial) Ham Sandwich Theorem in #{\mathbb{R}^2} tells us that if #{U} and #{V} are open sets, each of finite area, then there is a line that simultaneously bisects each.}
+
+\p{Here is the ‘natural’ proof of this result. Given an angle #{\theta}, there is a line #{\ell(\theta)} of slope #{\theta} that bisects #{U}. Furthermore, #{\ell(\theta)} can be chosen to be a continuous function of #{\theta}. Hence, for some value of #{\theta}, the line #{\ell(\theta)} bisects #{V} as well.}
+
+\p{Give a precise proof along these lines.}

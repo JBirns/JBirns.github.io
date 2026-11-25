@@ -1,0 +1,20 @@
+\title{Abschätzung der asymptotischen Dichte von Summenmengen}
+\taxon{Reference}
+\date{1953}
+\author/literal{Martin Kneser}
+\meta{journal}{Mathematische Zeitschrift}
+\meta{volume}{58}
+\meta{pages}{459–484}
+\meta{doi}{10.1007/bf01174162}
+
+\meta{bibtex}{\startverb
+@article{Kneser1953,
+  author    = {Kneser, Martin},
+  title     = {Absch{\"a}tzung der asymptotischen Dichte von Summenmengen},
+  journal   = {Mathematische Zeitschrift},
+  volume    = {58},
+  pages     = {459--484},
+  doi       = {10.1007/bf01174162},
+  year      = {1953},
+}
+\stopverb}

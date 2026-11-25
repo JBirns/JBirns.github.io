@@ -1,0 +1,21 @@
+\title{Compressions do not increase the neighbourhood}
+\taxon{Lemma}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subset Q_n} and #{1 \leq i \leq n}. Then #{|N(C_i(A))| \leq |N(A)|}: the #{i}-compression does not increase the size of the neighbourhood.}
+
+\proof{
+\p{Set #{B = C_i(A)}. Since #{B_\pm^{(i)}} and #{N(B_\pm^{(i)})} are initial segments, they are nested. Hence, by (1) and our induction hypothesis,}
+
+##{\begin{aligned}
+|N(B)| &= |N(B_-^{(i)}) \cup B_+^{(i)}| + |N(B_+^{(i)}) \cup B_-^{(i)}| \\
+&= \max\big\lbrace |N(B_-^{(i)})|, |B_+^{(i)}|\big\rbrace  + \max\big\lbrace |N(B_+^{(i)})|, |B_-^{(i)}|\big\rbrace  \\
+&\leq \max\big\lbrace |N(A_-^{(i)})|, |A_+^{(i)}|\big\rbrace  + \max\big\lbrace |N(A_+^{(i)})|, |A_-^{(i)}|\big\rbrace  \\
+&\leq |N(A_-^{(i)}) \cup A_+^{(i)}| + |N(A_+^{(i)}) \cup A_-^{(i)}| \\
+&= |(N(A))_-^{(i)}| + |(N(A))_+^{(i)}| = |N(A)|,
+\end{aligned}}
+
+\p{as claimed.}
+}

@@ -1,0 +1,20 @@
+\title{A short proof of combinatorial Nullstellensatz}
+\taxon{Reference}
+\date{2010}
+\author/literal{Mateusz Michałek}
+\meta{journal}{The American Mathematical Monthly}
+\meta{volume}{117}
+\meta{pages}{821–823}
+\meta{doi}{10.4169/amermathmont.117.9.0821}
+
+\meta{bibtex}{\startverb
+@article{Michalek2010,
+  author    = {Micha{\l}ek, Mateusz},
+  title     = {A short proof of combinatorial Nullstellensatz},
+  journal   = {The American Mathematical Monthly},
+  volume    = {117},
+  pages     = {821--823},
+  doi       = {10.4169/amermathmont.117.9.0821},
+  year      = {2010},
+}
+\stopverb}

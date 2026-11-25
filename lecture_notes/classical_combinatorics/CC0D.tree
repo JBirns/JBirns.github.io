@@ -1,0 +1,13 @@
+\title{Littlewood–Offord for real numbers}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{x_1, x_2, \ldots, x_n} be #{n} real numbers, each of modulus at least #{1}, and for #{\varepsilon = (\varepsilon_i)_1^n}, #{\varepsilon_i = \pm 1}, set #{x_\varepsilon = \sum_{i=1}^n \varepsilon_i x_i}. Then at most #{\binom{n}{\lfloor n/2 \rfloor}} of the #{2^n} sums #{x_\varepsilon} fall into the interior of an interval #{I} of length #{2}. This bound is best possible.}
+
+\proof{
+\p{We may assume that #{x_i \geq 1} for every #{i}. Given #{\varepsilon = (\varepsilon_i)_1^n}, set #{F_\varepsilon = \lbrace i : \varepsilon_i = 1\rbrace }, and #{\mathcal{F} = \lbrace F_\varepsilon : x_\varepsilon \in I\rbrace }. Then #{\mathcal{F}} is a Sperner system, and \ref{CC0C} implies the main assertion.}
+
+\p{To see that this bound is best possible, simply take #{x_1 = \cdots = x_n} to be a vector of norm #{1}.}
+}

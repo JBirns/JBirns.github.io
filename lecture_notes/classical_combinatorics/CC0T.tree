@@ -1,0 +1,87 @@
+\title{The Cube and the Kruskal–Katona Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Our aim in this section is to prove two more fundamental results in the combinatorics of set systems: the Vertex Isoperimetric Theorem in the Cube and the Kruskal–Katona Theorem about shadows.}
+
+\p{An isoperimetric inequality concerns the relationship between the size of a ‘body’ and the size of its ‘boundary’, no matter how the body and boundary are defined. If the original body is large, at least how large is its boundary?}
+
+\transclude{CC0U}
+
+\p{In the classical case, when we are interested in what happens in the plane, the ‘real’ solution of the isoperimetric problem is that the perimeter length of an open set in the plane with area #{a} is at least as large as the perimeter length of a circular disc of area #{a}. Similarly, in the #{n}-dimensional cube #{Q_n}, we wish to find a set of a given size whose neighbourhood is as small as possible. Thus our \em{vertex isoperimetric problem} in the cube #{Q_n}, considered as a graph, is as follows: given an integer #{a}, #{1 \leq a \leq 2^n - 1}, find a set #{I_a \subset Q_n} with #{|I_a| = a} such that}
+
+##{|N(A)| \geq |N(I_a)|}
+
+\p{for all #{A \subset Q_n} with #{|A| = a}.}
+
+\p{Harper proved in 1966 that the sets #{I_a} can be chosen to be \em{nested}, so that there is an order on the set of vertices in which (our chosen) #{I_a} is precisely the initial segment of size #{a} in this order. For most values of #{a} we have no choice in the sense that all possible choices are isomorphic, but occasionally the extremal sets are far from unique. For example, if #{a \geq 2^n - n} then #{N(A) = Q_n} for every set #{A} with #{a} vertices, so every #{a}-set is extremal. On the other hand, if #{a = 2^n - n - 1} then a moment’s thought tells us that there is only one extremal set (up to isomorphism).}
+
+\transclude{CC0V}
+
+\p{It is clear from this paragraph that we view #{Q_n \cong \lbrace 0, 1\rbrace ^n \cong \mathcal{P}(n)} as the power set #{\mathcal{P}(n)}, and the vertices of #{Q_n}, namely #{x, y, \ldots}, are subsets of #{X = [n] = \lbrace 1, 2, \ldots, n\rbrace }. Unlike in other sections, we use simple capital letters for subsets of the cube, although a subset of the cube is a family of subsets of the ground set. To reduce the inevitable clutter, we write #{1234} instead of #{\lbrace 1, 2, 3, 4\rbrace }, #{x - i} instead of #{x \setminus \lbrace i\rbrace }, etc.}
+
+\p{The very easy proof of Harper’s theorem (\ref{CC12}) we shall present is due to Bollobás and Leader. This proof is based on so-called \em{#{1}-codimensional compressions}, which rearrange the entire set of vertices in a #{1}-codimensional face of our cube. Our task is to show that these compressions take our set closer to the actual solution. We shall prove three simple lemmas, after which the theorem itself will be immediate. As we shall prove Harper’s theorem by induction on the dimension, in our lemmas we shall assume that \em{in #{Q_{n-1}} the initial segments of the simplicial order are best for the vertex isoperimetric inequality.}}
+
+\transclude{CC0W}
+
+\p{As we have already emphasized, the vital properties of a compression are that it does not change the size of the set it is applied to, does not increase the size of its neighbourhood, and brings it closer to an initial segment. The third statement is rather vague, but if a sequence of compressions is likely to turn a general set into an initial segment, as in our case, then it makes good sense. In the next three lemmas we apply induction on #{n}, starting with the trivial case #{n = 1}, so we shall assume that #{n \geq 2} and the relevant assertion holds for smaller values of #{n}.}
+
+\transclude{CC0X}
+
+\transclude{CC0Y}
+
+\p{It is just about trivial that after a sequence of compressions a set becomes compressed, so if we want to determine the minimal size of a boundary of a set with #{m} elements then we may assume that our set is compressed. In an ideal world, only the simplicial initial segments would be compressed, so the lemma below would solve our isoperimetric problem.}
+
+\transclude{CC0Z}
+
+\p{To formalize the proof above, write #{n(a)} for the order of #{a} in the simplicial order. Thus, in #{\mathcal{P}(n)} we have #{n(\emptyset) = 1, n(1) = 2, \ldots, n(n) = n + 1, n(12) = n + 2, \ldots, n(1n) = 2n, \ldots}. Also, write #{n(A) = \sum_{a \in A} n(a)} for a set #{A \subset Q_n}. Note that #{A} is an initial segment (in the simplicial order) if #{n(A) = \min\lbrace n(B) : B \subset Q_n, |B| = |A|\rbrace }. This tells us that if #{A_{s+1} = C_i(A_s)} and #{A_{s+1} \neq A_s} then #{n(A_{s+1}) < n(A_s)}, so the sequence #{A_0, A_1, A_2, \ldots} must end.}
+
+\p{Does \ref{CC0Z} complete our proof? Are the initial segments in the simplicial order the \em{only} compressed sets? Not quite: in #{Q_3}, say, #{\lbrace \emptyset, 1, 2, 12\rbrace } is compressed, but it is not an initial segment, and in #{Q_4}, the set #{\lbrace \emptyset, 1, 2, 3, 4, 12, 13, 23\rbrace } is compressed, but is not an initial segment either. And these examples can be extended to the following exceptional sets.}
+
+\transclude{CC10}
+
+\p{Are there many more compressed sets? If there is a large family of compressed sets, our work is cut out if we want to prove that the initial segments are best. Luckily, this is not the case: for each #{n}, there is only one exceptional set, namely #{E_n}.}
+
+\transclude{CC11}
+
+\p{Luckily for us, the neighbourhood of #{E_n} is #{\lfloor (n-1)/2 \rfloor} larger than the neighbourhood of the half-size initial segment of #{Q_n}, so putting together the lemmas above we find that the simplicial initial segments are indeed the solution of the vertex isoperimetric problem in the cube.}
+
+\transclude{CC12}
+
+\p{Now we turn to the other main result of this section, the Kruskal–Katona theorem. This result concerns set systems and level sets, so we change our notation and terminology: a vertex of the cube becomes a set, and a subset of the cube a family of sets. As usual, we take #{X = [n]}, although all we need is that #{X} is a linearly ordered finite set. What \ref{CC08} of \ref{CC02} tells us is that if the level sets #{X^{(r)}} and #{X^{(s)}} are endowed with the uniform probability measure then the probability that a random #{s}-set is contained in an #{r}-set belonging to #{\mathcal{A}} is at least the probability of #{\mathcal{A}}, i.e. the probability that a random #{r}-set belongs to #{\mathcal{A}}. Our aim here is to prove a much sharper inequality – in fact, a best possible inequality. As we shall see, it suffices to jump down by only one level, from #{X^{(r)}} to #{X^{(r-1)}}, because the general case, jumping from #{X^{(r)}} to #{X^{(s)}}, follows from this in #{r - s} steps. When considering #{X^{(r)}} and #{X^{(r-1)}}, it is customary to talk about ‘shadows’. As these are our main concern below, we define them precisely.}
+
+\transclude{CC13}
+
+\p{Our aim is to do better, to prove a best possible isoperimetric inequality. In other words, we should like to determine the \em{‘shadow function’} #{\partial^{(r)}(m)}, i.e. the function #{\partial^{(r)}(m)} such that if #{\mathcal{A} \subset X^{(r)}} and #{|\mathcal{A}| = m} then}
+
+##{|\underline{\partial}^{(r)}\mathcal{A}| \geq \partial^{(r)}(m),}
+
+\p{\em{with equality for some family #{\mathcal{A} \subset X^{(r)}}, where #{|\mathcal{A}| = m}}. A priori it is not clear that there is such a function: after all, this function could easily depend on #{n} as well. However, as we shall see, there \em{is} such a shadow function #{\partial^{(r)}(m)}: if #{1 \leq m \leq \binom{n}{r}} then}
+
+##{\partial^{(r)}(m) = \min\lbrace |\underline{\partial}^{(r)}\mathcal{A}| : \mathcal{A} \subset [n]^{(r)}, |\mathcal{A}| = m\rbrace ,}
+
+\p{\em{independently of #{n}}.}
+
+\p{This problem of bounding #{|\underline{\partial}^{(r)}\mathcal{A}|} for a family #{\mathcal{A} \subset X^{(r)}} of #{m} #{r}-sets is perhaps the most natural isoperimetric problem for families of sets. Much of the time, the notation #{\underline{\partial}^{(r)}} will be abbreviated to #{\partial}, since it is usually clear that we are considering the lower shadow of a collection of #{r}-sets. We shall use #{\underline{\partial}^{(r)}} for a little longer, since in a moment we shall use the \em{upper shadow} operator #{\overline{\partial}^{(n-r)}} as well, where, for #{\mathcal{H} \subset X^{(n-r)}} we have #{\overline{\partial}\mathcal{H} = \lbrace K \in X^{(n-r+1)} : K \supset H, H \in \mathcal{H}\rbrace }.}
+
+\p{Note that for #{r = 2} our shadow problem is trivial; in that case the question is simply the following: if a graph has #{m} edges, at least how many vertices does it have? Turning it around, if a graph has #{k} vertices, at most how many edges does it have? Clearly, the answer is ‘at most #{\binom{k}{2}} edges’, so the shadow function #{\partial^{(2)}(m)} is as follows:}
+
+##{\partial^{(2)}(m) = k \quad \text{if} \quad \binom{k-1}{2} < m \leq \binom{k}{2}.}
+
+\p{For #{r \geq 3} the problem is not nearly as easy. As we shall see, the Kruskal–Katona theorem determines the \em{exact} shadow function #{\partial^{(r)}(m)} for all #{r} and #{m}, although #{\partial^{(r)}(m)} will be given in a somewhat convoluted fashion.}
+
+\p{We have already encountered the two most frequently used linear (total) orders on #{X^{(r)}}: the \em{lex} (lexicographic) order and the \em{colex} (colexicographic) order. Recall that, given two sets, #{A, B \in X^{(r)}}, we define these linear orders as follows:}
+
+##{\begin{aligned}
+A < B &\quad \text{in lex if} \quad \min(A \triangle B) \in A, \\
+A < B &\quad \text{in colex if} \quad \max(A \triangle B) \in B.
+\end{aligned}}
+
+\p{Equivalently, #{A < B} in lex if #{\sum_{i \in A} 2^{-i} > \sum_{i \in B} 2^{-i}}, and #{A < B} in colex if #{\sum_{i \in A} 2^i < \sum_{i \in B} 2^i}. So in lex the slogan is: ‘the small elements should be as small as possible’, while in colex: ‘the large elements should be as small as possible’.}
+
+\p{As we shall see, for every #{m} the initial segment of #{X^{(r)}} (or #{\mathbb{N}^{(r)}}) of length #{m} in the colex order has as small a lower shadow as any family #{\mathcal{A}} in #{X^{(r)}} with #{m} elements – this is the content of the Kruskal–Katona theorem, proved independently by Kruskal in 1963 and Katona in 1968. That the families with smallest shadows, the initial segments in the colex order, are \em{nested} is very fortunate: it helps greatly in our solution of our isoperimetric problem – in fact, it makes the proofs unreasonably easy. In fact, as we shall see now, the Kruskal–Katona theorem is an immediate consequence of the Vertex Isoperimetric Theorem.}
+
+\transclude{CC14}
+
+\p{This proof we have just presented is very slick, but it is far from enlightening. There are two other proofs, which are longer, but tell us more about the nitty-gritty of the cube. For lack of time we shall not present either of them.}

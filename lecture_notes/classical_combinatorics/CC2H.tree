@@ -1,0 +1,11 @@
+\title{Hall’s Theorem for infinite families}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A} = \lbrace A_\gamma : \gamma \in \Gamma\rbrace } be an infinite family of finite sets. Show that #{\mathcal{A}} has an SDR if and only if}
+
+##{\Big| \bigcup_{\gamma \in I} A_\gamma \Big| \geq |I|}
+
+\p{for all \em{finite} subsets #{I} of the index set #{\Gamma}.}

@@ -1,0 +1,46 @@
+\title{The Kneser Graph and the LSB Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{CC20}
+
+\transclude{CC21}
+
+\transclude{CC22}
+
+\p{For #{n < 2k} the Kneser graph #{KG(n, k)} has no edges, for #{k = 1} (and any #{n}) it is a complete graph, and for #{n = 2k} it is the complement of a complete matching. However, for #{n > 2k} the structure of #{KG(n, k)} is fascinating. From now on we shall always assume that #{n \geq 2k}. Thus the smallest (and simplest) non-trivial Kneser graph is #{KG(5, 2)}, which is exactly the Petersen graph.}
+
+\p{By definition, #{\mathcal{A} \subset [n]^{(k)}} is an independent set in #{KG(n, k)} iff #{\mathcal{A}} is an \em{intersecting family of sets}, i.e. if any two sets in #{\mathcal{A}} have a non-empty intersection. Since there are #{\binom{n-1}{k-1}} #{k}-sets in #{[n]^{(k)}} that contain a fixed element (#{1}, say), #{\alpha(KG(n, k)) \geq \binom{n-1}{k-1}}.}
+
+\p{Also EKR tells us that}
+
+##{\alpha(KG(n, k)) = \binom{n-1}{k-1} \quad \text{if} \quad n \geq 2k. 
+ \qquad (1)}
+
+\p{Consequently, we find that the chromatic number of #{KG(n, k)} cannot be too small: if #{n \geq 2k} then}
+
+##{\chi(KG(n, k)) \geq \binom{n}{k}\Big /\alpha(KG(n, k)) = \binom{n}{k}\Big /\binom{n-1}{k-1} = \frac{n}{k}. 
+ \qquad (2)}
+
+\p{What about a proper colouring with few colours? For #{d = n - 2k \geq 0} here is a canonical colouring #{\varphi} of #{KG(n, k)} with #{d + 2} colours: for #{A \in [n]^{(k)}}, define}
+
+##{\varphi(A) = \begin{cases} \min A & \text{if } \min A \leq d + 1, \\ d + 2 & \text{otherwise.} \end{cases}}
+
+\p{The trivial lower bound and the colouring #{\varphi} tell us that}
+
+##{\frac{2k + d}{k} \leq \chi\big( KG(2k + d, k) \big) \leq d + 2}
+
+\p{for #{k \geq 1} and #{d \geq 0}.}
+
+\p{Note that if both #{k} and #{d} are large then these two bounds are far from each other. If #{d < k}, say, then there are independent sets containing more than one third of the vertices, but the canonical colouring #{\varphi} uses #{d + 2 \gg 3} colours. Nevertheless, [Kneser conjectured](001T) that #{d + 1} colours are not sufficient. It is trivial that Kneser’s conjecture holds when #{d} is #{0} or #{1}, and it is easy to show that it holds for #{k = 2} and all #{n \geq 4}, but for over twenty years no real progress was made with the general conjecture. It was quite a surprise when [in 1978 Lovász](001U) used cohomology to prove it in full. Strangely, even before Lovász’s paper appeared, [Bárány had found](001Q) a beautiful and considerably simpler proof. What is even more amazing is that in 2002 [Joshua Greene](001S), who at the time was an undergraduate at Harvey Mudd College, further simplified Bárány’s beautiful and simple proof, turning it into an essentially trivial argument. All one needs is that, like Bárány, one should apply \em{Borsuk’s theorem}. [One should emphasize that the idea that Borsuk’s theorem should be applied is more than 99\% of the achievement in any case.] This basic theorem goes under several different names: Borsuk’s theorem, the Borsuk–Ulam theorem, the Lusternik–Schnirelman theorem, the Lusternik–Schnirelman–Borsuk theorem, or simply the LSB theorem, proved by [Lusternik and Schnirelman in 1930](001V) and [by Borsuk](001R) (proving a conjecture of Ulam) in 1933. These names refer to various equivalent assertions: here we shall state the result in only two incarnations, some others will be given as exercises. So here is what we shall call the LSB theorem.}
+
+\transclude{CC23}
+
+\p{Greene noted the following slight extension of part (ii) of this theorem.}
+
+\transclude{CC24}
+
+\p{As shown by Greene, a proof of Lovász’s Theorem on Kneser’s conjecture is within half a step of \ref{CC24}.}
+
+\transclude{CC25}

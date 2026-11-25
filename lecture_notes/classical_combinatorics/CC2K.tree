@@ -1,0 +1,9 @@
+\title{A two-part Sperner problem}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{X} be the disjoint union of two even sets, #{Y} and #{Z}. What is the maximal cardinality of a set system #{\mathcal{A} \subset \mathcal{P}(X)} if #{A, B \in \mathcal{A}}, #{A \neq B} and #{A \subset B} imply that}
+
+##{A \cap Y \neq B \cap Y \quad \text{and} \quad A \cap Z \neq B \cap Z?}

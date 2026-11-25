@@ -1,0 +1,20 @@
+\title{On the addition of residue classes}
+\taxon{Reference}
+\date{1935}
+\author/literal{Harold Davenport}
+\meta{journal}{Journal of the London Mathematical Society}
+\meta{volume}{10}
+\meta{pages}{30–32}
+\meta{doi}{10.1112/jlms/s1-10.37.30}
+
+\meta{bibtex}{\startverb
+@article{Davenport1935,
+  author    = {Davenport, Harold},
+  title     = {On the addition of residue classes},
+  journal   = {Journal of the London Mathematical Society},
+  volume    = {10},
+  pages     = {30--32},
+  doi       = {10.1112/jlms/s1-10.37.30},
+  year      = {1935},
+}
+\stopverb}

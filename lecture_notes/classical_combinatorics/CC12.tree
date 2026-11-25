@@ -1,0 +1,17 @@
+\title{Harper’s Theorem (1966)}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A \subset Q_n} and let #{B} be the initial segment of length #{|A|} in the simplicial order on #{Q_n}. Then}
+
+##{|N(B)| \leq |N(A)|.}
+
+\p{In particular, if}
+
+##{|A| = \sum_{i=0}^r \binom{n}{i} \quad \text{then} \quad |N(A)| \geq \sum_{i=0}^{r+1} \binom{n}{i}.}
+
+\proof{
+\p{For #{n \leq 2} the assertion is trivial, so we take #{n \geq 3}. By \ref{CC0Z} we may assume that #{A} is compressed. If #{A} is an initial segment, we are done, and if it is not then by \ref{CC11} #{A} is the exceptional set #{E_n}, whose vertex neighbourhood is #{\lfloor (n-1)/2 \rfloor \geq 1} larger than that of the corresponding initial segment.}
+}

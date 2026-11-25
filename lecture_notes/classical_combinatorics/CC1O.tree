@@ -1,0 +1,34 @@
+\title{Chevalley–Warning theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p} be a prime and let #{f_1, \ldots, f_m \in \mathbb{F}_p[X_1, \ldots, X_n]} be polynomials such that #{\sum_{i=1}^m \deg f_i < n}. Then the number of common zeros of these polynomials #{f_1, \ldots, f_m} is a multiple of #{p}. In particular, if they have a common zero then they have another common zero.}
+
+\proof{
+\p{Let #{z_1, \ldots, z_k \in (\mathbb{F}_p)^n} be the common zeros, with}
+
+##{z_i = (z_1^{(i)}, z_2^{(i)}, \ldots, z_n^{(i)}).}
+
+\p{Let us assume that #{k} is not a multiple of #{p}, so that our aim is to arrive at a contradiction. Define a polynomial #{f \in \mathbb{F}_p[X]} by}
+
+##{f = \prod_{i=1}^m \big( 1 - f_i^{p-1} \big) - \sum_{j=1}^k \prod_{i=1}^n \big( 1 - (X_i - z_i^{(j)})^{p-1} \big) = g - h. 
+ \qquad (4)}
+
+\p{The coefficient of #{X_1^{p-1}X_2^{p-1}\cdots X_n^{p-1}} in the second summand #{h} in (4) is #{k(-1)^n \neq 0 \in \mathbb{F}_p}, and #{h} has no other monomials of degree at least #{n(p-1)}, so #{\deg h = n(p-1)}. Furthermore, since}
+
+##{(p-1)\sum_{i=1}^m \deg f_i \leq (p-1)(n-1) < n(p-1),}
+
+\p{the first summand #{g} in (4) has no monomials of degree at least #{n(p-1)}. Thus #{\deg f = n(p-1)} and the coefficient of the monomial #{X_1^{p-1}X_2^{p-1}\cdots X_n^{p-1}} in #{f} is not zero. By ACNS, \ref{CC1L}, #{f} is not identically #{0} on #{(\mathbb{F}_p)^n}.}
+
+\p{To arrive at a contradiction and so to complete our proof, we shall prove that every evaluation #{f(x)} of our polynomial #{f} is #{0}. In showing this, we consider two cases, whether #{x} is a common zero of our polynomials, or not.}
+
+\p{First, what is #{f(z_j)}? The first summand in (4) is #{1}, trivially. Also, the second is #{-1} since the #{j}th product is #{1}, while the other #{k - 1} products are #{0}, because for #{0 \neq y \in \mathbb{F}_p} we have #{y^{p-1} = 1}. Hence #{f(z_j) = 0}.}
+
+\p{Second, what is #{f(x)} if #{x \notin \lbrace z_1, \ldots, z_k\rbrace }? Then #{f_i(x) \neq 0} for at least one #{i}, so #{1 - f_i(x)^{p-1} = 0}, implying that #{g(x) = 0}. Also, #{h(x) = 0} as well, since in each product}
+
+##{\prod_{i=1}^n \big( 1 - (x_i - z_i^{(j)})^{p-1} \big)}
+
+\p{at least one of the factors is #{0}, because #{x_i \neq z_i^{(j)}} for at least one #{i}. Hence #{f(x) = 0}, and so #{f} is identically zero on #{(\mathbb{F}_p)^n}. This contradiction completes our proof.}
+}

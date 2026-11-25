@@ -1,0 +1,22 @@
+\title{Neighbourhoods in biregular graphs}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{G} be a #{(k, \ell)}-biregular bipartite graph with bipartition #{(U, W)}. Then for #{A \subset U} we have}
+
+##{|\Gamma(A)| \geq (k/\ell)|A| \quad \text{and} \quad w(\Gamma(A)) \geq w(A). 
+ \qquad (3)}
+
+\proof{
+\p{For #{A \subset U} we have}
+
+##{k|A| = e(A, \Gamma(A)) \leq \ell|\Gamma(A)|.}
+
+\p{Since}
+
+##{k|U| = e(U, W) = \ell|W|,}
+
+\p{dividing the first identity with the second, we are done.}
+}

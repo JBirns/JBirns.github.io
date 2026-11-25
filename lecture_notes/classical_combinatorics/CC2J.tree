@@ -1,0 +1,9 @@
+\title{Sperner families meeting two levels}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{1 \leq r < s = n - r} and let #{\mathcal{A} \subset \mathcal{P}(X)} be a Sperner family, where, as usual, #{|X| = n}. At most how large is}
+
+##{\min\lbrace |\mathcal{A} \cap X^{(r)}|, |\mathcal{A} \cap X^{(s)}|\rbrace ?}

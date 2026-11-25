@@ -1,0 +1,17 @@
+\title{Erdős–Ko–Rado Theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{1 \leq r \leq n/2} and let #{\mathcal{A} \subset X^{(\leq r)}} be an intersecting Sperner family. Then #{|\mathcal{A}| \leq \binom{n-1}{r-1}}.}
+
+\p{If equality holds then #{\mathcal{A}} is a collection of #{r}-subsets.}
+
+\proof{
+\p{Since}
+
+##{\min_{1 \leq \ell \leq r} \binom{n-1}{\ell -1}^{-1} = \binom{n-1}{r-1}^{-1},}
+
+\p{the assertions follow from \ref{CC0O}.}
+}

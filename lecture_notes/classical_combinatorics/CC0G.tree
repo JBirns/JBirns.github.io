@@ -1,0 +1,19 @@
+\title{Antichains in regular graded posets}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{P = (S, <)} be a regular graded poset with level sets #{S_0, \ldots, S_m}, and let #{A} be an antichain in #{P}. Then #{w(A) \leq 1}.}
+
+\proof{
+\p{\em{1st Proof.} We may assume that #{A \neq \emptyset}. The \em{span} of #{A} is the maximal #{t} such that #{A_i \neq \emptyset} and #{A_{i+t} \neq \emptyset}. If the span #{t} of #{A} is #{0} then there is nothing to prove, so assume that #{t \geq 1} and the assertion holds for smaller values of the span. Suppose #{A_k \neq \emptyset}, but #{A_\ell = \emptyset} for #{\ell > k}. Let #{A'_{k-1} \subset S_{k-1}} be the set of elements of #{S_{k-1}} dominated by some elements of #{A_k}. Then #{A'_{k-1} \cap (A \setminus A_k) = \emptyset} and, by \ref{CC08}, #{w(A'_{k-1}) \geq w(A_k)}. Therefore, #{A' = (A \setminus A_k) \cup A'_{k-1}} is an antichain of span #{t - 1} and weight #{w(A') \geq w(A)}, and the induction hypothesis completes our proof.}
+}
+
+\proof{
+\p{\em{2nd proof.} Since every maximal chain meets #{A} in at most one element,}
+
+##{M = \sum_{\text{max.\; chain}} 1 \geq \sum_{x \in A} m(x) = \sum_{h=0}^m |A_h|\frac{M}{|S_h|} = M\sum_{h=0}^m |A_h|/|S_h|,}
+
+\p{implying the desired inequality.}
+}

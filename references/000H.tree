@@ -1,0 +1,23 @@
+\title{Zero-sum sets of prescribed size}
+\taxon{Reference}
+\date{1993}
+\author/literal{Noga Alon}
+\author/literal{Moshe Dubiner}
+\meta{booktitle}{Combinatorics, Paul Erdős is Eighty, Vol. 1}
+\meta{series}{Bolyai Society Mathematical Studies}
+\meta{pages}{33–50}
+\meta{publisher}{János Bolyai Mathematical Society}
+\meta{address}{Budapest}
+
+\meta{bibtex}{\startverb
+@incollection{Alon1993,
+  author    = {Alon, Noga and Dubiner, Moshe},
+  title     = {Zero-sum sets of prescribed size},
+  booktitle = {Combinatorics, Paul Erd{\H{o}}s is Eighty, Vol. 1},
+  series    = {Bolyai Society Mathematical Studies},
+  pages     = {33--50},
+  publisher = {J{\'a}nos Bolyai Mathematical Society},
+  address   = {Budapest},
+  year      = {1993},
+}
+\stopverb}

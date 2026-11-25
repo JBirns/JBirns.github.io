@@ -1,0 +1,9 @@
+\title{Davenport constant of #{p}-groups}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Recall that for a finite Abelian group #{G} the Davenport constant #{D(G)} is the smallest integer #{s} such that every sequence of length #{s} in #{G} has a nonempty subsequence summing to #{0}. Show that for every prime #{p} we have}
+
+##{D\Big( \mathbb{Z}_{p^{e_1}} \oplus \mathbb{Z}_{p^{e_2}} \oplus \cdots \mathbb{Z}_{p^{e_k}} \Big) = 1 + \sum_{i=1}^k (p^{e_i} - 1).}

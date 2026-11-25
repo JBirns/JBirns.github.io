@@ -1,0 +1,22 @@
+\title{Applications of the LSB Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{As I have no time to cover this section in my lectures, I thought you’d enjoy some exercises about this topic.}
+
+\transclude{CC27}
+
+\transclude{CC28}
+
+\p{Let us turn to another colourful result, the \em{Ham Sandwich Theorem}. Like the Borsuk part of LSB, the origin of this also goes back to the Scottish Café in Lwów (or Lemberg): inspired by Borsuk’s Theorem, Hugo Steinhaus asked whether it was always possible to dissect three solids located anywhere in #{\mathbb{R}^3} by an appropriate plane.}
+
+\transclude{CC29}
+
+\p{Let us note some easy combinatorial consequences of these two exercises.}
+
+\transclude{CC2A}
+
+\transclude{CC2B}
+
+\transclude{CC2C}

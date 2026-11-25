@@ -1,0 +1,15 @@
+\title{Restricted sums of several sets}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{A_1, \ldots, A_k} be subsets of #{\mathbb{Z}_p} with #{1 \leq |A_1| < |A_2| < \cdots < |A_k|}. Define the \em{restricted sum} of these sets as}
+
+##{\oplus_{i=1}^k A_i = \lbrace a_1 + \cdots + a_k : a_i \in A_i, a_i \neq a_j \text{ for } i, j = 1, \ldots, k\rbrace .}
+
+\p{Show that}
+
+##{\Big| \oplus_{i=1}^k A_i \Big| \geq \sum_{i=1}^k |A_i| - \binom{k+1}{2} + 1,}
+
+\p{provided the RHS above is at most #{p}.}

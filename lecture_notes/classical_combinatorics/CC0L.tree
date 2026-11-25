@@ -1,0 +1,51 @@
+\title{The EKR Theorem and Katona’s Circle Method}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The Erdős–Ko–Rado Theorem is a basic result in the combinatorics of finite sets. Although it was proved already in 1938, it was [published only in 1961](0008). Strangely, it went into the mathematical consciousness in the following slightly corrupted form:}
+
+\p{Calling a family \em{intersecting} if any two of its sets intersect, if #{1 \leq r \leq n/2} then an intersecting family of #{r}-subsets of #{[n]} consists of at most #{\binom{n-1}{r-1}} sets.}
+
+\p{The EKR Theorem led to numerous developments, including the simple but brilliant circle method of [Katona (1968)](000B), and many extensions of it due to Frankl, Füredi, [Kleitman](000E), [Pyber](000F) and others (e.g. [Katona 2017](000D)).}
+
+\p{In this brief section we start with an extension of EKR due to [Bollobás (1973)](0007), and deduce the EKR inequality itself, together with other corollaries.}
+
+\transclude{CC0M}
+
+\p{[What Katona realized](000C) was that the number of times a set #{A \in X^{(k)}} appears as an arc in one of the #{(n-1)!} cyclic orders on #{X}, namely #{k!(n-k)!}, is independent of the way #{A} is arranged in #{X}, so whatever we can conclude about the number of arcs obtained from a family #{\mathcal{A} \subset \mathcal{P}(X)} can be pulled back to give information about #{\mathcal{A}}. Most importantly, usually it is much easier to study a system of arcs that arise than the original set system. The proof below is an example of this.}
+
+\transclude{CC0N}
+
+\transclude{CC0O}
+
+\p{The EKR Theorem below is an immediate consequence of \ref{CC0O}.}
+
+\transclude{CC0P}
+
+\p{In their original paper, Erdős, Ko and Rado wanted to extend their theorem to larger intersections. They hoped to show that if #{\mathcal{A} \subset X^{(r)}} is such that #{|A \cap B| \geq \ell} for all #{A, B \in \mathcal{A}} and #{n \geq n_0(r, \ell)} then #{|\mathcal{A}| \leq \binom{n-\ell}{r-\ell}}. [As the family #{\lbrace A \in X^{(r)} : A \supset [\ell]\rbrace } shows, this bound would be best possible.] Not surprisingly, EKR hoped to prove this with a not-too-large (ideally, smallest possible) threshold function #{n_0(r, \ell)}. Unfortunately they never managed to prove this extension, so eventually (over twenty years later) they published this result with a rather large threshold #{n_0(r, \ell)}. Here we shall give a \em{trivial} result about #{\ell}-intersections with an even worse threshold #{n_0(r, \ell)}. The proof below uses a (perhaps ‘the’) mindless head-on attack.}
+
+\transclude{CC0Q}
+
+\p{This result tells us that, for #{1 \leq \ell < r} fixed, #{\mathcal{A}_0 = \lbrace A \in X^{(r)} : [\ell] \subset A\rbrace } is an extremal family whenever #{n \geq n_0(r, \ell)}. But what about the smaller values of #{n}? It is easily seen that if #{n} is hardly larger than #{r} then #{\mathcal{A}_0} cannot be extremal. Indeed, there are several other possibilities. For #{0 \leq t \leq r - \ell} set}
+
+##{\mathcal{A}_t = \lbrace A \in X^{(r)} : |A \cap [\ell + 2t]| \geq \ell + t\rbrace . 
+ \qquad (3)}
+
+\p{Then each #{\mathcal{A}_t} is an #{\ell}-intersecting family, so a natural candidate for an extremal #{\ell}-intersecting family of #{r}-sets. As it happens, #{\mathcal{A}_0} is the largest of these families if, and only if, #{n > (\ell+1)(r - \ell + 1)}, and [Frankl proved in 1978](000A) that in this case #{\mathcal{A}_0} is the unique extremal family.}
+
+\p{Concerning the general case, Frankl conjectured that the maximal size of an #{\ell}-intersecting family #{\mathcal{A} \subset X^{(r)}} is}
+
+##{\max_{0 \leq t \leq r - \ell} |\mathcal{A}_t|,}
+
+\p{where the family #{\mathcal{A}_t} is given by (3). This daring conjecture was proved by [Ahlswede and Khachatrian in 1997](0006).}
+
+\p{Changing intersections to unions, given #{r \geq n/2}, at most how large is #{\mathcal{F} \subset X^{(r)}} if #{X} is not the union of any two members of #{\mathcal{F}}? Taking complements, we see that we have already answered this question. Indeed, setting #{\mathcal{A} = \lbrace X \setminus F : F \in \mathcal{F}\rbrace }, the family #{\mathcal{A}} is intersecting if, and only if, no two members of #{\mathcal{F}} have #{X} as their union. Therefore the EKR theorem tells us that #{|\mathcal{F}| \leq \binom{n-1}{n-r-1} = \binom{n-1}{r}}. But at most how large is #{\mathcal{F} \subset X^{(r)}} if #{k \geq 3}, #{kr \geq n} and no #{k} members of #{\mathcal{F}} have #{X} as their union? It is rather surprising that, as shown by Frankl, this question is easy to answer (see also [Schönheim 1974](000G)).}
+
+\transclude{CC0R}
+
+\p{Although from our remarks before \ref{CC0R} it is clear that this theorem is another extension of the EKR theorem, let us state this extension explicitly.}
+
+\transclude{CC0S}
+
+\p{That the bounds in \ref{CC0R} and \ref{CC0S} are best possible are shown by the families #{\mathcal{F} = \lbrace F \in X^{(r)} : 1 \notin F\rbrace } and #{\mathcal{A} = \lbrace A \in X^{(r)} : 1 \in A\rbrace }.}

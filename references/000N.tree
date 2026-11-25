@@ -1,0 +1,18 @@
+\title{Recherches sur les nombres}
+\taxon{Reference}
+\date{1813}
+\author/literal{Augustin-Louis Cauchy}
+\meta{journal}{Journal de l’École Polytechnique}
+\meta{volume}{9}
+\meta{pages}{99–116}
+
+\meta{bibtex}{\startverb
+@article{Cauchy1813,
+  author    = {Cauchy, Augustin-Louis},
+  title     = {Recherches sur les nombres},
+  journal   = {Journal de l'{\'E}cole Polytechnique},
+  volume    = {9},
+  pages     = {99--116},
+  year      = {1813},
+}
+\stopverb}

@@ -1,0 +1,7 @@
+\title{Caro–Gao theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{If #{G} is an Abelian group of order #{n} then #{z(G) = n + D(G) - 1}.}

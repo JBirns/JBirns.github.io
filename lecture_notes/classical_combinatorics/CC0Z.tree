@@ -1,0 +1,11 @@
+\title{Reduction to compressed sets}
+\taxon{Lemma}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For every set #{A \subset Q_n} there is a compressed set #{B \subset Q_n} with #{|B| = |A|} and #{|N(B)| \leq |N(A)|}.}
+
+\proof{
+\p{Let #{A_0 = A, A_1, \ldots, A_t} be a sequence such that for every #{s}, #{0 \leq s < t} there is a direction #{i} such that #{A_{s+1} = C_i(A_s)} and #{A_{s+1} \neq A_s}. This sequence must end, since a compression moving a set #{A_s} takes it closer to the beginning of the simplicial order. At each stage, we have #{|A_{s+1}| = |A_s|} and #{|N(A_{s+1})| \leq |N(A_s)|}, so #{B = A_t} has the required properties.}
+}

@@ -1,0 +1,22 @@
+\title{On the critical pair theory in Z/pZ}
+\taxon{Reference}
+\date{2006}
+\author/literal{Yahya Ould Hamidoune}
+\author/literal{Oriol Serra}
+\author/literal{Gilles Zémor}
+\meta{journal}{Acta Arithmetica}
+\meta{volume}{121}
+\meta{pages}{99–115}
+\meta{doi}{10.4064/aa121-2-1}
+
+\meta{bibtex}{\startverb
+@article{Hamidoune2006,
+  author    = {Hamidoune, Yahya Ould and Serra, Oriol and Z{\'e}mor, Gilles},
+  title     = {On the critical pair theory in Z/pZ},
+  journal   = {Acta Arithmetica},
+  volume    = {121},
+  pages     = {99--115},
+  doi       = {10.4064/aa121-2-1},
+  year      = {2006},
+}
+\stopverb}

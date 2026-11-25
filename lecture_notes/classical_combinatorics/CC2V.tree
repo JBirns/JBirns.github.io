@@ -1,0 +1,7 @@
+\title{Transversals of infinite linear spaces}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{L_1, L_2, \ldots} be an infinite sequence of infinite sets such that any two intersect in exactly one element. Is there a set #{Y} such that #{1 \leq |L_i \cap Y| \leq 2} for every #{i}?}

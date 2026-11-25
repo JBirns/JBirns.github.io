@@ -1,0 +1,7 @@
+\title{Injections between levels}
+\taxon{Corollary}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{As usual, let #{X} be an #{n}-set, and let #{0 \leq r < s \leq n}. If #{|n/2 - r| \geq |n/2 - s|} then there is an injection #{f \colon X^{(r)} \to X^{(s)}} such that #{A \subset f(A)} for every #{A \in X^{(r)}}. If #{|n/2 - r| \leq |n/2 - s|} then there is an injection #{g \colon X^{(s)} \to X^{(r)}} such that #{A \supset g(A)} for every #{A \in X^{(s)}}.}

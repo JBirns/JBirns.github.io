@@ -1,0 +1,29 @@
+\title{Warning’s theorem for one polynomial (Ax)}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathbb{F}} be a finite field of characteristic #{p} and order #{q = p^\ell}, and let #{f \in \mathbb{F}[X_1, \ldots, X_n]} have degree #{d < n}. Then #{N(f)}, the number of zeros of #{f}, is a multiple of #{p}.}
+
+\proof{
+\p{Our task is to show that in #{\mathbb{F}} we have #{N(f) = 0}.}
+
+\p{By Lagrange’s theorem, for #{z \in \mathbb{F}} we have}
+
+##{z^{q-1} = \begin{cases} 0 & \text{if } z = 0, \\ 1 & \text{otherwise.} \end{cases}}
+
+\p{Consequently, for #{x = (x_1, \ldots, x_n) \in \mathbb{F}^n},}
+
+##{1 - f(x)^{q-1} = \begin{cases} 1 & \text{if } f(x) = 0, \\ 0 & \text{otherwise,} \end{cases}}
+
+\p{and so}
+
+##{N(f) = \sum_{x \in \mathbb{F}^n} \big( 1 - f(x)^{q-1} \big) = -\sum_{x \in \mathbb{F}^n} f(x)^{q-1}.}
+
+\p{Now, #{f(X)^{q-1}} has degree #{d(q-1) < n(q-1)}, so it is an #{\mathbb{F}}-linear combination of monomials of degree less than #{n(q-1)}. If #{X^u = X_1^{u_1}X_2^{u_2}\cdots X_n^{u_n}} is such a monomial then one of the exponents #{u_i} is at most #{q - 2}: we may assume that #{u_1 \leq q - 2}. The sum #{S(u)} of all evaluations of this monomial over #{\mathbb{F}^n} is}
+
+##{S(u) = \sum_{x \in \mathbb{F}^n} x^u = \prod_{i=1}^n \sum_{x_i \in \mathbb{F}} x_i^{u_i} = \sum_{x \in \mathbb{F}} x^{u_1}\prod_{i=2}^n \sum_{x_i \in \mathbb{F}} x_i^{u_i} = 0,}
+
+\p{since #{\sum_{x \in \mathbb{F}} x^{u_1} = 0}. This implies that #{N(f) = 0} in #{\mathbb{F}}, so #{N(f)} is indeed a multiple of #{p}.}
+}

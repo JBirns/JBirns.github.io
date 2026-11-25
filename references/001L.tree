@@ -1,0 +1,22 @@
+\title{The polynomial method and restricted sums of congruence classes}
+\taxon{Reference}
+\date{1996}
+\author/literal{Noga Alon}
+\author/literal{Melvyn B. Nathanson}
+\author/literal{Imre Z. Ruzsa}
+\meta{journal}{Journal of Number Theory}
+\meta{volume}{56}
+\meta{pages}{404–417}
+\meta{doi}{10.1006/jnth.1996.0029}
+
+\meta{bibtex}{\startverb
+@article{Alon1996,
+  author    = {Alon, Noga and Nathanson, Melvyn B. and Ruzsa, Imre Z.},
+  title     = {The polynomial method and restricted sums of congruence classes},
+  journal   = {Journal of Number Theory},
+  volume    = {56},
+  pages     = {404--417},
+  doi       = {10.1006/jnth.1996.0029},
+  year      = {1996},
+}
+\stopverb}

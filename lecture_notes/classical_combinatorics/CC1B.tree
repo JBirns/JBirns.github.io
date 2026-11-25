@@ -1,0 +1,25 @@
+\title{Erdős–Ginzburg–Ziv theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Every sequence of #{2n - 1} natural numbers has #{n} terms whose sum is a multiple of #{n}. Putting it slightly differently, let #{n \geq 2} be a natural number, and let #{a_1, a_2, \ldots, a_{2n-1} \in \mathbb{Z}_n}. Then}
+
+##{\sum_{i \in I} a_i = 0}
+
+\p{for some set #{I \in [2n-1]^{(n)}}.}
+
+\proof{
+\p{(i) First we prove this result in the case when #{n} is a prime #{p}. We may assume that #{0 \leq a_1 \leq a_2 \leq \cdots \leq a_{2n-1} < p}. If any #{p} of these terms are equal then those terms add up to #{0} in #{\mathbb{Z}_p}. Hence, we may assume that #{a_i < a_{i+p-1}} for #{i = 1, \ldots, p}. For #{i = 1, \ldots, p - 1} set #{A_i = \lbrace a_i, a_{i+p-1}\rbrace }, and #{A_p = \lbrace a_{2p-1}\rbrace }. Then, by the Cauchy–Davenport theorem,}
+
+##{|A_1 + \cdots + A_p| \geq |A_1| + \cdots + |A_p| - p + 1 = (2p - 1) - p + 1 = p,}
+
+\p{i.e. \em{every} element of #{\mathbb{Z}_p}, not only #{0}, is the sum of some #{p} of the #{a_i}.}
+
+\p{(ii) Turning to the general case, we apply induction on #{n} or on the number of prime factors of #{n}. This time it will be convenient to work in #{\mathbb{Z}} and demand divisibility by #{n}. Suppose then that #{n = pm}, where #{p} is a prime and #{m > 1}. Taking these #{n} numbers modulo #{m}, the induction hypothesis tells us that there are #{2p - 1} disjoint #{m}-subsets #{S_1, \ldots, S_{2p-1}} with sums divisible by #{m}, i.e. with sums #{b_1m, b_2m, \ldots, b_{2p-1}m}. Indeed, these #{m}-subsets can be selected since even after having selected #{2p - 2} of our #{m}-sets, we have}
+
+##{2n - 1 - (2p - 2)m = 2m - 1}
+
+\p{additional terms to choose from. Having found these sets #{S_i}, some #{p} of the #{2p - 1} numbers #{b_i} add up to a multiple of #{p}, so the #{pm = n} elements in the corresponding #{S_i} add up to a multiple of #{pm = n}, completing our proof of the induction step.}
+}

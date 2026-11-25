@@ -1,0 +1,20 @@
+\title{A historical note}
+\taxon{Reference}
+\date{1947}
+\author/literal{Harold Davenport}
+\meta{journal}{Journal of the London Mathematical Society}
+\meta{volume}{22}
+\meta{pages}{100–101}
+\meta{doi}{10.1112/jlms/s1-22.2.100}
+
+\meta{bibtex}{\startverb
+@article{Davenport1947,
+  author    = {Davenport, Harold},
+  title     = {A historical note},
+  journal   = {Journal of the London Mathematical Society},
+  volume    = {22},
+  pages     = {100--101},
+  doi       = {10.1112/jlms/s1-22.2.100},
+  year      = {1947},
+}
+\stopverb}

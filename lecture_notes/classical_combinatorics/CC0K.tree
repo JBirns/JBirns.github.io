@@ -1,0 +1,43 @@
+\title{Kleitman’s Littlewood–Offord theorem in normed spaces}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{x_1, x_2, \ldots} be vectors of norm at least #{1} in a normed space, and for a finite set #{A} of natural numbers set #{x_A = \sum_{i \in A} x_i}. Let #{\mathcal{A} \subset \mathcal{P}(n)} be such that if #{A, B \in \mathcal{A}} then #{\Vert x_A - x_B\Vert  < 1}. Then}
+
+##{|\mathcal{A}| \leq \binom{n}{\lfloor n/2 \rfloor}.}
+
+\proof{
+\p{Call a family #{\mathcal{F}} of finite subsets of natural numbers \em{sparse} or \em{scattered} if #{\Vert x_A - x_B\Vert  \geq 1} for all #{A, B \in \mathcal{F}}, #{A \neq B}, and call a decomposition of #{\mathcal{P}(n)} into some families a \em{symmetric decomposition into sparse sets (SDSS)} if each family is sparse and for every #{i}, #{0 \leq i \leq n/2}, the decomposition has #{\ell(n, i)} families with #{n + 1 - 2i} sets.}
+
+\p{Since #{\mathcal{A}} has at most one element in a sparse set and #{\sum_{i=0}^{\lfloor n/2 \rfloor} \ell(n, i) = \binom{n}{\lfloor n/2 \rfloor}}, our theorem follows if we prove the following Claim.}
+
+\p{\strong{Claim.} The power set #{\mathcal{P}(n)} has an SDSS.}
+
+\p{To prove this Claim, we apply induction on #{n}. Clearly, #{\lbrace \emptyset, \lbrace 1\rbrace \rbrace } will do for #{n = 1}. Assuming that our Claim holds for #{n - 1 \geq 1}, let us prove it for #{n}. Let #{\Delta_{n-1}} be an SDSS of #{\mathcal{P}(n-1)}. To enable us to construct an SDSS #{\Delta_n} of #{\mathcal{P}(n)} from #{\Delta_{n-1}}, we consider a support linear functional #{f} at #{x_n}, so that}
+
+##{\Vert f\Vert  = 1 \quad \text{and} \quad f(x_n) = \Vert x_n\Vert  \geq 1.}
+
+\p{Let #{\mathcal{D} \in \Delta_{n-1}} and pick #{D \in \mathcal{D}} such that #{f(x_D) \geq f(x_E)} for all #{E \in \mathcal{D}}. Define}
+
+##{\mathcal{D}' = \mathcal{D} \cup \big\lbrace  D \cup \lbrace n\rbrace  \big\rbrace}
+
+\p{and}
+
+##{\mathcal{D}'' = \big\lbrace  E \cup \lbrace n\rbrace  : E \in \mathcal{D}, E \neq D \big\rbrace ,}
+
+\p{and let #{\Delta_n} be the collection of non-empty families #{\mathcal{D}'} and #{\mathcal{D}''} we have just constructed. Clearly, #{\Delta_n} is a decomposition of #{\mathcal{P}(n)}. Also, each set of the form #{\mathcal{D}''} is trivially sparse. Furthermore, #{\mathcal{D}'} is also sparse since if #{E \in \mathcal{D}} then for #{D' = D \cup \lbrace n\rbrace } we have}
+
+##{\Vert x_{D'} - x_E\Vert  = \Vert x_D + x_n - x_E\Vert  \geq f(x_D - x_E) + f(x_n) \geq f(x_n) \geq 1.}
+
+\p{Finally, is #{\Delta_n} a symmetric decomposition of #{\mathcal{P}(n)} into sparse sets? Since a family #{\mathcal{D}} with #{n - 2i} sets gives rise to two families, one with #{n + 1 - 2i} sets and another with #{n - 1 - 2i} sets, for #{0 \leq i \leq (n+1)/2} the number of families in #{\Delta_n} with #{n + 1 - 2i} sets is #{\ell(n-1, i) + \ell(n-1, i-1)}, i.e.}
+
+##{\begin{aligned}
+\ell(n-1, i) + \ell(n-1, i-1) &= \binom{n-1}{i} - \binom{n-1}{i-1} + \binom{n-1}{i-1} - \binom{n-1}{i-2} \\
+&= \binom{n-1}{i} + \binom{n-1}{i-1} - \binom{n-1}{i-1} - \binom{n-1}{i-2} \\
+&= \binom{n}{i} - \binom{n}{i-1} = \ell(n, i)
+\end{aligned}}
+
+\p{sets, so #{\Delta_n} is indeed an SDSS of #{\mathcal{P}(n)}, completing our proof of the Claim, so our theorem is proved.}
+}

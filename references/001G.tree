@@ -1,0 +1,20 @@
+\title{Zum Hilbertschen Nullstellensatz}
+\taxon{Reference}
+\date{1930}
+\author/literal{J. L. Rabinowitsch}
+\meta{journal}{Mathematische Annalen}
+\meta{volume}{102}
+\meta{pages}{520}
+\meta{doi}{10.1007/bf01782361}
+
+\meta{bibtex}{\startverb
+@article{Rabinowitsch1930,
+  author    = {Rabinowitsch, J. L.},
+  title     = {Zum Hilbertschen Nullstellensatz},
+  journal   = {Mathematische Annalen},
+  volume    = {102},
+  pages     = {520},
+  doi       = {10.1007/bf01782361},
+  year      = {1930},
+}
+\stopverb}

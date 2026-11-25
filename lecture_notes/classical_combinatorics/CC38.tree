@@ -1,0 +1,13 @@
+\title{Cauchy–Davenport in #{\mathbb{R}/\mathbb{Z}} (#{{}^+})}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{Prepare.} Let #{G} be the (infinite) Abelian group #{\mathbb{R}/\mathbb{Z}} (reals modulo #{1}). Let #{A, B \subset G} be non-empty finite subsets such that}
+
+##{0 \in A \cap B \quad \text{and if } a + b = 0, a \in A, b \in B \text{ then } a = b = 0.}
+
+\p{Prove that}
+
+##{|A + B| \geq |A| + |B| - 1.}

@@ -1,0 +1,22 @@
+\title{Bollobás’s inequality for intersecting Sperner families}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A} \subset X^{(\leq n/2)}} be an intersecting Sperner family. Then}
+
+##{\sum_{A \in \mathcal{A}} \binom{n-1}{|A|-1}^{-1} \leq 1. 
+ \qquad (2)}
+
+\p{If we have equality in (2) then #{\mathcal{A} \subset X^{(r)}} for some #{r}, #{1 \leq r \leq n/2}.}
+
+\proof{
+\p{We may assume that #{\mathcal{A} \neq \emptyset} and #{n \geq 4}, since otherwise (2) is trivial. Let #{A \in \mathcal{A}} contribute weight #{1/|A|} to every cyclic permutation #{\pi} of #{X} in which #{A} is an arc. Clearly, a set #{A} contributes to #{|A|!(n - |A|)!} cyclic orders, so it contributes #{(|A| - 1)!(n - |A|)!} to the total weight assigned to the #{(n-1)!} cyclic orders. Since by \ref{CC0N} each cyclic order is assigned weight at most #{1},}
+
+##{\sum_{A \in \mathcal{A}} (|A| - 1)!(n - |A|)! \leq (n-1)!,}
+
+\p{which is exactly (2).}
+
+\p{If we have equality in (2) then we must have equality in each application of (1). Now, for any two sets #{A, B \in \mathcal{A}} there is a cyclic order in which both are arcs. These two arcs have the same cardinality, so #{|A| = |B|}. Hence #{\mathcal{A} \subset X^{(r)}} for some #{r}, #{1 \leq r \leq n/2}.}
+}

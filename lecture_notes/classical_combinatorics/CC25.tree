@@ -1,0 +1,21 @@
+\title{Lovász’s theorem (Kneser’s conjecture)}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{n = 2k + d \geq 2k}, the chromatic number of #{KG(n, k)} is #{d + 2}.}
+
+\proof{
+\p{Since we know that #{\chi(KG(n, k)) \leq d + 2}, what we need is that if #{X} is an #{n}-set and #{X^{(k)} = \bigcup_{i=1}^{d+1} \mathcal{A}_i} then some #{\mathcal{A}_i} contains two disjoint #{k}-sets. To show this, let us assume, as we may, that the elements of #{X} are points on #{S^{d+1} \subset \mathbb{R}^{d+2}} in general position, i.e. no hyperplane (or great sphere #{S^d}) contains #{d + 2} of these points. Let #{U_i} be the set of points of #{S^{d+1}} whose open hemispheres contain a #{k}-set of ‘colour’ #{i}:}
+
+##{U_i = \lbrace x \in S^{d+1} : \exists A \in \mathcal{A}_i \text{ such that } A \subset H(x)\rbrace ,}
+
+\p{where #{H(x)} is the \em{open} hemisphere of #{S^{d+1}} with centre #{x}. Finally, set}
+
+##{V_{d+2} = S^{d+1} \setminus \big( U_1 \cup U_2 \cup \cdots \cup U_{d+1} \big).}
+
+\p{Then #{U_1, \ldots, U_{d+1}} are open sets, #{V_{d+2}} is closed, and altogether they cover the entire sphere #{S^{d+1}}. Consequently, by \ref{CC24}, one of these sets contains an antipodal pair #{(x, -x)}.}
+
+\p{Note that #{\lbrace x, -x\rbrace  \subset V_{d+2}} cannot hold since if it did, both #{H(x)} and #{H(-x)} would contain at most #{k - 1} points of #{X}, so the great-sphere of these hemispheres would contain at least #{n - 2(k-1) = d + 2} points of #{X}, contradicting that the points of #{X} are in general position. Hence #{\lbrace x, -x\rbrace  \subset U_i} for some #{i}, #{1 \leq i \leq d + 1}. This means that each of the two disjoint hemispheres #{H(x)} and #{H(-x)} contains a #{k}-subset that belongs to #{\mathcal{A}_i}: these #{k}-subsets are disjoint.}
+}

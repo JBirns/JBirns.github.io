@@ -1,0 +1,7 @@
+\title{Olson’s theorem on #{p}-groups}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{If #{G} is a #{p}-group then #{D(G) = d^*(G) + 1}.}

@@ -1,0 +1,17 @@
+\title{LYM inequality}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{F}} be a Sperner family in #{\mathcal{P}(n)}, and for #{0 \leq k \leq n} set #{f_k = |\mathcal{F} \cap X^{(k)}|}. Then}
+
+##{\sum_{k=0}^n f_k\binom{n}{k}^{-1} \leq 1.}
+
+\proof{
+\p{There are #{n!} maximal chains in #{\mathcal{P}(n)} since maximal chains correspond to permutations of #{[n]}, assigning a permutation #{x_1x_2\ldots x_n} of #{[n]} to the chain #{\emptyset \subset \lbrace x_1\rbrace  \subset \lbrace x_1, x_2\rbrace  \subset \cdots \subset \lbrace x_1, \ldots, x_n\rbrace }. Also, every set in #{X^{(k)}}, so in particular, each of the #{f_k} sets in #{\mathcal{F} \cap X^{(k)}}, is contained in #{k!(n-k)!} maximal chains. Since every maximal chain contains at most one set from #{\mathcal{F}},}
+
+##{\sum_{k=0}^n f_kk!(n-k)! \leq n!,}
+
+\p{as required.}
+}

@@ -1,0 +1,16 @@
+\title{Aufgabe 360}
+\taxon{Reference}
+\date{1955}
+\author/literal{Martin Kneser}
+\meta{journal}{Jahresbericht der Deutschen Mathematiker-Vereinigung}
+\meta{volume}{58}
+
+\meta{bibtex}{\startverb
+@article{Kneser1955b,
+  author    = {Kneser, Martin},
+  title     = {Aufgabe 360},
+  journal   = {Jahresbericht der Deutschen Mathematiker-Vereinigung},
+  volume    = {58},
+  year      = {1955},
+}
+\stopverb}

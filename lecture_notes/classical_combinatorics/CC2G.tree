@@ -1,0 +1,11 @@
+\title{Disjoint subsets of prescribed sizes}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A} = \lbrace A_1, \ldots, A_n\rbrace } be a finite system of finite sets, and let #{b_1, \ldots, b_n} be positive integers. Show that there are disjoint sets #{B_1, \ldots, B_n} with #{B_i \subset A_i} and #{|B_i| = b_i} for every #{i} if and only if}
+
+##{\Big| \bigcup_{i \in I} A_i \Big| \geq \sum_{i \in I} b_i}
+
+\p{for all subsets #{I} of #{[n]}.}

@@ -1,0 +1,20 @@
+\title{Ueber die vollen Invariantensysteme}
+\taxon{Reference}
+\date{1893}
+\author/literal{David Hilbert}
+\meta{journal}{Mathematische Annalen}
+\meta{volume}{42}
+\meta{pages}{313–373}
+\meta{doi}{10.1007/bf01444162}
+
+\meta{bibtex}{\startverb
+@article{Hilbert1893,
+  author    = {Hilbert, David},
+  title     = {Ueber die vollen Invariantensysteme},
+  journal   = {Mathematische Annalen},
+  volume    = {42},
+  pages     = {313--373},
+  doi       = {10.1007/bf01444162},
+  year      = {1893},
+}
+\stopverb}

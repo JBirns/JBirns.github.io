@@ -1,0 +1,7 @@
+\title{Seating couples at a round table (#{{}^+})}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{p = 2n + 1 \geq 3} be a prime. At a circular table for #{p} people, with the single host sitting in one of the chairs, #{n} couples are to be seated in such a way that the #{i}th couple are at distance #{d_i} from each other, where #{1 \leq d_i \leq n} for #{i = 1, \ldots, n}. For what values of #{d_i} is this possible?}

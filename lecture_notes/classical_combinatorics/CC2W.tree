@@ -1,0 +1,9 @@
+\title{Ground sets of families with small intersections}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{1 < k < r} and let #{A_1, \ldots, A_m \in S^{(r)}}, #{m \geq 2}, be such that #{|A_i \cap A_j| \leq k} for all #{1 \leq i < j \leq m}. Show that #{|S| \geq r^2m/(k(m-1) + r)}.}
+
+\p{Show also that equality holds for infinitely many systems with #{k} and #{r/k} tending to infinity.}

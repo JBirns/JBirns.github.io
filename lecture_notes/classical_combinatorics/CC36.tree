@@ -1,0 +1,12 @@
+\title{Brunn–Minkowski for box-families}
+\taxon{Exercise}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{Prepare.} A \em{box-family} in #{\mathbb{R}^n} is a union of finitely many closed rectangular parallelepipeds with non-empty disjoint interiors, with sides parallel to the coordinate axes. Given two box-families, #{K} and #{L}, show that}
+
+##{\big( \lambda(K + L) \big)^{1/n} \geq \big( \lambda(K) \big)^{1/n} + \big( \lambda(L) \big)^{1/n}. 
+ \qquad (4)}
+
+\p{This implies the same inequality (4), called the Brunn–Minkowski inequality, for nonempty compact subsets #{K, L} of #{\mathbb{R}^n}.}

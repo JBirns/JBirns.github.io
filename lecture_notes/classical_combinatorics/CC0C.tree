@@ -1,0 +1,13 @@
+\title{Sperner’s Theorem}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{A}} be a Sperner family in #{\mathcal{P}(n)}. Then}
+
+##{|\mathcal{A}| \leq \binom{n}{\lfloor n/2 \rfloor}.}
+
+\proof{
+\p{For #{k \geq (n+1)/2} there is an injection #{f \colon X^{(k)} \to X^{(k-1)}} such that #{A \supset f(A)} for every #{A \in X^{(k)}}, and for #{k \leq (n-1)/2} there is an injection #{g \colon X^{(k)} \to X^{(k+1)}} such that #{B \subset g(B)} for all #{B \in X^{(k)}}. The edges #{Af(A)} and #{Bg(B)} concatenate into disjoint chains, each ending in #{X^{(\lceil n/2 \rceil)}} or going through it. If #{n} is even, then a set #{C \in X^{(n/2)}} may fail to appear in these chains: in this case add the chain #{\lbrace C\rbrace } of length #{1} to our collection of chains to obtain #{\binom{n}{\lfloor n/2 \rfloor}} chains that cover #{\mathcal{P}(n)}. Each chain meets #{\mathcal{A}} in at most one element, so we are done.}
+}

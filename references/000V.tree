@@ -1,0 +1,21 @@
+\title{On the measure of sum-sets I. The theorems of Brunn, Minkowski, and Lusternik}
+\taxon{Reference}
+\date{1953}
+\author/literal{Ralph Henstock}
+\author/literal{A. M. Macbeath}
+\meta{journal}{Proceedings of the London Mathematical Society (3)}
+\meta{volume}{3}
+\meta{pages}{182–194}
+\meta{doi}{10.1112/plms/s3-3.1.182}
+
+\meta{bibtex}{\startverb
+@article{Henstock1953,
+  author    = {Henstock, Ralph and Macbeath, A. M.},
+  title     = {On the measure of sum-sets I. The theorems of Brunn, Minkowski, and Lusternik},
+  journal   = {Proceedings of the London Mathematical Society (3)},
+  volume    = {3},
+  pages     = {182--194},
+  doi       = {10.1112/plms/s3-3.1.182},
+  year      = {1953},
+}
+\stopverb}

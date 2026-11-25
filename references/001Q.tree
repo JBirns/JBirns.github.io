@@ -1,0 +1,20 @@
+\title{A short proof of Kneser’s conjecture}
+\taxon{Reference}
+\date{1978}
+\author/literal{Imre Bárány}
+\meta{journal}{Journal of Combinatorial Theory, Series A}
+\meta{volume}{25}
+\meta{pages}{325–326}
+\meta{doi}{10.1016/0097-3165(78)90023-7}
+
+\meta{bibtex}{\startverb
+@article{Barany1978,
+  author    = {B{\'a}r{\'a}ny, Imre},
+  title     = {A short proof of Kneser's conjecture},
+  journal   = {Journal of Combinatorial Theory, Series A},
+  volume    = {25},
+  pages     = {325--326},
+  doi       = {10.1016/0097-3165(78)90023-7},
+  year      = {1978},
+}
+\stopverb}

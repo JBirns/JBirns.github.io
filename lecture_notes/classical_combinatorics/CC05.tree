@@ -1,0 +1,11 @@
+\title{Hall’s Theorem for SDRs}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\mathcal{F} = \lbrace A_1, \ldots, A_m\rbrace } be a set system satisfying (2). Then #{\mathcal{F}} has an SDR.}
+
+\proof{
+\p{The assertion is immediate from \ref{CC03}: all we have to note is the natural identification of a set system with a bipartite graph. Indeed, #{\mathcal{F}} is naturally identified with the bipartite graph #{G_{\mathcal{F}}} with bipartition #{(U, W)}, where #{U = \mathcal{F}} and #{W = \bigcup_{i=1}^m A_i}, with #{uw} an edge if #{w \in A_i}, where #{u = A_i}. Identifying #{\mathcal{F}} with #{G_{\mathcal{F}}}, condition (2) becomes (1), and an SDR of #{\mathcal{F}} is precisely a CM from #{U} into #{W}.}
+}
