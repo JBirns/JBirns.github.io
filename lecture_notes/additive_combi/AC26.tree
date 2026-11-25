@@ -6,6 +6,8 @@
 
 \p{Let #{f \colon G \to \mathbb{C}} with #{\Vert f\Vert _{L^\infty(G)} \leq 1}. Then #{|T_4(f, f, f, f)| \leq \Vert f\Vert _{U^3(G)}}.}
 
+\p{\strong{Remark.} I don't know about anyone else, but to me the opening of this proof is a super non-trivial (and elegantly sneaky) trick.}
+
 \proof{
 \p{Reparametrising, we have}
 
