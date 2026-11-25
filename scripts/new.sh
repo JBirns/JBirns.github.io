@@ -79,7 +79,7 @@ FILE="trees/$ADDR.tree"
   [ -n "$TAXON" ] && printf '\\taxon{%s}\n' "$TAXON"
   printf '\\date{%s}\n' "$(date +%Y-%m-%d)"
   printf '\\author{%s}\n' "$AUTHOR"
-  printf '\\import{macros}\n\n'
+  printf '\\import{macros}\n'
   printf '\\import{names}\n\n'
   printf '\\p{\n  Write here. Inline maths: #{x^2}, display maths: ##{\\int_0^1 x\\,dx = \\frac{1}{2}}\n}\n'
 } > "$FILE"

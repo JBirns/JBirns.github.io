@@ -1,0 +1,21 @@
+\title{Log-Concavity}
+\date{2026-11-25}
+\author{JB00}
+\import{macros}
+\taxon{Definition}
+\import{names}
+
+\p{
+   A nonnegative sequence #{(a_i)_{i=1}^n} is said to be \em{log-concave} if #{a_{i+1}a_{i-1}\le a_i^2} for all #{i}, where we assume #{a_0=a_{n+1}=0}. A polynomial is said to be \em{log-concave} if the sequence of its coefficients is log-conave.
+}
+
+\subtree{
+  \taxon{Theorem}
+  \p{Log-concave sequences are [unimodal](BMUU).}
+  
+  \proof{\p{The condition #{a_{i+1}a_{i-1}\le a_i^2} is equivalent to
+  ##{\frac{a_{i-1}}{a_i} \le \frac{a_i}{a_{i+1}}}
+  That is, the ratios of consecutive pairs of elements are nondecreasing. In particular it can cross the value 1 at most once (it can equal it "while crossing"). While the ratio is #{<1} the sequence is nondecreasing, while it equals 1 it is constant (at the maximum) and when #{>1} it is nonincreasing. Thus the sequence is unimodal.
+    }
+  }
+}

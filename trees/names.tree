@@ -15,4 +15,5 @@
 \def\talks{001W}
 
 
-\def\defunimodal{BMUU}
+\def\unimodal{BMUU}
+\def\logconcave{001X}
