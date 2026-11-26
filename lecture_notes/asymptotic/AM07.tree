@@ -1,0 +1,7 @@
+\title{Big O}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{We write #{f(x) = O(g(x))} as #{x \to x_0}, assuming #{g > 0} close to #{x_0}, if there exists #{C > 0} such that #{|f(x)| \leq Cg(x)} as #{x \to x_0}. “#{f} is not radically different in size to #{g} in this limit.”}

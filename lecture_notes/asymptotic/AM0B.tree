@@ -1,0 +1,9 @@
+\title{Asymptotic expansion}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{If the definition of an asymptotic approximation holds for all #{N}, we say that the asymptotic approximation is called an \em{asymptotic expansion/series} and we write}
+
+##{f(x) \sim \sum_{k=0}^\infty a_k\phi_k(x).}

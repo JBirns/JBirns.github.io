@@ -1,0 +1,28 @@
+\title{A Stieltjes integral}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider}
+
+##{I(x) = \int_0^\infty \frac{e^{-t}}{1 + xt}\,dt, \quad x \geq 0.}
+
+\p{How does it behave as #{x \to 0^+}? We have}
+
+##{\sum_{n=0}^N (-xt)^n = \frac{1 - (-xt)^{N+1}}{1 + xt} = \frac{1}{1 + xt} - \underbrace{\frac{(-xt)^{N+1}}{1 + xt}}_{=: -r_N}.}
+
+\p{So}
+
+##{\begin{aligned}
+I(x) &= \int_0^\infty e^{-t}\Big( \sum_{n=0}^N (-1)^nx^nt^n + r_N \Big)\,dt \\ &= \sum_{n=0}^N (-1)^nx^n\underbrace{\Big( \int_0^\infty t^ne^{-t}\,dt \Big)}_{= \Gamma(n + 1) = n!} + \underbrace{\int_0^\infty r_Ne^{-t}\,dt}_{R_N} \\
+&= \sum_{n=0}^N (-1)^nx^nn! + R_N = \sum_{n=0}^N c_n\phi_n(x) + R_N,
+\end{aligned}}
+
+\p{where #{c_n = (-1)^nn!}, #{\phi_n = x^n}. For this to be an asymptotic approximation as #{x \to 0^+} we need #{R_N = o(x^N)} as #{x \to 0^+}:}
+
+##{\Big| \frac{R_N}{x^N} \Big| = \frac{x^{N+1}}{x^N}\int_0^\infty \frac{e^{-t}t^{N+1}}{1 + xt}\,dt \leq x\int_0^\infty e^{-t}t^{N+1}\,dt = x(N + 1)! \to 0 \text{ as } x \to 0^+}
+
+\p{(noting that #{1 + xt \geq 1}). This holds for all #{N}, so}
+
+##{I(x) \sim \sum_{n=0}^\infty (-1)^nn!\,x^n \quad \text{as } x \to 0^+.}

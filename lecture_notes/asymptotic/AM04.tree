@@ -1,0 +1,9 @@
+\title{Asymptotic equality}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For real-valued functions #{f, g}, we write #{f(x) \sim g(x)} about #{x = x_0} (as #{x \to x_0}; #{x_0} can be #{\infty}) if}
+
+##{\lim_{x \to x_0} \frac{f(x)}{g(x)} = 1.}

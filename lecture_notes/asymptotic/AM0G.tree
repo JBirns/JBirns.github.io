@@ -1,0 +1,11 @@
+\title{Power series}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In this course, we will be mostly dealing with #{\phi_k = (x - x_0)^k} as #{x \to x_0}, or #{\phi_k = \frac{1}{x^k}} as #{x \to \infty}. In fact, the Taylor series about a point is an asymptotic expansion about that point, and}
+
+##{f(x) - \sum_{k=0}^N \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = o(|x - x_0|^N).}
+
+\p{\strong{Exercise:} prove this using the definitions and the integral form of the remainder of the Taylor series.}

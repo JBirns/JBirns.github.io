@@ -1,0 +1,21 @@
+\title{Uniqueness of coefficients}
+\taxon{Proposition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\lbrace \phi_k\rbrace } be an asymptotic sequence as #{x \to x_0} and #{f(x) \sim \sum_{k=0}^\infty a_k\phi_k} as #{x \to x_0}. Then the #{a_k} are unique. In fact,}
+
+##{a_0 = \lim_{x \to x_0} \frac{f(x)}{\phi_0(x)}, \qquad a_n = \lim_{x \to x_0} \frac{f(x) - \sum_{k=0}^{n-1} a_k\phi_k(x)}{\phi_n(x)}.}
+
+\proof{
+\p{Use induction on #{N}. Let #{N = 0}. Then from the definition of an asymptotic series,}
+
+##{\lim_{x \to x_0} \Big| \frac{f(x) - a_0\phi_0(x)}{\phi_0(x)} \Big| = 0, \quad \text{i.e.} \quad \Big| \frac{f(x)}{\phi_0(x)} - a_0 \Big| \to 0.}
+
+\p{Let #{N = n - 1}, and suppose our proposition is true for all #{a_k} with #{k \leq n - 1}. Then}
+
+##{\lim_{x \to x_0} \Big| \frac{f(x) - \sum_{k=0}^n a_k\phi_k}{\phi_n} \Big| = 0 \implies \lim_{x \to x_0} \Big| \frac{f(x) - \sum_{k=0}^{n-1} a_k\phi_k}{\phi_n} - a_n \Big| = 0,}
+
+\p{so #{a_n = \lim_{x \to x_0} \frac{f(x) - \sum_{k=0}^{n-1} a_k\phi_k(x)}{\phi_n(x)}}. Since the #{a_k}, #{k \leq n - 1}, are unique, #{a_n} is unique as well. [Alternative proof: Marton p. 3.]}
+}

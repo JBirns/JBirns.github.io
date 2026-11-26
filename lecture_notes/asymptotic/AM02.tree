@@ -1,0 +1,15 @@
+\title{Motivating examples}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}\,dt}, #{\operatorname{Re}(z) > 0}. Specialise to #{z = n \in \mathbb{Z}} and take #{n} large:}
+##{\Gamma(n + 1) = n! \sim \sqrt{2\pi}\,n^{n + 1/2}e^{-n}\Big( 1 + \frac{1}{12n} + \frac{1}{288n^2} + \cdots \Big).}}
+\li{\p{\strong{(ii)} #{x^2y'' + xy' - x^2y = 0}. Solution:}
+##{I_0(x) = \sum_{n=0}^\infty \frac{x^{2n}}{2^{2n}(n!)^2}.}
+\p{What does it look like when #{x \to \infty}? #{I_0(x) \sim (2\pi x)^{-1/2}e^x}.}}
+\li{\p{\strong{(iii)} #{y'' + k^2e^{-x^2/2}y = 0}, #{y \to y_0} as #{|x| \to \infty}. #{k} is an eigenvalue, #{k = k_1, k_2, k_3, \ldots}, and}
+##{k_n \sim \frac{\sqrt{\pi}}{2}\Big( n + \frac{1}{2} \Big) \quad \text{for large } n.}}
+}

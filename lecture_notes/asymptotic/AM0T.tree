@@ -1,0 +1,23 @@
+\title{Higher-order terms}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider #{J(x) = \int_0^\pi e^{x\sin t}\,dt} as #{x \to \infty}. #{f = 1}, #{\phi = \sin t}, with maximum at #{t = \frac{\pi}{2}}. (Case (b) gives the leading order term: #{J(x) \sim \sqrt{\frac{2\pi}{x}}e^x}.) With #{u = t - \frac{\pi}{2}},}
+
+##{\begin{aligned}
+J(x) &\sim \int_{\pi /2-\varepsilon}^{\pi /2+\varepsilon} e^{x\sin t}\,dt = \int_{-\varepsilon}^\varepsilon e^{x\cos u}\,du \sim \int_{-\varepsilon}^\varepsilon \exp\Big( x - \frac{xu^2}{2} + \frac{xu^4}{4!} - \cdots \Big)\,du \\
+&\sim e^x\int_{-\varepsilon}^\varepsilon e^{-xu^2/2}\Big( 1 + \frac{xu^4}{4!} + \cdots \Big)\,du.
+\end{aligned}}
+
+\p{Let #{s = \sqrt{x}u}:}
+
+##{\begin{aligned}
+J &\sim \frac{e^x}{\sqrt{x}}\Big[ \int_{-\varepsilon\sqrt{x}}^{\varepsilon\sqrt{x}} e^{-s^2/2} + \frac{s^4e^{-s^2/2}}{x \cdot 4!} + \cdots\,ds \Big] \\
+&\sim \frac{e^x}{\sqrt{x}}\Big[ \int_{-\infty}^\infty e^{-s^2/2}\,ds + \frac{1}{4!\,x}\int_{-\infty}^\infty s^4e^{-s^2/2}\,ds \Big].
+\end{aligned}}
+
+\p{Using #{\int_{-\infty}^\infty x^{2n}e^{-x^2/2}\,dx = \sqrt{2\pi}(2n - 1)!!} (by repeated IBP),}
+
+##{J(x) \sim \sqrt{\frac{2\pi}{x}}e^x\Big( 1 + \frac{1}{8x} + \cdots \Big).}

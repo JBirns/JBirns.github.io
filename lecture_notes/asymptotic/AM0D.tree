@@ -1,0 +1,14 @@
+\title{Two expansions of #{1 + \frac{1}{x}}}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(x) = 1 + \frac{1}{x}}; consider the behaviour as #{x \to \infty}.}
+
+\ul{
+\li{Define #{\phi_k = x^{-k}}. Then #{f(x) \sim \sum_{k=0}^\infty a_k\phi_k} where #{a_0 = 1}, #{a_1 = 1}, #{a_i = 0} for all #{i \geq 2}.}
+\li{\p{Define #{\psi_k = \frac{1}{(1 + x)^k}}. Then}
+##{f(x) = 1 + \frac{1}{x} = \frac{1}{1 - (1 + x)^{-1}} \sim \sum_{k=0}^\infty b_k\psi_k \quad \text{as } x \to \infty,}
+\p{where #{b_k = 1} for all #{k} (by geometric series).}}
+}

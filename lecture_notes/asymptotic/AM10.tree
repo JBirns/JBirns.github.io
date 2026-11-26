@@ -1,0 +1,11 @@
+\title{Classifying singular points}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{y'' + \frac{1}{x}y' + \big( \frac{1}{x} - \frac{1}{x^2} \big)y = 0}: #{x = 0} is a regular singular point.}
+\li{\strong{(ii)} #{y'' + \frac{2}{x^2}y' + y = 0}: #{x = 0} is an irregular singular point.}
+\li{\strong{(iii)} #{y'' - xy = 0}, #{x \to \infty}: #{Y'' + \frac{2}{t}Y' - \frac{1}{t^5}Y = 0}, so #{t = 0} is an irregular singular point, and so is #{x = \infty}.}
+}

@@ -1,0 +1,19 @@
+\title{Optimal truncation of the Stieltjes integral}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Stieltjes integral (see \ref{AM0K}.1 and Q10b in ES1):}
+
+##{I(\varepsilon) = \int_0^\infty \frac{e^{-t}}{1 + \varepsilon t}\,dt, \quad 0 < \varepsilon \ll 1.}
+
+\p{Recall that #{I(\varepsilon) = \sum_{n=0}^N \underbrace{(-1)^nn!\,\varepsilon^n}_{a_n} + E_N}, with}
+
+##{E_N = \int_0^\infty \frac{e^{-t}(-\varepsilon t)^{N+1}}{1 + \varepsilon t}\,dt, \quad |E_N| \leq \varepsilon^{N+1}\int_0^\infty t^{N+1}e^{-t}\,dt \leq \varepsilon^{N+1}(N + 1)!.}
+
+\p{For what #{n} is #{\big| \frac{a_{n+1}}{a_n} \big| > 1}? #{(n + 1)\varepsilon > 1 \Rightarrow n > \frac{1}{\varepsilon} - 1}. Set #{N = \lfloor \frac{1}{\varepsilon} - 1 \rfloor} (#{\sim \frac{1}{\varepsilon}} as #{\varepsilon \to 0}). Then}
+
+##{|E_N| \leq \Big( \frac{1}{\varepsilon} \Big)^{-1/\varepsilon}\Big( \Big\lfloor \frac{1}{\varepsilon} \Big\rfloor \Big)! = O\big( \varepsilon^{-1/2}e^{-1/\varepsilon} \big)}
+
+\p{by Stirling’s approximation. In this example, optimal truncation gives an exponentially small error, not an algebraically small error.}

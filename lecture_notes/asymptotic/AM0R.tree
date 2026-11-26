@@ -1,0 +1,14 @@
+\title{Laplace’s method}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{I(x) = \int_{-\infty}^\infty e^{-xt^2}e^{at}\,dt} as #{x \to \infty} #{\big\lparen  = e^{a^2/4x}\sqrt{\frac{\pi}{x}}} exactly#{\big\rparen }. Here #{\phi(t) = -t^2}, #{f(t) = e^{at}}; #{\phi} has an internal maximum at #{t = 0} with #{\phi''(0) = -2}, #{f(0) = 1}, #{\phi(0) = 0}. So}
+##{I \sim \sqrt{\frac{\pi}{x}} \quad \text{as } x \to \infty.}}
+\li{\p{\strong{(ii)} #{K_0(x) = \int_0^\infty e^{-t - x^2/4t}\,dt} as #{x \to \infty}. Maybe #{f(t) = e^{-t}}, #{\phi(t) = -\frac{1}{4t}}? But #{\phi'(t) > 0} for all #{t} in range. Let #{\psi = -t - \frac{x^2}{4t}}; #{\psi' = -1 + \frac{x^2}{4t^2} = 0}, so #{\psi} has a maximum at #{t_{\max} = \frac{x}{2}}. As #{x \to \infty}, #{\max \to \infty}, so let’s rescale so a new variable moves with #{x}. Try #{xu = 2t}:}
+##{K_0 = \frac{x}{2}\int_0^\infty e^{x\overbrace{(-\frac{u}{2} - \frac{1}{2u})}^{\phi(u)}}\,du}
+\p{[#{f(t) = 1}, which is “nice enough” although not bounded]. #{\phi'(u) = 0 \Rightarrow u = c = 1}, with #{\phi(1) = -1}, #{\phi''(1) = -1}. So}
+##{K_0(x) \sim \frac{\sqrt{2\pi x}}{2}e^{-x} \quad \text{as } x \to \infty.}}
+}

@@ -1,0 +1,13 @@
+\title{Asymptotic approximation}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{f(x)} is a function that we want to understand and let #{\lbrace \phi_k\rbrace } be an asymptotic sequence as #{x \to x_0}. We say #{\sum_{k=0}^N a_k\phi_k(x)} is an \em{(#{N}-term) asymptotic expansion} \em{(approximation?)} of #{f(x)} as #{x \to x_0} if}
+
+##{f(x) = \sum_{k=0}^N a_k\phi_k(x) + o(\phi_N(x)) \quad \text{as } x \to x_0.}
+
+\p{Alternatively we can write}
+
+##{\Big| \frac{f(x) - \sum_{k=0}^N a_k\phi_k(x)}{\phi_N(x)} \Big| \to 0 \quad \text{as } x \to x_0.}

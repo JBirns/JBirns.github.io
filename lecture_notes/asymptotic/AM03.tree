@@ -1,0 +1,92 @@
+\title{Definitions & Notation}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{AM04}
+
+\transclude{AM05}
+
+\transclude{AM06}
+
+\transclude{AM07}
+
+\p{\strong{Warning.} In some areas of physics people use #{O} and #{\sim} interchangeably.}
+
+\p{\strong{Exercises.} Using the definitions, show:}
+
+\ul{
+\li{\strong{(i)} #{f(x) \sim g(x) \iff f - g = o(g)} as #{x \to x_0};}
+\li{\strong{(ii)} #{\sin(x) \ll x^2} as #{x \to \infty};}
+\li{\strong{(iii)} #{12x^5 + 6x^3 + x = O(x^5)} as #{x \to \infty}.}
+}
+
+\p{\strong{Asymptotic Expansions}}
+
+\ul{
+\li{\p{We have a complicated/unworkable #{f(x)} and want to know its behaviour in some limit. In particular:}
+\ul{
+\li{we want to find a “simpler” function #{g(x)} so that #{f \sim g} in the limit;}
+\li{we also want to break up #{g} into a hierarchy of approximations such that #{g(x) = \sum_{k=0}^N a_k\phi_k(x)}, where the #{\phi_k(x)} are “nice” and adding extra #{\phi_k}’s improves the accuracy of the approximation by a known size.}
+}}
+}
+
+\transclude{AM08}
+
+\transclude{AM09}
+
+\transclude{AM0A}
+
+\transclude{AM0B}
+
+\transclude{AM0C}
+
+\p{\strong{Properties of asymptotic expansions and remarks}}
+
+\ul{
+\li{\p{\strong{(i)} \em{Mathematical operations.}}
+\ul{
+\li{Suppose #{\lbrace \phi_k\rbrace } is an asymptotic sequence as #{x \to x_0} and let #{f \sim \sum_{k=0}^\infty a_k\phi_k} and #{g \sim \sum_{k=0}^\infty b_k\phi_k}. Then #{\alpha f + \beta g \sim \sum_{k=0}^\infty (\alpha a_k + \beta b_k)\phi_k}.}
+\li{Multiplication: let #{\phi_k = (x - x_0)^k}. Then #{fg \sim \sum_{k=0}^\infty c_k\phi_k} where #{c_k = \sum_{j=0}^k a_jb_{k-j}}.}
+\li{For division, see BO §3.8.}
+\li{Term by term differentiation doesn’t generally work.}
+\li{Term by term integration does work.}
+}}
+\li{\strong{(ii)} \em{Different asymptotic representations.} Suppose #{\lbrace \phi_k\rbrace } and #{\lbrace \psi_k\rbrace } are different asymptotic sequences as #{x \to x_0} and #{f(x) \sim \sum_{k=0}^\infty a_k\phi_k} and #{f(x) \sim \sum_{k=0}^\infty b_k\psi_k} as #{x \to x_0}. Then in general #{a_k} and #{b_k} are not the same.}
+}
+
+\transclude{AM0D}
+
+\transclude{AM0E}
+
+\transclude{AM0F}
+
+\transclude{AM0G}
+
+\p{\strong{Terminology.} Something is said to be \em{small beyond all orders} in some limit if it can’t be represented by any power series, or if it is smaller than any power. E.g. #{e^{-x}} is small beyond all orders in inverse powers of #{x} as #{x \to \infty}.}
+
+\transclude{AM0H}
+
+\transclude{AM0I}
+
+\p{\strong{Asymptotic Expansions in #{\mathbb{C}}; the Stokes Phenomenon}}
+
+\ul{
+\li{So far, our definitions relied on \em{real} variables and \em{real} limits, e.g. #{x \to \infty}, #{x \to x_0}.}
+\li{When we use complex variables, i.e. #{z \in \mathbb{C}}, typically #{z} must be restricted to a sector of #{\mathbb{C}} around #{z_0} for the definitions to work [see III.2 in Stuart].}
+\li{Even if #{f(z)} is analytic at #{z_0}, it may have different asymptotic expansions when #{z_0} is approached in different sectors of #{\mathbb{C}}: the \em{Stokes phenomenon}.}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (5,0);
+\draw[->] (0,-0.5) -- (0,2.5) node[left] {$\mathbb{C}$};
+\fill (2.5,1.4) circle (1.5pt);
+\node at (2.1,1.8) {$z_0$};
+\draw (1.3,1.7) -- (3.7,1.1);
+\draw (2.0,0.5) -- (3.0,2.3);
+\draw[->] (1.2,0.5) .. controls (1.6,0.7) .. (2.4,1.3);
+\draw (1.0,0.6) .. controls (0.7,-0.6) and (4.5,-0.6) .. (4.2,1.0);
+\draw[->] (4.3,2.2) node[right] {different asymptotic expansions} -- (3.2,1.6);
+\end{tikzpicture}}
+
+\transclude{AM0J}

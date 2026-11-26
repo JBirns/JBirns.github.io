@@ -1,0 +1,7 @@
+\title{No claim of convergence}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{We fix #{N}, then take #{x \to x_0}; #{N \not\to \infty}. We make no claim of convergence: this #{\sum^\infty} is just notation. Instead we have an infinite number of approximations (each of different #{N}) and the limit #{x \to x_0} is taken in each separately.}

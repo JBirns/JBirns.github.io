@@ -1,0 +1,10 @@
+\title{Properties of asymptotic equality}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\sim} is an equivalence relation. Properties: linearity, symmetry, transitivity; it respects products (i.e. #{f_1 \sim g_1}, #{f_2 \sim g_2 \Rightarrow f_1f_2 \sim g_1g_2}).}
+\li{\strong{(ii)} The definition has problems when dealing with oscillatory functions with zeroes.}
+}

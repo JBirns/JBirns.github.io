@@ -1,0 +1,21 @@
+\title{Applications of Watson’s Lemma}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{I(x) = \int_0^\infty e^{-xt}\sin t\,dt} as #{x \to \infty} #{\big\lparen  = \frac{1}{1 + x^2}} btw#{\big\rparen }. #{f = \sin t} is exponentially bounded (case (i)) ✓, and}
+##{f = \sum_{n=0}^\infty \frac{(-1)^n}{(2n + 1)!}t^{2n+1} \implies \alpha = 1,\; \beta = 2.}
+\p{So Watson’s Lemma gives}
+##{I(x) \sim \sum_{n=0}^\infty (-1)^n\frac{\Gamma(2n + 2)}{(2n + 1)!}\frac{1}{x^{2n+2}} = \frac{1}{x^2}\sum_{n=0}^\infty (-1)^nx^{-2n} = \frac{1}{x^2} \cdot \frac{1}{1 + x^{-2}} = \frac{1}{1 + x^2}}
+\p{by geometric series.}}
+\li{\p{\strong{(ii)} #{xy'' + (a + 1 - x)y' - ay = 0}, #{a > 0}. Solution:}
+##{M = \frac{e^x}{\Gamma(a)}\int_0^1 e^{-xt}(1 - t)^{a-1}\,dt;}
+\p{we want to know the behaviour as #{x \to \infty}.}
+##{f = (1 - t)^{a-1} = \sum_{n=0}^\infty (-1)^n\frac{\Gamma(a)}{\Gamma(a - n)n!}t^n \implies \alpha = 0,\; \beta = 1,}
+\p{and #{\int_0^1 |f|\,dt < \infty} ✓. So}
+##{M \sim \frac{e^x}{\Gamma(a)}\sum_{n=0}^\infty (-1)^n\frac{\Gamma(a)\Gamma(n + 1)}{\Gamma(a - n)n!}\frac{1}{x^{n+1}},}
+\p{so}
+##{M \sim e^x\sum_{n=0}^\infty (-1)^n\frac{1}{\Gamma(a - n)}\frac{1}{x^{n+1}} \sim \frac{e^x}{x}\frac{1}{\Gamma(a)}.}}
+}

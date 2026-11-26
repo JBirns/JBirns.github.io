@@ -1,0 +1,51 @@
+\title{Steepest descent for #{J_0}}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+##{J_0(r) = \frac{1}{\pi}\int_0^\pi e^{ir\cos t}\,dt \quad \text{as } r \to \infty \qquad \Big( \sim \sqrt{\frac{2}{\pi r}}\cos\Big( r - \frac{\pi}{4} \Big) \text{ by stationary phase} \Big).}
+
+\p{First #{s = \cos t}:}
+
+##{J_0(r) = \frac{1}{\pi}\int_{-1}^1 \frac{1}{\sqrt{1 - s^2}}e^{irs}\,ds.}
+
+\p{Let #{s = z \in \mathbb{C}}, #{\phi = iz \Rightarrow u = -q}, #{v = p}. Constant-#{v} curves are vertical lines:}
+
+##{C_1 \colon z = -1 + it,\; t \in [0, T]; \quad C_2 \colon z = t + iT,\; t \in [-1, 1]; \quad C_3 \colon z = 1 - it,\; t \in [-T, 0].}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-2,0) -- (2,0) node[right] {$p$};
+\draw[->] (0,-0.3) -- (0,2.2) node[above] {$q$};
+\draw[gray, thick, ->] (-1,0) -- (-1,1.6);
+\draw[gray, thick, ->] (-1,1.6) -- (1,1.6);
+\draw[gray, thick, ->] (1,1.6) -- (1,0);
+\node[gray, left] at (-1,0.8) {$C_1$};
+\node[gray, above] at (-0.5,1.6) {$C_2$};
+\node[gray, right] at (1,0.8) {$C_3$};
+\node[above right] at (0,1.6) {$T$};
+\node[below] at (-1,0) {$-1$};
+\node[below] at (1,0) {$1$};
+\draw[thick, ->] (-1,0) -- (0.6,0);
+\node[above] at (0.45,0) {$C$};
+\end{tikzpicture}}
+
+\p{Cauchy’s theorem says #{\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3}}, with}
+
+##{\begin{aligned}
+\int_{C_1} &= \frac{i}{\pi}\int_0^T \frac{e^{ir(-1+it)}}{\sqrt{t(t + 2i)}}\,dt = \frac{ie^{-ir}}{\pi}\int_0^T \frac{e^{-rt}}{\sqrt{t(t + 2i)}}\,dt, \\
+\int_{C_3} &= -\frac{i}{\pi}\int_{-T}^0 \frac{e^{ir(1 - it)}}{\sqrt{t(t + 2i)}}\,dt = -\frac{ie^{ir}}{\pi}\int_0^T \frac{e^{-rt}}{\sqrt{t(t - 2i)}}\,dt \quad (t \mapsto -t), \\
+\int_{C_2} &= \frac{1}{\pi}\int_{-1}^1 \frac{e^{irt - rT}}{\sqrt{1 - (t + iT)^2}}\,dt \implies \Big| \int_{C_2} \Big| \leq e^{-rT}\int_{-1}^1 \Big| \frac{1}{\sqrt{1 - (t + iT)^2}} \Big|\,dt \to 0
+\end{aligned}}
+
+\p{as #{T \to \infty}. So}
+
+##{\begin{aligned}
+J_0 &\sim \frac{1}{\pi}ie^{-ir}\int_0^\infty \frac{e^{-rt}}{\sqrt{t(t + 2i)}}\,dt - \frac{ie^{ir}}{\pi}\int_0^\infty \frac{e^{-rt}}{\sqrt{t(t - 2i)}}\,dt \\
+&= \frac{2}{\pi}\operatorname{Re}\Big\lbrace  e^{ir - i\pi /2}\int_0^\infty \frac{e^{-rt}}{\sqrt{t(t - 2i)}}\,dt \Big\rbrace  \\
+&\sim \frac{2}{\pi}\operatorname{Re}\Big\lbrace  e^{i(r - \pi /2)}r^{-1/2}\sum_{n=0}^\infty a_n\frac{\Gamma(n + \frac{1}{2})}{r^n} \Big\rbrace
+\end{aligned}}
+
+\p{by Watson’s Lemma, where #{\frac{1}{\sqrt{t - 2i}} = \sum a_nt^n}. So}
+
+##{J_0 \sim \sqrt{\frac{2}{\pi r}}\Big[ \cos\Big( r - \frac{\pi}{4} \Big) + \frac{1}{8r}\sin\Big( r - \frac{\pi}{4} \Big) - \frac{9}{128r^2}\cos\Big( r - \frac{\pi}{4} \Big) + \cdots \Big].}

@@ -1,0 +1,7 @@
+\title{Optimal truncation}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{If #{f(x) \sim \sum_{n=0}^\infty a_n\phi_n(x)} as #{x \to x_0} and we want the best approximation to #{f(x)} at #{x = x_1}, where #{x_1} is fixed but close to #{x_0}, then we truncate the series at the smallest term (or maybe one before).}

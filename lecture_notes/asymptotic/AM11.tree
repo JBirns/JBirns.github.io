@@ -1,0 +1,23 @@
+\title{Liouville–Green approximations}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{y'' - \frac{a^2}{x^3}y = 0}, #{a \in \mathbb{R}^+}, as #{x \to 0^+} (irregular singular point). #{y = e^{S(x)}}, #{S = S_0 + S_1 + \cdots}; assume #{S_0'' \ll (S_0')^2}.}
+\ul{
+\li{Leading order: #{(S_0')^2 = \frac{a^2}{x^3} \Rightarrow S_0 = \pm 2ax^{-1/2}}.}
+\li{Next order: #{S_1 = \frac{3}{4}\log x}.}
+\li{Check assumptions: #{\frac{S_1}{S_0} \propto \sqrt{x}\log x}; #{\frac{S_1'}{S_0'} \propto \sqrt{x}}; #{\frac{S_1''}{S_0'S_1'} \propto \sqrt{x}} ✓.}
+}
+\p{Then #{y \sim Ax^{3/4}e^{-2a/\sqrt{x}} + Bx^{3/4}e^{2a/\sqrt{x}}} as #{x \to 0^+}.}}
+\li{\p{\strong{(ii)} #{y'' = xy} as #{x \to \pm\infty}: #{Q = x}, and}
+##{y \sim AQ^{-1/4}e^{\int \sqrt{Q}\,dx} + BQ^{-1/4}e^{-\int \sqrt{Q}\,dx}.}
+\p{Case (i): #{x > 0} and large:}
+##{y \sim Ax^{-1/4}e^{-\frac{2}{3}x^{3/2}} + Bx^{-1/4}e^{\frac{2}{3}x^{3/2}},}
+\p{which agrees with the integral formula for #{\operatorname{Ai}} if #{A = \frac{1}{2\sqrt{\pi}}}, #{B = 0}.}
+\p{Case (ii): #{x < 0} and large: #{\sqrt{Q} = i\sqrt{|x|}}, so}
+##{y \sim C|x|^{-1/4}e^{\frac{2}{3}i|x|^{3/2}} + D|x|^{-1/4}e^{-\frac{2}{3}i|x|^{3/2}}.}
+\p{\strong{Exercise:} find #{C, D} such that #{y} agrees with the #{\operatorname{Ai}} asymptotic formula as #{x \to -\infty}.}}
+}

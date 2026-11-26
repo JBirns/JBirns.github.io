@@ -1,0 +1,18 @@
+\title{Interior and endpoint maxima}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{I(x) = \int_0^{3\pi /2} e^{x\sin^2t}\,dt}. #{f = 1}, #{\phi = \sin^2t}, with maxima at #{t = \frac{\pi}{2}} (case (b)) and #{t = \frac{3\pi}{2}} (case (e)).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (4,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,1.6) node[above] {$\phi$};
+\draw[thick, domain=0:3.6, samples=80] plot (\x, {1.2*sin(75*\x)^2});
+\draw (1.2,0.07) -- (1.2,-0.07) node[below] {$\frac{\pi}{2}$};
+draw (2.4,0.07) -- (2.4,-0.07) node[below] {$\pi$};
+\draw (3.6,0.07) -- (3.6,-0.07) node[below] {$\frac{3\pi}{2}$};
+\end{tikzpicture}}
+
+##{I(x) \sim \frac{e^x\sqrt{2\pi}}{\sqrt{2x}} + \frac{1}{2}\frac{e^x\sqrt{2\pi}}{\sqrt{2x}} \sim \frac{3}{2}\frac{e^x\sqrt{2\pi}}{\sqrt{2x}}.}

@@ -1,0 +1,28 @@
+\title{Hyperasymptotics for the Stieltjes integral}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{When #{N + 1 = \lfloor 1/\varepsilon \rfloor}, the integrand in #{E_N} has a max at #{t \approx 1/\varepsilon}. Expand about there:}
+
+##{\frac{1}{1 + \varepsilon t} = \frac{1}{2[1 + \frac{1}{2}(\varepsilon t - 1)]} = \frac{1}{2}\sum_k \Big( -\frac{1}{2} \Big)^k(\varepsilon t - 1)^k,}
+
+\p{giving #{I(\varepsilon) = \sum_{n=0}^N a_n + \sum_{n=0}^M b_n}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (6,0) node[right] {\# terms in series};
+\draw[->] (0,0) -- (0,-3.2) node[below] {error};
+\draw (1.5,0.07) -- (1.5,-0.07) node[above=3pt] {\small 10};
+\draw (3,0.07) -- (3,-0.07) node[above=3pt] {\small 20};
+\draw (4.5,0.07) -- (4.5,-0.07) node[above=3pt] {\small 30};
+\node[left] at (0,-0.4) {\small $10^{-1}$};
+\node[left] at (0,-1.4) {\small $10^{-4}$};
+\node[left] at (0,-2.9) {\small $10^{-8}$};
+\draw[thick] (0.2,-0.4) .. controls (0.9,-1.4) and (1.6,-1.6) .. (2.2,-1.1) .. controls (2.6,-0.7) .. (3.0,-0.1);
+\fill (1.5,-1.42) circle (1.5pt);
+\node[right] at (2.6,-1.0) {super-asymptotic};
+\draw[thick] (1.6,-2.0) .. controls (2.4,-2.0) and (2.8,-3.0) .. (3.4,-2.9) .. controls (3.9,-2.8) .. (4.6,-2.2);
+\fill (3.35,-2.9) circle (1.5pt);
+\node[right] at (4.7,-2.2) {hyper};
+\end{tikzpicture}}

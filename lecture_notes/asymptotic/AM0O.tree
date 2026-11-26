@@ -1,0 +1,83 @@
+\title{Watson’s Lemma}
+\taxon{Theorem}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Suppose}
+
+##{f(t) \sim t^\alpha\sum_{n=0}^\infty a_nt^{\beta n} \quad \text{as } t \to 0^+,}
+
+\p{with #{\alpha > -1}, #{\beta > 0}, and either}
+
+\ul{
+\li{\strong{(i)} #{|f(t)| < Ke^{bt}} for all #{t > 0}, for some #{K, b > 0}; or}
+\li{\strong{(ii)} #{\int_0^T |f(t)|\,dt < \infty}.}
+}
+
+\p{Then}
+
+##{F(x) = \int_0^T f(t)e^{-xt}\,dt \sim \sum_{n=0}^\infty a_n\frac{\Gamma(\alpha + \beta n + 1)}{x^{\alpha + \beta n + 1}} \quad \text{as } x \to \infty.}
+
+\proof{
+\p{Split, for small #{\varepsilon > 0},}
+
+##{F(x) = \int_0^\varepsilon f(t)e^{-xt}\,dt + \int_\varepsilon^T f(t)e^{-xt}\,dt = F_1(x) + F_2(x).}
+
+\p{We show #{F_2} is exponentially small.}
+
+\p{Case (i):}
+
+##{|F_2| \leq \int_\varepsilon^T Ke^{bt}e^{-xt}\,dt \leq \int_\varepsilon^\infty Ke^{(b - x)t}\,dt = \frac{K}{x - b}e^{(b - x)\varepsilon} = O\Big( \frac{e^{-\varepsilon x}}{x} \Big) \quad \text{as } x \to \infty,}
+
+\p{assuming #{x > b}.}
+
+\p{Case (ii):}
+
+##{|F_2| \leq \int_\varepsilon^T |f|e^{-xt}\,dt \leq e^{-x\varepsilon}\underbrace{\int_0^T |f|\,dt}_{\text{constant}} = O(e^{-\varepsilon x}) \quad \text{as } x \to \infty.}
+
+\p{So #{F_2} is small beyond all orders in #{x^{-k}}.}
+
+\p{We want to show}
+
+##{F_1 = \sum_{n=0}^N a_n\frac{\Gamma(\alpha + \beta n + 1)}{x^{\alpha + \beta n + 1}} + o(x^{-\alpha - \beta N - 1}),}
+
+\p{i.e.}
+
+##{\Bigg| \frac{F_1 - \sum_{n=0}^N a_n\frac{\Gamma(\alpha + \beta n + 1)}{x^{\alpha + \beta n + 1}}}{x^{-\alpha - \beta N - 1}} \Bigg| \to 0 \text{ as } x \to \infty.}
+
+\p{Recall #{\int_0^\infty t^{z-1}e^{-xt}\,dt = \frac{\Gamma(z)}{x^z}}. So, splitting #{\int_0^\infty = \int_0^\varepsilon + \int_\varepsilon^\infty}, the numerator is}
+
+##{\begin{aligned}
+&\Big| \int_0^\varepsilon fe^{-xt}\,dt - \int_0^\infty \sum_{n=0}^N a_nt^{\alpha + \beta n}e^{-xt}\,dt \Big| \\
+&\quad= \Big| \int_0^\varepsilon e^{-xt}\Big[ f - \sum_{n=0}^N a_nt^{\alpha + \beta n} \Big]\,dt - \int_\varepsilon^\infty \sum_{n=0}^N a_nt^{\alpha + \beta n}e^{-xt}\,dt \Big| \\
+&\quad\leq \int_0^\varepsilon e^{-xt}\Big| f - \sum_{n=0}^N a_nt^{\alpha + \beta n} \Big|\,dt + \Big| \int_\varepsilon^\infty \sum_{n=0}^N a_nt^{\alpha + \beta n}e^{-xt}\,dt \Big| = R_1 + R_2.
+\end{aligned}}
+
+\p{For #{R_2}:}
+
+##{R_2 = e^{-\varepsilon x}\Big| \int_\varepsilon^\infty e^{-x(t - \varepsilon)}\sum_{n=0}^N a_nt^{\alpha + \beta n}\,dt \Big|.}
+
+\p{Now let #{u = x(t - \varepsilon)}:}
+
+##{R_2 = \frac{e^{-\varepsilon x}}{x}\Big| \int_0^\infty e^{-u}\sum_{n=0}^N a_n\Big( \varepsilon + \frac{u}{x} \Big)^{\alpha + \beta n}\,du \Big| \leq \frac{e^{-\varepsilon x}}{x}\Big| \int_0^\infty e^{-u}\sum_{n=0}^N a_n(\varepsilon + u)^{\alpha + \beta n}\,du \Big|}
+
+\p{(for #{x \geq 1}). This integral can be written in terms of #{\Gamma}, #{\varepsilon}, #{\alpha}, #{\beta} and is bounded. So #{R_2 = O(e^{-\varepsilon x}/x)} as #{x \to \infty}, and so #{\frac{R_2}{x^{-\alpha - \beta N - 1}} \to 0} as #{x \to \infty}.}
+
+\p{We know}
+
+##{f - \sum_{n=0}^N a_nt^{\alpha + \beta n} = o(t^{\alpha + \beta N}) = O(t^{\alpha + \beta(N+1)}) \quad \text{as } t \to 0^+, \; \forall N.}
+
+\p{Thus, for some #{K_3 > 0},}
+
+##{R_1 < K_3\int_0^\infty e^{-xt}t^{\alpha + \beta(N+1)}\,dt = K_3\frac{\Gamma(\alpha + \beta(N + 1) + 1)}{x^{\alpha + \beta(N+1) + 1}},}
+
+\p{so #{R_1 = O(x^{-\alpha - \beta(N+1) - 1})}, and
+so #{\frac{R_1}{x^{-\alpha - \beta N - 1}} \to 0} as #{x \to \infty}. Hence}
+
+##{F_1 \sim \sum_{n=0}^\infty a_n\frac{\Gamma(\alpha + \beta n + 1)}{x^{\alpha + \beta n + 1}},}
+
+\p{but #{F_2 = o(F_1)}, so #{F \sim F_1}, i.e.}
+
+##{F \sim \sum_{n=0}^\infty a_n\frac{\Gamma(\alpha + \beta n + 1)}{x^{\alpha + \beta n + 1}}.}
+}

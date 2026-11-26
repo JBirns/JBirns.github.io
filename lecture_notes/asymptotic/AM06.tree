@@ -1,0 +1,11 @@
+\title{Little o}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Write #{f(x) = o(g(x))} as #{x \to x_0}, assuming #{g > 0} close to #{x_0}, if}
+
+##{\lim_{x \to x_0} \Big| \frac{f(x)}{g(x)} \Big| = 0.}
+
+\p{Other notation: #{f(x) \ll g(x)} as #{x \to x_0}.}

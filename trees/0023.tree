@@ -1,0 +1,6 @@
+\import{macros}
+\import{names}
+
+\p{\strong{Some available notes:} [Chapling](https://rc476.user.srcf.net/asymptoticmethods/am_notes.pdf) (wordy); [Manton](https://www.damtp.cam.ac.uk/user/gold/pdfs/teaching/AsymptoticMethods.pdf) (terse); [Stuart](https://hz430.user.srcf.net/work/Stuart-Lecture-Notes.pdf) (mathematically involved).\br
+\strong{Books:} Bender & Orszag (BO); Miller; Hinch.\br
+\strong{Prerequisites:} IB Complex Methods / [Complex Analysis](CA00); refer to §2 in Stuart’s notes.}

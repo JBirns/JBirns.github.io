@@ -1,0 +1,30 @@
+\title{Stokes phenomenon for #{\sinh(z^2)}}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(z) = \sinh(z^2) = \frac{1}{2}(e^{z^2} - e^{-z^2})}, #{z \in \mathbb{C}}. What is its behaviour as #{|z| \to \infty}? Rephrase: which of #{e^{z^2}} or #{e^{-z^2}} is dominant? Consider}
+
+##{\Big| \frac{e^{-z^2}}{e^{z^2}} \Big| = |e^{-2z^2}| = e^{-2\operatorname{Re}(z^2)} \to\; ? \quad \text{as } |z| \to \infty.}
+
+\p{Suppose #{z \to \infty} and #{\operatorname{Re}(z^2) > 0}; then #{|\text{ratio}| \to 0} as #{|z| \to \infty}, so #{e^{-z^2} \ll e^{z^2}} and #{f(z) \sim \frac{1}{2}e^{z^2}}.}
+
+\p{#{\operatorname{Re}(z^2) > 0} corresponds to #{\arg z \in (-\frac{\pi}{4}, \frac{\pi}{4}) \cup (\frac{3\pi}{4}, \frac{5\pi}{4})}; call this region #{\Omega}. The lines #{\arg z = \pm\frac{\pi}{4}} (and #{\pm\frac{3\pi}{4}}) are the \em{Stokes lines}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\fill[red!12] (0,0) -- (2,2) -- (2,-2) -- cycle;
+\fill[red!12] (0,0) -- (-2,2) -- (-2,-2) -- cycle;
+\draw[->] (-2.4,0) -- (2.6,0);
+\draw[->] (0,-2.2) -- (0,2.4);
+\draw[dashed] (-2,-2) -- (2,2);
+\draw[dashed] (-2,2) -- (2,-2);
+\node[red] at (1.4,0.4) {$\Omega$};
+\node[red] at (-1.4,0.4) {$\Omega$};
+\node at (3.4,2.0) {Stokes lines};
+\draw[->] (2.5,1.8) -- (1.75,1.65);
+\end{tikzpicture}}
+
+\p{When #{|z| \to \infty} and #{\operatorname{Re}(z^2) < 0} (#{\Omega^c}), #{f(z) \sim -\frac{1}{2}e^{-z^2}}. So}
+
+##{f(z) \sim \begin{cases} \frac{1}{2}e^{z^2} & \text{as } |z| \to \infty,\; z \in \Omega, \\ -\frac{1}{2}e^{-z^2} & \text{as } |z| \to \infty,\; z \in \Omega^c. \end{cases}}

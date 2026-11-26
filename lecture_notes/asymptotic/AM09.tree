@@ -1,0 +1,13 @@
+\title{Asymptotic sequences}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\phi_k = (x - a)^k}, #{x} around #{a}. Consider #{\big| \frac{\phi_{k+1}}{\phi_k} \big| = |x - a| \to 0} as #{x \to a}.}
+\li{\p{\strong{(ii)} #{\phi_k = e^{-kx}} as #{x \to \infty} or #{x \to -\infty}:}
+##{\Big| \frac{\phi_{k+1}}{\phi_k} \Big| = |e^{-x}| \to \begin{cases} 0, & x \to \infty, \\ \text{doesn't work}, & x \to -\infty. \end{cases}}}
+\li{\strong{(iii)} Consider #{\phi_k = \cos^k(x)} as #{x \to \infty} or #{x \to 0}: not an asymptotic sequence (exercise).}
+\li{\strong{(iv)} #{\lbrace |x|, \log|x|, \log|\log|x||, \ldots\rbrace } as #{x \to \infty} (exercise).}
+}

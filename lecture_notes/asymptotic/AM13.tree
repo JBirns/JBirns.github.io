@@ -1,0 +1,56 @@
+\title{Stokes lines for the Airy equation}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' = zy}; the Liouville–Green approximation is given by (#{\ast}).}
+
+\ul{
+\li{Stokes lines: #{\operatorname{Re}(z^{3/2}) = 0 \Rightarrow \arg z = \frac{\pi}{3}, \pi, \frac{5\pi}{3}}.}
+\li{Anti-Stokes lines: #{\operatorname{Im}(z^{3/2}) = 0 \Rightarrow \arg z = 0, \frac{2\pi}{3}, \frac{4\pi}{3}}.}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-2.4,0) -- (2.6,0);
+\draw[->] (0,-2) -- (0,2.2);
+\draw[blue, thick] (0,0) -- (60:2.2);
+\draw[blue, thick] (0,0) -- (180:2.2);
+\draw[blue, thick] (0,0) -- (300:2.2);
+\draw[red, thick] (0,0) -- (0:2.2);
+\draw[red, thick] (0,0) -- (120:2.2);
+\draw[red, thick] (0,0) -- (240:2.2);
+\node[blue, right] at (3.0,0.6) {-- Stokes lines};
+\node[red, right] at (3.0,0) {-- anti-Stokes lines};
+\draw[->, thick, >=stealth] (72:1.5) arc (72:48:1.5);
+\draw[->, thick, >=stealth] (192:1.5) arc (192:168:1.5);
+\draw[->, thick, >=stealth] (312:1.5) arc (312:288:1.5);
+\end{tikzpicture}}
+
+\p{Two solutions of the Airy equation are #{\operatorname{Ai}(z)} and #{\operatorname{Bi}(z)}. The coefficients in (#{\ast}) take different values in the sectors cut out by the anti-Stokes lines #{\arg z = 0, \frac{2\pi}{3}, \frac{4\pi}{3}} (red).}
+
+\p{#{\operatorname{Bi}(z)}:}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-3.4,0) -- (3.6,0);
+\draw[->] (0,-1.9) -- (0,1.9);
+\draw[red, thick] (0,0) -- (3.3,0);
+\draw[red, thick] (0,0) -- (120:2);
+\draw[red, thick] (0,0) -- (240:2);
+\node at (1.9,0.9) {$A = \frac{i}{2\sqrt{\pi}},\ B = \frac{1}{\sqrt{\pi}}$};
+\node at (1.9,-0.9) {$A = -\frac{i}{2\sqrt{\pi}},\ B = \frac{1}{\sqrt{\pi}}$};
+\node[left] at (-1.0,0.6) {$A = \frac{i}{2\sqrt{\pi}},\ B = \frac{1}{2\sqrt{\pi}}$};
+\end{tikzpicture}}
+
+\p{#{\operatorname{Ai}(z)}:}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-3.4,0) -- (3.6,0);
+\draw[->] (0,-1.9) -- (0,1.9);
+\draw[red, thick] (0,0) -- (3.3,0);
+\draw[red, thick] (0,0) -- (120:2);
+\draw[red, thick] (0,0) -- (240:2);
+\node at (1.9,0.9) {$A = \frac{1}{2\sqrt{\pi}},\ B = 0$};
+\node at (1.9,-0.9) {same as above};
+\node[left] at (-1.0,0.6) {$A = \frac{1}{2\sqrt{\pi}},\ B = \frac{i}{2\sqrt{\pi}}$};
+\end{tikzpicture}}

@@ -1,0 +1,7 @@
+\title{Asymptotic sequence}
+\taxon{Definition}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A sequence of functions #{\lbrace \phi_k(x)\rbrace _{k=0}^\infty} is called an \em{asymptotic sequence} as #{x \to x_0} if #{\phi_{k+1}(x) \ll \phi_k(x)} as #{x \to x_0} for all #{k}.}

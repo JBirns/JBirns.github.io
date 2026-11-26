@@ -1,0 +1,19 @@
+\title{Stationary phase for #{J_0}}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+##{J_0(r) = \frac{1}{2\pi}\int_0^{2\pi} e^{ir\sin t}\,dt \quad \text{as } r \to \infty: \text{ what happens?}}
+
+\p{#{f = 1}, #{\phi = \sin t}, #{r = x}. #{\phi} has 2 stationary points, at #{t = \frac{\pi}{2}, \frac{3\pi}{2}}: a max and a min, but both contribute to leading order.}
+
+\p{At #{t = \frac{\pi}{2}}, the contribution is #{\sim \sqrt{\frac{2\pi}{ir}}e^{ir} = \sqrt{\frac{2\pi}{r}}e^{i(r - \pi /4)}}.}
+
+\p{At #{t = \frac{3\pi}{2}}, the contribution is #{\sim \sqrt{\frac{2\pi}{-ir}}e^{-ir} = \sqrt{\frac{2\pi}{r}}e^{-i(r - \pi /4)}}.}
+
+\p{Adding together (with the factor #{\frac{1}{2\pi}}),}
+
+##{J_0(r) \text{ ``$\sim$'' } \sqrt{\frac{2}{\pi r}}\cos\Big( r - \frac{\pi}{4} \Big),}
+
+\p{in quotes since the definition is based on a ratio, and we are looking at oscillations with zeroes.}

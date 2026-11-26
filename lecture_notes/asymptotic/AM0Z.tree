@@ -1,0 +1,244 @@
+\title{Approximating Solutions of ODEs}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{We look at 2 problems:}
+
+\ul{
+\li{\strong{(i)} How to construct ‘local’ asymptotic solutions near an ODE’s irregular singular points.}
+\li{\strong{(ii)} How to construct ‘global’ solutions to ODEs with a small/large parameter.}
+}
+
+\p{\strong{Review of 2nd order ODEs}}
+
+\p{Consider}
+
+##{y'' + p(x)y' + q(x)y = 0 \qquad (\ast)}
+
+\p{with #{p, q} known functions.}
+
+\ul{
+\li{Often we want to construct ‘local’ solutions around some point #{x_0}.}
+\li{If #{p} and #{q} are analytic at #{x_0}, then #{x_0} is an \em{ordinary point}, and we are guaranteed 2 series solutions of (#{\ast}) of the form #{y = \sum_{n=0}^\infty a_n(x - x_0)^n}.}
+\li{If #{p} and #{q} are \em{not} analytic at #{x_0}, but #{(x - x_0)p} and #{(x - x_0)^2q} are, then #{x_0} is a \em{regular singular point} and we are guaranteed one solution of the form #{y = \sum_{n=0}^\infty b_n(x - x_0)^{n + \sigma}}.}
+\li{Otherwise #{x_0} is an \em{irregular singular point}.}
+\li{\p{We can categorise #{\infty} similarly by setting #{t = 1/x} and checking #{t = 0}. Let #{Y(t) = y(x)}; then}
+##{\frac{dy}{dx} = -t^2\frac{dY}{dt}, \qquad \frac{d^2y}{dx^2} = t^4\frac{d^2Y}{dt^2} + 2t^3\frac{dY}{dt},}
+\p{so (#{\ast}) becomes #{Y'' + \tilde{p}(t)Y' + \tilde{q}(t)Y = 0} with}
+##{\tilde{p} = \frac{2}{t} - \frac{p(1/t)}{t^2}, \qquad \tilde{q} = \frac{q(1/t)}{t^4},}
+\p{and then categorise #{t = 0} (i.e. #{x \to \infty}).}}
+}
+
+\transclude{AM10}
+
+\p{ODEs like (#{\ast}) can be reduced to the canonical form #{u'' = Q(x)u}. Let #{y = u(x)v(x)} and put into (#{\ast}):}
+
+##{vu'' + (2v' + pv)u' + (v'' + pv' + qv)u = 0.}
+
+\p{Choose #{v} such that #{2v' + pv = 0 \Rightarrow v = e^{-\frac{1}{2}\int p\,dx}}. Then}
+
+##{u'' = \underbrace{\Big( -\frac{v'' + pv' + qv}{v} \Big)}_{Q(x)}u.}
+
+\p{\strong{Irregular Singular Points & the Liouville–Green Method}}
+
+\p{Consider}
+
+##{y'' - Q(x)y = 0 \qquad (\ast\ast)}
+
+\p{and #{x = x_0} is an irregular singular point (so #{Q} blows up badly there). How about this problem? #{y'' = \frac{1}{x^4}y}: #{x = 0} is an irregular singular point, but #{y = Axe^{1/x} + Bxe^{-1/x}}. [\strong{Exercise:} show this is true; hint: let #{t = 1/x}.]}
+
+\p{Noting the poles in the exponential, we try #{y = e^{S(x)}} and stick into (#{\ast\ast}): #{y' = e^SS'}, #{y'' = e^SS'' + e^S(S')^2}, so}
+
+##{(\ast\ast) \implies S'' + (S')^2 = Q(x) \quad \text{(Riccati equation)}.}
+
+\p{Try #{S \sim S_0 + S_1 + S_2 + \cdots}, where the #{S_i} form an asymptotic sequence as #{x \to x_0}. To leading order, #{S_0'' + (S_0')^2 \sim Q}. But assume #{S_0'' \ll (S_0')^2} as #{x \to x_0} (to be checked later). Then}
+
+##{(S_0')^2 \sim Q \implies S_0 \sim \pm\int \sqrt{Q}\,dx.}
+
+\p{In fact, we set #{S_0 = \pm\int \sqrt{Q}\,dx}. Consistency check for the assumption: #{S_0'' = \pm\frac{1}{2}\frac{Q'}{\sqrt{Q}} \ll Q = (S_0')^2}. (To see this, suppose #{Q \propto (x - x_0)^{-b}}, #{b > 2}, near #{x = x_0}. \strong{Exercise:} do in detail.)}
+
+\p{To get #{S_1}, we have #{(S_0 + S_1)'' + (S_0' + S_1')^2 \sim Q}, so}
+
+##{S_1'' + (S_1')^2 + 2S_0'S_1' \sim -S_0'' = \mp\frac{Q'}{2\sqrt{Q}}.}
+
+\p{Now assume #{S_1 \ll S_0}, #{S_1' \ll S_0'} and #{S_1'' \ll 2S_0'S_1'} (to be checked later). Then}
+
+##{2S_0'S_1' \sim \mp\frac{Q'}{2\sqrt{Q}} \implies S_1' \sim -\frac{1}{4}\frac{Q'}{Q},}
+
+\p{so set #{S_1 = -\frac{1}{4}\log Q}. [\strong{Exercise:} show the 3 assumptions are valid.] So the general asymptotic solution to (#{\ast\ast}) looks like}
+
+##{y \sim AQ^{-1/4}e^{\int \sqrt{Q}\,dx} + BQ^{-1/4}e^{-\int \sqrt{Q}\,dx} \quad \text{as } x \to x_0.}
+
+\p{This is the \em{Liouville–Green approximation}.}
+
+\transclude{AM11}
+
+\p{\strong{ODEs with a Small/Large Parameter}}
+
+\p{We consider #{y'' + a(\varepsilon, x)y' + b(\varepsilon, x)y = 0}, or equivalently #{y'' = Q(\varepsilon, x)y}, where #{0 < \varepsilon \ll 1} and we have boundary conditions (or initial conditions). Often solutions exhibit variations on 2 different scales: a short/fast scale and a long/slow scale, sometimes at different regions of the domain.}
+
+\ul{
+\li{\p{\strong{(a)} \em{Regular vs. singular asymptotics.}}
+\ul{
+\li{\p{Consider #{y'' + 2\varepsilon y' + y = 0} as #{\varepsilon \to 0}.}
+\ul{
+\li{The “zeroth order” solution (i.e. when #{\varepsilon = 0}): #{y = Ae^{ix} + Be^{-ix}}.}
+\li{The general solution: #{y = Ae^{\lambda_1x} + Be^{\lambda_2x}}, #{\lambda_{1,2} = -\varepsilon \pm i\sqrt{1 - \varepsilon^2} = \pm i - \varepsilon \mp \frac{i}{2}\varepsilon^2 + \cdots}.}
+}
+\p{The #{\varepsilon = 0} solution matches smoothly to the #{\varepsilon \to 0} limit. This is called a \em{regular asymptotic solution}.}}
+\li{\p{Consider #{\varepsilon^2y'' + y = 0} as #{\varepsilon \to 0}.}
+\ul{
+\li{Zeroth order solution: #{y = 0} (but check the boundary conditions!).}
+\li{General solution: #{y = A\cos(\frac{x}{\varepsilon}) + B\sin(\frac{x}{\varepsilon})}.}
+}
+\p{This doesn’t match smoothly to the #{\varepsilon = 0} solution. This is a \em{singular perturbation problem}.}}
+}
+\p{Generally when #{\varepsilon} multiplies the highest derivative in the ODE, you have a singular perturbation problem. Usually, asymptotic approaches are the only way forward.}}
+\li{\p{\strong{(b)} \em{Asymptotic matching.} The principle of asymptotic matching:}
+\ul{
+\li{Suppose the domain is broken into two \em{overlapping} regions.}
+\li{Suppose we have an asymptotic approximation on each region/interval.}
+\li{Matching requires that the asymptotic approximations have the same functional form on the \em{overlapping region}.}
+}}
+}
+
+\p{\strong{The WKBJ Method}}
+
+\p{Consider the BVP}
+
+##{\varepsilon^2y'' = q(x)y \qquad (\oplus)}
+
+\ul{
+\li{for #{\varepsilon} small, usually on an infinite domain and with boundary conditions #{y \to 0} as #{x \to \pm\infty};}
+\li{#{q} is a known function without singularities.}
+}
+
+\p{(#{q} can be thought of as a potential, and thus this parallels the motion of a particle.)}
+
+\ul{
+\li{\p{\strong{(a)} A point #{x = a} is a \em{turning point} if #{q(a) = 0}.}
+\ul{
+\li{Usually a solution undergoes a qualitative shift in its behaviour as it goes through #{x = a}.}
+\li{‘Wavelike’ behaviour for #{q < 0}.}
+\li{Exponentially growing/decaying behaviour for #{q > 0}.}
+}
+\p{E.g. consider (i) #{y'' = \operatorname{sgn}(x)y} with #{y \to 0} as #{x \to \infty} (\strong{exercise:} solve this explicitly); (ii) #{y'' = xy}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-5,0) -- (3,0);
+\draw[->] (0,-1.3) -- (0,1.5);
+\draw[thick] plot[smooth] coordinates {(-4.875,0.708) (-4.828,0.745) (-4.781,0.752) (-4.734,0.731) (-4.687,0.682) (-4.640,0.608) (-4.593,0.511) (-4.546,0.395) (-4.499,0.264) (-4.452,0.124) (-4.405,-0.020) (-4.358,-0.164) (-4.311,-0.302) (-4.264,-0.429) (-4.217,-0.542) (-4.170,-0.637) (-4.123,-0.710) (-4.076,-0.760) (-4.029,-0.784) (-3.982,-0.784) (-3.935,-0.758) (-3.888,-0.709) (-3.841,-0.637) (-3.794,-0.546) (-3.747,-0.438) (-3.700,-0.317) (-3.653,-0.187) (-3.606,-0.051) (-3.559,0.087) (-3.512,0.222) (-3.465,0.351) (-3.418,0.470) (-3.371,0.576) (-3.324,0.666) (-3.277,0.739) (-3.230,0.792) (-3.183,0.825) (-3.136,0.837) (-3.089,0.827) (-3.042,0.798) (-2.994,0.748) (-2.947,0.681) (-2.900,0.597) (-2.853,0.500) (-2.806,0.391) (-2.759,0.273) (-2.712,0.149) (-2.665,0.022) (-2.618,-0.105) (-2.571,-0.230) (-2.524,-0.351) (-2.477,-0.465) (-2.430,-0.569) (-2.383,-0.662) (-2.336,-0.742) (-2.289,-0.809) (-2.242,-0.860) (-2.195,-0.897) (-2.148,-0.917) (-2.101,-0.921) (-2.054,-0.910) (-2.007,-0.884) (-1.960,-0.844) (-1.913,-0.790) (-1.866,-0.724) (-1.819,-0.648) (-1.772,-0.562) (-1.725,-0.467) (-1.678,-0.367) (-1.631,-0.261) (-1.584,-0.152) (-1.537,-0.041) (-1.490,0.070) (-1.443,0.181) (-1.396,0.290) (-1.349,0.395) (-1.302,0.496) (-1.255,0.592) (-1.208,0.682) (-1.161,0.765) (-1.114,0.841) (-1.067,0.910) (-1.020,0.971) (-0.973,1.023) (-0.926,1.068) (-0.879,1.105) (-0.832,1.134) (-0.785,1.156) (-0.738,1.170) (-0.691,1.177) (-0.644,1.178) (-0.597,1.173) (-0.550,1.162) (-0.503,1.145) (-0.456,1.125) (-0.409,1.100) (-0.362,1.071) (-0.315,1.039) (-0.268,1.005) (-0.221,0.969) (-0.174,0.931) (-0.127,0.891) (-0.080,0.851) (-0.033,0.810) (0.014,0.769) (0.061,0.727) (0.108,0.687) (0.155,0.647) (0.202,0.607) (0.249,0.569) (0.296,0.532) (0.343,0.496) (0.390,0.461) (0.437,0.428) (0.484,0.397) (0.531,0.366) (0.578,0.338) (0.625,0.311) (0.672,0.286) (0.719,0.262) (0.767,0.240) (0.814,0.219) (0.861,0.199) (0.908,0.181) (0.955,0.165) (1.002,0.149) (1.049,0.135) (1.096,0.122) (1.143,0.110) (1.190,0.099) (1.237,0.089) (1.284,0.080) (1.331,0.071) (1.378,0.064) (1.425,0.057) (1.472,0.051) (1.519,0.045) (1.566,0.040) (1.613,0.036) (1.660,0.032) (1.707,0.028) (1.754,0.025) (1.801,0.022) (1.848,0.019) (1.895,0.017) (1.942,0.015) (1.989,0.013) (2.036,0.011) (2.083,0.010) (2.130,0.009) (2.177,0.008) (2.224,0.007) (2.271,0.006) (2.318,0.005) (2.365,0.004) (2.412,0.004) (2.459,0.003) (2.506,0.003) (2.553,0.002) (2.600,0.002)};
+\end{tikzpicture}}}
+\li{\p{\strong{(b)} \em{WKBJ solution with one simple turning point.} Suppose (#{\oplus}) has 1 turning point at #{x = a} (i.e. #{q(a) = 0}, #{q'(a) \neq 0}; WLOG #{q'(a) > 0}). (#{\oplus}) can be written as #{y'' = \frac{q}{\varepsilon^2}y = Qy}, and #{Q} is very large as #{\varepsilon \to 0}. This motivates a solution like #{y = e^{S(x)/\varepsilon}}. Put into (#{\oplus}):}
+##{\varepsilon S'' + (S')^2 = q. \qquad (\dagger)}
+\p{We assume #{S = \sum_{n=0}^\infty \varepsilon^nS_n}, so}
+##{(\cdots) + \varepsilon(\cdots) + \varepsilon^2(\cdots) + \cdots = 0,}
+\p{with each bracket #{= 0}.}
+\ul{
+\li{At order #{\varepsilon^0}: #{(S_0')^2 = q}, so #{S_0 = \pm\int \sqrt{q}\,dx}.}
+\li{At order #{\varepsilon^1}: #{S_0'' + 2S_0'S_1' = 0 \Rightarrow S_1' = -\frac{1}{2}(\log S_0')' \Rightarrow S_1 = -\frac{1}{4}\log q}.}
+}
+\p{Therefore}
+##{y = Aq^{-1/4}e^{\frac{1}{\varepsilon}\int \sqrt{q}\,dx} + Bq^{-1/4}e^{-\frac{1}{\varepsilon}\int \sqrt{q}\,dx}.}
+\p{This solution is only good far from turning points.}
+\ul{
+\li{When #{q > 0}, #{y} is exponentially decaying/growing.}
+\li{When #{q < 0}, #{y} oscillates with local frequency #{\approx \sqrt{|q|}/\varepsilon} (recall, if #{y \propto e^{i\phi(x)}}, the local frequency is #{d\phi /dx}).}
+\li{This approximation is invalid at and near #{q = 0}, because the asymptotic ordering in (#{\dagger}) assumed #{|q| \gg \varepsilon}.}
+}
+\p{\em{Question:} how close to #{x = a} is our approximation valid? Assume #{|x - a| \ll 1}; then #{q \approx q'(a)(x - a)}, so we need #{|x - a| \gg \varepsilon}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-5.2,0) -- (3.2,0) node[right] {$x$};
+\draw[->] (0,-1.3) -- (0,1.6) node[above] {$y$};
+\draw[thick] plot[smooth] coordinates {(-4.875,0.708) (-4.828,0.745) (-4.781,0.752) (-4.734,0.731) (-4.687,0.682) (-4.640,0.608) (-4.593,0.511) (-4.546,0.395) (-4.499,0.264) (-4.452,0.124) (-4.405,-0.020) (-4.358,-0.164) (-4.311,-0.302) (-4.264,-0.429) (-4.217,-0.542) (-4.170,-0.637) (-4.123,-0.710) (-4.076,-0.760) (-4.029,-0.784) (-3.982,-0.784) (-3.935,-0.758) (-3.888,-0.709) (-3.841,-0.637) (-3.794,-0.546) (-3.747,-0.438) (-3.700,-0.317) (-3.653,-0.187) (-3.606,-0.051) (-3.559,0.087) (-3.512,0.222) (-3.465,0.351) (-3.418,0.470) (-3.371,0.576) (-3.324,0.666) (-3.277,0.739) (-3.230,0.792) (-3.183,0.825) (-3.136,0.837) (-3.089,0.827) (-3.042,0.798) (-2.994,0.748) (-2.947,0.681) (-2.900,0.597) (-2.853,0.500) (-2.806,0.391) (-2.759,0.273) (-2.712,0.149) (-2.665,0.022) (-2.618,-0.105) (-2.571,-0.230) (-2.524,-0.351) (-2.477,-0.465) (-2.430,-0.569) (-2.383,-0.662) (-2.336,-0.742) (-2.289,-0.809) (-2.242,-0.860) (-2.195,-0.897) (-2.148,-0.917) (-2.101,-0.921) (-2.054,-0.910) (-2.007,-0.884) (-1.960,-0.844) (-1.913,-0.790) (-1.866,-0.724) (-1.819,-0.648) (-1.772,-0.562) (-1.725,-0.467) (-1.678,-0.367) (-1.631,-0.261) (-1.584,-0.152) (-1.537,-0.041) (-1.490,0.070) (-1.443,0.181) (-1.396,0.290) (-1.349,0.395) (-1.302,0.496) (-1.255,0.592) (-1.208,0.682) (-1.161,0.765) (-1.114,0.841) (-1.067,0.910) (-1.020,0.971) (-0.973,1.023) (-0.926,1.068) (-0.879,1.105) (-0.832,1.134) (-0.785,1.156) (-0.738,1.170) (-0.691,1.177) (-0.644,1.178) (-0.597,1.173) (-0.550,1.162) (-0.503,1.145) (-0.456,1.125) (-0.409,1.100) (-0.362,1.071) (-0.315,1.039) (-0.268,1.005) (-0.221,0.969) (-0.174,0.931) (-0.127,0.891) (-0.080,0.851) (-0.033,0.810) (0.014,0.769) (0.061,0.727) (0.108,0.687) (0.155,0.647) (0.202,0.607) (0.249,0.569) (0.296,0.532) (0.343,0.496) (0.390,0.461) (0.437,0.428) (0.484,0.397) (0.531,0.366) (0.578,0.338) (0.625,0.311) (0.672,0.286) (0.719,0.262) (0.767,0.240) (0.814,0.219) (0.861,0.199) (0.908,0.181) (0.955,0.165) (1.002,0.149) (1.049,0.135) (1.096,0.122) (1.143,0.110) (1.190,0.099) (1.237,0.089) (1.284,0.080) (1.331,0.071) (1.378,0.064) (1.425,0.057) (1.472,0.051) (1.519,0.045) (1.566,0.040) (1.613,0.036) (1.660,0.032) (1.707,0.028) (1.754,0.025) (1.801,0.022) (1.848,0.019) (1.895,0.017) (1.942,0.015) (1.989,0.013) (2.036,0.011) (2.083,0.010) (2.130,0.009) (2.177,0.008) (2.224,0.007) (2.271,0.006) (2.318,0.005) (2.365,0.004) (2.412,0.004) (2.459,0.003) (2.506,0.003) (2.553,0.002) (2.600,0.002)};
+\node[above] at (-3.6,1.25) {$y_1$};
+\node[above] at (1.3,0.35) {$y_2$};
+\draw[gray] plot[smooth] coordinates {(-1.560,-0.031) (-1.550,0.048) (-1.540,0.122) (-1.531,0.190) (-1.521,0.250) (-1.511,0.300) (-1.501,0.339) (-1.491,0.367) (-1.482,0.384) (-1.472,0.389) (-1.462,0.383) (-1.452,0.368) (-1.442,0.345) (-1.433,0.316) (-1.423,0.282) (-1.413,0.247) (-1.403,0.211) (-1.393,0.177) (-1.384,0.148) (-1.374,0.125) (-1.364,0.110) (-1.354,0.105) (-1.344,0.110) (-1.335,0.127) (-1.325,0.154) (-1.315,0.193) (-1.305,0.242) (-1.295,0.300) (-1.286,0.366) (-1.276,0.438) (-1.266,0.514) (-1.256,0.592) (-1.246,0.670) (-1.237,0.745) (-1.227,0.815) (-1.217,0.879) (-1.207,0.934) (-1.197,0.979) (-1.188,1.013) (-1.178,1.036) (-1.168,1.047) (-1.158,1.046) (-1.148,1.035) (-1.139,1.014) (-1.129,0.984) (-1.119,0.947) (-1.109,0.906) (-1.099,0.863) (-1.090,0.819) (-1.080,0.777) (-1.070,0.739) (-1.060,0.707) (-1.050,0.683) (-1.041,0.668) (-1.031,0.663) (-1.021,0.669) (-1.011,0.687) (-1.001,0.715) (-0.992,0.754) (-0.982,0.801) (-0.972,0.857) (-0.962,0.919) (-0.952,0.985) (-0.943,1.052) (-0.933,1.120) (-0.923,1.184) (-0.913,1.245) (-0.903,1.298) (-0.894,1.343) (-0.884,1.378) (-0.874,1.402) (-0.864,1.415) (-0.854,1.416) (-0.845,1.405) (-0.835,1.383) (-0.825,1.352) (-0.815,1.312) (-0.805,1.265) (-0.796,1.213) (-0.786,1.158) (-0.776,1.103) (-0.766,1.050) (-0.756,1.001) (-0.747,0.958) (-0.737,0.923) (-0.727,0.896) (-0.717,0.881) (-0.707,0.875) (-0.698,0.882) (-0.688,0.899) (-0.678,0.926) (-0.668,0.963) (-0.658,1.008) (-0.649,1.059) (-0.639,1.115) (-0.629,1.172) (-0.619,1.230) (-0.609,1.285) (-0.600,1.336) (-0.590,1.380) (-0.580,1.416) (-0.570,1.442) (-0.561,1.458) (-0.551,1.462) (-0.541,1.454) (-0.531,1.435) (-0.521,1.405) (-0.512,1.365) (-0.502,1.317) (-0.492,1.261) (-0.482,1.201) (-0.472,1.139) (-0.463,1.076) (-0.453,1.014) (-0.443,0.957) (-0.433,0.906) (-0.423,0.862) (-0.414,0.828) (-0.404,0.804) (-0.394,0.791) (-0.384,0.790) (-0.374,0.799) (-0.365,0.819) (-0.355,0.849) (-0.345,0.887) (-0.335,0.931) (-0.325,0.980) (-0.316,1.032) (-0.306,1.083) (-0.296,1.133) (-0.286,1.178) (-0.276,1.218) (-0.267,1.249) (-0.257,1.270) (-0.247,1.282) (-0.237,1.282) (-0.227,1.270) (-0.218,1.247) (-0.208,1.213) (-0.198,1.169) (-0.188,1.117) (-0.178,1.058) (-0.169,0.994) (-0.159,0.928) (-0.149,0.861) (-0.139,0.796) (-0.129,0.735) (-0.120,0.680) (-0.110,0.633) (-0.100,0.595) (-0.090,0.568) (-0.080,0.551) (-0.071,0.547) (-0.061,0.553) (-0.051,0.570) (-0.041,0.597) (-0.031,0.632) (-0.022,0.675) (-0.012,0.721) (-0.002,0.771) (0.008,0.821) (0.018,0.869) (0.027,0.914) (0.037,0.952) (0.047,0.982) (0.057,1.004) (0.067,1.014) (0.076,1.014) (0.086,1.002) (0.096,0.979) (0.106,0.945) (0.116,0.902) (0.125,0.850) (0.135,0.791) (0.145,0.727) (0.155,0.661) (0.165,0.594) (0.174,0.529) (0.184,0.467) (0.194,0.412) (0.204,0.365) (0.214,0.327) (0.223,0.299) (0.233,0.282) (0.243,0.277) (0.253,0.284) (0.263,0.301) (0.272,0.328) (0.282,0.364) (0.292,0.407) (0.302,0.454) (0.312,0.505) (0.321,0.556) (0.331,0.605) (0.341,0.651) (0.351,0.691) (0.361,0.723) (0.370,0.746) (0.380,0.759) (0.390,0.761)};
+\node[gray, above] at (-1.3,1.4) {$y_3$};
+\draw (-5,-1.5) -- (-0.4,-1.5) node[midway, below] {zone 1};
+\draw (0.4,-1.5) -- (3,-1.5) node[midway, below] {zone 2};
+\draw[gray] (-1.5,-2.2) -- (1.2,-2.2) node[midway, below] {zone 3};
+\node[below right] at (0.05,0) {$a$};
+\end{tikzpicture}}
+\p{#{y_1} is valid in zone 1, #{y_2} in zone 2:}
+##{\begin{aligned}
+y_1 &= A|q|^{-1/4}e^{\frac{i}{\varepsilon}\int \sqrt{|q|}\,dx} + B|q|^{-1/4}e^{-\frac{i}{\varepsilon}\int \sqrt{|q|}\,dx} \\ &= C|q|^{-1/4}\cos\Big[ \frac{1}{\varepsilon}\int_x^a \sqrt{|q|}\,dx' - \gamma \Big],
+\end{aligned}}
+\p{with #{\gamma, C} constants, and}
+##{y_2 = Dq^{-1/4}\exp\Big( -\frac{1}{\varepsilon}\int_a^x \sqrt{q}\,dx' \Big).}
+\p{\em{Solution near the turning point:} assume #{|x - a| \ll 1}. Then (#{\oplus}) can be approximated by #{\varepsilon^2y'' = \mu(x - a)y}, #{\mu = q'(a)}. Let #{z = (\mu /\varepsilon^2)^{1/3}(x - a)}. Then}
+##{\frac{d^2y}{dz^2} = zy \quad \text{(Airy equation!)} \implies y_3 = E\operatorname{Ai}(z),}
+\p{#{E} constant (throw away #{\operatorname{Bi}(z)} as it blows up at #{\infty}).}
+\p{We need to match/glue #{y_1} to #{y_3} to #{y_2} to get a consistent global solution to our equation (#{\oplus}).}
+\p{\em{Matching.}}
+\ul{
+\li{\p{Overlap of zones 1 & 3: #{\varepsilon \ll a - x \ll 1}; we may Taylor expand #{q} here in #{y_1}, i.e. #{q \approx \mu(x - a)}:}
+##{y_1 \approx C[\mu(a - x)]^{-1/4}\cos\Big[ \frac{\sqrt{\mu}}{\varepsilon}\frac{2}{3}(a - x)^{3/2} - \gamma \Big].}
+\p{For large negative #{z} (true when #{|z| \gg 1}), #{y_3 \sim E\frac{1}{\sqrt{\pi}}(-z)^{-1/4}\cos\big( \frac{2}{3}(-z)^{3/2} - \frac{1}{4}\pi \big)}, so}
+##{y_3 \sim \frac{E}{\sqrt{\pi}[(\mu /\varepsilon^2)^{1/3}(a - x)]^{1/4}}\cos\Big( \frac{2}{3}\frac{\sqrt{\mu}}{\varepsilon}(a - x)^{3/2} - \frac{\pi}{4} \Big).}
+\p{#{-z \gg 1 \Rightarrow a - x \gg \varepsilon^{2/3} \gg \varepsilon}. This approximation lies in the overlap region because #{\varepsilon^{2/3} \ll 1} as #{\varepsilon \to 0}. So matching requires #{\gamma = \frac{\pi}{4}}, #{E = \sqrt{\pi}(\mu\varepsilon)^{-1/6}C}.}}
+\li{\p{Overlap of zones 2 & 3: #{\varepsilon \ll x - a \ll 1}:}
+##{y_2 \approx D[\mu(x - a)]^{-1/4}\exp\Big[ -\frac{\sqrt{\mu}}{\varepsilon}\frac{2}{3}(x - a)^{3/2} \Big],}
+##{y_3 \sim \frac{E}{2\sqrt{\pi}z^{1/4}}e^{-\frac{2}{3}z^{3/2}} \sim \frac{E}{2\sqrt{\pi}[(\mu /\varepsilon^2)^{1/3}(x - a)]^{1/4}}\exp\Big[ -\frac{2}{3}\frac{\sqrt{\mu}}{\varepsilon}(x - a)^{3/2} \Big]}
+\p{for #{z \gg 1}, i.e. #{x - a \gg \varepsilon^{2/3}}. So #{E = 2\sqrt{\pi}(\mu\varepsilon)^{-1/6}D}.}}
+}
+\p{In summary, we have the \em{connection formulae}:}
+##{y \sim \begin{cases} Dq^{-1/4}\exp\big[ -\frac{1}{\varepsilon}\int_a^x \sqrt{q}\,dx' \big], & x - a \gg \varepsilon, \\ 2\sqrt{\pi}(\mu\varepsilon)^{-1/6}D\operatorname{Ai}\big[ \varepsilon^{-2/3}\mu^{1/3}(x - a) \big], & |x - a| \ll 1, \\ 2D|q|^{-1/4}\cos\big[ \frac{1}{\varepsilon}\int_x^a \sqrt{|q|}\,dx' - \frac{\pi}{4} \big], & a - x \gg \varepsilon. \end{cases}}
+\p{#{D} remains undetermined because we have not imposed a boundary condition at #{x \to -\infty}.}
+\p{If #{q'(a) < 0}, transform #{x \mapsto -x}, apply the same process and then transform back.}}
+\li{\p{\strong{(c)} \em{WKBJ method with two turning points.} Suppose #{a < b} with #{q(a) = q(b) = 0} and #{q'(a) < 0 < q'(b)}, and #{q} does not diverge in #{[a, b]}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-3.2,0) -- (3.4,0);
+\draw[->] (0,-1.3) -- (0,1.6) node[above] {$q$};
+\draw[thick, domain=-2.8:2.8, samples=60] plot (\x, {0.3*\x *\x - 1});
+\node[below left] at (-1.83,0) {$a$};
+\node[below right] at (1.83,0) {$b$};
+\node at (-3.4,0.5) {region A};
+\node at (0.9,0.7) {region B};
+\node at (3.4,0.5) {region C};
+\end{tikzpicture}}
+\p{What is #{y} in this situation when we insist that #{y \to 0} as #{x \to \pm\infty}?}
+\ul{
+\li{In region A: #{y_A \sim Aq^{-1/4}e^{-\frac{1}{\varepsilon}\int_x^a \sqrt{q}\,dx'}}, valid when #{a - x \gg \varepsilon}.}
+\li{In region C: #{y_C = Cq^{-1/4}e^{-\frac{1}{\varepsilon}\int_b^x \sqrt{q}\,dx'}}, valid when #{x - b \gg \varepsilon}.}
+\li{In region B: #{y_B \sim B|q|^{-1/4}\cos\big[ \frac{1}{\varepsilon}\int \sqrt{|q|}\,dx - \gamma \big]}, valid when #{x - a \gg \varepsilon} and #{b - x \gg \varepsilon}.}
+}
+\p{Matching #{y_A} to #{y_B} and #{y_B} to #{y_C} gives different expressions, and these have to agree. Match #{y_A} to #{y_B} (using the connection formulae):}
+##{y_{AB} \sim 2A|q|^{-1/4}\cos\Big( \frac{1}{\varepsilon}\int_a^x \sqrt{|q|}\,dx' - \frac{\pi}{4} \Big) = 2A|q|^{-1/4}\cos(\theta(x)).}
+\p{Match #{y_B} to #{y_C}:}
+##{y_{BC} \sim 2C|q|^{-1/4}\cos\Big( \frac{1}{\varepsilon}\int_x^b \sqrt{|q|}\,dx' - \frac{\pi}{4} \Big) = 2C|q|^{-1/4}\cos(\phi - \theta),}
+\p{where #{\phi = \frac{1}{\varepsilon}\int_a^b \sqrt{|q|}\,dx - \frac{\pi}{2}}, constant.}
+\p{In region B, we require #{y_{AB} = y_{BC}}, so #{A = \pm C} and #{\cos\theta \mp \cos(\phi - \theta) = 0}. Both cases (#{\pm}) are covered by #{\cos^2(\phi - \theta) - \cos^2\theta = 0}, i.e. #{\sin(2\theta - \phi)\sin\phi = 0}. If #{\sin\phi = 0}, this holds for all #{x}. So #{\phi = n\pi}, #{n = 0, 1, 2, \ldots}:}
+##{\boxed{\frac{1}{\varepsilon}\int_a^b \sqrt{|q|}\,dx = \Big( n + \frac{1}{2} \Big)\pi.}}
+\p{This quantisation condition must be met if there exist bound solutions to (#{\oplus}) with the specified boundary conditions. If #{q = q(x, \lambda)}, the condition specifies what values #{\lambda} can take. #{A = (-1)^nC}: #{A = C} gives “even solutions”, #{A = -C} “odd solutions”.}}
+\li{\p{\strong{(d)} \em{1D bound states in QM.}}
+##{-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi}
+\p{is the time-independent Schrödinger equation.}
+\ul{
+\li{It describes the wave function #{\psi} of a particle of mass #{m} and energy #{E} in a 1D potential #{V(x)}.}
+\li{We want bound states: #{\psi \to 0} as #{|x| \to \infty}.}
+\li{We identify #{\varepsilon = \hbar} (very small) and #{q = 2m(V - E)}.}
+}
+\p{Consider #{V(x)} such that for given #{E > 0} there are 2 turning points #{a} and #{b}; these are determined by #{V(x) = E}, so #{a = a(E)}, #{b = b(E)}. A bound state requires, for some #{E},}
+##{\Big[ \int_{a(E)}^{b(E)} \sqrt{2m(E - V(x))}\,dx = \Big( n + \frac{1}{2} \Big)\pi\hbar, \quad n = 0, 1, \ldots \Big]}
+\p{For each #{n}, we solve #{E = E_n}: #{E = E_0, E_1, E_2, \ldots}, #{E_{n+1} > E_n} for all #{n}.}
+\ul{
+\li{#{[\,\cdot\,]} is the \em{Bohr–Sommerfeld quantisation condition}.}
+\li{\p{In classical mechanics a bound particle oscillates strictly between #{a} and #{b}, with #{E = p^2/2m + V}, #{p} = momentum, so #{p^2 = 2m(E - V)}. The quantisation condition gives}
+##{\oint p\,dx = (2n + 1)\pi\hbar,}
+\p{integrating over 1 period of oscillation.}}
+\li{Local wavenumber #{k = \sqrt{|q|}/\varepsilon = \sqrt{2m(E - V)}/\hbar = p/\hbar}; wavelength #{= \frac{2\pi}{k} = \frac{2\pi\hbar}{p}} = de Broglie wavelength.}
+}}
+\li{\p{\strong{(e)} \em{The QM harmonic oscillator.} #{V = \frac{m\omega^2}{2}x^2}, #{\omega} constant (Newton II #{\Rightarrow} #{\ddot{x} + \omega^2x = 0}). #{E = p^2/2m + V = p^2/2m + m\omega^2x^2/2}: for fixed energy, a particle follows an elliptical orbit in phase space #{(x, p)}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.7]
+\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+\draw[->] (0,-1.8) -- (0,2) node[above] {$p$};
+\draw (0,0) ellipse (1.2 and 0.7);
+\draw (0,0) ellipse (1.8 and 1.05);
+\draw (0,0) ellipse (2.4 and 1.4);
+\end{tikzpicture}}
+\p{Consider the area enclosed by an elliptical orbit:}
+##{\iint_{\text{ellipse}} dx\,dp = \oint p\,dx = (2n + 1)\pi\hbar}
+\p{by the quantisation condition. The semi-axes are #{\sqrt{2mE}} and #{\sqrt{2E/m\omega^2}}, so area #{= 2\pi E/\omega} by the area of an ellipse. So}
+##{E_n = \Big( n + \frac{1}{2} \Big)\hbar\omega, \quad n = 0, 1, 2, \ldots}}
+}

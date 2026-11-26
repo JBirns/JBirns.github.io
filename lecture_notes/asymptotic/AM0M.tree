@@ -1,0 +1,27 @@
+\title{The complementary error function}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+##{F(x) = \int_x^\infty e^{-t^2/2}\,dt = \int_x^\infty \frac{te^{-t^2/2}}{t}\,dt;}
+
+\p{how does it behave as #{x \to \infty}? By IBP,}
+
+##{F(x) = \underbrace{\frac{e^{-x^2/2}}{x}}_{\text{our asymptotic approximation}} - \underbrace{\int_x^\infty \frac{e^{-t^2/2}}{t^2}\,dt}_{\text{small error term}}.}
+
+\p{We need to check that the error is #{o\big( \frac{e^{-x^2/2}}{x} \big)}:}
+
+##{\text{error} = \int_x^\infty \frac{e^{-t^2/2}}{t^2}\,dt = \int_x^\infty \frac{te^{-t^2/2}}{t^3}\,dt.}
+
+\p{The trick is: #{t \geq x} in the integral. So}
+
+##{\text{error} \leq \frac{1}{x^3}\int_x^\infty te^{-t^2/2}\,dt = \frac{1}{x^3}e^{-x^2/2} = o\Big( \frac{e^{-x^2/2}}{x} \Big) \quad \text{as } x \to \infty.}
+
+\p{So #{F(x) \sim \frac{e^{-x^2/2}}{x}} as #{x \to \infty}. Repeated IBP gives}
+
+##{F(x) \sim \frac{e^{-x^2/2}}{x}\sum_{n=0}^\infty (-1)^n\frac{(2n - 1)!!}{x^{2n}} \quad \text{for } x \to \infty,}
+
+\p{where #{(2n - 1)!! = (2n - 1)(2n - 3)(2n - 5)\cdots 3 \cdot 1}.}
+
+\p{\strong{Exercise:} show the above (induction might help).}

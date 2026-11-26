@@ -1,0 +1,13 @@
+\title{Riemann–Lebesgue Lemma}
+\taxon{Lemma}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+##{\int_a^b f(t)e^{ixt}\,dt \to 0 \quad \text{as } x \to \infty}
+
+\p{if #{\int_a^b |f|\,dt < \infty} and #{-\infty \leq a < b \leq \infty}. (We have the special case #{\phi(t) = t}.)}
+
+\proof{
+\p{See Chapling Appendix A.}
+}

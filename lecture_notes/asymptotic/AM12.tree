@@ -1,0 +1,54 @@
+\title{More on Stokes’ Phenomena, etc.}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(a)} \em{Stokes & anti-Stokes lines.}}
+\ul{
+\li{Recall #{f(z) \sim g(z)} for #{z \in \mathbb{C}} and #{z \to z_0} is generally valid in a limited sector centred on #{z_0}, or if #{z_0 = \infty}, in a sector of #{\mathbb{C}}.}
+\li{\p{E.g. (1) #{\cosh z = \frac{1}{2}(e^z + e^{-z})} and #{|z| \to \infty}:}
+\ul{
+\li{#{e^{-z}} is exponentially small for #{-\frac{\pi}{2} < \arg z < \frac{\pi}{2}}, so #{\cosh z \sim \frac{1}{2}e^z};}
+\li{#{e^z} is exponentially small for #{\frac{\pi}{2} < \arg z < \frac{3\pi}{2}}, and #{\cosh z \sim \frac{1}{2}e^{-z}}.}
+}}
+\li{\p{E.g. (2) #{y'' = zy}. Liouville–Green gives}
+##{y \sim Az^{-1/4}e^{-\frac{2}{3}z^{3/2}} + Bz^{-1/4}e^{\frac{2}{3}z^{3/2}} \qquad (\ast)}
+\p{if #{z \in \mathbb{R}} and #{z \to \infty}, but if #{z \in \mathbb{C}} it is not immediately obvious which term is dominant.}}
+}
+\ul{
+\li{On crossing a sector boundary, exponentially small terms become exponentially large.}
+\li{More formally, #{f = g + (f - g)}. If #{f \sim g} in some sector, then #{f - g \ll f}, and #{g} is \em{dominant}, and #{f - g} is \em{recessive}.}
+\li{At a sector boundary, #{f - g} becomes the same order as #{g}, and on the other side #{f - g} becomes dominant.}
+\li{\p{Consider a Liouville–Green approximation to ODEs of the form}
+##{f(z) \sim Ah(z)e^{S_1(z)} + Bh(z)e^{S_2(z)}, \quad |z| \to \infty. \qquad (\dagger)}
+\p{Suppose in some sector of #{\mathbb{C}}, #{\operatorname{Re}(S_2) \ll \operatorname{Re}(S_1)}; then the #{e^{S_2}} term is recessive and the #{e^{S_1}} term is dominant.}}
+\li{We define a \em{Stokes line} to be where #{\operatorname{Re}(S_1) = \operatorname{Re}(S_2)}; thus #{\big| \frac{e^{S_1}}{e^{S_2}} \big| = e^{\operatorname{Re}(S_1 - S_2)} = 1}.}
+\li{Along this line, the ratio of the two terms is purely oscillatory and of the same order.}
+\li{The dominant and recessive terms trade places as we cross a Stokes line.}
+\li{Another problem: #{S_1} and #{S_2} are not usually entire functions, even if #{f(z)} is (recall #{S_{1,2} = \pm\int \sqrt{Q}\,dx} has branch cuts).}
+\li{So the approximation undergoes jumps when we cross branch cuts, and (#{\dagger}) cannot be true globally for fixed #{A, B}: #{A, B} need to take different values at different places.}
+\li{It is best to change the value of the recessive coefficient where the real parts of #{S_1} and #{S_2} differ the most.}
+\li{Often #{\operatorname{Re}(S_1 - S_2)} is maximally different when #{\operatorname{Im}(S_1 - S_2) = 0}.}
+\li{An \em{anti-Stokes line} is where #{\operatorname{Im}S_1 = \operatorname{Im}S_2}.}
+}
+\p{\strong{Warning.} Many authors swap the terminology of Stokes and anti-Stokes lines.}}
+}
+
+\transclude{AM13}
+
+\ul{
+\li{\p{\strong{(b)} \em{Super-asymptotics.}}
+\ul{
+\li{An \em{optimally truncated} series is one in which you retain the smallest term and discard all terms of higher degree.}
+\li{This is called a \em{super-asymptotic approximation} and the error is typically #{O(e^{-a/\varepsilon})}, where #{a} is a constant and #{\varepsilon} is a small parameter.}
+}}
+}
+
+\transclude{AM14}
+
+\ul{
+\li{\strong{(c)} \em{Hyperasymptotics.} A \em{hyperasymptotic approximation} achieves higher accuracy than a super-asymptotic one by adding terms from a 2nd (or 3rd or 4th …) series generated from the error terms #{E_N}, but with different scaling assumptions.}
+}
+
+\transclude{AM15}

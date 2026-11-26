@@ -1,0 +1,50 @@
+\title{Debye integral}
+\taxon{Example}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+##{I(x) = \int_C e^{x(\operatorname{sech}w\sinh z - z)}\,dz,}
+
+\p{where #{0 \neq w \in \mathbb{R}}, #{x > 0} and very large; #{z = p + iq}, and #{C} runs from #{\infty - i\pi} to #{\infty + i\pi}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.6,0) -- (4.5,0) node[right] {$p$};
+\draw[->] (0,-1.8) -- (0,1.9) node[above] {$q$};
+\draw[dashed] (-0.3,1.3) -- (4.3,1.3) node[right] {$\pi$};
+\draw[dashed] (-0.3,-1.3) -- (4.3,-1.3) node[right] {$-\pi$};
+\draw[thick, ->] (4.2,-1.0) .. controls (1.4,-1.0) and (1.4,1.0) .. (4.2,1.0);
+\node at (3.2,0.0) {$C$};
+\draw[red] (4.2,-1.55) .. controls (0.2,-1.4) and (0.2,1.4) .. (4.2,1.55);
+\draw[blue, thick] (0.6,-0.3) -- (0.6,0.3);
+\fill (0.6,0) circle (1.5pt);
+\node[below right] at (0.6,0) {$w$};
+\end{tikzpicture}}
+
+\p{#{f = 1}, #{\phi = \operatorname{sech}w\sinh z - z}, #{\phi' = \operatorname{sech}w\cosh z - 1 = 0 \Rightarrow z_0 = w}, a saddle. What is the steepest descent curve through #{z_0}? #{z = w + te^{i\theta}}, and by Taylor expansion,}
+
+##{\phi - \phi_0 = \tanh w(\cos 2\theta + i\sin 2\theta)\frac{t^2}{2} + \cdots.}
+
+\p{We need #{\sin 2\theta = 0} (#{\cos 2\theta < 0}), so #{\theta = \frac{\pi}{2}, \frac{3\pi}{2}}. Now apply Laplace’s method to each #{\theta}.}
+
+\p{Upper bit, #{\theta = \frac{\pi}{2}}: #{\frac{dz}{dt} = e^{i\theta} = i}, so}
+
+##{\begin{aligned}
+I_1 &= \int_0^\varepsilon e^{x\phi}\frac{dz}{dt}\,dt \simeq ie^{x\phi_0}\int_0^\varepsilon \exp\big( x(-\tanh w\tfrac{1}{2}t^2) \big)\,dt \\ &\sim ie^{x\phi_0}\sqrt{\frac{2}{x\tanh w}}\int_0^\infty e^{-s^2}\,ds \\ &\sim \frac{ie^{x\phi_0}}{2}\sqrt{\frac{2\pi}{x\tanh w}}
+\end{aligned}}
+
+\p{(c.f. Laplace’s method).}
+
+\p{Lower part, #{\theta = \frac{3\pi}{2}}: #{\frac{dz}{dt} = e^{3\pi i/2} = -i}, and (with a minus sign from going against the curve)}
+
+##{I_2 = -\int_0^\varepsilon e^{x\phi}\frac{dz}{dt}\,dt \sim \text{etc.} \sim \frac{ie^{x\phi_0}}{2}\sqrt{\frac{2\pi}{x\tanh w}}.}
+
+\p{So, with #{\phi_0 = \tanh w - w},}
+
+##{I = I_1 + I_2 \sim ie^{x(\tanh w - w)}\sqrt{\frac{2\pi}{x\tanh w}}.}
+
+\p{In fact, generically, the contribution from a saddle point to #{I(x)} may be expressed as}
+
+##{\sim e^{x\phi(z_0)}\sqrt{\frac{-2\pi}{x\phi''(z_0)}}f(z_0).}
+
+\p{\strong{Exercise:} show this.}

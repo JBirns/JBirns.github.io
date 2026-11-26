@@ -1,0 +1,22 @@
+\title{Oscillatory functions}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Care is needed when approximating oscillatory functions around #{0}. Suppose #{f} oscillates around #{0} and #{f(x) \sim g(x)} as #{x \to \infty}, so #{\big| \frac{f(x)}{g(x)} \big| \to 1} as #{x \to \infty}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,-0.6) -- (0,1);
+\draw[->] (0,0) -- (5.5,0) node[right] {$x$};
+\draw[thick, domain=0:5.2, samples=80] plot (\x, {0.6*sin(170*\x)});
+\draw[thick, blue, domain=0:5.2, samples=80] plot (\x, {0.6*sin(170*\x - 40)});
+\node at (0.7,0.95) {$f(x)$};
+\node[blue] at (3.9,0.95) {$g(x)$};
+\end{tikzpicture}}
+
+\p{The definitions are deficient when the zeroes of #{f} and #{g} are not \em{exactly} the same (see BO §3.7). E.g.}
+
+##{J_0(x) \text{ ``$\sim$'' } \sqrt{\frac{2}{\pi x}}\Big( \cos x - \frac{\pi}{4} \Big) \quad \text{as } x \to \infty;}
+
+\p{the #{10^{\text{th}}} zero of #{J_0} is #{30.6346} and of the approximation is #{30.6305}.}

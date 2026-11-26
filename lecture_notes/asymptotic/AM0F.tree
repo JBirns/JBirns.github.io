@@ -1,0 +1,11 @@
+\title{An expansion does not determine the function}
+\taxon{Remark}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{An asymptotic expansion does not uniquely determine a function. Suppose #{f(x) \sim g(x)} as #{x \to x_0}, and also #{h(x) \ll f(x)} as #{x \to x_0}. Then #{f(x) + h(x) \sim g(x)}. So if #{g} is an asymptotic expansion it can describe both #{f} and #{f + h}. E.g. let}
+
+##{f_1(x) = \frac{1}{1 + x}, \qquad f_2(x) = \frac{1 + e^{-x}}{1 + x}.}
+
+\p{Then #{f_1, f_2 \sim \sum_k (-1)^kx^{-(k+1)}} as #{x \to \infty}.}

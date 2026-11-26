@@ -1,0 +1,507 @@
+\title{Approximating Integrals}
+\date{2023-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Taylor expanding the integrand – Stieltjes integrals}}
+
+\transclude{AM0L}
+
+\p{\strong{Integration by parts}}
+
+##{\int_a^b f'(t)g(t)\,dt = [fg]_a^b - \int_a^b fg'\,dt.}
+
+\p{\em{Generalisation:}}
+
+##{I = \int_a^b f\,g^{(n)}(t)\,dt = \sum_{k=1}^n (-1)^{k-1}\big[ f^{(k-1)}g^{(n-k)} \big]_a^b + (-1)^n\int_a^b f^{(n)}g\,dt.}
+
+\p{The idea: repeated IBP can generate an asymptotic approximation composed of boundary terms under certain circumstances.}
+
+\transclude{AM0M}
+
+\transclude{AM0N}
+
+\p{\strong{The Gamma Function}}
+
+\p{Recall the definition of the Gamma function:}
+
+##{\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}\,dt, \quad \operatorname{Re}(z) > 0.}
+
+\p{\em{Basic properties:}}
+
+\ul{
+\li{\strong{(a)} #{\Gamma} is an analytic function for #{\operatorname{Re}(z) > 0};}
+\li{\strong{(b)} #{\Gamma(z + 1) = z\Gamma(z)} (recursion relation);}
+\li{\strong{(c)} #{\Gamma(n + 1) = n!} for #{n \in \mathbb{Z}^+}, and #{\Gamma(1) = 1};}
+\li{\strong{(d)} #{\int_0^\infty t^{z-1}e^{-xt}\,dt = \frac{\Gamma(z)}{x^z}} for #{x > 0}.}
+}
+
+\p{For more properties: p. 14 Chapling.}
+
+\p{\strong{Watson’s Lemma}}
+
+\p{Consider #{F(x) = \int_0^T f(t)e^{-xt}\,dt} as #{x \to \infty}, #{0 < T \leq \infty}.}
+
+\transclude{AM0O}
+
+\transclude{AM0P}
+
+\p{\strong{Laplace’s Integrals & Laplace’s Method}}
+
+\transclude{AM0Q}
+
+\p{How does #{I} behave as #{x \to \infty}?}
+
+\ul{
+\li{Watson’s Lemma deals with the special case #{\phi(t) = -t} (#{a = 0}, #{b = T}). #{I(x)} in this case is dominated by contributions near #{t = 0}.}
+\li{In general, we have the “principle of localisation” (Laplace): “the asymptotic expansion of #{I(x)} as #{x \to \infty} is determined by contributions from small neighbourhoods of the maxima of #{\phi}”.}
+}
+
+\ul{
+\li{\strong{(i)} Watson’s case: the endpoint dominates (the maximum of #{\phi = -t} is at #{t = 0}).}
+\li{\strong{(ii)} Suppose #{\phi} has its maximum at an internal point #{t = c}. Then as #{x \to \infty}, the integral is dominated by a small region around #{t = c}.}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (4.2,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,1.6) node[above] {$\phi$};
+\draw[thick] (0.6,0.4) .. controls (1.4,1.6) and (2.6,1.6) .. (3.4,0.2);
+\fill (2.0,1.3) circle (1.5pt);
+\draw (0.6,0.07) -- (0.6,-0.07) node[below] {$a$};
+\draw (2.0,0.07) -- (2.0,-0.07) node[below] {$c$};
+\draw (3.4,0.07) -- (3.4,-0.07) node[below] {$b$};
+\node[right] at (4.6,1.0) {max of $\phi$ at an internal point};
+\begin{scope}[shift={(0,-3.4)}]
+\draw[->] (0,0) -- (4.2,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,2.4) node[above] {integrand};
+\draw (0.6,0.4) -- (1.6,0.5) -- (2.0,0.8) -- (2.4,0.5) -- (3.4,0.3);
+\draw (0.6,0.3) -- (1.6,0.6) -- (2.0,1.5) -- (2.4,0.6) -- (3.4,0.15);
+\draw (0.6,0.2) -- (1.7,0.5) -- (2.0,2.1) -- (2.3,0.5) -- (3.4,0.08);
+\draw (0.6,0.07) -- (0.6,-0.07) node[below] {$a$};
+\draw (2.0,0.07) -- (2.0,-0.07) node[below] {$c$};
+\draw (3.4,0.07) -- (3.4,-0.07) node[below] {$b$};
+\node[right] at (4.6,0.4) {$x = 0$};
+\node[right] at (4.6,1.6) {$x$ increases};
+\end{scope}
+\end{tikzpicture}}
+
+\p{Let’s look at different cases.}
+
+\ul{
+\li{\p{\strong{(a)} Suppose #{\phi(t)} is monotonic on #{[a, b]}.}
+\ul{
+\li{\p{If #{\phi'(t) > 0} on #{t \in [a, b]} and #{f(b) \neq 0}, we expect #{I} to be dominated at the endpoint #{t = b}. Let #{u = \phi(t)}, #{t = \phi^{-1}(u)}:}
+##{I(x) = \int_a^b f(t)e^{x\phi(t)}\,dt = \int_{\phi(a)}^{\phi(b)} \Big[ \frac{f(t)}{\phi'(t)} \Big]e^{xu}\,du.}
+\p{Use \ref{AM0N} (IBP) to get}
+##{I(x) \sim \frac{f(b)e^{x\phi(b)}}{x\phi'(b)} \quad \text{as } x \to \infty.}}
+\li{\p{If #{\phi'(t) < 0} on #{t \in [a, b]} and #{f(a) \neq 0}, then}
+##{I(x) \sim \frac{f(a)e^{x\phi(a)}}{x|\phi'(a)|} \quad \text{as } x \to \infty.}}
+}}
+\li{\p{\strong{(b)} Suppose #{\phi} has an internal maximum at #{t = c}, so that #{\phi'(c) = 0} and #{\phi''(c) < 0}, and #{f(c) \neq 0}. Split}
+##{I(x) = \int_{c-\varepsilon}^{c+\varepsilon} f(t)e^{x\phi(t)}\,dt + \int_{\Omega_\varepsilon} f(t)e^{x\phi(t)}\,dt = I_1 + I_2,}
+\p{where #{\Omega_\varepsilon = [a, c - \varepsilon] \cup [c + \varepsilon, b]}.}
+\p{Let’s look at #{I_2} first. Let #{L_\varepsilon = \max_{t \in \Omega_\varepsilon} \phi}, so #{L_\varepsilon < \phi(c)}, the absolute maximum. Then}
+##{|I_2| \leq e^{xL_\varepsilon}\int_{\Omega_\varepsilon} |f(t)|\,dt \leq e^{xL_\varepsilon}\int_a^b |f(t)|\,dt < Ke^{xL_\varepsilon},}
+\p{so #{I_2 = O(e^{xL_\varepsilon}) \ll e^{x\phi(c)}} as #{x \to \infty}.}
+\p{Now look at #{I_1}: expand #{f} and #{\phi} around #{t = c}:}
+##{\phi(t) = \phi(c) + \underbrace{\phi'(c)}_{= 0}(t - c) + \frac{\phi''(c)}{2}(t - c)^2 + \cdots, \qquad f(t) = f(c) + \cdots.}
+\p{So}
+##{\begin{aligned}
+I_1 &= \int_{c-\varepsilon}^{c+\varepsilon} [f(c) + \cdots]\exp\big[ x\phi(c) + \tfrac{1}{2}x\phi''(c)(t - c)^2 + \cdots \big]\,dt \\
+&\approx f(c)e^{x\phi(c)}\int_{c-\varepsilon}^{c+\varepsilon} e^{\frac{1}{2}x\phi''(c)(t - c)^2}\,dt.
+\end{aligned}}
+\p{Let #{s = [-x\phi''(c)]^{1/2}(t - c)}. Then}
+##{I_1 \approx \frac{f(c)e^{x\phi(c)}}{\sqrt{-x\phi''(c)}}\int_{-[-x\phi''(c)]^{1/2}\varepsilon}^{[-x\phi''(c)]^{1/2}\varepsilon} e^{-s^2/2}\,ds.}
+\p{Take #{x} large, keeping #{\varepsilon} fixed (#{\ast}):}
+##{I_1 \sim \frac{f(c)e^{x\phi(c)}}{\sqrt{-x\phi''(c)}}\int_{-\infty}^\infty e^{-s^2/2}\,ds \sim f(c)e^{x\phi(c)}\sqrt{\frac{2\pi}{-x\phi''(c)}}.}
+\p{Step (#{\ast}) is justified because the error is of the form #{\int_z^\infty e^{-t^2/2}\,dt \sim \frac{1}{z}e^{-z^2/2}} as #{z \to \infty} (see \ref{AM0M}), which is very small. So #{I_1 \gg I_2}, and}
+##{I(x) \sim I_1 \sim f(c)e^{x\phi(c)}\sqrt{\frac{2\pi}{-x\phi''(c)}}}
+\p{(see Miller §3.3 for something more rigorous).}}
+}
+
+\transclude{AM0R}
+
+\ul{
+\li{\p{\strong{(c)} What if #{\phi} achieves its absolute maximum at an internal point #{t = c} and also at an endpoint #{t = b}? Thus #{\phi(b) = \phi(c) = \max_{t \in [a,b]} \phi}, with #{\phi'(c) = 0}, #{\phi'(b) \neq 0}, and #{f(c) \neq 0} and #{f(b) \neq 0}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (3.6,0);
+\draw[->] (0,0) -- (0,1.8);
+\draw[thick] (0.3,0.2) .. controls (0.6,1.6) and (1.0,1.6) .. (1.5,0.9) .. controls (2.0,0.2) and (2.7,0.4) .. (3.0,1.35);
+\fill (0.82,1.33) circle (1.5pt);
+\fill (3.0,1.35) circle (1.5pt);
+\draw (0.3,0.07) -- (0.3,-0.07) node[below] {$a$};
+\draw (0.82,0.07) -- (0.82,-0.07) node[below] {$c$};
+\draw (3.0,0.07) -- (3.0,-0.07) node[below] {$b$};
+\node[right, align=left] at (4.0,0.9) {The internal point dominates\\ the integral as $x \to \infty$.};
+\end{tikzpicture}}
+\p{The endpoint contribution is #{\propto \frac{e^{x\phi(b)}}{x}} and the internal contribution is #{\propto \frac{e^{x\phi(c)}}{\sqrt{x}}}, and so as #{x \to \infty}, endpoint #{\ll} internal.}}
+\li{\p{\strong{(d)} What if #{\phi} has many internal local maxima, i.e. #{\phi'(c_i) = 0} and #{\phi''(c_i) < 0} for #{i = 1, 2, \ldots, n}? Then only the absolute maximum matters. E.g. with three local maxima #{c_1 < c_2 < c_3} and #{\phi(c_3)} the largest:}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (4,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,1.8) node[above] {$\phi$};
+\draw[thick] (0.3,0.2) .. controls (0.6,1.1) and (0.9,1.1) .. (1.1,0.5) .. controls (1.3,0) and (1.6,1.3) .. (1.8,1.0) .. controls (2.0,0.6) and (2.2,0.4) .. (2.4,0.8) .. controls (2.6,1.6) and (2.9,1.7) .. (3.4,0.3);
+\draw (0.3,0.07) -- (0.3,-0.07) node[below] {$a$};
+\draw (0.75,0.07) -- (0.75,-0.07) node[below] {$c_1$};
+\draw (1.7,0.07) -- (1.7,-0.07) node[below] {$c_2$};
+\draw (2.75,0.07) -- (2.75,-0.07) node[below] {$c_3$};
+\draw (3.4,0.07) -- (3.4,-0.07) node[below] {$b$};
+\end{tikzpicture}}
+\p{#{c_3} contributes #{\propto \frac{e^{x\phi(c_3)}}{\sqrt{x}}}, #{c_2} contributes #{\propto \frac{e^{x\phi(c_2)}}{\sqrt{x}}}, #{c_1} contributes #{\propto \frac{e^{x\phi(c_1)}}{\sqrt{x}}}; so #{c_3}’s contribution #{\gg} #{c_1}’s, #{c_2}’s. Local maxima that are not the absolute maximum contribute terms that are exponentially smaller.}
+\p{E.g. if #{\phi(c_1) = \phi(c_2)} are both the absolute maximum: if several local maxima are also the absolute maximum, their contributions must be summed up as they are all dominant:}
+##{I(x) \sim \sqrt{\frac{2\pi}{-x\phi''(c_1)}}f(c_1)e^{x\phi(c_1)} + \sqrt{\frac{2\pi}{-x\phi''(c_2)}}f(c_2)e^{x\phi(c_2)}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (4,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,1.8) node[above] {$\phi$};
+\draw[thick] (0.3,0.3) .. controls (0.8,1.6) and (1.3,1.6) .. (1.8,0.6) .. controls (2.1,0.2) and (2.5,1.6) .. (2.9,1.25) .. controls (3.1,1.0) .. (3.4,0.4);
+\fill (1.05,1.27) circle (1.5pt);
+\fill (2.75,1.27) circle (1.5pt);
+\draw (0.3,0.07) -- (0.3,-0.07) node[below] {$a$};
+\draw (1.05,0.07) -- (1.05,-0.07) node[below] {$c_1$};
+\draw (2.75,0.07) -- (2.75,-0.07) node[below] {$c_2$};
+\draw (3.4,0.07) -- (3.4,-0.07) node[below] {$b$};
+\end{tikzpicture}}}
+}
+
+\p{\strong{Back to case (b): a more rigorous proof of the “non-local” contribution.}}
+
+##{I_2 = \int_{\Omega_\varepsilon} f(t)e^{x\phi(t)}\,dt = \underbrace{\int_a^{c-\varepsilon} fe^{x\phi}\,dt}_{\phi \text{ is increasing}} + \underbrace{\int_{c+\varepsilon}^b fe^{x\phi}\,dt}_{\phi \text{ is decreasing}},}
+
+\p{which are #{O\big( \frac{1}{x}e^{x\phi(c-\varepsilon)} \big)} and #{O\big( \frac{1}{x}e^{x\phi(c+\varepsilon)} \big)} respectively, both #{\ll \frac{1}{\sqrt{x}}e^{x\phi(c)}}.}
+
+\ul{
+\li{\p{\strong{(e)} What if an endpoint is a (local and absolute) maximum, i.e. #{\phi'(b) = 0}, #{\phi''(b) < 0} and #{f(b) \neq 0}?}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (4,0);
+\draw[->] (0,0) -- (0,2);
+\draw[thick] (0.3,0.6) .. controls (0.8,1.1) and (1.2,0.4) .. (1.7,0.7) .. controls (2.1,1.0) and (2.2,1.7) .. (2.8,1.7);
+\draw[thick, dotted] (2.8,1.7) .. controls (3.2,1.7) and (3.4,1.0) .. (3.4,0.2);
+\draw[dotted] (2.8,1.7) -- (2.8,0);
+\draw (0.3,0.07) -- (0.3,-0.07) node[below] {$a$};
+\draw (2.8,0.07) -- (2.8,-0.07) node[below] {$b$};
+\end{tikzpicture}}
+\p{Proceed as in case (b):}
+##{I \sim \int_{b-\varepsilon}^b fe^{x\phi}\,dt \sim \frac{f(b)e^{x\phi(b)}}{\sqrt{-x\phi''(b)}}\int_{-\infty}^0 e^{-s^2/2}\,ds \sim \frac{1}{2}\frac{f(b)e^{x\phi(b)}}{\sqrt{-x\phi''(b)}}\sqrt{2\pi}.}}
+}
+
+\transclude{AM0S}
+
+\ul{
+\li{\p{\strong{(f)} What if #{\phi'(c) = \phi''(c) = \cdots = \phi^{(p-1)}(c) = 0} and #{\phi^{(p)}(c) < 0}, where #{p} is an even positive integer, and #{f(c) \neq 0}? Taylor expansion of #{\phi} gives #{\phi = \phi(c) + \frac{\phi^{(p)}(c)}{p!}(t - c)^p + \cdots}, so}
+##{I \sim \int_{c-\varepsilon}^{c+\varepsilon} f(t)e^{x\phi(t)}\,dt \sim \int_{c-\varepsilon}^{c+\varepsilon} f(c)e^{x\phi(c)}e^{x\phi^{(p)}(c)(t - c)^p/p!}\,dt.}
+\p{Substitute #{s = [-x\phi^{(p)}(c)/p!]^{1/p}(t - c)} and let #{x \to \infty}:}
+##{I \sim \Big[ \frac{p!}{-x\phi^{(p)}(c)} \Big]^{1/p}f(c)e^{x\phi(c)}\int_{-\infty}^\infty e^{-s^p}\,ds.}
+\p{Note: using #{u = s^p},}
+##{\int_0^\infty e^{-s^p}\,ds = \int_0^\infty \frac{e^{-u}u^{\frac{1}{p} - 1}}{p}\,du = \frac{1}{p}\Gamma\Big( \frac{1}{p} \Big) = \Gamma\Big( 1 + \frac{1}{p} \Big),}
+\p{so}
+##{I \sim \Big[ \frac{p!}{-x\phi^{(p)}(c)} \Big]^{1/p}f(c)e^{x\phi(c)} \cdot 2\Gamma\Big( 1 + \frac{1}{p} \Big) \quad \text{as } x \to \infty.}}
+\li{\strong{(g)} How do I get higher-order terms? You keep higher-order terms in the Taylor expansions of #{f} and #{\phi} (around #{c}). This is ugly in general; see pp. 22–23 in Chapling.}
+}
+
+\transclude{AM0T}
+
+\p{\strong{Oscillatory Integrals and the Method of Stationary Phase}}
+
+\p{Consider “Fourier-type” integrals, like}
+
+##{F(x) = \int_a^b f(t)e^{ix\phi(t)}\,dt, \quad b > a,\; x \text{ very large}.}
+
+\p{As #{x \to \infty} the modulus of #{e^{ix\phi}} stays #{1}, but the integrand oscillates more and more and goes crazy. In fact, you get catastrophic cancellation in the integral and generally #{F(x) \to 0}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,-1.6) -- (0,1.8) node[above] {integrand};
+\draw[->] (0,0) -- (5.2,0) node[right] {$t$};
+\draw[thick, domain=0.6:4.6] plot (\x, {0.5 + 0.18*\x});
+\draw[thick, domain=0.6:4.6] plot (\x, {-0.5 - 0.18*\x});
+\node[right] at (4.6,1.33) {$f$};
+\node[right] at (4.6,-1.33) {$-f$};
+\draw[gray, domain=0.6:4.6, samples=80] plot (\x, {(0.5 + 0.18*\x)*sin(300*\x)});
+\draw[red, domain=0.6:4.6, samples=300] plot (\x, {(0.5 + 0.18*\x)*sin(1500*\x)});
+\draw (0.6,0.07) -- (0.6,-0.07) node[below left] {$a$};
+\draw (4.6,0.07) -- (4.6,-0.07) node[below right] {$b$};
+\node[red, right] at (5.4,1.0) {large $x$};
+\node[gray, right] at (5.4,0.5) {small $x$};
+\end{tikzpicture}}
+
+\p{\em{Key idea:} as #{x} gets very big, the ‘wavelength’ of oscillations becomes much smaller than the length scale of variation of #{f} (and #{\phi}), so locally it looks like we’re integrating sinusoids, which will integrate to #{0}. (Zooming in, the positive and negative lobes cancel.)}
+
+\transclude{AM0U}
+
+\ul{
+\li{\p{\strong{(a)} Consider linear #{\phi}. Q: How fast does #{F \to 0} as #{x \to \infty}?}
+##{\begin{aligned}
+F(x) &= \Big[ \frac{fe^{ixt}}{ix} \Big]_a^b - \frac{1}{ix}\int_a^b f'(t)e^{ixt}\,dt \\ &= \frac{1}{ix}\Big[ f(b)e^{ixb} - f(a)e^{ixa} - \underbrace{\int_a^b f'(t)e^{ixt}\,dt}_{\to 0 \text{ as } x \to \infty \text{ by R--L}} \Big].
+\end{aligned}}
+\p{Assuming #{f(a) \neq 0} and #{f(b) \neq 0},}
+##{F(x) \sim \frac{1}{ix}\big[ f(t)e^{ixt} \big]_a^b = O(1/x).}
+\ul{
+\li{The behaviour of #{f} at the endpoints controls the leading order asymptotics of #{F}.}
+\li{If #{f \to 0} at the endpoints then #{F} is small beyond all orders in #{x^{-k}}. In particular, if #{F(x) = \int_{-\infty}^\infty f(t)e^{ixt}\,dt}, then we usually assume #{f \to 0} as #{t \to \pm\infty}, so #{F(x) = O(x^{-N})} for all #{N \in \mathbb{Z}^+} if #{f} is infinitely differentiable.}
+}}
+\li{\p{\strong{(b)} Consider general #{\phi}, but monotonic on #{[a, b]}, meaning #{\phi'(t) \neq 0}. Let #{u = \phi(t)}, #{t = \phi^{-1}(u)}:}
+##{F(x) = \int_a^b f(t)e^{ix\phi(t)}\,dt = \int_{\phi(a)}^{\phi(b)} \frac{f(t)}{\phi'(t)}e^{ixu}\,du \sim \frac{1}{ix}\Big[ \frac{f(t)}{\phi'(t)}e^{ix\phi(t)} \Big]_a^b = O\Big( \frac{1}{x} \Big)}
+\p{by IBP like in (a).}}
+\li{\p{\strong{(c)} If #{\phi} has one stationary point #{c \in (a, b)}, meaning #{\phi'(c) = 0}: around the point #{c}, the catastrophic cancellation in #{F} is less pronounced (a “plateau at #{c}”).}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,-1.2) -- (0,1.4) node[above] {integrand};
+\draw[->] (0,0) -- (5,0) node[right] {$t$};
+\draw[gray, domain=0.4:4.4, samples=400] plot (\x, {0.9*sin(3000*(\x -2.4)^2)});
+\draw[dashed] (0.4,0.9) -- (4.4,0.9) (0.4,-0.9) -- (4.4,-0.9);
+\draw (0.4,0.07) -- (0.4,-0.07) node[below left] {$a$};
+\draw (2.4,0.07) -- (2.4,-0.07);
+\node[below] at (2.4,-1.0) {$c$};
+\draw (4.4,0.07) -- (4.4,-0.07) node[below right] {$b$};
+\end{tikzpicture}}
+\p{\em{Localisation Principle for Oscillating Integrals:} “The asymptotic expansion of #{F} for large #{x} is controlled by the points of stationary phase (and possibly the endpoints).” (Due to Stokes, Kelvin.)}
+##{\begin{aligned}
+F(x) &= \underbrace{\int_a^{c-\varepsilon} f(t)e^{ix\phi(t)}\,dt}_{= O(\frac{1}{x}) \text{ by (b)}} + \int_{c-\varepsilon}^{c+\varepsilon} f(t)e^{ix\phi(t)}\,dt + \underbrace{\int_{c+\varepsilon}^b f(t)e^{ix\phi(t)}\,dt}_{= O(\frac{1}{x}) \text{ by (b)}} \\ &= \int_{c-\varepsilon}^{c+\varepsilon} fe^{ix\phi}\,dt + O\Big( \frac{1}{x} \Big).
+\end{aligned}}
+\p{Taylor expand #{\phi} around #{c}, and #{f}: #{\phi(t) = \phi(c) + \frac{\phi''(c)}{2}(t - c)^2 + \cdots}, #{f = f(c) + \cdots}. So}
+##{\int_{c-\varepsilon}^{c+\varepsilon} fe^{ix\phi}\,dt \approx f(c)e^{ix\phi(c)}\int_{c-\varepsilon}^{c+\varepsilon} \exp\Big[ \frac{ix\phi''(c)(t - c)^2}{2} \Big]\,dt.}
+\p{Define #{s = \big| \frac{x\phi''(c)}{2} \big|^{1/2}(t - c)}:}
+##{= \frac{f(c)e^{ix\phi(c)}}{|x\phi''(c)/2|^{1/2}}\int_{-|\frac{x}{2}\phi''(c)|^{1/2}\varepsilon}^{|\frac{x}{2}\phi''(c)|^{1/2}\varepsilon} e^{i\sigma s^2}\,ds,}
+\p{where #{\sigma = \operatorname{sgn}(\phi''(c)) = \pm 1},}
+##{\sim \frac{f(c)e^{ix\phi(c)}}{|x\phi''(c)/2|^{1/2}}\underbrace{\int_{-\infty}^\infty e^{i\sigma s^2}\,ds}_{\text{``Fresnel integral''} = \sqrt{\pi}e^{i\pi\sigma /4} \text{ by ES1}} \quad \text{as } x \to \infty.}
+\p{Therefore}
+##{F(x) \sim f(c)e^{ix\phi(c)}\sqrt{\frac{2\pi}{-ix\phi''(c)}}.}
+\p{Note: the endpoint contributions are #{O(\frac{1}{x})}, the stationary one is #{O(\frac{1}{\sqrt{x}})}. This is the \em{method of stationary phase}.}}
+}
+
+\transclude{AM0V}
+
+\p{\strong{Final points.}}
+
+\ul{
+\li{\em{All} stationary points of #{\phi} contribute to leading order in the expansion, i.e. there is no hierarchy of size (compare with Laplace’s method).}
+\li{Endpoints \em{can} contribute to the next order in the expansion (at #{O(\frac{1}{x})}).}
+\li{Be aware of the problem in the definition of “#{\sim}” if we find #{F} is oscillatory and has many zeroes.}
+}
+
+\p{\strong{Method of Steepest Descent}}
+
+\p{Consider integrals of the form}
+
+##{I(x) = \int_C f(z)e^{x\phi(z)}\,dz \quad \text{as } x \to \infty,}
+
+\p{where #{C} is a contour in #{\mathbb{C}}, and #{f} and #{\phi} are complex-valued functions analytic in a domain containing #{C}. In what follows, #{z \in \mathbb{C}}, #{z = p + iq}, #{p, q \in \mathbb{R}}; #{\phi = u(p, q) + iv(p, q)}, #{u, v} real functions. Then}
+
+##{I(x) = \int_C f\underbrace{e^{xu}}_{\text{amplitude}} \cdot \underbrace{e^{ixv}}_{\text{oscillatory part}}\,dz.}
+
+\p{\strong{Interlude 1: Cauchy–Riemann equations.} #{\phi} analytic on #{D}; then #{u_p = v_q}, #{u_q = -v_p}. Then #{\nabla u = (u_p, u_q)}, #{\nabla v = (v_p, v_q)}, so #{\nabla u \cdot \nabla v = 0}.}
+
+\ul{
+\li{Level contours of #{u, v} are orthogonal.}
+\li{Also #{\nabla v} is tangent to curves of constant #{u}, and #{\nabla u} is tangent to curves of constant #{v}.}
+\li{On constant-#{v} curves, #{u} is maximally increasing/decreasing, and vice versa.}
+}
+
+\p{E.g. #{\phi = z^2 \Rightarrow u = p^2 - q^2}, #{v = 2pq}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.7]
+\begin{scope}
+\clip (-2.4,-2.4) rectangle (2.4,2.4);
+\draw[red] plot[smooth] coordinates {(2.295,-2.160) (2.182,-2.040) (2.070,-1.920) (1.960,-1.800) (1.850,-1.680) (1.742,-1.560) (1.635,-1.440) (1.530,-1.320) (1.428,-1.200) (1.329,-1.080) (1.234,-0.960) (1.143,-0.840) (1.058,-0.720) (0.980,-0.600) (0.911,-0.480) (0.854,-0.360) (0.811,-0.240) (0.784,-0.120) (0.775,0.000) (0.784,0.120) (0.811,0.240) (0.854,0.360) (0.911,0.480) (0.980,0.600) (1.058,0.720) (1.143,0.840) (1.234,0.960) (1.329,1.080) (1.428,1.200) (1.530,1.320) (1.635,1.440) (1.742,1.560) (1.850,1.680) (1.960,1.800) (2.070,1.920) (2.182,2.040) (2.295,2.160)};
+\draw[red] plot[smooth] coordinates {(-2.160,2.295) (-2.040,2.182) (-1.920,2.070) (-1.800,1.960) (-1.680,1.850) (-1.560,1.742) (-1.440,1.635) (-1.320,1.530) (-1.200,1.428) (-1.080,1.329) (-0.960,1.234) (-0.840,1.143) (-0.720,1.058) (-0.600,0.980) (-0.480,0.911) (-0.360,0.854) (-0.240,0.811) (-0.120,0.784) (0.000,0.775) (0.120,0.784) (0.240,0.811) (0.360,0.854) (0.480,0.911) (0.600,0.980) (0.720,1.058) (0.840,1.143) (0.960,1.234) (1.080,1.329) (1.200,1.428) (1.320,1.530) (1.440,1.635) (1.560,1.742) (1.680,1.850) (1.800,1.960) (1.920,2.070) (2.040,2.182) (2.160,2.295)};
+\draw[red] plot[smooth] coordinates {(-2.295,-2.160) (-2.182,-2.040) (-2.070,-1.920) (-1.960,-1.800) (-1.850,-1.680) (-1.742,-1.560) (-1.635,-1.440) (-1.530,-1.320) (-1.428,-1.200) (-1.329,-1.080) (-1.234,-0.960) (-1.143,-0.840) (-1.058,-0.720) (-0.980,-0.600) (-0.911,-0.480) (-0.854,-0.360) (-0.811,-0.240) (-0.784,-0.120) (-0.775,0.000) (-0.784,0.120) (-0.811,0.240) (-0.854,0.360) (-0.911,0.480) (-0.980,0.600) (-1.058,0.720) (-1.143,0.840) (-1.234,0.960) (-1.329,1.080) (-1.428,1.200) (-1.530,1.320) (-1.635,1.440) (-1.742,1.560) (-1.850,1.680) (-1.960,1.800) (-2.070,1.920) (-2.182,2.040) (-2.295,2.160)};
+\draw[red] plot[smooth] coordinates {(-2.160,-2.295) (-2.040,-2.182) (-1.920,-2.070) (-1.800,-1.960) (-1.680,-1.850) (-1.560,-1.742) (-1.440,-1.635) (-1.320,-1.530) (-1.200,-1.428) (-1.080,-1.329) (-0.960,-1.234) (-0.840,-1.143) (-0.720,-1.058) (-0.600,-0.980) (-0.480,-0.911) (-0.360,-0.854) (-0.240,-0.811) (-0.120,-0.784) (0.000,-0.775) (0.120,-0.784) (0.240,-0.811) (0.360,-0.854) (0.480,-0.911) (0.600,-0.980) (0.720,-1.058) (0.840,-1.143) (0.960,-1.234) (1.080,-1.329) (1.200,-1.428) (1.320,-1.530) (1.440,-1.635) (1.560,-1.742) (1.680,-1.850) (1.800,-1.960) (1.920,-2.070) (2.040,-2.182) (2.160,-2.295)};
+\draw[red] plot[smooth] coordinates {(2.342,-1.920) (2.245,-1.800) (2.150,-1.680) (2.058,-1.560) (1.968,-1.440) (1.882,-1.320) (1.800,-1.200) (1.722,-1.080) (1.650,-0.960) (1.583,-0.840) (1.523,-0.720) (1.470,-0.600) (1.425,-0.480) (1.389,-0.360) (1.363,-0.240) (1.347,-0.120) (1.342,0.000) (1.347,0.120) (1.363,0.240) (1.389,0.360) (1.425,0.480) (1.470,0.600) (1.523,0.720) (1.583,0.840) (1.650,0.960) (1.722,1.080) (1.800,1.200) (1.882,1.320) (1.968,1.440) (2.058,1.560) (2.150,1.680) (2.245,1.800) (2.342,1.920)};
+\draw[red] plot[smooth] coordinates {(-1.920,2.342) (-1.800,2.245) (-1.680,2.150) (-1.560,2.058) (-1.440,1.968) (-1.320,1.882) (-1.200,1.800) (-1.080,1.722) (-0.960,1.650) (-0.840,1.583) (-0.720,1.523) (-0.600,1.470) (-0.480,1.425) (-0.360,1.389) (-0.240,1.363) (-0.120,1.347) (0.000,1.342) (0.120,1.347) (0.240,1.363) (0.360,1.389) (0.480,1.425) (0.600,1.470) (0.720,1.523) (0.840,1.583) (0.960,1.650) (1.080,1.722) (1.200,1.800) (1.320,1.882) (1.440,1.968) (1.560,2.058) (1.680,2.150) (1.800,2.245) (1.920,2.342)};
+\draw[red] plot[smooth] coordinates {(-2.342,-1.920) (-2.245,-1.800) (-2.150,-1.680) (-2.058,-1.560) (-1.968,-1.440) (-1.882,-1.320) (-1.800,-1.200) (-1.722,-1.080) (-1.650,-0.960) (-1.583,-0.840) (-1.523,-0.720) (-1.470,-0.600) (-1.425,-0.480) (-1.389,-0.360) (-1.363,-0.240) (-1.347,-0.120) (-1.342,0.000) (-1.347,0.120) (-1.363,0.240) (-1.389,0.360) (-1.425,0.480) (-1.470,0.600) (-1.523,0.720) (-1.583,0.840) (-1.650,0.960) (-1.722,1.080) (-1.800,1.200) (-1.882,1.320) (-1.968,1.440) (-2.058,1.560) (-2.150,1.680) (-2.245,1.800) (-2.342,1.920)};
+\draw[red] plot[smooth] coordinates {(-1.920,-2.342) (-1.800,-2.245) (-1.680,-2.150) (-1.560,-2.058) (-1.440,-1.968) (-1.320,-1.882) (-1.200,-1.800) (-1.080,-1.722) (-0.960,-1.650) (-0.840,-1.583) (-0.720,-1.523) (-0.600,-1.470) (-0.480,-1.425) (-0.360,-1.389) (-0.240,-1.363) (-0.120,-1.347) (0.000,-1.342) (0.120,-1.347) (0.240,-1.363) (0.360,-1.389) (0.480,-1.425) (0.600,-1.470) (0.720,-1.523) (0.840,-1.583) (0.960,-1.650) (1.080,-1.722) (1.200,-1.800) (1.320,-1.882) (1.440,-1.968) (1.560,-2.058) (1.680,-2.150) (1.800,-2.245) (1.920,-2.342)};
+\draw[red] plot[smooth] coordinates {(2.382,-1.440) (2.311,-1.320) (2.245,-1.200) (2.183,-1.080) (2.126,-0.960) (2.075,-0.840) (2.029,-0.720) (1.990,-0.600) (1.957,-0.480) (1.931,-0.360) (1.912,-0.240) (1.901,-0.120) (1.897,0.000) (1.901,0.120) (1.912,0.240) (1.931,0.360) (1.957,0.480) (1.990,0.600) (2.029,0.720) (2.075,0.840) (2.126,0.960) (2.183,1.080) (2.245,1.200) (2.311,1.320) (2.382,1.440)};
+\draw[red] plot[smooth] coordinates {(-1.440,2.382) (-1.320,2.311) (-1.200,2.245) (-1.080,2.183) (-0.960,2.126) (-0.840,2.075) (-0.720,2.029) (-0.600,1.990) (-0.480,1.957) (-0.360,1.931) (-0.240,1.912) (-0.120,1.901) (0.000,1.897) (0.120,1.901) (0.240,1.912) (0.360,1.931) (0.480,1.957) (0.600,1.990) (0.720,2.029) (0.840,2.075) (0.960,2.126) (1.080,2.183) (1.200,2.245) (1.320,2.311) (1.440,2.382)};
+\draw[red] plot[smooth] coordinates {(-2.382,-1.440) (-2.311,-1.320) (-2.245,-1.200) (-2.183,-1.080) (-2.126,-0.960) (-2.075,-0.840) (-2.029,-0.720) (-1.990,-0.600) (-1.957,-0.480) (-1.931,-0.360) (-1.912,-0.240) (-1.901,-0.120) (-1.897,0.000) (-1.901,0.120) (-1.912,0.240) (-1.931,0.360) (-1.957,0.480) (-1.990,0.600) (-2.029,0.720) (-2.075,0.840) (-2.126,0.960) (-2.183,1.080) (-2.245,1.200) (-2.311,1.320) (-2.382,1.440)};
+\draw[red] plot[smooth] coordinates {(-1.440,-2.382) (-1.320,-2.311) (-1.200,-2.245) (-1.080,-2.183) (-0.960,-2.126) (-0.840,-2.075) (-0.720,-2.029) (-0.600,-1.990) (-0.480,-1.957) (-0.360,-1.931) (-0.240,-1.912) (-0.120,-1.901) (0.000,-1.897) (0.120,-1.901) (0.240,-1.912) (0.360,-1.931) (0.480,-1.957) (0.600,-1.990) (0.720,-2.029) (0.840,-2.075) (0.960,-2.126) (1.080,-2.183) (1.200,-2.245) (1.320,-2.311) (1.440,-2.382)};
+\draw[blue] plot[smooth] coordinates {(0.167,2.400) (0.224,1.786) (0.281,1.422) (0.338,1.182) (0.396,1.011) (0.453,0.883) (0.510,0.784) (0.568,0.705) (0.625,0.640) (0.682,0.586) (0.739,0.541) (0.797,0.502) (0.854,0.468) (0.911,0.439) (0.968,0.413) (1.026,0.390) (1.083,0.369) (1.140,0.351) (1.197,0.334) (1.255,0.319) (1.312,0.305) (1.369,0.292) (1.426,0.280) (1.484,0.270) (1.541,0.260) (1.598,0.250) (1.656,0.242) (1.713,0.234) (1.770,0.226) (1.827,0.219) (1.885,0.212) (1.942,0.206) (1.999,0.200) (2.056,0.195) (2.114,0.189) (2.171,0.184) (2.228,0.180) (2.285,0.175) (2.343,0.171) (2.400,0.167)};
+\draw[blue, ->, >=stealth, thick] (1.426,0.280) -- (1.290,0.310);
+\draw[blue] plot[smooth] coordinates {(0.167,-2.400) (0.224,-1.786) (0.281,-1.422) (0.338,-1.182) (0.396,-1.011) (0.453,-0.883) (0.510,-0.784) (0.568,-0.705) (0.625,-0.640) (0.682,-0.586) (0.739,-0.541) (0.797,-0.502) (0.854,-0.468) (0.911,-0.439) (0.968,-0.413) (1.026,-0.390) (1.083,-0.369) (1.140,-0.351) (1.197,-0.334) (1.255,-0.319) (1.312,-0.305) (1.369,-0.292) (1.426,-0.280) (1.484,-0.270) (1.541,-0.260) (1.598,-0.250) (1.656,-0.242) (1.713,-0.234) (1.770,-0.226) (1.827,-0.219) (1.885,-0.212) (1.942,-0.206) (1.999,-0.200) (2.056,-0.195) (2.114,-0.189) (2.171,-0.184) (2.228,-0.180) (2.285,-0.175) (2.343,-0.171) (2.400,-0.167)};
+\draw[blue, ->, >=stealth, thick] (1.426,-0.280) -- (1.290,-0.310);
+\draw[blue] plot[smooth] coordinates {(-0.167,2.400) (-0.224,1.786) (-0.281,1.422) (-0.338,1.182) (-0.396,1.011) (-0.453,0.883) (-0.510,0.784) (-0.568,0.705) (-0.625,0.640) (-0.682,0.586) (-0.739,0.541) (-0.797,0.502) (-0.854,0.468) (-0.911,0.439) (-0.968,0.413) (-1.026,0.390) (-1.083,0.369) (-1.140,0.351) (-1.197,0.334) (-1.255,0.319) (-1.312,0.305) (-1.369,0.292) (-1.426,0.280) (-1.484,0.270) (-1.541,0.260) (-1.598,0.250) (-1.656,0.242) (-1.713,0.234) (-1.770,0.226) (-1.827,0.219) (-1.885,0.212) (-1.942,0.206) (-1.999,0.200) (-2.056,0.195) (-2.114,0.189) (-2.171,0.184) (-2.228,0.180) (-2.285,0.175) (-2.343,0.171) (-2.400,0.167)};
+\draw[blue, ->, >=stealth, thick] (-1.426,0.280) -- (-1.290,0.310);
+\draw[blue] plot[smooth] coordinates {(-0.167,-2.400) (-0.224,-1.786) (-0.281,-1.422) (-0.338,-1.182) (-0.396,-1.011) (-0.453,-0.883) (-0.510,-0.784) (-0.568,-0.705) (-0.625,-0.640) (-0.682,-0.586) (-0.739,-0.541) (-0.797,-0.502) (-0.854,-0.468) (-0.911,-0.439) (-0.968,-0.413) (-1.026,-0.390) (-1.083,-0.369) (-1.140,-0.351) (-1.197,-0.334) (-1.255,-0.319) (-1.312,-0.305) (-1.369,-0.292) (-1.426,-0.280) (-1.484,-0.270) (-1.541,-0.260) (-1.598,-0.250) (-1.656,-0.242) (-1.713,-0.234) (-1.770,-0.226) (-1.827,-0.219) (-1.885,-0.212) (-1.942,-0.206) (-1.999,-0.200) (-2.056,-0.195) (-2.114,-0.189) (-2.171,-0.184) (-2.228,-0.180) (-2.285,-0.175) (-2.343,-0.171) (-2.400,-0.167)};
+\draw[blue, ->, >=stealth, thick] (-1.426,-0.280) -- (-1.290,-0.310);
+\draw[blue] plot[smooth] coordinates {(0.500,2.400) (0.549,2.187) (0.597,2.009) (0.646,1.857) (0.695,1.727) (0.744,1.614) (0.792,1.515) (0.841,1.427) (0.890,1.349) (0.938,1.279) (0.987,1.216) (1.036,1.158) (1.085,1.106) (1.133,1.059) (1.182,1.015) (1.231,0.975) (1.279,0.938) (1.328,0.903) (1.377,0.872) (1.426,0.842) (1.474,0.814) (1.523,0.788) (1.572,0.763) (1.621,0.741) (1.669,0.719) (1.718,0.699) (1.767,0.679) (1.815,0.661) (1.864,0.644) (1.913,0.627) (1.962,0.612) (2.010,0.597) (2.059,0.583) (2.108,0.569) (2.156,0.556) (2.205,0.544) (2.254,0.532) (2.303,0.521) (2.351,0.510) (2.400,0.500)};
+\draw[blue, ->, >=stealth, thick] (1.572,0.763) -- (1.447,0.828);
+\draw[blue] plot[smooth] coordinates {(0.500,-2.400) (0.549,-2.187) (0.597,-2.009) (0.646,-1.857) (0.695,-1.727) (0.744,-1.614) (0.792,-1.515) (0.841,-1.427) (0.890,-1.349) (0.938,-1.279) (0.987,-1.216) (1.036,-1.158) (1.085,-1.106) (1.133,-1.059) (1.182,-1.015) (1.231,-0.975) (1.279,-0.938) (1.328,-0.903) (1.377,-0.872) (1.426,-0.842) (1.474,-0.814) (1.523,-0.788) (1.572,-0.763) (1.621,-0.741) (1.669,-0.719) (1.718,-0.699) (1.767,-0.679) (1.815,-0.661) (1.864,-0.644) (1.913,-0.627) (1.962,-0.612) (2.010,-0.597) (2.059,-0.583) (2.108,-0.569) (2.156,-0.556) (2.205,-0.544) (2.254,-0.532) (2.303,-0.521) (2.351,-0.510) (2.400,-0.500)};
+\draw[blue, ->, >=stealth, thick] (1.572,-0.763) -- (1.447,-0.828);
+\draw[blue] plot[smooth] coordinates {(-0.500,2.400) (-0.549,2.187) (-0.597,2.009) (-0.646,1.857) (-0.695,1.727) (-0.744,1.614) (-0.792,1.515) (-0.841,1.427) (-0.890,1.349) (-0.938,1.279) (-0.987,1.216) (-1.036,1.158) (-1.085,1.106) (-1.133,1.059) (-1.182,1.015) (-1.231,0.975) (-1.279,0.938) (-1.328,0.903) (-1.377,0.872) (-1.426,0.842) (-1.474,0.814) (-1.523,0.788) (-1.572,0.763) (-1.621,0.741) (-1.669,0.719) (-1.718,0.699) (-1.767,0.679) (-1.815,0.661) (-1.864,0.644) (-1.913,0.627) (-1.962,0.612) (-2.010,0.597) (-2.059,0.583) (-2.108,0.569) (-2.156,0.556) (-2.205,0.544) (-2.254,0.532) (-2.303,0.521) (-2.351,0.510) (-2.400,0.500)};
+\draw[blue, ->, >=stealth, thick] (-1.572,0.763) -- (-1.447,0.828);
+\draw[blue] plot[smooth] coordinates {(-0.500,-2.400) (-0.549,-2.187) (-0.597,-2.009) (-0.646,-1.857) (-0.695,-1.727) (-0.744,-1.614) (-0.792,-1.515) (-0.841,-1.427) (-0.890,-1.349) (-0.938,-1.279) (-0.987,-1.216) (-1.036,-1.158) (-1.085,-1.106) (-1.133,-1.059) (-1.182,-1.015) (-1.231,-0.975) (-1.279,-0.938) (-1.328,-0.903) (-1.377,-0.872) (-1.426,-0.842) (-1.474,-0.814) (-1.523,-0.788) (-1.572,-0.763) (-1.621,-0.741) (-1.669,-0.719) (-1.718,-0.699) (-1.767,-0.679) (-1.815,-0.661) (-1.864,-0.644) (-1.913,-0.627) (-1.962,-0.612) (-2.010,-0.597) (-2.059,-0.583) (-2.108,-0.569) (-2.156,-0.556) (-2.205,-0.544) (-2.254,-0.532) (-2.303,-0.521) (-2.351,-0.510) (-2.400,-0.500)};
+\draw[blue, ->, >=stealth, thick] (-1.572,-0.763) -- (-1.447,-0.828);
+\draw[blue] plot[smooth] coordinates {(1.083,2.400) (1.117,2.327) (1.151,2.259) (1.185,2.195) (1.218,2.134) (1.252,2.076) (1.286,2.022) (1.320,1.970) (1.353,1.921) (1.387,1.874) (1.421,1.830) (1.455,1.787) (1.488,1.747) (1.522,1.708) (1.556,1.671) (1.590,1.635) (1.624,1.601) (1.657,1.569) (1.691,1.538) (1.725,1.507) (1.759,1.478) (1.792,1.451) (1.826,1.424) (1.860,1.398) (1.894,1.373) (1.927,1.349) (1.961,1.326) (1.995,1.303) (2.029,1.282) (2.062,1.261) (2.096,1.240) (2.130,1.221) (2.164,1.202) (2.197,1.183) (2.231,1.165) (2.265,1.148) (2.299,1.131) (2.332,1.115) (2.366,1.099) (2.400,1.083)};
+\draw[blue, ->, >=stealth, thick] (1.488,1.747) -- (1.400,1.855);
+\draw[blue] plot[smooth] coordinates {(1.083,-2.400) (1.117,-2.327) (1.151,-2.259) (1.185,-2.195) (1.218,-2.134) (1.252,-2.076) (1.286,-2.022) (1.320,-1.970) (1.353,-1.921) (1.387,-1.874) (1.421,-1.830) (1.455,-1.787) (1.488,-1.747) (1.522,-1.708) (1.556,-1.671) (1.590,-1.635) (1.624,-1.601) (1.657,-1.569) (1.691,-1.538) (1.725,-1.507) (1.759,-1.478) (1.792,-1.451) (1.826,-1.424) (1.860,-1.398) (1.894,-1.373) (1.927,-1.349) (1.961,-1.326) (1.995,-1.303) (2.029,-1.282) (2.062,-1.261) (2.096,-1.240) (2.130,-1.221) (2.164,-1.202) (2.197,-1.183) (2.231,-1.165) (2.265,-1.148) (2.299,-1.131) (2.332,-1.115) (2.366,-1.099) (2.400,-1.083)};
+\draw[blue, ->, >=stealth, thick] (1.488,-1.747) -- (1.400,-1.855);
+\draw[blue] plot[smooth] coordinates {(-1.083,2.400) (-1.117,2.327) (-1.151,2.259) (-1.185,2.195) (-1.218,2.134) (-1.252,2.076) (-1.286,2.022) (-1.320,1.970) (-1.353,1.921) (-1.387,1.874) (-1.421,1.830) (-1.455,1.787) (-1.488,1.747) (-1.522,1.708) (-1.556,1.671) (-1.590,1.635) (-1.624,1.601) (-1.657,1.569) (-1.691,1.538) (-1.725,1.507) (-1.759,1.478) (-1.792,1.451) (-1.826,1.424) (-1.860,1.398) (-1.894,1.373) (-1.927,1.349) (-1.961,1.326) (-1.995,1.303) (-2.029,1.282) (-2.062,1.261) (-2.096,1.240) (-2.130,1.221) (-2.164,1.202) (-2.197,1.183) (-2.231,1.165) (-2.265,1.148) (-2.299,1.131) (-2.332,1.115) (-2.366,1.099) (-2.400,1.083)};
+\draw[blue, ->, >=stealth, thick] (-1.488,1.747) -- (-1.400,1.855);
+\draw[blue] plot[smooth] coordinates {(-1.083,-2.400) (-1.117,-2.327) (-1.151,-2.259) (-1.185,-2.195) (-1.218,-2.134) (-1.252,-2.076) (-1.286,-2.022) (-1.320,-1.970) (-1.353,-1.921) (-1.387,-1.874) (-1.421,-1.830) (-1.455,-1.787) (-1.488,-1.747) (-1.522,-1.708) (-1.556,-1.671) (-1.590,-1.635) (-1.624,-1.601) (-1.657,-1.569) (-1.691,-1.538) (-1.725,-1.507) (-1.759,-1.478) (-1.792,-1.451) (-1.826,-1.424) (-1.860,-1.398) (-1.894,-1.373) (-1.927,-1.349) (-1.961,-1.326) (-1.995,-1.303) (-2.029,-1.282) (-2.062,-1.261) (-2.096,-1.240) (-2.130,-1.221) (-2.164,-1.202) (-2.197,-1.183) (-2.231,-1.165) (-2.265,-1.148) (-2.299,-1.131) (-2.332,-1.115) (-2.366,-1.099) (-2.400,-1.083)};
+\draw[blue, ->, >=stealth, thick] (-1.488,-1.747) -- (-1.400,-1.855);
+\end{scope}
+\draw[->] (-2.6,0) -- (2.8,0) node[right] {$p$};
+\draw[->] (0,-2.6) -- (0,2.8) node[above] {$q$};
+\node[text=blue, right] at (3.4,1.4) {level contours of $v$};
+\node[text=red, right] at (3.4,0.7) {level contours of $u$};
+\node[text=blue, right] at (3.4,0.0) {$\to$ direction of decreasing $u$};
+\node[right] at (3.4,-0.7) {crossings are at right angles};
+\end{tikzpicture}}
+
+\p{\strong{Interlude 2: Cauchy’s Theorem.} #{\oint_C fe^{\phi x}\,dz = 0} if #{f} and #{\phi} are analytic in the closed domain bounded by #{C}. In particular, suppose #{C_1} and #{C_2} both run from #{z_1} to #{z_2}; then #{\int_{C_1} = \int_{C_2}} if #{f, \phi} are analytic between the curves.}
+
+\ul{
+\li{\p{\strong{(a)} \em{Case when #{\operatorname{Im}(\phi) = v} is constant on #{C}.} Let #{v = v_0 \in \mathbb{R}} constant on #{C}. Then #{C} is a steepest descent/ascent curve for #{u}. Let’s parameterise #{C}: #{z = z(t) = p(t) + iq(t)}, #{a < t < b} (#{t \in \mathbb{R}}, #{-\infty \leq a, b \leq \infty}). Then}
+##{I(x) = e^{ixv_0}\int_a^b e^{xu}\operatorname{Re}\Big( f\frac{dz}{dt} \Big)\,dt + ie^{ixv_0}\int_a^b e^{xu}\operatorname{Im}\Big( f\frac{dz}{dt} \Big)\,dt.}
+\p{Both integrals are real and can be attacked by Laplace’s method/Watson’s Lemma.}}
+\li{\p{\strong{(b)} \em{Deforming #{C} to a steepest descent contour of #{u}.}}
+\ul{
+\li{If #{v} is not constant on #{C}, deform #{C} to a curve on which it is! (Using Cauchy’s theorem.)}
+\li{If #{v} is identical on #{C}’s endpoints this might work: deform #{C} to #{C'} on which #{v = v_1} constant, reducing to case (a) since #{v} is constant on #{C'} (not #{C}).}
+\li{But this is not always possible, and certainly doesn’t work if #{v} takes different values on the 2 endpoints.}
+}
+\p{So then we deform #{C} to a curve that follows several constant-#{v} curves joined up by short bridging curves (on which #{v} is not constant).}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[blue, dashed] (-0.6,-0.6) -- (1.6,1.6);
+\draw[red, dashed] (2.2,1.5) .. controls (3.2,0.4) .. (5.6,0.2) -- (6.6,0.1);
+\draw[thick] (0,0) .. controls (1.5,-2.0) and (3.5,-1.0) .. (5.2,0.2);
+\node[below] at (3.6,-1.2) {$C$};
+\draw[gray, thick, ->] (0,0) -- (1.3,1.3) node[midway, above left] {$C_1$};
+\draw[gray, thick, ->] (1.3,1.3) -- (2.3,1.5) node[midway, above=4pt] {$C_2$};
+\draw[gray, thick, ->] (2.3,1.5) .. controls (3.2,0.5) .. (5.2,0.2);
+\node[gray] at (3.9,0.9) {$C_3$};
+\fill (0,0) circle (1.5pt);
+\fill (5.2,0.2) circle (1.5pt);
+\node[blue, above left] at (-0.1,0.05) {$v = v_1$};
+\node[red, below right] at (5.2,0.1) {$v = v_2$};
+\end{tikzpicture}}
+\p{Then #{\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3}}, where we calculate #{\int_{C_1}} and #{\int_{C_3}} with (a), and show #{\int_{C_2}} contributes very little.}
+\p{#{u} is maximally increasing/decreasing on #{v}-constant curves. We select curves so that #{u} is decreasing as we move away from the endpoints. Why? Assuming #{\nabla u \neq 0}, Laplace’s method tells us that the absolute maximum dominates the asymptotic expansion, and these will correspond to the endpoints!}}
+}
+
+\transclude{AM0W}
+
+\transclude{AM0X}
+
+\ul{
+\li{\p{\strong{(c)} \em{Saddle points.}}
+\ul{
+\li{Laplace’s method tells us that the absolute maxima of #{u} dominate #{I(x)}. This might occur at endpoints or internal points.}
+\li{Note if #{f = 0} at the endpoints, they don’t contribute to the asymptotic expansion.}
+\li{If #{C} goes from #{\infty} to #{\infty} in #{\mathbb{C}}, there are no endpoints.}
+\li{Let’s now look at incorporating “internal” maxima of #{u} into the procedure.}
+}
+\p{\strong{Interlude 3.}}
+\ul{
+\li{\strong{(i)} If #{u} has a critical point in the #{(p, q)} plane, then #{\nabla u = 0} there, but #{v} has a critical point there as well. Follows from the Cauchy–Riemann equations.}
+\li{\strong{(ii)} Critical points of #{u} (and #{v}) are saddles in the #{(p, q)} plane. First, #{\nabla^2u = 0} (by the Cauchy–Riemann equations). Like the maximum modulus principle: for #{u} to have a max or min, we would need #{u_{pp}u_{qq} - u_{pq}^2 > 0}, but this is #{-u_{pp}^2 - u_{pq}^2 > 0}, impossible. So critical points of #{u} are saddles (same for #{v}).}
+\li{\strong{(iii)} If #{z_0 = (p_0, q_0)} is a critical point of #{u} and #{v}, then #{\frac{d\phi}{dz} = 0} there (Cauchy–Riemann equations).}
+}
+\p{Suppose #{(p_0, q_0)} is a simple saddle of #{u} and #{v} (#{\frac{d^2\phi}{dz^2} \neq 0}).}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=1.0, >=stealth]
+\draw[->] (0,0) -- (4.6,0) node[right] {$p$};
+\draw[->] (0,0) -- (0,2.8) node[above] {$q$};
+\draw[dashed, gray] (1.3,0.6) -- (3.3,2.6);
+\draw[dashed, gray] (1.3,2.6) -- (3.3,0.6);
+\draw[red, thick] (1.0,1.35) -- (3.6,1.85);
+\draw[red, thick] (2.162,2.75) -- (2.438,0.45);
+\draw[red, thick, ->] (1.0,1.35) -- (1.45,1.437);
+\draw[red, thick, ->] (1.55,1.456) -- (1.95,1.533);
+\draw[red, thick, ->] (3.6,1.85) -- (3.15,1.763);
+\draw[red, thick, ->] (3.05,1.744) -- (2.65,1.667);
+\draw[red, thick, ->] (2.282,1.75) -- (2.24,2.1);
+\draw[red, thick, ->] (2.216,2.3) -- (2.168,2.7);
+\draw[red, thick, ->] (2.318,1.45) -- (2.36,1.1);
+\draw[red, thick, ->] (2.384,0.9) -- (2.432,0.5);
+\fill (2.3,1.6) circle (1.6pt);
+\draw[dotted] (2.3,1.6) -- (2.3,0) node[below] {$p_0$};
+\draw[dotted] (2.3,1.6) -- (0,1.6) node[left] {$q_0$};
+\draw[red, ->] (3.2,-0.55) node[below, text=red, align=center] {\small want this curve\\ \small for Laplace} .. controls (3.9,0.2) .. (3.65,1.6);
+\node[text=gray, right] at (4.9,2.3) {-- -- const.\ $u$};
+\node[text=red, right] at (4.9,1.7) {$\to$ increasing $u$ directions};
+\node[text=red, right] at (4.9,1.1) {-- also are const.\ $v$ curves};
+\end{tikzpicture}}
+\p{If we are to deform #{C} to pass through #{(p_0, q_0)}, we select the constant-#{v} curve on which #{u} is decreasing away from that point on either side (“top of the hill”): we want this curve for Laplace.}
+\p{\em{Procedure:}}
+\ul{
+\li{Find the locations of all critical points by #{d\phi /dz = 0}.}
+\li{If possible, deform #{C} so that it passes through the saddle points.}
+\li{The contribution from a saddle point can be calculated from local information at that saddle point #{z_0}.}
+}
+\p{In particular, we can linearise #{C'} (treat it like a straight tangent line through #{z_0}). Then we can parameterise the curve more simply: #{z(t) = z_0 + te^{i\theta}}, #{\theta} constant. Along #{v}-constant curves, #{\phi(z) - \phi(z_0) \in \mathbb{R}}, so for a simple saddle,}
+##{\phi(z) - \phi(z_0) = \frac{1}{2}\phi''(z_0)t^2e^{2i\theta} + \cdots = \frac{1}{2}|\phi''(z_0)|t^2e^{2i\theta + i\alpha},}
+\p{where #{\alpha = \arg(\phi''(z_0))}.
+So #{\sin(2\theta + \alpha) = 0 \Rightarrow \theta = -\frac{\alpha}{2} + \frac{n\pi}{2}}, #{n = 0, 1, 2, 3}; #{n = 1, 3} are the steepest descent rays.}
+\ul{
+\li{Put #{z(t)} into #{I(x)} and use Laplace’s method for #{n = 1, 3}.}
+\li{For non-simple saddles, see p. 37 in Stuart.}
+}}
+}
+
+\transclude{AM0Y}
+
+\p{\strong{The Asymptotics of the Airy Function}}
+
+\p{The Airy equation: #{y'' - xy = 0}.}
+
+\ul{
+\li{Provides the canonical description of turning points and wave transitions.}
+\li{One solution is #{\operatorname{Ai}(x) = \frac{1}{2\pi}\int_{-\infty}^\infty e^{\frac{1}{3}it^3 + xit}\,dt}. [The other solution is #{\operatorname{Bi}(x)}.]}
+\li{We will be interested in the large #{x} asymptotics.}
+}
+
+\ul{
+\li{\p{\strong{(a)} #{x > 0} large. First substitute #{s = t/\sqrt{x}}:}
+##{\operatorname{Ai} = \frac{\sqrt{x}}{2\pi}\int_{-\infty}^\infty e^{ix^{3/2}(\frac{1}{3}s^3 + s)}\,ds.}
+\ul{
+\li{Stationary phase doesn’t work (stationary points #{\in \mathbb{C} \setminus \mathbb{R}}); try steepest descent, #{s = z \in \mathbb{C}}.}
+\li{\p{Note: the new contour in #{\mathbb{C}} must have #{\operatorname{Im}(z^3) > 0} far from the origin; we need to go to #{\infty} in the shaded regions (#{0 < \arg z < \frac{\pi}{3}} and #{\frac{2\pi}{3} < \arg z < \pi}).}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\fill[gray!25] (0,0) -- (2.6,0) arc (0:60:2.6) -- cycle;
+\fill[gray!25] (0,0) -- (120:2.6) arc (120:180:2.6) -- cycle;
+\draw[dashed] (0,0) -- (60:2.7);
+\draw[dashed] (0,0) -- (120:2.7);
+\draw[->] (-3,0) -- (3.2,0) node[right] {$p$};
+\draw[->] (0,0) -- (0,2.9) node[above] {$q$};
+\draw (0.75,0) arc (0:60:0.75);
+\node at (30:1.1) {$\frac{\pi}{3}$};
+\draw (120:0.75) arc (120:180:0.75);
+\node at (150:1.1) {$\frac{\pi}{3}$};
+\node[right, align=left] at (3.4,1.5) {need to go to $\infty$\\ in the shaded regions};
+\end{tikzpicture}}}
+\li{Find saddles: #{\phi = i(\frac{1}{3}z^3 + z)}, #{\phi' = i(z^2 + 1) = 0 \Rightarrow z = \pm i}.}
+\li{\p{Find constant-#{v} curves: #{\phi = u + iv}, #{z = p + iq}:}
+##{u = \tfrac{1}{3}q^3 - p^2q - q, \qquad v = \tfrac{1}{3}p^3 - pq^2 + p = \text{const}.}
+\p{#{v = 0} on the upper saddle point #{\Rightarrow} #{p = 0} (steepest ascent for #{u}) or #{q = +\sqrt{\frac{1}{3}p^2 + 1}} (steepest descent for #{u}), which goes to #{\infty} at angle #{\sim \pi /6}.}}
+}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-3,0) -- (3.2,0) node[right] {$p$};
+\draw[->] (0,-0.4) -- (0,2.2) node[above] {$q$};
+\draw[dashed, domain=-2.5:2.5, samples=50] plot (\x, {sqrt(\x *\x /3 + 1)*0.8});
+\draw[blue, thick, ->] (-2.3,0) -- (-2.3,{sqrt(2.3*2.3/3+1)*0.8});
+\draw[blue, thick, ->, domain=-2.3:2.3, samples=50] plot (\x, {sqrt(\x *\x /3 + 1)*0.8});
+\draw[blue, thick, ->] (2.3,{sqrt(2.3*2.3/3+1)*0.8}) -- (2.3,0);
+\draw[thick, ->] (-2.3,0) -- (1.5,0);
+\node[below] at (1.3,0) {$C$};
+\node[below] at (-2.3,0) {$-R$};
+\node[below] at (2.3,0) {$R$};
+\node[blue, left] at (-2.3,0.6) {$C_1$};
+\node[blue, above] at (1.2,1.15) {$C_2$};
+\node[blue, right] at (2.3,0.6) {$C_3$};
+\fill (0,0.8) circle (1.5pt);
+\node[above right] at (0,0.85) {$i$};
+\end{tikzpicture}}
+\p{#{\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3}}; as #{R \to \infty}, #{\int_{C_1}, \int_{C_3} \to 0} because the integrand #{\sim e^{-R^3}}. Now apply the formula for the saddle contribution to #{\int_{C_2}}, with #{\phi_0 = \phi(i) = -\frac{2}{3}}:}
+##{\operatorname{Ai} = \int_C \sim \int_{C_2} \sim \frac{\sqrt{x}}{2\pi}e^{x^{3/2}\phi_0}\sqrt{\frac{-2\pi}{x^{3/2}\phi_0''}} \sim \frac{1}{2\sqrt{\pi}}x^{-1/4}e^{-\frac{2}{3}x^{3/2}} \quad \text{as } x \to \infty.}}
+\li{\p{\strong{(b)} #{x < 0} and large. First #{s = t/\sqrt{-x}}:}
+##{\operatorname{Ai}(x) = \frac{\sqrt{-x}}{2\pi}\int_{-\infty}^\infty \exp\big[ i(-x)^{3/2}\big( \tfrac{1}{3}s^3 - s \big) \big]\,ds.}
+\p{Stationary phase will work: #{\phi = \frac{1}{3}s^3 - s}, so #{s = \pm 1} are points of stationary phase. So}
+##{\begin{aligned}
+\operatorname{Ai} &\sim \frac{\sqrt{-x}}{2\pi}\Big[ \sqrt{\frac{2\pi}{-i(-x)^{3/2}\phi''(1)}}e^{i(-x)^{3/2}\phi(1)} + \sqrt{\frac{2\pi}{-i(-x)^{3/2}\phi''(-1)}}e^{i(-x)^{3/2}\phi(-1)} \Big] \\
+&\sim \frac{(-x)^{-1/4}}{\sqrt{\pi}}\cos\Big( \frac{2}{3}(-x)^{3/2} - \frac{\pi}{4} \Big) \quad \text{as } x \to -\infty.
+\end{aligned}}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-5,0) -- (3,0) node[right] {$x$};
+\draw[->] (0,-1.3) -- (0,1.5) node[above] {$\operatorname{Ai}$};
+\draw[thick] plot[smooth] coordinates {(-4.875,0.708) (-4.828,0.745) (-4.781,0.752) (-4.734,0.731) (-4.687,0.682) (-4.640,0.608) (-4.593,0.511) (-4.546,0.395) (-4.499,0.264) (-4.452,0.124) (-4.405,-0.020) (-4.358,-0.164) (-4.311,-0.302) (-4.264,-0.429) (-4.217,-0.542) (-4.170,-0.637) (-4.123,-0.710) (-4.076,-0.760) (-4.029,-0.784) (-3.982,-0.784) (-3.935,-0.758) (-3.888,-0.709) (-3.841,-0.637) (-3.794,-0.546) (-3.747,-0.438) (-3.700,-0.317) (-3.653,-0.187) (-3.606,-0.051) (-3.559,0.087) (-3.512,0.222) (-3.465,0.351) (-3.418,0.470) (-3.371,0.576) (-3.324,0.666) (-3.277,0.739) (-3.230,0.792) (-3.183,0.825) (-3.136,0.837) (-3.089,0.827) (-3.042,0.798) (-2.994,0.748) (-2.947,0.681) (-2.900,0.597) (-2.853,0.500) (-2.806,0.391) (-2.759,0.273) (-2.712,0.149) (-2.665,0.022) (-2.618,-0.105) (-2.571,-0.230) (-2.524,-0.351) (-2.477,-0.465) (-2.430,-0.569) (-2.383,-0.662) (-2.336,-0.742) (-2.289,-0.809) (-2.242,-0.860) (-2.195,-0.897) (-2.148,-0.917) (-2.101,-0.921) (-2.054,-0.910) (-2.007,-0.884) (-1.960,-0.844) (-1.913,-0.790) (-1.866,-0.724) (-1.819,-0.648) (-1.772,-0.562) (-1.725,-0.467) (-1.678,-0.367) (-1.631,-0.261) (-1.584,-0.152) (-1.537,-0.041) (-1.490,0.070) (-1.443,0.181) (-1.396,0.290) (-1.349,0.395) (-1.302,0.496) (-1.255,0.592) (-1.208,0.682) (-1.161,0.765) (-1.114,0.841) (-1.067,0.910) (-1.020,0.971) (-0.973,1.023) (-0.926,1.068) (-0.879,1.105) (-0.832,1.134) (-0.785,1.156) (-0.738,1.170) (-0.691,1.177) (-0.644,1.178) (-0.597,1.173) (-0.550,1.162) (-0.503,1.145) (-0.456,1.125) (-0.409,1.100) (-0.362,1.071) (-0.315,1.039) (-0.268,1.005) (-0.221,0.969) (-0.174,0.931) (-0.127,0.891) (-0.080,0.851) (-0.033,0.810) (0.014,0.769) (0.061,0.727) (0.108,0.687) (0.155,0.647) (0.202,0.607) (0.249,0.569) (0.296,0.532) (0.343,0.496) (0.390,0.461) (0.437,0.428) (0.484,0.397) (0.531,0.366) (0.578,0.338) (0.625,0.311) (0.672,0.286) (0.719,0.262) (0.767,0.240) (0.814,0.219) (0.861,0.199) (0.908,0.181) (0.955,0.165) (1.002,0.149) (1.049,0.135) (1.096,0.122) (1.143,0.110) (1.190,0.099) (1.237,0.089) (1.284,0.080) (1.331,0.071) (1.378,0.064) (1.425,0.057) (1.472,0.051) (1.519,0.045) (1.566,0.040) (1.613,0.036) (1.660,0.032) (1.707,0.028) (1.754,0.025) (1.801,0.022) (1.848,0.019) (1.895,0.017) (1.942,0.015) (1.989,0.013) (2.036,0.011) (2.083,0.010) (2.130,0.009) (2.177,0.008) (2.224,0.007) (2.271,0.006) (2.318,0.005) (2.365,0.004) (2.412,0.004) (2.459,0.003) (2.506,0.003) (2.553,0.002) (2.600,0.002)};
+\draw[dashed] plot[smooth] coordinates {(-4.875,0.750) (-4.725,0.756) (-4.575,0.762) (-4.424,0.768) (-4.274,0.775) (-4.124,0.782) (-3.974,0.789) (-3.824,0.797) (-3.674,0.805) (-3.523,0.813) (-3.373,0.822) (-3.223,0.832) (-3.073,0.842) (-2.923,0.852) (-2.773,0.864) (-2.622,0.876) (-2.472,0.889) (-2.322,0.903) (-2.172,0.918) (-2.022,0.935) (-1.872,0.953) (-1.721,0.973) (-1.571,0.995) (-1.421,1.021) (-1.271,1.050) (-1.121,1.083) (-0.971,1.123) (-0.820,1.171) (-0.670,1.232) (-0.520,1.312)};
+\draw[dashed] plot[smooth] coordinates {(-4.875,-0.750) (-4.725,-0.756) (-4.575,-0.762) (-4.424,-0.768) (-4.274,-0.775) (-4.124,-0.782) (-3.974,-0.789) (-3.824,-0.797) (-3.674,-0.805) (-3.523,-0.813) (-3.373,-0.822) (-3.223,-0.832) (-3.073,-0.842) (-2.923,-0.852) (-2.773,-0.864) (-2.622,-0.876) (-2.472,-0.889) (-2.322,-0.903) (-2.172,-0.918) (-2.022,-0.935) (-1.872,-0.953) (-1.721,-0.973) (-1.571,-0.995) (-1.421,-1.021) (-1.271,-1.050) (-1.121,-1.083) (-0.971,-1.123) (-0.820,-1.171) (-0.670,-1.232) (-0.520,-1.312)};
+\node[above] at (-4.4,1.15) {$\propto |x|^{-1/4}$};
+\end{tikzpicture}}}
+}
