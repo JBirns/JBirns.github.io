@@ -1,0 +1,26 @@
+\title{Taylor expansion}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, r) \to \mathbb{C}} be holomorphic. Then #{f} is represented by a convergent power series on #{\mathbb{D}(a, r)}:}
+
+##{f(z) = \sum_{n=0}^\infty c_n(z - a)^n,}
+
+\p{with}
+
+##{c_n = \frac{f^{(n)}(a)}{n!} = \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} \frac{f(w)}{(w - a)^{n+1}}\,dw \quad \text{for } 0 < \rho < r.}
+
+\proof{
+\p{For #{|z - a| < \rho < r}, the CIF gives}
+
+##{\begin{aligned}
+f(z) &= \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} \frac{f(w)}{w - z}\,dw \\
+&\qquad \text{(which by geometric expansion as in the proof of the CIF)} \\
+&= \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} f(w)\sum_{n=0}^\infty \frac{(z - a)^n}{(w - a)^{n+1}}\,dw \\
+&= \sum_{n=0}^\infty \Big[ \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} f(w) \cdot \frac{1}{(w - a)^{n+1}}\,dw \Big] (z - a)^n.
+\end{aligned}}
+
+\p{The identification #{c_n = f^{(n)}(a)/n!} follows from \ref{CA0I}(iii).}
+}

@@ -1,0 +1,17 @@
+\title{Criterion for removability}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{An isolated singularity at #{z = a} for #{f} is removable #{\iff} #{\lim_{z \to a}(z - a)f(z) = 0}.}
+
+\proof{
+\p{(#{\Rightarrow}) Clear.}
+
+\p{(#{\Leftarrow}) Consider}
+
+##{g(z) = \begin{cases} (z - a)^2f(z) & z \neq a, \\ 0 & z = a. \end{cases}}
+
+\p{Then #{g'(a) = \lim_{z \to a}(z - a)f(z) = 0}, so #{g} is holomorphic at #{a} with #{g(a) = 0}. So #{g(z) = \sum_{n=2}^\infty c_n(z - a)^n}. So #{f(z) = \sum_{n=0}^\infty c_{n+2}(z - a)^n}, so is holomorphic at #{a}.}
+}

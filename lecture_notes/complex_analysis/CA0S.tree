@@ -1,0 +1,9 @@
+\title{Reparametrising piecewise smooth curves}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Any piecewise-#{C^1}-smooth curve can be parametrised to be #{C^1}: for such a #{\gamma} as above, replace #{\gamma_i} by #{\gamma_i \circ h_i} where #{h_i} is a monotonic #{C^1}-smooth bijection with endpoint derivatives #{0}. So #{C^1}-smooth paths can have corners, e.g.}
+
+##{\gamma(t) := \begin{cases} 1 + i\sin(\pi t) & t \in [0, \frac{1}{2}], \\ \sin(\pi t) + i & t \in [\frac{1}{2}, 1]. \end{cases}}

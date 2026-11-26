@@ -1,0 +1,9 @@
+\title{Contour integral}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon U \to \mathbb{C}} be continuous, #{U} open, and #{\gamma \colon [a, b] \to U} a #{C^1}-smooth curve. Then the \em{integral of #{f} along #{\gamma}} is}
+
+##{\int_\gamma f(z)\,dz := \int_a^b f(\gamma(t))\gamma'(t)\,dt.}

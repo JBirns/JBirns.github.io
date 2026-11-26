@@ -1,0 +1,46 @@
+\title{Existence of antiderivatives}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon D \to \mathbb{C}} be a continuous function on a domain #{D}. If #{\int_\gamma f = 0} for all closed curves #{\gamma} in #{D}, then there exists a holomorphic #{F \colon D \to \mathbb{C}} with #{F' = f}.}
+
+\proof{
+\p{Fix #{a_0 \in D}. If #{w \in D}, choose any curve #{\gamma_w \colon [0, 1] \to D} with #{\gamma_w(0) = a_0}, #{\gamma_w(1) = w}. Define}
+
+##{F(w) := \int_{\gamma_w} f(z)\,dz,}
+
+\p{which is independent of the choice of #{\gamma_w} by hypothesis.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw[thick] plot[smooth cycle] coordinates {(0,0) (1,0.8) (3,0.6) (5,1) (5.5,0) (4,-1) (1.5,-1.1)};
+\node at (5.8,0.6) {$D$};
+\fill (0.8,-0.2) circle (1.5pt) node[below=1pt] {$a_0$};
+\fill (3.8,0.2) circle (1.5pt) node[above right] {$w$};
+\draw (0.8,-0.2) .. controls (1.8,0.6) and (2.6,-0.4) .. (3.8,0.2) node[pos=0.5, above] {$\gamma_w$};
+\draw[blue,->] (3.8,0.2) -- (3.4,-0.5) node[below] {$\delta_h$};
+\draw[red, dashed] (3.8,0.2) circle (0.6);
+\end{tikzpicture}}
+
+\p{Find #{r_w > 0} such that #{\mathbb{D}(w, r_w) \subseteq D}. For #{|h| < r_w}, let #{\delta_h \colon [0, 1] \to D} be the line segment from #{w} to #{w + h}. Then}
+
+##{F(w + h) = \int_{\gamma_{w+h}} f(z)\,dz = \int_{\gamma_w + \delta_h} f(z)\,dz}
+
+\p{by additivity and the hypotheses. So}
+
+##{\begin{aligned}
+F(w + h) &= F(w) + \int_{\delta_h} f(z)\,dz = F(w) + \int_{\delta_h} f(z) + f(w) - f(w)\,dz \\
+&= F(w) + hf(w) + \int_{\delta_h} f(z) - f(w)\,dz.
+\end{aligned}}
+
+\p{So}
+
+##{\begin{aligned}
+\Big| \frac{F(w + h) - F(w)}{h} - f(w) \Big| &= \Big| \frac{1}{h}\int_{\delta_h} f(z) - f(w)\,dz \Big| \\
+&\leq \frac{\operatorname{length}(\delta_h)}{|h|}\sup_{\delta_h}|f(z) - f(w)| \\
+&\leq \sup_{z \in \mathbb{D}(w, |h|)}|f(z) - f(w)| \to 0 \text{ as } h \to 0
+\end{aligned}}
+
+\p{by continuity of #{f}. So #{F'(w) = f(w)}.}
+}

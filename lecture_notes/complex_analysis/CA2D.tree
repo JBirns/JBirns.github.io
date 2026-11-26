@@ -1,0 +1,11 @@
+\title{Residue, principal part}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, R)^\times \to \mathbb{C}} be holomorphic with Laurent expansion #{f(z) = \sum_{n=-\infty}^\infty c_n(z - a)^n}. The \em{residue} of #{f} at #{z = a} is}
+
+##{\operatorname{Res}_{z=a} f(z) := c_{-1} \in \mathbb{C}.}
+
+\p{The \em{principal part} of #{f} at #{z = a} is #{\sum_{n=-\infty}^{-1} c_n(z - a)^n}.}

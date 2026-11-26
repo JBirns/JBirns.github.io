@@ -1,0 +1,27 @@
+\title{Locally uniform limits are holomorphic}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\lbrace f_n\rbrace } be a sequence of analytic functions on #{U}, converging locally uniformly to #{f}. Then #{f} is holomorphic, with #{f_n' \to f'} locally uniformly.}
+
+\proof{
+\p{Fix #{a \in U} and #{\overline{\mathbb{D}(a, r)} \subseteq U}. For #{r \ll 1}, #{f_n \to f} uniformly on #{\overline{\mathbb{D}(a, r)}}. So}
+
+##{|f(z) - f(w)| = |f(z) - f_n(z) + f_n(z) - f_n(w) + f_n(w) - f(w)|,}
+
+\p{so uniform convergence #{\Rightarrow} #{f} is continuous on #{\overline{\mathbb{D}(a, r)}}. Given #{\gamma} a closed curve in #{\mathbb{D}(a, r)}, we have}
+
+##{\int_\gamma f = \lim_{n \to \infty} \int_\gamma f_n = 0}
+
+\p{by Cauchy’s theorem, so Morera’s theorem #{\Rightarrow} #{f} is holomorphic on #{\mathbb{D}(a, r)}. By the CIF,}
+
+##{|f'(w) - f_n'(w)| = \frac{1}{2\pi}\Big| \int_{|z - a| = r} \frac{f(z) - f_n(z)}{(z - w)^2}\,dz \Big|.}
+
+\p{For #{|w - a| \leq \frac{r}{2}} we have}
+
+##{|f'(w) - f_n'(w)| \leq r \cdot \frac{1}{(r/2)^2} \cdot \sup_{|z - a| = r}|f(z) - f_n(z)| \to 0 \text{ as } n \to \infty}
+
+\p{by uniform convergence. So #{f_n \to f} uniformly on #{\overline{\mathbb{D}(a, r)}} #{\Rightarrow} #{f_n' \to f'} uniformly on #{\mathbb{D}(a, \frac{r}{2})}.}
+}

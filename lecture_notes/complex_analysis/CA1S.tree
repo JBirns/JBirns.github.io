@@ -1,0 +1,9 @@
+\title{Winding number}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma \colon [a, b] \to \mathbb{C}} be a closed curve, #{w \notin \gamma}. The \em{winding number} or \em{index} of #{\gamma} about #{w} is}
+
+##{I(\gamma; w) = \frac{\theta(b) - \theta(a)}{2\pi}, \quad \text{where } \gamma(t) = w + r(t)e^{i\theta(t)} \text{ with } \theta \text{ continuous}.}

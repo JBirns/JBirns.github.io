@@ -1,0 +1,21 @@
+\title{Integrals in a punctured disc}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma} be a closed curve in #{\mathbb{D}(a, R)^\times}. Then}
+
+##{\int_\gamma f(z)\,dz = 2\pi i\,I(\gamma; a)\operatorname{Res}_{z=a} f(z).}
+
+\proof{
+\p{Using uniform convergence of the Laurent expansion of #{f} (on a closed annulus containing #{\gamma}), we have that}
+
+##{\int_\gamma f(z)\,dz = \sum_{n=-\infty}^\infty c_n\Big[ \int_\gamma (z - a)^n\,dz \Big].}
+
+\p{Since}
+
+##{\int_\gamma (z - a)^n\,dz = \begin{cases} 0, & n \neq -1, \\ 2\pi i\,I(\gamma; a), & n = -1, \end{cases}}
+
+\p{(for #{n \neq -1}, #{(z - a)^n} has an antiderivative on #{\mathbb{C}^\times}), the proposition is proved.}
+}

@@ -1,0 +1,53 @@
+\title{#{\int_0^\infty \frac{dx}{1 + x^4}}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{\int_0^\infty \frac{1}{1 + x^4}\,dx}.}
+
+\ul{
+\li{\strong{(i)} #{\frac{1}{1 + x^4} = \frac{1}{1 + (-x)^4}}, so #{\int_0^\infty = \frac{1}{2}\int_{-\infty}^\infty}.}
+\li{\strong{(ii)} #{|x| \gg 1 \Rightarrow \big| \frac{1}{1 + x^4} \big| \ll 1}.}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-2.8,0) -- (2.8,0);
+\draw[->] (0,-0.5) -- (0,2.6);
+\draw[blue, thick, ->] (-2,0) -- (2,0);
+\draw[red, thick, ->] (2,0) arc (0:180:2);
+\node[red] at (1.9,1.5) {$C_R'$};
+\node[below] at (-2,0) {$-R$};
+\node[below] at (2,0) {$R$};
+\node[below, blue] at (0.6,0) {\small $[-R, R]$};
+\node at (0.7,0.7) {$\times$};
+\node at (-0.7,0.7) {$\times$};
+\node[blue] at (-1.2,-0.5) {$\gamma_R$};
+\end{tikzpicture}}
+
+\p{#{1 + z^4} has #{4} simple zeros: #{e^{\pi i/4}, e^{3\pi i/4}, e^{5\pi i/4}, e^{7\pi i/4}}. #{\gamma_R} (the semicircular contour) has winding number #{1} around #{e^{\pi i/4}, e^{3\pi i/4}} and #{0} around the others. Using (ii) with #{g = 1}, #{h = 1 + z^4}:}
+
+##{\operatorname{Res}_{z=e^{\pi i/4}} \frac{1}{z^4 + 1} = \frac{1}{4e^{3\pi i/4}}, \quad \operatorname{Res}_{z=e^{3\pi i/4}} \frac{1}{z^4 + 1} = \frac{1}{4e^{9\pi i/4}} = \frac{1}{4e^{\pi i/4}}.}
+
+\p{We have}
+
+##{\int_{\gamma_R} \frac{1}{1 + z^4}\,dz = \underbrace{\int_{C_R'} \frac{1}{1 + z^4}\,dz}_{I_1} + \underbrace{\int_{-R}^R \frac{1}{1 + z^4}\,dz}_{I_2}.}
+
+\p{For #{I_1}, parametrise #{z = Re^{i\theta}}, #{\theta \in [0, \pi]}. Then}
+
+##{I_1 = \int_0^\pi \frac{1}{1 + R^4e^{4i\theta}}iRe^{i\theta}\,d\theta, \quad |I_1| \leq \frac{\pi R}{R^4 - 1} \to 0 \text{ as } R \to \infty.}
+
+\p{So}
+
+##{I_2 = \int_{\gamma_R} \frac{1}{1 + z^4}\,dz - \int_{C_R'} \frac{1}{1 + z^4}\,dz \to 2\pi i\Big[ \frac{1}{4e^{3\pi i/4}} + \frac{1}{4e^{\pi i/4}} \Big] - 0 \quad \text{as } R \to \infty.}
+
+\p{So}
+
+##{\begin{aligned}
+I_2 \to \frac{1}{2}\pi i\big( e^{-3\pi i/4} + e^{-\pi i/4} \big) &= \frac{1}{2}\pi i\Big( -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i + \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i \Big) \\
+&= \frac{1}{2}\pi i\Big( -\frac{2}{\sqrt{2}}i \Big) = \frac{\pi}{\sqrt{2}}.
+\end{aligned}}
+
+\p{So}
+
+##{\int_0^\infty \frac{1}{1 + x^4}\,dx = \frac{\pi}{2\sqrt{2}}.}

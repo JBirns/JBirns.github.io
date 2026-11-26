@@ -1,0 +1,7 @@
+\title{Montel’s theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{\em{(Deep theorem.)} If there exist #{a, b, c \in \mathbb{C}_\infty} such that for all #{f \in \mathcal{F}}, #{f(D) \cap \lbrace a, b, c\rbrace  = \emptyset}, then #{\mathcal{F}} is a normal family.}

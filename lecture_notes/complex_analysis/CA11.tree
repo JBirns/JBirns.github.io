@@ -1,0 +1,44 @@
+\title{Cauchy’s theorem for triangles}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon U \to \mathbb{C}} is holomorphic on an open #{U \subseteq \mathbb{C}} and #{T \subseteq U} is a triangle in #{U}, then}
+
+##{\int_{\partial T} f(z)\,dz = 0.}
+
+\proof{
+\p{Call #{\big| \int_{\partial T} f \big| = I} and #{L = \operatorname{length}(\partial T)}. We subdivide #{T} by bisecting the sides to obtain #{T_1, T_2, T_3, T_4} (with #{T_4} the middle triangle).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=1.2, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw (0,0) -- (3,0) -- (1.5,1.3) -- cycle;
+\draw (1.5,0) -- (2.25,0.65) -- (0.75,0.65) -- cycle;
+\node at (1.5,0.4) {\small $T_4$};
+\node at (0.7,0.2) {\small $T_1$};
+\node at (2.3,0.2) {\small $T_2$};
+\node at (1.5,0.95) {\small $T_3$};
+\end{tikzpicture}}
+
+\p{#{\partial T_1 + \partial T_2 + \partial T_3 = \partial T - \partial T_4} \em{(since #{\partial T_4} is travelled clockwise)}, so}
+
+##{\int_{\partial T} f(z)\,dz = \sum_{i=1}^4 \int_{\partial T_i} f(z)\,dz.}
+
+\p{By the triangle inequality there exists #{i \in \lbrace 1, 2, 3, 4\rbrace } such that #{\big| \int_{\partial T_i} f(z)\,dz \big| \geq \frac{1}{4}I}; call it #{T^{(1)}} and note #{\operatorname{length}(\partial T^{(1)}) = \frac{L}{2}}.}
+
+\p{Proceeding in this way we obtain #{T \supseteq T^{(1)} \supseteq T^{(2)} \supseteq \cdots} of triangles with #{\operatorname{length}(\partial T^{(n)}) = 2^{-n}\operatorname{length}(\partial T) = \frac{L}{2^n}}, and}
+
+##{\Big| \int_{\partial T^{(n)}} f(z)\,dz \Big| \geq \frac{1}{4^n}I.}
+
+\p{Since #{\operatorname{length}(\partial T^{(n)}) \to 0}, #{\bigcap_{n=1}^\infty T^{(n)} = \lbrace w\rbrace } for some #{w \in T}.}
+
+\p{Note: #{z} and #{1} have holomorphic antiderivatives, so}
+
+##{\frac{1}{4^n}I \leq \Big| \int_{\partial T^{(n)}} f(z)\,dz \Big| = \Big| \int_{\partial T^{(n)}} f(z) - f(w) - (z - w)f'(w)\,dz \Big|,}
+
+\p{\em{adding #{0} since these all have antiderivatives and so integrate to #{0}.} Since #{f} is differentiable at #{w}, for all #{\varepsilon > 0} there exists #{\delta > 0} such that #{|w - z| < \delta \Rightarrow |f(z) - f(w) - (z - w)f'(w)| < \varepsilon|z - w|}. So if #{n \gg 1} (in a way that depends on #{\varepsilon}) we have}
+
+##{\Big| \int_{\partial T^{(n)}} f(z) - f(w) - (z - w)f'(w)\,dz \Big| \leq \frac{L}{2^n}\sup_{z \in \partial T^{(n)}}|z - w|\,\varepsilon.}
+
+\p{So #{\frac{I}{4^n} \leq \frac{L}{2^n} \cdot \frac{L}{2^n} \cdot \varepsilon} and so #{I \leq L^2\varepsilon}. Letting #{\varepsilon \to 0}, we have #{I = 0}.}
+}

@@ -1,0 +1,19 @@
+\title{Estimation lemma}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{For any continuous #{f \colon U \to \mathbb{C}}, #{U} open, and any curve #{\gamma \colon [a, b] \to U},}
+
+##{\Big| \int_\gamma f(z)\,dz \Big| \leq \operatorname{length}(\gamma)\sup_{z \in \gamma}|f(z)|}
+
+\p{\em{(identifying #{\gamma} with its image).}}
+
+\proof{
+##{\begin{aligned}
+\Big| \int_\gamma f(z)\,dz \Big| &= \Big| \int_a^b f(\gamma(t))\gamma'(t)\,dt \Big| \\
+&\leq \int_a^b |f(\gamma(t))\gamma'(t)|\,dt \quad \text{by the same rotational trick} \\
+&\leq \sup_{z \in \gamma}|f(z)|\operatorname{length}(\gamma).
+\end{aligned}}
+}

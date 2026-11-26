@@ -1,0 +1,7 @@
+\title{Isolated singularity}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A point #{a \in \mathbb{C}} is an \em{isolated singularity} of #{f \colon U \to \mathbb{C}} if there exists #{r > 0} such that #{f} is holomorphic on #{\mathbb{D}(a, r) \setminus \lbrace a\rbrace }, denoted #{\mathbb{D}(a, r)^\times}.}

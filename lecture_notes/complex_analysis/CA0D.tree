@@ -1,0 +1,7 @@
+\title{Riemann Mapping Theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subsetneq \mathbb{C}} be a proper domain which is simply connected. Then there exists a conformal equivalence between #{U} and #{\mathbb{D}(0, 1)}.}

@@ -1,0 +1,7 @@
+\title{Locally but not uniformly convergent}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{f_n(z) = z^n} on #{U = \mathbb{D}(0, 1)}. As #{n \to \infty}, #{f_n \to} the constant function zero pointwise. For #{a \in \mathbb{D}(0, 1)}, #{\mathbb{D}(a, \frac{1 - |a|}{2}) \subseteq \mathbb{D}(0, 1)}, and #{f_n \to 0} uniformly on #{\mathbb{D}(a, \frac{1 - |a|}{2})}. So #{f_n \to 0} locally uniformly on #{\mathbb{D}(0, 1)}. However, for any #{\varepsilon > 0}, #{|f_n(z)| < \varepsilon \iff |z|^n < \varepsilon \iff |z| < \varepsilon^{1/n}}, so no uniform bound can hold for all #{|z| < 1}.}

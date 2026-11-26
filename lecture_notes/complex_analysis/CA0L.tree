@@ -1,0 +1,7 @@
+\title{Branch of the logarithm}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq \mathbb{C}^\times} be an open set. We say a continuous function #{\lambda \colon U \to \mathbb{C}} is a \em{branch of the logarithm} if for all #{z \in U}, #{\exp(\lambda(z)) = z}.}

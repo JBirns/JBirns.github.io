@@ -1,0 +1,7 @@
+\title{Splitting a Laurent series}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The proof shows #{f = f_1 + f_2}, with #{f_1} holomorphic on #{\mathbb{D}(a, R)}, and #{f_2} holomorphic on #{|z - a| > r}.}

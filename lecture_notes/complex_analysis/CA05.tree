@@ -1,0 +1,13 @@
+\title{Differentiable, holomorphic, entire}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{f \colon U \to \mathbb{C}} is \em{differentiable} at #{u \in U} if}
+##{f'(u) := \lim_{z \to u} \frac{f(z) - f(u)}{z - u}}
+\p{exists.}}
+\li{\strong{(ii)} #{f \colon U \to \mathbb{C}} is \em{holomorphic} at #{u \in U} if there exists #{\varepsilon > 0} such that #{f} is differentiable at #{z} for all #{z \in \Delta(u, \varepsilon)}. (Also called ‘analytic’.)}
+\li{\strong{(iii)} #{f \colon \mathbb{C} \to \mathbb{C}} is \em{entire} if it is holomorphic everywhere.}
+}

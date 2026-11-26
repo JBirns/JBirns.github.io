@@ -1,0 +1,22 @@
+\title{Liouville’s theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Every bounded entire function is constant.}
+
+\proof{
+\p{Let #{|f(z)| \leq M} for #{f} entire, and #{R \gg 1}. We have for any #{0 < |z| < \frac{R}{2}} that}
+
+##{\begin{aligned}
+|f(z) - f(0)| &= \frac{1}{2\pi}\Big| \int_{\partial\mathbb{D}(0, R)} f(w)\Big[ \frac{1}{w - z} - \frac{1}{w} \Big]\,dw \Big| \quad \text{by the CIF} \\
+&= \frac{1}{2\pi}\Big| \int_{\partial\mathbb{D}(0, R)} f(w)\frac{z}{(w - z)w}\,dw \Big|.
+\end{aligned}}
+
+\p{Since #{|z - w| > \frac{R}{2}} and #{|w| = R}, we have}
+
+##{|f(z) - f(0)| \leq \frac{1}{2\pi} \cdot 2\pi R \cdot \sup_{w \in \partial\mathbb{D}(0, R)}|f(w)| \cdot |z| \cdot \frac{1}{R \cdot \frac{R}{2}} \leq M \cdot |z| \cdot \frac{1}{R/2} \to 0 \text{ as } R \to \infty.}
+
+\p{So #{f(z) = f(0)}, so #{f \equiv f(0)} is constant.}
+}

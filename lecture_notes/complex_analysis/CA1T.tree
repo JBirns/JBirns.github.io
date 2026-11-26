@@ -1,0 +1,17 @@
+\title{Winding number as an integral}
+\taxon{Lemma}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma \colon [a, b] \to \mathbb{C} \setminus \lbrace w\rbrace } be a closed curve. Then}
+
+##{I(\gamma; w) = \frac{1}{2\pi i}\int_\gamma \frac{dz}{z - w}.}
+
+\proof{
+\p{#{\gamma} piecewise-#{C^1} #{\Rightarrow} #{r(t), \theta(t)} piecewise-#{C^1} as well, where #{\gamma(t) = w + r(t)e^{i\theta(t)}}. Then}
+
+##{\int_\gamma \frac{dz}{z - w} = \int_a^b \frac{\gamma'(t)}{\gamma(t) - w}\,dt = \int_a^b \frac{r'(t)}{r(t)} + i\theta'(t)\,dt = \big[ \ln r(t) + i\theta(t) \big]_a^b = 2\pi i\,I(\gamma; w),}
+
+\p{since #{\gamma} is closed and #{\theta(b) - \theta(a) = 2\pi I(\gamma; w)}.}
+}

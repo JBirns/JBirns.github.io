@@ -1,0 +1,11 @@
+\title{Removing finitely many points}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon U \to \mathbb{C}} is continuous on a domain #{U}, and holomorphic on #{U \setminus S} for some finite set #{S}, then #{f} is holomorphic on #{U}.}
+
+\proof{
+\p{If #{a \in S}, find an open disc #{\mathbb{D}(a, r) \subseteq U}. Cauchy’s theorem in a disc #{\Rightarrow} #{\int_\gamma f = 0} for any closed curve #{\gamma} in #{\mathbb{D}(a, r)}. Morera’s theorem #{\Rightarrow} #{f} is holomorphic on #{\mathbb{D}(a, r)} and so at #{a}. So #{f} is holomorphic on #{U}.}
+}

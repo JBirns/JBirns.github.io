@@ -2,7 +2,7 @@
 
 \p{This website is a \em{forest of [evergreen notes](https://www.forester-notes.org/tfmt-0003/)}, made using the [Forester](https://www.forester-notes.org/index/) tool created and maintained by [Jon Sterling](https://www.jonmsterling.com/index/) and [Kento Okura](https://github.com/kentookura).}
 
-\p{The main difference between this site and a typical way to organise information is that the hierarchy is \em{relative} instead of absolute. For instance, in a set of notes written in #{\LaTeX}, you have the hierarchy}
+\p{The main difference between this site and a typical way to organise information is that the hierarchy is \em{relative} instead of absolute. For instance, in a set of notes written in #{\LaTeX}, you have a hierarchy resembling}
 
 \figure{\tex{\startverb\usepackage{tikz}\usetikzlibrary{arrows.meta}\stopverb}{\startverb
 \begin{tikzpicture}[
@@ -21,13 +21,13 @@
 \end{tikzpicture}
 \stopverb}}
 
-\p{Whereas here, all pages you can view (a.k.a. trees) exist in an interconnected network where you can go "up a level" or "down a level" but do not have an absolute place in the hierarchy (if you wish, the poset of trees, ordered by inclusion, is not necessarily graded). For example, a theorem can exist as a subtree of two separate trees.}
+\p{Whereas here, all pages you can view (a.k.a. trees) exist in an interconnected network where you can go "up a level" or "down a level" but do not have an absolute place in the hierarchy (if you wish, the set of trees #{\mathcal{T}}, have a relation, #{<}, called \em{transclusion}, and #{(\mathcal{T},<)} does not necessarily form a poset as it is possible that #{T<T} for some tree #{T}).}
 
 \subtree{\title{Practical Guide to Use}
 
 \p{You can navigate around this site through its hyperlinks (similar to a wiki), or by searching with \code{Ctrl + K}.}
 
-\p{By the section headers, you may see a code like “[AB12]”. Clicking that link will take you to that tree/section as its own tree/page without the surrounding content.
+\p{By the section headers, you may see a code like “[AB12]”. Clicking that link will take you to that tree/section as its own tree/page without the surrounding content, i.e. that will become your new "level" in the relative hierarchy.
 }
 
 \p{

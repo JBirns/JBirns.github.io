@@ -1,0 +1,7 @@
+\title{Characterising essential singularities}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{An isolated singularity at #{z = a} is essential #{\iff} #{|f|} does not approach a limit in #{\mathbb{R} \cup \lbrace \infty\rbrace }.}

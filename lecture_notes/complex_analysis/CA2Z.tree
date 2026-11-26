@@ -1,0 +1,11 @@
+\title{Open Mapping Theorem}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A non-constant holomorphic function maps open sets to open sets.}
+
+\proof{
+\p{WTS: if #{f \colon D \to \mathbb{C}} then for all #{a \in D} and all #{r > 0} sufficiently small, #{f(\mathbb{D}(a, r)) \supseteq \mathbb{D}(f(a), \varepsilon)} for some #{\varepsilon > 0}. By the previous theorem, if #{r, \varepsilon} are sufficiently small, then for all #{w \in \mathbb{D}(f(a), \varepsilon)} we have #{\#}zeroes of #{f(z) - w} in #{\mathbb{D}(a, r)} #{= \deg_{z=a} f(z) > 0}.}
+}

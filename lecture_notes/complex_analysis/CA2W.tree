@@ -1,0 +1,10 @@
+\title{Interpreting the argument principle}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Recall #{\gamma} is compact, so #{f \circ \gamma} is also a closed curve (and compact).}
+\li{\strong{(ii)} Morally: this says #{2\pi(\#\text{zeroes} - \#\text{poles})} is the change in #{\arg f(z)} as #{z} travels #{\gamma}.}
+}

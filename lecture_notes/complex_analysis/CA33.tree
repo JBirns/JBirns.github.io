@@ -1,0 +1,16 @@
+\title{Uniform Limits of Holomorphic Functions}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\transclude{CA34}
+
+\transclude{CA35}
+
+\transclude{CA36}
+
+\p{Recall #{K \subseteq \mathbb{C}} is compact #{\iff} #{K} is closed and bounded #{\iff} every open cover has a finite subcover.}
+
+\transclude{CA37}
+
+\transclude{CA38}

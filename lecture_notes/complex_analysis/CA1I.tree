@@ -1,0 +1,7 @@
+\title{Zero of order #{m}}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{m > 0} then we say #{f} has a \em{zero of order #{m}} at #{a}. In this case, we can write #{f(z) = (z - a)^mg(z)}, where #{g(z)} is holomorphic on #{\mathbb{D}(a, R)}, #{g(a) \neq 0}.}

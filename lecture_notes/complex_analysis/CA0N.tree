@@ -1,0 +1,46 @@
+\title{Contour Integration}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon [a, b] \to \mathbb{C}} is continuous (so #{\operatorname{Re} f}, #{\operatorname{Im} f} are integrable) we define}
+
+##{\int_a^b f(t)\,dt = \int_a^b \operatorname{Re}(f(t))\,dt + i\int_a^b \operatorname{Im}(f(t))\,dt.}
+
+\transclude{CA0O}
+
+\transclude{CA0P}
+
+\transclude{CA0Q}
+
+\transclude{CA0R}
+
+\p{Note: so we can usually assume WLOG that #{\gamma \colon [0, 1] \to U}. Common types of curves we work with: circles, polygons, rectangles, keyhole contours.}
+
+\p{We can loosen the #{C^1}-smooth restriction and allow #{\gamma} to be \em{piecewise-#{C^1}-smooth}: i.e. there exist #{a = a_0 < a_1 < \cdots < a_n = b} such that #{\gamma_i = \gamma|_{[a_{i-1}, a_i]}} is #{C^1}-smooth. Define then}
+
+##{\int_\gamma f(z)\,dz = \sum_{i=1}^n \int_{\gamma_i} f(z)\,dz,}
+
+\p{well-defined by additivity.}
+
+\transclude{CA0S}
+
+\p{\strong{Terminology.} \em{Curve:} piecewise #{C^1}-smooth path. \em{Contour:} simple and closed (endpoints equal) piecewise #{C^1}-smooth path.}
+
+\transclude{CA0T}
+
+\transclude{CA0U}
+
+\transclude{CA0V}
+
+\transclude{CA0W}
+
+\p{Note: the #{z \mapsto z^{-1}} integral computation together with the FTC implies there is no branch of the logarithm on any open neighbourhood of #{0} (indeed on any open set containing the unit circle).}
+
+\transclude{CA0X}
+
+\transclude{CA0Y}
+
+\p{A simplification of the previous theorem:}
+
+\transclude{CA0Z}

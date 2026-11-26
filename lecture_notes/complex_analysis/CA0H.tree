@@ -1,0 +1,87 @@
+\title{Power Series}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let’s recall some facts about functions defined by power series or other sequences of functions.}
+
+\ul{
+\li{\strong{(i)} A sequence #{(f_n)_{n \in \mathbb{N}}} of functions \em{converges uniformly} to a limiting function #{f} on some set #{S} if for all #{\varepsilon > 0} there exists #{N \in \mathbb{N}} such that for all #{n \geq N} and all #{x \in S}, #{|f_n(x) - f(x)| < \varepsilon}.}
+\li{\strong{(ii)} The uniform limit of continuous functions is continuous.}
+\li{\strong{(iii)} \em{Weierstrass M-test:} if #{(M_n)_{n \in \mathbb{N}} \subseteq \mathbb{R}_{\geq 0}} and #{0 \leq |f_n(x)| \leq M_n} for all #{x \in S} and all #{n \in \mathbb{N}}, then #{\sum_{n=1}^\infty M_n < \infty \Rightarrow \sum_{n=1}^N f_n(x)} converges uniformly on #{S} as #{N \to \infty}.}
+\li{\p{\strong{(iv)} Let #{(c_n)_{n \in \mathbb{N}} \subseteq \mathbb{C}} and fix #{a \in \mathbb{C}}. Then there exists a unique #{R \in [0, \infty]} such that the series #{z \mapsto \sum_{n=0}^\infty c_n(z - a)^n} converges absolutely if #{|z - a| < R} and diverges if #{|z - a| > R}. If #{0 < r < R}, then the series converges uniformly on #{\mathbb{D}(a, r)}. #{R} is the \em{radius of convergence} of the series. We can compute}
+##{R = \sup\lbrace r \geq 0 : |c_n|r^n \to 0 \text{ as } n \to \infty\rbrace}
+\p{or #{R = \frac{1}{\lambda}}, #{\lambda = \limsup_{n \to \infty} |c_n|^{1/n}}.}}
+}
+
+\transclude{CA0I}
+
+\transclude{CA0J}
+
+\p{\strong{The exponential and the logarithm}}
+
+\p{We define the complex exponential}
+
+##{e^z = \exp(z) := \sum_{n=0}^\infty \frac{z^n}{n!}.}
+
+\transclude{CA0K}
+
+\p{In fact, for all #{w \in \mathbb{C}^\times} there exist infinitely many #{z \in \mathbb{C}} such that #{e^z = w}, differing by integer multiples of #{2\pi i}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.7, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw[->] (-2,0) -- (2.5,0);
+\draw[->] (0,-1.8) -- (0,2);
+\fill[blue!15] (1,-1.8) rectangle (1.6,2);
+\draw[blue] (1,-1.8) -- (1,2);
+\draw[blue] (1.6,-1.8) -- (1.6,2);
+\node[text=blue, below left] at (1,-1.8) {\small $x = a$};
+\node[text=blue, below right] at (1.6,-1.8) {\small $x = b$};
+\foreach \y/\l in {1.2/z + 2\pi i, 0.5/z, -0.6/z - 2\pi i} {
+  \fill[red] (1.3,\y) circle (1.5pt);
+  \draw[red, densely dotted] (1.3,\y) -- (1.8,\y);
+  \node[text=red, right] at (1.8,\y) {\small $\l$};
+}
+\draw[->] (3.8,1.2) to[bend left] node[above] {$z \mapsto e^z$} (5.6,1.2);
+\begin{scope}[shift={(8.6,0)}]
+\draw[->] (-2.5,0) -- (2.5,0);
+\draw[->] (0,-2.2) -- (0,2.2);
+\fill[blue!15, even odd rule] (0,0) circle (1.9) (0,0) circle (1.1);
+\draw[blue] (0,0) circle (1.9) (0,0) circle (1.1);
+\draw[blue, ->] (0,0) -- (-45:1.1);
+\node[text=blue] at (-0.45,0.45) {\small $e^a$};
+\node[text=blue] at (2.1,1.8) {\small $e^b$};
+\end{scope}
+\end{tikzpicture}}
+
+\transclude{CA0L}
+
+\p{\em{Usual example:} #{U = \mathbb{C} \setminus \mathbb{R}_{\leq 0}}. Define #{\operatorname{Log} \colon U \to \mathbb{C}} by}
+
+##{\operatorname{Log}(z) = \ln|z| + i\theta, \quad \theta = \arg z, \; \theta \in (-\pi, \pi).}
+
+\p{This is the \em{principal branch of the logarithm}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.7, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw (-1.6,0) -- (1.6,0);
+\draw (0,-1.6) -- (0,1.6);
+\fill[blue!15, even odd rule] (0,0) circle (1.3) (0,0) circle (0.8);
+\draw[blue] (0,0) circle (1.3) (0,0) circle (0.8);
+\draw[white, line width=2pt] (-1.35,0) -- (-0.75,0);
+\draw[->] (2.2,0.6) to[bend left] node[above] {$z \mapsto \operatorname{Log} z$} (4.4,0.6);
+\begin{scope}[shift={(6.5,0)}]
+\draw (-1.5,0) -- (2.5,0);
+\draw (0,-1.6) -- (0,1.6);
+\fill[blue!15] (1,-1.3) rectangle (1.6,1.3);
+\draw[blue] (1,-1.3) rectangle (1.6,1.3);
+\end{scope}
+\end{tikzpicture}}
+
+\transclude{CA0M}
+
+\p{If #{\alpha \in \mathbb{C}}, define #{z^\alpha := \exp(\alpha\operatorname{Log} z)}, giving a definition of #{z^\alpha} on #{\mathbb{C} \setminus \mathbb{R}_{\leq 0}}. We can compute #{\frac{d}{dz}(z^\alpha) = \alpha z^{\alpha - 1}}.}
+
+\p{\strong{Warning.} It is not necessarily true that #{z^\alpha w^\alpha = (zw)^\alpha}. E.g. #{\alpha = \frac{1}{2}}:}
+
+##{z^{1/2} = \exp\big( \tfrac{1}{2}\operatorname{Log} z \big) = \exp\big( \tfrac{1}{2}\ln|z| + \tfrac{1}{2}i\theta \big), \quad \theta \in (-\pi, \pi).}
+
+\p{So the argument of #{z^{1/2}} is in #{(-\frac{\pi}{2}, \frac{\pi}{2})}: #{z \mapsto z^{1/2}} maps #{\mathbb{C} \setminus \mathbb{R}_{\leq 0}} to the right half plane.}

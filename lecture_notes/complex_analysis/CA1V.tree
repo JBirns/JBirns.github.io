@@ -1,0 +1,7 @@
+\title{Homologous to zero, simply connected}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq \mathbb{C}} be open. Then a closed curve #{\gamma} in #{U} is \em{homologous to zero in #{U}} if for all #{w \notin U}, #{I(\gamma; w) = 0}. #{U} is \em{simply connected} if every closed curve in #{U} is homologous to zero.}

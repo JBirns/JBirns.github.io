@@ -1,0 +1,19 @@
+\title{Local Mapping Degree}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, R) \to \mathbb{C}} be holomorphic and non-constant, with local degree #{k > 0} at #{a}. Then for #{r > 0} sufficiently small, there exists #{\varepsilon > 0} such that if #{0 < |w - f(a)| < \varepsilon}, #{f(z) = w} has exactly #{k} (simple) roots in #{\mathbb{D}(a, r)}.}
+
+\proof{
+\p{Find #{r > 0} such that #{f(z) - f(a)} and #{f'(z)} are non-zero on #{0 < |z - a| \leq r}. Let #{\gamma} be the circle of radius #{r} about #{a}. Then #{f \circ \gamma} doesn’t contain #{f(a)}, so there exists #{\varepsilon > 0} such that #{\mathbb{D}(f(a), \varepsilon) \cap (f \circ \gamma) = \emptyset}. In particular, #{I(f \circ \gamma; w) = I(f \circ \gamma; f(a))} for all #{w \in \mathbb{D}(f(a), \varepsilon)}. By the argument principle,}
+
+##{I(f \circ \gamma; w) = \#\text{zeroes of } f(z) - w \text{ in } \mathbb{D}(a, r)}
+
+\p{and}
+
+##{I(f \circ \gamma; f(a)) = \#\text{zeroes of } f(z) - f(a) \text{ in } \mathbb{D}(a, r) = \deg_{z=a} f(z) = k,}
+
+\p{so #{f(z) - w} has #{k} zeroes in #{\mathbb{D}(a, r)}; since #{f'(z) \neq 0} on #{\mathbb{D}(a, r)^\times} and #{w \neq f(a)}, these zeroes are simple.}
+}

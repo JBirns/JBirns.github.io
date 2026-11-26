@@ -1,0 +1,29 @@
+\title{The Residue Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\transclude{CA2G}
+
+\transclude{CA2H}
+
+\transclude{CA2I}
+
+\p{\strong{Computing residues: tricks}}
+
+\ul{
+\li{\p{\strong{(i)} If #{f} has a simple (#{=} order #{1}) pole at #{z = a}, then the Laurent expansion at #{a} is}
+##{f(z) = \frac{c_{-1}}{z - a} + c_0 + c_1(z - a) + c_2(z - a)^2 + \cdots.}
+\p{So #{\operatorname{Res}_{z=a}(f(z)) = \lim_{z \to a}(z - a)f(z)}.}
+\p{\em{Example:} #{f(z) = \frac{1}{1 + z^2}} at #{z = i}: #{(z - i)f(z) = \frac{1}{z + i}}, so #{\operatorname{Res}_{z=i} f(z) = \frac{1}{2i}}.}}
+\li{\p{\strong{(ii)} If #{f = \frac{g(z)}{h(z)}}, where #{g} is holomorphic and non-zero at #{z = a}, and #{h} is holomorphic and has a simple zero at #{z = a}: write}
+##{g(z) = g(a) + (z - a)\tilde{g}(z), \quad \tilde{g} \text{ holomorphic at } z = a,}
+\p{and}
+##{h(z) = h'(a)(z - a)\tilde{h}(z), \quad \tilde{h}(a) = 1 \text{ and } \tilde{h} \text{ holomorphic at } a.}
+\p{So}
+##{\frac{g(z)}{h(z)} = \frac{g(a)}{h'(a)(z - a)\tilde{h}(z)} + \underbrace{\frac{\tilde{g}(z)}{h'(a)\tilde{h}(z)}}_{\text{holomorphic at } a}.}
+\p{Applying (i) to #{\frac{g(a)}{h'(a)(z - a)\tilde{h}(z)}}, we see that}
+##{\operatorname{Res}_{z=a} f(z) = \frac{g(a)}{h'(a)}.}
+\p{\em{Example:} #{f(z) = \frac{e^z}{z^2 + 1}} at #{z = i}: (ii) #{\Rightarrow} #{\operatorname{Res}_{z=i} f(z) = \frac{e^i}{2i}}.}}
+\li{\strong{(iii)} If #{f(z) = \frac{g(z)}{(z - a)^k}}, #{g} holomorphic at #{a}. Then #{\operatorname{Res}_{z=a} f(z) = } coefficient of #{(z - a)^{k-1}} in the expansion of #{g}, i.e. #{\frac{g^{(k-1)}(a)}{(k - 1)!}}.}
+}

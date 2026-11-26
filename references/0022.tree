@@ -4,7 +4,7 @@
 \author/literal{Yousef Alavi}
 \author/literal{Paresh J Malde}
 \author/literal{Allen J Schwenk}
-\author/literal{Paul Erdös}
+\author/literal{Paul Erdős}
 \meta{journal}{Congressus Numerantium}
 \meta{volume}{58}
 \meta{number}{15-23}
@@ -13,7 +13,7 @@
 \meta{bibtex}{\startverb
 @article{alavi1987vertex,
   title={The vertex independence sequence of a graph is not constrained},
-  author={Alavi, Yousef and Malde, Paresh J and Schwenk, Allen J and Erd{\"o}s, Paul},
+  author={Alavi, Yousef and Malde, Paresh J and Schwenk, Allen J and Erd\H{o}s, Paul},
   journal={Congressus Numerantium},
   volume={58},
   number={15-23},

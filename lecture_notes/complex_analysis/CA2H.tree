@@ -1,0 +1,15 @@
+\title{Consequences of the residue theorem}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{[(#{\circledast})] If #{\gamma} is homologous to #{0} in a domain #{D}, then #{\lbrace z \in \mathbb{C} : I(\gamma; z) \neq 0 \text{ or } z \in \gamma\rbrace } is a closed set and a bounded set. Notice that the winding number is a continuous function on #{\mathbb{C} \setminus \gamma}, taking values in a discrete set; then #{\lbrace z \in \mathbb{C} \setminus \gamma : I(\gamma; z) = 0\rbrace } is open. So the complement is closed. Since the poles of #{f} are isolated, this closed, bounded set contains only finitely many of them (if it lies in #{D}).}
+\li{[(1)] If #{f} is holomorphic on #{D}: the Residue theorem #{\Rightarrow} Cauchy’s theorem.}
+\li{[(2)] #{f(z) = \frac{g(z)}{z - a}}. Then #{\operatorname{Res}_{z=a} f(z) = g(a)}, so the Residue theorem #{\Rightarrow} the CIF.}
+\li{\p{[(3)] We say a closed curve #{\gamma} \em{bounds} a domain #{U} if}
+##{I(\gamma; z) = \begin{cases} 1, & z \in U, \\ 0, & z \notin U \cup \gamma. \end{cases}}
+\p{If #{\gamma} is a closed curve in a domain #{D} which bounds a domain #{U}, and #{f} is holomorphic on #{D}, then #{\int_\gamma f = 0} and for all #{w \in U}, #{\int_\gamma \frac{f(z)}{z - w}\,dz = 2\pi if(w)}. If #{f} is meromorphic on #{D} with no poles on #{\gamma}, then}
+##{\int_\gamma f = 2\pi i\sum_{w \text{ poles in } U} \operatorname{Res}_{z=w} f(z).}}
+}

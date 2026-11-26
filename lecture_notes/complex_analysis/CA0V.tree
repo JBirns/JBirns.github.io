@@ -1,0 +1,11 @@
+\title{Integrating powers of #{z} round a circle}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{f_n(z) = z^n}, #{n \in \mathbb{Z}}, on #{\mathbb{C}^\times =: U} \em{(punctured complex plane)}, and #{\gamma \colon [0, 2\pi] \to U}, #{\gamma(t) = e^{it}}. Then}
+
+##{\int_\gamma f_n(z)\,dz = \int_0^{2\pi} e^{nit} \cdot ie^{it}\,dt = i\int_0^{2\pi} e^{(n+1)it}\,dt = \begin{cases} 2\pi i, & n = -1, \\ 0, & n \neq -1. \end{cases}}
+
+\p{Note: it didn’t necessarily need to be the unit circle; the computation is independent of the radius.}

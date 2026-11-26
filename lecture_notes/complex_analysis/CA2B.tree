@@ -1,0 +1,7 @@
+\title{Poles on the Riemann sphere}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{An advantage of the Riemann sphere perspective: if #{f \colon \mathbb{D}(a, R)^\times \to \mathbb{C}} has a pole at #{z = a}, we can view #{f} as a continuous map #{f \colon \mathbb{D}(a, R) \to \mathbb{C}_\infty} with #{f(a) = \infty}. #{f} is “holomorphic at #{a}” in the #{\mathbb{C}_\infty} sense since #{\frac{1}{f}} is holomorphic on a neighbourhood of #{a}, with a zero of the same order as the pole of #{f}.}

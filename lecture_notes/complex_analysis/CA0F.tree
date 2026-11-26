@@ -1,0 +1,7 @@
+\title{The punctured disc}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The punctured disc is \em{not} simply connected: a loop around the puncture is not contractible.}

@@ -1,0 +1,13 @@
+\title{Isolated singularities}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{a = 0}, #{f(z) = \frac{\sin z}{z}}. Use the identity theorem or the expansion of #{e^z} to show that}
+##{\sin z = z - \frac{z^3}{3!} + \frac{z^5}{5!} - \frac{z^7}{7!} + \cdots \quad \text{about } 0.}
+\p{So #{f(z) = 1 - \frac{z^2}{3!} + \frac{z^4}{5!} - \frac{z^6}{7!} + \cdots} about #{0}. So #{f} is the restriction of a holomorphic function on #{\mathbb{C}}, call it #{f}, and #{f(0) = 1}.}}
+\li{\strong{(ii)} #{a = 0}, #{g(z) = \frac{1}{z^6}}; #{g} is holomorphic on #{\mathbb{C}^\times}, and #{|g(z)| \to \infty} as #{z \to 0}, so there is no continuous extension at #{0}.}
+\li{\strong{(iii)} Recall the action #{w \mapsto e^{\operatorname{Re}(w)}e^{i\operatorname{Im}(w)}}: horizontal lines #{y = y_0} and #{y = y_0 - 2\pi} map to the same ray from #{0}. So #{h(z) = e^{1/z}} maps any #{\mathbb{D}(0, \varepsilon)^\times} to all of #{\mathbb{C}^\times}.}
+}

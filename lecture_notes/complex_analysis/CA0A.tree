@@ -1,0 +1,7 @@
+\title{Conformal equivalence}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U, V} be domains in #{\mathbb{C}}. A map #{f \colon U \to V} is a \em{conformal equivalence} of #{U} and #{V} if #{f} is a bijective holomorphic map with #{f'(z) \neq 0} for all #{z \in U}.}

@@ -1,0 +1,11 @@
+\title{Analytic continuations}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} The series #{\sum_{n \geq 1} \frac{(-1)^{n+1}}{n}z^n} converges on #{\mathbb{D}(0, 1)} and takes the value #{\operatorname{Log}(1 + z)} on #{\mathbb{D}(0, 1)}. So #{\operatorname{Log}(1 + z)} is an analytic continuation of this series to the domain #{\mathbb{C} \setminus \lparen -\infty, -1\rbrack }.}
+\li{\strong{(ii)} #{\sum_{n \geq 0} z^n} has radius of convergence #{1} about #{a = 0}, and on #{\mathbb{D}(0, 1)} we have #{\frac{1}{1 - z} = \sum_{n \geq 0} z^n}, and so #{\frac{1}{1 - z}} provides an analytic continuation to #{\mathbb{C} \setminus \lbrace 1\rbrace }. \em{(We can have one expansion about other points, as long as the disc doesn’t hit #{1}.)}}
+\li{\strong{(iii)} Consider #{f(z) = \sum_{n \geq 0} z^{2^n}}. #{f} converges on #{\mathbb{D}(0, 1)} and cannot be analytically continued to any larger domain. We say #{\partial\mathbb{D}(0, 1)} is a \em{natural boundary} for #{f(z)}.}
+}

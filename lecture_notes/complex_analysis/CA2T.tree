@@ -1,0 +1,15 @@
+\title{Logarithmic derivative at zeros and poles}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f} have a zero (resp. pole) of order #{k > 0} at #{z = a}. Then #{\frac{f'(z)}{f(z)}} has a simple pole at #{z = a}, of residue #{k} (resp. #{-k}).}
+
+\proof{
+\p{Suppose #{f(z) = (z - a)^kg(z)} near #{a}, with #{g(a) \neq 0}; then #{f'(z) = k(z - a)^{k-1}g(z) + (z - a)^kg'(z)}, so}
+
+##{\frac{f'(z)}{f(z)} = \frac{k}{z - a} + \frac{g'(z)}{g(z)};}
+
+\p{#{g(a) \neq 0 \Rightarrow \frac{g'}{g}} is holomorphic at #{a}. So #{\operatorname{Res}_{z=a} \frac{f'}{f} = k} (resp. replace #{k} with #{-k}).}
+}

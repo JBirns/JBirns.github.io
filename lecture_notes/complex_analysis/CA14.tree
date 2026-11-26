@@ -1,0 +1,11 @@
+\title{Cauchy’s theorem in a disc}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{D} be a disc (or starlike domain) and #{f \colon D \to \mathbb{C}} a continuous function, holomorphic away from at most a finite set of points in #{D}. Then #{\int_\gamma f = 0} for any closed curve #{\gamma} in #{D}.}
+
+\proof{
+\p{By the previous theorem and the converse of the FTC for starlike domains (\ref{CA0Z}), there exists an antiderivative #{F} of #{f} on #{D}. So by the FTC, Cauchy’s theorem follows.}
+}

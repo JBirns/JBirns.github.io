@@ -1,0 +1,19 @@
+\title{Features of the exponential}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} The radius of convergence is #{\infty}, so this function is entire and #{\frac{d}{dz}e^z = e^z}.}
+\li{\strong{(ii)} For all #{z, w \in \mathbb{C}}, #{e^{z+w} = e^ze^w}, and #{e^z \neq 0}.}
+\li{\strong{(iii)} Writing #{z = x + iy} with #{x, y \in \mathbb{R}}, #{e^z = e^xe^{iy}} where #{e^{iy} = \cos y + i\sin y}; note then #{|e^{iy}| = 1}. So #{e^z = e^x(\cos y + i\sin y)} and #{|e^z| = e^x = e^{\operatorname{Re}(z)}}. Moreover #{e^z = 1 \iff x = 0} and #{y = 2\pi k}, #{k \in \mathbb{Z}}.}
+}
+
+\proof{
+\p{\em{Proof of (2).} \em{(Same as in #{\mathbb{R}}.)} Fix #{w \in \mathbb{C}}, and consider #{F(z) := e^{z+w}e^{-z}}. We have}
+
+##{F'(z) = e^{z+w}e^{-z} - e^{z+w}e^{-z} = 0,}
+
+\p{so #{F} is constant. Since #{e^0 = 1}, #{F(z) = e^w}, so #{e^{z+w} = e^ze^w}. Since #{e^ze^{-z} = e^0 = 1} for all #{z \in \mathbb{C}}, #{e^z \neq 0}.}
+}

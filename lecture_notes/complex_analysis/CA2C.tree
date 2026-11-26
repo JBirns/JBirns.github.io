@@ -1,0 +1,7 @@
+\title{Meromorphic}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{D} is a domain. A function #{f} is \em{meromorphic} on #{D} if #{f \colon D \setminus S \to \mathbb{C}} is holomorphic, where #{S} is a set of isolated singularities for #{f} which are removable or poles.}

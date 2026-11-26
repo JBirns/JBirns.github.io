@@ -1,0 +1,48 @@
+\title{Isolated Singularities of Holomorphic Maps}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\transclude{CA22}
+
+\transclude{CA23}
+
+\transclude{CA24}
+
+\transclude{CA25}
+
+\p{Applying this when #{r = 0}, we have 3 possibilities on a punctured disc domain, i.e. an isolated singularity at #{z = a}:}
+
+\transclude{CA26}
+
+\transclude{CA27}
+
+\transclude{CA28}
+
+\transclude{CA29}
+
+\p{In fact, essential singularities are even more interesting.}
+
+\transclude{CA2A}
+
+\p{More difficult: the “Great Picard Theorem”: if #{z = a} is an essential singularity of #{f}, then there exists #{b \in \mathbb{C}} such that for all #{\varepsilon > 0}, #{\mathbb{C} \setminus \lbrace b\rbrace  \subseteq f(\mathbb{D}(a, \varepsilon)^\times)}. For example #{f(z) = e^z} has an essential singularity at #{\infty}, and takes every non-zero value on every neighbourhood of #{\infty}.}
+
+\transclude{CA2B}
+
+\transclude{CA2C}
+
+\transclude{CA2D}
+
+\transclude{CA2E}
+
+\p{If #{f} is meromorphic on a domain #{D}, and #{z = a} is a pole, then its principal part at #{z = a} is of the form}
+
+##{\frac{c_{-k}}{(z - a)^k} + \frac{c_{-k+1}}{(z - a)^{k-1}} + \cdots + \frac{c_{-1}}{z - a},}
+
+\p{a polynomial in #{\frac{1}{z - a}}, and can be written as #{\frac{p(z)}{(z - a)^k}} for some polynomial #{p}. So the principal part of #{f} at #{z = a} is holomorphic on #{\mathbb{C} \setminus \lbrace a\rbrace }.}
+
+\p{More generally, if #{f} is meromorphic on #{D} and #{\lbrace a_1, \ldots, a_m\rbrace  \subseteq \lbrace \text{poles of } f \text{ in } D\rbrace }, with #{p_i} the principal part of #{f} at #{z = a_i}, then the function}
+
+##{g(z) = f(z) - \sum_{i=1}^m p_i(z)}
+
+\p{is meromorphic on #{D}, with removable singularities at #{a_1, \ldots, a_m}.}

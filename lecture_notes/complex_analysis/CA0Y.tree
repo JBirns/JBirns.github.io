@@ -1,0 +1,9 @@
+\title{Convex, starlike}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{An open subset #{U \subseteq \mathbb{C}} is \em{convex} if for all #{a, b \in U}, the line segment between #{a} and #{b} is in #{U}. #{U} is \em{starlike} (star-shaped) if there exists #{a_0 \in U} such that for all #{b \in U} the line segment from #{a_0} to #{b} is in #{U}.}
+
+##{\lbrace \text{discs}\rbrace  \subseteq \lbrace \text{convex sets}\rbrace  \subseteq \lbrace \text{starlike}\rbrace  \subseteq \lbrace \text{domains}\rbrace .}

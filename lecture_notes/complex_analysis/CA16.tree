@@ -1,0 +1,15 @@
+\title{Mean Value Property}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon U \to \mathbb{C}} is holomorphic on a domain #{U} and #{\overline{\mathbb{D}(a, r)} \subseteq U} then}
+
+##{f(a) = \int_0^1 f(a + re^{2\pi it})\,dt,}
+
+\p{i.e. #{f} takes average values on circles.}
+
+\proof{
+\p{Apply the CIF with #{t \mapsto a + re^{2\pi it}} on #{[0, 1]} for #{\partial\mathbb{D}(a, r)}.}
+}

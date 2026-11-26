@@ -1,0 +1,11 @@
+\title{Arc length}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma \colon [a, b] \to \mathbb{C}} be a #{C^1}-smooth curve. Then we define the \em{arc-length} of #{\gamma} to be}
+
+##{\operatorname{length}(\gamma) := \int_a^b |\gamma'(t)|\,dt.}
+
+\p{We say #{\gamma} is \em{simple} if #{\gamma(t_1) = \gamma(t_2) \Rightarrow t_1 = t_2} or #{\lbrace t_1, t_2\rbrace  = \lbrace a, b\rbrace }. If #{\gamma} is simple, #{\operatorname{length}(\gamma)} is the length of the image of #{\gamma}.}

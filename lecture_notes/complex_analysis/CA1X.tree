@@ -1,0 +1,29 @@
+\title{Holomorphic dependence on a parameter}
+\taxon{Lemma}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{(Used inside the proof of the general CIF below.) Let #{U \subseteq \mathbb{C}} be open, and #{\phi \colon U \times [a, b] \to \mathbb{C}} continuous with #{z \mapsto \phi(z, s)} holomorphic on #{U} for every #{s \in [a, b]}. Then}
+
+##{g(z) := \int_a^b \phi(z, s)\,ds}
+
+\p{is holomorphic on #{U}.}
+
+\proof{
+\p{Idea: Morera’s theorem. WLOG #{U} is a disc (since an open set is a union of discs). For any closed curve #{\gamma \colon [0, 1] \to U} we have}
+
+##{\int_\gamma g(z)\,dz = \int_0^1 \Big[ \int_a^b \phi(\gamma(t), s)\,ds \Big]\gamma'(t)\,dt \overset{\bigstar}{=} \int_a^b \Big[ \int_0^1 \phi(\gamma(t), s)\gamma'(t)\,dt \Big]\,ds.}
+
+\p{#{\bigstar} is \em{Fubini’s theorem}: suppose #{f \colon [a, b] \times [c, d] \to \mathbb{C}} is a continuous function. Then we have}
+
+##{\int_a^b \Big( \int_c^d f(x, y)\,dy \Big)\,dx = \int_c^d \Big( \int_a^b f(x, y)\,dx \Big)\,dy}
+
+\p{(and #{x \mapsto \int_c^d f(x, y)\,dy}, #{y \mapsto \int_a^b f(x, y)\,dx} are continuous). This holds if #{f} is constant, so also when #{f} is a step function. Since #{[a, b] \times [c, d]} is closed and bounded, i.e. compact, #{f} is uniformly continuous. So #{f} is a uniform limit of step functions, and we may exchange the order as claimed. \em{End of #{\bigstar}.}}
+
+\p{So}
+
+##{\int_\gamma g(z)\,dz = \int_a^b \Big( \int_\gamma \phi(z, s)\,dz \Big)\,ds.}
+
+\p{Since #{z \mapsto \phi(z, s)} is holomorphic, the inner integral is #{0} by Cauchy in a disc. So #{\int_\gamma g = 0} and by Morera, #{g} is holomorphic as claimed.}
+}

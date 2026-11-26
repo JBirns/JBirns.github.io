@@ -1,0 +1,17 @@
+\title{Locally uniform iff uniform on compacta}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A sequence of functions is locally uniformly convergent on #{U} #{\iff} #{\lbrace f_n\rbrace } converges uniformly on any compact subset of #{U}.}
+
+\proof{
+\p{(#{\Rightarrow}) If #{f_n \to f} locally uniformly on #{U}, and #{K \subseteq U} is compact, then for all #{a \in K} there exists #{r_a > 0} such that #{\lbrace f_n\rbrace } converges uniformly on #{\mathbb{D}(a, r_a)}. #{\bigcup_{a \in K} \mathbb{D}(a, r_a)} is an open cover of #{K}, so there exist #{a_1, \ldots, a_\ell} such that}
+
+##{K \subseteq \mathbb{D}(a_1, r_{a_1}) \cup \cdots \cup \mathbb{D}(a_\ell, r_{a_\ell}).}
+
+\p{Taking the max of the constants of uniform convergence on these discs, #{f_n \to f} uniformly on #{K}.}
+
+\p{(#{\Leftarrow}) If #{f_n \to f} uniformly on compact subsets of #{U}, then for #{a \in U}, find a closed disc #{\overline{\mathbb{D}(a, r)} \subseteq U}. Then #{f_n \to f} converges uniformly on #{\mathbb{D}(a, r)}.}
+}

@@ -1,0 +1,23 @@
+\title{Residue Theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f} be meromorphic on a domain #{D}, and #{\gamma} a closed curve which is homologous to zero in #{D}. Suppose #{\gamma} does not contain any pole of #{f}, and (#{\circledast}) #{f} has only finitely many poles in #{D} with non-zero winding number for #{\gamma}; call them #{\lbrace a_1, \ldots, a_m\rbrace }. Then}
+
+##{\int_\gamma f(z)\,dz = 2\pi i\sum_{i=1}^m I(\gamma; a_i)\operatorname{Res}_{z=a_i} f(z).}
+
+\proof{
+\p{Let #{p_i} denote the principal part of #{f} at #{z = a_i}, and write #{g = f - \sum_{i=1}^m p_i}. Then by Cauchy’s theorem (the general CIF, applied on #{D} with the remaining poles of #{f}, which have winding number #{0}, removed),}
+
+##{\int_\gamma g = 0, \quad \text{i.e.} \quad \int_\gamma f = \sum_{i=1}^m \int_\gamma p_i.}
+
+\p{Each #{p_i} is holomorphic on #{\mathbb{C} \setminus \lbrace a_i\rbrace } as we argued, so by the previous proposition we have}
+
+##{\int_\gamma p_i = 2\pi i\,I(\gamma; a_i)\operatorname{Res}_{z=a_i} p_i(z).}
+
+\p{By definition #{\operatorname{Res}_{z=a_i} p_i(z) = \operatorname{Res}_{z=a_i} f(z)}, so}
+
+##{\int_\gamma f(z)\,dz = 2\pi i\sum_{i=1}^m I(\gamma; a_i)\operatorname{Res}_{z=a_i} f(z).}
+}

@@ -1,0 +1,9 @@
+\title{Cauchy’s theorem for simply connected domains}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon U \to \mathbb{C}} be holomorphic on a simply connected domain #{U}. Then for all closed curves #{\gamma} in #{U},}
+
+##{\int_\gamma f = 0.}

@@ -1,0 +1,7 @@
+\title{Normal family}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A family #{\mathcal{F} = \lbrace f_i\rbrace _{i \in I}} of holomorphic functions on a domain #{D} is \em{normal} if every sequence in #{\mathcal{F}} has a locally uniformly convergent subsequence \em{(n.b. allowing convergence to #{\infty})}.}

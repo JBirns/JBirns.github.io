@@ -1,0 +1,7 @@
+\title{Jordan Curve Theorem}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Every simple closed continuous curve in the plane separates #{\mathbb{C}} into two connected components, one bounded, one unbounded.}

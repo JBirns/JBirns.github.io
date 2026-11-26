@@ -1,0 +1,33 @@
+\title{Differentiating power series}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f(z) = \sum_{n=0}^\infty c_n(z - a)^n} be a complex power series with radius of convergence #{R}. Then:}
+
+\ul{
+\li{\strong{(i)} #{f} is holomorphic on #{\mathbb{D}(a, R)};}
+\li{\strong{(ii)} #{f} has derivative #{f'(z) = \sum_{n=1}^\infty nc_n(z - a)^{n-1}}, with radius of convergence #{R} about #{a};}
+\li{\strong{(iii)} #{f} has derivatives of all orders on #{\mathbb{D}(a, R)} and #{f^{(n)}(a) = n!\,c_n}.}
+}
+
+\proof{
+\p{WLOG #{a = 0} by change of variables. Consider the series #{\sum_{n=1}^\infty nc_nz^{n-1}}. Since #{|nc_n| \geq |c_n|}, the radius of convergence of this series is no larger than #{R}.}
+
+\p{If #{0 < R_1 < R}, then for #{|z| < R_1} we have}
+
+##{|nc_nz^{n-1}| \leq n|c_n|R_1^{n-1} \cdot \frac{|z|^{n-1}}{R_1^{n-1}},}
+
+\p{and #{n\big(\frac{|z|}{R_1}\big)^{n-1} \to 0} as #{n \to \infty}. So applying the M-test with #{M_n = |c_n|R_1^{n-1}} (up to a constant) we have convergence of the series. So #{\sum nc_nz^{n-1}} has radius of convergence #{R}.}
+
+\p{So for #{|z|, |w| < R}, we want to consider #{\frac{f(z) - f(w)}{z - w}}. Taking partial sums:}
+
+##{\sum_{n=0}^N c_n\frac{z^n - w^n}{z - w} = \sum_{n=0}^N c_n\sum_{j=0}^{n-1} z^jw^{n-1-j}. \qquad (*)}
+
+\p{For #{|z|, |w| < \rho < R}, we have}
+
+##{\Big| c_n\Big( \sum_{j=0}^{n-1} z^jw^{n-1-j} \Big) \Big| \leq |c_n| \cdot n \cdot \rho^{n-1},}
+
+\p{so #{(*)} converges uniformly on #{\lbrace (z, w) : |z|, |w| < \rho\rbrace }. So the series converges to a continuous limit on #{\lbrace (z, w) : |z|, |w| < R\rbrace }; call it #{g(z, w) = \frac{f(z) - f(w)}{z - w}}. When #{z = w}, #{g(w, w) = \sum_{n=1}^\infty nc_nw^{n-1}}, so by continuity of #{g}, (i) and (ii) are proved. (iii) is a simple induction.}
+}

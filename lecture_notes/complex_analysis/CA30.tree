@@ -1,0 +1,19 @@
+\title{Rouché’s Theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma} bound a domain #{D}, and #{f, g} be holomorphic on a neighbourhood of #{D \cup \gamma}. If #{|f(z)| > |g(z)|} for all #{z \in \gamma}, then #{f} and #{f + g} have the same number of zeroes in #{D}.}
+
+\proof{
+\p{Define}
+
+##{h(z) = \frac{f(z) + g(z)}{f(z)} = 1 + \frac{g(z)}{f(z)}.}
+
+\p{#{h} is meromorphic on a neighbourhood of #{D \cup \gamma}. Since #{|f(z)| > |g(z)|} for all #{z \in \gamma}, #{f + g} and #{f} are non-zero on #{\gamma}, so #{h} has no zeroes or poles on #{\gamma}. By the argument principle, we have}
+
+##{\#\text{zeroes of } f + g \text{ in } D - \#\text{zeroes of } f \text{ in } D = I(h \circ \gamma; 0).}
+
+\p{By hypothesis, #{h \circ \gamma \subseteq \mathbb{D}(1, 1)}. So #{I(h \circ \gamma; 0) = 0}.}
+}

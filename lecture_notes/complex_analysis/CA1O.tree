@@ -1,0 +1,11 @@
+\title{Global Maximum Principle}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq \mathbb{C}} be a bounded domain, and let #{\overline{U}} be its closure (#{\overline{U} = \bigcap_{K \supseteq U, K \text{ closed}} K}). If #{f \colon \overline{U} \to \mathbb{C}} is continuous and #{f} is holomorphic on #{U}, then #{|f|} attains its maximum on #{\overline{U} \setminus U}.}
+
+\proof{
+\p{#{U} bounded #{\Rightarrow} #{\overline{U}} bounded (and closed, so compact) #{\Rightarrow} #{|f|} has some maximum on #{\overline{U}}; call it #{M}. If #{|f(z_0)| = M} for #{z_0 \in U}, then the local maximum principle #{\Rightarrow} #{f \equiv f(z_0)} on any disc #{\mathbb{D}(z_0, r) \subseteq U}. Then #{f \equiv f(z_0)} on #{\mathbb{D}(z_0, r)} #{\Rightarrow} #{f \equiv f(z_0)} on #{U} by the identity theorem #{\Rightarrow} #{f \equiv f(z_0)} on #{\overline{U}} (by continuity). So #{M} is achieved by #{|f|} on #{\overline{U} \setminus U}.}
+}

@@ -1,0 +1,9 @@
+\title{Fatou set}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The \em{Fatou set} of a rational map #{f} is}
+
+##{F(f) := \lbrace z \in \mathbb{C}_\infty : \exists \text{ a neighbourhood } U \text{ of } z \text{ such that } \lbrace f^n|_U\rbrace  \text{ forms a normal family}\rbrace .}

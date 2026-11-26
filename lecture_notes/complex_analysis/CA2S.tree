@@ -1,0 +1,35 @@
+\title{The Argument Principle}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\transclude{CA2T}
+
+\transclude{CA2U}
+
+\transclude{CA2V}
+
+\transclude{CA2W}
+
+\p{The argument principle has important consequences on the local behaviour of #{f}.}
+
+\transclude{CA2X}
+
+\p{If #{f} is non-constant, we can write #{f(z) - f(a) = (z - a)^kg(z)}, #{g} holomorphic and non-zero at #{a}, and the zero at #{z = a} of #{f(z) - f(a)} is isolated. So #{0 < |z - a|} sufficiently small #{\Rightarrow} #{f(z) - f(a) \neq 0}. So for small #{\varepsilon > 0}, the circle #{\gamma(t) = a + \varepsilon e^{it}}, #{t \in [0, 2\pi]}, about #{a} gives}
+
+##{\begin{aligned}
+I(f \circ \gamma; f(a)) = I(f(\gamma(t)) - f(a); 0) &= \#\text{zeroes in } \mathbb{D}(a, \varepsilon) \text{ of } f(z) - f(a) - \#\text{poles} \\
+&= \deg_{z=a} f(z).
+\end{aligned}}
+
+\p{Consider the local behaviour of #{f(z) = z^k} at #{z = 0} for #{k > 0}. We have #{\deg_{z=0} f(z) = k}. Note that every #{w \in \mathbb{D}(0, \varepsilon)}, #{w \neq 0}, has #{k} preimages under #{f} in #{\mathbb{D}(0, \varepsilon^{1/k})}.}
+
+\transclude{CA2Y}
+
+\transclude{CA2Z}
+
+\transclude{CA30}
+
+\transclude{CA31}
+
+\transclude{CA32}

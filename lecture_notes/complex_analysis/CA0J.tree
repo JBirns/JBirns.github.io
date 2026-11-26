@@ -1,0 +1,11 @@
+\title{Vanishing on a disc}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{0 < \varepsilon < R}, where #{R} is the radius of convergence of the complex power series #{f(z) = \sum_{n=0}^\infty c_n(z - a)^n}, and #{f(z) = 0} for all #{z \in \mathbb{D}(a, \varepsilon)}. Then #{f \equiv 0} on #{\mathbb{D}(a, R)}.}
+
+\proof{
+\p{Since #{f \equiv 0} on #{\mathbb{D}(a, \varepsilon)}, we have #{f^{(n)}(a) = 0} for all #{n}. So by \ref{CA0I}(iii), we have #{c_n = 0} for all #{n}, and therefore #{f \equiv 0} on #{\mathbb{D}(a, R)}.}
+}

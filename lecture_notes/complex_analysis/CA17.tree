@@ -1,0 +1,17 @@
+\title{Local maximum principle}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, r) \to \mathbb{C}} be holomorphic. If #{|f(z)| \leq |f(a)|} for all #{z \in \mathbb{D}(a, r)}, then #{f} is constant.}
+
+\p{“Non-constant holomorphic maps cannot achieve a maximum on an open set.”}
+
+\proof{
+\p{By the MVP, for all #{0 < \rho < r} we have}
+
+##{|f(a)| = \Big| \int_0^1 f(a + \rho e^{2\pi it})\,dt \Big| \leq \sup_{|z - a| = \rho}|f(z)| \leq |f(a)|}
+
+\p{by hypothesis. Since we have equality at each step, we have #{|f(z)| = |f(a)|} for all #{|z - a| = \rho}. So #{|f|} is a constant function on #{\mathbb{D}(a, r)}, which implies #{f} is constant on #{\mathbb{D}(a, r)} (e.g. by the Cauchy–Riemann equations).}
+}

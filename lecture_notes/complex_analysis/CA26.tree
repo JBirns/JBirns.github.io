@@ -1,0 +1,13 @@
+\title{Removable singularity, pole, essential singularity}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f} have an isolated singularity at #{a}, with Laurent expansion #{\sum_{n=-\infty}^\infty c_n(z - a)^n} on #{\mathbb{D}(a, R)^\times}.}
+
+\ul{
+\li{\strong{(i)} If #{c_n = 0} for all #{n < 0}, then #{f} is the restriction to #{\mathbb{D}(a, R)^\times} of a function holomorphic on #{\mathbb{D}(a, R)}. We say #{f} has a \em{removable singularity} at #{a}. E.g. #{f(z) = \frac{\sin z}{z}} at #{a = 0}.}
+\li{\strong{(ii)} If there exists #{k < 0} such that #{c_k \neq 0} but #{c_n = 0} for all #{n < k}: we have #{(z - a)^{-k}f(z)} holomorphic and non-zero at #{a}. We say #{f} has a \em{pole of order #{-k}} at #{a}. Example: #{g(z) = z^{-6}} at #{a = 0} has a pole of order #{6}.}
+\li{\strong{(iii)} If #{c_n \neq 0} for infinitely many #{n < 0}, #{f} has an \em{essential singularity} at #{a}, e.g. #{e^{1/z}} at #{a = 0}.}
+}

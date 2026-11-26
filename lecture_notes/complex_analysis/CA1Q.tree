@@ -1,0 +1,25 @@
+\title{Continuous choice of argument}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma \colon [a, b] \to \mathbb{C} \setminus \lbrace w\rbrace } be a continuous curve. Then there exists a continuous function #{\theta \colon [a, b] \to \mathbb{R}} with}
+
+##{\gamma(t) = w + r(t)e^{i\theta(t)}, \quad \text{with } r(t) = |\gamma(t) - w|.}
+
+\proof{
+\p{WLOG translate to assume #{w = 0}. Since #{\arg\gamma(t) = \arg\big( \frac{\gamma(t)}{|\gamma(t)|} \big)}, we can replace #{\gamma} with #{\frac{\gamma}{|\gamma|}} to assume #{|\gamma(t)| = 1} for all #{t \in [a, b]}.}
+
+\p{Notice that if #{\gamma \subseteq \mathbb{C} \setminus \mathbb{R}_{\leq 0}}, then #{t \mapsto \operatorname{Arg}(\gamma(t))} gives a continuous choice of #{\theta}. More generally, if #{\gamma} lies in any slit plane #{\mathbb{C} \setminus \lbrace z : z/e^{i\alpha} \in \mathbb{R}_{\leq 0}\rbrace }, then #{\theta(t) := \alpha + \operatorname{Arg}\big( \frac{\gamma(t)}{e^{i\alpha}} \big)} will do.}
+
+\p{Our strategy is to subdivide #{\gamma} so that its pieces lie in slit planes, and so #{\theta} may be continuously defined on the pieces. #{\gamma} is continuous on #{[a, b]}, so uniformly continuous, and there exists #{\varepsilon > 0} such that #{|s - t| < \varepsilon \Rightarrow |\gamma(s) - \gamma(t)| < 2}. Subdividing #{a = a_0 < a_1 < \cdots < a_{n-1} < a_n = b} with #{a_{j+1} - a_j < 2\varepsilon}, then}
+
+##{\Big| \gamma(t) - \gamma\Big( \frac{a_{j+1} + a_j}{2} \Big) \Big| < 2 \quad \forall t \in [a_j, a_{j+1}].}
+
+\p{So #{\gamma([a_{j-1}, a_j])} lies in a slit plane, and we can define #{\theta_j} a continuous choice of argument for #{\gamma|_{[a_{j-1}, a_j]}} for #{j \in \lbrace 1, \ldots, n\rbrace }. We have}
+
+##{\gamma(a_j) = e^{i\theta_j(a_j)} = e^{i\theta_{j+1}(a_j)} \quad \text{for } j \in \lbrace 1, \ldots, n - 1\rbrace ,}
+
+\p{so #{\theta_{j+1}(a_j) = \theta_j(a_j) + 2\pi n_j} for some #{n_j \in \mathbb{Z}}. Modifying each #{\theta_j}, #{j \geq 2}, by a suitable integer multiple of #{2\pi} ensures the #{\theta_j} fit together to a continuous choice of #{\theta} on #{[a, b]}.}
+}

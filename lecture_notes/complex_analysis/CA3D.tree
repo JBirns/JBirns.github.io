@@ -1,0 +1,7 @@
+\title{Riemann Mapping Theorem}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subsetneq \mathbb{C}} be a non-empty, proper, open, simply connected subset of #{\mathbb{C}}. Then there exists a conformal isomorphism #{f \colon U \xrightarrow{\sim} \mathbb{D} = \mathbb{D}(0, 1)}.}

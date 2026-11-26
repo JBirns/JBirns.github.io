@@ -1,0 +1,7 @@
+\title{Logarithmic derivative}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{By Example Sheet 2, if #{f \colon U \to \mathbb{C}} with #{f(U)} contained in a simply connected set which omits #{0}, then there exists a holomorphic function #{g(z) = \log f(z)} on #{U}, so #{\frac{f'(z)}{f(z)}} has holomorphic antiderivative #{\log f} on #{U}. #{\frac{f'}{f}} is known as the \em{logarithmic derivative} of #{f}.}

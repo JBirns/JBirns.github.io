@@ -1,0 +1,7 @@
+\title{Non-uniqueness of the argument}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{\theta} is not unique, since #{\theta(t) + 2\pi n} is also valid for all #{n \in \mathbb{Z}}. If #{\theta_1, \theta_2} are two functions as in the theorem, then #{\theta_1 - \theta_2} is continuous and takes values in (discrete) #{2\pi\mathbb{Z}}, so is constant.}

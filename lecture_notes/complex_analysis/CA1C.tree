@@ -1,0 +1,10 @@
+\title{Holomorphic equals analytic}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} Holomorphic functions have derivatives of all orders, which are holomorphic.}
+\li{\strong{(ii)} “Analytic” #{=} has a power series representation on a disc in the domain. So holomorphic #{\iff} analytic.}
+}

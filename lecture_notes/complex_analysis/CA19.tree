@@ -1,0 +1,15 @@
+\title{Fundamental Theorem of Algebra}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Every non-constant polynomial with complex coefficients has a root in #{\mathbb{C}}.}
+
+\proof{
+\p{If #{p(z) = a_dz^d + a_{d-1}z^{d-1} + \cdots + a_0} has no root in #{\mathbb{C}}, then #{f(z) := \frac{1}{p(z)}} is entire (also). #{p} non-constant #{\Rightarrow} #{a_d \neq 0}, #{d \geq 1}. So}
+
+##{\frac{p(z)}{z^d} = a_d + a_{d-1} \cdot \frac{1}{z} + \cdots + a_0\frac{1}{z^d}}
+
+\p{shows that #{|p(z)| \to \infty} as #{|z| \to \infty}. So #{|f(z)| \to 0} as #{|z| \to \infty}; so there exists #{R > 0} such that for all #{z \notin \mathbb{D}(0, R)}, #{|f(z)| \leq 1}. Let #{M := \max_{z \in \overline{\mathbb{D}(0, R)}}|f(z)|}. Then #{|f|} is bounded by #{\max\lbrace 1, M\rbrace }, and so by Liouville #{f} is constant, a contradiction.}
+}

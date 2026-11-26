@@ -1,0 +1,7 @@
+\title{From Analysis & Topology}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If the partials #{u_x, u_y, v_x, v_y} exist and are continuous on #{U}, then #{u, v} are differentiable on #{U}. So it suffices to check that the partials are continuous and the Cauchy–Riemann equations hold to deduce complex differentiability.}

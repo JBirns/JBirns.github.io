@@ -1,0 +1,33 @@
+\title{Cauchy’s Integral Formula}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq \mathbb{C}} be a domain, #{f \colon U \to \mathbb{C}} holomorphic, and #{\overline{\mathbb{D}(a, r)} \subseteq U}. Then for all #{z \in \mathbb{D}(a, r)},}
+
+##{f(z) = \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, r)} \frac{f(w)}{w - z}\,dw.}
+
+\proof{
+\p{Define}
+
+##{g(w) = \begin{cases} \dfrac{f(w) - f(z)}{w - z} & w \neq z, \\ f'(z) & w = z. \end{cases}}
+
+\p{Then #{g} is continuous at #{z}, and holomorphic on #{\mathbb{D}(a, r)} except possibly at #{z}. Find #{r_1 > r} such that #{\overline{\mathbb{D}(a, r)} \subseteq \mathbb{D}(a, r_1) \subseteq U}. Apply Cauchy’s theorem to #{g} on #{\mathbb{D}(a, r_1)} with curve #{\gamma = \partial\mathbb{D}(a, r)}:}
+
+##{\int_{\partial\mathbb{D}(a, r)} g(w)\,dw = 0, \quad \text{i.e.} \quad \int_{\partial\mathbb{D}(a, r)} \frac{f(w)}{w - z}\,dw = \int_{\partial\mathbb{D}(a, r)} \frac{f(z)}{w - z}\,dw.}
+
+\p{Useful expansion: since #{|w - a| = r > |z - a|},}
+
+##{\frac{1}{w - z} = \frac{1}{(w - a)\big[ 1 - \frac{z - a}{w - a} \big]} = \sum_{n=0}^\infty \frac{(z - a)^n}{(w - a)^{n+1}},}
+
+\p{by geometric expansion, converging uniformly in #{w \in \partial\mathbb{D}(a, r)}. So}
+
+##{\int_{\partial\mathbb{D}(a, r)} \frac{f(z)}{w - z}\,dw = \sum_{n=0}^\infty \Big[ f(z)(z - a)^n\int_{\partial\mathbb{D}(a, r)} \frac{1}{(w - a)^{n+1}}\,dw \Big].}
+
+\p{We have computed this integral: it is #{0} unless #{n + 1 = 1}, in which case it is #{2\pi i}. So}
+
+##{\int_{\partial\mathbb{D}(a, r)} \frac{f(w)}{w - z}\,dw = 2\pi i f(z)}
+
+\p{as claimed.}
+}

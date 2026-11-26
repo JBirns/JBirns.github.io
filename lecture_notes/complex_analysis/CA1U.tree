@@ -1,0 +1,13 @@
+\title{Winding number outside a disc}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{\gamma \colon [0, 1] \to \mathbb{D}(a, R)} is a closed curve, then for all #{w \notin \mathbb{D}(a, R)}, #{I(\gamma; w) = 0}.}
+
+\proof{
+\p{Consider the Möbius map #{z \mapsto \frac{z - w}{a - w}}. It takes #{a \mapsto 1}, #{w \mapsto 0}, so #{\mathbb{D}(a, R) \mapsto \mathbb{D}(1, r)} for some #{r \leq 1}. So then #{\mathbb{D}(a, R)} is contained in the slit plane #{\mathbb{C} \setminus \lbrace z : \frac{z - w}{a - w} \in \mathbb{R}_{\leq 0}\rbrace }. So there is a branch of #{\arg(z - w)} defined on #{\mathbb{D}(a, R)}. And so}
+
+##{I(\gamma; w) = \frac{\arg(\gamma(1) - w) - \arg(\gamma(0) - w)}{2\pi} = 0.}
+}

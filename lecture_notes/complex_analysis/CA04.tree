@@ -1,0 +1,7 @@
+\title{Domain}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A \em{domain} is a non-empty, open, path-connected subset of #{\mathbb{C}}.}

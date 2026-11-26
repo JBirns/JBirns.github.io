@@ -1,0 +1,11 @@
+\title{Casorati–Weierstrass}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, \rho)^\times \to \mathbb{C}} with an essential singularity at #{z = a}. Then #{f} has dense image on any neighbourhood of #{a}; that is, for all #{w \in \mathbb{C}}, #{\varepsilon > 0}, #{\delta > 0}, there exists #{z \in \mathbb{D}(a, \delta)^\times} such that #{|f(z) - w| < \varepsilon}.}
+
+\proof{
+\p{Example Sheet 2, question 9.}
+}

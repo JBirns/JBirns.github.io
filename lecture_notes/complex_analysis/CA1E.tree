@@ -1,0 +1,21 @@
+\title{Uniform limits of holomorphic functions}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f_n \colon U \to \mathbb{C}} be holomorphic functions on a domain #{U}, and #{f_n \to f} uniformly on #{U} (sufficient: uniform convergence on compact subsets of #{U}). Then #{f} is holomorphic on #{U}, and #{f'(z) = \lim_{n \to \infty} f_n'(z)}.}
+
+\proof{
+\p{#{U} is a union of open discs, so it suffices to work with #{\mathbb{D}(z, \varepsilon) \subseteq U}. Given #{\gamma} a closed curve in #{\mathbb{D}(z, \varepsilon)}, #{\int_\gamma f_n \to \int_\gamma f} and #{\int_\gamma f_n = 0}, so #{\int_\gamma f = 0}. Since #{f} is continuous, Morera’s theorem applies, so #{f} is holomorphic on #{\mathbb{D}(z, \varepsilon)}.}
+
+\p{Recall the Taylor expansion computation:}
+
+##{f^{(n)}(z) = \frac{n!}{2\pi i}\int_{\partial\mathbb{D}(z, \rho)} \frac{f(\xi)}{(\xi - z)^{n+1}}\,d\xi.}
+
+\p{So #{f'(z) = \frac{1}{2\pi i}\int_{\partial\mathbb{D}(z, \rho)} \frac{f(\xi)}{(\xi - z)^2}\,d\xi}, and}
+
+##{|f'(z) - f_n'(z)| = \frac{1}{2\pi}\Big| \int_{\partial\mathbb{D}(z, \rho)} \frac{f(\xi)}{(\xi - z)^2} - \frac{f_n(\xi)}{(\xi - z)^2}\,d\xi \Big| \leq \rho \cdot \frac{1}{\rho^2}\sup_{\xi \in \partial\mathbb{D}(z, \rho)}|f(\xi) - f_n(\xi)| \to 0}
+
+\p{as #{n \to \infty}. So #{f'(z) = \lim_{n \to \infty} f_n'(z)}.}
+}

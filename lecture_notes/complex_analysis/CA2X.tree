@@ -1,0 +1,7 @@
+\title{Local degree}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f} is holomorphic and non-constant near #{z = a}, then the \em{local degree} of #{f(z)} at #{z = a}, #{\deg_{z=a} f(z)}, is the order of the zero of #{f(z) - f(a)} at #{z = a}.}

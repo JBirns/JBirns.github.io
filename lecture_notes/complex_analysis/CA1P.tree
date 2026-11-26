@@ -1,0 +1,34 @@
+\title{Generalising the Cauchy Integral Formula}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{\em{Goal:} generalise the CIF by allowing more general closed curves for the integration. We have an issue: let #{\gamma_1(t) = e^{2\pi it}}, #{t \in [0, 1]}, and #{\gamma_2(t) = e^{4\pi it}}, #{t \in [0, 1]}. Then #{\int_{\gamma_2} f = 2\int_{\gamma_1} f}.}
+
+\p{We need to deal with the issue of “winding around” a point more than once; however, once we quantify this notion, we’ll see it is the \em{only} issue to generalising the CIF.}
+
+\p{Naive hope: “counting” crossings of a slit in the plane — but a curve can cross a slit back and forth and only some crossings matter, so this is awkward to make rigorous.}
+
+\transclude{CA1Q}
+
+\transclude{CA1R}
+
+\transclude{CA1S}
+
+\transclude{CA1T}
+
+\transclude{CA1U}
+
+\transclude{CA1V}
+
+\transclude{CA1W}
+
+\transclude{CA1X}
+
+\transclude{CA1Y}
+
+\transclude{CA1Z}
+
+\p{\strong{Fact} (to understand simply connected). If #{U \subseteq \mathbb{C}} is open, then #{U} is simply connected #{\iff} the complement of #{U} in #{\mathbb{C}_\infty} is connected.}
+
+\transclude{CA20}

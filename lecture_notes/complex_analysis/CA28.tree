@@ -1,0 +1,21 @@
+\title{Characterising poles}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{An isolated singularity at #{z = a} for #{f} is a pole #{\iff} #{|f(z)| \to \infty} as #{z \to a}. Moreover, the following are equivalent:}
+
+\ul{
+\li{\strong{(i)} #{f} has a pole of order #{k} at #{z = a};}
+\li{\strong{(ii)} #{f(z) = (z - a)^{-k}g(z)}, #{g} holomorphic and non-zero at #{a};}
+\li{\strong{(iii)} #{f(z) = \frac{1}{h(z)}}, where #{h} is holomorphic at #{a} with a zero of order #{k} at #{a}.}
+}
+
+\proof{
+\p{(1) #{\iff} (2) is immediate using the Laurent expansion. (2) #{\iff} (3) holds since #{g} is holomorphic and non-zero at #{a} #{\iff} #{\frac{1}{g}} is holomorphic and non-zero at #{a}.}
+
+\p{(#{\Rightarrow}) If #{f} has a pole of order #{k} at #{z = a}, then #{f(z) = (z - a)^{-k}g(z)}, so #{|f(z)| \to \infty} as #{z \to a}.}
+
+\p{(#{\Leftarrow}) Conversely, if #{|f| \to \infty} as #{z \to a}, there exists #{r > 0} such that #{f(z) \neq 0} for all #{0 < |z - a| < r}, so #{\frac{1}{f}} is holomorphic on #{\mathbb{D}(a, r)^\times}, and #{\big| \frac{1}{f} \big| \to 0} as #{z \to a}, so the singularity of #{\frac{1}{f}} is removable and #{\frac{1}{f(z)} = h(z)}, holomorphic on #{\mathbb{D}(a, r)}. #{h} has a zero of some order #{k}, so #{h(z) = (z - a)^k\ell(z)} for #{\ell} holomorphic and non-zero at #{a}, so #{f(z) = (z - a)^{-k}\frac{1}{\ell(z)}}, i.e. #{f} has a pole of order #{k} at #{z = a}.}
+}

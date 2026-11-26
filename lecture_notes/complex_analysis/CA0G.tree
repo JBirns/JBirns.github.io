@@ -1,0 +1,14 @@
+\title{Simply connected domains}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(ii)} Any domain bounded by a simple closed curve is simply connected.}
+\li{\p{\strong{(iii)} (For fun) Any domain with bounded and connected complement is simply connected as a subset of #{\mathbb{C}_\infty}:}
+\ul{
+\li{#{U = \mathbb{C} \setminus \overline{\mathbb{D}(0, 1)}} is not simply connected in #{\mathbb{C}}, but #{U \cup \lbrace \infty\rbrace  \subseteq \mathbb{C}_\infty} is simply connected in #{\mathbb{C}_\infty}.}
+\li{#{U = \mathbb{C}_\infty \setminus M} is simply connected in #{\mathbb{C}_\infty}, where #{M} is the Mandelbrot set.}
+}}
+}

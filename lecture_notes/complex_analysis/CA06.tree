@@ -1,0 +1,7 @@
+\title{Differentiation rules}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{All differentiation rules (sum, product, quotient, inverse, chain, …) hold by the same proofs as in #{\mathbb{R}}.}

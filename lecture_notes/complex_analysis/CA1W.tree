@@ -1,0 +1,12 @@
+\title{Homology and homotopy}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{For #{U} open, this is equivalent to the homotopy definition of simply connected.}
+
+\ul{
+\li{\strong{(i)} Any disc is simply connected by the previous proposition.}
+\li{\strong{(ii)} Any punctured disc #{\mathbb{D}(a, R) \setminus \lbrace a\rbrace } is not simply connected, since curves can wind around #{a}: a small circle about #{a} is not homologous to #{0} in #{\mathbb{D}(a, R) \setminus \lbrace a\rbrace }.}
+}

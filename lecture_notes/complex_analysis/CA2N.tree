@@ -1,0 +1,21 @@
+\title{#{\int_{-\infty}^\infty \frac{\cos mx}{x^2 + 1}\,dx}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{I = \int_{-\infty}^\infty \frac{\cos mx}{x^2 + 1}\,dx}, #{m \in \mathbb{R}}.}
+
+\p{#{\cos z} is large for #{iR = z}, #{R} large, so instead use #{\cos mx = \operatorname{Re}(e^{imx})} #{\Rightarrow} #{I = \operatorname{Re}\big( \int_{-\infty}^\infty \frac{e^{imx}}{1 + x^2}\,dx \big)}. Useful contour: the semicircle #{\gamma_R} consisting of #{[-R, R]} followed by #{C_R'}.}
+
+\p{If #{m > 0}, Jordan’s lemma #{\Rightarrow} #{\int_{C_R'} \frac{e^{imz}}{z^2 + 1}\,dz \to 0} as #{R \to \infty}. The Residue theorem #{\Rightarrow}}
+
+##{\int_{\gamma_R} \frac{e^{imz}}{z^2 + 1}\,dz = 2\pi i\operatorname{Res}_{z=i} \frac{e^{imz}}{z^2 + 1} = 2\pi i\frac{e^{im(i)}}{i + i} = \pi e^{-m}.}
+
+\p{So #{\pi e^{-m} = \int_{C_R'} \frac{e^{imz}}{z^2 + 1}\,dz + \int_{-R}^R \frac{e^{imz}}{z^2 + 1}\,dz} #{\Rightarrow} #{I = \frac{\pi}{e^m}}, #{m > 0}.}
+
+\p{If #{m < 0}, #{\cos mx = \cos(-mx)}, so #{I = \frac{\pi}{e^{-m}} = \pi e^m} by the previous computation.}
+
+\p{If #{m = 0}, we have #{\big| \int_{C_R'} \frac{1}{z^2 + 1}\,dz \big| \leq \frac{\pi R}{R^2 - 1} \to 0} as #{R \to \infty}, so with the residue computation #{\operatorname{Res}_{z=i} \frac{1}{z^2 + 1} = \frac{1}{2i}} we have #{I = \frac{\pi}{e^0} = \pi}.}
+
+\p{So in all cases, #{I = \frac{\pi}{e^{|m|}}}.}

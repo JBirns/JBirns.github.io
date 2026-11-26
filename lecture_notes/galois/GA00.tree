@@ -4,7 +4,7 @@
 \author{JB00}
 \import{macros}
 
-\p{These notes are based on lectures given by [Professor Tom Fisher](https://www.dpmms.cam.ac.uk/~taf1000/). The presentation of this course is interesting given that the "big important result" (the Fundamental Theorem of Galois Theory) appears right in the middle of the course, as opposed to the beginning or the end.}
+\p{These notes are based on lectures given by Professor [Tom Fisher](https://www.dpmms.cam.ac.uk/~taf1000/). The presentation of this course is interesting given that the "big important result" (the Fundamental Theorem of Galois Theory) appears right in the middle of the course, as opposed to the beginning or the end.}
 
 \p{The subject is named after the French mathematician Évariste Galois (1811–1832).
 It is the study of roots of polynomials (or more generally field extensions) and their symmetries. It can be used to show that certain classical problems cannot be solved — for example, there is no formula in terms of \em{radicals} for the roots of a general polynomial of degree #{n} when #{n \geq 5}, i.e. using #{+, -, \times, \div, \sqrt[m]{\phantom{x}}}. (Related to the fact that #{A_n} is simple for #{n \geq 5}.)

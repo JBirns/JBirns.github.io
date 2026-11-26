@@ -5,4 +5,4 @@
 \import{macros}
 \import{names}
 
-\p{See [Adiprasito, Huh and Katz](002W). This result is a corollary of showing that the characteristic polynomial of a matroid is [log-concave](\logconcave).}
+\p{See [Adiprasito, Huh, and Katz](002W). This result is a corollary of showing that the characteristic polynomial of a matroid is [log-concave](\logconcave).}

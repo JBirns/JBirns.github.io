@@ -1,0 +1,41 @@
+\title{General Cauchy Integral Formula}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon U \to \mathbb{C}} be holomorphic on a domain #{U}, and #{\gamma} a closed curve homologous to zero in #{U}. Then for all #{w \in U \setminus \gamma}:}
+
+##{I(\gamma; w)f(w) = \frac{1}{2\pi i}\int_\gamma \frac{f(z)}{z - w}\,dz \quad \text{and} \quad \int_\gamma f(z)\,dz = 0.}
+
+\proof{
+\p{Notice applying the first equality to #{g(z) = f(z)(z - w)} gives #{\int_\gamma f = 0}. It suffices to prove the first statement.}
+
+\p{We have by the previous lemma that #{I(\gamma; w)f(w) = \frac{1}{2\pi i}\int_\gamma \frac{f(w)}{z - w}\,dz}, so we want to show that}
+
+##{\frac{1}{2\pi i}\int_\gamma \frac{f(z) - f(w)}{z - w}\,dz = 0 \quad \forall w \in U \setminus \gamma.}
+
+\p{Consider the function}
+
+##{g(z, w) = \begin{cases} \dfrac{f(z) - f(w)}{z - w}, & z \neq w, \\ f'(w), & z = w, \end{cases}}
+
+\p{a continuous function on #{U \times U}. We want to show #{\int_\gamma g(z, w)\,dz = 0} for all #{w \in U \setminus \gamma}.}
+
+\p{Consider the auxiliary function #{h} on #{\mathbb{C}}:}
+
+##{h(w) := \begin{cases} \int_\gamma g(\xi, w)\,d\xi, & w \in U, \\ \int_\gamma \frac{f(\xi)}{\xi - w}\,d\xi, & w \in \lbrace w \in \mathbb{C} \setminus \gamma : I(\gamma; w) = 0\rbrace  =: V. \end{cases}}
+
+\p{If #{w \in U \cap V}, then}
+
+##{\int_\gamma g(\xi, w)\,d\xi = \int_\gamma \frac{f(\xi) - f(w)}{\xi - w}\,d\xi = \int_\gamma \frac{f(\xi)}{\xi - w}\,d\xi,}
+
+\p{so #{h} is well defined. Since #{\gamma} is homologous to #{0} in #{U}, #{U \cup V = \mathbb{C}}. For any disc #{\mathbb{D}(0, R)} with #{\gamma \subseteq \mathbb{D}(0, R)}, we have that #{I(\gamma; w) = 0} for all #{w \notin \mathbb{D}(0, R)}, so these #{w} lie in #{V}. For #{w \notin \mathbb{D}(0, R)} we have}
+
+##{|h(w)| = \Big| \int_\gamma \frac{f(\xi)}{\xi - w}\,d\xi \Big| \leq \frac{\operatorname{length}(\gamma) \cdot \sup_{\xi \in \gamma}|f(\xi)|}{|w| - R} \to 0 \text{ as } |w| \to \infty.}
+
+\p{\em{Claim:} #{h} is holomorphic on #{\mathbb{C}} (this follows from \ref{CA1X}). If so, #{h} is bounded since #{|h(w)| \to 0} as #{|w| \to \infty}. Then by Liouville’s theorem #{h} is constant, taking the value #{0} on #{\mathbb{C}}, concluding the proof.}
+
+\p{(See \ref{CA1X}.)}
+
+\p{So #{h} is holomorphic as claimed (on #{U} by the lemma applied to #{\phi(w, t) = g(\gamma(t), w)\gamma'(t)}, and on #{V} similarly), and the generalised CIF follows.}
+}

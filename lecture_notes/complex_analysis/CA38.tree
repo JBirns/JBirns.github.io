@@ -1,0 +1,7 @@
+\title{Necessity of locally uniform convergence}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{The assumption of locally uniform convergence is necessary; a construction with a non-holomorphic limit can be done via Runge’s theorem [Part II Topics in Analysis].}

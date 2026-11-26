@@ -1,0 +1,12 @@
+\title{Analytic continuation}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq V \subseteq \mathbb{C}} be domains, and #{f \colon U \to \mathbb{C}} holomorphic. #{g \colon V \to \mathbb{C}} is an \em{analytic continuation} of #{f} if}
+
+\ul{
+\li{\strong{(i)} #{g} is holomorphic on #{V};}
+\li{\strong{(ii)} #{g|_U = f}.}
+}

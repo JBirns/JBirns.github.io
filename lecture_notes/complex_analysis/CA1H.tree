@@ -1,0 +1,22 @@
+\title{Zeroes of Holomorphic Maps}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon \mathbb{D}(a, R) \to \mathbb{C}} be holomorphic, so #{f(z) = \sum_{n \geq 0} c_n(z - a)^n} on #{\mathbb{D}(a, R)}. If #{f \not\equiv 0} then some #{c_n} is non-zero; let}
+
+##{m := \min\lbrace n \in \mathbb{N} \cup \lbrace 0\rbrace  : c_n \neq 0\rbrace .}
+
+\transclude{CA1I}
+
+\transclude{CA1J}
+
+\transclude{CA1K}
+
+\transclude{CA1L}
+
+\transclude{CA1M}
+
+\transclude{CA1N}
+
+\transclude{CA1O}

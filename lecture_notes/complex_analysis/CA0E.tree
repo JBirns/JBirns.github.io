@@ -1,0 +1,7 @@
+\title{Simply connected}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{A subset #{U \subseteq \mathbb{C}} is \em{simply connected} if it is path connected and any loop in #{U} can be contracted to a point; i.e. #{U} is path connected and any continuous path #{\gamma \colon S^1 \to U} extends to a continuous map of the closed disc #{\tilde{\gamma} \colon \overline{\mathbb{D}(0, 1)} \to U}, with #{\tilde{\gamma}|_{S^1} = \gamma}.}

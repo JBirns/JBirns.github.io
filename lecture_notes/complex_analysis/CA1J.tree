@@ -1,0 +1,11 @@
+\title{Principle of Isolated Zeroes}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon \mathbb{D}(a, R) \to \mathbb{C}} is holomorphic and not identically #{0}, then there exists #{0 < r \leq R} such that #{f(z) \neq 0} on #{0 < |z - a| < r}.}
+
+\proof{
+\p{If #{f(a) \neq 0} then #{f(z) \neq 0} on #{\mathbb{D}(a, r)} for some #{0 < r \leq R} by continuity of #{f}. If #{f} has a zero of order #{m} at #{a}, write #{f(z) = (z - a)^mg(z)} where #{g(a) \neq 0}, #{g} holomorphic. By continuity of #{g}, there exists #{0 < r \leq R} such that #{g(z) \neq 0} for all #{z \in \mathbb{D}(a, r)}. So #{f(z) \neq 0} for all #{0 < |z - a| < r}.}
+}

@@ -1,0 +1,35 @@
+\title{#{\int_0^\infty \frac{x^\alpha}{1 + x^2}\,dx}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{\int_0^\infty \frac{x^\alpha}{1 + x^2}\,dx}, #{\alpha \in (0, 1)}, with #{z^\alpha = \exp(\alpha\log z)} for a branch of #{\log}.}
+
+\p{\em{Claim:} Let #{\log z = \ln|z| + i\arg z}, #{\arg z \in (-\frac{\pi}{2}, \frac{3\pi}{2})} (a branch cut along the negative imaginary axis). Then for #{x > 0}, we have #{(-x)^\alpha = (-1)^\alpha x^\alpha}.}
+
+\p{\em{Proof of claim.} #{\log(-x) = \ln|x| + \pi i = \ln x + \pi i}, since #{x > 0}. In particular #{\log(-1) = \pi i}. So #{\log x + \log(-1) = \ln x + \pi i = \log(-x)}. So #{\exp(\alpha\log x)\exp(\alpha\log(-1)) = \exp(\alpha\log(-x))} as claimed.}
+
+\p{Use the same contour #{\gamma_{R,\varepsilon}} as in the previous example; one can show the integrals along #{C_R'}, #{C_\varepsilon'} tend to #{0} as #{R \to \infty}, #{\varepsilon \to 0}. The pole #{z = i} lies inside. Residue theorem:}
+
+##{\operatorname{Res}_{z=i} \frac{\exp(\alpha\log z)}{(z + i)(z - i)} = \frac{i^\alpha}{2i}.}
+
+\p{So}
+
+##{\begin{aligned}
+2\pi i\operatorname{Res}_{z=i} \frac{\exp(\alpha\log z)}{(z + i)(z - i)} &= \int_{\gamma_{R,\varepsilon}} \frac{z^\alpha}{1 + z^2}\,dz \\
+&= \int_{C_R'} \frac{z^\alpha}{1 + z^2}\,dz - \int_{C_\varepsilon'} \frac{z^\alpha}{1 + z^2}\,dz \\
+&\qquad + \int_{-R}^{-\varepsilon} \frac{z^\alpha}{1 + z^2}\,dz + \int_\varepsilon^R \frac{z^\alpha}{1 + z^2}\,dz.
+\end{aligned}}
+
+\p{By the substitution #{t = -z}, we have}
+
+##{\int_{-R}^{-\varepsilon} \frac{z^\alpha}{1 + z^2}\,dz = (-1)^\alpha\int_\varepsilon^R \frac{z^\alpha}{1 + z^2}\,dz.}
+
+\p{So taking #{\varepsilon \to 0}, #{R \to \infty}, we have}
+
+##{2\pi i \cdot \frac{i^\alpha}{2i} = 0 - 0 + [(-1)^\alpha + 1]\int_0^\infty \frac{x^\alpha}{1 + x^2}\,dx,}
+
+\p{so}
+
+##{\int_0^\infty \frac{x^\alpha}{1 + x^2}\,dx = \frac{i^\alpha\pi}{1 + (-1)^\alpha} \quad \Big( = \frac{\pi}{2\cos(\pi\alpha /2)} \Big).}

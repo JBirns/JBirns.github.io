@@ -1,0 +1,7 @@
+\title{Rouché #{\Rightarrow} open mapping theorem}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f \colon D \to \mathbb{C}} is holomorphic and non-constant and #{a \in D}, we can choose #{r > 0} such that #{\mathbb{D}(a, 2r)^\times} has no zeroes of #{f(z) - f(a)}. Let #{\gamma} be #{|z - a| = r}, and let #{0 < \varepsilon < \min_{z \in \gamma}|f(z) - f(a)|}. Then for #{w \in \mathbb{D}(f(a), \varepsilon)}, since #{f(z) - w = f(a) - w + f(z) - f(a)}, we have #{|f(a) - w| < \varepsilon < |f(z) - f(a)|} for all #{z \in \gamma}. By Rouché’s theorem, #{\#}zeroes in #{\mathbb{D}(a, r)} of #{f(z) - w} #{=} #{\#}zeroes in #{\mathbb{D}(a, r)} of #{f(z) - f(a)} #{> 0}. So #{f(\mathbb{D}(a, r)) \supseteq \mathbb{D}(f(a), \varepsilon)}.}

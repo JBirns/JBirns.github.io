@@ -1,0 +1,11 @@
+\title{Open set, path, simple path, path connected}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{U \subseteq \mathbb{C}} is \em{open} if for all #{u \in U} there exists #{\varepsilon > 0} such that #{\Delta(u, \varepsilon) := \lbrace z \in \mathbb{C} : |z - u| < \varepsilon\rbrace  \subseteq U}. (Other notation: #{\mathbb{D}(u, \varepsilon)}, #{B(u, \varepsilon)}.)}
+\li{A \em{path} in #{U \subseteq \mathbb{C}} is a continuous map #{\gamma \colon [a, b] \to U}. It is #{C^1} (continuously differentiable) if #{\gamma'} exists and is continuous (with one-sided derivatives at the ends). #{\gamma} is \em{simple} if it is injective.}
+\li{#{U \subseteq \mathbb{C}} is \em{path connected} if for all #{z, w \in U} there exists a path in #{U} with end points at #{z, w}.}
+}

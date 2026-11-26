@@ -1,0 +1,23 @@
+\title{Bounding real integrals}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon [a, b] \to \mathbb{C}} be continuous. Then}
+
+##{\Big| \int_a^b f(t)\,dt \Big| \leq (b - a)\sup_{a \leq t \leq b}|f(t)|,}
+
+\p{with equality iff #{f} is constant.}
+
+\proof{
+\p{Write #{M = \sup_{a \leq t \leq b}|f(t)|}, #{\theta = \arg\big( \int_a^b f(t)\,dt \big)}. Then}
+
+##{\begin{aligned}
+\Big| \int_a^b f(t)\,dt \Big| &= e^{-i\theta}\int_a^b f(t)\,dt = \int_a^b e^{-i\theta}f(t)\,dt \\
+&= \int_a^b \operatorname{Re}(e^{-i\theta}f(t))\,dt \\
+&\leq \int_a^b |f(t)|\,dt \leq M(b - a).
+\end{aligned}}
+
+\p{If we have equality, then #{|f(t)| = M} and #{\arg f(t) \equiv \theta}, so #{f} is constant.}
+}

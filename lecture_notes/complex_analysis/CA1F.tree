@@ -1,0 +1,7 @@
+\title{Constant limits}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{f} need not be non-constant; for example #{f_n(z) = z^n} on #{\mathbb{D}(0, r)}, #{0 < r < 1}. Then #{f_n \to 0} uniformly.}

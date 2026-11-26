@@ -1,0 +1,11 @@
+\title{Morera’s Theorem}
+\taxon{Corollary}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{D} be a disc and #{f \colon D \to \mathbb{C}} continuous such that #{\int_\gamma f = 0} for all closed curves #{\gamma} in #{D}. Then #{f} is holomorphic.}
+
+\proof{
+\p{By the converse of the FTC, there exists a holomorphic #{F} on #{D} with #{F' = f}. So #{f} is holomorphic (as the derivative of a holomorphic function).}
+}

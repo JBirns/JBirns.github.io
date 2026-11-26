@@ -1,0 +1,7 @@
+\title{Polygonal paths}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{U} is open and #{z, w \in U} are connected by a path #{\gamma} in #{U}, then there exists a path #{\tilde{\gamma}} in #{U} connecting #{z, w} which consists of finitely many horizontal and vertical line segments.}

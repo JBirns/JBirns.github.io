@@ -1,0 +1,27 @@
+\title{Cauchy–Riemann equations}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon U \to \mathbb{C}} on an open set #{U \subseteq \mathbb{C}}. Then #{f} is differentiable at #{w = c + id \in U} if and only if, writing #{f = u + iv}, we have #{u, v} are (#{\mathbb{R}^2}-)differentiable at #{(c, d)} and}
+
+##{u_x = v_y, \qquad u_y = -v_x.}
+
+\p{These are the \em{“Cauchy–Riemann equations”}.}
+
+\proof{
+\p{#{f} is differentiable at #{w} #{\iff} #{f'(w) = p + iq} exists}
+
+##{\iff \lim_{z \to w} \frac{f(z) - f(w) - (z - w)(p + iq)}{|z - w|} = 0.}
+
+\p{Writing #{f = u + iv} and considering real and imaginary parts in the quotient above, this holds if and only if}
+
+##{\lim_{(x,y) \to (c,d)} \frac{u(x, y) - u(c, d) - [p(x - c) - q(y - d)]}{\sqrt{(x - c)^2 + (y - d)^2}} = 0}
+
+\p{and}
+
+##{\lim_{(x,y) \to (c,d)} \frac{v(x, y) - v(c, d) - [q(x - c) + p(y - d)]}{\sqrt{(x - c)^2 + (y - d)^2}} = 0.}
+
+\p{This holds if and only if #{u, v} are (#{\mathbb{R}^2}-)differentiable at #{(c, d)} and #{u_x = v_y}, #{u_y = -v_x} holds.}
+}

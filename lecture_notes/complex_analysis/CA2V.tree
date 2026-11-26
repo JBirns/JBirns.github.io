@@ -1,0 +1,19 @@
+\title{Argument Principle}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{\gamma} be a closed curve bounding a domain #{D}, and #{f} a function meromorphic on an open neighbourhood of #{D \cup \gamma}. If #{f} has no zeroes or poles on #{\gamma}, then}
+
+##{I(f \circ \gamma; 0) = \frac{1}{2\pi i}\int_\gamma \frac{f'(z)}{f(z)}\,dz = \#\text{zeroes of } f \text{ in } D - \#\text{poles of } f \text{ in } D,}
+
+\p{where zeroes and poles are counted with multiplicity.}
+
+\proof{
+\p{We have, with #{w = f(z)},}
+
+##{I(f \circ \gamma; 0) = \frac{1}{2\pi i}\int_{f \circ \gamma} \frac{dw}{w} = \frac{1}{2\pi i}\int_\gamma \frac{f'(z)}{f(z)}\,dz.}
+
+\p{By the Residue theorem this is #{\sum_{\text{poles } a \text{ in } D \text{ of } f'/f} \operatorname{Res}_{z=a} \frac{f'}{f}}. By the previous proposition, this is equal to #{\#}zeroes of #{f} in #{D} #{-} #{\#}poles of #{f} in #{D}.}
+}

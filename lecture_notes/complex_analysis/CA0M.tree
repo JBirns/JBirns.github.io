@@ -1,0 +1,17 @@
+\title{Principal logarithm}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{#{\operatorname{Log}(z)} is holomorphic on #{\mathbb{C} \setminus \mathbb{R}_{\leq 0}} with derivative #{\frac{1}{z}}. Moreover, if #{|z| < 1}, then}
+
+##{\operatorname{Log}(1 + z) = \sum_{n=1}^\infty \frac{(-1)^{n-1}z^n}{n}.}
+
+\proof{
+\p{As an inverse, and by the chain rule, #{\operatorname{Log} z} is holomorphic with #{\frac{d}{dz}\operatorname{Log} z = \frac{1}{z}}. We have}
+
+##{\frac{d}{dz}\operatorname{Log}(1 + z) = \frac{1}{1 + z} = 1 - z + z^2 - z^3 + \cdots,}
+
+\p{which is the derivative of #{\sum_{n=1}^\infty \frac{(-1)^{n-1}z^n}{n}}. So #{\operatorname{Log}(1 + z)} agrees with this series up to a constant; since #{\operatorname{Log}(1) = 0}, the equality holds.}
+}

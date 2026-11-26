@@ -1,0 +1,27 @@
+\title{Conformal equivalences}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} (Change of coordinates.) On #{\mathbb{C}}, #{f(z) = az + b}, #{a \neq 0}, is a conformal equivalence from #{\mathbb{C} \to \mathbb{C}}. More generally, a \em{Möbius map}}
+##{f(z) = \frac{az + b}{cz + d}, \quad ad - bc \neq 0,}
+\p{is a conformal equivalence from the Riemann sphere to itself.}
+\p{\em{Riemann sphere:} add a point at #{\infty} to make a sphere #{\mathbb{C}_\infty} (#{\hat{\mathbb{C}}}). The exterior of the unit disc in the plane corresponds to a neighbourhood of #{\infty} on the sphere. Or imagine 2 copies of the unit disc with coordinates #{z}, #{1/z} (see Part II Riemann Surfaces).}
+\ul{
+\li{\strong{(i)} If #{f \colon \mathbb{C}_\infty \to \mathbb{C}_\infty} is continuous then #{f} is holomorphic at #{\infty} #{\iff} #{g(z) = 1/f(1/z)} is holomorphic at #{0}.}
+\li{\strong{(ii)} If #{f(\infty) \neq \infty}: #{f} holomorphic at #{\infty} #{\iff} #{f(1/z)} holomorphic at #{0}.}
+\li{\strong{(iii)} If #{f(a) = \infty}, #{a \in \mathbb{C}}, then #{f} is holomorphic at #{a} #{\iff} #{1/f(z)} is holomorphic at #{a}.}
+}
+\p{Möbius maps are changes of coordinates for the sphere: choosing #{z_1 \mapsto 0}, #{z_2 \mapsto \infty}, #{z_3 \mapsto 1} defines a Möbius map}
+##{f(z) = \frac{z - z_1}{z - z_2} \cdot \frac{z_3 - z_2}{z_3 - z_1}}
+\p{for distinct #{z_1, z_2, z_3 \in \mathbb{C}}.}}
+\li{\strong{(ii)} For #{n \in \mathbb{N}}, #{f(z) = z^n} is a conformal equivalence from the sector #{\lbrace z \in \mathbb{C}^\times : 0 < \operatorname{Arg} z < \frac{\pi}{n}\rbrace } to the upper half plane #{\mathbb{H} = \lbrace z \in \mathbb{C} : \operatorname{Im} z > 0\rbrace }.}
+\li{\p{\strong{(iii)} \em{Claim:} the Möbius map #{f(z) = \frac{z - i}{z + i}} is a conformal equivalence between #{\mathbb{H}} and #{\mathbb{D}(0, 1)}.}
+\p{We can compute #{f'(z) \neq 0} on #{\mathbb{H}}, and #{z \in \mathbb{H}} #{\iff} #{z} is closer to #{i} than #{-i} #{\iff} #{|z - i| < |z + i|} #{\iff} #{|f(z)| < 1}. So #{f} is as claimed. Note: #{f^{-1}(w) = -i\frac{w + 1}{w - 1}}.}}
+}
+
+\p{We can use these examples to write down conformal equivalences. Let #{U_1 = \lbrace z \in \mathbb{D}(0, 1) : \operatorname{Im} z > 0\rbrace } be the upper half disc and #{U_2} the upper half plane #{\mathbb{H}}. Considering #{g(z) = \frac{z + 1}{z - 1}}, which sends #{\mathbb{D}(0, 1)} to the left half plane and #{\mathbb{R} \to \mathbb{R}}, so sends #{U_1} to the upper left quadrant, which is conformally, bijectively mapped by #{w \mapsto w^2} to #{U_2}. So #{f(z) = \big( \frac{z + 1}{z - 1} \big)^2} is a conformal equivalence #{U_1 \to U_2}.}
+
+\p{Google fun: Joukowsky airfoil.}

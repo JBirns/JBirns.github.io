@@ -1,0 +1,13 @@
+\title{Basic properties of contour integrals}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} \em{Linearity:} #{\int_\gamma c_1f_1 + c_2f_2\,dz = c_1\int_\gamma f_1\,dz + c_2\int_\gamma f_2\,dz}.}
+\li{\p{\strong{(ii)} \em{Additivity:} if #{a < a' < b} then}
+##{\int_{\gamma|_{[a, a']}} f(z)\,dz + \int_{\gamma|_{[a', b]}} f(z)\,dz = \int_\gamma f(z)\,dz.}}
+\li{\strong{(iii)} \em{Inverse path:} if #{(-\gamma)(t) := \gamma(-t) \colon [-b, -a] \to U} then #{\int_{-\gamma} f(z)\,dz = -\int_\gamma f(z)\,dz}.}
+\li{\strong{(iv)} \em{Independence of parametrisation:} if #{\phi \colon [a', b'] \to [a, b]} is #{C^1}-smooth, #{\phi(a') = a}, #{\phi(b') = b}, then for #{\delta = \gamma \circ \phi} we have #{\int_\delta f(z)\,dz = \int_\gamma f(z)\,dz}.}
+}

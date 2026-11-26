@@ -1,0 +1,20 @@
+\title{Fundamental Theorem of Calculus}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f \colon U \to \mathbb{C}} be continuous on open #{U \subseteq \mathbb{C}}, with #{F' = f} an antiderivative of #{f} in #{U}. Then for any curve #{\gamma \colon [a, b] \to U},}
+
+##{\int_\gamma f(z)\,dz = F(\gamma(b)) - F(\gamma(a)).}
+
+\p{In particular, if #{\gamma} is closed then #{\int_\gamma f = 0}.}
+
+\proof{
+##{\begin{aligned}
+\int_\gamma f(z)\,dz &= \int_a^b f(\gamma(t))\gamma'(t)\,dt = \int_a^b (F \circ \gamma)'(t)\,dt \\
+&= F(\gamma(b)) - F(\gamma(a))
+\end{aligned}}
+
+\p{by the real FTC.}
+}

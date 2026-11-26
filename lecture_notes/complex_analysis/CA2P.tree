@@ -1,0 +1,37 @@
+\title{#{\int_0^\infty \frac{\sin x}{x}\,dx}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{I = \int_0^\infty \frac{\sin x}{x}\,dx}. Consider}
+
+##{\frac{1}{2i}\int_0^\infty \frac{e^{ix} - e^{-ix}}{x}\,dx = \frac{1}{2i}\int_0^\infty \frac{e^{ix}}{x}\,dx - \frac{1}{2i}\int_0^{-\infty} \frac{e^{it}}{-t}\cdot(-dt) = \frac{1}{2i}\int_{-\infty}^\infty \frac{e^{ix}}{x}\,dx}
+
+\p{(as a principal value). Modify by considering the indented contour #{\gamma_{R,\varepsilon}}: the segment #{[-R, -\varepsilon]}, the small semicircle #{C_\varepsilon'} of radius #{\varepsilon} (traversed clockwise), the segment #{[\varepsilon, R]}, then the large semicircle #{C_R'}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-3,0) -- (3,0);
+\draw[->] (0,-0.4) -- (0,2.8);
+\draw[blue, thick] (2.3,0) arc (0:180:2.3);
+\draw[red, thick] (0.4,0) arc (0:180:0.4);
+\draw[thick] (-2.3,0) -- (-0.4,0) (0.4,0) -- (2.3,0);
+\node[blue] at (2.1,1.8) {$C_R'$};
+\node[red] at (0.55,0.55) {\small $C_\varepsilon'$};
+\node[below] at (-2.3,0) {$-R$};
+\node[below] at (2.3,0) {$R$};
+\node[below] at (-0.45,0) {\small $-\varepsilon$};
+\node[below] at (0.45,0) {\small $\varepsilon$};
+\end{tikzpicture}}
+
+\p{Cauchy’s theorem #{\Rightarrow} #{\int_{\gamma_{R,\varepsilon}} \frac{e^{iz}}{z}\,dz = 0}. Jordan’s lemma #{\Rightarrow} #{\int_{C_R'} \frac{e^{iz}}{z}\,dz \to 0} as #{R \to \infty}. On #{C_\varepsilon'}, #{z = \varepsilon e^{i\theta}}, #{dz = i\varepsilon e^{i\theta}\,d\theta}, so}
+
+##{\int_{C_\varepsilon'} \frac{e^{iz}}{z}\,dz = \int_0^\pi e^{i\varepsilon e^{i\theta}} \cdot i\,d\theta \to i\int_0^\pi 1\,d\theta = \pi i \text{ as } \varepsilon \to 0.}
+
+\p{So}
+
+##{\int_{\gamma_{R,\varepsilon}} \frac{e^{iz}}{z}\,dz = \int_{C_R'} \frac{e^{iz}}{z}\,dz + \int_{-R}^{-\varepsilon} \frac{e^{iz}}{z}\,dz - \int_{C_\varepsilon'} \frac{e^{iz}}{z}\,dz + \int_\varepsilon^R \frac{e^{iz}}{z}\,dz.}
+
+\p{As #{\varepsilon \to 0}, #{R \to \infty}, we obtain #{0 = \int_{-\infty}^\infty \frac{e^{iz}}{z}\,dz - \pi i}, so}
+
+##{\int_0^\infty \frac{\sin x}{x}\,dx = \frac{1}{2i}\pi i = \frac{\pi}{2}.}

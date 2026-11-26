@@ -1,0 +1,47 @@
+\title{Keyhole contour: #{\int_0^\infty \frac{x^{1/3}}{(x + 2)^2}\,dx}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{\int_0^\infty \frac{x^{1/3}}{(x + 2)^2}\,dx}. Let’s define #{\log z = \ln|z| + i\arg z}, #{\arg z \in (0, 2\pi)} (branch cut along the positive real axis), and integrate #{f(z) = \frac{z^{1/3}}{(z + 2)^2}} over the “keyhole contour” #{\gamma}: a large circle #{C_1} of radius #{R}, a small circle #{C_2} of radius #{\varepsilon} (clockwise), and two segments #{L_1} (along #{\arg z = \delta}) and #{L_2} (along #{\arg z = 2\pi - \delta}).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-3,0) -- (3,0);
+\draw[->] (0,-2.8) -- (0,2.8);
+\draw[red, thick] (0,0) -- (2.9,0);
+\draw[blue, thick, ->] (0.45,0.12) -- (2.3,0.4) node[midway, above] {$L_1$};
+\draw[blue, thick, ->] (2.3,0.4) arc (10:350:2.33) node[pos=0.3, above left] {$C_1$};
+\draw[blue, thick, ->] (2.3,-0.4) -- (0.45,-0.12) node[midway, below] {$L_2$};
+\draw[blue, thick] (0.45,-0.12) arc (-15:-345:0.46);
+\node[blue] at (-0.6,0.5) {\small $C_2$};
+\fill (-2,0) circle (1.5pt) node[below] {\small $-2$};
+\end{tikzpicture}}
+
+\p{On #{C_1}: #{\big| \int_{C_1} f\,dz \big| \leq (2\pi - 2\delta)R \cdot \frac{R^{1/3}}{(R - 2)^2} \to 0} as #{R \to \infty}.}
+
+\p{On #{C_2}: #{\big| \int_{C_2} f\,dz \big| \leq (2\pi - 2\delta)\varepsilon \cdot \frac{\varepsilon^{1/3}}{(2 - \varepsilon)^2} \to 0} as #{\varepsilon \to 0}.}
+
+\p{On #{L_1}: #{z = te^{i\delta}}, #{t \in [\varepsilon, R]}, #{dz = e^{i\delta}\,dt}:}
+
+##{\int_\varepsilon^R \frac{t^{1/3}e^{i\delta /3}}{(te^{i\delta} + 2)^2}e^{i\delta}\,dt \to \int_\varepsilon^R \frac{t^{1/3}}{(t + 2)^2}\,dt \text{ as } \delta \to 0.}
+
+\p{On #{L_2}: #{z = te^{i(2\pi - \delta)}}:}
+
+##{\int_\varepsilon^R \frac{t^{1/3}e^{i(2\pi - \delta)/3}}{(te^{i(2\pi - \delta)} + 2)^2}e^{i(2\pi - \delta)}\,dt \to e^{2\pi i/3}\int_\varepsilon^R \frac{t^{1/3}}{(t + 2)^2}\,dt \text{ as } \delta \to 0.}
+
+\p{So we have by the Residue theorem:}
+
+##{O\Big( \frac{1}{R^{2/3}} \Big) - e^{2\pi i/3}\int_\varepsilon^R \frac{t^{1/3}}{(t + 2)^2}\,dt - O(\varepsilon^{4/3}) + \int_\varepsilon^R \frac{t^{1/3}}{(t + 2)^2}\,dt = 2\pi i\operatorname{Res}_{z=-2} \frac{z^{1/3}}{(z + 2)^2}.}
+
+\p{Letting #{\varepsilon \to 0}, #{R \to \infty}:}
+
+##{(1 - e^{2\pi i/3})\int_0^\infty \frac{t^{1/3}}{(t + 2)^2}\,dt = 2\pi i\operatorname{Res}_{z=-2} \frac{z^{1/3}}{(z + 2)^2}.}
+
+\p{Using residue computation trick (iii), this residue is}
+
+##{\frac{d}{dz}\Big|_{z=-2} z^{1/3} = \frac{d}{dz}\Big|_{z=-2} \exp\big( \tfrac{1}{3}\log z \big) = \frac{1}{3z}\exp\big( \tfrac{1}{3}\log z \big) \Big|_{z=-2}.}
+
+\p{So #{\operatorname{Res}_{z=-2} \frac{z^{1/3}}{(z + 2)^2} = -\frac{1}{6}\sqrt[3]{2}e^{\pi i/3}}. We can compute #{\frac{e^{\pi i/3}}{1 - e^{2\pi i/3}} = \frac{i}{\sqrt{3}}}, so}
+
+##{\int_0^\infty \frac{t^{1/3}}{(t + 2)^2}\,dt = \frac{\pi}{3\sqrt{3}}\sqrt[3]{2}.}

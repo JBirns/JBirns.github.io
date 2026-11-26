@@ -1,0 +1,13 @@
+\title{Consequences of isolated zeroes}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} The PIZ says there is no accumulation point of the zero set of a holomorphic map inside its domain, unless #{f \equiv 0}.}
+\li{\p{\strong{(ii)} It is possible for the zeroes of a holomorphic map to accumulate outside its domain:}
+##{\sin z := \frac{e^{iz} - e^{-iz}}{2i} = 0 \iff e^{iz} = e^{-iz},}
+\p{i.e. #{e^{2iz} = 1}, which happens #{\iff z = n\pi}, #{n \in \mathbb{Z}}. So #{\sin(\frac{1}{z})} has zeroes accumulating at #{0} on the boundary of its domain #{\mathbb{C}^\times}.}}
+\li{\strong{(iii)} Another application of the PIZ: since #{\cos^2 z + \sin^2 z = 1} holds for all #{z \in \mathbb{R}}, #{\cos^2 z + \sin^2 z - 1} is entire with #{\mathbb{R} \subseteq \lbrace \text{zero set}\rbrace }. So by the PIZ, #{\cos^2 z + \sin^2 z = 1} for all #{z \in \mathbb{C}}.}
+}

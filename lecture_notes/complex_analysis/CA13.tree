@@ -1,0 +1,28 @@
+\title{Cauchy for triangles, finite exceptional set}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{S \subseteq U} be a finite set and #{f \colon U \to \mathbb{C}} be continuous on all of #{U} and holomorphic on #{U \setminus S}. Then #{\int_{\partial T} f = 0} for all triangles #{T} in #{U}.}
+
+\proof{
+\p{Using triangle subdivision, assume WLOG that #{S = \lbrace a\rbrace }, #{a \in T}. If #{a \in T' \subseteq T} for another triangle #{T'}, then by triangular subdivision and the previous theorem,}
+
+##{\int_{\partial T} f = \int_{\partial T'} f,}
+
+\p{since #{f} is holomorphic on #{T \setminus T'}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=1.2, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw (0,0) -- (3,0) -- (1.5,1.5) -- cycle;
+\draw[blue] (1.2,0.4) -- (1.8,0.4) -- (1.5,0.8) -- cycle;
+\node[text=blue, fill=none, inner sep=0pt] at (1.5,0.53) {\tiny $T'$};
+\draw (0,0) -- (1.2,0.4) (3,0) -- (1.8,0.4) (1.5,1.5) -- (1.5,0.8);
+\end{tikzpicture}}
+
+\p{We have}
+
+##{\Big| \int_{\partial T} f \Big| = \Big| \int_{\partial T'} f \Big| \leq \operatorname{length}(\partial T')\sup_{\partial T'}|f| \leq \operatorname{length}(\partial T')\sup_T|f|,}
+
+\p{so letting #{\operatorname{length}(\partial T') \to 0}, we have #{\int_{\partial T} f = 0}.}
+}

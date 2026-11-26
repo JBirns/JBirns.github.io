@@ -1,0 +1,11 @@
+\title{Antiderivatives on starlike domains}
+\taxon{Lemma}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{U} is a starlike domain, and #{f \colon U \to \mathbb{C}} is continuous with #{\int_{\partial T} f(z)\,dz = 0} for all triangles #{T} in #{U}. Then #{f} has an antiderivative in #{U}.}
+
+\proof{
+\p{Exactly the same, choosing #{\gamma_w} to be the segment from a basepoint #{a_0} of the starlike domain.}
+}

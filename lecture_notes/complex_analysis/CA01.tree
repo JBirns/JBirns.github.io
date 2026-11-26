@@ -1,0 +1,105 @@
+\title{Complex Differentiation}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{\em{Goal:} study the theory of complex-valued differentiable functions in (one) complex variable.}
+
+\ul{
+\li{\strong{(i)} #{p(z) = a_dz^d + \cdots + a_1z + a_0}, polynomials with coefficients in #{\mathbb{R}}, #{\mathbb{Q}}, #{\mathbb{Z}}, #{\mathbb{C}}.}
+\li{\strong{(ii)} Recall from IA Numbers & Sets computing the convergence of #{\sum_{n=1}^\infty \frac{1}{n^2}}, #{\sum_{n=1}^\infty \frac{1}{n^s}}, #{s > 1}. Consider these as complex functions in complex variables.}
+\li{\strong{(iii)} These functions are related to harmonic functions #{u(x, y) \colon \mathbb{R}^2 \to \mathbb{R}}, #{u_{xx} + u_{yy} = 0}.}
+}
+
+\p{\strong{Notation}}
+
+\p{#{z \in \mathbb{C}}, #{z = x + iy} (real and imaginary parts); #{\bar{z}} is the complex conjugate, #{\bar{z} = x - iy}; #{|z|}; #{\arg(z)} or #{\operatorname{Arg}(z)}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw[->] (-1,0) -- (3,0);
+\draw[->] (0,-0.6) -- (0,2.2);
+\draw[->, thick] (0,0) -- (1.4,1.6) node[above right] {$z$};
+\draw (0.7,0) arc (0:49:0.7);
+\node at (0.85,0.35) {$\theta$};
+\node at (-0.7,1.5) {$\mathbb{C}$};
+\end{tikzpicture}}
+
+\p{#{\theta = \arg(z)}; if #{\theta \in \lbrack 0, 2\pi\rparen } then we write #{\operatorname{Arg}(z)}.}
+
+\p{\strong{Basic notions}}
+
+\transclude{CA02}
+
+\transclude{CA03}
+
+\transclude{CA04}
+
+\transclude{CA05}
+
+\transclude{CA06}
+
+\p{Identifying #{\mathbb{C}} with #{\mathbb{R}^2} we may write #{f \colon U \to \mathbb{C}} as #{f(x + iy) = u(x, y) + iv(x, y)} where #{u, v} are the real and imaginary parts of #{f}.}
+
+\p{From IB Analysis & Topology: #{u \colon U \to \mathbb{R}} as a function of two real variables is (#{\mathbb{R}^2}-)differentiable at a point #{(c, d) \in \mathbb{R}^2} with #{Du|_{(c,d)} = (\lambda\; \mu)} if}
+
+##{\frac{u(x, y) - u(c, d) - [\lambda(x - c) + \mu(y - d)]}{\sqrt{(x - c)^2 + (y - d)^2}} \to 0 \quad \text{as } (x, y) \to (c, d).}
+
+\p{This is weaker than what we need here.}
+
+\transclude{CA07}
+
+\transclude{CA08}
+
+\transclude{CA09}
+
+\p{\strong{Caution.} #{f = u + iv} satisfies the Cauchy–Riemann equations at some point #{\not\Rightarrow} #{f} differentiable there; see Example Sheet 1.}
+
+\p{\strong{Exercise.} Let #{f \colon U \to \mathbb{C}} on a domain #{U} with #{f'(z) \equiv 0} on #{U}. Then #{f} is constant. (Sketch: use a nice path and the MVT; see the remark on page 2.)}
+
+\p{\strong{Motivation}}
+
+\ul{
+\li{\em{[Structure]} Unlike #{\mathbb{R}^2}-differentiable functions, holomorphic functions are remarkably constrained: for example, if #{f} is entire and bounded, i.e. #{|f(z)| < M} for all #{z \in \mathbb{C}}, then #{f} is constant. Contrast #{\sin(x)} on #{\mathbb{R}}.}
+\li{\em{[Analyticity]} We’ll see that a holomorphic function on a domain #{U} has holomorphic derivative on #{U}. So #{f} is infinitely differentiable, as are #{u, v}.}
+\li{\p{Differentiating the Cauchy–Riemann equations: #{u_x = v_y}, #{u_y = -v_x} give}
+##{u_{xx} = v_{yx} = v_{xy} = -u_{yy}}
+\p{(using continuous second partials). So #{u_{xx} + u_{yy} = 0}; similarly #{v_{xx} + v_{yy} = 0}. The real and imaginary parts of holomorphic functions are \em{harmonic}.}}
+\li{\p{\em{[Conformity]} Let #{f \colon U \to \mathbb{C}} be a holomorphic function on an open set #{U}, and #{w \in U} with #{f'(w) \neq 0}. What is the geometric behaviour of #{f} at #{w}? \em{Claim:} #{f} is conformal at #{w}.}
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, every node/.append style={fill=white, inner sep=1.5pt}]
+\draw[thick] plot[smooth cycle] coordinates {(0,0) (1.8,1.0) (3.8,0.6) (4.2,-1.1) (2.4,-2.1) (0.3,-1.5)};
+\node at (4.35,1.0) {$U$};
+\draw (0.5,-0.4) .. controls (1.2,-0.8) .. (1.8,-0.6) .. controls (2.4,-0.4) .. (2.8,-0.2) node[right=2pt] {$\gamma_1$};
+\draw (1.2,-1.6) .. controls (1.6,-1.1) .. (1.8,-0.6) .. controls (1.95,-0.2) .. (1.9,0.4) node[right=2pt] {$\gamma_2$};
+\fill (1.8,-0.6) circle (1.5pt) node[below right=1pt] {$w$};
+\draw[->] (4.6,-0.6) -- (5.5,-0.6) node[midway, above] {$f$};
+\begin{scope}[shift={(5.9,0)}]
+\draw[thick] plot[smooth cycle] coordinates {(0,0) (1.8,1.0) (3.8,0.6) (4.2,-1.1) (2.4,-2.1) (0.3,-1.5)};
+\node at (4.55,1.0) {$f(U)$};
+\draw (0.5,-1.0) .. controls (1.2,-0.7) .. (1.8,-0.6) .. controls (2.4,-0.55) .. (2.8,-0.2) node[right=2pt] {$f(\gamma_1)$};
+\draw (1.0,-1.7) .. controls (1.6,-1.1) .. (1.8,-0.6) .. controls (1.85,-0.2) .. (1.7,0.4) node[right=2pt] {$f(\gamma_2)$};
+\fill (1.8,-0.6) circle (1.5pt) node[below right=1pt] {$f(w)$};
+\end{scope}
+\end{tikzpicture}}
+\p{#{\gamma_1, \gamma_2} are #{C^1}-paths through #{w}, #{\gamma_1, \gamma_2 \colon [-1, 1] \to U}, #{\gamma_1(0) = \gamma_2(0) = w}, #{\gamma_j'(0) \neq 0}. Write #{\gamma_j(t) = w + r_j(t)e^{i\theta_j(t)}}, #{j = 1, 2}. We have #{\operatorname{Arg}(\gamma_j'(0)) = \theta_j(0)} and}
+##{\begin{aligned}
+\operatorname{Arg}\big( (f \circ \gamma_j)'(0) \big) &= \operatorname{Arg}\big( \gamma_j'(0)f'(\gamma_j(0)) \big) \\
+&= \operatorname{Arg}(\gamma_j'(0)) + \operatorname{Arg}(f'(w)) + 2\pi n, \quad n \in \mathbb{Z},
+\end{aligned}}
+\p{since #{\gamma_j'(0)f'(\gamma_j(0)) \neq 0}. So the direction of #{\gamma_j} at #{w} under application of #{f} is rotated by #{\operatorname{Arg}(f'(w))}, independent of #{\gamma_j}. Since the angle between #{\gamma_1} and #{\gamma_2} is a difference of arguments, #{f} preserves this angle.}}
+}
+
+\transclude{CA0A}
+
+\transclude{CA0B}
+
+\transclude{CA0C}
+
+\p{These are all examples of the deep Riemann Mapping Theorem (proved in Part II Riemann Surfaces).}
+
+\transclude{CA0D}
+
+\transclude{CA0E}
+
+\transclude{CA0F}
+
+\transclude{CA0G}

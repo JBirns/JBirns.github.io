@@ -15,6 +15,8 @@ can use them, inside or outside of math.
 \def\id{\mathrm{id}}
 \def\set[x]{\lbrace \x \rbrace}
 
+\def\topic[t]{\p{\em{Topic: \t}}}
+
 % End-of-proof box, right-aligned. Also usable on its own: \qed
 \def\qed{\<html:div>[style]{text-align: right;}{#{\blacksquare}}}
 

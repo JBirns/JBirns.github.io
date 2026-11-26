@@ -1,0 +1,15 @@
+\title{Uniform limits of integrals}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{If #{f_n \colon U \to \mathbb{C}} for #{n \in \mathbb{N}} and #{f \colon U \to \mathbb{C}} are continuous, and #{\gamma \colon [a, b] \to U} is a curve in #{U} with #{f_n \to f} uniformly on #{\gamma}, then}
+
+##{\int_\gamma f_n(z)\,dz \to \int_\gamma f(z)\,dz \quad \text{as } n \to \infty.}
+
+\proof{
+\p{By uniform convergence, #{\sup_{z \in \gamma}|f(z) - f_n(z)| \to 0} as #{n \to \infty}. By the previous proposition,}
+
+##{\Big| \int_\gamma f(z)\,dz - \int_\gamma f_n(z)\,dz \Big| \leq \operatorname{length}(\gamma)\sup_\gamma|f - f_n| \to 0 \text{ as } n \to \infty.}
+}

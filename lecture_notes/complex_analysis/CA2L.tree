@@ -1,0 +1,43 @@
+\title{#{\int_{-\infty}^\infty \frac{\cos x}{1 + x + x^2}\,dx}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Compute #{\int_{-\infty}^\infty \frac{\cos x}{1 + x + x^2}\,dx}.}
+
+\p{Note: #{\cos z = \frac{e^{iz} + e^{-iz}}{2} = \frac{e^{ix - y} + e^{-ix + y}}{2}}, which grows in both half planes. However #{e^{ix} = \cos x + i\sin x}, so the function #{\frac{e^{iz}}{1 + z + z^2}} has real part #{\frac{\cos x}{1 + x + x^2}} on #{\mathbb{R}}. Notice that #{e^{i(x + iy)} = e^{ix - y}}, so this function is bounded above by #{1} in modulus for #{y \geq 0}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-2.8,0) -- (2.8,0);
+\draw[->] (0,-0.5) -- (0,2.6);
+\draw[blue, thick, ->] (-2,0) -- (2,0);
+\draw[red, thick, ->] (2,0) arc (0:180:2);
+\node[red] at (1.9,1.5) {$C_R'$};
+\node[below] at (-2,0) {$-R$};
+\node[below] at (2,0) {$R$};
+\node at (-0.5,0.87) {$\times$};
+\node[blue] at (1.2,-0.5) {$\gamma_R$};
+\end{tikzpicture}}
+
+\p{The roots of #{1 + z + z^2} are #{e^{2\pi i/3}, e^{4\pi i/3}}; #{\gamma_R} winds around #{e^{2\pi i/3}} with winding number #{1} (and around #{e^{4\pi i/3}} with winding number #{0}).}
+
+##{\int_{\gamma_R} \frac{e^{iz}}{1 + z + z^2}\,dz = \underbrace{\int_{C_R'} \frac{e^{iz}}{1 + z + z^2}\,dz}_{I_1} + \underbrace{\int_{-R}^R \frac{e^{iz}}{1 + z + z^2}\,dz}_{I_2},}
+
+##{|I_1| \leq \operatorname{length}(C_R') \cdot \frac{1}{R^2 - R - 1} = \frac{\pi R}{R^2 - R - 1} \to 0 \text{ as } R \to \infty.}
+
+\p{We have}
+
+##{\operatorname{Res}_{z=e^{2\pi i/3}} \frac{e^{iz}}{1 + z + z^2} = \frac{\exp(ie^{2\pi i/3})}{1 + 2e^{2\pi i/3}}.}
+
+\p{So as #{R \to \infty},}
+
+##{I_2 \to 2\pi i\Big[ \frac{e^{ie^{2\pi i/3}}}{1 + 2e^{2\pi i/3}} \Big] - 0.}
+
+\p{#{e^{2\pi i/3} = -\frac{1}{2} + \frac{\sqrt{3}}{2}i}, so #{1 + 2e^{2\pi i/3} = \sqrt{3}i}, and #{e^{ie^{2\pi i/3}} = e^{i(-\frac{1}{2} + \frac{\sqrt{3}}{2}i)} = e^{-i/2}e^{-\sqrt{3}/2}}. So as #{R \to \infty},}
+
+##{I_2 \to 2\pi i\Big[ \frac{e^{-i/2}e^{-\sqrt{3}/2}}{\sqrt{3}i} \Big] = \frac{2\pi}{\sqrt{3}}e^{-\sqrt{3}/2}e^{-i/2}.}
+
+\p{So}
+
+##{\int_{-\infty}^\infty \frac{\cos x}{1 + x + x^2}\,dx = \operatorname{Re}\Big( \frac{2\pi}{\sqrt{3}}e^{-\sqrt{3}/2}e^{-i/2} \Big) = \frac{2\pi}{\sqrt{3}}e^{-\sqrt{3}/2}\cos\big( -\tfrac{1}{2} \big).}

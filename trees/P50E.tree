@@ -5,19 +5,77 @@
 %%%%%%%%%%%%%%%%%%%\taxon{Blog Post}
 \tag{blog}
 \import{names}
+\topic{Maths}
 
-\p{
-  There's a notion that turns up with some frequency in the study of polynomials and sequences that arise in combinatorial studies:
-}
-\transclude{BMUU}
+\subtree{\title{Introduction}
 
-\p{When I first came across this notion, I thought it somewhat whimiscal --- a property that was studied because mathematicians like things that exhibit patterns and have some kind of pleasant aethetic. There are a number of unimodality results and conjectures in the literature, notably}
+  \p{
+    There's a notion that turns up with some frequency in the study of polynomials and sequences that arise in combinatorial studies:
+  }
+  \transclude{BMUU}
 
-\scope{\put\transclude/expanded{false}
+  \p{When I first came across this notion, I thought it somewhat whimiscal --- a property that was studied because mathematicians like things that exhibit patterns and have some kind of pleasant aethetic. There are a number of unimodality results and conjectures in the literature, notably}
+
+  \scope{\put\transclude/expanded{false}
+    \subtree{\taxon{Theorem} \title{The chromatic polynomial of a graph is unimodal.}}
+    \transclude{001Z}
+    \transclude{0020}
+  }
+
+  \p{It turns out this is not just a pretty property, but rather, when systematically present, it is indicative of some underlying structure. We will look at three main examples of this. First, however, we must meet two stronger conditions than unimodality, as they will be useful later.}
+
+  \transclude{\logconcave}
+  \p{It is in fact the case that a stronger statement than Theorem 1.2 holds, from which it follows by the above.}
+  \scope{\put\transclude/expanded{false}
   \transclude{001Y}}
-  \subtree{\taxon{Remark} \p{The notion of \em{log-concavity} may make some appearances, this is a condition that implies unimodality.}}
-\scope{\put\transclude/expanded{false}
-\transclude{\logconcave}
-  \transclude{001Z}
-  \transclude{0020}
+  \subtree{\taxon{Definition}\title{Real-Rootedness} \p{
+    A sequence is said to be \em{real-rooted} if the polynomial with coefficients given by the sequence has only real roots.
+  }
+  \subtree{
+    \taxon{Theorem} \p{Real-rooted sequences are log-concave and thus unimodal.}
+  }}
+
+}
+
+\subtree{\title{Symmetric Unimodal Sequences and the Hard Lefschetz Property}
+  \p{Being somewhat reductive, a lot of very deep mathematics in number theory (such as aspects of the Langlands program) come from understanding the naturals not as "numbers" as an end in themselves but rather as a small piece of information relating to a larger, structured object. In particular, it is often helpful to consider a natural number as being the dimension of some vector space; this is exactly what we shall do in this discussion.}
+
+  \p{Beforehand, however, we will use a simple illustrative example to motivate our the general approach.}
+
+  \subtree{
+    \title{The Boolean Lattice #{B_n}}
+    \taxon{Example}
+    \p{Consider the poset #{B_n} formed of all of the subsets of #{[n]} ordered by inclusion. This is a graded poset with the rank of #{S} being its size. For concreteness let us set #{n=4}. Observe that we can make the following partition of #{B_4} into chains:}
+    ##{\begin{align*}
+      \varnothing\subset \{1\}\subset &\{1,2\}\subset\{1,2,3\}\subset\{1,2,3,4\}\\
+      \{2\}\subset &\{2,3\}\subset\{2,3,4\}\\
+      \{3\}\subset &\{3,4\}\subset\{1,3,4\}\\
+      \{4\}\subset &\{1,4\}\subset\{1,2,4\}\\
+      &\{1,3\}\\
+      &\{2,4\}
+    \end{align*}}
+    \p{Now, observe further that not only can the poset be decomposed into chains, but that this decomposition is "symmetric" in the sense that the central rank of the poset is #{2}, and all the chains go from rank #{2-i} to #{2+i} for some #{i}.}
+  }
+
+  \p{
+    Given the many natural symmetries of #{B_n} the existence of chain decompositions is unsurprising. What may be surprising is that this is not a special case, it is just an application of a general phenomenon for symmetric unimodal sequences.
+  }
+
+  \p{To avoid derailing this discussion further (going into e.g. Grassmannians or the represemtation theory of #{\mathfrak{sl}_2}), we will settle for the following: Given a symmetric unimodal sequence, we will construct a poset of vector spaces which exhibits a symmetric chain decomposition like the example above.}
+
+  \p{Let #{(a_i)_{i=1}^n} be a unimodal sequence which is also \em{symmetric}, so #{a_i=a_{n-i}} for all #{i}. 
+  } 
+}
+
+
+\subtree{\title{Real-Rootedness and Bernoulli Variables}
+
+
+}
+
+\subtree{\title{Hodge Theoretic Approach}
+\p{The most modern view of these results is where [Theorem 1.6](001Y) comes from. Indeed, the statment of the theorem follows without much work from showing that the chromatic polynomial of a graph is the characteristic polynomial of the associated graphic matroid... The real work is showing the stronger result which is that the characteristic polynomial of any matroid is log-concave (N.B. June Huh actually proved the result for chromatic polynomials first, it was then extended to all matroids subsequently in the cited joint work). This is the main thrust of Adiprasito, Huh, and Katz's work; [Joshua Wang](https://joshwang.space/) has produced an excellent [exposition](https://people.math.harvard.edu/~jxwang/HodgeTheoryMatroids.pdf) of this work at a fairly accessible level.}
+
+\p{Matroids are
+} 
 }

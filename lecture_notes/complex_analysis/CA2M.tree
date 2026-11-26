@@ -1,0 +1,26 @@
+\title{Jordan’s Lemma}
+\taxon{Lemma}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Suppose #{f(z)} is holomorphic on #{\lbrace |z| > r\rbrace } for some #{r > 0}, and #{zf(z)} is bounded. Then for all #{\alpha > 0}, we have}
+
+##{\int_{C_R'} f(z)e^{i\alpha z}\,dz \to 0 \text{ as } R \to \infty,}
+
+\p{where #{C_R' \colon [0, \pi] \to \mathbb{C}}, #{C_R'(t) = Re^{it}}.}
+
+\proof{
+\p{We have for #{z = Re^{it}} that #{|e^{i\alpha z}| = e^{-\alpha R\sin t}}, and so using the basic estimate #{\frac{\sin t}{t} \geq \frac{2}{\pi}} on #{[0, \frac{\pi}{2}]} (since #{\frac{\sin t}{t}} decreases on #{[0, \frac{\pi}{2}]}) we have}
+
+##{|e^{i\alpha z}| \leq \begin{cases} e^{-\alpha R \cdot 2t/\pi} & \text{for } t \in [0, \frac{\pi}{2}], \\ e^{-\alpha R \cdot 2t'/\pi} & \text{for } t' = \pi - t,\; t \in [\frac{\pi}{2}, \pi]. \end{cases}}
+
+\p{By hypothesis, there exists #{M \in \mathbb{R}} such that #{|zf(z)| \leq M}. Putting these together, let #{\tilde{C}_R'} be #{C_R'} restricted to #{[0, \frac{\pi}{2}]}:}
+
+##{\begin{aligned}
+\Big| \int_{\tilde{C}_R'} f(z)e^{i\alpha z}\,dz \Big| &\leq \int_0^{\pi /2} M \cdot e^{-\alpha R \cdot 2t/\pi}\,dt = M\Big( -\frac{1}{\alpha R \cdot \frac{2}{\pi}}e^{-\alpha R \cdot \frac{2t}{\pi}} \Big)\Big|_{t=0}^{t=\pi /2} \\
+&= \frac{(1 - e^{-\alpha R})\pi M}{2R\alpha} \to 0 \text{ as } R \to \infty.
+\end{aligned}}
+
+\p{Similarly for #{t \in [\frac{\pi}{2}, \pi]}.}
+}

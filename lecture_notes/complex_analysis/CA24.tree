@@ -1,0 +1,67 @@
+\title{Laurent expansion}
+\taxon{Theorem}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f} be holomorphic on an annulus #{A = \lbrace z \in \mathbb{C} : r < |z - a| < R\rbrace } where #{0 \leq r < R \leq \infty}. Then:}
+
+\ul{
+\li{\p{\strong{(i)} #{f} has a (unique) convergent expansion on #{A}:}
+##{f(z) = \sum_{n=-\infty}^\infty c_n(z - a)^n \quad \text{``Laurent series''};}}
+\li{\p{\strong{(ii)} for any #{r < \rho < R}, we have}
+##{c_n = \frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} \frac{f(z)}{(z - a)^{n+1}}\,dz;}}
+\li{\strong{(iii)} if #{r < \rho' \leq \rho < R}, the Laurent series converges uniformly on #{\lbrace z \in \mathbb{C} : \rho' \leq |z - a| \leq \rho\rbrace }.}
+}
+
+\proof{
+\p{Fix #{w \in A}, and choose #{r < \rho_1 < |w - a| < \rho_2 < R}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[dashed] (0,0) circle (2.4);
+\draw[dashed] (0,0) circle (0.6);
+\draw[blue] (0,0) circle (1.0);
+\draw[blue] (0,0) circle (1.9);
+\fill (0,0) circle (1.2pt) node[below] {$a$};
+\fill (0.6,1.4) circle (1.2pt) node[right] {$w$};
+\draw[red, thick, ->] (0,-1.9) arc (-90:90:1.9);
+\draw[red, thick] (0,1.9) -- (0,1.0);
+\draw[red, thick, ->] (0,1.0) arc (90:-90:1.0);
+\draw[red, thick] (0,-1.0) -- (0,-1.9);
+\node[red] at (1.4,-1.6) {$\gamma_1$};
+\draw[gray, thick, ->] (0,1.9) arc (90:270:1.9);
+\draw[gray, thick, ->] (0,-1.0) arc (270:90:1.0);
+\node[gray] at (-1.5,1.5) {$\gamma_2$};
+\node[blue] at (0.95,0.35) {\small $\rho_1$};
+\node[blue] at (1.7,1.25) {\small $\rho_2$};
+\node at (2.0,-1.8) {$R$};
+\end{tikzpicture}}
+
+\p{Define 2 closed curves #{\gamma_1, \gamma_2} by a diameter of the annulus, labelled such that #{I(\gamma_1; w) = 1}, #{I(\gamma_2; w) = 0}: #{\gamma_1, \gamma_2} are both homologous to zero in #{A}, so by the generalised CIF we have}
+
+##{f(w) = \frac{1}{2\pi i}\int_{\gamma_1} \frac{f(z)}{z - w}\,dz = \frac{1}{2\pi i}\int_{\gamma_1 + \gamma_2} \frac{f(z)}{z - w}\,dz.}
+
+\p{Travelling #{\gamma_1 + \gamma_2} is the same as travelling #{\partial\mathbb{D}(a, \rho_2) - \partial\mathbb{D}(a, \rho_1)}. So}
+
+##{f(w) = \underbrace{\frac{1}{2\pi i}\int_{|z - a| = \rho_2} \frac{f(z)}{z - w}\,dz}_{I_2} \underbrace{- \frac{1}{2\pi i}\int_{|z - a| = \rho_1} \frac{f(z)}{z - w}\,dz}_{I_1}.}
+
+\p{Using the same geometric series for #{\frac{1}{1 - \frac{w - a}{z - a}}} to compute #{I_2} as in the Taylor series case gives}
+
+##{I_2 = \sum_{n=0}^\infty c_n(w - a)^n, \quad \text{where } c_n = \frac{1}{2\pi i}\int_{|z - a| = \rho_2} \frac{f(z)}{(z - a)^{n+1}}\,dz \text{ for } n \geq 0.}
+
+\p{For #{I_1}, using the expansion (since #{|z - a| < |w - a|})}
+
+##{\frac{-1}{z - w} = \frac{1/(w - a)}{1 - \frac{z - a}{w - a}} = \sum_{m=1}^\infty \frac{(z - a)^{m-1}}{(w - a)^m}}
+
+\p{gives #{I_1 = \sum_{m=1}^\infty d_m(w - a)^{-m}}, where}
+
+##{d_m = \frac{1}{2\pi i}\int_{|z - a| = \rho_1} \frac{f(z)}{(z - a)^{-m+1}}\,dz \quad \forall m \geq 1.}
+
+\p{Reindexing with #{n = -m}, we obtain the Laurent expansion of #{f}.}
+
+\p{To show (ii), (iii), suppose #{f(z) = \sum_{n=-\infty}^\infty c_n(z - a)^n} on #{A}, and let #{r < \rho' \leq \rho < R}. The nonnegative power series #{\sum_{n=0}^\infty c_n(z - a)^n} has radius of convergence #{\geq R}, so converges uniformly on #{\overline{\mathbb{D}(a, \rho)}}. Similarly if #{u = \frac{1}{z - a}}, then the negative part of the Laurent expansion, #{\sum_{n=1}^\infty c_{-n}u^n}, has radius of convergence #{\geq \frac{1}{r}}, so converges uniformly on #{\lbrace |z - a| \geq \rho'\rbrace }. So the Laurent series converges uniformly on #{\rho' \leq |z - a| \leq \rho}, so we can integrate term by term:}
+
+##{\frac{1}{2\pi i}\int_{\partial\mathbb{D}(a, \rho)} \frac{f(z)}{(z - a)^{m+1}}\,dz = \frac{1}{2\pi i}\sum_{n=-\infty}^\infty c_n\int_{\partial\mathbb{D}(a, \rho)} (z - a)^{n-m-1}\,dz = c_m,}
+
+\p{since the integral is #{0} unless #{n - m - 1 = -1}, in which case it is #{2\pi i}.}
+}

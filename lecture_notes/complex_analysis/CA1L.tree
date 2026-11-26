@@ -1,0 +1,21 @@
+\title{Identity theorem for holomorphic functions}
+\taxon{Proposition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f, g \colon U \to \mathbb{C}} be holomorphic on a domain #{U}. Let #{S := \lbrace z \in U : f(z) = g(z)\rbrace }. If #{S} has a non-isolated point (i.e. there exists #{w \in S} such that for all #{\varepsilon > 0}, #{(\mathbb{D}(w, \varepsilon) \setminus \lbrace w\rbrace ) \cap S \neq \emptyset}), then #{f(z) = g(z)} for all #{z \in U}.}
+
+\proof{
+\p{Define #{h(z) = f(z) - g(z)}, holomorphic on #{U}, and suppose #{w} is non-isolated in #{S}. Then for #{\varepsilon > 0} with #{\mathbb{D}(w, \varepsilon) \subseteq U}, the PIZ #{\Rightarrow} #{h \equiv 0} on #{\mathbb{D}(w, \varepsilon)}.}
+
+\p{Given #{z \in U}, let #{\gamma \colon [0, 1] \to U} be a path with #{\gamma(0) = w}, #{\gamma(1) = z}. Consider the set}
+
+##{T := \lbrace t \in [0, 1] : h^{(n)}(\gamma(t)) = 0 \; \forall n \geq 0\rbrace ;}
+
+\p{note #{T} is closed by definition (and continuity). Since #{h \equiv 0} on #{\mathbb{D}(w, \varepsilon)}, #{0 \in T}, so #{T} is non-empty. Define}
+
+##{t_0 := \sup\lbrace t' \in [0, 1] : t \in T \; \forall t \leq t'\rbrace .}
+
+\p{#{T} is closed and non-empty so #{t_0 \in T}. Since #{h^{(n)}(\gamma(t_0)) = 0} for all #{n \geq 0}, by Taylor expansion #{h \equiv 0} on a neighbourhood of #{\gamma(t_0)}, contradicting the maximality of #{t_0}, unless #{t_0 = 1}. So #{h(\gamma(1)) = 0}, i.e. #{h(z) = 0} as claimed.}
+}

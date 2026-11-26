@@ -1,0 +1,11 @@
+\title{Simply connected or not}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\mathbb{D}(a, R) \subseteq \mathbb{C}} has a disc as complement in #{\mathbb{C}_\infty}, so is simply connected.}
+\li{\strong{(ii)} [(2+3)] Convex and starlike domains are simply connected.}
+\li{\strong{(iii)} [(4)] Annuli are not simply connected: the complement in #{\mathbb{C}_\infty} has two components (the inner disc and a neighbourhood of #{\infty}).}
+}

@@ -1,0 +1,22 @@
+\title{#{\int_0^{2\pi} \frac{d\theta}{5 + 4\cos\theta}}}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Evaluate #{\int_0^{2\pi} \frac{1}{5 + 4\cos\theta}\,d\theta}. Let’s use #{\cos\theta = \frac{1}{2}[e^{i\theta} + e^{-i\theta}]}, so #{\cos\theta = \frac{1}{2}(z + \frac{1}{z})} for #{z = e^{i\theta}}. So #{dz = ie^{i\theta}\,d\theta = iz\,d\theta}, and}
+
+##{\begin{aligned}
+\int_0^{2\pi} \frac{1}{5 + 4\cos\theta}\,d\theta &= \int_{|z|=1} \frac{1}{5 + 4\big( \frac{z + 1/z}{2} \big)}\frac{dz}{iz} = \frac{1}{i}\int_{|z|=1} \frac{1}{2z^2 + 5z + 2}\,dz \\
+&= -i\int_{|z|=1} \frac{1}{(2z + 1)(z + 2)}\,dz.
+\end{aligned}}
+
+\p{The unit circle has winding number #{1} around the pole #{z = -\frac{1}{2}} (and #{0} around #{z = -2}). The CIF applied to #{\frac{1}{2(z + 2)}} says}
+
+##{\frac{1}{2(-\frac{1}{2} + 2)} = \frac{1}{2\pi i}\int_{|z|=1} \frac{1}{2(z + 2)(z + \frac{1}{2})}\,dz,}
+
+\p{so}
+
+##{\frac{2\pi i}{3} = \int_{|z|=1} \frac{1}{2z^2 + 5z + 2}\,dz = i\int_0^{2\pi} \frac{1}{5 + 4\cos\theta}\,d\theta,}
+
+\p{so #{\int_0^{2\pi} \frac{1}{5 + 4\cos\theta}\,d\theta = \frac{2\pi}{3}}.}

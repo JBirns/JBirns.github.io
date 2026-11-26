@@ -1,0 +1,15 @@
+\title{Counting roots with Rouché}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Consider #{p(z) = z^4 + 6z + 3}. If #{|z| \geq 2}, then #{|z^3 + 6 + 3/z| \geq |z|^3 - 6 - \frac{3}{|z|} > 0}, so #{p(z) = z(z^3 + 6 + 3/z) \neq 0}.}
+
+\p{We could instead apply Rouché’s with #{\gamma \colon |z| = 2}, #{f(z) = z^4}, #{g(z) = 6z + 3}, so}
+
+##{|z|^4 = 16 > 15 = 6|z| + 3 \geq |6z + 3|.}
+
+\p{By Rouché’s, #{p(z)} has #{4} zeroes inside #{\mathbb{D}(0, 2)}.}
+
+\p{For #{|z| = 1}, #{|6z| = 6} and #{|z^4 + 3| \leq 4}. So using #{\gamma \colon |z| = 1}, #{f(z) = 6z}, #{g(z) = z^4 + 3}, we see #{p(z)} has #{1} zero inside #{\mathbb{D}(0, 1)}. Note this #{\Rightarrow} #{p(z)} has a real root, since roots come in complex conjugate pairs for polynomials over #{\mathbb{R}}.}

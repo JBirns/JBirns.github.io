@@ -1,0 +1,7 @@
+\title{Locally uniform convergence}
+\taxon{Definition}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\p{Let #{U \subseteq \mathbb{C}} be open, and #{f_n \colon U \to \mathbb{C}} a sequence of functions. Then #{f_n \to f} \em{converges locally uniformly} on #{U} if for all #{a \in U} there exists #{\mathbb{D}(a, r) \subseteq U} on which #{f_n \to f} uniformly.}

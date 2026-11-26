@@ -1,0 +1,10 @@
+\title{Inverses of conformal equivalences}
+\taxon{Remark}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} (Sheet 1.) Using the real inverse function theorem, one can show if #{f \colon U \to V} is a holomorphic bijection of open sets with #{f'(z) \neq 0} for all #{z \in U}, then the inverse of #{f} is also holomorphic, so also conformal by the chain rule. So conformally equivalent domains are the same from the perspective of the holomorphic functions they admit.}
+\li{\strong{(ii)} We will see later that injective and holomorphic on a domain #{\Rightarrow} #{f'(z) \neq 0} for all #{z \in U}, so this requirement is redundant.}
+}

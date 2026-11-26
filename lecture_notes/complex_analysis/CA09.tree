@@ -1,0 +1,11 @@
+\title{Holomorphic and non-holomorphic functions}
+\taxon{Example}
+\date{2023-01-15}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{f(z) = \bar{z}}. #{f} has #{u(x, y) = x}, #{v(x, y) = -y}, so #{u_x = 1}, #{v_y = -1}. So complex conjugation is not holomorphic or differentiable anywhere.}
+\li{\strong{(ii)} Any polynomial #{p(z) = a_dz^d + \cdots + a_1z + a_0} with #{a_i \in \mathbb{C}} is entire.}
+\li{\strong{(iii)} Rational functions: a quotient of polynomials #{\frac{p(z)}{q(z)}} is holomorphic on #{\mathbb{C} \setminus \lbrace \text{zeroes of } q\rbrace }.}
+}
