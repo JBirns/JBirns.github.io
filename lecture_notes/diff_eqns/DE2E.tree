@@ -1,0 +1,22 @@
+\title{Abel’s Theorem}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given any two solutions of #{y'' + p(x)y' + q(x)y = 0}, if #{p(x)} and #{q(x)} are continuous functions on an interval #{I}, then either #{W(x) = 0} for all #{x \in I} or #{W(x) \neq 0} for all #{x \in I}.}
+
+\proof{
+\p{\em{Proof (sketch).} #{W = y_1y_2' - y_2y_1'}, so}
+
+##{\begin{aligned}
+W' &= y_1y_2'' - y_2y_1'' = y_2(p(x)y_1' + q(x)y_1) - y_1(p(x)y_2' + q(x)y_2) \\
+&= p(x)(y_2y_1' - y_1y_2') = -p(x)W.
+\end{aligned}}
+
+\p{This is a separable ODE for #{W}:}
+
+##{W(x) = W(x_0)\underbrace{\exp\Big( -\int_{x_0}^x p(u)\,du \Big)}_{\text{never zero}} \quad \text{``Abel's identity''}.}
+
+\p{If #{W(x) = 0} at some point #{x_0}, then it is zero for all #{x}; else it is never #{0}.}
+}

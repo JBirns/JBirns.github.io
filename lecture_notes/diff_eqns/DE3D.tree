@@ -1,0 +1,11 @@
+\title{Signature of #{\mathsf{H}}}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The \em{signature} of #{\mathsf{H}} is the pattern of signs of the ordered determinants of the leading principal minors of the matrix #{\mathsf{H}}: e.g. for #{f(x_1, x_2, \ldots, x_n)},}
+
+##{|\mathsf{H}| = \begin{vmatrix} f_{x_1x_1} & \cdots & f_{x_1x_n} \\ \vdots & \ddots & \vdots \\ f_{x_nx_1} & \cdots & f_{x_nx_n} \end{vmatrix} = |\mathsf{H}_n|, \; \ldots, \; \underbrace{\begin{vmatrix} f_{x_1x_1} & f_{x_1x_2} \\ f_{x_2x_1} & f_{x_2x_2} \end{vmatrix}}_{|\mathsf{H}_2|}, \; \underbrace{|f_{x_1x_1}|}_{|\mathsf{H}_1|};}
+
+\p{read this way (from #{|\mathsf{H}_1|} upwards) and look at the signs.}

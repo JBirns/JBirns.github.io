@@ -6,7 +6,8 @@
 
 \p{These notes are based on lectures given by Professor [Henrik Latter](https://www.damtp.cam.ac.uk/user/hl278/) and are not endorsed by him. This course is self-contained including the [examples sheets](https://www.damtp.cam.ac.uk/user/examples/).}
 
-\transclude{0023}
+\scope{\put\transclude/toc{false}
+\transclude{0023}}
 
 \ol{
     \li{[[AM01]]}

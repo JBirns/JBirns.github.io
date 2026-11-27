@@ -1,0 +1,42 @@
+\title{Logistic map}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{x_{n+1} = \underbrace{rx_n(1 - x_n)}_{f(x_n)}:}
+
+\p{the “discrete logistic equation” or “logistic map” [c.f. #{\frac{dx}{dt} = \lambda x(1 - x)}]. We are interested in #{x_n \geq 0}. If #{r < 4}, #{\lbrace x_n\rbrace } stay in the range #{0 \leq x_n \leq 1}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (5,0) node[right] {$x_n$};
+\draw[->] (0,0) -- (0,2.4) node[above] {$f(x_n)$};
+\draw[thick, domain=0:3.6, samples=40] plot (\x , {1.5*\x *(3.6-\x)/3.24});
+\draw (-0.07,1.5) -- (0.07,1.5) node[left=3pt] {$\frac{r}{4}$};
+\node[below left] at (0,0) {$0$};
+\node[below] at (3.6,0) {$1$};
+\end{tikzpicture}}
+
+\p{Fixed points: #{x_n = rx_n(1 - x_n) \Rightarrow x_n = 0} and #{x_n = 1 - \frac{1}{r}} (only in #{x_n \geq 0} for #{r \geq 1}). Stability:}
+
+##{f'(x) = r(1 - 2x) = \begin{cases} r & \text{at } x = 0, \\ 2 - r & \text{at } x = 1 - \frac{1}{r}. \end{cases}}
+
+\ul{
+\li{F.P. at #{x = 0}: stable for #{0 < r < 1}, unstable for #{r > 1}.}
+\li{F.P. at #{x = 1 - \frac{1}{r}}: stable for #{1 < r < 3}, unstable for #{r > 3}.}
+}
+
+\p{Illustrate with “cobweb diagrams” [details non-examinable]. For #{0 < r < 1}, iterates converge to #{x_n = 0} for any starting point #{0 \leq x_1 \leq 1}:}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (4.6,0) node[right] {$x_n$};
+\draw[->] (0,0) -- (0,3.6) node[above] {$x_{n+1}$};
+\draw[thick] (0,0) -- (3.4,3.4) node[above right] {$1{:}1$};
+\draw[thick, domain=0:3.6, samples=40] plot (\x , {0.7*\x *(3.6-\x)/3.6});
+\draw[gray] (2.4,0) -- (2.4,0.56) -- (0.56,0.56) -- (0.56,0.33) -- (0.33,0.33) -- (0.33,0.21) -- (0.21,0.21);
+\node[below] at (2.4,0) {$x_1$};
+\node[below] at (0.56,0) {$x_2$};
+\node[below] at (3.6,0) {$1$};
+\node[below left] at (0,0) {$0$};
+\node[left, align=right] at (-0.2,0.7) {\small stable\\ \small F.P.};
+\end{tikzpicture}}

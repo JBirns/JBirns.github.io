@@ -1,0 +1,37 @@
+\title{Radioactive decay}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\boxed{A} \xrightarrow{k_aa} \boxed{B} \xrightarrow{k_bb} \boxed{C}}
+
+\p{with amounts #{a(t), b(t), c(t)}; #{k_a, k_b} are “rate constants”; #{A, B, C} are “isotopes”.}
+
+##{\frac{da}{dt} = \underbrace{-k_aa}_{\text{decay of } A} \quad \text{and} \quad \frac{db}{dt} = \underbrace{k_aa}_{\text{production of } B \text{ from } A} - \underbrace{k_bb}_{\text{decay of } B}.}
+
+\p{#{a(t) = a_0e^{-k_at}}, so}
+
+##{\frac{db}{dt} + k_bb = k_aa_0e^{-k_at}. \qquad (\ast)}
+
+\p{Try the P.I. #{b_p(t) = Ce^{-k_at}}: (#{\ast}) gives #{(k_b - k_a)Ce^{-k_at} = k_aa_0e^{-k_at} \Rightarrow C = \frac{k_aa_0}{k_b - k_a}} (#{k_b \neq k_a}).}
+
+\p{General solution #{b(t) = b_c(t) + b_p(t)} where #{\frac{db_c}{dt} + k_bb_c = 0 \Rightarrow b_c = De^{-k_bt}}. It follows that}
+
+##{b(t) = De^{-k_bt} + \frac{k_aa_0}{k_b - k_a}e^{-k_at}.}
+
+\p{In the case that #{b(0) = 0}:}
+
+##{b(t) = \frac{k_aa_0}{k_b - k_a}\big( e^{-k_at} - e^{-k_bt} \big).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (5,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,2.5);
+\draw[thick, domain=0:4.6, samples=60] plot (\x , {2*exp(-1.2*\x)});
+\draw[thick, domain=0:4.6, samples=60] plot (\x , {2*1.2/(0.6-1.2)*(exp(-1.2*\x)-exp(-0.6*\x))*0.9});
+\node[left] at (0,2) {$a_0$};
+\node at (1.6,0.95) {$a(t)$};
+\node at (0.9,0.25) {$b(t)$};
+\end{tikzpicture}}
+
+\p{If #{k_a = k_b}, we need a different P.I.}

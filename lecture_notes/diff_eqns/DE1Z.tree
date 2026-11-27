@@ -1,0 +1,44 @@
+\title{Population dynamics: the logistic equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Population size #{y(t)}; birth rate #{\alpha y(t)}, #{\alpha > 0}; death rate #{\beta y + \gamma y^2}.}
+
+##{\frac{dy}{dt} = \underbrace{(\alpha - \beta)}_{\lambda}y - \underbrace{\gamma y^2}_{\equiv \lambda y^2/Y} = \lambda y\Big( 1 - \frac{y}{Y} \Big) = f(y):}
+
+\p{the “differential logistic equation”. Autonomous ODE fixed points: #{y = 0} or #{y = Y}.}
+
+##{\frac{df}{dy} = \lambda\Big( 1 - \frac{2y}{Y} \Big) = \begin{cases} \lambda & \text{at } y = 0, \\ -\lambda & \text{at } y = Y. \end{cases}}
+
+\p{For #{\lambda > 0}, #{y = 0} is unstable, #{y = Y} is stable.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, >=stealth]
+\draw[->] (0,0) -- (5,0) node[right] {$y$};
+\draw[->] (0,0) -- (0,2) node[above] {$f(y)$};
+\draw[thick, domain=0:3.6, samples=40] plot (\x , {1.4*\x *(3.6-\x)/3.24});
+\node[below left] at (0,0) {$0$};
+\node[below] at (3.6,0) {$Y$};
+\begin{scope}[shift={(7,0.8)}]
+\draw[->] (-0.3,0) -- (5,0) node[right] {$y(t)$};
+\fill (0,0) circle (2pt) node[below] {$0$} node[above=3pt] {\small unstable};
+\fill (3.6,0) circle (2pt) node[below] {$Y$} node[above=3pt] {\small stable};
+\draw[->, thick] (0.6,0) -- (1.4,0);
+\draw[->, thick] (2.4,0) -- (3.1,0);
+\draw[->, thick] (4.7,0) -- (4.1,0);
+\end{scope}
+\end{tikzpicture}}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (6,0) node[right] {$t$};
+\draw[->] (0,0) -- (0,3) node[above] {$y(t)$};
+\draw[dashed] (0,2) -- (5.8,2) node[right] {stable F.P.};
+\node[left] at (0,2) {$Y$};
+\node[right] at (6.3,0) {unstable F.P.};
+\draw[thick, domain=0:5.6, samples=40] plot (\x , {2/(1+9*exp(-1.5*\x))});
+\draw[thick, domain=0:5.6, samples=40] plot (\x , {2/(1+2*exp(-1.5*\x))});
+\draw[thick, domain=0:5.6, samples=40] plot (\x , {2/(1+30*exp(-1.5*\x))});
+\draw[thick, domain=0:5.6, samples=40] plot (\x , {2/(1-0.25*exp(-1.5*\x))});
+\draw[thick, domain=0:5.6, samples=40] plot (\x , {2/(1-0.15*exp(-1.5*\x))});
+\end{tikzpicture}}

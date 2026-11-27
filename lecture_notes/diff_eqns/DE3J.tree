@@ -1,0 +1,7 @@
+\title{Equilibrium point}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{An \em{equilibrium point}/fixed point of a system (#{\ast}) is a point at which #{\dot{x} = \dot{y} = 0}.}

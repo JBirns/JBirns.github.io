@@ -1,0 +1,11 @@
+\title{Hessian matrix}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The \em{Hessian matrix} is}
+
+##{\mathsf{H} = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{pmatrix} = \nabla\nabla f;}
+
+\p{it is symmetric since #{f_{xy} = f_{yx}}.}

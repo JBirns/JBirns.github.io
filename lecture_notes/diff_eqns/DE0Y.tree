@@ -1,0 +1,9 @@
+\title{Chain rule for partial derivatives}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The differential #{df} of #{f(x, y)} is related to the differentials of the arguments #{dx} and #{dy} as}
+
+##{df = \frac{\partial f}{\partial x}\,dx + \frac{\partial f}{\partial y}\,dy.}

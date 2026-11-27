@@ -1,0 +1,11 @@
+\title{Order parameters}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{f(x) = 2x}, so #{f(x) = O(x)}, but #{f(x) \neq o(x)} as #{x \to 0} since #{\lim_{x \to 0}\big( \frac{2x}{x} \big) = 2 \neq 0}.}
+\li{\strong{(ii)} #{x^2 + x = O(x^2)} as #{x \to \infty} since for #{x > 1}, #{|x^2 + x| < 2|x^2|}. Generally #{a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0 = O(x^n)} as #{x \to \infty} (#{a_n \neq 0}).}
+\li{\strong{(iii)} #{\sin(2x) = O(x)} as #{x \to 0} since #{\sin 2x \approx 2x} for small #{x}.}
+}

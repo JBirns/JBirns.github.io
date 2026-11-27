@@ -1,0 +1,84 @@
+\title{Forced Oscillating Systems: Transients & Damping}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9, >=stealth]
+\draw[thick] (-1.5,0) -- (4.5,0);
+\draw (0,0) rectangle (2,0.8);
+\node at (1,0.4) {mass $m$};
+\draw[->] (1.6,0.8) -- (1.6,1.6) node[right] {$F(t)$, driving force};
+\draw[->] (0.4,0.0) -- (0.4,-0.8) node[below, align=center] {\small $-ky$\\ \small restoring force};
+\draw[->] (1.6,0.0) -- (1.6,-0.8);
+\node[below, align=center] at (2.9,-0.8) {\small $-b\dot{y}$\\ \small damping force};
+\draw[<->] (-1,0) -- (-1,0.8);
+\node[left, align=right] at (-1.1,0.4) {\small $y(t)$, displacement\\ \small from eq.\ position};
+\end{tikzpicture}}
+
+\p{Newton II:}
+
+##{m\ddot{y} = \sum \text{forces} = -ky - b\dot{y} + F(t), \quad \text{i.e.} \quad m\ddot{y} + b\dot{y} + ky = F(t), \quad b, k \text{ +ve constants}.}
+
+\p{For #{b = 0}, #{F(t) = 0} #{\to} we have SHM at #{\omega_0 = \sqrt{k/m}}. Dimensionless #{t} coordinate: #{\tau \equiv \omega_0t} (#{\frac{d}{d\tau} = {}'}). Divide the ODE by #{k}:}
+
+##{y'' + \underbrace{2K}_{b/m\omega_0}y' + y = \underbrace{f(\tau)}_{F(t)/k}.}
+
+\p{The unforced system is described by 1 dimensionless parameter #{K}.}
+
+\p{\strong{Free (unforced, or natural) response}}
+
+\p{#{f = 0}: #{y'' + 2Ky' + y = 0}. Look for solutions #{y \propto e^{\lambda\tau}}: #{\lambda^2 + 2K\lambda + 1 = 0} (characteristic equation), #{\lambda_1, \lambda_2 = -K \pm \sqrt{K^2 - 1}}.}
+
+\p{\strong{Light/under-damping: #{K < 1}}}
+
+\p{#{\lambda_1, \lambda_2} complex: #{\lambda_1, \lambda_2 = -K \pm i\sqrt{1 - K^2}}. General solution:}
+
+##{y(\tau) = e^{-K\tau}\big[ A\sin\sqrt{1 - K^2}\,\tau + B\cos\sqrt{1 - K^2}\,\tau \big].}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (7,0) node[right] {$\tau$};
+\draw[->] (0,-1.6) -- (0,2) node[above] {$y(\tau)$};
+\draw[thick, domain=0:6.6, samples=200] plot (\x , {1.6*exp(-0.4*\x)*cos(deg(2.6*\x))});
+\draw[dashed, domain=0:6.6] plot (\x , {1.6*exp(-0.4*\x)});
+\draw[dashed, domain=0:6.6] plot (\x , {-1.6*exp(-0.4*\x)});
+\node[right] at (3,1.0) {$\propto e^{-K\tau}$};
+\node[right] at (4.6,-1.1) {damped oscillator};
+\end{tikzpicture}}
+
+\p{Oscillation frequency #{\omega_{\text{free}} = \omega_0\sqrt{1 - K^2} \to \omega_0} as #{K \to 0}.}
+
+\p{\strong{Critical damping: #{K = 1}}}
+
+\p{Degenerate case: #{\lambda_1 = \lambda_2 = -K}. General solution: #{y(\tau) = (A + B\tau)e^{-K\tau}}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (6,0) node[right] {$\tau$};
+\draw[->] (0,0) -- (0,2) node[above] {$y(\tau)$};
+\draw[thick, domain=0:5.6, samples=60] plot (\x , {(0.8 + 1.6*\x)*exp(-1.1*\x)});
+\end{tikzpicture}}
+
+\p{\strong{Heavy damping (overdamping): #{K > 1}}}
+
+\p{#{\lambda_1} and #{\lambda_2} are real; WLOG take #{|\lambda_2| > |\lambda_1|}:}
+
+##{\lambda_1 = \underbrace{-K + \sqrt{K^2 - 1}}_{-\text{ve}}, \qquad \lambda_2 = \underbrace{-K - \sqrt{K^2 - 1}}_{-\text{ve}}.}
+
+\p{General solution: #{y(\tau) = Ae^{-|\lambda_1|\tau} + Be^{-|\lambda_2|\tau}}, where the first term dominates long-term motion if present.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (0,0) -- (6.5,0) node[right] {$\tau$};
+\draw[->] (0,-1.2) -- (0,2) node[above] {$y(\tau)$};
+\draw[thick, domain=0:6, samples=60] plot (\x , {1.5*exp(-0.35*\x) - 1.0*exp(-3*\x)});
+\draw[dotted, thick, domain=0:6, samples=60] plot (\x , {1.5*exp(-0.35*\x)});
+\draw[dashed, domain=0:6, samples=60] plot (\x , {-1.0*exp(-3*\x)});
+\node[right] at (0.6,1.65) {$Ae^{-|\lambda_1|\tau}$};
+\node[right] at (0.4,-0.9) {$Be^{-|\lambda_2|\tau}$};
+\end{tikzpicture}}
+
+\p{Note: the unforced response decays eventually in all cases.}
+
+\p{\strong{Forced response}}
+
+\p{Initial “transient” response from PI + CF, but the CF decays, leaving the “steady-state” response (PI).}
+
+\transclude{DE2O}

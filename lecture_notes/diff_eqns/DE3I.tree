@@ -1,0 +1,28 @@
+\title{Nonlinear Dynamical Systems}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider an \em{autonomous} system of two nonlinear first-order ODEs:}
+
+##{\dot{x} = f(x, y), \qquad \dot{y} = g(x, y), \qquad (\ast)}
+
+\p{where #{f, g} are general nonlinear functions of #{x, y} which are independent of #{t}.}
+
+\p{\strong{Equilibrium points}}
+
+\transclude{DE3J}
+
+\p{If #{(x_0, y_0)} is a fixed point of (#{\ast}): #{f(x_0, y_0) = 0 = g(x_0, y_0)}. Solve these to locate fixed points.}
+
+\p{Investigate stability in a perturbation analysis: #{x(t) = x_0 + \xi(t)}, #{y(t) = y_0 + \eta(t)}, where #{\xi} and #{\eta} are small perturbations about #{(x_0, y_0)}. Then}
+
+##{\dot{x} = f(x, y) \implies \dot{\xi} = f(x_0 + \xi, y_0 + \eta) \implies \dot{\xi} \simeq \underbrace{f(x_0, y_0)}_{0 \text{ since f.p.}} + \xi\frac{\partial f}{\partial x}(x_0, y_0) + \eta\frac{\partial f}{\partial y}(x_0, y_0).}
+
+\p{Similarly #{\dot{\eta} = \xi\frac{\partial g}{\partial x}(x_0, y_0) + \eta\frac{\partial g}{\partial y}(x_0, y_0)}, so}
+
+##{\begin{pmatrix} \dot{\xi} \\ \dot{\eta} \end{pmatrix} = \underbrace{\begin{pmatrix} f_x & f_y \\ g_x & g_y \end{pmatrix}}_{\mathsf{M} \text{ evaluated at } (x_0, y_0)}\begin{pmatrix} \xi \\ \eta \end{pmatrix}.}
+
+\p{This is a linear system of homogeneous first-order ODEs #{\to} the eigenvalues of #{\mathsf{M}} determine the stability of equilibrium points.}
+
+\transclude{DE3K}

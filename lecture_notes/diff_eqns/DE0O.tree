@@ -1,0 +1,32 @@
+\title{Methods of Integration}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Substitution}}
+
+\p{Useful when the integrand is a “function of a function”.}
+
+\transclude{DE0P}
+
+\p{Useful trig/hyperbolic substitutions: from}
+
+##{\begin{gathered}
+\sin^2\theta + \cos^2\theta = 1, \quad \tan^2\theta + 1 = \sec^2\theta , \\ \cosh ^2u - \sinh^2u = 1, \quad 1 - \tanh^2u = \operatorname{sech}^2u:
+\end{gathered}}
+
+\ul{
+\li{term #{1 - x^2} in the integrand: substitute #{x = \sin\theta} or #{x = \tanh u};}
+\li{term #{1 + x^2}: substitute #{x = \tan\theta} or #{x = \sinh u};}
+\li{term #{x^2 - 1}: substitute #{x = \sec\theta} or #{x = \cosh u}.}
+}
+
+\transclude{DE0Q}
+
+\p{\strong{Integration by parts}}
+
+\p{Recall the product rule: #{uv' = (uv)' - u'v}.}
+
+\transclude{DE0R}
+
+\transclude{DE0S}

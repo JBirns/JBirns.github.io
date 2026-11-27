@@ -1,0 +1,22 @@
+\title{The Exponential Function (prelude)}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{DE17}
+
+\p{Differentiating the series gives}
+
+##{\frac{d}{dx}(\exp(x)) = 1 + \frac{2x}{2!} + \frac{3x^2}{3!} + \cdots = \exp(x).}
+
+\p{As #{\exp(0) = 1}, we can think of #{e^x} as the solution of the ODE #{\frac{df}{dx} = f} and #{f(0) = 1}:}
+
+##{\implies \int_1^{\exp(x)} \frac{df}{f} = x. \qquad (\ast)}
+
+\transclude{DE18}
+
+\p{This allows us to write #{\exp(x) = e^x} where #{e = \exp(1) = \lim_{k \to \infty}(1 + \frac{1}{k})^k = 2.718281\ldots}. The inverse function: #{\exp(\ln x) = x}. It follows that}
+
+##{a^x = e^{\ln a^x} = e^{x\ln a}, \qquad \frac{d}{dx}(a^x) = \frac{d}{dx}e^{x\ln a} = (\ln a)e^{x\ln a} = (\ln a)a^x.}
+
+\transclude{DE19}

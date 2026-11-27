@@ -1,0 +1,40 @@
+\title{Integrals as Riemann Sums}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Formalise “area under a curve”.}
+
+\transclude{DE0K}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,0) -- (0,3) node[above] {$f(x)$};
+\draw[thick, domain=0.1:4.2, samples=50] plot (\x , {0.9 + 0.08*(\x)^2});
+\draw (1,0) rectangle (1.5,0.98);
+\draw (1.5,0) rectangle (2,1.08);
+\draw (2,0) rectangle (2.5,1.22);
+\draw (2.5,0) rectangle (3,1.4);
+\draw (3,0) rectangle (3.5,1.62);
+\node[below] at (1,0) {$a$};
+\node[below] at (3.5,0) {$b$};
+\draw[|-|] (1.5,-0.55) -- (2,-0.55) node[midway, below] {\small $\Delta x$};
+\node[right] at (5.2,1.5) {summing the areas of the rectangles};
+\end{tikzpicture}}
+
+\p{\em{Riemann sum:} the limit should not depend on the exact choice of rectangles (e.g. #{\Delta x} non-uniform).}
+
+\p{What is the relation of the Riemann sum to the “area under the curve”? Consider one rectangle for finite #{N}.}
+
+\p{\em{Mean-value theorem} (see Analysis I): for #{f(x)} continuous, the area #{A_n} under the curve between #{x_n} and #{x_{n+1}} can be written #{A_n = (x_{n+1} - x_n)f(c_n)}, #{x_n \leq c_n \leq x_{n+1}}.}
+
+\p{If #{f(x)} is differentiable, then (Taylor)}
+
+##{f(c_n) = f(x_n) + O(c_n - x_n) \text{ as } c_n - x_n \to 0, \quad = f(x_n) + O(\Delta x) \text{ since } \Delta x \geq c_n - x_n.}
+
+\p{It follows that #{A_n = \Delta xf(x_n) + O(\Delta x^2)} as #{\Delta x \to 0}. The total area between #{a} and #{b}:}
+
+##{\begin{aligned}
+A = \lim_{N \to \infty} \sum_{n=0}^{N-1} A_n &= \underbrace{\lim_{N \to \infty} \sum_{n=0}^{N-1} f(x_n)\Delta x}_{\text{definition of integral}} + \underbrace{\lim_{N \to \infty} N \cdot O\Big( \Big( \frac{b - a}{N} \Big)^2 \Big)}_{\lim_{N \to \infty} O(\frac{(b - a)^2}{N})} \\
+&= \int_a^b f(x)\,dx + 0.
+\end{aligned}}

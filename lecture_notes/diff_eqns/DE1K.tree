@@ -1,0 +1,13 @@
+\title{Solving a separable equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{(x^2y - 3y)\frac{dy}{dx} - 2xy^2 = 4x}. Rearrange:}
+
+##{\begin{gathered}
+y(x^2 - 3)\frac{dy}{dx} = 2x(2 + y^2) \\ \implies \frac{y}{2 + y^2}\,dy = \frac{2x}{x^2 - 3}\,dx \\ \implies \frac{1}{2}\ln(2 + y^2) = \ln(x^2 - 3) + c
+\end{gathered}}
+
+##{\implies y^2 + 2 = A(x^2 - 3)^2, \quad A = e^{2c}.}

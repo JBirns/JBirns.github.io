@@ -1,0 +1,18 @@
+\title{Leibniz rule}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f(x) = u(x)v(x)},}
+
+##{\begin{aligned}
+f^{(n)}(x) &= \sum_{r=0}^n \binom{n}{r}u^{(n-r)}(x)v^{(r)}(x) \\
+&= u^{(n)}v + nu^{(n-1)}v^{(1)} + \frac{n(n - 1)}{2!}u^{(n-2)}v^{(2)} + \cdots \\ &\qquad + \frac{n!}{m!(n - m)!}u^{(n-m)}v^{(m)} + \cdots + uv^{(n)}.
+\end{aligned}}
+
+\p{Note: #{u^{(0)} = u}.}
+
+\proof{
+\p{See printed notes (induction).}
+}

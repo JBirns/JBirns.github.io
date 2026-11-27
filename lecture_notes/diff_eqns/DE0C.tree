@@ -1,0 +1,11 @@
+\title{Product rule}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f(x) = u(x)v(x)},}
+
+##{\frac{df}{dx} = v\frac{du}{dx} + u\frac{dv}{dx}.}
+
+\p{[Example Sheet I for proof.]}

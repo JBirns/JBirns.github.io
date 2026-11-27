@@ -1,0 +1,14 @@
+\title{Limits}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{Informal:} if #{\lim_{x \to x_0} f(x) = A}, then #{f(x)} can be made arbitrarily close to #{A} by making #{x} sufficiently close to #{x_0}.}
+
+\ul{
+\li{N.B. #{f(x_0) = A} is not required to be true (or exist): this is a statement about the behaviour of #{f} in the vicinity of #{x_0}, not at #{x_0}.}
+}
+
+\transclude{DE03}
+
+\transclude{DE04}

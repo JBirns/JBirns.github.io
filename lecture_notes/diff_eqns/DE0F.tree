@@ -1,0 +1,17 @@
+\title{Taylor’s Theorem}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For #{n}-times differentiable #{f(x)},}
+
+##{f(x_0 + h) = f(x_0) + hf'(x_0) + \frac{h^2}{2!}f''(x_0) + \cdots + \frac{h^n}{n!}f^{(n)}(x_0) + E_n,}
+
+\p{where the remainder term #{E_n} is #{o(h^n)} as #{h \to 0}.}
+
+\p{Stronger version: if #{f^{(n+1)}(x)} exists for all #{x_0 < x < x_0 + h} and #{f^{(n)}} is continuous in this range,}
+
+##{E_n = O(h^{n+1}) \text{ as } h \to 0, \qquad E_n = f^{(n+1)}(x_n)\frac{h^{n+1}}{(n + 1)!} \text{ for some } x_0 \leq x_n \leq x_0 + h.}
+
+\p{[See Analysis I for proof.]}

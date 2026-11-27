@@ -1,0 +1,102 @@
+\title{Homogeneous Second-Order ODEs with Non-Constant Coefficients}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{General form:}
+
+##{y'' + p(x)y' + q(x)y = 0. \qquad (\ast)}
+
+\p{\strong{Second CF: reduction of order}}
+
+\p{Aim: given one solution of (#{\ast}), #{y_1(x)}, find another, #{y_2(x)}. Look for solutions #{y_2 = v(x)y_1(x)}, with #{v} a function to be determined. We have}
+
+##{y_2' = v'y_1 + vy_1', \qquad y_2'' = v''y_1 + 2v'y_1' + vy_1''.}
+
+\p{If #{y_2} satisfies (#{\ast}):}
+
+##{v''y_1 + v'(2y_1' + py_1) + v\underbrace{(y_1'' + py_1' + qy_1)}_{0 \text{ since } y_1 \text{ satisfies } (\ast)} = 0.}
+
+\p{It follows that #{v''y_1 + v'(2y_1' + py_1) = 0}, i.e. #{u'y_1 + u(2y_1' + py_1) = 0} for #{u = v'}: a first-order ODE for #{u} (#{= v'}). Separable:}
+
+##{\begin{gathered}
+\frac{u'}{u} = -2\frac{y_1'}{y_1} + p(x) \\ \implies \ln u = -2\ln y_1 - \int_0^x p(w)\,dw + \ln A \\ \implies u(x) = \frac{A}{(y_1(x))^2}\exp\Big( -\int_0^x p(w)\,dw \Big),
+\end{gathered}}
+
+\p{with #{A} constant. Integrate again to find #{v(x)}.}
+
+\transclude{DE2A}
+
+\p{\strong{Phase space}}
+
+\p{For an #{n^{\text{th}}}-order linear ODE}
+
+##{p(x)y^{(n)} + q(x)y^{(n-1)} + \cdots + r(x)y = f(x),}
+
+\p{#{y^{(n)}(x)} is determined by #{y(x), y'(x), \ldots, y^{(n-1)}(x)}. Higher derivatives are also determined, by differentiating the ODE #{\to} we can construct the Taylor series about #{x_0} if #{y(x_0), y'(x_0), \ldots, y^{(n-1)}(x_0)} are specified #{\to} the solution is determined by these initial conditions.}
+
+\p{The state of the system is fully specified at any #{x} (so we can predict the subsequent evolution) by the \em{solution vector}}
+
+##{\mathbf{Y}(x) = \begin{pmatrix} y(x) \\ y'(x) \\ \vdots \\ y^{(n-1)}(x) \end{pmatrix}.}
+
+\p{At any #{x}, #{\mathbf{Y}(x)} defines a point in the #{n}-dimensional \em{phase space}.}
+
+\transclude{DE2B}
+
+\p{\strong{Wronskian and linear dependence}}
+
+\p{Recall #{y_i(x)} (#{i = 1, \ldots, n}) are linearly dependent if #{\sum_{i=1}^n c_iy_i(x) = 0} for all #{x}, where the #{c_i} are not all #{0}. This must hold for all #{x} #{\to} differentiate #{(n - 1)} times:}
+
+##{\sum_{i=1}^n c_i\mathbf{Y}_i(x) = \mathbf{0}.}
+
+\p{We see that #{\lbrace y_i(x)\rbrace } linearly dependent #{\Rightarrow} #{\lbrace \mathbf{Y}_i\rbrace } linearly dependent for all #{x}. The \em{fundamental matrix} #{(\mathbf{Y}_1\; \mathbf{Y}_2\; \cdots\; \mathbf{Y}_n)} has #{\det = 0} if the #{\lbrace \mathbf{Y}_i\rbrace } are linearly dependent.}
+
+\transclude{DE2C}
+
+\p{#{\lbrace y_i(x)\rbrace } linearly dependent #{\Rightarrow} #{W(x) = 0} for all #{x}. It follows that #{W(x) \neq 0} for some #{x} #{\Rightarrow} #{\lbrace y_i(x)\rbrace } linearly independent [a test for linear independence of #{n} functions].}
+
+\p{\strong{Caution:} #{W(x) = 0} does not necessarily imply linear dependence of the #{\lbrace y_i(x)\rbrace }.}
+
+\transclude{DE2D}
+
+\p{\strong{Abel’s Theorem}}
+
+\transclude{DE2E}
+
+\p{Note: if #{p(x) = 0} [no #{y'} term in the ODE] then #{W = \text{const}}.}
+
+\transclude{DE2F}
+
+\p{\em{Geometric interpretation} [phase space]: solution vectors are always collinear or never collinear as #{x} varies [a basis for phase space at some #{x} #{\to} a basis for all #{x}].}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, >=stealth]
+\draw[->] (-1.5,0) -- (2.6,0) node[right] {$y$};
+\draw[->] (0,-2.3) -- (0,2.4) node[above] {$y'$};
+\draw (0,0) ellipse (0.8 and 2);
+\draw[->, thick] (0,0) -- (0.45,1.65) node[right] {$\mathbf{Y}_2$};
+\draw[->, thick] (0,0) -- (0.55,-1.45) node[right] {$\mathbf{Y}_1$};
+\end{tikzpicture}}
+
+\p{\strong{Application of Abel’s theorem}}
+
+\p{#{y_1y_2' - y_2y_1' = W(x_0)\exp\big( -\int_{x_0}^x p(u)\,du \big)}. If #{y_1} is known, we can solve this ODE to find #{y_2}:}
+
+##{\begin{gathered}
+\frac{y_2'}{y_1} - \frac{y_2y_1'}{y_1^2} = \frac{W(x_0)}{y_1^2}\exp\Big( -\int_{x_0}^x p(u)\,du \Big) , \quad \text{i.e.} \\ \frac{d}{dx}\Big( \frac{y_2}{y_1} \Big) = \frac{W(x_0)}{y_1^2}\exp\Big( -\int_{x_0}^x p(u)\,du \Big):
+\end{gathered}}
+
+\p{exactly as for “reduction of order”.}
+
+\p{\strong{Generalisation}}
+
+\p{Abel’s theorem still holds for solutions of #{n^{\text{th}}} order linear homogeneous ODEs. Such an equation can always be written as a system of first order equations:}
+
+##{\underbrace{\begin{pmatrix} y \\ y' \\ \vdots \\ y^{(n-1)} \end{pmatrix}'}_{\mathbf{Y}'} + \mathsf{A}\mathbf{Y} = \mathbf{0} \quad \text{(see Topic 5)}.}
+
+\transclude{DE2G}
+
+\p{It can be shown [Q7, Sheet 3] that #{W' + \operatorname{Tr}(\mathsf{A})W = 0} (#{\operatorname{Tr}(\mathsf{A}) = p(x)} in this case)}
+
+##{\implies W(x) = W(x_0)\underbrace{\exp\Big( -\int_{x_0}^x \operatorname{Tr}[\mathsf{A}(u)]\,du \Big)}_{\text{never } 0}}
+
+\p{#{\to} Abel’s theorem holds.}

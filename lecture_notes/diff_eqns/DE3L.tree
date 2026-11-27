@@ -1,0 +1,65 @@
+\title{Partial Differential Equations}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{PDEs are DEs with multiple independent variables.}
+
+\p{\strong{First-order wave equation}}
+
+\p{Consider #{\psi(x, t)} (with #{x} the 1D position, #{t} the time) satisfying}
+
+##{\frac{\partial\psi}{\partial t} - c\frac{\partial\psi}{\partial x} = 0, \qquad (\ast)}
+
+\p{with #{c} a constant with dimensions of speed. Solve with the \em{method of characteristics}. How does #{\psi} vary along the path #{x(t)}, so #{\psi(x(t), t)}?}
+
+##{\frac{d\psi}{dt} = \frac{\partial\psi}{\partial t} + \frac{\partial\psi}{\partial x}\frac{dx}{dt} = \frac{\partial\psi}{\partial x}\Big( c + \frac{dx}{dt} \Big)}
+
+\p{using (#{\ast}). If we choose #{x(t)} such that #{\frac{dx}{dt} = -c} #{\Rightarrow} #{x = x_0 - ct} (#{x_0} constant along the path, labelling paths), then #{\frac{d\psi}{dt} = 0 \Rightarrow \psi = \text{const}} along the path. The paths #{x = x_0 - ct} are the \em{characteristics} of (#{\ast}).}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (6.4,0) node[right] {$x$};
+\draw[->] (0,-0.3) -- (0,3) node[above] {$t$};
+\draw (0.6,0) -- ({0.6-2.2},2.6);
+\draw (1.6,0) -- ({1.6-2.2},2.6);
+\draw (2.6,0) -- ({2.6-2.2},2.6);
+\draw (3.6,0) -- ({3.6-2.2},2.6);
+\draw (4.6,0) -- ({4.6-2.2},2.6);
+\draw (5.6,0) -- ({5.6-2.2},2.6);
+\node[right] at (4.6,2.1) {$x(t) = x_0 - ct$};
+\node[below] at (5.6,0) {$x_0$};
+\end{tikzpicture}}
+
+\p{As #{\psi} is constant along the characteristics, the general solution of (#{\ast}) is}
+
+##{\psi(x, t) = f(x_0) = f(x + ct),}
+
+\p{with #{f} an arbitrary function. This simply translates the #{x} dependence of #{\psi} at #{t = 0} to the left by #{ct} at time #{t}.}
+
+\transclude{DE3M}
+
+\transclude{DE3N}
+
+\p{\strong{Second-order wave equation}}
+
+\p{This allows propagation in both directions:}
+
+##{\frac{\partial^2\psi}{\partial t^2} - c^2\frac{\partial^2\psi}{\partial x^2} = 0.}
+
+\p{It can be factored as}
+
+##{\Big( \frac{\partial}{\partial t} - c\frac{\partial}{\partial x} \Big)\Big( \frac{\partial}{\partial t} + c\frac{\partial}{\partial x} \Big)\psi = 0 \qquad (\dagger)}
+
+\p{(partial derivatives commute). The two first-order operators commute, so both #{f(x + ct)} (nulled by #{\frac{\partial}{\partial t} - c\frac{\partial}{\partial x}}) and #{g(x - ct)} (nulled by #{\frac{\partial}{\partial t} + c\frac{\partial}{\partial x}}) are solutions. General solution:}
+
+##{\psi = f(x + ct) + g(x - ct), \quad f, g \text{ arbitrary functions}.}
+
+\p{Is this the most general solution? Yes! Let #{\xi = x + ct}, #{\eta = x - ct}:}
+
+##{\frac{\partial}{\partial x} = \underbrace{\frac{\partial\xi}{\partial x}\Big|_t}_{1}\frac{\partial}{\partial\xi} + \frac{\partial}{\partial\eta}, \qquad \frac{\partial}{\partial t} = c\frac{\partial}{\partial\xi} - c\frac{\partial}{\partial\eta},}
+
+##{\implies \frac{\partial}{\partial t} - c\frac{\partial}{\partial x} = -2c\frac{\partial}{\partial\eta}, \qquad \frac{\partial}{\partial t} + c\frac{\partial}{\partial x} = 2c\frac{\partial}{\partial\xi}.}
+
+\p{The wave equation (#{\dagger}) becomes #{-4c^2\frac{\partial^2\psi}{\partial\eta\partial\xi} = 0 \Rightarrow \psi = f(\xi) + g(\eta)} [integrate twice].}
+
+\transclude{DE3O}

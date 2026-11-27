@@ -1,0 +1,14 @@
+\title{The Fundamental Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Formalise “inverse of differentiation”.}
+
+\transclude{DE0M}
+
+\p{Note: #{F(x)} is a solution of #{\frac{dF}{dx} = f(x)} with #{F(a) = 0}.}
+
+\transclude{DE0N}
+
+\p{\strong{Notation.} Indefinite integrals are written #{\int f(x)\,dx} or #{\int^x f(t)\,dt}: no lower limit gives rise to some integration constant.}

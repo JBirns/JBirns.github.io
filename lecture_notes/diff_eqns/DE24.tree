@@ -1,0 +1,9 @@
+\title{Linear operator}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathcal{D}} is said to be \em{linear} if for any #{y_1(x)} and #{y_2(x)}, and constants #{\alpha} and #{\beta},}
+
+##{\mathcal{D}(\alpha y_1 + \beta y_2) = \alpha\mathcal{D}y_1 + \beta\mathcal{D}y_2.}

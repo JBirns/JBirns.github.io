@@ -1,0 +1,11 @@
+\title{Linear independence of functions}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A set of #{N} functions #{\lbrace f_i(x)\rbrace } is \em{linearly dependent} if}
+
+##{\sum_{i=1}^N c_if_i(x) = 0}
+
+\p{for #{N} constants #{c_i}, not all of which are zero. Otherwise, the functions are \em{linearly independent}. [Equivalently, if any function can be written as a linear combination of the others, they are linearly dependent.]}

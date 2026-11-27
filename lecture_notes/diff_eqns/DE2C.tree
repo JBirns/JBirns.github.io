@@ -1,0 +1,9 @@
+\title{Wronskian}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The \em{Wronskian} #{W(x)} of #{n} functions #{y_i(x)} (#{i = 1, \ldots, n}) is}
+
+##{W(x) = |\mathbf{Y}_1\; \mathbf{Y}_2\; \cdots\; \mathbf{Y}_n| = \begin{vmatrix} y_1 & y_2 & \cdots & y_n \\ y_1' & y_2' & \cdots & y_n' \\ \vdots & \vdots & & \vdots \\ y_1^{(n-1)} & y_2^{(n-1)} & \cdots & y_n^{(n-1)} \end{vmatrix}.}

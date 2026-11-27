@@ -1,0 +1,34 @@
+\title{Higher-Order Discrete Equations}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider a linear, discrete second-order equation}
+
+##{ay_{n+2} + by_{n+1} + cy_n = f_n, \quad a, b, c \text{ const},}
+
+\p{with #{f_n} the forcing sequence. Note: this might arise from discretising a second-order ODE with constant coefficients (Taylor expanding to #{h^2} terms):}
+
+##{\frac{d^2y}{dx^2}\Big|_{x_n} \simeq \frac{\overbrace{y(x_n + h)}^{y_{n+1}} + \overbrace{y(x_n - h)}^{y_{n-1}} - 2\overbrace{y(x_n)}^{y_n}}{h^2}.}
+
+\p{Solve with similar methods to ODEs: #{y_n = y_n^{(c)} + y_n^{(p)}} (CF + PI). The CF satisfies}
+
+##{ay_{n+2}^{(c)} + by_{n+1}^{(c)} + cy_n^{(c)} = 0. \qquad (\ast)}
+
+\p{For an ODE with constant coefficients, #{y \propto e^{\lambda x} \to e^{\lambda nh}} (#{x = nh}) #{\to k^n}. Try #{y_n^{(c)} \propto k^n} in (#{\ast}):}
+
+##{ak^{n+2} + bk^{n+1} + ck^n = 0 \implies ak^2 + bk + c = 0 \quad (k \neq 0),}
+
+\p{the “characteristic equation”. In general there are two roots of the characteristic equation, #{k = k_1} and #{k = k_2}. General CF:}
+
+##{y_n^{(c)} = \begin{cases} Ak_1^n + Bk_2^n & \text{if } k_1 \neq k_2, \\ (A + Bn)k_1^n & \text{if } k_1 = k_2. \end{cases}}
+
+\p{\strong{PIs.}}
+
+\ul{
+\li{#{f_n = k^n} with #{k^n} not a CF (i.e. #{k \neq k_1, k_2}, “non-resonant case”): try #{y_n^{(p)} = Ak^n};}
+\li{#{f_n = k_1^n} (“resonant case”): try #{y_n^{(p)} = Ank_1^n}; c.f. #{xe^{\lambda x}} for resonant driving of an ODE;}
+\li{#{f_n = n^p} (#{p \in \mathbb{N}_0}): try #{y_n^{(p)} = An^p + \cdots + Cn + D}; c.f. #{x^p} for an ODE.}
+}
+
+\transclude{DE2V}

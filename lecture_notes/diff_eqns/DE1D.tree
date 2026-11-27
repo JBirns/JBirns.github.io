@@ -1,0 +1,15 @@
+\title{Constant forcing}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{5\frac{dy}{dx} - 3y = 10} (constant forcing term). General method of solution:}
+
+\ul{
+\li{\strong{(i)} Find \em{any} solution of the forced equation: a \em{particular integral} #{y_p(x)}. Here #{y_p(x) = -\frac{10}{3}}, for example.}
+\li{\strong{(ii)} Write the general solution of the ODE as #{y(x) = y_p(x) + y_c(x)}, where the \em{complementary function} #{y_c(x)} satisfies the homogeneous ODE. Here #{5\frac{dy_c}{dx} - 3y_c = 0 \Rightarrow y_c = Ae^{3x/5}}.}
+\li{\strong{(iii)} Combine #{y_c} and #{y_p} to get the full general solution. Here #{y(x) = Ae^{3x/5} - \frac{10}{3}}, where #{A} can be determined by boundary conditions.}
+}
+
+\p{This method is general for \em{linear} ODEs.}

@@ -1,0 +1,10 @@
+\title{Integrating by parts}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{I = \int_0^\infty xe^{-x}\,dx = [-xe^{-x}]_0^\infty - \int_0^\infty 1 \cdot (-e^{-x})\,dx = 0 - 0 + [-e^{-x}]_0^\infty = [e^{-x}]_\infty^0 = 1 - 0 = 1}.}
+\li{\strong{(ii)} #{\int \ln x\,dx = \int 1 \cdot \ln x\,dx = x\ln x - \int \frac{x}{x}\,dx = x\ln x - x + c}.}
+}

@@ -1,0 +1,12 @@
+\title{Nondegenerate complex roots}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{d^2y}{dx^2} + 4y = 0}. Characteristic equation: #{\lambda^2 + 4 = 0 \Rightarrow \lambda = \pm 2i}. General CF:}
+
+##{\begin{aligned}
+y_c &= Ae^{2ix} + Be^{-2ix} = A(\cos 2x + i\sin 2x) + B(\cos 2x - i\sin 2x) \\
+&= (A + B)\cos 2x + i(A - B)\sin 2x = \alpha\cos 2x + \beta\sin 2x.
+\end{aligned}}

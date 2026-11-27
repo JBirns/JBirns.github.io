@@ -1,0 +1,13 @@
+\title{Cyclic and reciprocal rules}
+\taxon{Proposition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{It follows that}
+
+##{\frac{\partial x}{\partial y}\Big|_z\frac{\partial y}{\partial z}\Big|_x\frac{\partial z}{\partial x}\Big|_y = -1.}
+
+\p{The reciprocal rule applies to partial derivatives provided the same variables are held fixed: similarly to (#{\dagger}),}
+
+##{\frac{\partial x}{\partial y}\Big|_z = -\frac{\partial f/\partial y|_{x,z}}{\partial f/\partial x|_{y,z}}, \quad \text{so that} \quad \frac{\partial x}{\partial y}\Big|_z = \frac{1}{\partial y/\partial x|_z}.}

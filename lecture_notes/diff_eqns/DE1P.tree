@@ -1,0 +1,24 @@
+\title{Simply connected or not}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{In the #{x}-#{y} plane:}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\fill[gray!30] plot[smooth cycle] coordinates {(0,0) (0.8,0.4) (1.5,0.1) (1.6,1.0) (0.9,1.6) (0.2,1.2)};
+\draw plot[smooth cycle] coordinates {(0,0) (0.8,0.4) (1.5,0.1) (1.6,1.0) (0.9,1.6) (0.2,1.2)};
+\node at (0.8,0.85) {$\mathcal{D}$};
+\node at (0.8,-0.5) {simply connected};
+\begin{scope}[shift={(5.5,0)}]
+\fill[gray!30] plot[smooth cycle] coordinates {(0,0) (0.8,0.4) (1.5,0.1) (1.6,1.0) (0.9,1.6) (0.2,1.2)};
+\draw plot[smooth cycle] coordinates {(0,0) (0.8,0.4) (1.5,0.1) (1.6,1.0) (0.9,1.6) (0.2,1.2)};
+\fill[white] (0.95,0.95) circle (0.25);
+\draw (0.95,0.95) circle (0.25);
+\node at (0.55,0.45) {$\mathcal{D}$};
+\node[align=center, font=\small] at (0.8,-0.75) {path connected, but cannot shrink\\ every curve to a point $\Rightarrow$ \emph{not}\\ simply connected};
+\end{scope}
+\end{tikzpicture}}
+
+\p{[See printed notes for an example of #{f} in a non-simply-connected domain.]}

@@ -1,0 +1,20 @@
+\title{Phase space of SHM}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' + 4y = 0} (SHM): #{y_1 = \cos 2x}, #{y_2 = \sin 2x}.}
+
+##{\mathbf{Y}_1(x) = \begin{pmatrix} y_1 \\ y_1' \end{pmatrix} = \begin{pmatrix} \cos 2x \\ -2\sin 2x \end{pmatrix}, \qquad \mathbf{Y}_2(x) = \begin{pmatrix} \sin 2x \\ 2\cos 2x \end{pmatrix}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9, >=stealth]
+\draw[->] (-1.6,0) -- (1.8,0) node[right] {$y$};
+\draw[->] (0,-2.3) -- (0,2.4) node[above] {$y'$};
+\draw (0,0) ellipse (1 and 2);
+\draw[->, thick] (0,0) -- (0.5,1.732) node[right] {$\mathbf{Y}_2(x)$};
+\draw[->, thick] (0,0) -- (0.866,-1.0) node[right] {$\mathbf{Y}_1(x)$};
+\node[right] at (2.4,0.8) {phase space};
+\end{tikzpicture}}
+
+\p{Note: #{\mathbf{Y}_1} and #{\mathbf{Y}_2} are linearly independent vectors for all #{x} (in the linear algebra sense). We can use #{\mathbf{Y}_1} and #{\mathbf{Y}_2} at any #{x} as a basis for phase space.}

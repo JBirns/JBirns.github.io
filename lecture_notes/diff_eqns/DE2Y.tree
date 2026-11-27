@@ -1,0 +1,13 @@
+\title{Regular and irregular singular points}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{If #{x_0} is a singular point of (#{\ast}), but (#{\ast}) can be rewritten as}
+
+##{\underbrace{P(x)(x - x_0)^2}_{p(x)}y'' + \underbrace{Q(x)(x - x_0)}_{q(x)}y' + \underbrace{R(x)}_{r(x)}y = 0}
+
+\p{with #{\frac{Q(x)}{P(x)}} and #{\frac{R(x)}{P(x)}} analytic at #{x_0}, then #{x_0} is a \em{regular singular point}. Otherwise #{x_0} is an \em{irregular singular point}.}
+
+\p{Equivalently: if #{(x - x_0)\frac{q(x)}{p(x)}} #{[= \frac{Q}{P}]} and #{(x - x_0)^2\frac{r(x)}{p(x)}} #{[= \frac{R}{P}]} are analytic at #{x_0}, then #{x_0} is an RSP: “no more singular than an equidimensional equation”.}

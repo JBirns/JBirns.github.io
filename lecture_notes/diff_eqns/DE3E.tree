@@ -1,0 +1,11 @@
+\title{Sylvester’s Criterion}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\mathsf{H}} is positive definite #{\iff} the signature is #{+, +, +, \ldots, +}. #{\mathsf{H}} is negative definite #{\iff} the signature is #{-, +, -, +, \ldots, (-1)^n}.}
+
+\proof{
+\p{\em{Proof (non-examinable).} [(#{\Rightarrow}) Consider #{\mathbf{x}\mathsf{H}\mathbf{x}^T} with #{\mathbf{x} = (x_1, x_2, 0, 0, \ldots, 0)}: this reduces to #{(x_1, x_2)\mathsf{H}_2\binom{x_1}{x_2}}. We can see then that #{\mathsf{H}} positive definite #{\Rightarrow} #{\mathsf{H}_k} positive definite for all #{k \in \mathbb{N}}, so #{|\mathsf{H}_k| > 0}.] Proof of the converse in the printed notes.}
+}

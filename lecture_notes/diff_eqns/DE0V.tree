@@ -1,0 +1,11 @@
+\title{Partial derivative}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given a function of several variables, e.g. #{f(x, y)}, the \em{partial derivative} of #{f} with respect to #{x} at fixed #{y} is}
+
+##{\frac{\partial f}{\partial x}\Big|_y = \lim_{\delta x \to 0} \frac{f(x + \delta x, y) - f(x, y)}{\delta x}:}
+
+\p{“slope of #{f} when moving in the #{x} direction”. #{\frac{\partial f}{\partial y}\big|_x} is defined similarly.}

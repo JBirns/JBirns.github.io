@@ -1,0 +1,97 @@
+\title{First-Order Linear ODEs}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\em{Linear}: the dependent variable (e.g. #{y}) and its derivatives only appear linearly.}
+\li{\em{First-order}: the highest derivative of #{y} that appears is #{\frac{dy}{dx}}.}
+}
+
+\p{\strong{Homogeneous first-order linear ODEs}}
+
+\p{\em{Homogeneous}: an ODE in which all terms involve the dependent variable or its derivatives #{\Rightarrow} #{y = 0} is a solution.}
+
+\p{First specialise to the case of \em{constant coefficients}: the independent variable (#{x}) doesn’t appear explicitly.}
+
+\transclude{DE1B}
+
+\p{To specify a unique solution requires giving suitable boundary conditions; e.g. #{y(0)} determines #{A}.}
+
+\p{\strong{Discrete equations}}
+
+\p{Consider #{5\frac{dy}{dx} - 3y = 0} with #{y(0) = y_0} (#{\Rightarrow y(x) = y_0e^{3x/5}}). Now approximate the equation by a discrete form at #{\lbrace x_n\rbrace } where #{x_n = nh}:}
+
+##{\frac{dy}{dx}\Big|_{x_n} \approx \frac{y_{n+1} - y_n}{h} \quad \text{``Forward Euler scheme''}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,0) -- (0,2.4) node[above] {$y$};
+\draw[thick] (0,0.7) -- (0.8,0.8) -- (1.6,1.0) -- (2.4,1.4);
+\fill (0,0.7) circle (1.3pt) node[left] {$y_0$};
+\fill (0.8,0.8) circle (1.3pt) node[below right] {$y_1$};
+\fill (1.6,1.0) circle (1.3pt) node[below right] {$y_2$};
+\fill (2.4,1.4) circle (1.3pt);
+\draw (0.8,0.07) -- (0.8,-0.07) node[below] {$x_1$};
+\draw (1.6,0.07) -- (1.6,-0.07) node[below] {$x_2$};
+\draw (2.4,0.07) -- (2.4,-0.07) node[below] {$x_3$};
+\draw (3.2,0.07) -- (3.2,-0.07) node[below] {$x_4$};
+\node[below left] at (0,0) {$x_0$};
+\draw[|-|] (0,-0.75) -- (0.8,-0.75) node[midway, below] {\small $h$};
+\end{tikzpicture}}
+
+##{\frac{5(y_{n+1} - y_n)}{h} - 3y_n = 0 \implies y_{n+1} = \Big( 1 + \frac{3h}{5} \Big)y_n}
+
+\p{(an example of a \em{recurrence relation}). So}
+
+##{y_n = \Big( 1 + \frac{3h}{5} \Big)y_{n-1} = \Big( 1 + \frac{3h}{5} \Big)^2y_{n-2} = \cdots = \Big( 1 + \frac{3h}{5} \Big)^ny_0.}
+
+\p{It follows that #{y_n = y_0\big( 1 + \frac{3x_n}{5n} \big)^n}. If we take #{x_n \to x}, i.e. take #{n} steps from #{x = 0} to #{x}, as #{n \to \infty},}
+
+##{\lim_{n \to \infty} y_n = \lim_{n \to \infty} y_0\Big( 1 + \frac{3x}{5n} \Big)^n = y_0\exp\Big( \frac{3x}{5} \Big)}
+
+\p{(agrees with the continuous solution).}
+
+\p{\strong{Series solutions}}
+
+\p{Try #{y(x) = \sum_{n=0}^\infty a_nx^n}, with the #{a_n} determined by substituting into the ODE.}
+
+\transclude{DE1C}
+
+\p{\strong{Forced (inhomogeneous) ODEs}}
+
+\p{These include terms involving only the independent variable, so #{y = 0} is no longer a (trivial) solution.}
+
+\p{\strong{Constant forcing}}
+
+\transclude{DE1D}
+
+\p{\strong{Eigenfunction forcing}}
+
+\p{The forcing term is an eigenfunction of the differential operator on the LHS.}
+
+\transclude{DE1E}
+
+\p{\strong{Non-constant coefficients}}
+
+\p{The general linear first-order ODE is}
+
+##{a(x)\frac{dy}{dx} + b(x)y = c(x).}
+
+\p{Standard form: #{\frac{dy}{dx} + p(x)y = f(x)}, with #{p(x) = \frac{b(x)}{a(x)}}, #{f(x) = \frac{c(x)}{a(x)}}.}
+
+\p{Solve using an \em{integrating factor} #{\mu(x)}: multiply the ODE by #{\mu(x)}:}
+
+##{\underbrace{\mu y' + (\mu p)y}_{\frac{d}{dx}(\mu y) \text{ if } \mu' = \mu p \text{ (product rule)}} = \mu f(x). \qquad (\ast)}
+
+\p{This requires #{\int \frac{1}{\mu}\frac{d\mu}{dx}\,dx = \int p\,dx}, i.e. #{\ln\mu = \int p\,dx}, so}
+
+##{\mu = \exp\int^x p(u)\,du;}
+
+\p{#{\mu} is unique up to an irrelevant (constant) constant factor. Then (#{\ast}) #{\Rightarrow} #{\frac{d}{dx}(\mu y) = \mu f(x)}, so}
+
+##{\mu y = \int^x \mu f\,du.}
+
+\transclude{DE1F}
+
+\transclude{DE1G}

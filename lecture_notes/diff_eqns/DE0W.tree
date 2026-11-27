@@ -1,0 +1,19 @@
+\title{Partial derivatives}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(x, y) = x^2 + y^2 + e^{xy^2}}:}
+
+##{\frac{\partial f}{\partial x}\Big|_y = 2x + y^2e^{xy^2} \quad \text{and} \quad \frac{\partial f}{\partial y}\Big|_x = 2y + 2xye^{xy^2}.}
+
+\p{We can compute second derivatives:}
+
+##{\frac{\partial^2 f}{\partial x^2}\Big|_y = 2 + y^4e^{xy^2}, \qquad \frac{\partial^2 f}{\partial y^2}\Big|_x = 2 + 2xe^{xy^2} + 4x^2y^2e^{xy^2},}
+
+\p{and mixed partial derivatives:}
+
+##{\frac{\partial}{\partial x}\Big( \frac{\partial f}{\partial y}\Big|_x \Big)\Big|_y = 2ye^{xy^2} + 2xy^3e^{xy^2}, \qquad \frac{\partial}{\partial y}\Big( \frac{\partial f}{\partial x}\Big|_y \Big)\Big|_x = 2ye^{xy^2} + 2xy^3e^{xy^2}:}
+
+\p{equal.}

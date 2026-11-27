@@ -1,0 +1,15 @@
+\title{Trigonometric substitution}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{I = \int \sqrt{2x - x^2}\,dx = \int \sqrt{1 - (x - 1)^2}\,dx.}
+
+\p{Let #{x - 1 = \sin\theta \Rightarrow dx = \cos\theta\,d\theta}:}
+
+##{\begin{aligned}
+I &= \int \sqrt{1 - \sin^2\theta}\cos\theta\,d\theta = \int \cos^2\theta\,d\theta = \frac{1}{2}\int 1 + \cos 2\theta\,d\theta \\
+&= \frac{1}{2}\theta + \frac{1}{4}\sin 2\theta + c = \frac{1}{2}\theta + \frac{1}{2}\sin\theta\cos\theta + c \\
+&= \frac{1}{2}\arcsin(x - 1) + \frac{1}{2}(x - 1)\sqrt{1 - (x - 1)^2} + c.
+\end{aligned}}

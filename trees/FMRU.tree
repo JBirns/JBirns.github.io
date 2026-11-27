@@ -6,3 +6,12 @@
 \put\transclude/expanded{false}
 
 \transclude{GP00}
+\transclude{DE00}
+
+\scope{\put\transclude/expanded{true}
+\put\transclude/toc{false}
+\subtree{\title{Courses I attended but I do not intend to create notes for:}
+\ul{
+    \li{Dynamics and Relativity; [Professor David Tong's Notes](https://www.davidtong.org/teaching/dynamics-and-relativity/)}
+    \li{Vector Calculus; [Professor David Tong's Notes](https://www.davidtong.org/teaching/vector-calculus/)}
+}}}

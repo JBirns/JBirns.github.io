@@ -1,0 +1,26 @@
+\title{Chemical kinetics}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{A + B \to C + D}. Numbers of molecules #{a(t), b(t), c(t), d(t)}; initially #{a_0, b_0, 0, 0} #{\Rightarrow} #{a(t) = a_0 - c(t)}, #{b(t) = b_0 - c(t)}. Assume the reaction rate #{\propto ab} (e.g. dilute gas):}
+
+##{\frac{dc}{dt} = \lambda a(t)b(t) = \underbrace{\lambda(a_0 - c(t))(b_0 - c(t))}_{f(c)}:}
+
+\p{an autonomous first-order ODE. The fixed points are #{c = a_0} (all #{a} consumed) and #{c = b_0} (all #{b} consumed). Assume #{a_0 < b_0}: #{c = b_0} is unphysical. Perturbation analysis:}
+
+##{\frac{df}{dc} = \lambda(2c - a_0 - b_0) = \begin{cases} \lambda(a_0 - b_0) & \text{at } c = a_0, \\ \lambda(b_0 - a_0) & \text{at } c = b_0. \end{cases}}
+
+\p{#{\lambda(a_0 - b_0)} is negative for #{a_0 < b_0} #{\Rightarrow} #{c = a_0} is a stable fixed point (and #{c = b_0} is unstable).}
+
+\p{1D phase portrait (arrows show the direction that solutions “flow”):}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9, >=stealth]
+\draw[->] (-0.5,0) -- (6,0) node[right] {$c(t)$};
+\fill (1.5,0) circle (2pt) node[below] {$a_0$} node[above=3pt] {\small stable f.p.};
+\fill (4,0) circle (2pt) node[below] {$b_0$} node[above=3pt] {\small unstable f.p.};
+\draw[->, thick] (0.2,0) -- (0.9,0);
+\draw[->, thick] (3.3,0) -- (2.2,0);
+\draw[->, thick] (4.6,0) -- (5.4,0);
+\end{tikzpicture}}

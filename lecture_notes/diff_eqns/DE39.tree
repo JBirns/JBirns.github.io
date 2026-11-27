@@ -1,0 +1,104 @@
+\title{Classification of Stationary Points}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Taylor series for multivariate functions}}
+
+\p{Consider how #{f(x, y)} varies along the line #{\mathbf{x}(s) = \mathbf{x}_0 + s\hat{\mathbf{s}}}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, >=stealth]
+\draw[->] (0,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,0) -- (0,3) node[above] {$y$};
+\draw (1.4,1.8) circle (0.7);
+\draw (1.4,1.8) circle (0.35);
+\fill (2.6,1.1) circle (1.5pt) node[below] {$\mathbf{x}_0$};
+\draw[dotted, thick] (2.6,1.1) -- (4.0,2.3);
+\fill (4.0,2.3) circle (1.5pt) node[right] {$\mathbf{x}(s)$};
+\draw[->] (4.3,2.6) -- (4.8,3.0) node[right] {$\hat{\mathbf{s}}$};
+\node[below right] at (3.3,1.7) {$s$};
+\end{tikzpicture}}
+
+\p{We can think of #{f(x(s), y(s))} as a function of #{s} #{\to} the usual single-variable Taylor series applies:}
+
+##{\begin{aligned}
+f(\mathbf{x}_0 + s\hat{\mathbf{s}}) &= f(\mathbf{x}_0) + s\frac{df}{ds}\Big|_{\mathbf{x}_0} + \frac{1}{2}s^2\frac{d^2f}{ds^2}\Big|_{\mathbf{x}_0} + \cdots \\
+&= f(\mathbf{x}_0) + \underbrace{s\hat{\mathbf{s}} \cdot \nabla f|_{\mathbf{x}_0}}_{(1)} + \frac{1}{2}\underbrace{s^2(\hat{\mathbf{s}} \cdot \nabla)(\hat{\mathbf{s}} \cdot \nabla f)|_{\mathbf{x}_0}}_{(2)} + \cdots,
+\end{aligned}}
+
+\p{where #{\hat{\mathbf{s}} \cdot \nabla} is an operator. Define the vector displacement #{\delta\mathbf{x} \equiv s\hat{\mathbf{s}}}, with components #{\delta x = x(s) - x_0}, #{\delta y = y(s) - y_0}. Then}
+
+##{\begin{aligned}
+(1)&\quad s\hat{\mathbf{s}} \cdot (\nabla f) = \delta\mathbf{x} \cdot \nabla f = \delta x\frac{\partial f}{\partial x} + \delta y\frac{\partial f}{\partial y}, \\
+(2)&\quad s^2(\hat{\mathbf{s}} \cdot \nabla)(\hat{\mathbf{s}} \cdot \nabla f) = (\delta\mathbf{x} \cdot \nabla)(\delta\mathbf{x} \cdot \nabla f) = \Big( \delta x\frac{\partial}{\partial x} + \delta y\frac{\partial}{\partial y} \Big)\Big( \delta x\frac{\partial f}{\partial x} + \delta y\frac{\partial f}{\partial y} \Big) \\
+&\qquad = (\delta x)^2\frac{\partial^2 f}{\partial x^2} + \delta x\delta y\frac{\partial^2 f}{\partial x\partial y} + \delta y\delta x\frac{\partial^2 f}{\partial y\partial x} + (\delta y)^2\frac{\partial^2 f}{\partial y^2} \\
+&\qquad \Big( = (\delta x)^2\frac{\partial^2 f}{\partial x^2} + 2\delta x\delta y\frac{\partial^2 f}{\partial x\partial y} + (\delta y)^2\frac{\partial^2 f}{\partial y^2} \Big) \\
+&\qquad = (\delta x, \delta y)\begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{pmatrix}\begin{pmatrix} \delta x \\ \delta y \end{pmatrix}.
+\end{aligned}}
+
+\transclude{DE3A}
+
+\p{\strong{Multivariate Taylor series.}}
+
+##{\begin{gathered}
+f(x_0 + \delta x, y_0 + \delta y) = f(x_0, y_0) + \Big( \delta x\frac{\partial f}{\partial x} + \delta y\frac{\partial f}{\partial y} \Big)\Big|_{x_0,y_0} \\ + \frac{1}{2}\Big( (\delta x)^2 \frac{\partial^2 f}{\partial x^2} + 2\delta x\delta y\frac{\partial^2 f}{\partial x\partial y} + (\delta y)^2\frac{\partial^2 f}{\partial y^2} \Big)\Big|_{x_0,y_0} + \cdots
+\end{gathered}}
+
+\p{Coordinate free form:}
+
+##{f(\mathbf{x}_0 + \delta\mathbf{x}) = f(\mathbf{x}_0) + \delta\mathbf{x} \cdot \nabla f|_{\mathbf{x}_0} + \frac{1}{2}\delta\mathbf{x}(\nabla\nabla f)|_{\mathbf{x}_0}\delta\mathbf{x}^T + \cdots}
+
+\p{\strong{Nature of stationary points and the Hessian}}
+
+\p{Let #{\mathbf{x}_0} be a stationary point (#{\nabla f|_{\mathbf{x}_0} = \mathbf{0}}). Around #{\mathbf{x}_0}:}
+
+##{f(\mathbf{x}) \simeq f(\mathbf{x}_0) + \frac{1}{2}\delta\mathbf{x}\,\mathsf{H}(\mathbf{x}_0)\,\delta\mathbf{x}^T, \quad \delta\mathbf{x} = \mathbf{x} - \mathbf{x}_0.}
+
+\p{The nature of the stationary point depends on the properties of #{\mathsf{H}(\mathbf{x}_0)}.}
+
+\transclude{DE3B}
+
+\p{If #{\mathsf{H}(\mathbf{x}_0)} is positive definite, #{\delta\mathbf{x}\mathsf{H}\delta\mathbf{x}^T > 0} for all #{\delta\mathbf{x}}, so #{f(\mathbf{x}) > f(\mathbf{x}_0)} in the vicinity of #{\mathbf{x}_0}:}
+
+\ul{
+\li{#{\mathsf{H}} positive definite #{\Rightarrow} local minimum;}
+\li{#{\mathsf{H}} negative definite #{\Rightarrow} local maximum;}
+\li{if indefinite, it may be a max, min, or a saddle.}
+}
+
+\p{\strong{Definiteness and eigenvalues}}
+
+\p{#{\mathsf{H}} is real and symmetric #{\to} we can diagonalise #{\mathsf{H}} with an orthogonal transformation. In #{n}D, using coordinates along the principal axes,}
+
+##{\delta\mathbf{x}\,\mathsf{H}\,\delta\mathbf{x}^T = (\delta x_1, \delta x_2, \ldots, \delta x_n)\begin{pmatrix} \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n \end{pmatrix}\begin{pmatrix} \delta x_1 \\ \vdots \\ \delta x_n \end{pmatrix},}
+
+\p{with the #{\lambda_i} the eigenvalues of #{\mathsf{H}}. It follows that}
+
+##{\mathsf{H} \text{ positive definite} \iff \text{all } \lambda_i > 0, \qquad \mathsf{H} \text{ negative definite} \iff \text{all } \lambda_i < 0.}
+
+\p{If all #{\lambda_i \neq 0} but of mixed sign, we have a saddle point. If any eigenvalue is #{0}, we need higher terms in the Taylor expansion to classify the stationary point.}
+
+\transclude{DE3C}
+
+\p{\strong{Definiteness and signature of #{\mathsf{H}}}}
+
+\p{An alternative way to establish if #{\mathsf{H}} is #{+}ve or #{-}ve definite.}
+
+\transclude{DE3D}
+
+\transclude{DE3E}
+
+\p{\strong{Contours near stationary points}}
+
+\p{Let #{f(x, y)} have a stationary point at #{(x_0, y_0)}. Adopt coordinates along the principal axes of #{\mathsf{H}} at #{\mathbf{x}_0}: #{\mathsf{H} = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}}. Write #{\mathbf{x} = \mathbf{x}_0 + (\xi, \eta)}; then around #{\mathbf{x}_0},}
+
+##{f(\mathbf{x}) \simeq f(\mathbf{x}_0) + \frac{1}{2}(\lambda_1\xi^2 + \lambda_2\eta^2).}
+
+\p{Contours of #{f} close to #{\mathbf{x}_0} satisfy #{\lambda_1\xi^2 + \lambda_2\eta^2 = \text{const}}.}
+
+\ul{
+\li{Max or min: #{\lambda_1} and #{\lambda_2} have the same sign #{\Rightarrow} elliptical contours.}
+\li{Saddle point: #{\lambda_1} and #{\lambda_2} have opposite signs #{\Rightarrow} hyperbolic contours.}
+}
+
+\transclude{DE3F}

@@ -1,0 +1,46 @@
+\title{Multivariate Chain Rule}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given a path #{x(t)}, #{y(t)} and #{f(x, y)}, what is #{df/dt}? Consider the change in #{f} under #{(x, y) \to (x + \delta x, y + \delta y)}:}
+
+##{\begin{aligned}
+\delta f &= f(x + \delta x, y + \delta y) - f(x, y) \\
+&= [f(x + \delta x, y + \delta y) - f(x + \delta x, y)] + [f(x + \delta x, y) - f(x, y)].
+\end{aligned}}
+
+\p{Taylor expanding:}
+
+##{\begin{aligned}
+f(x + \delta x, y) - f(x, y) &= f_x(x, y)\delta x + o(\delta x), \\
+f(x + \delta x, y + \delta y) - f(x + \delta x, y) &= \underbrace{f_y(x + \delta x, y)}_{f_y(x, y) + f_{yx}(x, y)\delta x + o(\delta x)}\delta y + o(\delta y).
+\end{aligned}}
+
+\p{So}
+
+##{\delta f = [f_y(x, y) + f_{yx}(x, y)\delta x + o(\delta x)]\delta y + o(\delta y) + f_x(x, y)\delta x + o(\delta x). \qquad (\ast)}
+
+\p{Take the limit as #{\delta x, \delta y \to 0} to get the \em{differential} of #{f}: #{df = \lim_{\delta x, \delta y \to 0} \delta f}.}
+
+\transclude{DE0Y}
+
+\p{The remaining terms in (#{\ast}) #{\to 0} faster than #{\delta x} or #{\delta y}. For the path #{x(t)}, #{y(t)} we now have}
+
+##{\frac{d}{dt}f(x(t), y(t)) = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}.}
+
+\p{If the path is parameterised as #{y(x)}, we have #{f(x, y(x))} and}
+
+##{\frac{df}{dx} = \frac{\partial f}{\partial x}\frac{dx}{dx} + \frac{\partial f}{\partial y}\frac{dy}{dx} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}\frac{dy}{dx}.}
+
+\p{\strong{Integral form of the chain rule}}
+
+\p{The change in #{f} between endpoints:}
+
+##{\Delta f = \int df = \int \Big( \frac{\partial f}{\partial x}\,dx + \frac{\partial f}{\partial y}\,dy \Big).}
+
+\p{For a path #{x(t)}, #{y(t)} connecting endpoints, we have #{f(x(t), y(t))} and}
+
+##{\Delta f = \int \Big( \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} \Big)\,dt.}
+
+\p{The result doesn’t depend on the path chosen between two given endpoints.}

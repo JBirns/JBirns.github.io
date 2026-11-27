@@ -1,0 +1,13 @@
+\title{Undetermined coefficients}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' - 5y' + 6y = 2x + e^{4x}}. Try #{y_p = (Ax + B) + Ce^{4x}} (#{\ast}): #{y_p' = A + 4Ce^{4x}}, #{y_p'' = 16Ce^{4x}}. Then (#{\ast}) becomes}
+
+##{\underbrace{(16C - 20C + 6C)}_{1}e^{4x} + \underbrace{6A}_{2}x + \underbrace{(-5A + 6B)}_{0} = 2x + e^{4x},}
+
+\p{so #{C = \frac{1}{2}}; #{A = \frac{1}{3}}; #{B = \frac{5}{18}}. Complementary function: #{\alpha e^{3x} + \beta e^{2x}}. General solution:}
+
+##{\alpha e^{3x} + \beta e^{2x} + \frac{1}{2}e^{4x} + \frac{1}{3}x + \frac{5}{18}.}

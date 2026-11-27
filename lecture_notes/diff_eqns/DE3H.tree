@@ -1,0 +1,17 @@
+\title{Matrix method}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\dot{\mathbf{Y}} = \begin{pmatrix} -4 & 24 \\ 1 & -2 \end{pmatrix}\mathbf{Y} + \begin{pmatrix} 4 \\ 1 \end{pmatrix}e^t.}
+
+\p{Complementary solutions: #{\mathbf{Y}_c = \mathbf{v}e^{\lambda t} \Rightarrow \mathsf{M}\mathbf{v} = \lambda\mathbf{v} \Rightarrow |\mathsf{M} - \lambda\mathsf{I}| = 0}, so #{\lambda_1 = 2} or #{\lambda_2 = -8}, with #{\mathbf{v}_1 = \binom{4}{1}}, #{\mathbf{v}_2 = \binom{-6}{1}}. General complementary solution:}
+
+##{\mathbf{Y}_c = A\begin{pmatrix} 4 \\ 1 \end{pmatrix}e^{2t} + B\begin{pmatrix} -6 \\ 1 \end{pmatrix}e^{-8t}.}
+
+\p{For the particular solution, try #{\mathbf{Y}_p = \mathbf{u}e^t}. This requires #{\mathbf{u} = \mathsf{M}\mathbf{u} + \binom{4}{1} \Rightarrow \mathbf{u} = -(\mathsf{M} - \mathsf{I})^{-1}\binom{4}{1}}; the inverse exists since #{1} is not an eigenvalue of #{\mathsf{M}}. So #{\mathbf{u} = -\binom{4}{1}}. General solution:}
+
+##{\mathbf{Y} = A\begin{pmatrix} 4 \\ 1 \end{pmatrix}e^{2t} + B\begin{pmatrix} -6 \\ 1 \end{pmatrix}e^{-8t} - \begin{pmatrix} 4 \\ 1 \end{pmatrix}e^t.}
+
+\p{Note: if the forcing term is #{\propto e^{\lambda t}} with #{\lambda} an eigenvalue of #{\mathsf{M}}, try #{\mathbf{Y}_p = \mathbf{u}te^{\lambda t}}.}

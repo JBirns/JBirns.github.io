@@ -1,0 +1,11 @@
+\title{Exact equation}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The ODE (#{\ast}) is \em{exact} if #{Q(x, y)\,dy + P(x, y)\,dx} is an \em{exact differential}, i.e. there exists #{f(x, y)} such that}
+
+##{df = P(x, y)\,dx + Q(x, y)\,dy.}
+
+\p{If (#{\ast}) is exact, #{df = 0 \Rightarrow f(x, y) = \text{constant}} is a solution.}

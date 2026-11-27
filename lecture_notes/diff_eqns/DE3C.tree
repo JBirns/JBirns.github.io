@@ -1,0 +1,11 @@
+\title{A zero eigenvalue}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(x, y) = x^2 + y^4}: a global minimum at #{(0, 0)} by inspection.}
+
+##{\mathsf{H} = \begin{pmatrix} 2 & 0 \\ 0 & 12y^2 \end{pmatrix} = \begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \text{ at } (0, 0) \implies \lambda_1 = 2,\; \lambda_2 = 0.}
+
+\p{N.B. an eigenvalue tells you if you go up or down in a specific direction #{\to} #{0} means idle. Hence a mix (we can have some #{0}s, provided we have both #{+}ve and #{-}ve #{\lambda_i}s) is a saddle.}

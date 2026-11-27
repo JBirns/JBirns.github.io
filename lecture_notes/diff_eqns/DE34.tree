@@ -1,0 +1,23 @@
+\title{Multivariate Functions: Applications}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{Directional derivatives}
+\li{Extrema}
+\li{Coupled systems of first-order ODEs}
+\li{Partial differential equations}
+}
+
+\transclude{DE35}
+
+\transclude{DE38}
+
+\transclude{DE39}
+
+\transclude{DE3G}
+
+\transclude{DE3I}
+
+\transclude{DE3L}

@@ -1,0 +1,9 @@
+\title{Dirac delta function}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\delta(t) = \lim_{\varepsilon \to 0} D(t; \varepsilon): \quad \text{``spike at origin, area } 1\text{''}.}
+
+\p{\strong{Warning:} should only be used inside integrals.}

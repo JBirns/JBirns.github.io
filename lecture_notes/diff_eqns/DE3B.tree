@@ -1,0 +1,7 @@
+\title{Positive-definite and negative-definite matrices}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A (real) symmetric matrix #{\mathsf{H}} is \em{positive-definite} if #{\mathbf{x}\mathsf{H}\mathbf{x}^T > 0} for all real #{\mathbf{x} \neq \mathbf{0}}. It is \em{negative-definite} if #{\mathbf{x}\mathsf{H}\mathbf{x}^T < 0} for all real #{\mathbf{x} \neq \mathbf{0}}. Otherwise, it is \em{indefinite}.}

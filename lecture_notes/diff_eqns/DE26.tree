@@ -1,0 +1,7 @@
+\title{Nondegenerate real roots}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{d^2y}{dx^2} - 5\frac{dy}{dx} + 6y = 0}. Characteristic equation: #{\lambda^2 - 5\lambda + 6 = 0 \Rightarrow (\lambda - 2)(\lambda - 3) = 0}. CF: #{y_c(x) = Ae^{2x} + Be^{3x}}.}

@@ -1,0 +1,7 @@
+\title{Stability of a fixed point}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A fixed point #{y = c} is \em{stable} (or \em{unstable}) if whenever #{y} deviates slightly from #{c}, #{y} converges (or diverges) to (or from) #{y = c} as #{t \to \infty}.}

@@ -1,0 +1,7 @@
+\title{Fixed point of a discrete equation}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A \em{fixed point} of a first-order discrete equation is a value of #{x_n} such that #{x_{n+1} = x_n}, i.e. #{f(x_n) = x_n}.}

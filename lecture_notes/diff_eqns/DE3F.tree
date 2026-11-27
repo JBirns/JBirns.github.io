@@ -1,0 +1,24 @@
+\title{Classifying stationary points}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(x, y) = 4x^3 - 12xy + y^2 + 10y - 6}:}
+
+##{f_x = 12x^2 - 12y, \qquad f_y = -12x + 2y + 10.}
+
+\p{Stationary points: #{f_x = f_y = 0 \Rightarrow x^2 = y \Rightarrow x^2 - 6x + 5 = 0 \Rightarrow x = 1} or #{5} #{\Rightarrow} #{y = 1} or #{25}. So there are stationary points at #{(1, 1)}, #{(5, 25)}. We have #{f_{xx} = 24x}, #{f_{yy} = 2}, #{f_{xy} = -12}.}
+
+\ul{
+\li{#{(1, 1)}: #{\mathsf{H} = \begin{pmatrix} 24 & -12 \\ -12 & 2 \end{pmatrix}}, #{|\mathsf{H}_1| = |24| = 24}, #{|\mathsf{H}_2| = 48 - 144 = -96}. The signature is #{+, -}, so it is neither positive definite nor negative definite. #{|\mathsf{H}| < 0} #{\Rightarrow} #{\lambda_1} and #{\lambda_2} are nonzero and of opposite signs #{\to} saddle point.}
+\li{#{(5, 25)}: #{\mathsf{H} = \begin{pmatrix} 120 & -12 \\ -12 & 2 \end{pmatrix}}, #{|\mathsf{H}_1| = 120}, #{|\mathsf{H}_2| = 240 - 144 = 96}. The signature is #{+, +}, so it is a \em{minimum}.}
+}
+
+\p{Near the saddle point, #{(x, y) = (1, 1) + (\delta x, \delta y)}. Contours locally have}
+
+##{f_{xx}(\delta x)^2 + 2f_{xy}(\delta x\delta y) + f_{yy}(\delta y)^2 = \text{const} \implies 12(\delta x)^2 - 12\delta x\delta y + (\delta y)^2 = \text{const},}
+
+\p{describing hyperbolae. The intersecting contours through #{(1, 1)} are the asymptotes of the hyperbolae:}
+
+##{12\delta x^2 - 12\delta x\delta y + (\delta y)^2 = 0 \implies \delta y = (6 \pm 2\sqrt{6})\delta x.}

@@ -1,0 +1,22 @@
+\title{Exact Equations}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{DE1M}
+
+\p{If #{P(x, y)\,dx + Q(x, y)\,dy} is exact, use the multivariate chain rule:}
+
+##{df = \underbrace{\frac{\partial f}{\partial x}}_{P}dx + \underbrace{\frac{\partial f}{\partial y}}_{Q}dy,}
+
+\p{so there exists #{f(x, y)} such that #{\frac{\partial f}{\partial x} = P} and #{\frac{\partial f}{\partial y} = Q}: solve these to determine #{f}. Partial derivatives commute, so #{\frac{\partial}{\partial y}\big( \frac{\partial f}{\partial x} \big) = \frac{\partial P}{\partial y}} and #{\frac{\partial}{\partial x}\big( \frac{\partial f}{\partial y} \big) = \frac{\partial Q}{\partial x}} are equal. A \em{necessary} (but not sufficient) condition for exactness:}
+
+##{\text{ODE exact} \implies \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}.}
+
+\transclude{DE1N}
+
+\transclude{DE1O}
+
+\transclude{DE1P}
+
+\transclude{DE1Q}

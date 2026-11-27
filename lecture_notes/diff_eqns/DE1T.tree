@@ -1,0 +1,7 @@
+\title{Slope field of #{\dot{y} = t(1 - y^2)}}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{dy}{dt} = t(1 - y^2)}. For #{t > 0}, #{\dot{y} > 0} for #{|y| < 1} and #{\dot{y} < 0} for #{|y| > 1}.}

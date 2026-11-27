@@ -1,0 +1,11 @@
+\title{Forced wave equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{\partial\psi}{\partial t} + 5\frac{\partial\psi}{\partial x} = e^{-t}} with #{\psi(x, 0) = e^{-x^2}}. Characteristics have #{\frac{dx}{dt} = 5 \Rightarrow x = x_0 + 5t}. Along these #{\frac{d\psi}{dt} = e^{-t} \Rightarrow \psi = f(x_0) - e^{-t}}, with #{f} an arbitrary function, constant on each characteristic. General solution: #{\psi(x, t) = f(x - 5t) - e^{-t}}. Initial conditions:}
+
+##{\psi(x, 0) = f(x) - e^{-0} = e^{-x^2} \implies f(x) = e^{-x^2} + 1,}
+
+\p{so #{\psi(x, t) = \exp(-(x - 5t)^2) + 1 - e^{-t}}.}

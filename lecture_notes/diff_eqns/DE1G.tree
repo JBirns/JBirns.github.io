@@ -1,0 +1,15 @@
+\title{Radioactivity example revisited}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Recall #{\frac{db}{dt} + k_bb = k_aa_0e^{-k_at}}. Integrating factor #{\mu}: #{\ln\mu = \int^t k_b\,dt = k_bt \Rightarrow \mu = e^{k_bt}}, so}
+
+##{\frac{d}{dt}(e^{k_bt}b) = k_aa_0e^{k_bt - k_at}.}
+
+\p{Consider #{k_a = k_b = k} [the previous P.I. failed]. We have}
+
+##{\frac{d}{dt}(e^{kt}b) = ka_0 \implies e^{kt}b(t) = ka_0t + D \implies b(t) = De^{-kt} + \underbrace{ka_0te^{-kt}}_{\text{a P.I.}}.}
+
+\p{Note: #{te^{-kt}} rather than #{e^{-kt}}.}

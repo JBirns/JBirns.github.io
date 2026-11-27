@@ -1,0 +1,11 @@
+\title{Bessel’s equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{x^2y'' + xy' + (x^2 - n^2)y = 0} (generally no closed form solutions for general #{n}), i.e.}
+
+##{y'' + \underbrace{\frac{1}{x}}_{p}y' + \underbrace{\Big( 1 - \frac{n^2}{x^2} \Big)}_{q}y = 0.}
+
+\p{Abel: #{W(x) = W(x_0)\exp\big( -\int_{x_0}^x \frac{du}{u} \big) = W(x_0)\frac{x_0}{x}}. Note that Abel’s identity determines the form of #{W} without having to solve the ODE.}

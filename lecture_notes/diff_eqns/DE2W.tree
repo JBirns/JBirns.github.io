@@ -1,0 +1,52 @@
+\title{Series Solutions}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Series solutions for linear, homogeneous, second-order ODEs:}
+
+##{p(x)y'' + q(x)y' + r(x)y = 0. \qquad (\ast)}
+
+\p{Seek a series solution around #{x_0}. Feasibility depends on the nature of #{p(x)}, #{q(x)} and #{r(x)} around #{x_0}.}
+
+\p{\strong{Classification of singular points}}
+
+\transclude{DE2X}
+
+\transclude{DE2Y}
+
+\transclude{DE2Z}
+
+\p{\strong{Method of Frobenius}}
+
+##{p(x)y'' + q(x)y' + r(x)y = 0. \qquad (\ast)}
+
+\transclude{DE30}
+
+\p{There is no guarantee that we obtain two linearly independent solutions in case (ii). The method may fail completely for irregular singular points.}
+
+\transclude{DE31}
+
+\transclude{DE32}
+
+\p{\strong{Second solutions}}
+
+\p{Expanding around an RSP guarantees one Frobenius solution. Whether we get a second depends on the roots #{\sigma_1} and #{\sigma_2} of the indicial equation.}
+
+\ul{
+\li{\p{\strong{(i)} #{\sigma_1 - \sigma_2} not an integer: two linearly independent solutions}
+##{y_1 = (x - x_0)^{\sigma_1}\sum_{n=0}^\infty a_n(x - x_0)^n; \qquad y_2 = (x - x_0)^{\sigma_2}\sum_{n=0}^\infty b_n(x - x_0)^n.}
+\p{Note: as #{x \to x_0}, the general solution will go like (#{\sim}) #{a_0(x - x_0)^{\sigma_1}} if #{\sigma_1 < \sigma_2}.}}
+\li{\p{\strong{(ii)} #{\sigma_1 - \sigma_2} is a non-zero integer. There is one series solution involving the larger root (say #{\sigma_2}):}
+##{y_1 = (x - x_0)^{\sigma_2}\sum_{n=0}^\infty a_n(x - x_0)^n.}
+\p{The second solution of the ODE is generally of the form}
+##{y_2 = (x - x_0)^{\sigma_1}\sum_{n=0}^\infty b_n(x - x_0)^n + cy_1(x)\ln(x - x_0),}
+\p{where #{c} may or may not be zero. Note #{c} is not arbitrary and is determined by #{a_0} and #{b_0} #{\to} the general solution depends on two arbitrary constants as required.}}
+\li{\p{\strong{(iii)} #{\sigma_1 = \sigma_2 = \sigma}. A #{\ln} term is \em{always} required, i.e. #{c \neq 0}:}
+##{\begin{aligned}
+y_1 &= (x - x_0)^\sigma\sum_{n=0}^\infty a_n(x - x_0)^n, \\
+y_2 &= (x - x_0)^\sigma\sum_{n=0}^\infty b_n(x - x_0)^n + cy_1(x)\ln(x - x_0).
+\end{aligned}}}
+}
+
+\transclude{DE33}

@@ -1,0 +1,25 @@
+\title{Indicial roots differing by an integer}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{x^2y'' - xy = 0. \qquad (\ast)}
+
+\p{#{x = 0} is an RSP by inspection. Look for #{y = \sum_{n=0}^\infty a_nx^{n+\sigma}} (#{a_0 \neq 0}):}
+
+##{(\ast) \implies \sum_{n=0}^\infty \big[ a_n(n + \sigma)(n + \sigma - 1)x^{n+\sigma} - a_nx^{n+\sigma+1} \big] = 0.}
+
+\p{The lowest power of #{x} is #{x^\sigma}: #{a_0\sigma(\sigma - 1) = 0 \Rightarrow \sigma = 0} (#{= \sigma_1}) or #{1} (#{= \sigma_2}) (#{a_0 \neq 0}). Since #{\sigma_1 - \sigma_2 \in \mathbb{Z} \setminus \lbrace 0\rbrace } we are in case 2. For #{n \geq 1},}
+
+##{a_n(n + \sigma)(n + \sigma - 1) = a_{n-1}.}
+
+\p{#{\sigma = 1} (larger root): #{a_n = \frac{a_{n-1}}{n(n + 1)} \Rightarrow a_n = \frac{a_0}{n!(n + 1)!}}, so}
+
+##{y_1 = a_0x\Big( 1 + \frac{x}{2} + \frac{x^2}{12} + \cdots \Big).}
+
+\p{#{\sigma = 0} (smaller root): #{n(n - 1)a_n = a_{n-1}}; #{n = 1} gives #{a_0 = 0}: contradiction. We need a log term:}
+
+##{y_2 = \underbrace{\sum_{n=0}^\infty b_nx^n}_{\sigma_1 = 0 \text{ series}} + cy_1(x)\ln x.}
+
+\p{Determine #{\lbrace b_n\rbrace } and #{c} by direct substitution in the ODE or the reduction of order method [see the non-examinable section of the printed notes].}

@@ -1,0 +1,11 @@
+\title{Limit}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For a function #{f(x)} defined on some open interval containing #{x_0} (but not necessarily at #{x_0}), #{\lim_{x \to x_0} f(x) = A} means that for any #{\varepsilon > 0}, there exists #{\delta > 0} such that #{|f(x) - A| < \varepsilon} for all #{0 < |x - x_0| < \delta}.}
+
+\p{\em{Right-hand limit:} replace #{0 < |x - x_0| < \delta} with #{0 < x - x_0 < \delta}.}
+
+\p{#{\lim_{x \to \infty} f(x) = A} means that for any #{\varepsilon > 0}, there exists #{X > 0} such that #{|f(x) - A| < \varepsilon} for all #{x > X}.}

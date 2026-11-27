@@ -1,0 +1,7 @@
+\title{Applying the chain rule}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\frac{d}{dx}\sin(x^2 + x - 2) = \underbrace{\cos(x^2 + x - 2)}_{F'(g(x))}\underbrace{(2x + 1)}_{dg/dx}.}

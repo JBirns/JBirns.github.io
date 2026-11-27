@@ -1,0 +1,14 @@
+\title{Partial Derivatives}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{DE0V}
+
+\transclude{DE0W}
+
+\p{Useful convention: omit e.g. #{|_y} if all other variables are held fixed, e.g. #{\frac{\partial^2 f}{\partial x\partial y} = \frac{\partial}{\partial x}\big( \frac{\partial f}{\partial y}\big|_x \big)\big|_y}.}
+
+\p{Note: if #{f} has continuous (mixed) second derivatives then #{\frac{\partial^2 f}{\partial x\partial y} = \frac{\partial^2 f}{\partial y\partial x}} (“Schwarz’s theorem”): partial derivatives commute.}
+
+\p{Alternative notation: #{f_x = \frac{\partial f}{\partial x}}; #{\frac{\partial^2 f}{\partial y\partial x} = f_{xy}}.}

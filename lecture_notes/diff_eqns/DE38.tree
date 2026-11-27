@@ -1,0 +1,44 @@
+\title{Stationary Points}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{There is always #{\geq 1} direction for which #{\frac{df}{ds} = 0} (parallel to contours). \em{Stationary points}: #{\frac{df}{ds} = 0} for all #{\hat{\mathbf{s}}}. Since #{\frac{df}{ds} = \hat{\mathbf{s}} \cdot (\nabla f)}, #{\nabla f = \mathbf{0}} at stationary points.}
+
+\p{\strong{Types of stationary points.}}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.75, >=stealth]
+\begin{scope}
+\draw (0,0) ellipse (1.4 and 0.9);
+\draw (0,0) ellipse (0.8 and 0.5);
+\fill (0,0) circle (2pt);
+\draw[->] (1.9,1.2) -- (1.15,0.65) node[pos=0, above right] {\small $\nabla f$};
+\draw[->] (-1.9,-1.2) -- (-1.15,-0.65);
+\node at (0,-1.6) {local maximum};
+\end{scope}
+\begin{scope}[shift={(5,0)}]
+\draw (0,0) ellipse (1.4 and 0.9);
+\draw (0,0) ellipse (0.8 and 0.5);
+\fill (0,0) circle (2pt);
+\draw[->] (1.15,0.65) -- (1.9,1.2) node[above right] {\small $\nabla f$};
+\draw[->] (-1.15,-0.65) -- (-1.9,-1.2);
+\node at (0,-1.6) {local minimum};
+\end{scope}
+\begin{scope}[shift={(10,0)}]
+\draw[domain=-1.3:1.3, samples=30] plot ({sqrt(0.3+\x *\x)}, \x);
+\draw[domain=-1.3:1.3, samples=30] plot ({-sqrt(0.3+\x *\x)}, \x);
+\draw[domain=-1.3:1.3, samples=30] plot (\x , {sqrt(0.3+\x *\x)});
+\draw[domain=-1.3:1.3, samples=30] plot (\x , {-sqrt(0.3+\x *\x)});
+\draw (-1.3,-1.3) -- (1.3,1.3);
+\draw (-1.3,1.3) -- (1.3,-1.3);
+\fill (0,0) circle (2pt);
+\draw[->] (1.3,0) -- (2.0,0) node[right] {\small $\nabla f$};
+\draw[->] (0,1.6) -- (0,1.05);
+\node at (0,-1.9) {saddle point};
+\end{scope}
+\end{tikzpicture}}
+
+\ul{
+\li{Near local maxima and minima, contours of #{f} are locally elliptical.}
+\li{Near saddle points, contours are locally hyperbolic. Contours cross at, and only at, saddle points.}
+}

@@ -1,0 +1,24 @@
+\title{L’Hôpital’s rule}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{f(x)} and #{g(x)} be differentiable at #{x_0}, with continuous first derivatives there, and #{\lim_{x \to x_0} f(x) = f(x_0) = 0} and #{\lim_{x \to x_0} g(x) = g(x_0) = 0}. Then if #{g'(x_0) \neq 0},}
+
+##{\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)},}
+
+\p{provided the limit on the RHS exists.}
+
+\proof{
+\p{(Note the rule applies more generally with fewer conditions, but this is for the special case given.)}
+
+##{\begin{aligned}
+f(x) &= \underbrace{f(x_0)}_{0} + (x - x_0)f'(x_0) + o(x - x_0) \quad \text{as } x \to x_0, \\
+g(x) &= \underbrace{g(x_0)}_{0} + (x - x_0)g'(x_0) + o(x - x_0) \quad \text{as } x \to x_0.
+\end{aligned}}
+
+\p{So}
+
+##{\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x_0) + o(x - x_0)/(x - x_0)}{\underbrace{g'(x_0)}_{\neq 0} + o(x - x_0)/(x - x_0)} = \frac{f'(x_0)}{g'(x_0)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)}.}
+}

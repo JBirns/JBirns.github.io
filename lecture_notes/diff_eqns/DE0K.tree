@@ -1,0 +1,11 @@
+\title{Integral}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The \em{integral} of a suitably well-behaved function #{f(x)} is the limit of a sum:}
+
+##{\int_a^b f(x)\,dx \equiv \lim_{\Delta x \to 0} \sum_{n=0}^{N-1} f(x_n)\Delta x \equiv \lim_{N \to \infty} \sum_{n=0}^{N-1} f(x_n)\Delta x,}
+
+\p{where #{\Delta x = \frac{b - a}{N}} and #{x_n = a + n\Delta x}.}

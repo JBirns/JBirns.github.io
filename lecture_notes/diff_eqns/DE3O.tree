@@ -1,0 +1,26 @@
+\title{Second-order wave equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{\partial^2\psi}{\partial t^2} - c^2\frac{\partial^2\psi}{\partial x^2} = 0} with #{\psi(x, 0) = \frac{1}{1 + x^2}} and #{\frac{\partial\psi}{\partial t}(x, 0) = 0}. General solution: #{\psi = f(x + ct) + g(x - ct)}. At #{t = 0},}
+
+##{\psi(x, 0) = f(x) + g(x) = \frac{1}{1 + x^2}, \qquad (\ast\ast)}
+
+##{\frac{\partial\psi}{\partial t}(x, 0) = 0 = cf'(x) - cg'(x) \implies f'(x) = g'(x) \implies f(x) = g(x) + A, \quad A \text{ const}.}
+
+\p{Combining with (#{\ast\ast}): #{f(x) = \frac{1}{2(1 + x^2)} + \frac{A}{2}}, #{g(x) = \frac{1}{2(1 + x^2)} - \frac{A}{2}}. Hence}
+
+##{\psi(x, t) = \frac{1}{2(1 + (x + ct)^2)} + \frac{1}{2(1 + (x - ct)^2)}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.8, >=stealth]
+\draw[->] (-5,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,0) -- (0,2.4) node[above] {$\psi$};
+\draw[thick, domain=-4.8:4.8, samples=100] plot (\x , {2/(1+(\x)^2)});
+\draw[thick, dashed, domain=-4.8:4.8, samples=100] plot (\x , {1/(1+(\x +3)^2) + 1/(1+(\x -3)^2)});
+\node[right] at (0.2,2.0) {$t = 0$};
+\node[right] at (3.6,0.9) {$t > 0$};
+\draw[->] (-2.6,1.25) -- (-3.4,1.25);
+\draw[->] (2.6,1.25) -- (3.4,1.25);
+\end{tikzpicture}}

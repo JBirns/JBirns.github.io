@@ -1,0 +1,13 @@
+\title{Chain rule}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Given #{f(x) = F(g(x))},}
+
+##{\frac{df}{dx} = F'(g(x))\frac{dg}{dx} = \frac{dF}{dg}\frac{dg}{dx}.}
+
+\proof{
+\p{See printed lecture notes.}
+}

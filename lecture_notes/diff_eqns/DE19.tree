@@ -1,0 +1,11 @@
+\title{Eigenfunction}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{An \em{eigenfunction} of the derivative operator is a function that is unchanged up to a multiplicative scaling by the \em{eigenvalue} under the action of the operator:}
+
+##{\frac{df}{dx} = \lambda f(x)}
+
+\p{(#{\lambda} the eigenvalue, #{f} the eigenfunction). The eigenfunctions of #{\frac{d}{dx}} are #{\propto e^{\lambda x}}.}

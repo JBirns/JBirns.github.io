@@ -1,0 +1,12 @@
+\title{#{O} and #{o} notation}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{f(x)} is #{o(g(x))} as #{x \to x_0} if #{\lim_{x \to x_0} \frac{f(x)}{g(x)} = 0}. Often written as #{f(x) = o(g(x))} as #{x \to x_0}: “#{f(x)} is much smaller than #{g(x)} as #{x \to x_0}”.}
+\li{\strong{(ii)} #{f(x)} is #{O(g(x))} as #{x \to x_0} if there exist #{\delta > 0} and #{M > 0} such that for all #{x} with #{0 < |x - x_0| < \delta}, #{|f(x)| \leq M|g(x)|}: “#{\frac{f(x)}{g(x)}} is bounded as #{x \to x_0}”. Often written as #{f(x) = O(g(x))} as #{x \to x_0} (abuse of notation of “#{=}” sign).}
+}
+
+\p{This extends to behaviour at #{\infty}: #{f(x)} is #{O(g(x))} as #{x \to \infty} if there exist #{X > 0}, #{M > 0} such that for all #{x > X}, #{|f(x)| \leq M|g(x)|}.}

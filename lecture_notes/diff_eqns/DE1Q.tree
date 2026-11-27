@@ -1,0 +1,21 @@
+\title{Solving an exact equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{6y(y - x)\frac{dy}{dx} + 2x - 3y^2 = 0}. It follows that}
+
+##{\underbrace{(2x - 3y^2)}_{P}dx + \underbrace{6y(y - x)}_{Q}dy = 0.}
+
+\p{We have #{\frac{\partial P}{\partial y}\big|_x = -6y} and #{\frac{\partial Q}{\partial x}\big|_y = -6y} #{\Rightarrow} exact in any simply connected domain. We must have}
+
+##{P = \frac{\partial f}{\partial x}\Big|_y = 2x - 3y^2, \qquad Q = \frac{\partial f}{\partial y}\Big|_x = 6y^2 - 6xy.}
+
+\p{#{\frac{\partial f}{\partial x}\big|_y = 2x - 3y^2 \Rightarrow f(x, y) = x^2 - 3xy^2 + h(y)} (we can add any #{h(y)} since #{\frac{\partial}{\partial x}(h(y)) = 0}). It follows that}
+
+##{\frac{\partial f}{\partial y}\Big|_x = -6xy + \frac{dh}{dy} = Q = 6y^2 - 6xy \implies \frac{dh}{dy} = 6y^2 \implies h(y) = 2y^3 + c.}
+
+\p{The solution of the ODE is}
+
+##{f(x, y) = x^2 - 3y^2x + 2y^3 = \text{const}.}

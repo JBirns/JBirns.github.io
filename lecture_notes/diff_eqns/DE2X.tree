@@ -1,0 +1,7 @@
+\title{Ordinary and singular points}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A point #{x_0} is an \em{ordinary point} of (#{\ast}) if both #{\frac{q(x)}{p(x)}} and #{\frac{r(x)}{p(x)}} have Taylor series around #{x_0} (“analytic” there). Otherwise, it is a \em{singular point}.}

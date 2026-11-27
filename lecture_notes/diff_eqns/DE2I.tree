@@ -1,0 +1,9 @@
+\title{Equidimensional ODE}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A linear second-order ODE is \em{equidimensional} if it has the form}
+
+##{ax^2y'' + bxy' + cy = f(x), \quad a, b, c \text{ const}. \qquad (\ast)}

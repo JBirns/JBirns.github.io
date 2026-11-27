@@ -1,0 +1,23 @@
+\title{Differentiation of an integral with respect to a parameter}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\frac{dI}{d\alpha} = \int_{a(\alpha)}^{b(\alpha)} \frac{\partial f}{\partial \alpha}(x; \alpha)\,dx + f(b(\alpha); \alpha)\frac{db}{d\alpha} - f(a(\alpha); \alpha)\frac{da}{d\alpha}.}
+
+\proof{
+##{\frac{dI}{d\alpha} = \lim_{\delta\alpha \to 0} \frac{1}{\delta\alpha}\Big[ \int_{a(\alpha + \delta\alpha)}^{b(\alpha + \delta\alpha)} f(x; \alpha + \delta\alpha)\,dx - \int_{a(\alpha)}^{b(\alpha)} f(x; \alpha)\,dx \Big].}
+
+\p{Splitting #{\int_{a(\alpha + \delta\alpha)}^{b(\alpha + \delta\alpha)} = \int_{a(\alpha)}^{b(\alpha)} + \int_{b(\alpha)}^{b(\alpha + \delta\alpha)} - \int_{a(\alpha)}^{a(\alpha + \delta\alpha)}},}
+
+##{\begin{aligned}
+\frac{dI}{d\alpha} &= \lim_{\delta\alpha \to 0} \frac{1}{\delta\alpha}\Big[ \int_{a(\alpha)}^{b(\alpha)} f(x; \alpha + \delta\alpha) - f(x; \alpha)\,dx \Big] \\ &\qquad + \lim_{\delta\alpha \to 0} \frac{1}{\delta\alpha}\Big[ \int_{b(\alpha)}^{b(\alpha + \delta\alpha)} f(x; \alpha + \delta\alpha)\,dx \Big] \\
+&\qquad - \lim_{\delta\alpha \to 0} \frac{1}{\delta\alpha}\Big[ \int_{a(\alpha)}^{a(\alpha + \delta\alpha)} f(x; \alpha + \delta\alpha)\,dx \Big] \\
+&= \int_{a(\alpha)}^{b(\alpha)} \frac{\partial f}{\partial \alpha}\,dx + \lim_{\delta\alpha \to 0} \frac{(b(\alpha + \delta\alpha) - b(\alpha))f(\bar{x}; \alpha + \delta\alpha)}{\delta\alpha} \\ &\qquad - \lim_{\delta\alpha \to 0} \frac{(a(\alpha + \delta\alpha) - a(\alpha))f(\bar{\bar{x}}; \alpha + \delta\alpha)}{\delta\alpha}
+\end{aligned}}
+
+\p{by the MVT, with #{b(\alpha) \leq \bar{x} \leq b(\alpha + \delta\alpha)} (and similarly for #{\bar{\bar{x}}}). So}
+
+##{\frac{dI}{d\alpha} = \int_{a(\alpha)}^{b(\alpha)} \frac{\partial f}{\partial \alpha}(x; \alpha)\,dx + f(b(\alpha); \alpha)\frac{db}{d\alpha} - f(a(\alpha); \alpha)\frac{da}{d\alpha}.}
+}

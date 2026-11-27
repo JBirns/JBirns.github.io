@@ -1,0 +1,7 @@
+\title{Exactness criterion}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{(No proof.) If #{\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}} throughout a simply connected domain #{\mathcal{D}}, then #{P\,dx + Q\,dy} is an exact differential of a single-valued function #{f} in #{\mathcal{D}}.}

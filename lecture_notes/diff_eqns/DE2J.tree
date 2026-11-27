@@ -1,0 +1,68 @@
+\title{Inhomogeneous (Forced) Second-Order ODEs}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\strong{PIs of equations with constant coefficients}}
+
+##{a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy = f(x) \quad \text{(forcing function)}.}
+
+\p{Trial particular integrals #{y_p(x)} for forcing #{f(x)}:}
+
+\ul{
+\li{#{f(x) = e^{mx}}: try #{y_p = Ae^{mx}};}
+\li{#{f(x) = \sin kx} or #{\cos kx}: try #{y_p = A\sin kx + B\cos kx};}
+\li{#{f(x)} a polynomial #{p_n(x)} of order #{n}: try a polynomial #{q_n(x) = a_nx^n + \cdots + a_1x + a_0} of order #{n}.}
+}
+
+\transclude{DE2K}
+
+\p{\strong{Resonance}}
+
+\p{What if #{f(x)} involves a CF? #{\to} Detuning.}
+
+\transclude{DE2L}
+
+\p{\strong{General rule:} if the forcing is a linear combination of CFs, the PI is #{y_p(t) = t \times (\text{non-resonant P.I.})} (#{\cos\omega_0t} as above).}
+
+\p{\strong{Resonance in equidimensional ODEs}}
+
+\p{Equidimensional ODE (non-degenerate): CF #{y_c = Ax^{k_1} + Bx^{k_2}}. If the forcing #{f(x) \propto x^{k_1}} (or #{x^{k_2}}), the P.I. is #{y_p(x) \propto x^{k_1}(\ln x)}. This follows from transforming to #{z = \ln x}: #{y_p(z) \propto ze^{k_1z} \propto (\ln x)x^{k_1}}.}
+
+\p{\strong{Variation of parameters}}
+
+\p{A systematic way of finding a P.I. given two linearly independent CFs (#{y_1} and #{y_2}). Consider}
+
+##{y'' + p(x)y' + q(x)y = f(x) \qquad (\ast)}
+
+\p{with linearly independent CFs #{y_1} and #{y_2}, and solution vectors #{\mathbf{Y}_1(x)} and #{\mathbf{Y}_2(x)}. Use these as a basis in phase space at any #{x} to write a solution vector of the PI as}
+
+##{\mathbf{Y}_p(x) = u(x)\mathbf{Y}_1(x) + v(x)\mathbf{Y}_2(x).}
+
+\p{In components:}
+
+##{\begin{aligned}
+y_p &= u(x)y_1 + v(x)y_2, \qquad (\dagger) \\
+y_p' &= u(x)y_1' + v(x)y_2', \qquad (\dagger\dagger) \\
+\frac{d}{dx}y_p' = y_p'' &= uy_1'' + u'y_1' + vy_2'' + v'y_2'.
+\end{aligned}}
+
+\p{It follows that}
+
+##{f(x) = uy_1'' + u'y_1' + vy_2'' + v'y_2' + p(x)[uy_1' + vy_2'] + q(x)[uy_1 + vy_2] \implies u'y_1' + v'y_2' = f(x).}
+
+\p{However (#{\dagger\dagger}) has to be consistent with #{\frac{d}{dx}}(#{\dagger}), so}
+
+##{\frac{d}{dx}(y_p) = u'y_1 + uy_1' + v'y_2 + vy_2';}
+
+\p{compared to (#{\dagger\dagger}): #{u'y_1 + v'y_2 = 0}. Combining with #{u'y_1' + v'y_2' = f(x)}, we have}
+
+##{\begin{pmatrix} y_1 & y_2 \\ y_1' & y_2' \end{pmatrix}\begin{pmatrix} u' \\ v' \end{pmatrix} = \begin{pmatrix} 0 \\ f \end{pmatrix} \implies \begin{pmatrix} u' \\ v' \end{pmatrix} = \frac{1}{W}\begin{pmatrix} y_2' & -y_2 \\ -y_1' & y_1 \end{pmatrix}\begin{pmatrix} 0 \\ f \end{pmatrix},}
+
+\p{with Wronskian #{W = y_1y_2' - y_2y_1'}. So #{u' = -\frac{y_2f}{W}}; #{v' = \frac{y_1}{W}f}. Integrate to find}
+
+##{y_p(x) = y_2(x)\int^x \frac{y_1(t)f(t)}{W(t)}\,dt - y_1(x)\int^x \frac{1}{W(t)}y_2(t)f(t)\,dt;}
+
+\p{changing the lower limit just adds a multiple of #{y_1} (or #{y_2}), i.e. a CF.}
+
+\transclude{DE2M}

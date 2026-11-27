@@ -1,0 +1,9 @@
+\title{Substitution}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider #{I = \int \frac{1 - 2x}{\sqrt{x - x^2}}\,dx}. Let #{u = x - x^2 \Rightarrow \frac{du}{dx} = 1 - 2x}. Then}
+
+##{I = \int \frac{1}{\sqrt{u}}\,du = 2\sqrt{u} + c = 2\sqrt{x - x^2} + c.}

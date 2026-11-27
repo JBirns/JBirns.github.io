@@ -1,0 +1,7 @@
+\title{Separable equation}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A first-order ODE is \em{separable} if it can be written as #{q(y)\,dy = p(x)\,dx}. Solve by direct integration: #{\int q(y)\,dy = \int p(x)\,dx}.}

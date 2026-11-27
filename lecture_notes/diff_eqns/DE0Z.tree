@@ -1,0 +1,42 @@
+\title{Applications of the Multivariate Chain Rule}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\strong{Change of variables}}
+
+\transclude{DE10}
+
+\p{\strong{Implicit Differentiation}}
+
+\p{Consider #{f(x, y, z) = c}, a constant: a surface in 3D space. It implicitly defines #{z = z(x, y)}, #{x = x(y, z)}, #{y = y(x, z)}.}
+
+\p{We may not be able to find these explicitly but can still determine partial derivatives.}
+
+\transclude{DE11}
+
+\p{Generally, given #{f(x, y, z) = c}, the multivariate chain rule gives}
+
+##{0 = df = \frac{\partial f}{\partial x}\Big|_{y,z}dx + \frac{\partial f}{\partial y}\Big|_{x,z}dy + \frac{\partial f}{\partial z}\Big|_{x,y}dz.}
+
+\p{We can’t vary #{x, y, z} independently and stay in the surface. Find #{\frac{\partial z}{\partial x}\big|_y} by}
+
+##{0 = \frac{\partial f}{\partial x}\Big|_{y,z}\underbrace{\frac{\partial x}{\partial x}\Big|_y}_{1} + \frac{\partial f}{\partial y}\Big|_{x,z}\underbrace{\frac{\partial y}{\partial x}\Big|_y}_{0} + \frac{\partial f}{\partial z}\Big|_{x,y}\frac{\partial z}{\partial x}\Big|_y \implies \frac{\partial z}{\partial x}\Big|_y = -\frac{\partial f/\partial x|_{y,z}}{\partial f/\partial z|_{x,y}}. \qquad (\dagger)}
+
+\p{Similarly,}
+
+##{\frac{\partial x}{\partial y}\Big|_z = -\frac{\partial f/\partial y|_{x,z}}{\partial f/\partial x|_{y,z}} \quad \text{and} \quad \frac{\partial y}{\partial z}\Big|_x = -\frac{\partial f/\partial z|_{x,y}}{\partial f/\partial y|_{x,z}}.}
+
+\transclude{DE12}
+
+\p{\strong{Differentiating an integral with respect to a parameter}}
+
+\p{Consider a family of functions #{f(x; \alpha)}, with parameter #{\alpha}. Define the integral}
+
+##{I(\alpha) = \int_{a(\alpha)}^{b(\alpha)} f(x; \alpha)\,dx}
+
+\p{(the limits may depend on #{\alpha}). What is #{\frac{dI}{d\alpha}}?}
+
+\transclude{DE13}
+
+\transclude{DE14}

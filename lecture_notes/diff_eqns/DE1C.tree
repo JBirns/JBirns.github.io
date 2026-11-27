@@ -1,0 +1,21 @@
+\title{Series solution}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{5\frac{dy}{dx} - 3y = 0}.}
+
+##{\begin{gathered}
+\frac{dy}{dx} = \sum_{n=0}^\infty a_nnx^{n-1} = \sum_{n=1}^\infty a_nnx^{n-1} , \quad \text{so} \\ x\frac{dy}{dx} = \sum_{n=1}^\infty a_nnx^n , \\ xy  = \sum_{n=0}^\infty a_nx^{n+1} = \sum_{n=1}^\infty a_{n-1}x^n.
+\end{gathered}}
+
+\p{Since #{5x\frac{dy}{dx} - 3xy = 0}, we have}
+
+##{\sum_{n=1}^\infty \underbrace{(5na_n - 3a_{n-1})}_{0 \text{ for } n \geq 1 \text{ if ODE solved}}x^n = 0 \implies a_n = \frac{3}{5n}a_{n-1} \quad (n \geq 1)}
+
+\p{(recurrence relation). It follows that}
+
+##{a_n = \frac{3}{5n}a_{n-1} = \Big( \frac{3}{5} \Big)^2\frac{1}{n(n - 1)}a_{n-2} = \cdots = \Big( \frac{3}{5} \Big)^n\frac{a_0}{n!},}
+
+##{y(x) = a_0\sum_{n=0}^\infty \frac{1}{n!}\Big( \frac{3x}{5} \Big)^n = a_0\exp\Big( \frac{3x}{5} \Big).}

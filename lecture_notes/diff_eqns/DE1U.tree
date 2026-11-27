@@ -1,0 +1,54 @@
+\title{Fixed (Equilibrium) Points & Stability}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\transclude{DE1V}
+
+\p{E.g. #{\frac{dy}{dt} = t(1 - y^2)} has fixed points at #{y = \pm 1}, but they have different character. Solution curves approach #{y = 1} as #{t \to \infty} (stable fixed point), whereas they diverge from #{y = -1} (unstable fixed point).}
+
+\transclude{DE1W}
+
+\p{\strong{Perturbation analysis & stability}}
+
+\p{Suppose #{y = c} is a fixed point of #{\frac{dy}{dt} = f(t, y)} [so #{f(t, c) = 0} for all #{t}]. Consider some small perturbation from #{y = c}: #{y(t) = c + \varepsilon(t)}. So}
+
+##{\text{ODE} \implies \frac{d\varepsilon}{dt} = f(t, c + \varepsilon) = \underbrace{f(t, c)}_{0} + \varepsilon\frac{\partial f}{\partial y}\Big|_t(t, c) + O(\varepsilon^2).}
+
+\p{Linearise for small #{\varepsilon}:}
+
+##{\frac{d\varepsilon}{dt} \simeq \varepsilon\frac{\partial f}{\partial y}(t, c):}
+
+\p{a linear ODE, simpler to solve! [If #{\frac{\partial f}{\partial y} = 0} at the fixed point, you need higher order terms in the Taylor expansion to determine stability.]}
+
+\transclude{DE1X}
+
+\p{\strong{Autonomous systems and phase portraits}}
+
+\p{Special case: #{\frac{dy}{dt} = f(y)} (no explicit #{t} dependence). Near a fixed point #{y = c} (#{f(c) = 0}) we have}
+
+##{\frac{d\varepsilon}{dt} = \varepsilon\underbrace{\frac{df}{dy}(c)}_{\text{constant } k} = k\varepsilon \implies \varepsilon(t) = \varepsilon_0e^{kt}.}
+
+\p{For an autonomous ODE: #{f'(c) < 0 \Rightarrow} stable fixed point; #{f'(c) > 0 \Rightarrow} unstable fixed point.}
+
+\transclude{DE1Y}
+
+\p{Note for autonomous systems #{\frac{dy}{dt} = f(y)}: #{\int \frac{dy}{f(y)} = t + t_0}, but the above methods can be used when integration is not possible. If #{y(t)} is a solution, so is #{y(t - t_0)} for all #{t_0}.}
+
+\transclude{DE1Z}
+
+\p{\strong{Fixed points in discrete equations}}
+
+\p{Consider a first-order discrete equation (which links #{x_{n+1}} and #{x_n}): #{x_{n+1} = f(x_n)}.}
+
+\transclude{DE20}
+
+\p{Stability is via a perturbation analysis. Let #{x_f} be a fixed point and write #{x_n = x_f + \varepsilon_n}, where #{\varepsilon_n} is a small perturbation to #{x_n}. Then}
+
+##{x_f + \varepsilon_{n+1} = f(x_f + \varepsilon_n) = \underbrace{f(x_f)}_{x_f} + \varepsilon_n\frac{df}{dx}(x_f) + O(\varepsilon_n^2) \implies \varepsilon_{n+1} \simeq \varepsilon_n\frac{df}{dx}(x_f).}
+
+\p{It follows that}
+
+##{|f'(x_f)| < 1 \implies \text{stable F.P.}, \qquad |f'(x_f)| > 1 \implies \text{unstable F.P.}}
+
+\transclude{DE21}

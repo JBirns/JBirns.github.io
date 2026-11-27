@@ -1,0 +1,16 @@
+\title{Nonlinear First-Order ODEs}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The general form is}
+##{Q(x, y)\frac{dy}{dx} + P(x, y) = 0. \qquad (\ast)}
+\p{Note: it could be nonlinear in #{dy/dx}, but that is not considered here.}
+
+\transclude{DE1I}
+
+\transclude{DE1L}
+
+\transclude{DE1R}
+
+\transclude{DE1U}

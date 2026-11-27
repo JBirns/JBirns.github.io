@@ -1,0 +1,26 @@
+\title{Degeneracy and detuning}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{d^2y}{dx^2} - 4\frac{dy}{dx} + 4y = 0}. Characteristic equation: #{\lambda^2 - 4\lambda + 4 = 0 \Rightarrow (\lambda - 2)^2 = 0}. Degenerate: #{\lambda = 2, 2} #{\to} only 1 linearly independent solution of the form #{e^{\lambda x}}.}
+
+\p{\em{Detuning:} remove the degeneracy by considering the “detuned” (modified) equation}
+
+##{\frac{d^2y}{dx^2} - 4\frac{dy}{dx} + (4 - \varepsilon^2)y = 0 \quad (\varepsilon \ll 1).}
+
+\p{In the limit #{\varepsilon \to 0}, the detuned equation #{\to} the one we wish to solve. Try #{y = e^{\lambda x}}: #{\lambda^2 - 4\lambda + 4 - \varepsilon^2 = 0 \Rightarrow \lambda = 2 \pm \varepsilon}. The general solution of the detuned equation is}
+
+##{\begin{aligned}
+y &= Ae^{(2+\varepsilon)x} + Be^{(2-\varepsilon)x} = e^{2x}[Ae^{\varepsilon x} + Be^{-\varepsilon x}] \\
+&= e^{2x}[(A + B) + \varepsilon(A - B)x + O(A\varepsilon^2) + O(B\varepsilon^2)] \quad \text{as } \varepsilon \to 0.
+\end{aligned}}
+
+\p{Consider applying the initial conditions #{y(0) = C} and #{y'(0) = D} to the original and detuned equations. We have #{A + B = C} and #{2(A + B) + \varepsilon(A - B) = D}, so as #{\varepsilon \to 0},}
+
+##{y \to e^{2x}[C + (D - 2C)x + O(A\varepsilon^2) + O(B\varepsilon^2)].}
+
+\p{We have #{A = \frac{1}{2}\big( C + \frac{D - 2C}{\varepsilon} \big)}, so #{A\varepsilon^2 = \frac{1}{2}(C\varepsilon^2 + (D - 2C)\varepsilon)}, hence #{O(A\varepsilon^2) = O(\varepsilon)} as #{\varepsilon \to 0}. It follows that the general solution of the original degenerate equation is}
+
+##{y = e^{2x}[\alpha + \beta x].}

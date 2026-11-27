@@ -1,0 +1,9 @@
+\title{Third-order equation as a system}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y''' + p(x)y'' + q(x)y' + r(x)y = 0}:}
+
+##{\begin{pmatrix} y \\ y' \\ y'' \end{pmatrix}' + \underbrace{\begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ r & q & p \end{pmatrix}}_{\mathsf{A}}\begin{pmatrix} y \\ y' \\ y'' \end{pmatrix} = \mathbf{0}.}

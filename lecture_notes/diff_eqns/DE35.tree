@@ -1,0 +1,20 @@
+\title{Directional Derivatives}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Consider a function #{f(x, y)} and the vector displacement #{d\mathbf{s} = (dx, dy)}. The infinitesimal change in #{f} is}
+
+##{df = \frac{\partial f}{\partial x}\,dx + \frac{\partial f}{\partial y}\,dy = (dx, dy) \cdot \Big( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big) = d\mathbf{s} \cdot \nabla f}
+
+\p{(multivariate chain rule), with #{\nabla f} the “gradient of #{f}”:}
+
+##{\nabla f = \Big( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \Big). \qquad (\ast)}
+
+\p{It is vector valued; sometimes written “#{\operatorname{grad} f}”. If we write #{d\mathbf{s} = ds\,\hat{\mathbf{s}}} (with #{ds} the infinitesimal distance displaced, #{\hat{\mathbf{s}}} a unit vector), then #{df = ds(\hat{\mathbf{s}} \cdot \nabla f)}.}
+
+\transclude{DE36}
+
+\p{[We can then \em{define} the gradient vector geometrically as that vector such that #{\frac{df}{ds} = \hat{\mathbf{s}} \cdot (\nabla f)}.]}
+
+\transclude{DE37}

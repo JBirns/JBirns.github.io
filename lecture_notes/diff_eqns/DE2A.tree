@@ -1,0 +1,11 @@
+\title{Reduction of order}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' - 4y' + 4y = 0} (#{p(x) = -4}, #{q(x) = 4}). We have a degenerate solution #{y_1 = e^{2x}}. Reduction of order:}
+
+##{\frac{u'}{u} = -2 \times 2 - (-4) = 0 \implies v' = \text{const} \implies v = Ax + B.}
+
+\p{We have #{y_2(x) = (Ax + B)e^{2x}}, where the #{B} part just reproduces #{y_1}. So #{xe^{2x}} is a second linearly independent solution [c.f. detuning].}

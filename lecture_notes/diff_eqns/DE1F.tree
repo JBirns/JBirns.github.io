@@ -1,0 +1,15 @@
+\title{Integrating factor}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{x\frac{dy}{dx} + (1 - x)y = 1}, i.e.}
+
+##{\frac{dy}{dx} + \frac{1 - x}{x}y = \frac{1}{x}, \quad \text{i.e.} \quad \frac{dy}{dx} + \Big( \frac{1}{x} - 1 \Big)y = \frac{1}{x}.}
+
+\p{Integrating factor #{\mu}: #{\ln\mu(x) = \int^x \frac{1}{u} - 1\,du = \ln x - x = \ln xe^{-x} \Rightarrow \mu(x) = xe^{-x}}. Hence}
+
+##{\frac{d}{dx}(xe^{-x}y) = \frac{xe^{-x}}{x} = e^{-x} \implies xe^{-x}y(x) = -e^{-x} + c \implies y(x) = -\frac{1}{x} + \frac{c}{x}e^x}
+
+\p{(#{c = 1} if we want #{y} finite as #{x \to 0}).}

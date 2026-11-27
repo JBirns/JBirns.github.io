@@ -4,7 +4,7 @@
 \import{macros}
 \import{names}
 
-\p{These notes are based on lectures I have attended and are not endorsed by the lecturers. Any changes, and in particular, all errors, are almost surely mine. Generative AI was not used to write any of the content, but was used to translate some text (which my naïve conversion script could not handle) from tex to Forester markup.}
+\p{These notes are based on lectures I have attended and are not endorsed by the lecturers. Any changes, and in particular, all errors, are almost surely mine. Generative AI was not used to write any of the content, but was used to translate pieces of #{\TeX} which my naïve conversion script could not handle into Forester markup.}
 
 \transclude{\camIA}
 

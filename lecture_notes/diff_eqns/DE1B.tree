@@ -1,0 +1,14 @@
+\title{Constant coefficients}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{5\frac{dy}{dx} - 3y = 0}. Try #{y = Ae^{\lambda x}}, #{\frac{dy}{dx} = \lambda Ae^{\lambda x}}. The ODE #{\Rightarrow} #{(5\lambda - 3) = 0} (“characteristic equation”), so #{\lambda = \frac{3}{5}}. So #{y = Ae^{3x/5}} holds for all #{A} since this is a linear, homogeneous equation.}
+
+\ul{
+\li{Generally, for any linear homogeneous ODE (not necessarily first order), any constant multiple of a solution is a solution.}
+\li{An #{n^{\text{th}}} order linear ODE has exactly #{n} independent solutions.}
+}
+
+\p{So #{y = Ae^{3x/5}} is \em{the} general solution.}

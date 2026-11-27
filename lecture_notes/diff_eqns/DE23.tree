@@ -1,0 +1,50 @@
+\title{Second-Order ODEs with Constant Coefficients}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{General form:}
+
+##{\underbrace{a\frac{d^2y}{dx^2} + b\frac{dy}{dx} + cy}_{\mathcal{D}y} = f(x), \quad a, b, c \text{ constants}, \qquad (\ast)}
+
+\p{where the differential operator #{\mathcal{D} = a\frac{d^2}{dx^2} + b\frac{d}{dx} + c} is \em{linear}.}
+
+\transclude{DE24}
+
+\p{Exploit linearity to solve the ODE in 2 steps:}
+
+\ul{
+\li{\strong{(i)} Find CFs that satisfy the homogeneous equation #{a\frac{d^2y_c}{dx^2} + b\frac{dy_c}{dx} + cy_c = 0}.}
+\li{\strong{(ii)} Find any PI that satisfies the full equation.}
+}
+
+\p{The solution to the full equation is #{y_c + y_p}: #{\mathcal{D}(y_c + y_p) = \mathcal{D}(y_c) + \mathcal{D}(y_p) = 0 + f(x)}. If #{y_{c1}} and #{y_{c2}} are linearly independent CFs, #{y_{c1} + y_p} and #{y_{c2} + y_p} are linearly independent solutions to the full equation.}
+
+\transclude{DE25}
+
+\p{\strong{Complementary functions}}
+
+\p{Recall #{\frac{d}{dx}e^{\lambda x} = \lambda e^{\lambda x}}. Also #{e^{\lambda x}} is an eigenfunction of #{\mathcal{D}}:}
+
+##{\mathcal{D}(e^{\lambda x}) = a\frac{d^2}{dx^2}(e^{\lambda x}) + b\frac{d}{dx}(e^{\lambda x}) + ce^{\lambda x} = \underbrace{(a\lambda^2 + b\lambda + c)}_{\text{eigenvalue}}e^{\lambda x}.}
+
+\p{CFs of (#{\ast}) satisfy #{\mathcal{D}y_c = 0}: eigenfunctions of #{\mathcal{D}} with eigenvalue zero. So #{y_c = Ae^{\lambda x}} provided}
+
+##{a\lambda^2 + b\lambda + c = 0,}
+
+\p{the \em{characteristic equation} of #{ay'' + by' + cy = 0}. There are two roots #{\lambda_1} and #{\lambda_2}:}
+
+\ul{
+\li{\p{#{\lambda_1 \neq \lambda_2}: we have two linearly independent CFs, #{y_{c1} \propto e^{\lambda_1x}} and #{y_{c2} \propto e^{\lambda_2x}}. The most general CF is a linear combination of #{y_{c1}} and #{y_{c2}}:}
+##{y_c = c_1y_{c1}(x) + c_2y_{c2}(x),}
+\p{with #{y_{c1}, y_{c2}} forming a basis for the solution space of the homogeneous ODE. Note: the roots may be complex #{\to} oscillations.}}
+\li{#{\lambda_1 = \lambda_2} (degenerate case): this only generates one linearly independent CF of the form #{e^{\lambda_1x}}. How do we find the second CF? See the example below.}
+}
+
+\transclude{DE26}
+
+\transclude{DE27}
+
+\transclude{DE28}
+
+\p{\strong{General rule:} if #{y_{c1}(x)} is a degenerate CF of a linear ODE with constant coefficients, then #{y_{c2}(x) = xy_{c1}(x)} is a second, linearly independent CF.}

@@ -1,0 +1,16 @@
+\title{Fundamental Theorem of Calculus}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Let #{F(x)} be defined as #{F(x) = \int_a^x f(t)\,dt}. Then #{\frac{dF}{dx} = f(x)}.}
+
+\proof{
+##{\begin{aligned}
+\frac{dF}{dx} &= \lim_{h \to 0} \frac{F(x + h) - F(x)}{h} = \lim_{h \to 0} \frac{1}{h}\Big[ \int_a^{x+h} f(t)\,dt - \int_a^x f(t)\,dt \Big] \\
+&= \lim_{h \to 0} \frac{1}{h}\Big[ \int_x^{x+h} f(t)\,dt \Big] \\
+&= \lim_{h \to 0} \frac{1}{h}\big[ f(x)h + O(h^2) \big] \quad \text{by MVT + Taylor expansion} \\
+&= f(x) + \lim_{h \to 0} O(h) = f(x) + 0 = f(x).
+\end{aligned}}
+}

@@ -1,0 +1,7 @@
+\title{Heaviside function}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{H(x) = \int_{-\infty}^x \delta(t)\,dt.}

@@ -1,0 +1,13 @@
+\title{Differentiating under the integral sign}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{I(\lambda) = \int_0^\lambda e^{-\lambda x^2}\,dx}:}
+##{\frac{dI}{d\lambda} = \int_0^\lambda -x^2e^{-\lambda x^2}\,dx + \underbrace{\frac{d\lambda}{d\lambda}}_{1}e^{-\lambda^3}.}}
+\li{\p{\strong{(ii)} Suppose we want to evaluate #{\int_0^\infty x^ne^{-x}\,dx} (#{n \in \mathbb{Z}}). Let #{I(\lambda) = \int_0^\infty e^{-\lambda x}\,dx = \frac{1}{\lambda}}. Then}
+##{\frac{d^n}{d\lambda^n}I = \int_0^\infty (-x)^ne^{-\lambda x}\,dx = \frac{(-1)^nn!}{\lambda^{n+1}}.}
+\p{Set #{\lambda = 1} to get #{\int_0^\infty x^ne^{-x}\,dx = n!}.}}
+}

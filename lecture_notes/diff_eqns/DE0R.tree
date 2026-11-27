@@ -1,0 +1,9 @@
+\title{Integration by parts}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{For functions #{u} and #{v},}
+
+##{\int uv'\,dx = uv - \int u'v\,dx.}

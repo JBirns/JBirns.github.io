@@ -1,0 +1,13 @@
+\title{Properties of the gradient vector}
+\taxon{Proposition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{With #{\theta} the angle between #{\hat{\mathbf{s}}} and #{\nabla f}, #{\frac{df}{ds} = \hat{\mathbf{s}} \cdot \nabla f = \cos\theta|\nabla f|}.}
+
+\ul{
+\li{\strong{(i)} The direction of #{\nabla f} is that in which #{f} \em{increases} most rapidly.}
+\li{\strong{(ii)} The magnitude of #{\nabla f} is the maximum rate of change of #{f}: #{|\nabla f| = \max_{\forall\theta}\big( \frac{df}{ds} \big)}.}
+\li{\strong{(iii)} If #{\hat{\mathbf{s}}} is parallel to contours of #{f} (lines of constant #{f}), then #{\frac{df}{ds} = 0 = \hat{\mathbf{s}} \cdot (\nabla f)}. Hence #{\nabla f} is #{\perp} to contours of #{f(x, y)}.}
+}

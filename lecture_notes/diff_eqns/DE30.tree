@@ -1,0 +1,14 @@
+\title{Fuchs’ Theorem}
+\taxon{Theorem}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} If #{x = x_0} is an ordinary point of (#{\ast}), there are two linearly independent solutions of the form}
+##{y = \sum_{n=0}^\infty a_n(x - x_0)^n,}
+\p{Taylor series convergent in some neighbourhood of #{x_0}.}}
+\li{\p{\strong{(ii)} If #{x_0} is a regular singular point of (#{\ast}), there is at least one solution of the form}
+##{y = \sum_{n=0}^\infty a_n(x - x_0)^{n+\sigma} = (x - x_0)^\sigma\sum_{n=0}^\infty a_n(x - x_0)^n, \quad \sigma \in \mathbb{R},\; a_0 \neq 0}
+\p{(so #{\sigma} is unique): a “Frobenius series”.}}
+}

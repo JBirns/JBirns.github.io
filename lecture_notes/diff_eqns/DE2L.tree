@@ -1,0 +1,25 @@
+\title{Resonant forcing}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+##{\ddot{y} + \omega_0^2y = \sin\omega_0t \qquad (\ast)}
+
+\p{(forcing term at the natural frequency #{\omega_0}). C.F. #{y_c(t) = A\cos\omega_0t + B\sin\omega_0t} (SHM): the oscillator is driven “resonantly”.}
+
+\p{“Detuned equation” (modified #{f(x)}):}
+
+##{\ddot{y} + \omega_0^2y = \sin\omega t \quad (\omega \neq \omega_0). \qquad (\dagger)}
+
+\p{Try the P.I. #{y_p(t) = C\sin\omega t} [no #{\cos\omega t} by inspection]. Substituting in (#{\dagger}): #{C(\omega_0^2 - \omega^2) = 1 \Rightarrow C = \frac{1}{\omega_0^2 - \omega^2}}.}
+
+\p{Note: the limit as #{\omega \to \omega_0} does not exist. Add in a CF to regularise the limit #{\omega \to \omega_0}:}
+
+##{y_p(t) = \frac{1}{\omega_0^2 - \omega^2}(\sin\omega t - \underbrace{\sin\omega_0t}_{\text{CF}})}
+
+\p{still solves (#{\dagger}). Evaluate the indeterminate limit with L’Hôpital’s rule:}
+
+##{\lim_{\omega \to \omega_0} y_p(t) = \lim_{\omega \to \omega_0}\Big( \frac{t\cos\omega t}{-2\omega} \Big) = -\frac{t\cos\omega_0t}{2\omega_0}.}
+
+\p{The P.I. of the original equation (#{\ast}) is #{y_p(t) = -\frac{t}{2\omega_0}\cos\omega_0t}.}

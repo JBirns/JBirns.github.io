@@ -1,0 +1,12 @@
+\title{Simply connected}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A domain #{\mathcal{D}} is \em{simply connected} if it is:}
+
+\ul{
+\li{path connected (every pair of points can be connected by a path in #{\mathcal{D}}), and}
+\li{any closed curve can be shrunk continuously to a point in #{\mathcal{D}} without leaving #{\mathcal{D}}.}
+}

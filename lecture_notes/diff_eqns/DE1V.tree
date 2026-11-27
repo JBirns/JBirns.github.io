@@ -1,0 +1,7 @@
+\title{Fixed/equilibrium points}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{A \em{fixed point} of the ODE #{\frac{dy}{dt} = f(t, y)} is a constant solution #{y = c}, i.e. #{\frac{dy}{dt} = 0} for all #{t} at #{y = c}.}

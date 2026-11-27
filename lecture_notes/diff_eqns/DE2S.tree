@@ -1,0 +1,30 @@
+\title{Delta-function forcing}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' - y = 3\delta(x - \frac{\pi}{2})}, with boundary conditions #{y = 0} at #{x = 0} and #{y = 0} at #{x = \pi}.}
+
+\p{For #{0 \leq x < \frac{\pi}{2}}: #{y'' - y = 0}, #{y = A\sinh x} [#{y(0) = 0}].}
+
+\p{For #{\frac{\pi}{2} < x \leq \pi}: #{y'' - y = 0}, #{y = C\sinh(\pi - x)}, #{C} const [#{y(\pi) = 0}].}
+
+\p{Join up at #{x = \frac{\pi}{2}} with}
+
+\ul{
+\li{\strong{(i)} #{y} continuous #{\Rightarrow} #{A = C};}
+\li{\p{\strong{(ii)} #{\lim_{\varepsilon \to 0}[y']_{\pi /2-\varepsilon}^{\pi /2+\varepsilon} = 3} #{\Rightarrow} #{-C\cosh(\frac{\pi}{2}) - A\cosh(\frac{\pi}{2}) = 3}, so}
+##{A = C = -\frac{3}{2\cosh(\frac{\pi}{2})}.}}
+}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-0.3,0) -- (4,0) node[right] {$x$};
+\draw[->] (0,-1.6) -- (0,0.8) node[above] {$y$};
+\draw[thick, domain=0:1.6, samples=40] plot (\x , {-1.3*sinh(\x *0.98)/sinh(1.5708)});
+\draw[thick, domain=1.6:3.2, samples=40] plot (\x , {-1.3*sinh((3.2-\x)*0.98)/sinh(1.5708)});
+\draw (1.6,0.07) -- (1.6,-0.07);
+\node[above] at (1.6,0.05) {$\frac{\pi}{2}$};
+\node[above] at (3.2,0.05) {$\pi$};
+\draw[<-] (1.7,-1.3) -- (2.6,-1.3) node[right] {discontinuous in $y'$};
+\end{tikzpicture}}

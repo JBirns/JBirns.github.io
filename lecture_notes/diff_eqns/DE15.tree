@@ -1,0 +1,10 @@
+\title{First-Order Linear Differential Equations}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{\em{Ordinary} DEs: DEs involving functions of one variable. \em{Partial} DEs: DEs involving functions of multiple variables (and partial derivatives).}
+
+\transclude{DE16}
+
+\transclude{DE1A}

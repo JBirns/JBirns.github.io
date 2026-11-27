@@ -1,0 +1,35 @@
+\title{Basic Calculus}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Course outline:}
+\ul{
+\li{Ch. 1: Basic calculus}
+\li{Ch. 2: First-order linear DEs}
+\li{Ch. 3: Nonlinear first-order equations}
+\li{Ch. 4: Higher-order linear DEs}
+\li{Ch. 5: Multivariate functions: applications}
+}
+
+\transclude{DE02}
+
+\transclude{DE05}
+
+\transclude{DE0E}
+
+\transclude{DE0G}
+
+\transclude{DE0J}
+
+\transclude{DE0L}
+
+\transclude{DE0O}
+
+\transclude{DE0T}
+
+\transclude{DE0U}
+
+\transclude{DE0X}
+
+\transclude{DE0Z}

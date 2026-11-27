@@ -1,0 +1,9 @@
+\title{Implicit differentiation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{xy + y^2z + z^5 = 1} (#{\ast}). Take the derivative of (#{\ast}) with respect to #{x} holding #{y} fixed:}
+
+##{y + y^2\frac{\partial z}{\partial x}\Big|_y + 5z^4\frac{\partial z}{\partial x}\Big|_y = 0 \implies \frac{\partial z}{\partial x}\Big|_y = \frac{-y}{y^2 + 5z^4}.}

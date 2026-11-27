@@ -1,0 +1,16 @@
+\title{Repeated L’Hôpital}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{f(x) = 3\sin x - \sin 3x}, #{g(x) = 2x - \sin 2x}. #{f(0) = g(0) = 0};}
+
+##{\begin{aligned}
+f'(x) &= 3\cos x - 3\cos 3x = 0 \text{ at } x = 0, \\
+g'(x) &= 2 - 2\cos 2x = 0 \text{ at } x = 0;
+\end{aligned}}
+
+\p{#{f''(x)} and #{g''(x)} are #{0} at #{x = 0}; #{f'''(0) = 24} and #{g'''(0) = 8}. It follows that}
+
+##{\lim_{x \to 0} \frac{f(x)}{g(x)} = \lim_{x \to 0} \frac{f'''(x)}{g'''(x)} = \frac{24}{8} = 3.}

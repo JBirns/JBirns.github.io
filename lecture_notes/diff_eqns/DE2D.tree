@@ -1,0 +1,13 @@
+\title{Wronskian of SHM solutions}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{y'' + 4y = 0 \Rightarrow y_1 = \cos 2x}, #{y_2 = \sin 2x}.}
+
+##{\begin{aligned}
+W(x) = \begin{vmatrix} y_1 & y_2 \\ y_1' & y_2' \end{vmatrix} = \begin{vmatrix} \cos 2x & \sin 2x \\ -2\sin 2x & 2\cos 2x \end{vmatrix} \\ = 2\cos^2  2x + 2\sin^2 2x = 2(\cos^2 2x + \sin^2 2x) = 2 \neq 0,
+\end{aligned}}
+
+\p{so #{y_1} and #{y_2} are linearly independent.}

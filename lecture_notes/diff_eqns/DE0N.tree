@@ -1,0 +1,10 @@
+\title{Variable limits}
+\taxon{Corollary}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{#{\frac{d}{dx}\int_x^b f(t)\,dt = -f(x)};}
+\li{#{\frac{d}{dx}\int_a^{g(x)} f(t)\,dt = f(g(x))\frac{dg}{dx}} (chain rule).}
+}

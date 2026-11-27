@@ -1,0 +1,24 @@
+\title{Cartesian to plane polar}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{Cartesian #{(x, y) \to} plane-polar #{(r, \theta)}: #{x = r\cos\theta}, #{y = r\sin\theta}.}
+
+\tex{\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{patterns,calc}}{\begin{tikzpicture}[scale=0.9]
+\draw[->] (-0.3,0) -- (2.4,0) node[right] {$x$};
+\draw[->] (0,-0.3) -- (0,1.8) node[above] {$y$};
+\draw (0,0) -- (1.6,1.1);
+\fill (1.6,1.1) circle (1.3pt) node[above right] {$(x, y)$};
+\node[above left] at (0.85,0.6) {$r$};
+\draw (0.5,0) arc (0:34:0.5);
+\node at (0.75,0.2) {$\theta$};
+\end{tikzpicture}}
+
+\p{The original function #{f(x, y)} can be thought of as a function of #{r, \theta}: #{f(x(r, \theta), y(r, \theta))}, with}
+
+##{\begin{aligned}
+\frac{\partial f}{\partial r}\Big|_\theta &= \frac{\partial f}{\partial x}\Big|_y\underbrace{\frac{\partial x}{\partial r}\Big|_\theta}_{\cos\theta} + \frac{\partial f}{\partial y}\Big|_x\underbrace{\frac{\partial y}{\partial r}\Big|_\theta}_{\sin\theta}, \\
+\frac{\partial f}{\partial \theta}\Big|_r &= \frac{\partial f}{\partial x}\Big|_y\underbrace{\frac{\partial x}{\partial \theta}\Big|_r}_{-r\sin\theta} + \frac{\partial f}{\partial y}\Big|_x\underbrace{\frac{\partial y}{\partial \theta}\Big|_r}_{r\cos\theta}.
+\end{aligned}}

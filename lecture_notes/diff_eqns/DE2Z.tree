@@ -1,0 +1,17 @@
+\title{Classifying singular points}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\p{\strong{(i)} #{\underbrace{(1 - x^2)}_{p}y'' \underbrace{- 2x}_{q}y' + \underbrace{2}_{r}y = 0}:}
+##{\begin{gathered}
+\frac{q(x)}{p(x)} = \frac{-2x}{1 - x^2} = \frac{-2x}{(1 - x)(1 + x)} = \frac{2x}{(x - 1)(x + 1)} , \\ \frac{r(x)}{p(x)} = \frac{2}{1 - x^2} = \frac{-2}{(x - 1)(x + 1)}.
+\end{gathered}}
+\p{#{x = \pm 1} are singular points. They are regular, since e.g. #{(x - 1)\frac{q(x)}{p(x)} = \frac{2x}{x + 1}} is analytic at #{x = 1}.}}
+\li{\p{\strong{(ii)} #{\sin x\,y'' + \cos x\,y' + 2y = 0}: #{\frac{q(x)}{p(x)} = \frac{\cos x}{\sin x}}, #{\frac{r(x)}{p(x)} = \frac{2}{\sin x}}, so #{x = n\pi} are singular points, #{n \in \mathbb{Z}}. However, with #{\varepsilon = x - n\pi},}
+##{(x - n\pi)\frac{q(x)}{p(x)} = \frac{\varepsilon\cos(n\pi + \varepsilon)}{\sin(n\pi + \varepsilon)} = \frac{\varepsilon\cos\varepsilon}{\sin\varepsilon} \to \text{has a Taylor series about } \varepsilon = 0,}
+\p{and #{(x - n\pi)^2\frac{r}{p} = \frac{2\varepsilon^2}{(-1)^n\sin\varepsilon}} #{\to} has a Taylor series about #{\varepsilon = 0}. So #{x = n\pi} are regular singular points.}}
+\li{\strong{(iii)} #{(1 + \sqrt{x})y'' - 2xy' + 2y = 0}: #{\frac{q}{p} = \frac{-2x}{1 + \sqrt{x}}} has no Taylor expansion at #{x = 0} (since non-integer powers in the expansion; no derivative at #{x = 0}); similarly for #{x\frac{q}{p} = \frac{-2x^2}{1 + \sqrt{x}}}. So #{x = 0} is an irregular singular point.}
+}

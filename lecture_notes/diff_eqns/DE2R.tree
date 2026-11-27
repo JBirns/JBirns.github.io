@@ -1,0 +1,12 @@
+\title{Key properties of the delta function}
+\taxon{Proposition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{\strong{(i)} #{\delta(x) = 0} for all #{x \neq 0};}
+\li{\strong{(ii)} #{\int_{-\infty}^\infty \delta(x)\,dx = 1};}
+\li{\p{\strong{(iii)} for all #{g(x)} continuous at #{x = 0},}
+##{\int_{-\infty}^\infty g(x)\delta(x)\,dx = \lim_{\varepsilon \to 0}\int_{-\infty}^\infty g(x)D(x; \varepsilon)\,dx = g(0) \quad \text{``sampling property''}.}}
+}

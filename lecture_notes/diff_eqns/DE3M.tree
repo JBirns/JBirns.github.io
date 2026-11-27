@@ -1,0 +1,7 @@
+\title{First-order wave equation}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{\partial\psi}{\partial t} - c\frac{\partial\psi}{\partial x} = 0} with #{\psi(x, 0) = x^2 - 3}. General solution #{\psi = f(x + ct)}; at #{t = 0}, #{\psi(x, 0) = f(x) = x^2 - 3}, so #{\psi(x, t) = (x + ct)^2 - 3}.}

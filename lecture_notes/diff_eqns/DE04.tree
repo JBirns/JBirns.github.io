@@ -1,0 +1,30 @@
+\title{Properties of limits}
+\taxon{Proposition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\ul{
+\li{If #{f(x)} has a limit, it is unique.}
+\li{\p{If #{\lim_{x \to x_0} f(x) = A} and #{\lim_{x \to x_0} g(x) = B}, then:}
+\ul{
+\li{#{\lim_{x \to x_0}[f(x) + g(x)] = A + B};}
+\li{#{\lim_{x \to x_0}[f(x)g(x)] = AB};}
+\li{#{\lim_{x \to x_0}[f(x)/g(x)] = \frac{A}{B}} for #{B \neq 0}.}
+}
+\p{If #{B = 0}, the limit of the quotient does not exist if #{A \neq 0}, but \em{may} exist when #{A = B = 0}: the “indeterminate case”.}}
+}
+
+\proof{
+\p{\em{Proof of uniqueness of limits.} Suppose that #{\lim_{x \to x_0} f(x) = A} \em{and} #{\lim_{x \to x_0} f(x) = B}. So for any #{\varepsilon > 0}, there exist #{\delta_A > 0} and #{\delta_B > 0} such that for #{0 < |x - x_0| < \delta_A}, #{|f(x) - A| < \varepsilon /2}, and for #{0 < |x - x_0| < \delta_B}, #{|f(x) - B| < \varepsilon /2}.}
+
+\p{Now let #{\delta \equiv \min(\delta_A, \delta_B)} and consider #{0 < |x - x_0| < \delta}. It follows that}
+
+##{\begin{aligned}
+|A - B| &= |(A - f(x)) - (B - f(x))| \\
+&\leq |A - f(x)| + |B - f(x)| \\
+&< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\end{aligned}}
+
+\p{Since #{|A - B| < \varepsilon} for all #{\varepsilon > 0} we must have #{A = B}.}
+}

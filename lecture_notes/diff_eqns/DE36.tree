@@ -1,0 +1,11 @@
+\title{Directional derivative}
+\taxon{Definition}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{The \em{directional derivative} of #{f} in direction #{\hat{\mathbf{s}}} is}
+
+##{\frac{df}{ds} = \hat{\mathbf{s}} \cdot (\nabla f):}
+
+\p{the rate of change of #{f} with distance #{s} along direction #{\hat{\mathbf{s}}}.}

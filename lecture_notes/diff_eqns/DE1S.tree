@@ -1,0 +1,15 @@
+\title{Solution curves of #{\dot{y} = t(1 - y^2)}}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{dy}{dt} = t(1 - y^2)} [separable, so we can solve directly!]:}
+
+##{\begin{gathered}
+\frac{1}{1 - y^2}\,dy = t\,dt \\ \implies \frac{1}{2}\Big( \frac{1}{1 + y} + \frac{1}{1 - y} \Big)\,dy = t\,dt \\ \implies \frac{1}{2}\ln(1 + y) - \frac{1}{2}\ln(1 - y) = \frac{1}{2}t^2 + c
+\end{gathered}}
+
+##{\implies \frac{1}{2}\ln\Big| \frac{1 + y}{1 - y} \Big| = \frac{1}{2}t^2 + c \implies y = \frac{A - e^{-t^2}}{A + e^{-t^2}}, \quad \text{where } A = \begin{cases} e^{2c}, & |y| < 1, \\ -e^{2c}, & |y| > 1. \end{cases}}
+
+\p{#{A} parameterises the solution curves.}

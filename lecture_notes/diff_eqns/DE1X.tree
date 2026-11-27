@@ -1,0 +1,13 @@
+\title{Stability of the fixed points of #{\dot{y} = t(1 - y^2)}}
+\taxon{Example}
+\date{2021-10-01}
+\author{JB00}
+\import{macros}
+
+\p{#{\frac{dy}{dt} = \underbrace{t(1 - y^2)}_{f(t, y)}} has fixed points at #{y = \pm 1};}
+
+##{\frac{\partial f}{\partial y} = -2ty = \begin{cases} -2t & \text{at } y = +1, \\ 2t & \text{at } y = -1. \end{cases}}
+
+\p{Near #{y = +1}: #{\frac{d\varepsilon}{dt} = -2t\varepsilon \Rightarrow \varepsilon(t) = \varepsilon_0e^{-t^2}} (#{\varepsilon_0} const). As #{t \to \infty}, #{\varepsilon \to 0} #{\Rightarrow} stable F.P.}
+
+\p{Near #{y = -1}: #{\frac{d\varepsilon}{dt} \simeq 2t\varepsilon \Rightarrow \varepsilon = \varepsilon_0e^{t^2}}. Now #{|\varepsilon(t)| \to \infty} as #{t \to \infty}, so trajectories diverge from #{y = -1} #{\Rightarrow} unstable F.P.}
